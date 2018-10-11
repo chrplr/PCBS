@@ -1,0 +1,29 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Wed Oct 10 2018 14:31:12
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+10878,design,log,
+#design: #exp: Cross-modal-timing-test
+#design: block_cnt,block_id,trial_cnt,trial_id
+10878,design,logged,
+10878,Experiment,started
+10881,Stimulus,presented,4
+15890,Keyboard,received,13,wait
+16886,Stimulus,presented,0
+17881,Stimulus,played,b'/tmp/expyriment_sgjce7_k/freq880_dur100.0_ny9basmc.wav'
+17882,Stimulus,presented,1
+19871,Stimulus,presented,0
+20866,Stimulus,played,b'/tmp/expyriment_sgjce7_k/freq880_dur100.0_ny9basmc.wav'
+20866,Stimulus,presented,1
+22856,Stimulus,presented,0
+23851,Stimulus,played,b'/tmp/expyriment_sgjce7_k/freq880_dur100.0_ny9basmc.wav'
+23851,Stimulus,presented,1
+24846,Experiment,paused
+24848,Stimulus,presented,7
+26292,Keyboard,received,b'y',wait_char
+26292,Experiment,ended
+26292,Data,saved
+26293,Stimulus,presented,7

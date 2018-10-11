@@ -1,0 +1,23 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Thu Oct 04 2018 12:25:36
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+4127,stderr,received,'Traceback (most recent call last):'
+4127,stderr,received,'  File "main.py", line 53, in <module>'
+4127,stderr,received,'    instructions.preload()'
+4127,stderr,received,'  File "/home/cp983411/anaconda3/lib/python3.6/site-packages/expyriment/stimuli/_visual.py", line 916, in preload'
+4127,stderr,received,'    self._get_surface(),'
+4127,stderr,received,'  File "/home/cp983411/anaconda3/lib/python3.6/site-packages/expyriment/stimuli/_visual.py", line 404, in _get_surface'
+4127,stderr,received,'    tmp = self._create_surface()'
+4127,stderr,received,'  File "/home/cp983411/anaconda3/lib/python3.6/site-packages/expyriment/stimuli/_textscreen.py", line 492, in _create_surface'
+4127,stderr,received,'    surface.blit(box._get_surface(),'
+4128,stderr,received,'  File "/home/cp983411/anaconda3/lib/python3.6/site-packages/expyriment/stimuli/_visual.py", line 404, in _get_surface'
+4128,stderr,received,'    tmp = self._create_surface()'
+4128,stderr,received,'  File "/home/cp983411/anaconda3/lib/python3.6/site-packages/expyriment/stimuli/_textbox.py", line 346, in _create_surface'
+4128,stderr,received,'    self.text_justification)'
+4128,stderr,received,'  File "/home/cp983411/anaconda3/lib/python3.6/site-packages/expyriment/stimuli/_textbox.py", line 421, in render_textrect'
+4128,stderr,received,'    "the text string was too tall to fit in the rect.")'
+4128,stderr,received,'Exception: Once word-wrapped,the text string was too tall to fit in the rect.'

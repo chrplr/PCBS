@@ -1,0 +1,20 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Thu Oct 04 2018 15:44:25
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+4126,Stimulus,presented,12
+5783,Keyboard,received,b' ',wait_char
+5784,Stimulus,presented,13
+7331,Keyboard,received,b' ',wait_char
+11313,design,log,
+#design: #exp: Stroop Experiment
+#design: block_cnt,block_id,trial_cnt,trial_id
+11313,design,logged,
+11313,Experiment,started
+11314,stderr,received,'Traceback (most recent call last):'
+11314,stderr,received,'  File "stroop_task.py", line 95, in <module>'
+11314,stderr,received,'    for stim in block:'
+11314,stderr,received,"TypeError: 'Block' object is not iterable"

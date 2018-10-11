@@ -1,0 +1,11 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Thu Oct 04 2018 16:53:42
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+4042,stderr,received,'Traceback (most recent call last):'
+4042,stderr,received,'  File "stroop_task.py", line 78, in <module>'
+4042,stderr,received,'    fs = expyriment.stimuli.FixCross(size=(25, 25), line_width=3, colour=TEXT_COLOR)'
+4042,stderr,received,"NameError: name 'TEXT_COLOR' is not defined"

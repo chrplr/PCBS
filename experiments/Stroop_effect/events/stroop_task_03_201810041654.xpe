@@ -1,0 +1,20 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Thu Oct 04 2018 16:54:13
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+4153,Stimulus,presented,14
+5312,Keyboard,received,b' ',wait_char
+5312,Stimulus,presented,15
+5858,Keyboard,received,b' ',wait_char
+10978,design,log,
+#design: #exp: Stroop Experiment
+#design: block_cnt,block_id,trial_cnt,trial_id
+10979,design,logged,
+10979,Experiment,started
+10979,stderr,received,'Traceback (most recent call last):'
+10979,stderr,received,'  File "stroop_task.py", line 103, in <module>'
+10979,stderr,received,'    for trial in block.trials():'
+10979,stderr,received,"TypeError: 'list' object is not callable"

@@ -1,0 +1,67 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Thu Oct 04 2018 17:03:06
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+4159,Stimulus,presented,14
+45941,Keyboard,received,b' ',wait_char
+45942,Stimulus,presented,15
+46334,Keyboard,received,b' ',wait_char
+51727,design,log,
+#design: #exp: Stroop Experiment
+#design: block_cnt,block_id,trial_cnt,trial_id
+51727,design,logged,
+51727,Experiment,started
+51752,Stimulus,presented,12
+52765,Picture,loaded,b'Stroop_French_00.png'
+52769,Stimulus,presented,1
+55029,Keyboard,received,b' ',wait_char
+55051,Stimulus,presented,12
+56064,Picture,loaded,b'Stroop_English_02.png'
+56068,Stimulus,presented,7
+57094,Keyboard,received,b' ',wait_char
+57112,Stimulus,presented,12
+58123,Picture,loaded,b'Stroop_Basque_01.png'
+58127,Stimulus,presented,11
+58727,Keyboard,received,b' ',wait_char
+58750,Stimulus,presented,12
+59761,Picture,loaded,b'Stroop_English_01.png'
+59765,Stimulus,presented,4
+60884,Keyboard,received,b' ',wait_char
+60901,Stimulus,presented,12
+61911,Picture,loaded,b'Stroop_Basque_02.png'
+61915,Stimulus,presented,8
+62393,Keyboard,received,b' ',wait_char
+62417,Stimulus,presented,12
+63429,Picture,loaded,b'Stroop_Basque_00.png'
+63432,Stimulus,presented,10
+63798,Keyboard,received,b' ',wait_char
+63816,Stimulus,presented,12
+64828,Picture,loaded,b'Stroop_French_03.png'
+64832,Stimulus,presented,3
+65220,Keyboard,received,b' ',wait_char
+65238,Stimulus,presented,12
+66249,Picture,loaded,b'Stroop_Basque_03.png'
+66253,Stimulus,presented,9
+66565,Keyboard,received,b' ',wait_char
+66584,Stimulus,presented,12
+67596,Picture,loaded,b'Stroop_French_02.png'
+67600,Stimulus,presented,2
+67970,Keyboard,received,b' ',wait_char
+67988,Stimulus,presented,12
+69000,Picture,loaded,b'Stroop_French_01.png'
+69004,Stimulus,presented,0
+69396,Keyboard,received,b' ',wait_char
+69414,Stimulus,presented,12
+70426,Picture,loaded,b'Stroop_English_00.png'
+70430,Stimulus,presented,5
+70722,Keyboard,received,b' ',wait_char
+70743,Stimulus,presented,12
+71754,Picture,loaded,b'Stroop_English_03.png'
+71758,Stimulus,presented,6
+72058,Keyboard,received,b' ',wait_char
+72058,Experiment,ended
+72059,Data,saved
+72061,Stimulus,presented,17

@@ -1,0 +1,11 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Thu Oct 04 2018 12:24:30
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+4124,stderr,received,'Traceback (most recent call last):'
+4124,stderr,received,'  File "main.py", line 9, in <module>'
+4124,stderr,received,"    for f in glob.glob('*.png'):"
+4124,stderr,received,"NameError: name 'glob' is not defined"

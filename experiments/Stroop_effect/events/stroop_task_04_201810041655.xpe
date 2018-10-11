@@ -1,0 +1,21 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Thu Oct 04 2018 16:55:13
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+4159,Stimulus,presented,14
+25448,Keyboard,received,b' ',wait_char
+25449,Stimulus,presented,15
+25866,Keyboard,received,b' ',wait_char
+30228,design,log,
+#design: #exp: Stroop Experiment
+#design: block_cnt,block_id,trial_cnt,trial_id
+30228,design,logged,
+30228,Experiment,started
+30249,Stimulus,presented,12
+31252,stderr,received,'Traceback (most recent call last):'
+31252,stderr,received,'  File "stroop_task.py", line 106, in <module>'
+31252,stderr,received,'    trial.stim.present()  # display the card'
+31252,stderr,received,"AttributeError: 'Trial' object has no attribute 'stim'"

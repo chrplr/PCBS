@@ -1,0 +1,24 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Thu Oct 04 2018 16:58:27
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+5452,Stimulus,presented,14
+6173,Keyboard,received,b' ',wait_char
+6174,Stimulus,presented,15
+6862,Keyboard,received,b' ',wait_char
+11324,design,log,
+#design: #exp: Stroop Experiment
+#design: block_cnt,block_id,trial_cnt,trial_id
+11324,design,logged,
+11324,Experiment,started
+11383,Stimulus,presented,12
+12402,Picture,loaded,b'Stroop_French_01.png'
+12409,Stimulus,presented,0
+16462,Keyboard,received,b' ',wait_char
+16462,stderr,received,'Traceback (most recent call last):'
+16462,stderr,received,'  File "stroop_task.py", line 108, in <module>'
+16463,stderr,received,"    exp.data.add_data([trial.get_factor('lang'), key, rt])"
+16463,stderr,received,"AttributeError: 'DataFile' object has no attribute 'add_data'"

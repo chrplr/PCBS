@@ -1,0 +1,19 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpe-file, coding: UTF-8
+#date: Thu Oct 11 2018 21:07:30
+#sha1: None
+#modules: 
+#display: size=(1920, 1080), window_mode=False, open_gl=2
+#os: uname_result(system='Linux', node='is153352', release='4.9.8-040908-generic', version='#201702040431 SMP Sat Feb 4 09:32:59 UTC 2017', machine='x86_64', processor='x86_64')
+Time,Type,Event,Value,Detail,Detail2
+10770,design,log,
+#design: #exp: Visual Detection
+#design: #dvn: clock,trial,wait,respkey,RT
+#design: block_cnt,block_id,trial_cnt,trial_id
+10770,design,logged,
+10770,Experiment,started
+10808,Stimulus,presented,3
+12220,Experiment,paused
+12222,Stimulus,presented,4
+13248,Keyboard,received,b'y',wait_char
+13248,Experiment,ended
+13249,Stimulus,presented,4

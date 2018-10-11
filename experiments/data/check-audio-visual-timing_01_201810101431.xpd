@@ -1,0 +1,20 @@
+#Expyriment 0.9.0 (Python 3.6.6), .xpd-file, coding: UTF-8
+#date: Wed Oct 10 2018 14:31:12
+#--EXPERIMENT INFO
+#e mainfile: check-audio-visual-timing.py
+#e sha1: None
+#e modules: 
+#e Experiment: Cross-modal-timing-test
+#e no between subject factors
+#--SUBJECT INFO
+#s id: 1
+subject_id,
+1,996
+1,1991
+1,2986
+1,3981
+1,4976
+1,5971
+1,6966
+1,7961
+1,8956
