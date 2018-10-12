@@ -143,6 +143,9 @@ Run the quick check with ipython:
 
 Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
 
+
+0. run `sound_synth.py`, look at the code.
+
 1. Take a mono sound and create a stereo sound by progressively dephasing the two channels.
 
 2. Create rhythmic stimuli as described in (Povel and Essen (1985) _Perception of Temporal Patterns_)[http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf]
@@ -151,7 +154,28 @@ Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/t
 
 ## Simple reaction times
 
-* Write a script that presents a series of trials in which a dot or a cross is presented at the center of the screen and the participant must click on the mouse as quickly as possible. The reaction times must be recorded in a file for further analyses.
+1. Write a script that presents a series of trials in which a dot or a cross is presented at the center of the screen and the participant must click on the mouse as quickly as possible. The reaction times must be recorded in a file for further analyses.
+
+    - Here is a solution using pygame : `experiments/reaction-times/simple-detection-visual-pygame.py`. run it. check reaction_times.csv. 
+    
+    - Here is a solution using expyriment: `experiments/reaction-times/simple-detection-visual-expyriment.py`. run it. check the results file in the folder `data`. Launch ipython in the `data` folder and type.
+    
+    
+    import pandas as pd
+    d = pd.read_csv('simple-detection... .xpd', comment='#')
+    d.RT.mean()
+    d.RT.std()
+    d.RT[1:].mean()
+    
+    import matplotlib.pyplot as plt
+    plt.hist(d.RT)
+
+
+2. Modify `simple-detection-visual-expyriment.py` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have a simple detection audio experiement. 
+
+3. Modify the script to have 3 blocks of trials (check expyrimùent_template to see how to handle blocks): one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?
+
+
 
 ## Stroop Effect
 

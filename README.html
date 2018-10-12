@@ -420,7 +420,8 @@ if (window.hljs) {
 <pre><code>import simpleaudio.functionchecks as fc
 fc.LeftRightCheck.run()</code></pre>
 <p>Check out <a href="https://simpleaudio.readthedocs.io/en/latest/tutorial.html">simpleaudio tutorials</a></p>
-<ol type="1">
+<ol start="0" type="1">
+<li><p>run <code>sound_synth.py</code>, look at the code.</p></li>
 <li><p>Take a mono sound and create a stereo sound by progressively dephasing the two channels.</p></li>
 <li><p>Create rhythmic stimuli as described in (Povel and Essen (1985) <em>Perception of Temporal Patterns</em>)[<a href="http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf" class="uri">http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf</a>]</p></li>
 </ol>
@@ -429,9 +430,17 @@ fc.LeftRightCheck.run()</code></pre>
 <h1>Experiments</h1>
 <section id="simple-reaction-times" class="level2">
 <h2>Simple reaction times</h2>
+<ol type="1">
+<li><p>Write a script that presents a series of trials in which a dot or a cross is presented at the center of the screen and the participant must click on the mouse as quickly as possible. The reaction times must be recorded in a file for further analyses.</p>
 <ul>
-<li>Write a script that presents a series of trials in which a dot or a cross is presented at the center of the screen and the participant must click on the mouse as quickly as possible. The reaction times must be recorded in a file for further analyses.</li>
+<li><p>Here is a solution using pygame : <code>experiments/reaction-times/simple-detection-visual-pygame.py</code>. run it. check reaction_times.csv.</p></li>
+<li><p>Here is a solution using expyriment: <code>experiments/reaction-times/simple-detection-visual-expyriment.py</code>. run it. check the results file in the folder <code>data</code>. Launch ipython in the <code>data</code> folder and type.</p></li>
 </ul>
+<p>import pandas as pd d = pd.read_csv(‘simple-detection… .xpd’, comment=‘#’) d.RT.mean() d.RT.std() d.RT[1:].mean()</p>
+<p>import matplotlib.pyplot as plt plt.hist(d.RT)</p></li>
+<li><p>Modify <code>simple-detection-visual-expyriment.py</code> to play a short sound (<code>click.wav</code>) in lieu of displaying a cross. Thus you have a simple detection audio experiement.</p></li>
+<li><p>Modify the script to have 3 blocks of trials (check expyrimùent_template to see how to handle blocks): one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?</p></li>
+</ol>
 </section>
 <section id="stroop-effect" class="level2">
 <h2>Stroop Effect</h2>
