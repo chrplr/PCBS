@@ -37,6 +37,7 @@ pygame.image.save(screen, "grid.png")
 # wait till the window is closed
 done = False
 while not done:
+        pygame.time.wait(100)
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                         done = True

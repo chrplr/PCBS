@@ -26,6 +26,8 @@ myrect = pygame.Rect(left, top, width, height * 3)
 done = False
 while not done:
     screen.fill(WHITE)
+    pygame.display.flip()
+    pygame.time.wait(1000)
     pygame.draw.rect(screen, BLACK, mysquare)
     pygame.display.flip()
     pygame.time.wait(200)
