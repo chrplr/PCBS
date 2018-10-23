@@ -158,9 +158,11 @@ Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/t
 
     - Here is a solution using pygame : `experiments/reaction-times/simple-detection-visual-pygame.py`. run it. check reaction_times.csv. 
     
-    - Here is a solution using expyriment: `experiments/reaction-times/simple-detection-visual-expyriment.py`. run it. check the results file in the folder `data`. Launch ipython in the `data` folder and type.
+    - Here is a solution using expyriment: `experiments/reaction-times/simple-detection-visual-expyriment.py`. 
     
+    Run the previous script. Check the results file in the folder `data`. Launch ipython in the `data` folder and type:
     
+```
     import pandas as pd
     d = pd.read_csv('simple-detection... .xpd', comment='#')
     d.RT.mean()
@@ -169,11 +171,11 @@ Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/t
     
     import matplotlib.pyplot as plt
     plt.hist(d.RT)
+```    
 
+2. Modify `simple-detection-visual-expyriment.py` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have a simple detection audio experiment. 
 
-2. Modify `simple-detection-visual-expyriment.py` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have a simple detection audio experiement. 
-
-3. Modify the script to have 3 blocks of trials (check expyrimùent_template to see how to handle blocks): one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?
+3. Modify the script to have 3 blocks of trials (check expyriment_template.py to see how to handle blocks): one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?
 
 
 
