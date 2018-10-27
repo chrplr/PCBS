@@ -17,6 +17,7 @@ def print_row(u):
 
 
 def print_row2(u):
+    """"prints all first non null elements of u, aligned using 4 characters  """
     for e in u:
         if e != 0:
             print(f"{e:4d}", end=' ')

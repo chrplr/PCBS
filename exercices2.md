@@ -1,8 +1,25 @@
-Exercices 2
-===========
+Exercices 2:
+
+1. Given a list of numbers, print the largest one.
+
+2. Given a list of numbers, print them separated by a space (e.g. `[1, 2, 4]` -> `1 2 3`).
+
+3. Given a list of words, print how many different
+words are in that list (hint: use a dictionary or a set)
+
+4. Given a list of words, count the number of times each word appears in the list. Eg. `[Jim, Alan, Jim, Joe]` -> `Jim:2, Alan:1, Joe:1`  (hint: use dictionary)
 
 
-# Computing descriptive statistics from a detection experiment
+5. Write a script that prints the first 10 lines of a file (or the whole file is it is less than 10 lines long).
+
+6. Write a script that prints the last 10 lines of a file  (or the whole file is it is less than 10 lines long).
+
+7. Two taxi companies propose differents pricing schemes: "A charges 
+rge 4.80€ plus 1.15€ by km travelled; B 3.20€ plus  
+1.20€ by km travelled. Write a script that finds which company is the cheapest
+as a function of the distance to travel.
+
+8. Computing descriptive statistics from a detection experiment
 
 In a signal detection experiment, a faint stimulus (e.g. a faint sound or a
 faint visual target) is presented or not at each trial and the participant
@@ -19,7 +36,7 @@ One defines;
  *  The _hit rate_ , equal to #hits / (#hits + #misses)
  *  The _False alarm rate_, equal to #false alarms / (#false alarms + # correct rejections)
 
-1. Let us first suppose that the data from a participant is represented as a string. This string represents a series of trials, each trial being
+Let us first suppose that the data from a participant is represented as a string. This string represents a series of trials, each trial being
 represented by two characters indicating the trial type (1=target present,
 0=target absent) and the participant's response (Y=target perceived, N=No target
 perceived). For example:
@@ -30,29 +47,18 @@ perceived). For example:
  
 Write a function that, given such a string, returns the Hit rate and the  False rate (hint: use the function `split()`)
 
-2. Suppose the results from different participants are stored in different files `subj*.dat` (download )
+Now, the results from different participants are stored in different files `subj*.dat` (download the files from `PCBS/exercices2/subjdat.zip`)
 
 Write a script that computes the hit rates and false alarms for each subject, andisplays the group averages and standard deviations. 
 
 
-3. use `matplotlib.pyplot.plot` to display each participant as a dot on a graphics with False alarm rate on the X-axis and Hit Rate on the Y-axis. 
-
-
-# 
+Use `matplotlib.pyplot.plot` to display each participant as a dot on a graphics with False alarm rate on the X-axis and Hit Rate on the Y-axis. 
 
 Read the section on reading comma separated value (`.csv``) files from http://automatetheboringstuff.com/chapter14/
 
 
-
-# google ngrams
-
-- Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. https://doi.org/10.1126/science.1199644.  (use scholar.google.com to find a pdf copy)
-
-- Go to the ngram viewer  https://books.google.com/ngrams.
-
- - At the bottom of the page, there is a message "Raw data is available for download here"". Follow the "here" link.  download the 1-grams file 'z' for the dataset "English Version 20120701"". Uncompress it (it is in the .gzip format). It is a text file listing words starting with a 'z'.
-
-Zipfian
+9. (optional) Write a reverse Polish arithmetic expression evaluator (https://en.wikipedia.org/wiki/Reverse_Polish_notation). E.g. `3 4 * 5 -` evaluate to `7`.
 
 
- 
+
+
