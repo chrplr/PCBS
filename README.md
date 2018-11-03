@@ -9,6 +9,8 @@ Its markdown source as well as the course materials is on github, at http://www.
 I have created a discussion forum on slack: https://cogmaster-pcbs.slack.com  Please [join](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU) !
 
+Additional exercises are listed at https://github.com/chrplr/PCBS/blob/master/exercices.md
+
 # Aim
 
 Le but de cet atelier est d'amener les étudiants à être capables d'écrire des programmes pour résoudre des problèmes typiques qu'ils vont rencontrer dans leurs travaux de recherche en sciences cognitives ou neurosciences.
@@ -22,7 +24,7 @@ Puis les étudiants devront choisir un projet impliquant de la programmation (en
 
 # Prerequisites: 
 
-1. knowledge of basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call and definition), file input/output operations ) and their implementation in Python 3. 
+1. knowledge of basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call and definition), file input/output operations ) and their implementation in Python 3. All this is covered in Part 1 of _Automate the boring stuff_ by Al Stewart (http://automatetheboringstuff.com/) or in _Think Python_ by Allen B. Downey (http://greenteapress.com/thinkpython2/thinkpython2.pdf). Some other useful ressources: 
 
     * _Invent Your Own Computer Games with Python_ (4th Edition): https://inventwithpython.com/invent4thed/
     * _Apprendre à programmer avec Python 3_ : http://inforef.be/swi/python.htm
@@ -38,7 +40,7 @@ Puis les étudiants devront choisir un projet impliquant de la programmation (en
     
         git clone https://github.com/chrplr/PCBS
         
-    * see [tools-for-reproducible-science.md]
+    * see [https://github.com/chrplr/PCBS/blob/master/tools-for-reproducible-science.md]
     * https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
     * https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
 
@@ -46,7 +48,7 @@ Puis les étudiants devront choisir un projet impliquant de la programmation (en
 
 ## Manipulations:
 
-A great book:  _Automate the boring stuff with Python_ : http://automatetheboringstuff.com/
+_Automate the boring stuff with Python_ by Al Sweigart (http://automatetheboringstuff.com/) is a great book to learn to manipulate files, extracting information from web pages, etc.: 
 
 ## Stimulus/Experiment generation modules
 
@@ -63,12 +65,12 @@ A great book:  _Automate the boring stuff with Python_ : http://automatetheborin
 
 0. Modules: numpy, scipy, pandas, seaborn, statsmodel, sklearn
 1. _Scipy Lecture Notes_: http://www.scipy-lectures.org/
-2. _Think Stats_ by Allen B. Downey: http://greenteapress.com/thinkstats/
+2. _Think Stats_ by Allen B. Downey: http://greenteapress.com/thinkstats2/
 3. _Python Data Science Handbook_ by Jake VanderPlas: https://jakevdp.github.io/PythonDataScienceHandbook
 
 ## Simulations
 
-1. _Think Complexity_ by Allen B. Downey http://greenteapress.com/complexity/
+1. _Think Complexity_ by Allen B. Downey http://greenteapress.com/wp/think-complexity-2e/
 2. The Brian spiking neural network simulator: http://briansimulator.org/
 3. Deep Learning for Natural Language Processing with Pytorch: https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html
 
@@ -218,6 +220,19 @@ In a lexical decision experiment, a string of characters is flashed at the cente
 
 # Data Manipulation and Analysis
 
+
+# google ngrams
+
+- Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. https://doi.org/10.1126/science.1199644.  (use scholar.google.com to find a pdf copy)
+
+- Go to the ngram viewer  https://books.google.com/ngrams.
+
+ - At the bottom of the page, there is a message "Raw data is available for download here"". Follow the "here" link.  download the 1-grams file 'z' for the dataset "English Version 20120701"". Uncompress it (it is in the .gzip format). It is a text file listing words starting with a 'z'.
+
+Zipfian ...
+
+
+ 
 
 
 # Simulations

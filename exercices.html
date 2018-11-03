@@ -10,9 +10,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<meta name="author" content="Christophe Pallier" />
 
 
-<title>exercices1.utf8</title>
+<title>Exercices de programmation en Python</title>
 
 <style type="text/css">@font-face {
 font-family: "et-book";
@@ -261,14 +262,19 @@ if (window.hljs) {
 
 
 
+<h1 class="title toc-ignore">Exercices de programmation en Python</h1>
+<h4 class="author"><em>Christophe Pallier</em></h4>
+<h4 class="date"><em>Fall. 2018</em></h4>
 
 
 
-<section id="exercices-de-programmation-en-python" class="level1">
-<h1>Exercices de programmation en Python</h1>
+<p>You can get help on these exercises by <a href="https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU">joining a discussion forum</a> on slack: <a href="https://cogmaster-pcbs.slack.com" class="uri">https://cogmaster-pcbs.slack.com</a></p>
+<p>Solutions for these exercises are available on the forum and/or at <a href="http://www.github.com/chrplr/PCBS" class="uri">http://www.github.com/chrplr/PCBS</a></p>
+<section id="serie-1" class="level2">
+<h2>Série 1</h2>
 <ol type="1">
-<li><p>Lisez le chapitre 3 de <em>Invent your own games with Python</em> <a href="https://inventwithpython.com/invent4thed/chapter3.html" class="uri">https://inventwithpython.com/invent4thed/chapter3.html</a> où l’auteur présente un jeu dans lequel l’ordinateur choisit un nombre au hasard que l’utilsateur doit deviner. Assurez-vous de bien comprendre le programme proposé. Votre mission consiste à ecrire un script python qui joue le jeu “inverse”, c-à-d où c’est l’utilisateur qui pense à un nombre (par exemple entre 1 et 100) et c’est l’ordinateur qui doit le deviner.</p></li>
-<li><p>Ecrire un programme qui affiche tous les nombres premiers compris entre 1 et 10000 (On rappelle qu’un nombre premier est un nombre entier qui n’admet pas d’autres diviseurs que lui même et 1). Il y a plusieurs approches possibles. Vous pouvez par exemple vous aider de la fonction:</p>
+<li><p><em>computer-guess-a-number</em> Read chapter 3 of <em>Invent your own games with Python</em> <a href="https://inventwithpython.com/invent4thed/chapter3.html" class="uri">https://inventwithpython.com/invent4thed/chapter3.html</a> where the author presents a game where the computer chooses a random number that the user must guess. Study the code. Now, you task is to write another program, where the roles are inverted: the computer tries to guess a number that the user has in mind. The computer proposes a number and the user answeres with ‘+’ (the number he has is mind is larger), ‘-’ (if it is smaller), ‘y’ (if the guess is correct)</p></li>
+<li><p><em>prime numbers</em>. Write a script that lists all prime numbers between 1 and 10000 (A prime number is a integer that has no divisors except 1 and itself). You may use the following function:</p>
 <table>
 <tbody>
 <tr class="odd">
@@ -285,7 +291,7 @@ if (window.hljs) {
 </tr>
 </tbody>
 </table></li>
-<li><p>Ecrire un programme qui affiche les premières lignes du triangle de Pascal (see <a href="https://www.youtube.com/watch?v=XMriWTvPXHI" class="uri">https://www.youtube.com/watch?v=XMriWTvPXHI</a>). Par exemple:</p>
+<li><p><em>Pascal triangle</em> Write a program that prints the first rows of Pascal’s triangle (see <a href="https://www.youtube.com/watch?v=XMriWTvPXHI" class="uri">https://www.youtube.com/watch?v=XMriWTvPXHI</a>). For example:</p>
 <table>
 <tbody>
 <tr class="odd">
@@ -326,9 +332,64 @@ if (window.hljs) {
 </ol>
 <p>Pour résoudre ce problème, une solution consiste à stocker les valeurs de la ligne courante dans une liste Python, et d’écrire une fonction qui étant donnée une liste en argument, calcule et renvoit la ligne suivante dans une nouvelle liste.</p>
 <ol start="4" type="1">
-<li><p>Lisez le chapitre 8 de <em>Automate the boring stuff</em> (<a href="http://automatetheboringstuff.com/chapter8/" class="uri">http://automatetheboringstuff.com/chapter8/</a>). Ecrire un programme qui ouvre et lit un fichier texte, puis affiche toutes les lignes qui contiennent un mot donné, par exemple “Cogmaster”.</p></li>
-<li><p>(optionnel: seulement pour ceux qui se sentent capables et sont motivés) Ecrire un programme qui simule une machine RodRego à 10 registres (<a href="http://sites.tufts.edu/rodrego/" class="uri">http://sites.tufts.edu/rodrego/</a>). Le programme est stocké dans un fichier texte qui est lu, puis executé. Votre programme doit contenir une fonction qui etant donnée les 10 valeurs initiales des registres, et le programme, renvoit les nouvelles valeurs des registres quand l’instruction END est atteinte.</p></li>
+<li><p><em>string-detector</em> Lisez le chapitre 8 de <em>Automate the boring stuff</em> (<a href="http://automatetheboringstuff.com/chapter8/" class="uri">http://automatetheboringstuff.com/chapter8/</a>). Ecrire un programme qui ouvre et lit un fichier texte, puis affiche toutes les lignes qui contiennent un mot donné, par exemple “Cogmaster”.</p></li>
+<li><p><em>Rodrego-simulator</em> (optionnel: seulement pour ceux qui se sentent capables et sont motivés) Ecrire un programme qui simule une machine RodRego à 10 registres (<a href="http://sites.tufts.edu/rodrego/" class="uri">http://sites.tufts.edu/rodrego/</a>). Le programme est stocké dans un fichier texte qui est lu, puis executé. Votre programme doit contenir une fonction qui etant donnée les 10 valeurs initiales des registres, et le programme, renvoit les nouvelles valeurs des registres quand l’instruction END est atteinte.</p></li>
 </ol>
+</section>
+<section id="serie-2" class="level2">
+<h2>Série 2</h2>
+<ol type="1">
+<li><p>Given a list of numbers, print the largest one.</p></li>
+<li><p>Given a list of numbers, print them separated by a space (e.g. <code>[1, 2, 4]</code> -&gt; <code>1 2 3</code>).</p></li>
+<li><p>Given a list of words, print how many different words are in that list (hint: use a dictionary or a set)</p></li>
+<li><p>Given a list of words, count the number of times each word appears in the list. Eg. <code>[Jim, Alan, Jim, Joe]</code> -&gt; <code>Jim:2, Alan:1, Joe:1</code> (hint: use dictionary)</p></li>
+<li><p>Write a script that prints the first 10 lines of a file (or the whole file is it is less than 10 lines long).</p></li>
+<li><p>Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long).</p></li>
+<li><p>Two taxi companies propose differents pricing schemes: &quot;A charges rge 4.80€ plus 1.15€ by km travelled; B 3.20€ plus<br />
+1.20€ by km travelled. Write a script that finds which company is the cheapest as a function of the distance to travel.</p></li>
+<li><p>Computing descriptive statistics from a detection experiment</p></li>
+</ol>
+<p>In a signal detection experiment, a faint stimulus (e.g. a faint sound or a faint visual target) is presented or not at each trial and the participant must indicate whether he has perceived it or not. There are four possible outcomes for each trial:</p>
+<ol type="1">
+<li>A <em>hit</em> is when the participant correctly detects the target.</li>
+<li>A <em>miss</em> is when the target was there but the participant did not detect it.</li>
+<li>A <em>false alarm</em> is when the participant reports the presence of the target when it was not actually there.</li>
+<li>A <em>correct rejection</em> is when the participant correctly reports that the target was not present.</li>
+</ol>
+<p>One defines;</p>
+<ul>
+<li>The <em>hit rate</em> , equal to #hits / (#hits + #misses)</li>
+<li>The <em>False alarm rate</em>, equal to #false alarms / (#false alarms + # correct rejections)</li>
+</ul>
+<p>Let us first suppose that the data from a participant is represented as a string. This string represents a series of trials, each trial being represented by two characters indicating the trial type (1=target present, 0=target absent) and the participant’s response (Y=target perceived, N=No target perceived). For example:</p>
+<pre><code>---
+data = &quot;0Y,0N,1Y,1Y,0N,0N,0Y,1Y,1Y&quot;
+---</code></pre>
+<p>Write a function that, given such a string, returns the Hit rate and the False rate (hint: use the function <code>split()</code>)</p>
+<p>Now, the results from different participants are stored in different files <code>subj*.dat</code> (download the files from <a href="https://github.com/chrplr/PCBS/tree/master/exercices2/subjdat.zip" class="uri">https://github.com/chrplr/PCBS/tree/master/exercices2/subjdat.zip</a>`)</p>
+<p>Write a script that computes the hit rates and false alarms for each subject, andisplays the group averages and standard deviations.</p>
+<p>Use <code>matplotlib.pyplot.plot</code> to display each participant as a dot on a graphics with False alarm rate on the X-axis and Hit Rate on the Y-axis.</p>
+<p>Read the section on reading comma separated value (`.csv``) files from <a href="http://automatetheboringstuff.com/chapter14/" class="uri">http://automatetheboringstuff.com/chapter14/</a></p>
+<ol start="9" type="1">
+<li>(optional) Write a reverse Polish arithmetic expression evaluator (<a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation" class="uri">https://en.wikipedia.org/wiki/Reverse_Polish_notation</a>). E.g. <code>3 4 * 5 -</code> evaluate to <code>7</code>.</li>
+</ol>
+</section>
+<section id="miscellaneous-exercises" class="level2">
+<h2>Miscellaneous exercises</h2>
+<ul>
+<li>Experiment 1 consists in a series of trials of two types, ‘TypeA’ or ‘TypeB’.
+<ul>
+<li>Write a function which takes <code>N</code>, the total number of trials, and returns a list of labels ‘TypeA’ and ‘typeB’, in a random order (hint: use <code>random.shuffle</code>).</li>
+<li>Create lists of trials for 20 participants. Each list must be saved in a text file with one column and one line per trial where each line contains a labelcorresponding the trial type).</li>
+</ul></li>
+<li><p>Experiment 2 consists in a series of trials where a written stimulus is presented: the stimulus can be a French word or pseudowords, or an English words or pseudowords (the task is a lexical decision, that is, the participants must decide as quickly as possible if the stimulus is an existing word or not). Create text files listing 100 trials in a random order.</p></li>
+<li>‘Kaprekar-numbers’ Un nombre de Kaprekar est un nombre dont la représentation décimale du carré peut être découpée en une partie gauche et une partie droite (non nulle) telles que la somme de ces deux parties redonne le nombre initial. Par exemple:
+<ul>
+<li>703 est un nombre de Kaprekar en base 10 car 703² = 494 209 et que 494 + 209 = 703.</li>
+<li>4879 est un nombre de Kaprekar en base 10 car 4879² = 23 804 641 et 04641 + 238 = 4879</li>
+</ul>
+<p>Ecrire un programme qui renvoit tous les nombres de Kaprekar entre 1 et N.</p></li>
+</ul>
 </section>
 
 
