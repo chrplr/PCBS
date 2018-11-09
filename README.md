@@ -158,9 +158,9 @@ Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/t
 
 1. Write a script that presents a series of trials in which a dot or a cross is presented at the center of the screen and the participant must click on the mouse as quickly as possible. The reaction times must be recorded in a file for further analyses.
 
-    - Here is a solution using pygame : `experiments/reaction-times/simple-detection-visual-pygame.py`. run it. check reaction_times.csv. 
+    - Here is a solution using pygame : `PCBS/experiments/reaction-times/simple-detection-visual-pygame.py`. run it. check reaction_times.csv. 
     
-    - Here is a solution using expyriment: `experiments/reaction-times/simple-detection-visual-expyriment.py`. 
+    - Here is a solution using expyriment: `PCBS/experiments/reaction-times/simple-detection-visual-expyriment.py`. 
     
     Run the previous script. Check the results file in the folder `data`. Launch ipython in the `data` folder and type:
     
@@ -173,18 +173,20 @@ Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/t
     
     import matplotlib.pyplot as plt
     plt.hist(d.RT)
-```    
+```
 
-2. Modify `simple-detection-visual-expyriment.py` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have a simple detection audio experiment. 
 
-3. Modify the script to have 3 blocks of trials (check expyriment_template.py to see how to handle blocks): one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?
+3. Read https://docs.expyriment.org/Tutorial.html to understand the basic pinciples of expyriment. See `PCBS/expyriment_template.py``
 
+4. Modify `simple-detection-visual-expyriment.py` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have a simple detection audio experiment. 
+
+5. Modify the script to have 3 blocks of trials: one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?
 
 
 ## Stroop Effect
 
 The [Stroop Effect](https://en.wikipedia.org/wiki/Stroop_effect) demonstrates the automaticity of reading. 
-Write a python script to create 4x8 cards for the task, avoiding repetitions of colors.  
+Write a python script to create 4x8 cards for the task, avoiding repetitions of colors.
  
 ![Stroop card](images/stroop.png)
  
@@ -196,14 +198,14 @@ Write a python script to create 4x8 cards for the task, avoiding repetitions of 
 
     python stroop_task.py
 
-   Check the naming times in `data`. Compute the average reading times as a function of the language (you can use R ou python).
+   Check the naming times in `data`. Compute the average reading times as a function of the language (you can use R or Python).
    
    * Study the code `stroop_task.py`. 
 
 
 ## Lexical Decision Task
 
-In a lexical decision experiment, a string of characters is flashed at the center of the screen and the participant has to decide if it is  real word or not, indicating his deision by pressing a left or right button. Reaction time is measured, providing an idea of the speed of word recognition. 
+In a lexical decision experiment, a string of characters is flashed at the center of the screen and the participant has to decide if it is  real word or not, indicating his/her decision by pressing a left or right button. Reaction time is measured from the word onset, providing an estimate of the speed of word recognition. 
 
    * select 60 nouns from http://www.lexique.org, of length 5 or 7 and low or high frequency.
    * generate 50 pseudowords using either (Lexique tools)[http://www.lexique.org/toolbox/toolbox.pub/] or  [Wuggy](http://crr.ugent.be/programs-data/wuggy)
@@ -215,11 +217,16 @@ In a lexical decision experiment, a string of characters is flashed at the cente
 
 * See http://docs.expyriment.org/old/0.9.0/Examples.html
 
+* See https://www.github.com/chrplr/audiovis : a general audio visual stimulus presentation script using expyriment
+
 * Fork https://github.com/expyriment/expyriment-stash and contribute by adding new scripts!
 
 
 # Data Manipulation and Analysis
 
+# Zipf law
+
+Download some text files from the web (for example http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt), compute the frequencies of occurrences of words in this text (i.e., how many times each words appears) and plot the distribution of these frequencies, create the Zipf plot showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent). 
 
 # google ngrams
 
@@ -231,9 +238,8 @@ In a lexical decision experiment, a string of characters is flashed at the cente
 
 Zipfian ...
 
-
- 
-
+TODO
 
 # Simulations
 
+TODO
