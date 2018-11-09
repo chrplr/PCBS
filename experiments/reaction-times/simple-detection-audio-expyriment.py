@@ -2,28 +2,29 @@
 # Time-stamp: <2018-05-12 13:01:11 cp983411>
 
 """A series of trials where a cross is presented at the center of the screen and the participant must press a key as fast as possible. The statistics of reactions times are displayed at the end of the experiment.
+
 """
 
 import random
-import numpy as np
 import expyriment
-from  expyriment.stimuli import FixCross, BlankScreen
+from expyriment.stimuli import Audio, BlankScreen
 
 exp = expyriment.design.Experiment(name="Visual Detection")
-#expyriment.control.set_develop_mode()
+# expyriment.control.set_develop_mode()
 expyriment.control.initialize(exp)
 
 NTRIALS = 10
 MAXDURATION = 2000
-target = FixCross(size=(25, 25), line_width=4)
+target = Audio('click.wav')
 blankscreen = BlankScreen()
 
 exp.add_data_variable_names(['clock', 'trial', 'wait', 'respkey', 'RT'])
+
 expyriment.control.start(skip_ready_screen = True)
 
 expyriment.stimuli.TextScreen(
-    "Your task is to detect a cross appearing at the center of screen",
-    "Press a key as quickly as possible when you see the cross. There will be %d trials " % NTRIALS).present()
+    "Your task is to detect sound",
+    "Press a key as quickly as possible when you hear the sound. There will be %d trials " % NTRIALS).present()
 exp.keyboard.wait()
 blankscreen.present()
 
