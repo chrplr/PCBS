@@ -207,13 +207,12 @@ Write a python script to create 4x8 cards for the task, avoiding repetitions of 
 
 In a lexical decision experiment, a string of characters is flashed at the center of the screen and the participant has to decide if it is  real word or not, indicating his/her decision by pressing a left or right button. Reaction time is measured from the word onset, providing an estimate of the speed of word recognition. 
 
-   * select 60 nouns from http://www.lexique.org, of length 5 or 7 and low or high frequency.
+   * Using [lexical-decision/select-words-from-lexique.py] as an example, select 20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and 20 low frequency verbs, from Lexique382.txt (which can be download from http://www.lexique.org). They must all have a length of 5 to 8 characters. 
    * generate 50 pseudowords using either (Lexique tools)[http://www.lexique.org/toolbox/toolbox.pub/] or  [Wuggy](http://crr.ugent.be/programs-data/wuggy)
    * Program a lexical decision using (expyriment)[http://expyriment.org]
-   * Compute the average decision times using pandas
+   * Run it and compute the average decision times using pandas
 
-
-## More examples with expyriment.org
+## More examples of experiments with expyriment.org
 
 * See http://docs.expyriment.org/old/0.9.0/Examples.html
 
@@ -224,17 +223,37 @@ In a lexical decision experiment, a string of characters is flashed at the cente
 
 # Data Manipulation and Analysis
 
+* Data manipulation: http://pandas.pydata.org/pandas-docs/stable/tutorials.html 
+
+* Statistics:  http://www.scipy-lectures.org/
+
+* Plotting:
+    - http://matplotlib.org/users/pyplot_tutorial.html
+    - https://seaborn.pydata.org/tutorial.html
+
 # Zipf law
 
-Download some text files from the web (for example http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt), compute the frequencies of occurrences of words in this text (i.e., how many times each words appears) and plot the distribution of these frequencies, create the Zipf plot showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent). 
+* The script [Zipf/word-count.py] computes the distribution of frequencies of occurences in a list of words. Use it to compute the distribution of word frequencies in _Alice in Wonderland_ (http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt).
 
-# google ngrams
+Note: To remove the punctuation, you can use the following function:
 
-- Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. https://doi.org/10.1126/science.1199644.  (use scholar.google.com to find a pdf copy)
+    import string
+    def remove_punctuation(text):
+        punct = string.punctuation + chr(10)
+        return text.translate(str.maketrans(punct, " " * len(punct)))
 
-- Go to the ngram viewer  https://books.google.com/ngrams.
 
- - At the bottom of the page, there is a message "Raw data is available for download here"". Follow the "here" link.  download the 1-grams file 'z' for the dataset "English Version 20120701"". Uncompress it (it is in the .gzip format). It is a text file listing words starting with a 'z'.
+* Zipf law states that the product rank X frequency is roughly constant. This 'law' was discovered by Estoup and popularized by Zipf. See  <http://en.wikipedia.org/wiki/Zipf%27s_law>.  Create the Zipf plot for the text of _Alice in Wonderlang_ showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent). 
+
+* Generate random text (each letter from a-z being equiprobable, and the spacecharacter being 8 times more probable) of 1 million characters. Compute the frequencies of each 'pseudowords' and plot the rank/frequency diagram.
+
+
+
+To know more about lexical frequencies:
+
+* check **google ngrams** at https://books.google.com/ngrams. (Note that at the bottom of the page, there is a message "Raw data is available for download here"). Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. https://doi.org/10.1126/science.1199644.  (use scholar.google.com to find a pdf copy)
+
+* See Harald Baayen (2001) _Word Frequency Distributions_ Kluwer Academic Publishers.
 
 Zipfian ...
 

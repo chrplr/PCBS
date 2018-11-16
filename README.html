@@ -474,14 +474,14 @@ fc.LeftRightCheck.run()</code></pre>
 <h2>Lexical Decision Task</h2>
 <p>In a lexical decision experiment, a string of characters is flashed at the center of the screen and the participant has to decide if it is real word or not, indicating his/her decision by pressing a left or right button. Reaction time is measured from the word onset, providing an estimate of the speed of word recognition.</p>
 <ul>
-<li>select 60 nouns from <a href="http://www.lexique.org" class="uri">http://www.lexique.org</a>, of length 5 or 7 and low or high frequency.</li>
+<li>Using [lexical-decision/select-words-from-lexique.py] as an example, select 20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and 20 low frequency verbs, from Lexique382.txt (which can be download from <a href="http://www.lexique.org" class="uri">http://www.lexique.org</a>). They must all have a length of 5 to 8 characters.</li>
 <li>generate 50 pseudowords using either (Lexique tools)[<a href="http://www.lexique.org/toolbox/toolbox.pub/" class="uri">http://www.lexique.org/toolbox/toolbox.pub/</a>] or <a href="http://crr.ugent.be/programs-data/wuggy">Wuggy</a></li>
 <li>Program a lexical decision using (expyriment)[<a href="http://expyriment.org" class="uri">http://expyriment.org</a>]</li>
-<li>Compute the average decision times using pandas</li>
+<li>Run it and compute the average decision times using pandas</li>
 </ul>
 </section>
-<section id="more-examples-with-expyriment.org" class="level2">
-<h2>More examples with expyriment.org</h2>
+<section id="more-examples-of-experiments-with-expyriment.org" class="level2">
+<h2>More examples of experiments with expyriment.org</h2>
 <ul>
 <li><p>See <a href="http://docs.expyriment.org/old/0.9.0/Examples.html" class="uri">http://docs.expyriment.org/old/0.9.0/Examples.html</a></p></li>
 <li><p>See <a href="https://www.github.com/chrplr/audiovis" class="uri">https://www.github.com/chrplr/audiovis</a> : a general audio visual stimulus presentation script using expyriment</p></li>
@@ -491,17 +491,34 @@ fc.LeftRightCheck.run()</code></pre>
 </section>
 <section id="data-manipulation-and-analysis" class="level1">
 <h1>Data Manipulation and Analysis</h1>
+<ul>
+<li><p>Data manipulation: <a href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html" class="uri">http://pandas.pydata.org/pandas-docs/stable/tutorials.html</a></p></li>
+<li><p>Statistics: <a href="http://www.scipy-lectures.org/" class="uri">http://www.scipy-lectures.org/</a></p></li>
+<li>Plotting:
+<ul>
+<li><a href="http://matplotlib.org/users/pyplot_tutorial.html" class="uri">http://matplotlib.org/users/pyplot_tutorial.html</a></li>
+<li><a href="https://seaborn.pydata.org/tutorial.html" class="uri">https://seaborn.pydata.org/tutorial.html</a></li>
+</ul></li>
+</ul>
 </section>
 <section id="zipf-law" class="level1">
 <h1>Zipf law</h1>
-<p>Download some text files from the web (for example <a href="http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt" class="uri">http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt</a>), compute the frequencies of occurrences of words in this text (i.e., how many times each words appears) and plot the distribution of these frequencies, create the Zipf plot showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent).</p>
-</section>
-<section id="google-ngrams" class="level1">
-<h1>google ngrams</h1>
 <ul>
-<li><p>Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. <a href="https://doi.org/10.1126/science.1199644" class="uri">https://doi.org/10.1126/science.1199644</a>. (use scholar.google.com to find a pdf copy)</p></li>
-<li><p>Go to the ngram viewer <a href="https://books.google.com/ngrams" class="uri">https://books.google.com/ngrams</a>.</p></li>
-<li><p>At the bottom of the page, there is a message “Raw data is available for download here”“. Follow the”here&quot; link. download the 1-grams file ‘z’ for the dataset “English Version 20120701”&quot;. Uncompress it (it is in the .gzip format). It is a text file listing words starting with a ‘z’.</p></li>
+<li>The script [Zipf/word-count.py] computes the distribution of frequencies of occurences in a list of words. Use it to compute the distribution of word frequencies in <em>Alice in Wonderland</em> (<a href="http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt" class="uri">http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt</a>).</li>
+</ul>
+<p>Note: To remove the punctuation, you can use the following function:</p>
+<pre><code>import string
+def remove_punctuation(text):
+    punct = string.punctuation + chr(10)
+    return text.translate(str.maketrans(punct, &quot; &quot; * len(punct)))</code></pre>
+<ul>
+<li><p>Zipf law states that the product rank X frequency is roughly constant. This ‘law’ was discovered by Estoup and popularized by Zipf. See <a href="http://en.wikipedia.org/wiki/Zipf%27s_law">http://en.wikipedia.org/wiki/Zipf%27s_law</a>. Create the Zipf plot for the text of <em>Alice in Wonderlang</em> showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent).</p></li>
+<li><p>Generate random text (each letter from a-z being equiprobable, and the spacecharacter being 8 times more probable) of 1 million characters. Compute the frequencies of each ‘pseudowords’ and plot the rank/frequency diagram.</p></li>
+</ul>
+<p>To know more about lexical frequencies:</p>
+<ul>
+<li><p>check <strong>google ngrams</strong> at <a href="https://books.google.com/ngrams" class="uri">https://books.google.com/ngrams</a>. (Note that at the bottom of the page, there is a message “Raw data is available for download here”). Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. <a href="https://doi.org/10.1126/science.1199644" class="uri">https://doi.org/10.1126/science.1199644</a>. (use scholar.google.com to find a pdf copy)</p></li>
+<li><p>See Harald Baayen (2001) <em>Word Frequency Distributions</em> Kluwer Academic Publishers.</p></li>
 </ul>
 <p>Zipfian …</p>
 <p>TODO</p>
