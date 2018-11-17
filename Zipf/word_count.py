@@ -58,7 +58,7 @@ def zipf_plot(ftable, logx=False, logy=False):
     plt.bar(x, y)
 
     if not logx:
-        plt.xticks(x, a.index)
+        plt.xticks(x, ftable.index)
 
 
 if __name__ == '__main__':
