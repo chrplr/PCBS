@@ -35,9 +35,10 @@ def frequency_spectrum(ftable):
         a pd.DataFrame mapping words count to number of word types.
 
     """
-    fs = frequency_table(ftable).sort_index()
+    fs = frequency_table(ftable)
     fdf = fs.reset_index().rename(columns = {'index': 'counts', 0: 'ntypes'})  # extract index and transform the pd.Series into a pd.DataFrame
     fdf.counts = fdf.counts.astype('int')
+    fdf.sort_values(by=['counts'], inplace=True)
     return fdf
 
 

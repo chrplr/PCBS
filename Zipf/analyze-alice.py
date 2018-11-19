@@ -15,11 +15,13 @@ wc = word_count.frequency_table(words)
 word_count.zipf_plot(wc, logx=True, logy=True)
 plt.show()
 
-b = word_count.frequency_spectrum(words)
+b = word_count.frequency_spectrum(wc)
 print('Frequency spectrum:')
 print(b)
 
 plt.plot(b.counts, b.ntypes, '-o')
 plt.title('Frequency spectrum')
 plt.show()
+
+
 
