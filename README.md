@@ -2,25 +2,21 @@
 % Christophe Pallier
 % Fall 2018
 
-The latest version of this document is available at https://rawgit.com/chrplr/PCBS/master/README.html
+The latest version of this document is available at https://chrplr.github.io/PCBS
 
 Its markdown source as well as the course materials is on github, at http://www.github.com/chrplr/PCBS
+
+The documents in this repository are distributed under the Creative Commons Attribution-ShareAlike 4 (https://creativecommons.org/licenses/by-sa/4.0/). The code is distributed under the GPL v3 LICENSE (https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 I have created a discussion forum on slack: https://cogmaster-pcbs.slack.com  Please [join](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU) !
 
-Additional exercises are listed at https://github.com/chrplr/PCBS/blob/master/exercices.md
+Exercises are listed at (exercices.md)
 
-# Aim
+# Objective
 
-Le but de cet atelier est d'amener les étudiants à être capables d'écrire des programmes pour résoudre des problèmes typiques qu'ils vont rencontrer dans leurs travaux de recherche en sciences cognitives ou neurosciences.
+The purpose of this lecture is to get students to learn to write clean and simpl programs in order to solve tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real time experiments, simulations...).
 
-# Organisation
-
-Dans les premiers cours, je présenterai des exemples d'expériences de psychophysique, de creation de matériel expérimental, de simulation et d'analyse de données, et les étudiants devront résoudre des exercices pour s'entrainer. 
-
-
-Puis les étudiants devront choisir un projet impliquant de la programmation (en Python ou Matlab). Ce travail sera évalué par une présentation orale. (Note: the presentation might actually become a written report if there are too many students)
 
 # Prerequisites: 
 
@@ -90,7 +86,7 @@ _Automate the boring stuff with Python_ by Al Sweigart (http://automatetheboring
 We are going to use [pygame](http://www.pygame.org). For a quick introduction on drawing with pygame, check out 
 https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/
 
-0. Open the script [experiments/visual-illusions/square.py] that generates and displays a square.
+0. Open the script [square.py](experiments/visual-illusions/square.py) that generates and displays a square.
 
 1. Copy this script and modify it to display a red circle 
 
@@ -131,6 +127,7 @@ https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/
 illusion in early visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf). Program the stimulus.
 
 2. Flash-lag illusion. See https://en.wikipedia.org/wiki/Flash_lag_illusion. Program the stimulus.
+
 
 # Creating and playing sounds
 
@@ -182,6 +179,8 @@ Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/t
 
 5. Modify the script to have 3 blocks of trials: one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?
 
+6. Program Posner's attentional cueing task (https://en.wikipedia.org/wiki/Posner_cueing_task) See solution in [Posner-attention/posner_task.py]
+
 
 ## Stroop Effect
 
@@ -231,7 +230,7 @@ In a lexical decision experiment, a string of characters is flashed at the cente
     - http://matplotlib.org/users/pyplot_tutorial.html
     - https://seaborn.pydata.org/tutorial.html
 
-# Zipf law
+# Lexical Frequencies and Zipf law
 
 * The script [Zipf/word-count.py] computes the distribution of frequencies of occurences in a list of words. Use it to compute the distribution of word frequencies in _Alice in Wonderland_ (http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt).
 
@@ -247,17 +246,22 @@ Note: To remove the punctuation, you can use the following function:
 
 * Generate random text (each letter from a-z being equiprobable, and the spacecharacter being 8 times more probable) of 1 million characters. Compute the frequencies of each 'pseudowords' and plot the rank/frequency diagram.
 
-
-
 To know more about lexical frequencies:
 
 * check **google ngrams** at https://books.google.com/ngrams. (Note that at the bottom of the page, there is a message "Raw data is available for download here"). Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. https://doi.org/10.1126/science.1199644.  (use scholar.google.com to find a pdf copy)
 
 * See Harald Baayen (2001) _Word Frequency Distributions_ Kluwer Academic Publishers.
 
-Zipfian ...
+
+### Benford law. 
 
 TODO
+
+### Neural networks
+
+
+
+### Automata
 
 # Simulations
 
