@@ -128,65 +128,71 @@ We are going to use [pygame](http://www.pygame.org). You can read a [quick intro
 
 2. Make another of the script and modify it to display Kanizsa's figures:
 
-![Kanizsa square](images/Kanizsa-square.jpeg)
+   ![Kanizsa square](images/Kanizsa-square.jpeg)
 
-![Kanizsa triangle](images/Kanizsa1.png)
+   ![Kanizsa triangle](images/Kanizsa1.png)
 
-(to know more, google 'illusory contours')
+  (to know more, google 'illusory contours')
+
+  Check [my solution](visual-illusions/kanizsa-square.py) 
 
 3. Copy this script and modify it to display the [Herman grid](https://en.wikipedia.org/wiki/Grid_illusion)
 
-![Hermann Grid](images/HermannGrid.png)
+   ![Hermann Grid](images/HermannGrid.png)
+
+ Check [my solution](visual-illusions/grid.py)
 
 
 4. Copy this script and modify it to generate the static [Ebbinghaus–Titchener stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC). You can also watch [this video](https://www.youtube.com/watch?v=hRlWqfd5pn8).
 
-![Ebbinghaus illusion](images/ebbinghaus-titchener.png)
+   ![Ebbinghaus illusion](images/ebbinghaus-titchener.png)
 
 5. Honeycomb and Extinction illusions.
 
-![Honeycomb illusion](images/honeycomb.png)
+   ![Honeycomb illusion](images/honeycomb.png)
 
-- Watch [this video](https://www.youtube.com/watch?v=fDBYSFDXsuE)
-- Check out [Bertamini, Herzog, and Bruno (2016). “The Honeycomb Illusion: Uniform Textures Not Perceived as Such.”](https://doi.org/10.1177/2041669516660727.
+   - Watch [this video](https://www.youtube.com/watch?v=fDBYSFDXsuE)
+   - Check out [Bertamini, Herzog, and Bruno (2016). “The Honeycomb Illusion: Uniform Textures Not Perceived as Such.”](https://doi.org/10.1177/2041669516660727.
  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5030753/pdf/10.1177_2041669516660727.pdf)
-- Program the stimulus of the extinction illusion (the lines can be horizontal and vertical rather than olique)
+   - Program the stimulus of the extinction illusion (the lines can be horizontal and vertical rather than oblique)
      
- ![Extinction illusion](images/extinction.png)
+  ![Extinction illusion](images/extinction.png)
  
-- Try to program the honeycomb stimulus above (optional). A implementation with psychopy is available from (Bertamini's web site)[https://www.programmingvisualillusionsforeveryone.online/scripts.html]
+  Check [my solution](visual-illusions/Honeycomb.py)
+  
+   - Try to program the honeycomb stimulus above (optional). A implementation with psychopy is available from (Bertamini's web site)[https://www.programmingvisualillusionsforeveryone.online/scripts.html]
     
  
 # Creating dynamic visual stimuli
 
-1. Wertheimer line-motion illusion. Check out [Jancke et al (2004) Imaging cortical correlates of
-illusion in early visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf). Program the stimulus.
+* Wertheimer line-motion illusion. Check out [Jancke et al (2004) Imaging cortical correlates of
+illusion in early visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf). Program the stimulus. Compare with [visual-illusions/line-motion.py](visual-illusions/line-motion.py)
 
-2. Read [Flash-lag illusion](https://en.wikipedia.org/wiki/Flash_lag_illusion). Program the stimulus.
+* Read about the [Flash-lag illusion](https://en.wikipedia.org/wiki/Flash_lag_illusion). Program the stimulus. Compare with [v]isual-illusions/flash-lag.py](isual-illusions/flash-lag.py)
 
 
 # Creating and playing sounds
 
 0. Install the _simpleaudio_ module if it is not already installed on your computer (check with ipython: `import simpleaudio`), :
-```
+    ```
     pip install simpleaudio
-```
+    ```
 
-Run the quick check with ipython:
+   Run the quick check with ipython:
 
-```
+    ```
     import simpleaudio.functionchecks as fc
     fc.LeftRightCheck.run()
-```
+    ```
 
-Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
+    Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
 
 
-0. run `sound_synth.py`, look at the code.
+1. run `sound_synth.py`, look at the code.
 
-1. Take a mono sound and create a stereo sound by progressively dephasing the two channels.
+2. Take a mono sound and create a stereo sound by progressively dephasing the two channels.
 
-2. Create rhythmic stimuli as described in [Povel and Essen (1985) _Perception of Temporal Patterns_](http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf)
+3. Create rhythmic stimuli as described in [Povel and Essen (1985) _Perception of Temporal Patterns_](http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf)
 
 
 # Experiments
