@@ -268,35 +268,66 @@ if (window.hljs) {
 
 
 
-<p>The latest version of this document is available at <a href="https://chrplr.github.io/PCBS" class="uri">https://chrplr.github.io/PCBS</a></p>
-<p>Its markdown source as well as the course materials is on github, at <a href="http://www.github.com/chrplr/PCBS" class="uri">http://www.github.com/chrplr/PCBS</a></p>
-<p>The documents in this repository are distributed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4</a>. The code is distributed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3 LICENSE</a>.</p>
+<p>This document is available at <a href="https://chrplr.github.io/PCBS" class="uri">https://chrplr.github.io/PCBS</a>. Its source as well as the course materials is on github, at <a href="http://www.github.com/chrplr/PCBS" class="uri">http://www.github.com/chrplr/PCBS</a>; to download them, open a terminal (<code>git bash</code> under Windows) and type:</p>
+<pre><code>        git clone https://github.com/chrplr/PCBS</code></pre>
+<p>I encourage you to try and do the <a href="exercices.md">exercises</a>.</p>
 <p>I have created a <a href="https://cogmaster-pcbs.slack.com">discussion forum on slack</a> Please <a href="https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU">join</a> !</p>
-<p>You maybe interested in the <a href="exercices.md">exercises</a></p>
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#license">License</a></li>
+<li><a href="#objective">Objective</a></li>
+<li><a href="#prerequisites">Prerequisites:</a></li>
+<li><a href="#resources">Resources</a>
+<ul>
+<li><a href="#manipulations">Manipulations:</a></li>
+<li><a href="#stimulusexperiment-generation-modules">Stimulus/Experiment generation modules</a></li>
+<li><a href="#data-analyses-statistics">Data analyses, Statistics</a></li>
+<li><a href="#simulations">Simulations</a></li>
+<li><a href="#relevant-books">Relevant Books</a></li>
+</ul></li>
+<li><a href="#creating-static-visual-stimuli">Creating static visual stimuli</a></li>
+<li><a href="#creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</a></li>
+<li><a href="#creating-and-playing-sounds">Creating and playing sounds</a></li>
+<li><a href="#experiments">Experiments</a>
+<ul>
+<li><a href="#simple-reaction-times">Simple reaction times</a></li>
+<li><a href="#stroop-effect">Stroop Effect</a></li>
+<li><a href="#lexical-decision-task">Lexical Decision Task</a></li>
+<li><a href="#more-examples-of-experiments-with-expyrimentorg">More examples of experiments with expyriment.org</a></li>
+</ul></li>
+<li><a href="#lexical-frequencies-and-zipf-law">Lexical Frequencies and Zipf law</a>
+<ul>
+<li><a href="#-">-</a></li>
+<li><a href="#neural-networks">Neural networks</a></li>
+<li><a href="#automata">Automata</a></li>
+</ul></li>
+<li><a href="#simulations-1">Simulations</a></li>
+</ul>
+<!-- markdown-toc end -->
+<section id="license" class="level1">
+<h1>License</h1>
+<p>All documents in this repository are distributed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4</a>. The code is distributed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3 LICENSE</a>.</p>
+</section>
 <section id="objective" class="level1">
 <h1>Objective</h1>
 <p>The purpose of this lecture is to get students to learn to write clean and simple programs in order to solve tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real time experiments, simulations…).</p>
 </section>
 <section id="prerequisites" class="level1">
 <h1>Prerequisites:</h1>
-<ol type="1">
-<li>knowledge of basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call and definition), file input/output operations ) and their implementation in Python 3.</li>
-</ol>
-<p>Complete beginners could look at <a href="https://www.codecademy.com/learn/learn-python">Code Academy’s <em>Learn Python</em> module</a>. There is an excellent online course <a href="https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/">Python 3 : des fondamentaux aux concepts avancés du langage</a>. Good books to start with Python include <a href="http://automatetheboringstuff.com/"><em>Automate the boring stuff</em></a>, <a href="http://greenteapress.com/thinkpython2/thinkpython2.pdf"><em>Think Python</em></a>, <a href="https://inventwithpython.com/invent4thed/"><em>Invent Your Own Computer Games with Python</em> (4th Edition)</a>, <a href="http://inforef.be/swi/python.htm"><em>Apprendre à programmer avec Python 3</em></a>.</p>
-<ol start="2" type="1">
-<li><p>know how to edit a text file (e.g. with <a href="https://atom.io/">atom</a>), open a terminal, navigate the directory structure with ‘cd’, execute a .py script and launch <a href="http://ipython.org">ipython</a>.</p>
 <ul>
-<li><a href="http://www.linuxcommand.org/lc3_learning_the_shell.php#contents"><em>Learning the bash shell</em></a></li>
-</ul></li>
-<li>know the basic usage of git (<code>git clone, git pull, git init, git add, git status, git commit</code>)
+<li><p>knowledge of basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call and definition), file input/output operations ) and their implementation in Python 3.</p>
+<p>Complete beginners should look at <a href="https://www.codecademy.com/learn/learn-python">Code Academy’s <em>Learn Python</em> module</a>.</p>
+<p>Then, there is an excellent online course <a href="https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/">Python 3 : des fondamentaux aux concepts avancés du langage</a>.</p>
+<p>Good books to start with Python include <a href="http://automatetheboringstuff.com/"><em>Automate the boring stuff</em></a>, <a href="http://greenteapress.com/thinkpython2/"><em>Think Python</em></a>, <a href="https://inventwithpython.com/invent4thed/"><em>Invent Your Own Computer Games with Python</em> (4th Edition)</a>, <a href="http://inforef.be/swi/python.htm"><em>Apprendre à programmer avec Python 3</em></a>.</p></li>
+<li><p>know how to edit a text file (with a text editor like <a href="https://atom.io/">atom</a>), how to open a terminal, navigate the directory structure with ‘cd’, execute a .py script and launch <a href="http://ipython.org">ipython</a>. A very useful read is <a href="http://www.linuxcommand.org/lc3_learning_the_shell.php#contents"><em>Learning the bash shell</em></a>.</p></li>
+<li><p>know the basic usage of <a href="https://www.gitbook.com/">Git</a>, that is the commands<code>git clone, git pull, git init, git add, git status, git commit</code>.</p>
 <ul>
-<li><p>Open a terminal (<code>git bash</code> under Windows) and run</p>
-<p>git clone <a href="https://github.com/chrplr/PCBS" class="uri">https://github.com/chrplr/PCBS</a></p></li>
 <li>see [tools-for-reproducible-science.md]</li>
 <li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" class="uri">https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners</a></li>
-<li><p><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics" class="uri">https://git-scm.com/book/en/v2/Getting-Started-Git-Basics</a></p></li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics" class="uri">https://git-scm.com/book/en/v2/Getting-Started-Git-Basics</a></li>
 </ul></li>
-</ol>
+</ul>
 </section>
 <section id="resources" class="level1">
 <h1>Resources</h1>
@@ -306,7 +337,7 @@ if (window.hljs) {
 </section>
 <section id="stimulusexperiment-generation-modules" class="level2">
 <h2>Stimulus/Experiment generation modules</h2>
-<ol type="1">
+<ul>
 <li><a href="http://www.pygame.org" class="uri">http://www.pygame.org</a>
 <ul>
 <li>Tutorial “PyGame Drawing Basics”: <a href="https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/" class="uri">https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/</a></li>
@@ -321,24 +352,32 @@ if (window.hljs) {
 <li>Tutorial “Programming with PsychoPy”: <a href="https://www.socsci.ru.nl/wilberth/nocms/psychopy/print.php" class="uri">https://www.socsci.ru.nl/wilberth/nocms/psychopy/print.php</a></li>
 </ul></li>
 <li><a href="http://psychtoolbox.org/" class="uri">http://psychtoolbox.org/</a> (Matlab only)</li>
-</ol>
+</ul>
 </section>
 <section id="data-analyses-statistics" class="level2">
 <h2>Data analyses, Statistics</h2>
-<ol start="0" type="1">
-<li>Modules: numpy, scipy, pandas, seaborn, statsmodel, sklearn</li>
+<ul>
+<li>Modules: numpy, scipy, pandas, seaborn, statsmodel, sklearn
+<ul>
+<li>Data manipulation: <a href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html" class="uri">http://pandas.pydata.org/pandas-docs/stable/tutorials.html</a></li>
+<li>Plotting:
+<ul>
+<li><a href="http://matplotlib.org/users/pyplot_tutorial.html" class="uri">http://matplotlib.org/users/pyplot_tutorial.html</a></li>
+<li><a href="https://seaborn.pydata.org/tutorial.html" class="uri">https://seaborn.pydata.org/tutorial.html</a></li>
+</ul></li>
+</ul></li>
 <li><em>Scipy Lecture Notes</em>: <a href="http://www.scipy-lectures.org/" class="uri">http://www.scipy-lectures.org/</a></li>
 <li><em>Think Stats</em> by Allen B. Downey: <a href="http://greenteapress.com/thinkstats2/" class="uri">http://greenteapress.com/thinkstats2/</a></li>
 <li><em>Python Data Science Handbook</em> by Jake VanderPlas: <a href="https://jakevdp.github.io/PythonDataScienceHandbook" class="uri">https://jakevdp.github.io/PythonDataScienceHandbook</a></li>
-</ol>
+</ul>
 </section>
 <section id="simulations" class="level2">
 <h2>Simulations</h2>
-<ol type="1">
+<ul>
 <li><a href="http://greenteapress.com/wp/think-complexity-2e/"><em>Think Complexity</em></a> by Allen B. Downey</li>
 <li>The <a href="http://briansimulator.org/">Brian spiking neural network simulator</a></li>
 <li><a href="https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html">Deep Learning for Natural Language Processing with Pytorch</a></li>
-</ol>
+</ul>
 </section>
 <section id="relevant-books" class="level2">
 <h2>Relevant Books</h2>
@@ -427,20 +466,18 @@ if (window.hljs) {
 <ol type="1">
 <li><p>Write a script that presents a series of trials in which a dot or a cross is presented at the center of the screen and the participant must click on the mouse as quickly as possible. The reaction times must be recorded in a file for further analyses.</p>
 <ul>
-<li><p>Here is a <a href="reaction-times/simple-detection-visual-pygame.py">solution using pygame</a>. Run it and check <code>reaction_times.csv</code>.</p></li>
-<li><p>Here is a <a href="reaction-times/simple-detection-visual-expyriment.py">solution using expyriment</a>.</p></li>
+<li>Here is a <a href="reaction-times/simple-detection-visual-pygame.py">solution using pygame</a>. Run it and check <code>reaction_times.csv</code>.</li>
+<li>Here is a <a href="reaction-times/simple-detection-visual-expyriment.py">solution using expyriment</a>.</li>
 </ul>
-<p>Run the previous script. Check the results file in the folder <code>data</code>. Launch ipython in the <code>data</code> folder and type:</p></li>
-</ol>
-<pre><code>    import pandas as pd
-    d = pd.read_csv('simple-detection... .xpd', comment='#')
-    d.RT.mean()
-    d.RT.std()
-    d.RT[1:].mean()
-    
-    import matplotlib.pyplot as plt
-    plt.hist(d.RT)</code></pre>
-<ol start="3" type="1">
+<p>Run the previous script. Check the results file in the folder <code>data</code>. Launch ipython in the <code>data</code> folder and type:</p>
+<pre><code>import pandas as pd
+d = pd.read_csv('simple-detection... .xpd', comment='#')
+d.RT.mean()
+d.RT.std()
+d.RT[1:].mean()
+
+import matplotlib.pyplot as plt
+plt.hist(d.RT)</code></pre></li>
 <li><p>Read <a href="https://docs.expyriment.org/Tutorial.html" class="uri">https://docs.expyriment.org/Tutorial.html</a> to understand the basic pinciples of expyriment. See `PCBS/expyriment_template.py``</p></li>
 <li><p>Modify <code>simple-detection-visual-expyriment.py</code> to play a short sound (<code>click.wav</code>) in lieu of displaying a cross. Thus you have a simple detection audio experiment.</p></li>
 <li><p>Modify the script to have 3 blocks of trials: one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?</p></li>
@@ -469,26 +506,14 @@ if (window.hljs) {
 <li>Run it and compute the average decision times using pandas</li>
 </ul>
 </section>
-<section id="more-examples-of-experiments-with-expyriment.org" class="level2">
-<h2>More examples of experiments with expyriment.org</h2>
+<section id="more-examples-of-experiments-using-expyriment.org" class="level2">
+<h2>More examples of experiments using expyriment.org</h2>
 <ul>
-<li><p>See <a href="http://docs.expyriment.org/old/0.9.0/Examples.html" class="uri">http://docs.expyriment.org/old/0.9.0/Examples.html</a></p></li>
-<li><p>See <a href="https://www.github.com/chrplr/audiovis" class="uri">https://www.github.com/chrplr/audiovis</a> : a general audio visual stimulus presentation script using expyriment</p></li>
-<li><p>Fork <a href="https://github.com/expyriment/expyriment-stash" class="uri">https://github.com/expyriment/expyriment-stash</a> and contribute by adding new scripts!</p></li>
+<li>See <a href="http://docs.expyriment.org/old/0.9.0/Examples.html" class="uri">http://docs.expyriment.org/old/0.9.0/Examples.html</a></li>
+<li>See <a href="https://www.github.com/chrplr/audiovis" class="uri">https://www.github.com/chrplr/audiovis</a> : a general audio visual stimulus presentation script using expyriment</li>
+<li>Fork <a href="https://github.com/expyriment/expyriment-stash" class="uri">https://github.com/expyriment/expyriment-stash</a> and contribute by adding new scripts!</li>
 </ul>
 </section>
-</section>
-<section id="data-manipulation-and-analysis" class="level1">
-<h1>Data Manipulation and Analysis</h1>
-<ul>
-<li><p>Data manipulation: <a href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html" class="uri">http://pandas.pydata.org/pandas-docs/stable/tutorials.html</a></p></li>
-<li><p>Statistics: <a href="http://www.scipy-lectures.org/" class="uri">http://www.scipy-lectures.org/</a></p></li>
-<li>Plotting:
-<ul>
-<li><a href="http://matplotlib.org/users/pyplot_tutorial.html" class="uri">http://matplotlib.org/users/pyplot_tutorial.html</a></li>
-<li><a href="https://seaborn.pydata.org/tutorial.html" class="uri">https://seaborn.pydata.org/tutorial.html</a></li>
-</ul></li>
-</ul>
 </section>
 <section id="lexical-frequencies-and-zipf-law" class="level1">
 <h1>Lexical Frequencies and Zipf law</h1>
