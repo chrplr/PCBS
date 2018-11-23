@@ -191,7 +191,8 @@ illusion in early visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.
     Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
 
 
-1. run `sound_synth.py`, look at the code.
+1. run `sound_synth.py`, look at the code. 
+
 
 2. Take a mono sound and create a stereo sound by progressively dephasing the two channels.
 
@@ -313,13 +314,13 @@ More readings:
 
 Learn about Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). Watch [this](https://www.youtube.com/watch?v=S-W0NX97DB0) and (that)[https://www.youtube.com/watch?v=C2vgICfQawE] videos.
 
-* Implement an [Elementary cellular automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). The aim is to reproduce the graphics shown at the bottom on the previous page.
+* Implement an [Elementary cellular automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). The aim is to reproduce the graphics shown at the bottom on the previous page. You can start from the template [1d-ca.py](cellular-automata/1d-ca.py). Alternatively, you can take inspiration from the excellent [_Think Complexity_](http://greenteapress.com/wp/think-complexity-2e/) by Allen B. Downey.
 
 * Implement the Game of Life.
 
-If you really enjoy Cellular Automata, you can read Stephen Wolfram's [_A New Kind of Science_](https://en.wikipedia.org/wiki/A_New_Kind_of_Science). A more general book about Complexity is Melanie Mitchell's _Complexity: a guided tour_. For python's implementations, look at the excellent [_Think Complexity_](http://greenteapress.com/wp/think-complexity-2e/) by Allen B. Downey.
+* Going futher: If you enjoy Cellular Automata, you can read Stephen Wolfram's [_A New Kind of Science_](https://en.wikipedia.org/wiki/A_New_Kind_of_Science). A more general book about Complexity is Melanie Mitchell's _Complexity: a guided tour_.
 
-## Language Parsing
+## Natural Language Parsing
 
 Parsing refers to building the syntactic structure of a sentence from the linear sequence of words that compose it. Explore the [various parsing algorithms](http://www.nltk.org/book/ch08.html)using the [Natural Language Toolkit](https://www.nltk.org/). 
 
