@@ -270,8 +270,7 @@ if (window.hljs) {
 
 <p>This document is available at <a href="https://chrplr.github.io/PCBS" class="uri">https://chrplr.github.io/PCBS</a>. Its source as well as the course materials is on github, at <a href="http://www.github.com/chrplr/PCBS" class="uri">http://www.github.com/chrplr/PCBS</a>; to download them, open a terminal (<code>git bash</code> under Windows) and type:</p>
 <pre><code>        git clone https://github.com/chrplr/PCBS</code></pre>
-<p>I encourage you to try and do the <a href="exercices.md">exercises</a>.</p>
-<p>I have created a <a href="https://cogmaster-pcbs.slack.com">discussion forum on slack</a> Please <a href="https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU">join</a> !</p>
+<p>A companion document is <a href="exercices.md">exercises</a>. I answer questions on <a href="https://cogmaster-pcbs.slack.com">discussion forum on slack</a> Please <a href="https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU">join</a> !</p>
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 <p><strong>Table of Contents</strong></p>
 <ul>
@@ -294,15 +293,18 @@ if (window.hljs) {
 <li><a href="#simple-reaction-times">Simple reaction times</a></li>
 <li><a href="#stroop-effect">Stroop Effect</a></li>
 <li><a href="#lexical-decision-task">Lexical Decision Task</a></li>
-<li><a href="#more-examples-of-experiments-with-expyrimentorg">More examples of experiments with expyriment.org</a></li>
+<li><a href="#more-examples-of-experiments-using-expyrimentorg">More examples of experiments using expyriment.org</a></li>
 </ul></li>
 <li><a href="#lexical-frequencies-and-zipf-law">Lexical Frequencies and Zipf law</a>
 <ul>
 <li><a href="#-">-</a></li>
-<li><a href="#neural-networks">Neural networks</a></li>
-<li><a href="#automata">Automata</a></li>
 </ul></li>
-<li><a href="#simulations-1">Simulations</a></li>
+<li><a href="#simulations-1">Simulations</a>
+<ul>
+<li><a href="#artificial-neural-networks">Artificial Neural networks</a></li>
+<li><a href="#automata">Automata</a></li>
+<li><a href="#language-parsing">Language Parsing</a></li>
+</ul></li>
 </ul>
 <!-- markdown-toc end -->
 <section id="license" class="level1">
@@ -319,7 +321,13 @@ if (window.hljs) {
 <li><p>knowledge of basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call and definition), file input/output operations ) and their implementation in Python 3.</p>
 <p>Complete beginners should look at <a href="https://www.codecademy.com/learn/learn-python">Code Academy’s <em>Learn Python</em> module</a>.</p>
 <p>Then, there is an excellent online course <a href="https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/">Python 3 : des fondamentaux aux concepts avancés du langage</a>.</p>
-<p>Good books to start with Python include <a href="http://automatetheboringstuff.com/"><em>Automate the boring stuff</em></a>, <a href="http://greenteapress.com/thinkpython2/"><em>Think Python</em></a>, <a href="https://inventwithpython.com/invent4thed/"><em>Invent Your Own Computer Games with Python</em> (4th Edition)</a>, <a href="http://inforef.be/swi/python.htm"><em>Apprendre à programmer avec Python 3</em></a>.</p></li>
+Good books to start with Python include:
+<ul>
+<li><a href="http://automatetheboringstuff.com/"><em>Automate the boring stuff</em></a>,</li>
+<li><a href="http://greenteapress.com/thinkpython2/"><em>Think Python</em></a>,</li>
+<li><a href="https://inventwithpython.com/invent4thed/"><em>Invent Your Own Computer Games with Python</em> (4th Edition)</a>,</li>
+<li><a href="http://inforef.be/swi/python.htm"><em>Apprendre à programmer avec Python 3</em></a>.</li>
+</ul></li>
 <li><p>know how to edit a text file (with a text editor like <a href="https://atom.io/">atom</a>), how to open a terminal, navigate the directory structure with ‘cd’, execute a .py script and launch <a href="http://ipython.org">ipython</a>. A very useful read is <a href="http://www.linuxcommand.org/lc3_learning_the_shell.php#contents"><em>Learning the bash shell</em></a>.</p></li>
 <li><p>know the basic usage of <a href="https://www.gitbook.com/">Git</a>, that is the commands<code>git clone, git pull, git init, git add, git status, git commit</code>.</p>
 <ul>
@@ -513,39 +521,59 @@ plt.hist(d.RT)</code></pre></li>
 </ul>
 </section>
 </section>
-<section id="lexical-frequencies-and-zipf-law" class="level1">
-<h1>Lexical Frequencies and Zipf law</h1>
+<section id="lexical-frequencies" class="level1">
+<h1>Lexical Frequencies</h1>
+<section id="zipf-law" class="level2">
+<h2>Zipf law</h2>
 <ul>
-<li>The script (word-count.py])[Zipf/word-count.py] computes the distribution of frequencies of occurences in a list of words. Use it to compute the distribution of word frequencies in <a href="http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt"><em>Alice in Wonderland</em></a>.</li>
-</ul>
+<li><p>The script (word-count.py])[Zipf/word-count.py] computes the distribution of frequencies of occurences in a list of words. Use it to compute the distribution of word frequencies in <a href="http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt"><em>Alice in Wonderland</em></a>.</p>
 <p>Note: To remove the punctuation, you can use the following function:</p>
-<pre><code>    import string
-    def remove_punctuation(text):
-        punct = string.punctuation + chr(10)
-        return text.translate(str.maketrans(punct, &quot; &quot; * len(punct)))</code></pre>
-<ul>
+<pre><code> import string
+ def remove_punctuation(text):
+     punct = string.punctuation + chr(10)
+     return text.translate(str.maketrans(punct, &quot; &quot; * len(punct)))</code></pre></li>
 <li><p>Zipf law states that the product rank X frequency is roughly constant. This ‘law’ was discovered by Estoup and popularized by Zipf. See <a href="http://en.wikipedia.org/wiki/Zipf%27s_law">http://en.wikipedia.org/wiki/Zipf%27s_law</a>. Create the Zipf plot for the text of <em>Alice in Wonderlang</em> showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent).</p></li>
+<li><p>Display the relationship between word length and word frequencies.</p></li>
 <li><p>Generate random text (each letter from a-z being equiprobable, and the spacecharacter being 8 times more probable) of 1 million characters. Compute the frequencies of each ‘pseudowords’ and plot the rank/frequency diagram.</p></li>
-</ul>
-<p>To know more about lexical frequencies:</p>
+<li><p>To know more about lexical frequencies:</p>
 <ul>
-<li><p>check <strong>google ngrams</strong> at <a href="https://books.google.com/ngrams" class="uri">https://books.google.com/ngrams</a>. (Note that at the bottom of the page, there is a message “Raw data is available for download here”). Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. <a href="https://doi.org/10.1126/science.1199644." class="uri">https://doi.org/10.1126/science.1199644.</a> (use scholar.google.com to find a pdf copy)</p></li>
-<li><p>See Harald Baayen (2001) <em>Word Frequency Distributions</em> Kluwer Academic Publishers.</p></li>
+<li>Read Harald Baayen (2001) <em>Word Frequency Distributions</em> Kluwer Academic Publishers.</li>
+<li>Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. <a href="https://doi.org/10.1126/science.1199644." class="uri">https://doi.org/10.1126/science.1199644.</a> (use scholar.google.com to find a pdf copy). Check out <strong>google ngrams</strong> at <a href="https://books.google.com/ngrams" class="uri">https://books.google.com/ngrams</a>. (Note that at the bottom of the page, there is a message “Raw data is available for download here”).</li>
+</ul></li>
 </ul>
-<section id="benford-law." class="level3">
-<h3>Benford law.</h3>
-<p>TODO</p>
 </section>
-<section id="neural-networks" class="level3">
-<h3>Neural networks</h3>
-</section>
-<section id="automata" class="level3">
-<h3>Automata</h3>
+<section id="benfords-law." class="level2">
+<h2>Benford’s law.</h2>
+<p>Learn about <a href="https://brilliant.org/wiki/benfords-law/">Benford’s law</a>. Write a Python script that displays the distribution of the most significant digit in a set of numbers. Apply it to <a href="https://simple.wikipedia.org/wiki/List_of_countries_by_area" class="uri">https://simple.wikipedia.org/wiki/List_of_countries_by_area</a></p>
 </section>
 </section>
 <section id="simulations-1" class="level1">
 <h1>Simulations</h1>
-<p>TODO</p>
+<section id="artificial-neural-networks" class="level2">
+<h2>Artificial Neural networks</h2>
+<p>To understand the basics of artificial neural networks, I recommend that you watch the four excellent videos at <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" class="uri">https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi</a> . The last two of them focus on the backpropagation algorithm that allow to train network to learn mapping.</p>
+<p>Next, you can read and try to understand this <a href="https://visualstudiomagazine.com/articles/2017/06/01/back-propagation.aspx">implementation</a> of the backpropagation algorithm.</p>
+<p>Then, see a modern and efficient implementation of neural networks: <a href="https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html" class="uri">https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html</a></p>
+<p>More readings:</p>
+<ul>
+<li><p><a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a> on Andrej Karpathy’s blog.</p></li>
+<li><p><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">understanding LSTM Networks</a></p></li>
+<li><p><a href="https://www.springer.com/fr/book/9780387310732">Pattern recognition and machine learning</a> by Christopher M. Bishop</p></li>
+</ul>
+</section>
+<section id="cellular-automata" class="level2">
+<h2>Cellular Automata</h2>
+<p>Learn about Conway’s <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a>. Watch <a href="https://www.youtube.com/watch?v=S-W0NX97DB0">this</a> and (that)[<a href="https://www.youtube.com/watch?v=C2vgICfQawE" class="uri">https://www.youtube.com/watch?v=C2vgICfQawE</a>] videos.</p>
+<ul>
+<li><p>Implement an <a href="https://en.wikipedia.org/wiki/Elementary_cellular_automaton">Elementary cellular automaton</a>. The aim is to reproduce the graphics shown at the bottom on the previous page.</p></li>
+<li><p>Implement the Game of Life.</p></li>
+</ul>
+<p>If you really enjoy Cellular Automata, you can read Stephen Wolfram’s <a href="https://en.wikipedia.org/wiki/A_New_Kind_of_Science"><em>A New Kind of Science</em></a>. A more general book about Complexity is Melanie Mitchell’s <em>Complexity: a guided tour</em>. For python’s implementations, look at the excellent <a href="http://greenteapress.com/wp/think-complexity-2e/"><em>Think Complexity</em></a> by Allen B. Downey.</p>
+</section>
+<section id="language-parsing" class="level2">
+<h2>Language Parsing</h2>
+<p>Parsing refers to building the syntactic structure of a sentence from the linear sequence of words that compose it. Explore the <a href="http://www.nltk.org/book/ch08.html">various parsing algorithms</a>using the <a href="https://www.nltk.org/">Natural Language Toolkit</a>.</p>
+</section>
 </section>
 
 

@@ -8,9 +8,7 @@ This document is available at [https://chrplr.github.io/PCBS](https://chrplr.git
         git clone https://github.com/chrplr/PCBS
 ```
 
-I encourage you to try and do the [exercises](exercices.md).
-
-I have created a [discussion forum on slack](https://cogmaster-pcbs.slack.com)  Please [join](
+A companion document is [exercises](exercices.md). I answer questions on [discussion forum on slack](https://cogmaster-pcbs.slack.com)  Please [join](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU) !
 
 
@@ -33,12 +31,13 @@ I have created a [discussion forum on slack](https://cogmaster-pcbs.slack.com)  
     - [Simple reaction times](#simple-reaction-times)
     - [Stroop Effect](#stroop-effect)
     - [Lexical Decision Task](#lexical-decision-task)
-    - [More examples of experiments with expyriment.org](#more-examples-of-experiments-with-expyrimentorg)
+    - [More examples of experiments using expyriment.org](#more-examples-of-experiments-using-expyrimentorg)
 - [Lexical Frequencies and Zipf law](#lexical-frequencies-and-zipf-law)
     - [-](#-)
-    - [Neural networks](#neural-networks)
-    - [Automata](#automata)
 - [Simulations](#simulations-1)
+    - [Artificial Neural networks](#artificial-neural-networks)
+    - [Automata](#automata)
+    - [Language Parsing](#language-parsing)
 
 <!-- markdown-toc end -->
 
@@ -60,7 +59,11 @@ The purpose of this lecture is to get students to learn to write clean and simpl
   
   Then, there is an excellent online course [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
   
-  Good books to start with Python include [_Automate the boring stuff_](http://automatetheboringstuff.com/), [_Think Python_](http://greenteapress.com/thinkpython2/), [_Invent Your Own Computer Games with Python_ (4th Edition)](https://inventwithpython.com/invent4thed/), [_Apprendre à programmer avec Python 3_](http://inforef.be/swi/python.htm). 
+  Good books to start with Python include:
+  * [_Automate the boring stuff_](http://automatetheboringstuff.com/), 
+  * [_Think Python_](http://greenteapress.com/thinkpython2/), 
+  * [_Invent Your Own Computer Games with Python_ (4th Edition)](https://inventwithpython.com/invent4thed/), 
+  * [_Apprendre à programmer avec Python 3_](http://inforef.be/swi/python.htm). 
    
 * know how to edit a text file (with a text editor like [atom](https://atom.io/)), how to open a terminal, navigate the directory structure with 'cd', execute a .py script and launch [ipython](http://ipython.org). A very useful read is [_Learning the bash shell_](http://www.linuxcommand.org/lc3_learning_the_shell.php#contents).
 
@@ -256,40 +259,67 @@ In a lexical decision experiment, a string of characters is flashed at the cente
 
 
 
-# Lexical Frequencies and Zipf law
+# Lexical Frequencies
+
+## Zipf law
 
 * The script (word-count.py])[Zipf/word-count.py] computes the distribution of frequencies of occurences in a list of words. Use it to compute the distribution of word frequencies in [_Alice in Wonderland_](http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt).
 
-Note: To remove the punctuation, you can use the following function:
+   Note: To remove the punctuation, you can use the following function:
 
-```
+   ```
     import string
     def remove_punctuation(text):
         punct = string.punctuation + chr(10)
         return text.translate(str.maketrans(punct, " " * len(punct)))
-```
+   ```
 
 * Zipf law states that the product rank X frequency is roughly constant. This 'law' was discovered by Estoup and popularized by Zipf. See  <http://en.wikipedia.org/wiki/Zipf%27s_law>.  Create the Zipf plot for the text of _Alice in Wonderlang_ showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent). 
 
+* Display the relationship between word length and word frequencies.
+
 * Generate random text (each letter from a-z being equiprobable, and the spacecharacter being 8 times more probable) of 1 million characters. Compute the frequencies of each 'pseudowords' and plot the rank/frequency diagram.
 
-To know more about lexical frequencies:
+* To know more about lexical frequencies:
 
-* check **google ngrams** at <https://books.google.com/ngrams>. (Note that at the bottom of the page, there is a message "Raw data is available for download here"). Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. <https://doi.org/10.1126/science.1199644.>  (use scholar.google.com to find a pdf copy)
+    - Read Harald Baayen (2001) _Word Frequency Distributions_ Kluwer Academic Publishers.
+    -  Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. <https://doi.org/10.1126/science.1199644.>  (use scholar.google.com to find a pdf copy). Check out **google ngrams** at <https://books.google.com/ngrams>. (Note that at the bottom of the page, there is a message "Raw data is available for download here"). 
 
-* See Harald Baayen (2001) _Word Frequency Distributions_ Kluwer Academic Publishers.
+## Benford's law. 
 
+Learn about [Benford's law](https://brilliant.org/wiki/benfords-law/). Write a Python script that displays the distribution of the most significant digit in a set of numbers. Apply it to  <https://simple.wikipedia.org/wiki/List_of_countries_by_area>
 
-### Benford law. 
-
-TODO
-
-### Neural networks
-
-
-
-### Automata
 
 # Simulations
 
-TODO
+## Artificial Neural networks
+
+To understand the basics of artificial neural networks, I recommend that you watch the four excellent videos at <https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi> . The last two of them focus on the backpropagation algorithm that allow to train network to learn mapping.
+
+Next, you can read and try to understand this [implementation](https://visualstudiomagazine.com/articles/2017/06/01/back-propagation.aspx) of the backpropagation algorithm.
+
+Then, see a modern and efficient implementation of neural networks: 
+<https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html>
+
+More readings:
+
+* [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) on Andrej Karpathy's blog.
+
+* [understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+
+* [Pattern recognition and machine learning](https://www.springer.com/fr/book/9780387310732) by Christopher M. Bishop
+
+## Cellular Automata
+
+Learn about Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). Watch [this](https://www.youtube.com/watch?v=S-W0NX97DB0) and (that)[https://www.youtube.com/watch?v=C2vgICfQawE] videos.
+
+* Implement an [Elementary cellular automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). The aim is to reproduce the graphics shown at the bottom on the previous page.
+
+* Implement the Game of Life.
+
+If you really enjoy Cellular Automata, you can read Stephen Wolfram's [_A New Kind of Science_](https://en.wikipedia.org/wiki/A_New_Kind_of_Science). A more general book about Complexity is Melanie Mitchell's _Complexity: a guided tour_. For python's implementations, look at the excellent [_Think Complexity_](http://greenteapress.com/wp/think-complexity-2e/) by Allen B. Downey.
+
+## Language Parsing
+
+Parsing refers to building the syntactic structure of a sentence from the linear sequence of words that compose it. Explore the [various parsing algorithms](http://www.nltk.org/book/ch08.html)using the [Natural Language Toolkit](https://www.nltk.org/). 
+
