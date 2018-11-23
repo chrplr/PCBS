@@ -1,22 +1,47 @@
-import numpy as np
+#! /usr/bin/env python3
+# Time-stamp: <2018-11-23 17:56:48 cp983411>
 
-NBOXES = 51
-NGENERATIONS = 100
+""" An implementation of [Elementay Cellular Automata](https://en.wikipedia.org/wiki/Elementary_cellular_automaton)
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def map(rule, triplet):
-    """ rule is a list of 8 binary digits defining the CA-rule mapping triplets onto {0, 1}"""
+    """Applies a CA-rule to a triplet.
+
+    Args:
+        rule: list of 8 binary digits representatin a CA-rule
+        triplet:  3-uple of bits.
+
+    Returns:
+        the result of applying the CA-rule mapping triplets onto {0, 1}
+
+    """
     index = 4 * triplet[0] + 2 * triplet[1] + triplet[2]
     return rule[index]
 
 
-def get_triplet(line, pos):
-    return (line[pos - 1], line[pos], line[pos + 1])
+def get_triplet(boxes, position):
+    """Extract the values of boxes at and around position.
+
+    Args:
+        boxes: a vector
+        position: an index between 1 and len(vector) - 1
+
+    Returns:
+         the triplet of values in boxes around position
+    """
+    return (boxes[position - 1], boxes[position], boxes[position + 1])
 
 
-def main(rule, nboxes, ngenerations):
+def generate(rule, seed, ngenerations):
+    """Generates 'ngenerations' applyiong the CA-rule 'rule' to seed.
+    """
+    nboxes = seed.shape[0]
     pop = np.zeros((ngenerations, nboxes), dtype=int)
-    pop[0, nboxes // 2 ] = 1
+    pop[0, :] = seed
 
     for g in range(1, ngenerations):
         for b in range(1, nboxes - 1):
@@ -24,8 +49,20 @@ def main(rule, nboxes, ngenerations):
 
     return pop
 
+
 if __name__ == '__main__':
-    rule = [1, 1, 0, 1, 0, 1, 0, 1]
-    main(rule, 100, 100)
+    NBOXES = 100
+    NGENERATIONS = 100
+    NPATTERNS = 2
+    firstgenerations = np.random.randint(2, size=(NPATTERNS, NBOXES))
+
+    for rule in range(256):  # loop over the 256 possible rules
+        r = [int(b) for b in f'{rule:08b}']  # convert rule to binary
+        for trial in range(NPATTERNS):
+            mat = generate(r, firstgenerations[trial], NGENERATIONS)
+            plt.imshow(mat)
+            plt.savefig(f'r{rule:03d}_{trial}.png')
+
+
 
 
