@@ -270,8 +270,6 @@ if (window.hljs) {
 
 <p>You can get help on these exercises by <a href="https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU">joining a discussion forum</a> on slack: <a href="https://cogmaster-pcbs.slack.com" class="uri">https://cogmaster-pcbs.slack.com</a></p>
 <p>Solutions for these exercises are available on the forum and/or at <a href="http://www.github.com/chrplr/PCBS" class="uri">http://www.github.com/chrplr/PCBS</a></p>
-<section id="serie-1" class="level2">
-<h2>Série 1</h2>
 <ol type="1">
 <li><p><em>computer-guess-a-number</em> Read chapter 3 of <em>Invent your own games with Python</em> <a href="https://inventwithpython.com/invent4thed/chapter3.html" class="uri">https://inventwithpython.com/invent4thed/chapter3.html</a> where the author presents a game where the computer chooses a random number that the user must guess. Study the code. Now, you task is to write another program, where the roles are inverted: the computer tries to guess a number that the user has in mind. The computer proposes a number and the user answeres with ‘+’ (the number he has is mind is larger), ‘-’ (if it is smaller), ‘y’ (if the guess is correct)</p></li>
 <li><p><em>prime numbers</em>. Write a script that lists all prime numbers between 1 and 10000 (A prime number is a integer that has no divisors except 1 and itself). You may use the following function:</p>
@@ -291,6 +289,9 @@ if (window.hljs) {
 </tr>
 </tbody>
 </table></li>
+<li><p><em>multiplication tables</em> Read <a href="https://pyformat.info/#number_padding" class="uri">https://pyformat.info/#number_padding</a> and witre a script that displays the table of multiplication from 1 to 9 in a nice format.</p></li>
+<li><p>Given a list of numbers, print the largest one.</p></li>
+<li><p>Given a list of numbers, print them separated by a space (e.g. <code>[1, 2, 4]</code> -&gt; <code>1 2 3</code>).</p></li>
 <li><p><em>Pascal triangle</em> Write a program that prints the first rows of Pascal’s triangle (see <a href="https://www.youtube.com/watch?v=XMriWTvPXHI" class="uri">https://www.youtube.com/watch?v=XMriWTvPXHI</a>). For example:</p>
 <table>
 <tbody>
@@ -334,13 +335,6 @@ if (window.hljs) {
 <ol start="4" type="1">
 <li><p><em>string-detector</em> Lisez le chapitre 8 de <em>Automate the boring stuff</em> (<a href="http://automatetheboringstuff.com/chapter8/" class="uri">http://automatetheboringstuff.com/chapter8/</a>). Ecrire un programme qui ouvre et lit un fichier texte, puis affiche toutes les lignes qui contiennent un mot donné, par exemple “Cogmaster”.</p></li>
 <li><p><em>Rodrego-simulator</em> (optionnel: seulement pour ceux qui se sentent capables et sont motivés) Ecrire un programme qui simule une machine RodRego à 10 registres (<a href="http://sites.tufts.edu/rodrego/" class="uri">http://sites.tufts.edu/rodrego/</a>). Le programme est stocké dans un fichier texte qui est lu, puis executé. Votre programme doit contenir une fonction qui etant donnée les 10 valeurs initiales des registres, et le programme, renvoit les nouvelles valeurs des registres quand l’instruction END est atteinte.</p></li>
-</ol>
-</section>
-<section id="serie-2" class="level2">
-<h2>Série 2</h2>
-<ol type="1">
-<li><p>Given a list of numbers, print the largest one.</p></li>
-<li><p>Given a list of numbers, print them separated by a space (e.g. <code>[1, 2, 4]</code> -&gt; <code>1 2 3</code>).</p></li>
 <li><p>Given a list of words, print how many different words are in that list (hint: use a dictionary or a set)</p></li>
 <li><p>Given a list of words, count the number of times each word appears in the list. Eg. <code>[Jim, Alan, Jim, Joe]</code> -&gt; <code>Jim:2, Alan:1, Joe:1</code> (hint: use dictionary)</p></li>
 <li><p>Write a script that prints the first 10 lines of a file (or the whole file is it is less than 10 lines long).</p></li>
@@ -371,12 +365,7 @@ data = &quot;0Y,0N,1Y,1Y,0N,0N,0Y,1Y,1Y&quot;
 <p>Use <code>matplotlib.pyplot.plot</code> to display each participant as a dot on a graphics with False alarm rate on the X-axis and Hit Rate on the Y-axis.</p>
 <p>Read the section on reading comma separated value (`.csv``) files from <a href="http://automatetheboringstuff.com/chapter14/" class="uri">http://automatetheboringstuff.com/chapter14/</a></p>
 <ol start="9" type="1">
-<li>(optional) Write a reverse Polish arithmetic expression evaluator (<a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation" class="uri">https://en.wikipedia.org/wiki/Reverse_Polish_notation</a>). E.g. <code>3 4 * 5 -</code> evaluate to <code>7</code>.</li>
-</ol>
-</section>
-<section id="miscellaneous-exercises" class="level2">
-<h2>Miscellaneous exercises</h2>
-<ul>
+<li><p>Write a reverse Polish arithmetic expression evaluator (<a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation" class="uri">https://en.wikipedia.org/wiki/Reverse_Polish_notation</a>). E.g. <code>3 4 * 5 -</code> evaluate to <code>7</code>.</p></li>
 <li>Experiment 1 consists in a series of trials of two types, ‘TypeA’ or ‘TypeB’.
 <ul>
 <li>Write a function which takes <code>N</code>, the total number of trials, and returns a list of labels ‘TypeA’ and ‘typeB’, in a random order (hint: use <code>random.shuffle</code>).</li>
@@ -389,8 +378,13 @@ data = &quot;0Y,0N,1Y,1Y,0N,0N,0Y,1Y,1Y&quot;
 <li>4879 est un nombre de Kaprekar en base 10 car 4879² = 23 804 641 et 04641 + 238 = 4879</li>
 </ul>
 <p>Ecrire un programme qui renvoit tous les nombres de Kaprekar entre 1 et N.</p></li>
-</ul>
-</section>
+<li>Posner cuing task:
+<ol type="1">
+<li>modifier le script de détection simple (simple-detection-visual-expyriment) pour que la cible apparaisse aléatoirement soit à gauche, soit a droite du centre de l’ecran (qui reste indiqué par une croix).</li>
+<li>programmer la tache de détection avec indicage attentionnelle de Posner (<a href="https://en.wikipedia.org/wiki/Posner_cueing_task" class="uri">https://en.wikipedia.org/wiki/Posner_cueing_task</a>). (indice endogène seulement).</li>
+</ol></li>
+<li><p>Zipf length. Utiliser le contenu du fichier <code>lexical-decision/lexique382-reduced.txt</code> pour afficher la relation entre longueur des mots frrançais et leur fréquence d’occurence</p></li>
+</ol>
 
 
 
