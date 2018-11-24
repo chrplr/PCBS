@@ -11,6 +11,8 @@ This document is available at [https://chrplr.github.io/PCBS](https://chrplr.git
 A companion document is [exercises](exercices.md). I answer questions on [discussion forum on slack](https://cogmaster-pcbs.slack.com)  Please [join](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU) !
 
+Also, please have a look at "[how-to-solve-problem.md](how-to-solve-problem.md)" and "[tools-for-reproducible-science.md](tools-for-reproducible-science.md)"
+
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
@@ -161,9 +163,9 @@ We are going to use [pygame](http://www.pygame.org). You can read a [quick intro
      
   ![Extinction illusion](images/extinction.png)
  
-  Check [my solution](visual-illusions/Honeycomb.py)
+  Check [my solution](visual-illusions/extinction.py)
   
-   - Try to program the honeycomb stimulus above (optional). A implementation with psychopy is available from (Bertamini's web site)[https://www.programmingvisualillusionsforeveryone.online/scripts.html]
+   - Try to program the honeycomb stimulus above (optional). A []solution psychopy](visual-illusions/Honeycomb.py) from [Bertamini's web site](https://www.programmingvisualillusionsforeveryone.online/scripts.html)
     
  
 # Creating dynamic visual stimuli
