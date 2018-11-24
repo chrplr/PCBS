@@ -6,7 +6,7 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
 
 ```
         git clone https://github.com/chrplr/PCBS
-``**
+```
 
 **Companion documents***:
 
