@@ -2,20 +2,20 @@
 % Christophe Pallier
 % Fall 2018
 
-This document is available at [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS). Its source as well as the course materials is on github, at [http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS); to download them, open a terminal (`git bash` under Windows) and type:
+This document -- a work in progress -- is available at [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS). Its source as well as the course materials is on github, at [http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS); to download them, open a terminal (`git bash` under Windows) and type:
 
 ```
         git clone https://github.com/chrplr/PCBS
-```
+``**
 
-Companion documents:
+**Companion documents***:
 
 * [how-to-solve-problems.md](how-to-solve-problems.md)
 * [tools-for-reproducible-science.md](tools-for-reproducible-science.md)
-* [exercises](exercices.md). I answer questions on [discussion forum on slack](https://cogmaster-pcbs.slack.com)  Please [join](
- https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)!
+* [additional exercises](exercices.md). I answer questions on a [slack discussion forum](https://cogmaster-pcbs.slack.com)  Please [join!](
+ https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)
+* [Suggestions for projects](ideas-for-projects.md)
 
-Lastly, I have three recommendations: practice, practice, practice!
 
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
