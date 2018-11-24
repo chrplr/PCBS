@@ -1,23 +1,34 @@
+% Some ressources about problem solving
+% Christophe Pallier
+% 
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [How to think like a programmer -- -- lessons in problem solving](#how-to-think-like-a-programmer------lessons-in-problem-solving)
+- [How to think like a programmer : lessons in problem solving](#how-to-think-like-a-programmer-lessons-in-problem-solving)
+    - [Understand](#understand)
+    - [Plan](#plan)
+    - [Divide](#divide)
+    - [Stuck?](#stuck)
+    - [Practice](#practice)
+    - [Conclusion](#conclusion)
 - [More readings](#more-readings)
+    - [How to report bugs effecively](#how-to-report-bugs-effecively)
+    - [_How to solve it_ by Polya](#how-to-solve-it-by-polya)
+    - [Computer Science Distilled](#computer-science-distilled)
+    - [Clean Code](#clean-code)
 
 <!-- markdown-toc end -->
 
 
-
-
-
-# How to think like a programmer -- -- lessons in problem solving
+# How to think like a programmer : lessons in problem solving
 
 
 So, what should you do when you encounter a new problem?
 
 Here are the steps:
 
-1. **Understand**
+## Understand
 
 Know exactly what is being asked. Most hard problems are hard because you don’t understand them (hence why this is the first step).
 
@@ -32,7 +43,7 @@ This is why you should write down your problem, doodle a diagram, or tell someon
 >   “If you can’t explain something in simple terms, you don’t understand it.” 
 > -- Richard Feynman
 
-2. **Plan**
+## Plan 
 
 Don’t dive right into solving without a plan (and somehow hope you can muddle your way through). Plan your solution!
 
@@ -46,7 +57,7 @@ To get a good plan, answer this question:
 
 Sidenote: Programmers have a great tool to help them with this… Comments!
 
-3. **Divide**
+## Divide
 
 Pay attention. This is the most important step of all.
 
@@ -74,7 +85,7 @@ This technique is a cornerstone of problem-solving. Remember it (read this step 
 
 > -- V. Anton Spraul
 
-4. **Stuck?**
+## Stuck?
 
 By now, you’re probably sitting there thinking “Hey Richard... That’s cool and all, but what if I’m stuck and can’t even solve a sub-problem??”
 
@@ -104,7 +115,7 @@ Sidenote: Another way of reassessing is starting anew. Delete everything and beg
 
 Caveat: Don’t look for a solution to the big problem. Only look for solutions to sub-problems. Why? Because unless you struggle (even a little bit), you won’t learn anything. If you don’t learn anything, you wasted your time.
 
-_Practice_
+## Practice
 
 Don’t expect to be great after just one week. If you want to be a good problem-solver, solve a lot of problems!
 
@@ -115,8 +126,6 @@ How to practice? There are options out the wazoo!
 Chess puzzles, math problems, Sudoku, Go, Monopoly, video-games, cryptokitties, bla… bla… bla….
 
 In fact, a common pattern amongst successful people is their habit of practicing “micro problem-solving.” For example, Peter Thiel plays chess, and Elon Musk plays video-games.
-
-   “Byron Reeves said ‘If you want to see what business leadership may look like in three to five years, look at what’s happening in online games.’
 
    Fast-forward to today. Elon [Musk], Reid [Hoffman], Mark Zuckerberg and many others say that games have been foundational to their success in building their companies.” -- Mary Meeker (2017 internet trends report)
 
@@ -130,7 +139,7 @@ For example, I enjoy coding challenges. Every day, I try to solve at least one c
 
 Like I said, all problems share similar patterns.
 
-Conclusion
+## Conclusion
 
 That’s all folks!
 
@@ -167,12 +176,19 @@ Extracted from <https://medium.freecodecamp.org/how-to-think-like-a-programmer-l
 
 # More readings
 
-* [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html)
+## How to report bugs effecively
 
-* [_How to solve it_](https://math.hawaii.edu/home/pdf/putnam/PolyaHowToSolveIt.pdf) by George Pólya. You can get the gist of it at <https://en.wikipedia.org/wiki/How_to_Solve_It>
+Check [How to Report Bugs Effectively](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html)
 
+## _How to solve it_ by Polya
 
-* [_Computer Science Distilled_](https://www.amazon.com/dp/0997316020/ref=sspa_dk_detail_4?psc=1)
+Check [_How to solve it_](https://math.hawaii.edu/home/pdf/putnam/PolyaHowToSolveIt.pdf) by George Polya. You can get the gist of it at <https://en.wikipedia.org/wiki/How_to_Solve_It>
 
-* [_Clean Code_](https://www.goodreads.com/book/show/3735293-clean-code)
+## Computer Science Distilled
+
+Checl [_Computer Science Distilled_](https://www.amazon.com/dp/0997316020/ref=sspa_dk_detail_4?psc=1)
+
+## Clean Code
+
+Check [_Clean Code_](https://www.goodreads.com/book/show/3735293-clean-code)
 

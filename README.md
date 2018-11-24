@@ -8,10 +8,14 @@ This document is available at [https://chrplr.github.io/PCBS](https://chrplr.git
         git clone https://github.com/chrplr/PCBS
 ```
 
-A companion document is [exercises](exercices.md). I answer questions on [discussion forum on slack](https://cogmaster-pcbs.slack.com)  Please [join](
+Companion documents:
+
+* [how-to-solve-problems.md](how-to-solve-problems.md)
+* [tools-for-reproducible-science.md](tools-for-reproducible-science.md)
+* [exercises](exercices.md). I answer questions on [discussion forum on slack](https://cogmaster-pcbs.slack.com)  Please [join](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)!
 
-Also, you should have a look at "[how-to-solve-problems.md](how-to-solve-problems.md)" and "[tools-for-reproducible-science.md](tools-for-reproducible-science.md)"
+Lastly, I have three recommendations: practice, practice, practice!
 
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -27,19 +31,30 @@ Also, you should have a look at "[how-to-solve-problems.md](how-to-solve-problem
     - [Simulations](#simulations)
     - [Relevant Books](#relevant-books)
 - [Creating static visual stimuli](#creating-static-visual-stimuli)
+    - [Kanizsa triangle](#kanizsa-triangle)
+    - [Herman grid](#herman-grid)
+    - [Ebbginhaus-Titchener](#ebbginhaus-titchener)
+    - [Honeycomb and Extinction illusions.](#honeycomb-and-extinction-illusions)
 - [Creating dynamic visual stimuli](#creating-dynamic-visual-stimuli)
+    - [Wertheimer line-motion illusion.](#wertheimer-line-motion-illusion)
+    - [Flash-lag illusion](#flash-lag-illusion)
 - [Creating and playing sounds](#creating-and-playing-sounds)
+    - [Sound localisation from binaural dephasing](#sound-localisation-from-binaural-dephasing)
+    - [Pulsation (Povel & Essen, 1985)](#pulsation-povel--essen-1985)
 - [Experiments](#experiments)
     - [Simple reaction times](#simple-reaction-times)
+    - [Posner's attentional cueing task](#posners-attentional-cueing-task)
     - [Stroop Effect](#stroop-effect)
     - [Lexical Decision Task](#lexical-decision-task)
-    - [More examples of experiments using expyriment.org](#more-examples-of-experiments-using-expyrimentorg)
-- [Lexical Frequencies and Zipf law](#lexical-frequencies-and-zipf-law)
-    - [-](#-)
+    - [A general audio visual stimulus presentation script](#a-general-audio-visual-stimulus-presentation-script)
+    - [More examples using expyriment.org](#more-examples-using-expyrimentorg)
+- [Lexical Statistics](#lexical-statistics)
+    - [Zipf law](#zipf-law)
+    - [Benford's law.](#benfords-law)
 - [Simulations](#simulations-1)
+    - [Cellular Automata](#cellular-automata)
     - [Artificial Neural networks](#artificial-neural-networks)
-    - [Automata](#automata)
-    - [Language Parsing](#language-parsing)
+    - [Natural Language Parsing](#natural-language-parsing)
 
 <!-- markdown-toc end -->
 
@@ -126,76 +141,90 @@ _Automate the boring stuff with Python_ by Al Sweigart (<http://automatetheborin
 
 We are going to use [pygame](http://www.pygame.org). You can read a [quick introduction on drawing with pygame](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/).
 
+## Kanizsa triangle
+
 0. Open the script [square.py](visual-illusions/square.py) that generates and displays a square.
 
 1. Copy the script and rename it `circle.py`, then modify it to display a red circle 
 
-2. Make another of the script and modify it to display Kanizsa's figures:
+2. Now, modify the script to display Kanizsa's figures:
 
    ![Kanizsa square](images/Kanizsa-square.jpeg)
 
    ![Kanizsa triangle](images/Kanizsa1.png)
 
-  (to know more, google 'illusory contours')
+  You can find more examples of 'illusory contours' by googling.
 
   Check [my solution](visual-illusions/kanizsa-square.py) 
 
-3. Copy this script and modify it to display the [Herman grid](https://en.wikipedia.org/wiki/Grid_illusion)
+## Herman grid
+
+Starting from the square.py script, write a program to display the [Herman grid](https://en.wikipedia.org/wiki/Grid_illusion)
 
    ![Hermann Grid](images/HermannGrid.png)
 
  Check [my solution](visual-illusions/grid.py)
 
+## Ebbginhaus-Titchener
 
-4. Copy this script and modify it to generate the static [Ebbinghaus–Titchener stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC). You can also watch [this video](https://www.youtube.com/watch?v=hRlWqfd5pn8).
+Create the static [Ebbinghaus–Titchener stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC). You can also watch [this video](https://www.youtube.com/watch?v=hRlWqfd5pn8).
 
    ![Ebbinghaus illusion](images/ebbinghaus-titchener.png)
 
-5. Honeycomb and Extinction illusions.
 
-   ![Honeycomb illusion](images/honeycomb.png)
 
-   - Watch [this video](https://www.youtube.com/watch?v=fDBYSFDXsuE)
-   - Check out [Bertamini, Herzog, and Bruno (2016). “The Honeycomb Illusion: Uniform Textures Not Perceived as Such.”](https://doi.org/10.1177/2041669516660727.
+## Honeycomb and Extinction illusions.
+
+![Honeycomb illusion](images/honeycomb.png)
+
+- Watch [this video](https://www.youtube.com/watch?v=fDBYSFDXsuE)
+- Check out [Bertamini, Herzog, and Bruno (2016). “The Honeycomb Illusion: Uniform Textures Not Perceived as Such.”](https://doi.org/10.1177/2041669516660727.
  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5030753/pdf/10.1177_2041669516660727.pdf)
-   - Program the stimulus of the extinction illusion (the lines can be horizontal and vertical rather than oblique)
+- Program the stimulus of the extinction illusion (the lines can be horizontal and vertical rather than oblique)
      
-  ![Extinction illusion](images/extinction.png)
+![Extinction illusion](images/extinction.png)
  
-  Check [my solution](visual-illusions/extinction.py)
+Check [my solution](visual-illusions/extinction.py)
   
-   - Try to program the honeycomb stimulus above (optional). A []solution psychopy](visual-illusions/Honeycomb.py) from [Bertamini's web site](https://www.programmingvisualillusionsforeveryone.online/scripts.html)
+- Try to program the honeycomb stimulus above (optional). A []solution psychopy](visual-illusions/Honeycomb.py) from [Bertamini's web site](https://www.programmingvisualillusionsforeveryone.online/scripts.html)
     
  
 # Creating dynamic visual stimuli
 
-* Wertheimer line-motion illusion. Check out [Jancke et al (2004) Imaging cortical correlates of
+## Wertheimer line-motion illusion. 
+
+Check out [Jancke et al (2004) Imaging cortical correlates of
 illusion in early visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf). Program the stimulus. Compare with [visual-illusions/line-motion.py](visual-illusions/line-motion.py)
 
-* Read about the [Flash-lag illusion](https://en.wikipedia.org/wiki/Flash_lag_illusion). Program the stimulus. Compare with [v]isual-illusions/flash-lag.py](isual-illusions/flash-lag.py)
+## Flash-lag illusion
+
+Read about the [Flash-lag illusion](https://en.wikipedia.org/wiki/Flash_lag_illusion). Program the stimulus. Compare with [v]isual-illusions/flash-lag.py](isual-illusions/flash-lag.py)
 
 
 # Creating and playing sounds
 
-0. Install the _simpleaudio_ module if it is not already installed on your computer (check with ipython: `import simpleaudio`), :
+Install the _simpleaudio_ module if it is not already installed on your computer (check with ipython: `import simpleaudio`), :
     ```
     pip install simpleaudio
     ```
 
-   Run the quick check with ipython:
+Run the quick check with ipython:
 
     ```
     import simpleaudio.functionchecks as fc
     fc.LeftRightCheck.run()
     ```
 
-    Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
+Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
+
+Study [sound_synth.py](sound/sound_synth.py)`.
 
 
-1. run `sound_synth.py`, look at the code. 
+## Sound localisation from binaural dephasing
 
+Take a mono sound and create a stereo sound by progressively dephasing the two channels.
 
-2. Take a mono sound and create a stereo sound by progressively dephasing the two channels.
+## Pulsation (Povel & Essen, 1985)
 
 3. Create rhythmic stimuli as described in [Povel and Essen (1985) _Perception of Temporal Patterns_](http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf)
 
@@ -228,7 +257,9 @@ illusion in early visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.
 
 5. Modify the script to have 3 blocks of trials: one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?
 
-6. Program [Posner's attentional cueing task](https://en.wikipedia.org/wiki/Posner_cueing_task) See solution in [Posner-attention/posner_task.py](Posner-attention/posner_task.py).
+## Posner's attentional cueing task
+
+Program [Posner's attentional cueing task](https://en.wikipedia.org/wiki/Posner_cueing_task) See solution in [Posner-attention/posner_task.py](Posner-attention/posner_task.py).
 
 
 ## Stroop Effect
@@ -248,20 +279,22 @@ Write a python script to create 4x8 cards for the task, avoiding repetitions of 
 
 In a lexical decision experiment, a string of characters is flashed at the center of the screen and the participant has to decide if it is  real word or not, indicating his/her decision by pressing a left or right button. Reaction time is measured from the word onset, providing an estimate of the speed of word recognition. 
 
-   * Using [lexical-decision/select-words-from-lexique.py] as an example, select 20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and 20 low frequency verbs, from Lexique382.txt (which can be download from <http://www.lexique.org>). They must all have a length of 5 to 8 characters. 
+   * Using [lexical-decision/select-words-from-lexique.py] as an example, select 20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and 20 low frequency verbs, from Lexique382.txt (which can be download from <http://www.lexique.org>).They must all have a length of 5 to 8 characters. 
    * generate 50 pseudowords using either [Lexique tools](http://www.lexique.org/toolbox/toolbox.pub/) or  [Wuggy](http://crr.ugent.be/programs-data/wuggy)
    * Program a lexical decision using expyriment.
    * Run it and compute the average decision times using pandas
 
-## More examples of experiments using expyriment.org
+## A general audio visual stimulus presentation script 
+
+See <https://www.github.com/chrplr/audiovis>
+
+## More examples using expyriment.org
 
 * See <http://docs.expyriment.org/old/0.9.0/Examples.html>
-* See <https://www.github.com/chrplr/audiovis> : a general audio visual stimulus presentation script using expyriment
 * Fork <https://github.com/expyriment/expyriment-stash> and contribute by adding new scripts!
 
 
-
-# Lexical Frequencies
+# Lexical Statistics
 
 ## Zipf law
 
@@ -296,6 +329,17 @@ A solution: [Benford-law/Benford.py](Benford-law/Benford.py)
 
 # Simulations
 
+## Cellular Automata
+
+Learn about Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). Watch [this](https://www.youtube.com/watch?v=S-W0NX97DB0) and [that](https://www.youtube.com/watch?v=C2vgICfQawE) videos.
+
+* Implement an [Elementary cellular automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). The aim is to reproduce the graphics shown at the bottom on the previous page.  you can take inspiration from the excellent [_Think Complexity_](http://greenteapress.com/wp/think-complexity-2e/) by Allen B. Downey. My solution is at  [cellular-automata/1d-ca.py](cellular-automata/1d-ca.py).
+
+* Implement the Game of Life in 2D.
+
+* Going futher: If you enjoy Cellular Automata, you can read Stephen Wolfram's [_A New Kind of Science_](https://en.wikipedia.org/wiki/A_New_Kind_of_Science). A more general book about Complexity is Melanie Mitchell's _Complexity: a guided tour_.
+
+
 ## Artificial Neural networks
  
 To understand the basics of artificial neural networks, I recommend thayt you watch the four excellent videos at <https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi> . The last two of them focus on the backpropagation algorithm that allow to train network to learn mapping.
@@ -313,15 +357,6 @@ More readings:
 
 * [Pattern recognition and machine learning](https://www.springer.com/fr/book/9780387310732) by Christopher M. Bishop
 
-## Cellular Automata
-
-Learn about Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). Watch [this](https://www.youtube.com/watch?v=S-W0NX97DB0) and [that](https://www.youtube.com/watch?v=C2vgICfQawE) videos.
-
-* Implement an [Elementary cellular automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). The aim is to reproduce the graphics shown at the bottom on the previous page.  you can take inspiration from the excellent [_Think Complexity_](http://greenteapress.com/wp/think-complexity-2e/) by Allen B. Downey. My solution is at  [cellular-automata/1d-ca.py](cellular-automata/1d-ca.py).
-
-* Implement the Game of Life in 2D.
-
-* Going futher: If you enjoy Cellular Automata, you can read Stephen Wolfram's [_A New Kind of Science_](https://en.wikipedia.org/wiki/A_New_Kind_of_Science). A more general book about Complexity is Melanie Mitchell's _Complexity: a guided tour_.
 
 ## Natural Language Parsing
 
