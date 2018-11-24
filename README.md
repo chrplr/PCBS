@@ -2,34 +2,34 @@
 % Christophe Pallier
 % Fall 2018
 
-This document -- a work in progress -- is available at [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS). Its source as well as the course materials is on github, at [http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS); to download them, open a terminal (`git bash` under Windows) and type:
+This document -- a work in progress -- is available at [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS). Its source as well as the course materials is on github, at [http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS). To download them, open a terminal (`git bash` under Windows) and type:
 
 ```
         git clone https://github.com/chrplr/PCBS
 ```
 
-**Companion documents***:
+**Companion documents**
 
 * [how-to-solve-problems.md](how-to-solve-problems.md)
-* [tools-for-reproducible-science.md](tools-for-reproducible-science.md) (and my [git cheat page](http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git))
+* [tools-for-reproducible-science.md](tools-for-reproducible-science.md)
 * [additional exercises](exercices.md). I answer questions on a [slack discussion forum](https://cogmaster-pcbs.slack.com)  Please [join!](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)
 * [Suggestions for projects](ideas-for-projects.md)
 
-
+---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [License](#license)
-- [Objective](#objective)
-- [Prerequisites:](#prerequisites)
+- [Objectives](#objectives)
+- [Prerequisites](#prerequisites)
 - [Resources](#resources)
+    - [On-line courses and books](#on-line-courses-and-books)
     - [Manipulations:](#manipulations)
     - [Stimulus/Experiment generation modules](#stimulusexperiment-generation-modules)
     - [Data analyses, Statistics](#data-analyses-statistics)
     - [Simulations](#simulations)
-    - [Relevant Books](#relevant-books)
+    - [Books relevant to Cognitive and Brain Sciences Programming](#books-relevant-to-cognitive-and-brain-sciences-programming)
 - [Creating static visual stimuli](#creating-static-visual-stimuli)
     - [Kanizsa triangle](#kanizsa-triangle)
     - [Herman grid](#herman-grid)
@@ -55,42 +55,53 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
     - [Cellular Automata](#cellular-automata)
     - [Artificial Neural networks](#artificial-neural-networks)
     - [Natural Language Parsing](#natural-language-parsing)
+    - [Neuroimaging](#neuroimaging)
+- [License](#license)
 
 <!-- markdown-toc end -->
 
-# License
-
-All documents in this repository are distributed under the [Creative Commons Attribution-ShareAlike 4](https://creativecommons.org/licenses/by-sa/4.0/). The code is distributed under the [GPL v3 LICENSE](https://www.gnu.org/licenses/gpl-3.0.en.html).
+---
 
 
-# Objective
 
-The purpose of this lecture is to get students to learn to write clean and simple programs in order to solve tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real time experiments, simulations...).
+# Objectives
+
+The purpose of these lectures is to get students to learn to write clean programs in order to solve the relatively simple tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real time experiments, simulations...).
 
 
-# Prerequisites: 
+# Prerequisites
 
 * knowledge of basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call and definition), file input/output operations ) and their implementation in Python 3. 
-
-  Complete beginners should look at [Code Academy's _Learn Python_ module](https://www.codecademy.com/learn/learn-python). 
-  
-  Then, there is an excellent online course [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
-  
-  Good books to start with Python include:
-  * [_Automate the boring stuff_](http://automatetheboringstuff.com/), 
-  * [_Think Python_](http://greenteapress.com/thinkpython2/), 
-  * [_Invent Your Own Computer Games with Python_ (4th Edition)](https://inventwithpython.com/invent4thed/), 
-  * [_Apprendre à programmer avec Python 3_](http://inforef.be/swi/python.htm). 
    
-* know how to edit a text file (with a text editor like [atom](https://atom.io/)), how to open a terminal, navigate the directory structure with 'cd', execute a .py script and launch [ipython](http://ipython.org). A very useful read is [_Learning the bash shell_](http://www.linuxcommand.org/lc3_learning_the_shell.php#contents).
+* know how to edit a text file (with a text editor like [atom](https://atom.io/)), how to open a terminal, navigate the directory structure with 'cd', execute a .py script and launch [ipython](http://ipython.org). 
 
 * know the basic usage of [Git](https://www.gitbook.com/), that is the commands`git clone, git pull, git init, git add, git status, git commit`.
         
-    * see [tools-for-reproducible-science.md]
-    * <https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
-    * <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
-
 # Resources
+
+## On-line courses and books
+
+* Complete beginners should start with [Code Academy's _Learn Python_ module](https://www.codecademy.com/learn/learn-python) or [Openclassrooms' Apprendre à programmer en Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python)
+  
+* There is a highly praised online course [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
+
+* Good books to start with Python include:
+
+  - [_Automate the boring stuff_](http://automatetheboringstuff.com/), 
+  - [_Think Python_](http://greenteapress.com/thinkpython2/), 
+  - [_Invent Your Own Computer Games with Python_ (4th Edition)](https://inventwithpython.com/invent4thed/), 
+  - [_Apprendre à programmer avec Python 3_](http://inforef.be/swi/python.htm). 
+
+* To learn to use commands in terminal, a useful read is [_Learning the bash shell_](http://www.linuxcommand.org/lc3_learning_the_shell.php#contents).
+
+* Great lessons on writing software for  science are available at [Software Carpentry](https://software-carpentry.org/lessons/).
+
+* Concerning Git:
+
+  * <https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
+  * <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
+  * my own [git cheat page](http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git)
+
 
 ## Manipulations:
 
@@ -127,7 +138,7 @@ _Automate the boring stuff with Python_ by Al Sweigart (<http://automatetheborin
 * [Deep Learning for Natural Language Processing with Pytorch](https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html)
 
 
-## Relevant Books
+## Books relevant to Cognitive and Brain Sciences Programming
 
 - [_Programming Visual Illusions for Everyone_](https://www.programmingvisualillusionsforeveryone.online/) by Marco Bertamini: 
 - _Neural Data Science: A Primer with MATLAB and Python_ by von Erik Lee Nylen and Pascal Wallisch
@@ -362,3 +373,12 @@ More readings:
 
 Parsing refers to building the syntactic structure of a sentence from the linear sequence of words that compose it. Explore the [various parsing algorithms](http://www.nltk.org/book/ch08.html)using the [Natural Language Toolkit](https://www.nltk.org/). 
 
+## Neuroimaging
+
+Check [nilearn](http://nilearn.github.io/) and [nistats](https://nistats.github.io/) and [MNE-python](https://martinos.org/mne/stable/index.html)
+
+---
+
+# License
+
+All documents in this repository are distributed under the [Creative Commons Attribution-ShareAlike 4](https://creativecommons.org/licenses/by-sa/4.0/). The code is distributed under the [GPL v3 LICENSE](https://www.gnu.org/licenses/gpl-3.0.en.html).

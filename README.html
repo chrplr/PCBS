@@ -268,28 +268,29 @@ if (window.hljs) {
 
 
 
-<p>This document – a work in progress – is available at <a href="https://chrplr.github.io/PCBS" class="uri">https://chrplr.github.io/PCBS</a>. Its source as well as the course materials is on github, at <a href="http://www.github.com/chrplr/PCBS" class="uri">http://www.github.com/chrplr/PCBS</a>; to download them, open a terminal (<code>git bash</code> under Windows) and type:</p>
+<p>This document – a work in progress – is available at <a href="https://chrplr.github.io/PCBS" class="uri">https://chrplr.github.io/PCBS</a>. Its source as well as the course materials is on github, at <a href="http://www.github.com/chrplr/PCBS" class="uri">http://www.github.com/chrplr/PCBS</a>. To download them, open a terminal (<code>git bash</code> under Windows) and type:</p>
 <pre><code>        git clone https://github.com/chrplr/PCBS</code></pre>
-<p><strong>Companion documents</strong>*:</p>
+<p><strong>Companion documents</strong></p>
 <ul>
 <li><a href="how-to-solve-problems.md" class="uri">how-to-solve-problems.md</a></li>
-<li><a href="tools-for-reproducible-science.md" class="uri">tools-for-reproducible-science.md</a> (and my <a href="http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git">git cheat page</a>)</li>
+<li><a href="tools-for-reproducible-science.md" class="uri">tools-for-reproducible-science.md</a></li>
 <li><a href="exercices.md">additional exercises</a>. I answer questions on a <a href="https://cogmaster-pcbs.slack.com">slack discussion forum</a> Please <a href="https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU">join!</a></li>
 <li><a href="ideas-for-projects.md">Suggestions for projects</a></li>
 </ul>
+<hr />
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 <p><strong>Table of Contents</strong></p>
 <ul>
-<li><a href="#license">License</a></li>
-<li><a href="#objective">Objective</a></li>
-<li><a href="#prerequisites">Prerequisites:</a></li>
+<li><a href="#objectives">Objectives</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
 <li><a href="#resources">Resources</a>
 <ul>
+<li><a href="#on-line-courses-and-books">On-line courses and books</a></li>
 <li><a href="#manipulations">Manipulations:</a></li>
 <li><a href="#stimulusexperiment-generation-modules">Stimulus/Experiment generation modules</a></li>
 <li><a href="#data-analyses-statistics">Data analyses, Statistics</a></li>
 <li><a href="#simulations">Simulations</a></li>
-<li><a href="#relevant-books">Relevant Books</a></li>
+<li><a href="#books-relevant-to-cognitive-and-brain-sciences-programming">Books relevant to Cognitive and Brain Sciences Programming</a></li>
 </ul></li>
 <li><a href="#creating-static-visual-stimuli">Creating static visual stimuli</a>
 <ul>
@@ -327,41 +328,48 @@ if (window.hljs) {
 <li><a href="#cellular-automata">Cellular Automata</a></li>
 <li><a href="#artificial-neural-networks">Artificial Neural networks</a></li>
 <li><a href="#natural-language-parsing">Natural Language Parsing</a></li>
+<li><a href="#neuroimaging">Neuroimaging</a></li>
 </ul></li>
+<li><a href="#license">License</a></li>
 </ul>
 <!-- markdown-toc end -->
-<section id="license" class="level1">
-<h1>License</h1>
-<p>All documents in this repository are distributed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4</a>. The code is distributed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3 LICENSE</a>.</p>
-</section>
-<section id="objective" class="level1">
-<h1>Objective</h1>
-<p>The purpose of this lecture is to get students to learn to write clean and simple programs in order to solve tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real time experiments, simulations…).</p>
+<hr />
+<section id="objectives" class="level1">
+<h1>Objectives</h1>
+<p>The purpose of these lectures is to get students to learn to write clean programs in order to solve the relatively simple tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real time experiments, simulations…).</p>
 </section>
 <section id="prerequisites" class="level1">
-<h1>Prerequisites:</h1>
+<h1>Prerequisites</h1>
 <ul>
-<li><p>knowledge of basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call and definition), file input/output operations ) and their implementation in Python 3.</p>
-<p>Complete beginners should look at <a href="https://www.codecademy.com/learn/learn-python">Code Academy’s <em>Learn Python</em> module</a>.</p>
-<p>Then, there is an excellent online course <a href="https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/">Python 3 : des fondamentaux aux concepts avancés du langage</a>.</p>
-Good books to start with Python include:
+<li><p>knowledge of basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call and definition), file input/output operations ) and their implementation in Python 3.</p></li>
+<li><p>know how to edit a text file (with a text editor like <a href="https://atom.io/">atom</a>), how to open a terminal, navigate the directory structure with ‘cd’, execute a .py script and launch <a href="http://ipython.org">ipython</a>.</p></li>
+<li><p>know the basic usage of <a href="https://www.gitbook.com/">Git</a>, that is the commands<code>git clone, git pull, git init, git add, git status, git commit</code>.</p></li>
+</ul>
+</section>
+<section id="resources" class="level1">
+<h1>Resources</h1>
+<section id="on-line-courses-and-books" class="level2">
+<h2>On-line courses and books</h2>
+<ul>
+<li><p>Complete beginners should start with <a href="https://www.codecademy.com/learn/learn-python">Code Academy’s <em>Learn Python</em> module</a> or <a href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python">Openclassrooms’ Apprendre à programmer en Python</a></p></li>
+<li><p>There is a highly praised online course <a href="https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/">Python 3 : des fondamentaux aux concepts avancés du langage</a>.</p></li>
+<li><p>Good books to start with Python include:</p>
 <ul>
 <li><a href="http://automatetheboringstuff.com/"><em>Automate the boring stuff</em></a>,</li>
 <li><a href="http://greenteapress.com/thinkpython2/"><em>Think Python</em></a>,</li>
 <li><a href="https://inventwithpython.com/invent4thed/"><em>Invent Your Own Computer Games with Python</em> (4th Edition)</a>,</li>
 <li><a href="http://inforef.be/swi/python.htm"><em>Apprendre à programmer avec Python 3</em></a>.</li>
 </ul></li>
-<li><p>know how to edit a text file (with a text editor like <a href="https://atom.io/">atom</a>), how to open a terminal, navigate the directory structure with ‘cd’, execute a .py script and launch <a href="http://ipython.org">ipython</a>. A very useful read is <a href="http://www.linuxcommand.org/lc3_learning_the_shell.php#contents"><em>Learning the bash shell</em></a>.</p></li>
-<li><p>know the basic usage of <a href="https://www.gitbook.com/">Git</a>, that is the commands<code>git clone, git pull, git init, git add, git status, git commit</code>.</p>
+<li><p>To learn to use commands in terminal, a useful read is <a href="http://www.linuxcommand.org/lc3_learning_the_shell.php#contents"><em>Learning the bash shell</em></a>.</p></li>
+<li><p>Great lessons on writing software for science are available at <a href="https://software-carpentry.org/lessons/">Software Carpentry</a>.</p></li>
+<li><p>Concerning Git:</p>
 <ul>
-<li>see [tools-for-reproducible-science.md]</li>
 <li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" class="uri">https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners</a></li>
 <li><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics" class="uri">https://git-scm.com/book/en/v2/Getting-Started-Git-Basics</a></li>
+<li>my own <a href="http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git">git cheat page</a></li>
 </ul></li>
 </ul>
 </section>
-<section id="resources" class="level1">
-<h1>Resources</h1>
 <section id="manipulations" class="level2">
 <h2>Manipulations:</h2>
 <p><em>Automate the boring stuff with Python</em> by Al Sweigart (<a href="http://automatetheboringstuff.com/" class="uri">http://automatetheboringstuff.com/</a>) is a great book to learn to manipulate files, extracting information from web pages, etc.</p>
@@ -410,8 +418,8 @@ Good books to start with Python include:
 <li><a href="https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html">Deep Learning for Natural Language Processing with Pytorch</a></li>
 </ul>
 </section>
-<section id="relevant-books" class="level2">
-<h2>Relevant Books</h2>
+<section id="books-relevant-to-cognitive-and-brain-sciences-programming" class="level2">
+<h2>Books relevant to Cognitive and Brain Sciences Programming</h2>
 <ul>
 <li><a href="https://www.programmingvisualillusionsforeveryone.online/"><em>Programming Visual Illusions for Everyone</em></a> by Marco Bertamini:</li>
 <li><em>Neural Data Science: A Primer with MATLAB and Python</em> by von Erik Lee Nylen and Pascal Wallisch</li>
@@ -623,6 +631,15 @@ plt.hist(d.RT)</code></pre></li>
 <h2>Natural Language Parsing</h2>
 <p>Parsing refers to building the syntactic structure of a sentence from the linear sequence of words that compose it. Explore the <a href="http://www.nltk.org/book/ch08.html">various parsing algorithms</a>using the <a href="https://www.nltk.org/">Natural Language Toolkit</a>.</p>
 </section>
+<section id="neuroimaging" class="level2">
+<h2>Neuroimaging</h2>
+<p>Check <a href="http://nilearn.github.io/">nilearn</a> and <a href="https://nistats.github.io/">nistats</a> and <a href="https://martinos.org/mne/stable/index.html">MNE-python</a></p>
+<hr />
+</section>
+</section>
+<section id="license" class="level1">
+<h1>License</h1>
+<p>All documents in this repository are distributed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4</a>. The code is distributed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3 LICENSE</a>.</p>
 </section>
 
 
