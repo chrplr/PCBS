@@ -9,9 +9,9 @@ This document is available at [https://chrplr.github.io/PCBS](https://chrplr.git
 ```
 
 A companion document is [exercises](exercices.md). I answer questions on [discussion forum on slack](https://cogmaster-pcbs.slack.com)  Please [join](
- https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU) !
+ https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)!
 
-Also, please have a look at "[how-to-solve-problem.md](how-to-solve-problem.md)" and "[tools-for-reproducible-science.md](tools-for-reproducible-science.md)"
+Also, you should have a look at "[how-to-solve-problems.md](how-to-solve-problems.md)" and "[tools-for-reproducible-science.md](tools-for-reproducible-science.md)"
 
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -103,7 +103,6 @@ _Automate the boring stuff with Python_ by Al Sweigart (<http://automatetheborin
 * _Scipy Lecture Notes_: <http://www.scipy-lectures.org/>
 * _Think Stats_ by Allen B. Downey: <http://greenteapress.com/thinkstats2/>
 * _Python Data Science Handbook_ by Jake VanderPlas: <https://jakevdp.github.io/PythonDataScienceHandbook>
-
 
 
 ## Simulations
