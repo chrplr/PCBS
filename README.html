@@ -532,8 +532,8 @@ plt.hist(d.RT)</code></pre></li>
  def remove_punctuation(text):
      punct = string.punctuation + chr(10)
      return text.translate(str.maketrans(punct, &quot; &quot; * len(punct)))</code></pre></li>
-<li><p>Zipf law states that the product rank X frequency is roughly constant. This ‘law’ was discovered by Estoup and popularized by Zipf. See <a href="http://en.wikipedia.org/wiki/Zipf%27s_law">http://en.wikipedia.org/wiki/Zipf%27s_law</a>. Create the Zipf plot for the text of <em>Alice in Wonderlang</em> showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent).</p></li>
-<li><p>Display the relationship between word length and word frequencies.</p></li>
+<li><p>Zipf law states that the product rank X frequency is roughly constant. This ‘law’ was discovered by Estoup and popularized by Zipf. See <a href="http://en.wikipedia.org/wiki/Zipf%27s_law">http://en.wikipedia.org/wiki/Zipf%27s_law</a>. Create the Zipf plot for the text of <a href="Zipf/alice.txt"><em>Alice in Wonderland</em></a> showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent).</p></li>
+<li><p>Display the relationship between word length and word frequencies from the data in <a href="lexical-decision/lexique382-reduced.txt" class="uri">lexical-decision/lexique382-reduced.txt</a></p></li>
 <li><p>Generate random text (each letter from a-z being equiprobable, and the spacecharacter being 8 times more probable) of 1 million characters. Compute the frequencies of each ‘pseudowords’ and plot the rank/frequency diagram.</p></li>
 <li><p>To know more about lexical frequencies:</p>
 <ul>
@@ -544,14 +544,15 @@ plt.hist(d.RT)</code></pre></li>
 </section>
 <section id="benfords-law." class="level2">
 <h2>Benford’s law.</h2>
-<p>Learn about <a href="https://brilliant.org/wiki/benfords-law/">Benford’s law</a>. Write a Python script that displays the distribution of the most significant digit in a set of numbers. Apply it to <a href="https://simple.wikipedia.org/wiki/List_of_countries_by_area" class="uri">https://simple.wikipedia.org/wiki/List_of_countries_by_area</a></p>
+<p>Learn about <a href="https://brilliant.org/wiki/benfords-law/">Benford’s law</a>. Write a Python script that displays the distribution of the most significant digit in a set of numbers. Apply it to the variables in <a href="Benford-law/countries.xlsx" class="uri">Benford-law/countries.xlsx</a>.</p>
+<p>A solution: <a href="Benford-law/Benford.py" class="uri">Benford-law/Benford.py</a></p>
 </section>
 </section>
 <section id="simulations-1" class="level1">
 <h1>Simulations</h1>
 <section id="artificial-neural-networks" class="level2">
 <h2>Artificial Neural networks</h2>
-<p>To understand the basics of artificial neural networks, I recommend that you watch the four excellent videos at <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" class="uri">https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi</a> . The last two of them focus on the backpropagation algorithm that allow to train network to learn mapping.</p>
+<p>To understand the basics of artificial neural networks, I recommend thayt you watch the four excellent videos at <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" class="uri">https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi</a> . The last two of them focus on the backpropagation algorithm that allow to train network to learn mapping.</p>
 <p>Next, you can read and try to understand this <a href="https://visualstudiomagazine.com/articles/2017/06/01/back-propagation.aspx">implementation</a> of the backpropagation algorithm.</p>
 <p>Then, see a modern and efficient implementation of neural networks: <a href="https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html" class="uri">https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html</a></p>
 <p>More readings:</p>
@@ -563,10 +564,10 @@ plt.hist(d.RT)</code></pre></li>
 </section>
 <section id="cellular-automata" class="level2">
 <h2>Cellular Automata</h2>
-<p>Learn about Conway’s <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a>. Watch <a href="https://www.youtube.com/watch?v=S-W0NX97DB0">this</a> and (that)[<a href="https://www.youtube.com/watch?v=C2vgICfQawE" class="uri">https://www.youtube.com/watch?v=C2vgICfQawE</a>] videos.</p>
+<p>Learn about Conway’s <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a>. Watch <a href="https://www.youtube.com/watch?v=S-W0NX97DB0">this</a> and <a href="https://www.youtube.com/watch?v=C2vgICfQawE">that</a> videos.</p>
 <ul>
-<li><p>Implement an <a href="https://en.wikipedia.org/wiki/Elementary_cellular_automaton">Elementary cellular automaton</a>. The aim is to reproduce the graphics shown at the bottom on the previous page. You can start from the template <a href="cellular-automata/1d-ca.py">1d-ca.py</a>. Alternatively, you can take inspiration from the excellent <a href="http://greenteapress.com/wp/think-complexity-2e/"><em>Think Complexity</em></a> by Allen B. Downey.</p></li>
-<li><p>Implement the Game of Life.</p></li>
+<li><p>Implement an <a href="https://en.wikipedia.org/wiki/Elementary_cellular_automaton">Elementary cellular automaton</a>. The aim is to reproduce the graphics shown at the bottom on the previous page. you can take inspiration from the excellent <a href="http://greenteapress.com/wp/think-complexity-2e/"><em>Think Complexity</em></a> by Allen B. Downey. My solution is at <a href="cellular-automata/1d-ca.py" class="uri">cellular-automata/1d-ca.py</a>.</p></li>
+<li><p>Implement the Game of Life in 2D.</p></li>
 <li><p>Going futher: If you enjoy Cellular Automata, you can read Stephen Wolfram’s <a href="https://en.wikipedia.org/wiki/A_New_Kind_of_Science"><em>A New Kind of Science</em></a>. A more general book about Complexity is Melanie Mitchell’s <em>Complexity: a guided tour</em>.</p></li>
 </ul>
 </section>

@@ -275,9 +275,10 @@ In a lexical decision experiment, a string of characters is flashed at the cente
         return text.translate(str.maketrans(punct, " " * len(punct)))
    ```
 
-* Zipf law states that the product rank X frequency is roughly constant. This 'law' was discovered by Estoup and popularized by Zipf. See  <http://en.wikipedia.org/wiki/Zipf%27s_law>.  Create the Zipf plot for the text of _Alice in Wonderlang_ showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent). 
+* Zipf law states that the product rank X frequency is roughly constant. This 'law' was discovered by Estoup and popularized by Zipf. See  <http://en.wikipedia.org/wiki/Zipf%27s_law>.  Create the Zipf plot for the text of [_Alice in Wonderland_](Zipf/alice.txt) showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent). 
 
-* Display the relationship between word length and word frequencies.
+* Display the relationship between word length and word frequencies from the data in  [lexical-decision/lexique382-reduced.txt](lexical-decision/lexique382-reduced.txt)
+
 
 * Generate random text (each letter from a-z being equiprobable, and the spacecharacter being 8 times more probable) of 1 million characters. Compute the frequencies of each 'pseudowords' and plot the rank/frequency diagram.
 
@@ -288,14 +289,15 @@ In a lexical decision experiment, a string of characters is flashed at the cente
 
 ## Benford's law. 
 
-Learn about [Benford's law](https://brilliant.org/wiki/benfords-law/). Write a Python script that displays the distribution of the most significant digit in a set of numbers. Apply it to  <https://simple.wikipedia.org/wiki/List_of_countries_by_area>
+Learn about [Benford's law](https://brilliant.org/wiki/benfords-law/). Write a Python script that displays the distribution of the most significant digit in a set of numbers. Apply it to the variables in [Benford-law/countries.xlsx](Benford-law/countries.xlsx). 
 
+A solution: [Benford-law/Benford.py](Benford-law/Benford.py)
 
 # Simulations
 
 ## Artificial Neural networks
-
-To understand the basics of artificial neural networks, I recommend that you watch the four excellent videos at <https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi> . The last two of them focus on the backpropagation algorithm that allow to train network to learn mapping.
+ 
+To understand the basics of artificial neural networks, I recommend thayt you watch the four excellent videos at <https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi> . The last two of them focus on the backpropagation algorithm that allow to train network to learn mapping.
 
 Next, you can read and try to understand this [implementation](https://visualstudiomagazine.com/articles/2017/06/01/back-propagation.aspx) of the backpropagation algorithm.
 
@@ -312,11 +314,11 @@ More readings:
 
 ## Cellular Automata
 
-Learn about Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). Watch [this](https://www.youtube.com/watch?v=S-W0NX97DB0) and (that)[https://www.youtube.com/watch?v=C2vgICfQawE] videos.
+Learn about Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). Watch [this](https://www.youtube.com/watch?v=S-W0NX97DB0) and [that](https://www.youtube.com/watch?v=C2vgICfQawE) videos.
 
-* Implement an [Elementary cellular automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). The aim is to reproduce the graphics shown at the bottom on the previous page. You can start from the template [1d-ca.py](cellular-automata/1d-ca.py). Alternatively, you can take inspiration from the excellent [_Think Complexity_](http://greenteapress.com/wp/think-complexity-2e/) by Allen B. Downey.
+* Implement an [Elementary cellular automaton](https://en.wikipedia.org/wiki/Elementary_cellular_automaton). The aim is to reproduce the graphics shown at the bottom on the previous page.  you can take inspiration from the excellent [_Think Complexity_](http://greenteapress.com/wp/think-complexity-2e/) by Allen B. Downey. My solution is at  [cellular-automata/1d-ca.py](cellular-automata/1d-ca.py).
 
-* Implement the Game of Life.
+* Implement the Game of Life in 2D.
 
 * Going futher: If you enjoy Cellular Automata, you can read Stephen Wolfram's [_A New Kind of Science_](https://en.wikipedia.org/wiki/A_New_Kind_of_Science). A more general book about Complexity is Melanie Mitchell's _Complexity: a guided tour_.
 

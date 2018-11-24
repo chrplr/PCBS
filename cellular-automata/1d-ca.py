@@ -12,13 +12,14 @@ def map(rule, triplet):
     """Applies a CA-rule to a triplet.
 
     Args:
-        rule: list of 8 binary digits representatin a CA-rule
+        rule: list of 8 binary digits representing a CA-rule
         triplet:  3-uple of bits.
 
     Returns:
-        the result of applying the CA-rule mapping triplets onto {0, 1}
+        the result of applying the CA-rule mapping triplet onto {0, 1}
 
     """
+    assert len(rule) == 8
     index = 4 * triplet[0] + 2 * triplet[1] + triplet[2]
     return rule[index]
 
@@ -37,7 +38,17 @@ def get_triplet(boxes, position):
 
 
 def generate(rule, seed, ngenerations):
-    """Generates 'ngenerations' applyiong the CA-rule 'rule' to seed.
+    """Generates 'ngenerations' applying the CA-rule 'rule' to 'seed'.
+
+    Args:
+        rule : a list of 8 binary digits (0, 1)
+        seed :  a vector of (0, 1) representing the first generation
+        ngenerations : the total number of generations
+
+    Returns:
+        a matrix with seed as the first line, and ngenerations-1 additional
+        lines representing the successive generations.
+
     """
     nboxes = seed.shape[0]
     pop = np.zeros((ngenerations, nboxes), dtype=int)
@@ -57,7 +68,7 @@ if __name__ == '__main__':
     firstgenerations = np.random.randint(2, size=(NPATTERNS, NBOXES))
 
     for rule in range(256):  # loop over the 256 possible rules
-        r = [int(b) for b in f'{rule:08b}']  # convert rule to binary
+        r = [int(b) for b in f'{rule:08b}']  # convert 'rule' to 8-bit binary
         for trial in range(NPATTERNS):
             mat = generate(r, firstgenerations[trial], NGENERATIONS)
             plt.imshow(mat)
