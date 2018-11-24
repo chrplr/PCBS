@@ -198,7 +198,7 @@ illusion in early visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.
 
 ## Flash-lag illusion
 
-Read about the [Flash-lag illusion](https://en.wikipedia.org/wiki/Flash_lag_illusion). Program the stimulus. Compare with [v]isual-illusions/flash-lag.py](isual-illusions/flash-lag.py)
+Read about the [Flash-lag illusion](https://en.wikipedia.org/wiki/Flash_lag_illusion). Program the stimulus. Compare with [visual-illusions/flash-lag.py](visual-illusions/flash-lag.py)
 
 
 # Creating and playing sounds
@@ -279,7 +279,7 @@ Write a python script to create 4x8 cards for the task, avoiding repetitions of 
 
 In a lexical decision experiment, a string of characters is flashed at the center of the screen and the participant has to decide if it is  real word or not, indicating his/her decision by pressing a left or right button. Reaction time is measured from the word onset, providing an estimate of the speed of word recognition. 
 
-   * Using [lexical-decision/select-words-from-lexique.py] as an example, select 20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and 20 low frequency verbs, from Lexique382.txt (which can be download from <http://www.lexique.org>).They must all have a length of 5 to 8 characters. 
+   * Using [lexical-decision/select-words-from-lexique.py] as an example, select 20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and 20 low frequency verbs, from Lexique382.txt --- from <http://www.lexique.org/public/Lexique382.zip>.They must all have a length of 5 to 8 characters. 
    * generate 50 pseudowords using either [Lexique tools](http://www.lexique.org/toolbox/toolbox.pub/) or  [Wuggy](http://crr.ugent.be/programs-data/wuggy)
    * Program a lexical decision using expyriment.
    * Run it and compute the average decision times using pandas

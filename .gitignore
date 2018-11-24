@@ -3,3 +3,4 @@
 *.xpe
 experiments/sound/the_beat_goes_on/?_*.wav
 data-manipulation/Lexique382/
+cellular-automata/*.png

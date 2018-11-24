@@ -5,7 +5,7 @@
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [How to think like a programmer : lessons in problem solving](#how-to-think-like-a-programmer-lessons-in-problem-solving)
+- [How to think like a programmer: lessons in problem solving](#how-to-think-like-a-programmer-lessons-in-problem-solving)
     - [Understand](#understand)
     - [Plan](#plan)
     - [Divide](#divide)
@@ -21,7 +21,7 @@
 <!-- markdown-toc end -->
 
 
-# How to think like a programmer : lessons in problem solving
+# How to think like a programmer: lessons in problem solving
 
 
 So, what should you do when you encounter a new problem?
@@ -40,8 +40,8 @@ Most programmers know this feeling.
 
 This is why you should write down your problem, doodle a diagram, or tell someone else about it (or thing… some people use a rubber duck).
 
->   “If you can’t explain something in simple terms, you don’t understand it.” 
-> -- Richard Feynman
+>   “If you can’t explain something in simple terms, you don’t understand it.”
+> --Richard Feynman
 
 ## Plan 
 
@@ -81,9 +81,9 @@ This technique is a cornerstone of problem-solving. Remember it (read this step 
 
 >   If you’re stuck, you should reduce the problem to something simpler. Instead of the third-highest number, what about finding the highest overall? Still too tough? What about finding the largest of just three numbers? Or the larger of two?
 
->   Reduce the problem to the point where you know how to solve it and write the solution. Then expand the problem slightly and rewrite the solution to match, and keep going until you are back where you started.” 
+>   Reduce the problem to the point where you know how to solve it and write the solution. Then expand the problem slightly and rewrite the solution to match, and keep going until you are back where you started.”
 
-> -- V. Anton Spraul
+> --V. Anton Spraul
 
 ## Stuck?
 
@@ -99,15 +99,15 @@ In fact, here are three things to try when facing a whammy:
 
    Debug: Go step by step through your solution trying to find where you went wrong. Programmers call this debugging (in fact, this is all a debugger does).
 
->   “The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.”” 
-> -- Andrew Singer
+>   “The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.””
+> --Andrew Singer
 
    Reassess: Take a step back. Look at the problem from another perspective. Is there anything that can be abstracted to a more general approach?
 
 >   “Sometimes we get so lost in the details of a problem that we overlook general principles that would solve the problem at a more general level. […]
 
 >   The classic example of this, of course, is the summation of a long list of consecutive integers, 1 + 2 + 3 + … + n, which a very young Gauss quickly recognized was simply n(n+1)/2, thus avoiding the effort of having to do the addition.”
-> -- C. Jordan Ball
+> --C. Jordan Ball
 
 Sidenote: Another way of reassessing is starting anew. Delete everything and begin again with fresh eyes. I’m serious. You’ll be dumbfounded at how effective this is.
 
@@ -127,7 +127,7 @@ Chess puzzles, math problems, Sudoku, Go, Monopoly, video-games, cryptokitties, 
 
 In fact, a common pattern amongst successful people is their habit of practicing “micro problem-solving.” For example, Peter Thiel plays chess, and Elon Musk plays video-games.
 
-   Fast-forward to today. Elon [Musk], Reid [Hoffman], Mark Zuckerberg and many others say that games have been foundational to their success in building their companies.” -- Mary Meeker (2017 internet trends report)
+   Fast-forward to today. Elon [Musk], Reid [Hoffman], Mark Zuckerberg and many others say that games have been foundational to their success in building their companies.”--Mary Meeker (2017 internet trends report)
 
 Does this mean you should just play video-games? Not at all.
 
@@ -157,15 +157,15 @@ You read that right. At least now you know how to solve them! (also, you’ll le
 
 >   “Just when you think you’ve successfully navigated one obstacle, another emerges. But that’s what keeps life interesting.[…]
 
->   Life is a process of breaking through these impediments -- a series of fortified lines that we must break through.
+>   Life is a process of breaking through these impediments--a series of fortified lines that we must break through.
 
 >   Each time, you’ll learn something.
 
 >   Each time, you’ll develop strength, wisdom, and perspective.
 
->   Each time, a little more of the competition falls away. Until all that is left is you: the best version of you.” 
+>   Each time, a little more of the competition falls away. Until all that is left is you: the best version of you.”
 
->-- Ryan Holiday (The Obstacle is the Way)
+> -- Ryan Holiday (The Obstacle is the Way)
 
 Now, go solve some problems!
 
