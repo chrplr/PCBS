@@ -25,7 +25,8 @@ state the obvious. Be brief.
 
 # Names
 
-* A function name should describe what the function does. Don't be afraid to
+* A function name should describes what the function does. Don't be afraid to
+
 make a name long. A long descriptive name is better than a short enigmatic name.
 A long descriptive name is better than a long descriptive comment.
 
@@ -72,9 +73,20 @@ restructure it and refine it until it reads the way you want it to read.
 
 >  So then I massage and refine that code, splitting out functions, changing names, eliminating duplication. 
  
+
 >  In the end, I wind up with functions that follow the rules I’ve laid down. I don’t write them that way to start. I don’t think anyone could."
 
 
 # Tests
 
 [Getting Started With Testing in Python](https://realpython.com/python-testing/)
+
+# Version control
+
+A version control system keeps track of the history of changes made to a set of files and allows to recall specific versions later.
+
+Many people use a numbering scheme to keep track of the evolving versions of files, but this is a very bad idea, especially when collaborating with several people.
+
+To keep track of changes made to files in a directory, I highly recommend that you use a version control software. Personally, I use Git.
+
+You can read the [Git Parable](http://tom.preston-werner.com/2009/05/19/the-git-parable.html) to understand the principles of Git.  The [Git Book](https://git-scm.com/book/en/v2) is the definitive documentation.
