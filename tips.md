@@ -25,7 +25,8 @@ state the obvious. Be brief.
 
 # Names
 
-* A function name should describe what the function does. Don't be afraid to
+* A function name should describes what the function does. Don't be afraid to
+
 make a name long. A long descriptive name is better than a short enigmatic name.
 A long descriptive name is better than a long descriptive comment.
 
@@ -72,6 +73,7 @@ restructure it and refine it until it reads the way you want it to read.
 
 >  So then I massage and refine that code, splitting out functions, changing names, eliminating duplication. 
  
+
 >  In the end, I wind up with functions that follow the rules I’ve laid down. I don’t write them that way to start. I don’t think anyone could."
 
 
