@@ -10,9 +10,10 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
 
 **Companion documents**
 
-* [how-to-solve-problems.md](how-to-solve-problems.md)
-* [tools-for-reproducible-science.md](tools-for-reproducible-science.md)
-* [additional exercises](exercices.md). I answer questions on a [slack discussion forum](https://cogmaster-pcbs.slack.com)  Please [join!](
+* [How to solve problems](how-to-solve-problems.md)
+* [Tips for writing clean code](tips.md)
+* [Tools for reproducible science](tools-for-reproducible-science.md)
+* [Additional exercises](exercices.md). I answer questions on a [slack discussion forum](https://cogmaster-pcbs.slack.com)  Please [join!](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)
 * [Suggestions for projects](ideas-for-projects.md)
 
