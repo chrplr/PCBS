@@ -57,6 +57,7 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
     - [Artificial Neural networks](#artificial-neural-networks)
     - [Natural Language Parsing](#natural-language-parsing)
     - [Neuroimaging](#neuroimaging)
+- [Projects](#projects)
 - [License](#license)
 
 <!-- markdown-toc end -->
@@ -377,6 +378,11 @@ Parsing refers to building the syntactic structure of a sentence from the linear
 ## Neuroimaging
 
 Check [nilearn](http://nilearn.github.io/) and [nistats](https://nistats.github.io/) and [MNE-python](https://martinos.org/mne/stable/index.html)
+
+
+# Projects
+
+Check [projects.md](projects.md)
 
 ---
 
