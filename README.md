@@ -15,8 +15,9 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
 * [Tools for reproducible science](tools-for-reproducible-science.md)
 * [Additional exercises](exercices.md). I answer questions on a [slack discussion forum](https://cogmaster-pcbs.slack.com)  Please [join!](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)
-* [Suggestions for projects](ideas-for-projects.md)
-
+* Programming projects towards validation:
+    - [some suggestions for projects](ideas-for-projects.md)
+    - [Final projects](projects.md)
 ---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
@@ -57,7 +58,6 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
     - [Artificial Neural networks](#artificial-neural-networks)
     - [Natural Language Parsing](#natural-language-parsing)
     - [Neuroimaging](#neuroimaging)
-- [Projects](#projects)
 - [License](#license)
 
 <!-- markdown-toc end -->
@@ -380,9 +380,6 @@ Parsing refers to building the syntactic structure of a sentence from the linear
 Check [nilearn](http://nilearn.github.io/) and [nistats](https://nistats.github.io/) and [MNE-python](https://martinos.org/mne/stable/index.html)
 
 
-# Projects
-
-Check [projects.md](projects.md)
 
 ---
 
