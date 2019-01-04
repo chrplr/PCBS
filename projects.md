@@ -15,19 +15,20 @@
 
 # Projects
 
-* Camille Williams <https://github.com/Camzcamz/PCBS-WILLIAMS>
-* Monica Hedge  <https://github.com/monicahegde/PCBS-surprise-attention>
-* François Stockart <https://github.com/francoisstock/PCBS_project>
-* Lucie Bracon <https://github.com/LucieBrcn/PCBS-PROJET>
-* Cédric Foucault <https://github.com/cedricfoucault/PCBS-RetroChronoAnalysis>
-* Ted Landron <https://github.com/tlandron/PCBS_ModelRecovery_TLANDRON>
-* Elisa Lannelongue <https://github.com/NephthysSkh/PCBS-projet>
-* Mathilde Mus <https://github.com/mathilde-mus/PCBS-final-project>
-* Marine Pagliari <https://github.com/MarinePagliari/PagliariMarine_PCBS_Project>
-* Tom Puech <https://github.com/puechtom/PCBS-flappyai>
-* Corentin Riet <https://github.com/pocopennar/PCBS-pridil>
-* Laurène Barbier <https://github.com/laurenebarbier/PCBS-concordancier>
-* Victor Chung <https://github.com/Cogstudent/PCBS-Chung.git>
-* Julien Lie <https://github.com/jlie10/SelfSacrifice>
-* Clémence Bergerot <https://github.com/clematisation/PCBS-Hopfield>
-* Annahita Sarré <https://github.com/AnnahitaSarre/PCBS-ComparaisonNumerique>
+1. Camille Williams <https://github.com/Camzcamz/PCBS-WILLIAMS>
+1. Monica Hedge  <https://github.com/monicahegde/PCBS-surprise-attention>
+1. François Stockart <https://github.com/francoisstock/PCBS_project>
+1. Lucie Bracon <https://github.com/LucieBrcn/PCBS-PROJET>
+1. Cédric Foucault <https://github.com/cedricfoucault/PCBS-RetroChronoAnalysis>
+1. Ted Landron <https://github.com/tlandron/PCBS_ModelRecovery_TLANDRON>
+1. Elisa Lannelongue <https://github.com/NephthysSkh/PCBS-projet>
+1. Mathilde Mus <https://github.com/mathilde-mus/PCBS-final-project>
+1. Marine Pagliari <https://github.com/MarinePagliari/PagliariMarine_PCBS_Project>
+1. Tom Puech <https://github.com/puechtom/PCBS-flappyai>
+1. Corentin Riet <https://github.com/pocopennar/PCBS-pridil>
+1. Laurène Barbier <https://github.com/laurenebarbier/PCBS-concordancier>
+1. Victor Chung <https://github.com/Cogstudent/PCBS-Chung.git>
+1. Julien Lie <https://github.com/jlie10/SelfSacrifice>
+1. Clémence Bergerot <https://github.com/clematisation/PCBS-Hopfield>
+1. Annahita Sarré <https://github.com/AnnahitaSarre/PCBS-ComparaisonNumerique>
+1. Antoine Parize <https://github.com/lejugeti/PARIZE_PCBS_cellular_automata>
