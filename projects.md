@@ -32,3 +32,4 @@
 1. Clémence Bergerot <https://github.com/clematisation/PCBS-Hopfield>
 1. Annahita Sarré <https://github.com/AnnahitaSarre/PCBS-ComparaisonNumerique>
 1. Antoine Parize <https://github.com/lejugeti/PARIZE_PCBS_cellular_automata>
+1. Dawei Bai <https://github.com/daweibai/PCBS-langevo>
