@@ -7,19 +7,23 @@ lex = pd.read_csv("lexique382-reduced.txt", sep='\t')
 
 lex.head()
 
-noms = lex.loc[lex.categ == 'NOM']
-len(noms)
-noms.sample(10)
+subset = lex.loc[(lex.length >= 5) & (lex.length <=8)]
 
-verbs = lex.loc[lex.categ == 'VERB']
-len(verbs)
-verbs.sample(10)
+noms = subset.loc[subset.categ == 'NOM']
+verbs = subset.loc[subset.categ == 'VER']
 
-hifreq = lex.loc[lex.freq > 50.0]
-len(hifreq)
-hifreq.sample(10)
+noms_hi = noms.loc[noms.freq > 50.0]
+noms_low = noms.loc[(noms.freq < 10.0) & (noms.freq > 1.0)]
 
-lowfreq = lex.loc[(lex.freq < 10.0) & (lex.freq > 1.0)]
-len(lowfreq)
-lowfreq.sample(10)
+verbs_hi = verbs.loc[verbs.freq > 50.0]
+verbs_low = verbs.loc[(verbs.freq < 10.0) & (verbs.freq > 1.0)]
+
+N = 20
+
+noms_hi.sample(N).ortho.to_csv('nomhi.txt', index=False)
+noms_low.sample(N).ortho.to_csv('nomlo.txt', index=False)
+verbs_hi.sample(N).ortho.to_csv('verhi.txt', index=False)
+verbs_hi.sample(N).ortho.to_csv('verlo.txt', index=False)
+
+
 

@@ -1,0 +1,23 @@
+# -*- coding: UTF-8 -*-
+#exp: Lexical Decision Task
+block_cnt,block_id,trial_cnt,trial_id,Frequency,Category
+0,0,0,0,HiFreq,Noun
+0,0,1,1,HiFreq,Noun
+0,0,2,2,HiFreq,Noun
+0,0,3,3,HiFreq,Noun
+0,0,4,4,HiFreq,Noun
+0,0,5,5,HiFreq,Noun
+0,0,6,6,HiFreq,Noun
+0,0,7,7,HiFreq,Noun
+0,0,8,8,HiFreq,Noun
+0,0,9,9,HiFreq,Noun
+1,1,0,0,HiFreq,Noun
+1,1,1,1,HiFreq,Noun
+1,1,2,2,HiFreq,Noun
+1,1,3,3,HiFreq,Noun
+1,1,4,4,HiFreq,Noun
+1,1,5,5,HiFreq,Noun
+1,1,6,6,HiFreq,Noun
+1,1,7,7,HiFreq,Noun
+1,1,8,8,HiFreq,Noun
+1,1,9,9,HiFreq,Noun

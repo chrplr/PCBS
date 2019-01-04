@@ -378,6 +378,11 @@ Parsing refers to building the syntactic structure of a sentence from the linear
 
 Check [nilearn](http://nilearn.github.io/) and [nistats](https://nistats.github.io/) and [MNE-python](https://martinos.org/mne/stable/index.html)
 
+
+# Projects
+
+Check [projects.md](projects.md)
+
 ---
 
 # License
