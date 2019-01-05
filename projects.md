@@ -1,5 +1,7 @@
 * The aim is to improve your programming skills, and make well-written and documented project, rather that a super-duper program to impress me. Do not be over ambitious: I prefer short program(s) that do things that are not too complicated and which are easy to understand.
 
+* You can use whichever language is suited to your project (Python, R, Matlab, Javascript, ...). The only rule is that the code must be readable. 
+
 * Work in binomes:  it is important to have someone else check that the documentation and code that you write is readable.
 
 * You must put your project on github, in a depository which name starts with `PCBS-` followed by a label that gives an idea of what the project is about.
@@ -33,3 +35,4 @@
 1. Annahita Sarré <https://github.com/AnnahitaSarre/PCBS-ComparaisonNumerique>
 1. Antoine Parize <https://github.com/lejugeti/PARIZE_PCBS_cellular_automata>
 1. Dawei Bai <https://github.com/daweibai/PCBS-langevo>
+1. Lucie Bracon <https://github.com/LucieBrcn/PCBS-PROJET>
