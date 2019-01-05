@@ -16,8 +16,9 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
 * [Additional exercises](exercices.md). I answer questions on a [slack discussion forum](https://cogmaster-pcbs.slack.com)  Please [join!](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)
 * Programming projects towards validation:
+    - [Your projects](projects.md)
     - [some suggestions for projects](ideas-for-projects.md)
-    - [Final projects](projects.md)
+
 ---
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
