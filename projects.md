@@ -36,3 +36,4 @@
 1. Antoine Parize <https://github.com/lejugeti/PARIZE_PCBS_cellular_automata>
 1. Dawei Bai <https://github.com/daweibai/PCBS-langevo>
 1. Camille Courgeon <https://github.com/camcour/PCBS-automatic_classifier>
+1. Jonny Giordano <https://github.com/jvgiordano/AE-Project>
