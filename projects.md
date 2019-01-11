@@ -37,3 +37,4 @@
 1. Dawei Bai <https://github.com/daweibai/PCBS-langevo>
 1. Camille Courgeon <https://github.com/camcour/PCBS-automatic_classifier>
 1. Jonny Giordano <https://github.com/jvgiordano/AE-Project>
+1. Judicael Fassaya <https://github.com/JudiKL/PCBS-NumerosityComparison>
