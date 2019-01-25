@@ -17,18 +17,17 @@
 
 # Projects
 
-1. Camille Williams <https://github.com/Camzcamz/PCBS-WILLIAMS>
+1. Camille Williams <https://camzcamz.github.io/PCBS-Political-Ideologies-and-Visual-Deviance-Sensitivity/>
 1. Monica Hedge  <https://github.com/monicahegde/PCBS-surprise-attention>
 1. François Stockart <https://github.com/francoisstock/PCBS_project>
 1. Lucie Bracon <https://github.com/LucieBrcn/PCBS-PROJET>
 1. Cédric Foucault <https://github.com/cedricfoucault/PCBS-RetroChronoAnalysis>
-1. Ted Landron <https://github.com/tlandron/PCBS_ModelRecovery_TLANDRON>
+1. Ted Landron  <https://github.com/tlandron/PCBS_ModelRecovery>
 1. Elisa Lannelongue <https://github.com/NephthysSkh/PCBS-projet>
 1. Mathilde Mus <https://github.com/mathilde-mus/PCBS-final-project>
 1. Marine Pagliari <https://github.com/MarinePagliari/PagliariMarine_PCBS_Project>
 1. Tom Puech <https://github.com/puechtom/PCBS-flappyai>
 1. Corentin Riet <https://github.com/pocopennar/PCBS-pridil>
-1. Laurène Barbier <https://github.com/laurenebarbier/PCBS-concordancier>
 1. Victor Chung <https://github.com/Cogstudent/PCBS-Chung.git>
 1. Julien Lie <https://github.com/jlie10/SelfSacrifice>
 1. Clémence Bergerot <https://github.com/clematisation/PCBS-Hopfield>
@@ -40,3 +39,6 @@
 1. Judicael Fassaya <https://github.com/JudiKL/PCBS-NumerosityComparison>
 1. Alice Baker <https://github.com/alicejmbaker/PCBS-WordGame>
 1. Aurélien Fermo https://github.com/Sonybronx/PCBS-HIV_Prediction
+1. Ondine Simonot https://github.com/OndineS/Projet_PCBS
+
+1. Laurène Barbier <https://github.com/laurenebarbier/PCBS-concordancier>
