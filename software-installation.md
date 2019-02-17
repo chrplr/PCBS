@@ -1,7 +1,9 @@
 PCBS: Software Installation
 ===========================
 
-Time-stamp: <2019-02-17 22:50:17 christophe@pallier.org>
+Time-stamp: <2019-02-17 22:52:49 christophe@pallier.org>
+
+
 
 For the PCBS lectures, you will need the following software:
 
@@ -12,12 +14,28 @@ For the PCBS lectures, you will need the following software:
   * **R** from <https://cran.r-project.org/>
   * **Rstudio Desktop** from <https://www.rstudio.com>
 
-Remarks:
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+ - [Warnings](#warnings)
+ - [Anaconda Python3](#anaconda-python3)
+ - [Expyriment](#expyriment)
+ - [Git](#git)
+ - [Sublime Text Editor](#sublime-text-editor)
+ - [R](#r)
+ - [Rstudio Desktop](#rstudio-desktop)
+
+<!-- markdown-toc end -->
+
+
+## Warnings
 
 * You will need to download about 1GB of software from the Internet. Therefore, make sure to have a decent connection.
 * Make sure that you have at least 5GB of free space on your hard drive to unpack the softwares.
 * You might need to have administrator rights to install some of the softwares. If you are using a computer from an Institution, this is not always the case. Check with your IT team.
 * If you are using Windows 10, make sure your user name doesn't include spaces or characters that don't belong to the English alphabet (accents, ideograms,...). If you do, better create a new user with a 
+
+
 
 ## Anaconda Python3
 
