@@ -1,16 +1,16 @@
 PCBS: Software Installation
 ===========================
 
-Time-stamp: <2019-02-17 22:16:12 christophe@pallier.org>
+Time-stamp: <2019-02-17 22:50:17 christophe@pallier.org>
 
 For the PCBS lectures, you will need the following software:
 
-  * **Python3**. We strongly recommend the Anaconda distribution from  https://www.continuum.io/downloads
-  * The Python library **Expyriment** from http://www.expyriment.org/
-  * **Git** from https://git-scm.com/
+  * **Python3**. We strongly recommend the Anaconda distribution from  <https://www.continuum.io/downloads>
+  * The Python library **Expyriment** from <http://www.expyriment.org/>
+  * **Git** from <https://git-scm.com/>
   * **Sublime Text** (text editor) from [Sublime Text](https://www.sublimetext.com/)  (Unless you are already using a text editor that you are happy with)
-  * **R** from https://cran.r-project.org/
-  * **Rstudio Desktop** from https://www.rstudio.com
+  * **R** from <https://cran.r-project.org/>
+  * **Rstudio Desktop** from <https://www.rstudio.com>
 
 Remarks:
 
@@ -21,7 +21,7 @@ Remarks:
 
 ## Anaconda Python3
 
-* Download the Anaconda Python3 distribution Python from https://www.continuum.io/download.
+* Download the Anaconda Python3 distribution Python from <https://www.continuum.io/download>.
 * Go to your download folder and execute the Anaconda3 file installer.
 * on the Anaconda Setup Wizard, beware, pay attention to the following options option:
    - verify that you Install for `Just Me (recommended)`, then click on `Next`
@@ -66,9 +66,9 @@ Unless you already master a text editor, we recommend that you download and inst
 
  * **Windows** Download and install the latest  version of R from <https://cran.rstudio.com/bin/windows/base/>
  * **MacOS**: Download and install the latest  version of R from <https://cran.rstudio.com/bin/macosx/>
- * **Linux**: Follow the instructions at 
-https://cran.r-project.org/bin/linux/ubuntu/README.html#installation
-
+ * **Linux**: Find the version relevant for your distribution at  <https://cran.rstudio.com/bin/linux/> and follow the instructions in the `README.html` file.
+ 
+ 
 
 ## Rstudio Desktop
 
