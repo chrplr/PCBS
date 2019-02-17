@@ -1,45 +1,54 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# Time-stamp: <2016-04-23 10:47:53 chrplr>
+# Time-stamp: <2019-02-09 09:52:16 christophe@pallier.org>
 
-"""Display two white squares in alternance and play sounds simultanously, 
-to check timing with external equipment (oscilloscope, BlackBox ToolKit, ...)
-
-"""
+''' Display two white squares in alternance and play sounds simultanously, 
+to check timing with external equipment (oscilloscope, BlackBox ToolKit, ...) '''
 
 import expyriment
 
+TONE_DURATION = 100
+SQUARE_DURATION = 20 * (1000.0 / 60) - 2  # Twenty video refresh periods at 60Hz
+SOA = 1000  
+
+
 exp = expyriment.design.Experiment(name="Cross-modal-timing-test")
-#expyriment.control.set_develop_mode()
+# expyriment.control.set_develop_mode(True)  # commented because we need fullscreen
+
 expyriment.control.initialize(exp)
 
-## setup
-square_top = expyriment.stimuli.Rectangle((200, 200), position=(0, 400))
-square_bottom = expyriment.stimuli.Rectangle((200, 200), position=(0, -400))
-tone1 = expyriment.stimuli.Tone(100, 440)
-tone2 = expyriment.stimuli.Tone(100, 880)
+##
+
+square_top = expyriment.stimuli.Rectangle((200, 200), position=(0, 300))
+tone = expyriment.stimuli.Tone(TONE_DURATION, 440)
+
 
 square_top.preload()
-square_bottom.preload()
-tone1.preload()
-tone2.preload()
+tone.preload()
 
-SOA = 60 * (1000 * 1/60.) - 5 # a bit less than 10 frames at 1/60Hz
-NCYCLES = 10 
+frame = expyriment.stimuli.Canvas((800, 800))
+msg = expyriment.stimuli.TextScreen("",f"""This script displays a white rectangle,
+plays a tone and clears the screen, in a loop.
 
-frame = expyriment.stimuli.Canvas((600, 600))
-msg = expyriment.stimuli.TextScreen("",
-                "Display two white squares for in alternance \n" +
-                " and play sounds simultanously, \n"+
-                " to check timing with external equipment \n" +
-                " (oscilloscope, Blackbox toolkit, etc.)",
-                position=(0,-100))
+This permits to check the timing with some external equipment
+(an oscilloscope, the Blackbox toolkit, etc.).
+
+Currently, the parameters are:
+
+Tone duration = {TONE_DURATION} ms
+Display duration = {SQUARE_DURATION} ms
+SOA = {SOA} ms
+
+These can be changed in the source code.
+
+Press any key to start (Later, to exit the program, just press 'Esc')."""
+                ,
+                position=(0,-200))
 msg.plot(frame)
 square_top.plot(frame)
-square_bottom.plot(frame)
+#square_bottom.plot(frame)
 
-
-## run
+## 
 expyriment.control.start(skip_ready_screen=True)
 
 exp.screen.clear()
@@ -49,27 +58,32 @@ exp.keyboard.wait()
 
 clock = expyriment.misc.Clock()
 
-for i in range(NCYCLES * 3):
+period = 0
 
-    while (clock.time < (SOA * i)):
+while True:  # until the Esc key is pressed
+    period += 1
+    while (clock.time < (SOA * period)):
         pass
 
-    if (i % 3) == 0:
+    if (period % 3) == 0:
        exp.screen.clear()
        t = 0 # ?
-    elif (i % 3) == 1: 
-        #tone1.play()
-        t = square_top.present()
-    else:
-        tone2.play()
-        t = square_bottom.present()
- 
-    clock.wait(SOA - t)
+    elif (period % 3) == 1:
+        start_time = clock.time
+        t = square_top.present(clear=False)
+        start_time = start_time + t
+        # t = square_top.present(clear=False)  # twice for double buffering
+        while (clock.time - start_time) < SQUARE_DURATION:
+            None
+        exp.data.add([period, 'square', start_time, clock.time ])
+        exp.screen.clear()
+        exp.screen.update()
 
-    exp.data.add([clock.time])
+    elif (period %3) ==2:
+        exp.data.add([period, 'tone', clock.time, 0 ])
+        tone.play()
+ 
     exp.keyboard.process_control_keys()
 
-
-## finish
 expyriment.control.end()
 

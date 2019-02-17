@@ -8,6 +8,8 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
         git clone https://github.com/chrplr/PCBS
 ```
 
+
+
 **Companion documents**
 
 * [How to solve problems](how-to-solve-problems.md)
@@ -16,8 +18,9 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
 * [Additional exercises](exercices.md). I answer questions on a [slack discussion forum](https://cogmaster-pcbs.slack.com)  Please [join!](
  https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)
 * Programming projects towards validation:
+    - [A few suggestions for projects](ideas-for-projects.md)
     - [Your projects](projects.md)
-    - [some suggestions for projects](ideas-for-projects.md)
+
 
 ---
 
@@ -26,7 +29,8 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
 
 - [Objectives](#objectives)
 - [Prerequisites](#prerequisites)
-- [Resources](#resources)
+- [Required software](#required-software)
+- [Resources for PCBS](#resources-for-pcbs)
     - [On-line courses and books](#on-line-courses-and-books)
     - [Manipulations:](#manipulations)
     - [Stimulus/Experiment generation modules](#stimulusexperiment-generation-modules)
@@ -69,41 +73,67 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
 
 # Objectives
 
-The purpose of these lectures is to get students to learn to write clean programs in order to solve the relatively simple tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real time experiments, simulations...).
+The purpose of these lectures is to allow students to write clean programs in order to solve the tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real-time experiments, simulations...). 
 
 
 # Prerequisites
 
-* knowledge of basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call and definition), file input/output operations ) and their implementation in Python 3. 
-   
-* know how to edit a text file (with a text editor like [atom](https://atom.io/)), how to open a terminal, navigate the directory structure with 'cd', execute a .py script and launch [ipython](http://ipython.org). 
 
-* know the basic usage of [Git](https://www.gitbook.com/), that is the commands`git clone, git pull, git init, git add, git status, git commit`.
-        
-# Resources
+* know how to open a terminal ("Git Bash" under Window), navigate the directory structure with `cd`, `pwd` and `ls` (a useful read is [_Learning the bash shell_](http://www.linuxcommand.org/lc3_learning_the_shell.php#contents))
+
+* know how to download a python script from the Internet and execute from the command line
+
+* know how to launch [ipython](http://ipython.org) in a terminal, or how to open a `jupyter-notebook`. 
+
+* know how to create and modify python scripts with  a text editor such a sublime text or an IDE like spyder
+
+* know basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call, definition, local variables), file input/output operations ) and their implementation in Python3. (See, e.g., [Udemy's Python programming for absolute beginners](https://www.udemy.com/python-programming-for-absolute-beginners/) or [Code Academy's _Learn Python_ module](https://www.codecademy.com/learn/learn-python) or [Openclassrooms' Apprendre à programmer en Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python))
+
+   
+* know the basic usage of [Git](https://www.gitbook.com/), that is the commands`git clone, git pull, git init, git add, git status, git commit`. See
+
+  * Openclassrooms' mooc <https://openclassrooms.com/en/courses/3321726-manage-your-code-with-git-and-github?status=published>
+
+  * <https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
+  * <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
+  * my own [git cheat page](http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git)
+
+
+# Required software
+
+For these lectures, you will need the following software:
+
+  * **Python3**. We strongly recommend the Anaconda distribution from  https://www.continuum.io/downloads
+  * The Python library **Expyriment** from http://www.expyriment.org/
+  * **Git** from https://git-scm.com/
+  * **Sublime Text** (text editor) from [Sublime Text](https://www.sublimetext.com/)  (Unless you are already using a text editor that you are happy with)
+  * **R** from https://cran.r-project.org/
+  * **Rstudio Desktop** from https://www.rstudio.com
+
+
+We have written some [installation instructions](software-installation.md) to help you set up your computer. 
+
+# Resources for PCBS
+
+In addition to the resources listed above.
 
 ## On-line courses and books
 
-* Complete beginners should start with [Code Academy's _Learn Python_ module](https://www.codecademy.com/learn/learn-python) or [Openclassrooms' Apprendre à programmer en Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python)
-  
-* There is a highly praised online course [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
-
-* Good books to start with Python include:
+  * Good books to start with Python include:
 
   - [_Automate the boring stuff_](http://automatetheboringstuff.com/), 
   - [_Think Python_](http://greenteapress.com/thinkpython2/), 
   - [_Invent Your Own Computer Games with Python_ (4th Edition)](https://inventwithpython.com/invent4thed/), 
   - [_Apprendre à programmer avec Python 3_](http://inforef.be/swi/python.htm). 
 
-* To learn to use commands in terminal, a useful read is [_Learning the bash shell_](http://www.linuxcommand.org/lc3_learning_the_shell.php#contents).
+* There is a highly praised online course [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
 
-* Great lessons on writing software for  science are available at [Software Carpentry](https://software-carpentry.org/lessons/).
+
 
 * Concerning Git:
 
-  * <https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
-  * <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
-  * my own [git cheat page](http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git)
+
+* Great lessons on writing software for science are available at [Software Carpentry](https://software-carpentry.org/lessons/).
 
 
 ## Manipulations:
