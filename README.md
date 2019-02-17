@@ -1,13 +1,12 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS course) 
-% Christophe Pallier
-% Fall 2018
+
+# Time-stamp: <2019-02-17 23:09:17 christophe@pallier.org>
 
 This document -- a work in progress -- is available at [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS). Its source as well as the course materials is on github, at [http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS). To download them, open a terminal (`git bash` under Windows) and type:
 
 ```
         git clone https://github.com/chrplr/PCBS
 ```
-
 
 
 **Companion documents**
@@ -79,19 +78,17 @@ The purpose of these lectures is to allow students to write clean programs in or
 # Prerequisites
 
 
-* know how to open a terminal ("Git Bash" under Window), navigate the directory structure with `cd`, `pwd` and `ls` (a useful read is [_Learning the bash shell_](http://www.linuxcommand.org/lc3_learning_the_shell.php#contents))
+* know how to open a Terminal ("Git Bash" under Window), navigate the directory structure with `cd`, `pwd` and `ls` (a useful read is <http://www.linuxcommand.org/lc3_lts0020.php>).
 
-* know how to download a python script from the Internet and execute from the command line
+* know how to download a python script from the Internet and execute from a command line in a Terminal.
 
 * know how to launch [ipython](http://ipython.org) in a terminal, or how to open a `jupyter-notebook`. 
 
-* know how to create and modify python scripts with  a text editor such a sublime text or an IDE like spyder
+* know how to create and modify python scripts with a text editor such a sublime text or an Integrated Development Environment like spyder.
 
 * know basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call, definition, local variables), file input/output operations ) and their implementation in Python3. (See, e.g., [Udemy's Python programming for absolute beginners](https://www.udemy.com/python-programming-for-absolute-beginners/) or [Code Academy's _Learn Python_ module](https://www.codecademy.com/learn/learn-python) or [Openclassrooms' Apprendre à programmer en Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python))
 
-   
 * know the basic usage of [Git](https://www.gitbook.com/), that is the commands`git clone, git pull, git init, git add, git status, git commit`. See
-
   * Openclassrooms' mooc <https://openclassrooms.com/en/courses/3321726-manage-your-code-with-git-and-github?status=published>
 
   * <https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
@@ -101,39 +98,84 @@ The purpose of these lectures is to allow students to write clean programs in or
 
 # Required software
 
-For these lectures, you will need the following software:
+We will use:
 
-  * **Python3**. We strongly recommend the Anaconda distribution from  https://www.continuum.io/downloads
-  * The Python library **Expyriment** from http://www.expyriment.org/
-  * **Git** from https://git-scm.com/
+  * **Python3**. We strongly recommend the Anaconda distribution from  <https://www.continuum.io/downloads>
+  * The Python library **Expyriment** from <http://www.expyriment.org/>
+  * **Git** from <https://git-scm.com/>
   * **Sublime Text** (text editor) from [Sublime Text](https://www.sublimetext.com/)  (Unless you are already using a text editor that you are happy with)
-  * **R** from https://cran.r-project.org/
-  * **Rstudio Desktop** from https://www.rstudio.com
+  * **R** from <https://cran.r-project.org/>
+  * **Rstudio Desktop** from <https://www.rstudio.com>
 
 
-We have written some [installation instructions](software-installation.md) to help you set up your computer. 
+## Warnings
 
-# Resources for PCBS
-
-In addition to the resources listed above.
-
-## On-line courses and books
-
-  * Good books to start with Python include:
-
-  - [_Automate the boring stuff_](http://automatetheboringstuff.com/), 
-  - [_Think Python_](http://greenteapress.com/thinkpython2/), 
-  - [_Invent Your Own Computer Games with Python_ (4th Edition)](https://inventwithpython.com/invent4thed/), 
-  - [_Apprendre à programmer avec Python 3_](http://inforef.be/swi/python.htm). 
-
-* There is a highly praised online course [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
+* You will need to download about 1GB of software from the Internet. Therefore, make sure to have a decent connection.
+* Make sure that you have at least 5GB of free space on your hard drive to unpack the softwares.
+* You might need to have administrator rights to install some of the softwares. If you are using a computer from an Institution, this is not always the case. Check with your IT team.
+* If you are using Windows 10, make sure your user name doesn't include spaces or characters that don't belong to the English alphabet (accents, ideograms,...). If you do, better create a new user with a 
 
 
 
-* Concerning Git:
+## Anaconda Python3
+
+* Download the Anaconda Python3 distribution Python from <https://www.continuum.io/download>.
+* Go to your download folder and execute the Anaconda3 file installer.
+* on the Anaconda Setup Wizard, beware, pay attention to the following options option:
+   - verify that you Install for `Just Me (recommended)`, then click on `Next`
+   - Accept the default Destination folder and click on `Next`
+   - Accept the defaults (uncheck "Add Anaconda to my PATH" and  check "Register Anaconda as my default Python" and click on `Install`
+   - upon completion, clvick on 'Next', then `Finish`
+
+## Expyriment
+
+1. Open a Terminal:
+
+* Under Linux, launch `Terminal` from your applications menu or use `Ctrl-Alt-T`. 
+* under MacOS: type `terminal` in the Spotlight search field. Alternatively, you can open a `Finder` window and select the `Application` folder, then the `Utilities` folder, then double-click on the `Terminal` icon..
+* Under Windows, launch `Anaconda Prompt`
+ 
+ 
+2. Type:
+
+    pip install expyriment
 
 
-* Great lessons on writing software for science are available at [Software Carpentry](https://software-carpentry.org/lessons/).
+## Git
+
+* **Ubuntu Linux** : Just run     `sudo apt install git`
+* **Windows**: Download `Git for windows` from <https://git-scm.com/download/win> and execute it. Accept all the defaults.
+* **MacOS***:  Download the  `Git for Lac` installer from <https://git-scm.com/download/mac> and execute it. Accept all the defaults.
+
+To configure git, open a Terminal (or launch *Git Bash* under Windows) 
+
+    git config --global user.name "your_first_and_last_names_here"
+    git config --global user.email your_email_here
+    git config --global core.editor nano
+
+
+## Sublime Text Editor
+
+Unless you already master a text editor, we recommend that you download and install Sublime Text from <https://www.sublime text.com/>. Follow the instructions for your OS on this site. 
+
+
+## R
+
+
+ * **Windows** Download and install the latest  version of R from <https://cran.rstudio.com/bin/windows/base/>
+ * **MacOS**: Download and install the latest  version of R from <https://cran.rstudio.com/bin/macosx/>
+ * **Linux**: Find the version relevant for your distribution at  <https://cran.rstudio.com/bin/linux/> and follow the instructions in the `README.html` file.
+ 
+ 
+
+## Rstudio Desktop
+
+Download and install the latest version of RStudio Desktop from <https://www.rstudio.com/products/rstudio/download/>
+
+
+# Resources
+
+.
 
 
 ## Manipulations:
@@ -178,6 +220,17 @@ _Automate the boring stuff with Python_ by Al Sweigart (<http://automatetheborin
 - _Matlab for Brain and Cognitive Scientists_ and _Analyzing neural time series data_ by Mike X Cohen
 - [_Python in Neuroscience_](https://www.frontiersin.org/research-topics/8/python-in-neuroscience)
 - _Modeling Psychophysical Data in R_ by Kenneth Knoblauch & Laurence T. Maloney
+
+
+## Programming skills
+
+  - [_Think Python_](http://greenteapress.com/thinkpython2/), 
+
+  -  There is a highly praised online course [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
+
+   - [Software Carpentry](https://software-carpentry.org/lessons/) provides lessons on writing software for science.
+
+   - See [Tips for writing clean code](tips.md)
 
 ---
 
