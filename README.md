@@ -1,13 +1,18 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS course) 
 
-# Time-stamp: <2019-02-18 07:44:46 christophe@pallier.org>
+% Time-stamp: <2019-02-18 08:47:13 christophe@pallier.org>
 
-This document -- a work in progress -- is available at [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS). Its source as well as the course materials is on github, at [http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS). To download them, open a terminal (`git bash` under Windows) and type:
+The latest version of this document -- a work in progress -- is at [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS). 
+
+Its source as well as the course materials (scripts, etc.) are available at [http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS). 
+
+To download them, open a terminal (`git bash` under Windows) and type:
 
 ```
         git clone https://github.com/chrplr/PCBS
 ```
 
+-----
 
 **Companion documents**
 
@@ -19,7 +24,6 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
 * Programming projects towards validation:
     - [A few suggestions for projects](ideas-for-projects.md)
     - [Your projects](projects.md)
-
 
 ---
 
@@ -478,8 +482,12 @@ All documents in this repository are distributed under the [Creative Commons Att
   -   [Linux tutorials for absolute beginner](http://www.ctssn.com/)
   
 [^2]: Resources to learn Python: 
-   * MOOCs: [Udemy's Python programming for absolute beginners](https://www.udemy.com/python-programming-for-absolute-beginners/) or [Code Academy's _Learn Python_ module](https://www.codecademy.com/learn/learn-python) or [Openclassrooms' Apprendre à programmer en Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python), [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
-   * Books: [_Apprendre à Programmer avec Python3_](https://inforef.be/swi/python.htm) , [_Think Python_](http://greenteapress.com/thinkpython2/), 
+  -  MOOCs: 
+       * [Udemy's Python programming for absolute beginners](https://www.udemy.com/python-programming-for-absolute-beginners/)
+       * [Code Academy's _Learn Python_ module](https://www.codecademy.com/learn/learn-python)
+       * [Openclassrooms' Apprendre à programmer en Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python)
+       * [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
+   - Books: [_Apprendre à Programmer avec Python3_](https://inforef.be/swi/python.htm) , [_Think Python_](http://greenteapress.com/thinkpython2/), 
 
 [^3]: Resources to learn Git:
   * The [Git Book](https://www.gitbook.com/)
