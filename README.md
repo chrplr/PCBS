@@ -1,6 +1,6 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS course) 
 
-# Time-stamp: <2019-02-17 23:09:17 christophe@pallier.org>
+# Time-stamp: <2019-02-18 07:44:46 christophe@pallier.org>
 
 This document -- a work in progress -- is available at [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS). Its source as well as the course materials is on github, at [http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS). To download them, open a terminal (`git bash` under Windows) and type:
 
@@ -74,33 +74,29 @@ This document -- a work in progress -- is available at [https://chrplr.github.io
 
 The purpose of these lectures is to allow students to write clean programs in order to solve the tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real-time experiments, simulations...). 
 
+-----
 
 # Prerequisites
 
 
-* know how to open a Terminal ("Git Bash" under Window), navigate the directory structure with `cd`, `pwd` and `ls` (a useful read is <http://www.linuxcommand.org/lc3_lts0020.php>).
+* know how to open a Terminal ("`Git Bash`" under Window), navigate the directory structure with `cd`, `pwd` and `ls` (a useful read is <http://www.linuxcommand.org/lc3_lts0020.php>)[^1].
 
 * know how to download a python script from the Internet and execute from a command line in a Terminal.
 
 * know how to launch [ipython](http://ipython.org) in a terminal, or how to open a `jupyter-notebook`. 
 
-* know how to create and modify python scripts with a text editor such a sublime text or an Integrated Development Environment like spyder.
+* know how to create and modify python scripts with a text editor such a sublime text or an Integrated Development Environment like Spyder (included in Anaconda).
 
-* know basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call, definition, local variables), file input/output operations ) and their implementation in Python3. (See, e.g., [Udemy's Python programming for absolute beginners](https://www.udemy.com/python-programming-for-absolute-beginners/) or [Code Academy's _Learn Python_ module](https://www.codecademy.com/learn/learn-python) or [Openclassrooms' Apprendre à programmer en Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python))
+* know basic programming concepts expressions, instructions, variables, lists, dictionaries, tests (if..then..else), string manipulations, loops (while and for), functions (call, definition, local variables), file input/output operations ) and their implementation in Python3.[^2]
 
-* know the basic usage of [Git](https://www.gitbook.com/), that is the commands`git clone, git pull, git init, git add, git status, git commit`. See
-  * Openclassrooms' mooc <https://openclassrooms.com/en/courses/3321726-manage-your-code-with-git-and-github?status=published>
+* know the basic usage of [Git](https://www.gitbook.com/), that is the commands`git clone, git pull, git init, git add, git status, git commit`.[^3]
 
-  * <https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
-  * <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
-  * my own [git cheat page](http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git)
 
+-----
 
 # Required software
 
-We will use:
-
-  * **Python3**. We strongly recommend the Anaconda distribution from  <https://www.continuum.io/downloads>
+  * **Python3**. We use the Anaconda distribution from  <https://www.continuum.io/downloads>
   * The Python library **Expyriment** from <http://www.expyriment.org/>
   * **Git** from <https://git-scm.com/>
   * **Sublime Text** (text editor) from [Sublime Text](https://www.sublimetext.com/)  (Unless you are already using a text editor that you are happy with)
@@ -115,19 +111,19 @@ We will use:
 * You might need to have administrator rights to install some of the softwares. If you are using a computer from an Institution, this is not always the case. Check with your IT team.
 * If you are using Windows 10, make sure your user name doesn't include spaces or characters that don't belong to the English alphabet (accents, ideograms,...). If you do, better create a new user with a 
 
-
-
 ## Anaconda Python3
 
-* Download the Anaconda Python3 distribution Python from <https://www.continuum.io/download>.
-* Go to your download folder and execute the Anaconda3 file installer.
-* on the Anaconda Setup Wizard, beware, pay attention to the following options option:
+
+1. Download the Anaconda Python3 distribution Python from <https://www.continuum.io/download>.
+2. Go to your download folder and execute the Anaconda3 file installer.
+3. In the Anaconda Setup Wizard, beware, pay attention to the following options option:
    - verify that you Install for `Just Me (recommended)`, then click on `Next`
    - Accept the default Destination folder and click on `Next`
    - Accept the defaults (uncheck "Add Anaconda to my PATH" and  check "Register Anaconda as my default Python" and click on `Install`
    - upon completion, clvick on 'Next', then `Finish`
 
 ## Expyriment
+
 
 1. Open a Terminal:
 
@@ -143,11 +139,11 @@ We will use:
 
 ## Git
 
-* **Ubuntu Linux** : Just run     `sudo apt install git`
+* **Ubuntu Linux** : Just execute `sudo apt install git` in a terminal.
 * **Windows**: Download `Git for windows` from <https://git-scm.com/download/win> and execute it. Accept all the defaults.
 * **MacOS***:  Download the  `Git for Lac` installer from <https://git-scm.com/download/mac> and execute it. Accept all the defaults.
 
-To configure git, open a Terminal (or launch *Git Bash* under Windows) 
+To configure git, open a Terminal (or launch *Git Bash* under Windows) and type:
 
     git config --global user.name "your_first_and_last_names_here"
     git config --global user.email your_email_here
@@ -156,7 +152,8 @@ To configure git, open a Terminal (or launch *Git Bash* under Windows)
 
 ## Sublime Text Editor
 
-Unless you already master a text editor, we recommend that you download and install Sublime Text from <https://www.sublime text.com/>. Follow the instructions for your OS on this site. 
+Unless you already master a text editor, we recommend that you download and install Sublime Text from <https://www.sublime text.com/>. 
+Follow the instructions for your OS on this site. 
 
 
 ## R
@@ -172,11 +169,9 @@ Unless you already master a text editor, we recommend that you download and inst
 
 Download and install the latest version of RStudio Desktop from <https://www.rstudio.com/products/rstudio/download/>
 
+-----
 
 # Resources
-
-.
-
 
 ## Manipulations:
 
@@ -224,15 +219,15 @@ _Automate the boring stuff with Python_ by Al Sweigart (<http://automatetheborin
 
 ## Programming skills
 
+  
   - [_Think Python_](http://greenteapress.com/thinkpython2/), 
 
-  -  There is a highly praised online course [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
 
    - [Software Carpentry](https://software-carpentry.org/lessons/) provides lessons on writing software for science.
 
    - See [Tips for writing clean code](tips.md)
 
----
+-----
 
 # Creating static visual stimuli
 
@@ -470,3 +465,25 @@ Check [nilearn](http://nilearn.github.io/) and [nistats](https://nistats.github.
 # License
 
 All documents in this repository are distributed under the [Creative Commons Attribution-ShareAlike 4](https://creativecommons.org/licenses/by-sa/4.0/). The code is distributed under the [GPL v3 LICENSE](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
+---
+
+[^1]: Resources to learn the command line: 
+  -   [The Linux Command Line](http://linuxcommand.org/tlcl.php) by Williams Shotts.
+  -   [Openclassrooms MOOC](https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux)
+  -   [Digital Unix Command and Shell User's Guide](http://www.cs.arizona.edu/computer.help/policy/DIGITAL_unix/AA-PS2HD-TET1_html/TOC.html)
+  -   [Cours Unix de l'IDRIS](http://www.idris.fr/data/cours/unix/user/unix_u_cours.html)
+  -   [Rute user's tutorial and exposition](http://www.icon.co.za/~psheer/book/index.html)
+  -   [Unix 101 series](http://unix.about.com/library/misc/blunix101.htm)
+  -   [Linux tutorials for absolute beginner](http://www.ctssn.com/)
+  
+[^2]: Resources to learn Python: 
+   * MOOCs: [Udemy's Python programming for absolute beginners](https://www.udemy.com/python-programming-for-absolute-beginners/) or [Code Academy's _Learn Python_ module](https://www.codecademy.com/learn/learn-python) or [Openclassrooms' Apprendre à programmer en Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python), [Python 3 : des fondamentaux aux concepts avancés du langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/). 
+   * Books: [_Apprendre à Programmer avec Python3_](https://inforef.be/swi/python.htm) , [_Think Python_](http://greenteapress.com/thinkpython2/), 
+
+[^3]: Resources to learn Git:
+  * The [Git Book](https://www.gitbook.com/)
+  * Openclassrooms' MOOC <https://openclassrooms.com/en/courses/3321726-manage-your-code-with-git-and-github?status=published>
+  * <https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
+  * <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
+  * my own [git cheat page](http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git)
