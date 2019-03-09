@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 12:33:40 christophe@pallier.org>
+% Time-stamp: <2019-03-09 13:56:57 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -12,7 +12,7 @@ Its source as well as the course materials (scripts, etc.) are available at
 To download them, open a terminal (`git bash` under Windows) and type:
 
 ```
-        git clone https://github.com/chrplr/PCBS 
+    git clone https://github.com/chrplr/PCBS 
         
 ```
 
@@ -32,23 +32,28 @@ To download them, open a terminal (`git bash` under Windows) and type:
 
 -------------------------------------------------------------------------------
 
-<!-- markdown-toc start - Don't edit this section. Run M-x
-markdown-toc-refresh-toc --> **Table of Contents**
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
 
 - [Objectives](#objectives)
 - [Prerequisites](#prerequisites)
 - [Required software](#required-software)
-- [Resources for PCBS](#resources-for-pcbs)
-    - [On-line courses and books](#on-line-courses-and-books)
+    - [Warnings](#warnings)
+    - [Anaconda Python3](#anaconda-python3)
+    - [Expyriment](#expyriment)
+    - [Git](#git)
+    - [Sublime Text Editor](#sublime-text-editor)
+    - [R](#r)
+    - [Rstudio Desktop](#rstudio-desktop)
+- [Resources](#resources)
     - [Manipulations:](#manipulations)
-    - [Stimulus/Experiment generation
-    modules](#stimulusexperiment-generation-modules)
+    - [Stimulus/Experiment generation modules](#stimulusexperiment-generation-modules)
     - [Data analyses, Statistics](#data-analyses-statistics)
     - [Simulations](#simulations)
-    - [Books relevant to Cognitive and Brain Sciences
-    Programming](#books-relevant-to-cognitive-and-brain-sciences-programming)
+    - [Books relevant to Cognitive and Brain Sciences Programming](#books-relevant-to-cognitive-and-brain-sciences-programming)
+    - [Programming skills](#programming-skills)
 - [Creating static visual stimuli](#creating-static-visual-stimuli)
-    - [Kanizsa triangle](#kanizsa-triangle)
+    - [Kanizsa illusory contours](#kanizsa-illusory-contours)
     - [Herman grid](#herman-grid)
     - [Ebbginhaus-Titchener](#ebbginhaus-titchener)
     - [Honeycomb and Extinction illusions.](#honeycomb-and-extinction-illusions)
@@ -56,19 +61,10 @@ markdown-toc-refresh-toc --> **Table of Contents**
     - [Wertheimer line-motion illusion.](#wertheimer-line-motion-illusion)
     - [Flash-lag illusion](#flash-lag-illusion)
 - [Creating and playing sounds](#creating-and-playing-sounds)
-    - [Sound localisation from binaural
-    dephasing](#sound-localisation-from-binaural-dephasing)
+    - [Sound localisation from binaural dephasing](#sound-localisation-from-binaural-dephasing)
     - [Pulsation (Povel & Essen, 1985)](#pulsation-povel--essen-1985)
 - [Experiments](#experiments)
     - [Simple reaction times](#simple-reaction-times)
-    - [Posner's attentional cueing task](#posners-attentional-cueing-task)
-    - [Stroop Effect](#stroop-effect)
-    - [Lexical Decision Task](#lexical-decision-task)
-    - [A general audio visual stimulus presentation
-    script](#a-general-audio-visual-stimulus-presentation-script)
-    - [More examples using expyriment.org](#more-examples-using-expyrimentorg)
-- [Lexical Statistics](#lexical-statistics)
-    - [Zipf law](#zipf-law)
     - [Benford's law.](#benfords-law)
 - [Simulations](#simulations-1)
     - [Cellular Automata](#cellular-automata)
@@ -76,6 +72,13 @@ markdown-toc-refresh-toc --> **Table of Contents**
     - [Natural Language Parsing](#natural-language-parsing)
     - [Neuroimaging](#neuroimaging)
 - [License](#license)
+- [Appendices](#appendices)
+    - [How to open a Terminal](#how-to-open-a-terminal)
+        - [Linux](#linux)
+        - [Windows](#windows)
+    - [Resources to learn the command shell](#resources-to-learn-the-command-shell)
+    - [Resources to learn Python](#resources-to-learn-python)
+    - [Resources to learn Git](#resources-to-learn-git)
 
 <!-- markdown-toc end -->
 
@@ -109,8 +112,7 @@ of real-time experiments, simulations...).
 * know how to download a Python script from the Internet and execute it from the
   command line in a Terminal:
   
-  Try it: Download 
-  <https://raw.githubusercontent.com/chrplr/PCBS/master/games/hammurabi.py> and
+  Try it: Download [games/hammurabi.py](games/hammurabi.py) and
   run it in a terminal
 
 * know how to create and/or modify scripts with a text editor such as [Sublime
@@ -122,12 +124,12 @@ of real-time experiments, simulations...).
   for), functions (call, definition, local variables), file input/output
   operations ) and their implementation in Python3.
   
-  See [Appendix](#resources-to-learn-python)
+  Check out [Resources to learn Python in the Appendix](#resources-to-learn-python)
 
 * know the basic usage of [Git](https://www.gitbook.com/), that is the
   commands`git clone, git pull, git init, git add, git status, git commit` 
   
-  See [Appendix](#resources-to-learn-git))
+  Check out [Resources to learn Git in the Appendix](#resources-to-learn-git))
 
 
 -------------------------------------------------------------------------------
@@ -403,8 +405,7 @@ Run the quick check with ipython:
 
     ``` import simpleaudio.functionchecks as fc fc.LeftRightCheck.run() ```
 
-Check out [simpleaudio
-tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
+Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
 
 Study [sound_synth.py](sound/sound_synth.py)`.
 
