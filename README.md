@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 18:12:22 christophe@pallier.org>
+% Time-stamp: <2019-03-09 18:22:53 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -124,7 +124,7 @@ of real-time experiments, simulations...).
   * **Rstudio Desktop** from <https://www.rstudio.com>
 
 
-[Instructions]() are provided in the appendix.
+   [Instructions](#instructions-for-software-installation) are provided in the appendix.
 
 
 * know [how to open a Terminal](#how-to-open-a-terminal)  and navigate the
@@ -159,7 +159,7 @@ of real-time experiments, simulations...).
 * know the basic usage of [Git](https://www.gitbook.com/), that is the
   commands`git clone, git pull, git init, git add, git status, git commit` 
   
-  Check out [Resources to learn Git in the Appendix](#resources-to-learn-git))
+  Check out [Resources to learn Git in the Appendix](#resources-to-learn-git)
 
 
 -------------------------------------------------------------------------------
@@ -310,6 +310,8 @@ A random-dot stereogram is stereo pair of images of random dots which, when
 viewed with the eyes focused on a point in front of or behind the images,
 produces a sensation of depth. See
 <https://en.wikipedia.org/wiki/Random_dot_stereogram>.
+
+![stereogram](images/stereogram.jpg)
 
 * Write a script that generate random-dot stereograms.
 
