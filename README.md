@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-02-18 09:52:59 christophe@pallier.org>
+% Time-stamp: <2019-03-09 10:12:02 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -102,7 +102,7 @@ of real-time experiments, simulations...).
   that you have previously downloaded with `git clone`, and list the files with
   `ls`).
   
-  See [](#how-to-open-a-terminal)
+  See [Appendix](#how-to-open-a-terminal)
 
 * know how to launch [ipython](http://ipython.org) in a Terminal.
   
@@ -124,12 +124,12 @@ of real-time experiments, simulations...).
   for), functions (call, definition, local variables), file input/output
   operations ) and their implementation in Python3.
   
-  See [](#resources-to-learn-python)
+  See [Appendix](#resources-to-learn-python)
 
 * know the basic usage of [Git](https://www.gitbook.com/), that is the
   commands`git clone, git pull, git init, git add, git status, git commit` 
   
-  See [](#resources-to-learn-git))
+  See [Appendix](#resources-to-learn-git))
 
 
 -------------------------------------------------------------------------------
@@ -317,19 +317,16 @@ pygame](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/).
 
 ## Kanizsa triangle ##
 
-0. Open the script [square.py](visual-illusions/square.py) that generates and
-   displays a square.
-
-1. Copy the script and rename it `circle.py`, then modify it to display a red
-   circle
-
-2. Now, modify the script to display Kanizsa's figures:
+0. Run and study the scripts [square.py](visual-illusions/square.py),
+   [circle.py](visual-illusions/circle.py) and
+   [triangle.py](visual-illusions/triangle.py), and create new scripts to
+   display the Kanizsa figures:
 
    ![Kanizsa square](images/Kanizsa-square.jpeg)
 
    ![Kanizsa triangle](images/Kanizsa1.png)
 
-  You can find more examples of 'illusory contours' by googling.
+  You can find more examples by googling 'illusory contours'.
 
   Check [my solution](visual-illusions/kanizsa-square.py)
 
@@ -666,7 +663,21 @@ Launch `Git Bash` (This assumes that you have installed  `Git for windows` from 
     
 
 
-## Resources to learn the command line ##
+## Resources to learn the command shell ##
+
+
+> "What is a command shell? To properly understand the role of a shell, it's necessary to visualize what a computer does for you. Basically, a computer is a tool; in order to use that tool, you must tell it what to do—or give it “commands.” These commands take many forms, such as clicking with a mouse on certain parts of the screen. But that is only one form of command input.
+
+> By far the most versatile way to express what you want the computer to do is by using an abbreviated language called script. In script, instead of telling the computer, “list my files, please”, one writes a standard abbreviated command word—‘ls’. Typing ‘ls’ in a command shell is a script way of telling the computer to list your files.1
+
+> The real flexibility of this approach is apparent only when you realize that there are many, many different ways to list files. Perhaps you want them sorted by name, sorted by date, in reverse order, or grouped by type. Most graphical browsers have simple ways to express this. But what about showing only a few files, or only files that meet a certain criteria? In very complex and specific situations, the request becomes too difficult to express using a mouse or pointing device. It is just these kinds of requests that are easily solved using a command shell.
+
+> For example, what if you want to list every Word file on your hard drive, larger than 100 kilobytes in size, and which hasn't been looked at in over six months? That is a good candidate list for deletion, when you go to clean up your hard drive. But have you ever tried asking your computer for such a list? There is no way to do it! At least, not without using a command shell.
+
+> The role of a command shell is to give you more control over what your computer does for you. Not everyone needs this amount of control, and it does come at a cost: Learning the necessary script commands to express what you want done. A complicated query, such as the example above, takes time to learn. But if you find yourself using your computer frequently enough, it is more than worthwhile in the long run. Any tool you use often deserves the time spent learning to master it."
+
+> (Extract from Emacs' eshell documentation)
+
 
   - [The Linux Command Line](http://linuxcommand.org/tlcl.php) by Williams
   Shotts.
