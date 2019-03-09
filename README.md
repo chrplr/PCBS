@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 10:12:02 christophe@pallier.org>
+% Time-stamp: <2019-03-09 12:19:59 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -170,9 +170,9 @@ We use the [Anaconda distribution](https://www.continuum.io)
    option:
    - verify that you Install for `Just Me (recommended)`, then click on `Next`
    - Accept the default Destination folder and click on `Next`
-   - Accept the defaults (uncheck "Add Anaconda to my PATH" and check "Register
+   - Check "Add Anaconda to my PATH" and check "Register
    Anaconda as my default Python" and click on `Install`
-   - upon completion, clvick on 'Next', then `Finish`
+   - upon completion, click on 'Next', then `Finish`
 
 ## Expyriment ##
 
@@ -315,12 +315,12 @@ We are going to use [pygame](http://www.pygame.org). You can read a [quick
 introduction on drawing with
 pygame](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/).
 
-## Kanizsa triangle ##
+## Kanizsa illusory contours ##
 
 0. Run and study the scripts [square.py](visual-illusions/square.py),
    [circle.py](visual-illusions/circle.py) and
    [triangle.py](visual-illusions/triangle.py), and create new scripts to
-   display the Kanizsa figures:
+   create the Kanizsa figures:
 
    ![Kanizsa square](images/Kanizsa-square.jpeg)
 
@@ -332,12 +332,20 @@ pygame](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/).
 
 ## Herman grid ##
 
-Starting from the square.py script, write a program to display the [Herman
+* Starting from [square.py](visual-illusions/square.py), write a program to display the [Herman
 grid](https://en.wikipedia.org/wiki/Grid_illusion)
 
    ![Hermann Grid](images/HermannGrid.png)
+   
+  Hints:
+    - use paper and pencil to draw the figure
+    - find out the formulas to compute the left top of the square in the ith row and jth column
+    - in your python scripts, use nested for loops over rows and columns to display each square one by one  
 
- Check [my solution](visual-illusions/grid.py)
+*  Check [my solution](visual-illusions/grid.py)
+
+* Optional: Read <https://stackabuse.com/command-line-arguments-in-python/> and use the sys.argv[] array from the sys module (or use the argparse module) to get from the command lines the number of columns, rows, the size of square and the size of the margins. Play with those parameters to see if you can make the illusion come and go.
+
 
 ## Ebbginhaus-Titchener ##
 
