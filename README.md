@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 17:56:15 christophe@pallier.org>
+% Time-stamp: <2019-03-09 18:12:22 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -37,14 +37,6 @@ To download them, open a terminal (`git bash` under Windows) and type:
 
 - [Objectives](#objectives)
 - [Prerequisites](#prerequisites)
-- [Software installation](#software-installation)
-    - [Warnings](#warnings)
-    - [Anaconda Python3](#anaconda-python3)
-    - [Expyriment](#expyriment)
-    - [Git](#git)
-    - [Sublime Text Editor](#sublime-text-editor)
-    - [R](#r)
-    - [Rstudio Desktop](#rstudio-desktop)
 - [Resources](#resources)
     - [Manipulations:](#manipulations)
     - [Stimulus/Experiment generation modules](#stimulusexperiment-generation-modules)
@@ -88,6 +80,14 @@ To download them, open a terminal (`git bash` under Windows) and type:
     - [Neuroimaging](#neuroimaging)
 - [License](#license)
 - [Appendices](#appendices)
+    - [Instructions for Software installation](#instructions-for-software-installation)
+        - [Warnings](#warnings)
+        - [Anaconda Python3](#anaconda-python3)
+        - [Expyriment](#expyriment)
+        - [Git](#git)
+        - [Sublime Text Editor](#sublime-text-editor)
+        - [R](#r)
+        - [Rstudio Desktop](#rstudio-desktop)
     - [How to open a Terminal](#how-to-open-a-terminal)
         - [Linux](#linux)
         - [Windows](#windows)
@@ -111,6 +111,20 @@ of real-time experiments, simulations...).
 -------------------------------------------------------------------------------
 
 # Prerequisites #
+
+* You must have installed the following software on your computer:
+
+  * **Python3**. 
+  * The Python library **Expyriment** 
+  * **Git** from <https://git-scm.com/>
+  * **Sublime Text** (text editor) from [Sublime
+  Text](https://www.sublimetext.com/) (Unless you are already using a text
+  editor that you are happy with)
+  * **R** from <https://cran.r-project.org/>
+  * **Rstudio Desktop** from <https://www.rstudio.com>
+
+
+[Instructions]() are provided in the appendix.
 
 
 * know [how to open a Terminal](#how-to-open-a-terminal)  and navigate the
@@ -149,109 +163,6 @@ of real-time experiments, simulations...).
 
 
 -------------------------------------------------------------------------------
-
-# Software installation #
-
-  * **Python3**. 
-  * The Python library **Expyriment** 
-  * **Git** from <https://git-scm.com/>
-  * **Sublime Text** (text editor) from [Sublime
-  Text](https://www.sublimetext.com/) (Unless you are already using a text
-  editor that you are happy with)
-  * **R** from <https://cran.r-project.org/>
-  * **Rstudio Desktop** from <https://www.rstudio.com>
-
-
-## Warnings ##
-
-* You will need to download about 1GB of software from the Internet. Therefore,
-  make sure to have a decent connection.
-* Make sure that you have at least 5GB of free space on your hard drive to
-  unpack the softwares.
-* You might need to have administrator rights to install some of the softwares.
-  If you are using a computer from an Institution, this is not always the case.
-  Check with your IT team.
-* If you are using Windows 10, make sure your user name doesn't include spaces
-  or characters that don't belong to the English alphabet (accents,
-  ideograms,...). If you do, better create a new user with a
-
-## Anaconda Python3 ##
-
-We will make use of the [Anaconda distribution](https://www.continuum.io)
-
-1. Download the Anaconda Python3 distribution Python from
-   <https://www.continuum.io/download>.
-2. Go to your download folder and execute the Anaconda3 file installer.
-3. In the Anaconda Setup Wizard, beware, pay attention to the following options
-   option:
-   - verify that you Install for `Just Me (recommended)`, then click on `Next`
-   - Accept the default Destination folder and click on `Next`
-   - Check "Add Anaconda to my PATH" and check "Register
-   Anaconda as my default Python" and click on `Install`
-   - upon completion, click on 'Next', then `Finish`
-
-## Expyriment ##
-
-We will make use of the Python library [Expyriment](http://www.expyriment.org/)
-
-1. Open a Terminal:
-
-* Under Linux, launch `Terminal` from your applications menu or use
-  `Ctrl-Alt-T`.
-* under MacOS: type `terminal` in the Spotlight search field. Alternatively, you
-  can open a `Finder` window and select the `Application` folder, then the
-  `Utilities` folder, then double-click on the `Terminal` icon..
-* Under Windows, launch `Anaconda Prompt`
- 
-2. Type:
-
-    pip install expyriment
-
-
-## Git ##
-
-Git is a version control tool for software development, an indispensable tool for reproducible science. 
-
-* **Ubuntu Linux** : Just execute `sudo apt install git` in a terminal.
-* **Windows**: Download `Git for windows` from
-  <https://git-scm.com/download/win> and execute it. Accept all the defaults.
-* **MacOS***: Download the `Git for Lac` installer from
-  <https://git-scm.com/download/mac> and execute it. Accept all the defaults.
-
-To configure git, open a Terminal (or launch *Git Bash* under Windows) and type:
-
-    git config --global user.name "your_first_and_last_names_here" 
-    git config --global user.email your_email_here 
-    git config --global core.editor nano
-
-
-## Sublime Text Editor ##
-
-Unless you already master a text editor, we recommend that you download and
-install _Sublime Text_ from <https://www.sublime text.com/>. Follow the
-instructions specific for your Operating System.
-
-
-## R ##
-
-R is a programming language specialized for data analyses.
-
- * **Windows** Download and install the latest version of R from
- <https://cran.rstudio.com/bin/windows/base/>
- * **MacOS**: Download and install the latest version of R from
- <https://cran.rstudio.com/bin/macosx/>
- * **Linux**: Find the version relevant for your distribution at
- <https://cran.rstudio.com/bin/linux/> and follow the instructions in the
- `README.html`  file.
-
-
-## Rstudio Desktop ##
-
-Rstudio is an Integrated Developpement Environment for R which greatly
-simplifies the use of *RMarkdown**
-
-Download and install the latest version of RStudio Desktop from
-<https://www.rstudio.com/products/rstudio/download/>
 
 
 -------------------------------------------------------------------------------
@@ -760,41 +671,178 @@ LICENSE](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 # Appendices #
 
+
+## Instructions for Software installation ##
+
+We will install:
+
+  * **Python3**. 
+  * The Python library **Expyriment** 
+  * **Git** from <https://git-scm.com/>
+  * **Sublime Text** (text editor) from [Sublime
+  Text](https://www.sublimetext.com/) (Unless you are already using a text
+  editor that you are happy with)
+  * **R** from <https://cran.r-project.org/>
+  * **Rstudio Desktop** from <https://www.rstudio.com>
+
+
+### Warnings ###
+
+* You will need to download about 1GB of software from the Internet. Therefore,
+  make sure to have a decent connection.
+* Make sure that you have at least 5GB of free space on your hard drive to
+  unpack the softwares.
+* You might need to have administrator rights to install some of the softwares.
+  If you are using a computer from an Institution, this is not always the case.
+  Check with your IT team.
+* If you are using Windows 10, make sure your user name doesn't include spaces
+  or characters that don't belong to the English alphabet (accents,
+  ideograms,...). If you do, better create a new user with a
+
+### Anaconda Python3 ###
+
+We will make use of the [Anaconda distribution](https://www.continuum.io)
+
+1. Download the Anaconda Python3 distribution Python from
+   <https://www.continuum.io/download>.
+2. Go to your download folder and execute the Anaconda3 file installer.
+3. In the Anaconda Setup Wizard, beware, pay attention to the following options
+   option:
+   - verify that you Install for `Just Me (recommended)`, then click on `Next`
+   - Accept the default Destination folder and click on `Next`
+   - Check "Add Anaconda to my PATH" and check "Register
+   Anaconda as my default Python" and click on `Install`
+   - upon completion, click on 'Next', then `Finish`
+
+### Expyriment ###
+
+We will make use of the Python library [Expyriment](http://www.expyriment.org/)
+
+1. Open a Terminal:
+
+* Under Linux, launch `Terminal` from your applications menu or use
+  `Ctrl-Alt-T`.
+* under MacOS: type `terminal` in the Spotlight search field. Alternatively, you
+  can open a `Finder` window and select the `Application` folder, then the
+  `Utilities` folder, then double-click on the `Terminal` icon..
+* Under Windows, launch `Anaconda Prompt`
+ 
+2. Type:
+
+    pip install expyriment
+
+
+### Git ###
+
+Git is a version control tool for software development, an indispensable tool for reproducible science. 
+
+* **Ubuntu Linux** : Just execute `sudo apt install git` in a terminal.
+* **Windows**: Download `Git for windows` from
+  <https://git-scm.com/download/win> and execute it. Accept all the defaults.
+* **MacOS***: Download the `Git for Lac` installer from
+  <https://git-scm.com/download/mac> and execute it. Accept all the defaults.
+
+To configure git, open a Terminal (or launch *Git Bash* under Windows) and type:
+
+    git config --global user.name "your_first_and_last_names_here" 
+    git config --global user.email your_email_here 
+    git config --global core.editor nano
+
+
+### Sublime Text Editor ###
+
+Unless you already master a text editor, we recommend that you download and
+install _Sublime Text_ from <https://www.sublime text.com/>. Follow the
+instructions specific for your Operating System.
+
+
+### R ###
+
+R is a programming language specialized for data analyses.
+
+ * **Windows** Download and install the latest version of R from
+ <https://cran.rstudio.com/bin/windows/base/>
+ * **MacOS**: Download and install the latest version of R from
+ <https://cran.rstudio.com/bin/macosx/>
+ * **Linux**: Find the version relevant for your distribution at
+ <https://cran.rstudio.com/bin/linux/> and follow the instructions in the
+ `README.html`  file.
+
+
+### Rstudio Desktop ###
+
+Rstudio is an Integrated Developpement Environment for R which greatly
+simplifies the use of *RMarkdown**
+
+Download and install the latest version of RStudio Desktop from
+<https://www.rstudio.com/products/rstudio/download/>
+
+--------------------------------------------------------------------------------
+
 ## How to open a Terminal ##
 
 ### Linux ###
 
-Launch `Terminal` from your applications or use `Ctrl-Alt-T` (gnome, xfce), or Win+Enter (i3)). 
+Launch `Terminal` from your applications or use `Ctrl-Alt-T` (gnome, xfce), or
+Win+Enter (i3)).
 
 
-### MacOS
+### MacOS ###
 
 Type `terminal` in the Spotlight search field. 
 
-Alternatively, you can open a `Finder` window and select the `Application` folder, then the `Utilities` folder, then double-click on the `Terminal` icon..
+Alternatively, you can open a `Finder` window and select the `Application`
+folder, then the `Utilities` folder, then double-click on the `Terminal` icon..
 
 ### Windows ###
 
-Launch `Git Bash` (This assumes that you have installed  `Git for windows` from <https://git-scm.com/download/win ):
+Launch `Git Bash` (This assumes that you have installed `Git for windows` from
+<https://git-scm.com/download/win ):
 
  1. Click the Windows or Start icon.
  2. In the Programs list, open the Git folder.
  3. Click the option for Git Bash.
-    
 
+--------------------------------------------------------------------------------
 
 ## Resources to learn the command shell ##
 
+Why learn the command shell?
 
-> "What is a command shell? To properly understand the role of a shell, it's necessary to visualize what a computer does for you. Basically, a computer is a tool; in order to use that tool, you must tell it what to do—or give it “commands.” These commands take many forms, such as clicking with a mouse on certain parts of the screen. But that is only one form of command input.
+> "What is a command shell? To properly understand the role of a shell, it's
+> necessary to visualize what a computer does for you. Basically, a computer is
+> a tool; in order to use that tool, you must tell it what to do—or give it
+> “commands.” These commands take many forms, such as clicking with a mouse on
+> certain parts of the screen. But that is only one form of command input.
 
-> By far the most versatile way to express what you want the computer to do is by using an abbreviated language called script. In script, instead of telling the computer, “list my files, please”, one writes a standard abbreviated command word—‘ls’. Typing ‘ls’ in a command shell is a script way of telling the computer to list your files.1
+> By far the most versatile way to express what you want the computer to do is
+> by using an abbreviated language called script. In script, instead of telling
+> the computer, “list my files, please”, one writes a standard abbreviated
+> command word—‘ls’. Typing ‘ls’ in a command shell is a script way of telling
+> the computer to list your files.1
 
-> The real flexibility of this approach is apparent only when you realize that there are many, many different ways to list files. Perhaps you want them sorted by name, sorted by date, in reverse order, or grouped by type. Most graphical browsers have simple ways to express this. But what about showing only a few files, or only files that meet a certain criteria? In very complex and specific situations, the request becomes too difficult to express using a mouse or pointing device. It is just these kinds of requests that are easily solved using a command shell.
+> The real flexibility of this approach is apparent only when you realize that
+> there are many, many different ways to list files. Perhaps you want them
+> sorted by name, sorted by date, in reverse order, or grouped by type. Most
+> graphical browsers have simple ways to express this. But what about showing
+> only a few files, or only files that meet a certain criteria? In very complex
+> and specific situations, the request becomes too difficult to express using a
+> mouse or pointing device. It is just these kinds of requests that are easily
+> solved using a command shell.
 
-> For example, what if you want to list every Word file on your hard drive, larger than 100 kilobytes in size, and which hasn't been looked at in over six months? That is a good candidate list for deletion, when you go to clean up your hard drive. But have you ever tried asking your computer for such a list? There is no way to do it! At least, not without using a command shell.
+> For example, what if you want to list every Word file on your hard drive,
+> larger than 100 kilobytes in size, and which hasn't been looked at in over six
+> months? That is a good candidate list for deletion, when you go to clean up
+> your hard drive. But have you ever tried asking your computer for such a list?
+> There is no way to do it! At least, not without using a command shell.
 
-> The role of a command shell is to give you more control over what your computer does for you. Not everyone needs this amount of control, and it does come at a cost: Learning the necessary script commands to express what you want done. A complicated query, such as the example above, takes time to learn. But if you find yourself using your computer frequently enough, it is more than worthwhile in the long run. Any tool you use often deserves the time spent learning to master it."
+> The role of a command shell is to give you more control over what your
+> computer does for you. Not everyone needs this amount of control, and it does
+> come at a cost: Learning the necessary script commands to express what you
+> want done. A complicated query, such as the example above, takes time to
+> learn. But if you find yourself using your computer frequently enough, it is
+> more than worthwhile in the long run. Any tool you use often deserves the time
+> spent learning to master it."
 
 > (Extract from Emacs' eshell documentation)
 
@@ -803,15 +851,9 @@ Launch `Git Bash` (This assumes that you have installed  `Git for windows` from 
   Shotts.
   - [Openclassrooms
   MOOC](https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux)
-  - [Digital Unix Command and Shell User's
-  Guide](http://www.cs.arizona.edu/computer.help/policy/DIGITAL_unix/AA-PS2HD-TET1_html/TOC.html)
-  - [Cours Unix de
-  l'IDRIS](http://www.idris.fr/data/cours/unix/user/unix_u_cours.html)
-  - [Rute user's tutorial and
-  exposition](http://www.icon.co.za/~psheer/book/index.html)
-  - [Unix 101 series](http://unix.about.com/library/misc/blunix101.htm)
-  - [Linux tutorials for absolute beginner](http://www.ctssn.com/)
   
+--------------------------------------------------------------------------------  
+
 ## Resources to learn Python ##
 
   - MOOCs:
@@ -826,6 +868,8 @@ Launch `Git Bash` (This assumes that you have installed  `Git for windows` from 
    - Books: [_Apprendre à Programmer avec
    Python3_](https://inforef.be/swi/python.htm) , [_Think
    Python_](http://greenteapress.com/thinkpython2/),
+
+--------------------------------------------------------------------------------
 
 ## Resources to learn Git ##
 
