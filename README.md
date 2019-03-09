@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 18:29:45 christophe@pallier.org>
+% Time-stamp: <2019-03-09 18:42:50 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -265,17 +265,22 @@ grid](https://en.wikipedia.org/wiki/Grid_illusion)
    
   Hints:
     - use paper and pencil to draw the figure
-    - find out the formulas to compute the left top of the square in the ith row and jth column
+    - find out the formulas to compute the left top of the square in the ith row
+      and jth column
     - in your python scripts, use nested for loops over rows and columns to display each square one by one  
 
-*  Check [my solution](visual-illusions/grid.py)
+* Check out [my solution](visual-illusions/grid.py)
 
-* Optional: Read <https://stackabuse.com/command-line-arguments-in-python/> and use the sys.argv[] array from the sys module (or use the argparse module) to get from the command lines the number of columns, rows, the size of square and the size of the margins. Play with those parameters to see if you can make the illusion come and go.
+* Optional: Read <https://stackabuse.com/command-line-arguments-in-python/> and
+  use the `sys.argv[]` array from the `sys` module (or use the `argparse` module) to
+  get from the command lines the number of columns, rows, the size of square and
+  the size of the margins. Play with those parameters to see if you can make the
+  illusion come and go.
 
 
 ## Ebbinghaus-Titchener ##
 
-Create the static [Ebbinghaus–Titchener
+* Create the static [Ebbinghaus–Titchener
 stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC). 
 
    ![Ebbinghaus illusion](images/ebbinghaus-titchener.png)
@@ -283,25 +288,29 @@ stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC).
 
 ## Honeycomb and Extinction illusions. ##
 
+The extinction illusion is a variant of the Herman grid:
+
+![Extinction illusion](images/extinction.png)
+
+*  Program the stimulus (the lines can be horizontal
+  and vertical rather than oblique)
+     
+* Check out [my solution](visual-illusions/extinction.py)
+
+Here is the Honeycom illusion: 
+
 ![Honeycomb illusion](images/honeycomb.png)
 
-- Watch [this video](https://www.youtube.com/watch?v=fDBYSFDXsuE)
-- Check out [Bertamini, Herzog, and Bruno (2016). “The Honeycomb Illusion:
+* Watch [this video](https://www.youtube.com/watch?v=fDBYSFDXsuE)
+* Check out [Bertamini, Herzog, and Bruno (2016). “The Honeycomb Illusion:
   Uniform Textures Not Perceived as
   Such.”](https://doi.org/10.1177/2041669516660727.
  https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5030753/pdf/10.1177_2041669516660727.pdf)
-- Program the stimulus of the extinction illusion (the lines can be horizontal
-  and vertical rather than oblique)
-     
-![Extinction illusion](images/extinction.png)
- 
-Check [my solution](visual-illusions/extinction.py)
   
-- Try to program the honeycomb stimulus above (optional). A []solution
-  psychopy](visual-illusions/Honeycomb.py) from [Bertamini's web
+* Optional: Try to program the honeycomb stimulus above. A [solution using
+  psychopy](visual-illusions/Honeycomb.py) is available on [Bertamini's web
   site](https://www.programmingvisualillusionsforeveryone.online/scripts.html)
     
-
 ## Random-dot stereograms
 
 A random-dot stereogram is stereo pair of images of random dots which, when
@@ -313,7 +322,7 @@ produces a sensation of depth. See
 
 * Write a script that generate random-dot stereograms.
 
-My solution: [random_dot_stereogram.py](random-dot-stereograms/random_dot_stereogram.py)
+* Check out my solution: [random_dot_stereogram.py](random-dot-stereograms/random_dot_stereogram.py)
 
 --------------------------------------------------------------------------------
 
@@ -329,10 +338,12 @@ stimulus. Compare with
 
 ## Flash-lag illusion ##
 
-Read about the [Flash-lag
-illusion](https://en.wikipedia.org/wiki/Flash_lag_illusion). Program the
-stimulus. Compare with
-[visual-illusions/flash-lag.py](visual-illusions/flash-lag.py)
+* Read about the [Flash-lag
+  illusion](https://en.wikipedia.org/wiki/Flash_lag_illusion).
+
+* Program the stimulus. 
+
+* Check out [visual-illusions/flash-lag.py](visual-illusions/flash-lag.py)
 
 ## Dynamic version of the  Ebbinghaus-Titchener ##
 
@@ -343,8 +354,8 @@ Program a version where the outer circles (inducers) grow and shrink in size.
 
 # Creating and playing sounds #
 
-* Install the _simpleaudio_ module if it is not already installed on your computer
-(check with ipython: `import simpleaudio`), :
+* Install the _simpleaudio_ module if it is not already installed on your
+computer (check with ipython: `import simpleaudio`), :
      
     pip install simpleaudio
 
@@ -353,14 +364,16 @@ Run the quick check with ipython:
     import simpleaudio.functionchecks as fc 
     fc.LeftRightCheck.run() 
 
-* Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
+* Check out [simpleaudio
+  tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
 
 * Study [sound_synth.py](sound/sound_synth.py).
 
-* Write a script that loads the wav file cymbal.wav and plays it 10 times, at a rhythm of one per seconds.
+* Write a script that loads the wav file cymbal.wav and plays it 10 times, at a
+  rhythm of one per seconds.
 
 Hint:
-* you can use the following functions:
+* use the following functions:
 
 
     import scipy.io.wavfile  # for scipy.io.wavfile.read
@@ -390,7 +403,7 @@ channels.
 Hints:
 * load the sound file into a one dimensional numpy array 
 * make a copy of the array and shift it
-* assamble the two arrays in a bidimensional array (matrix) and save it as a stereo file 
+* assemble the two arrays in a bidimensional array (matrix) and save it as a stereo file 
 
 ## Pulsation (Povel & Essen, 1985) ##
 
