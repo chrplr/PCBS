@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 12:19:59 christophe@pallier.org>
+% Time-stamp: <2019-03-09 12:33:40 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -95,14 +95,12 @@ of real-time experiments, simulations...).
 # Prerequisites #
 
 
-* know how to open a Terminal  and navigate the
+* know [how to open a Terminal](#how-to-open-a-terminal)  and navigate the
   directory structure with `cd`, `pwd` and `ls`.
   
   Try it: Open a Terminal, use `cd` and `pwd` to navigate to the `PCBS` folder
   that you have previously downloaded with `git clone`, and list the files with
   `ls`).
-  
-  See [Appendix](#how-to-open-a-terminal)
 
 * know how to launch [ipython](http://ipython.org) in a Terminal.
   

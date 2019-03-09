@@ -1,5 +1,13 @@
 #! /usr/bin/env python3
-# Time-stamp: <2019-01-30 19:14:57 cp983411>
+# Time-stamp: <2019-03-09 13:18:50 christophe@pallier.org>
+
+""" Games of Matches.
+
+A line with a number of matches is presented to the player.
+The players take turns to remove 1, 2 or 3 matches.
+The one left with the last match loses.
+
+"""
 
 # Inspired from the Atom Basic program "Matches" listed
 # in *The Acorn Atom Magick Book* (Timedata, 1981)

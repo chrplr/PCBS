@@ -1,17 +1,27 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-03-09 09:35:53 christophe@pallier.org>
+# Time-stamp: <2019-03-09 13:41:19 christophe@pallier.org>
 
 """ Display [Herman grid](https://en.wikipedia.org/wiki/Grid_illusion) """
 
+import sys
 import pygame  # see www.pygame.org
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
 
-nrows, ncols = 10, 10  # number of sqaures per row and column
-size = 50  # square size (length of)side in pixels)
-margin = 10  # space between squares
+if len(sys.argv) < 4:
+    print("Usage: " + sys.argv[0] + " nsquares  sizeofsquare  margin")
+    print("nsquares is the number of squares per columns and row")
+    print("sizeofsqaure is the length of the side of the squares in pixels")
+    print("margin is the space between squares in pixels")
+    sys.exit()
+else:
+    n = int(sys.argv[1])
+    size = int(sys.argv[2])
+    margin = int(sys.argv[3])
+
+nrows, ncols = n, n  # number of sqaures per row and column
 
 # graphic window size
 W = ncols * (size + margin) + margin
