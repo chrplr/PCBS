@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 18:22:53 christophe@pallier.org>
+% Time-stamp: <2019-03-09 18:29:45 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -38,7 +38,7 @@ To download them, open a terminal (`git bash` under Windows) and type:
 - [Objectives](#objectives)
 - [Prerequisites](#prerequisites)
 - [Resources](#resources)
-    - [Manipulations:](#manipulations)
+    - [Manipulations](#manipulations)
     - [Stimulus/Experiment generation modules](#stimulusexperiment-generation-modules)
     - [Data analyses, Statistics](#data-analyses-statistics)
     - [Simulations](#simulations)
@@ -112,7 +112,11 @@ of real-time experiments, simulations...).
 
 # Prerequisites #
 
-* You must have installed the following software on your computer:
+You should:
+
+* have installed the following software on your computer
+  ([Instructions](#instructions-for-software-installation) are provided in the
+  appendix):
 
   * **Python3**. 
   * The Python library **Expyriment** 
@@ -122,9 +126,6 @@ of real-time experiments, simulations...).
   editor that you are happy with)
   * **R** from <https://cran.r-project.org/>
   * **Rstudio Desktop** from <https://www.rstudio.com>
-
-
-   [Instructions](#instructions-for-software-installation) are provided in the appendix.
 
 
 * know [how to open a Terminal](#how-to-open-a-terminal)  and navigate the
@@ -164,12 +165,9 @@ of real-time experiments, simulations...).
 
 -------------------------------------------------------------------------------
 
-
--------------------------------------------------------------------------------
-
 # Resources #
 
-## Manipulations: ##
+## Manipulations ##
 
 _Automate the boring stuff with Python_ by Al Sweigart
 (<http://automatetheboringstuff.com/>) is a great book to learn to manipulate
