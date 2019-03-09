@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 18:42:50 christophe@pallier.org>
+% Time-stamp: <2019-03-09 18:49:42 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -90,6 +90,7 @@ To download them, open a terminal (`git bash` under Windows) and type:
         - [Rstudio Desktop](#rstudio-desktop)
     - [How to open a Terminal](#how-to-open-a-terminal)
         - [Linux](#linux)
+        - [MacOS](#macos)
         - [Windows](#windows)
     - [Resources to learn the command shell](#resources-to-learn-the-command-shell)
     - [Resources to learn Python](#resources-to-learn-python)
@@ -285,6 +286,7 @@ stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC).
 
    ![Ebbinghaus illusion](images/ebbinghaus-titchener.png)
 
+* Check out my solution [visual-illusions/ebbinghaus.py](visual-illusions/ebbinghaus.py)
 
 ## Honeycomb and Extinction illusions. ##
 
@@ -331,9 +333,12 @@ produces a sensation of depth. See
 
 ## Wertheimer line-motion illusion. ##
 
-Check out [Jancke et al (2004) Imaging cortical correlates of illusion in early
-visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf). Program the
-stimulus. Compare with
+* Check out [Jancke et al (2004) Imaging cortical correlates of illusion in early
+visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf). 
+
+* Program the stimulus. 
+
+* Check out my solution
 [visual-illusions/line-motion.py](visual-illusions/line-motion.py)
 
 ## Flash-lag illusion ##
@@ -343,12 +348,15 @@ stimulus. Compare with
 
 * Program the stimulus. 
 
-* Check out [visual-illusions/flash-lag.py](visual-illusions/flash-lag.py)
+* Check out my solution [visual-illusions/flash-lag.py](visual-illusions/flash-lag.py)
 
 ## Dynamic version of the  Ebbinghaus-Titchener ##
 
-Watch [this video](https://www.youtube.com/watch?v=hRlWqfd5pn8).
-Program a version where the outer circles (inducers) grow and shrink in size.
+* Watch [this video](https://www.youtube.com/watch?v=hRlWqfd5pn8).
+
+* Program a version where the outer circles (inducers) grow and shrink in size.
+
+* Check out my solution [visual-illusions/ebbinghaus-dynamic.py](visual-illusions/ebbinghaus-dynamic.py)
 
 --------------------------------------------------------------------------------
 
@@ -800,12 +808,13 @@ Launch `Terminal` from your applications or use `Ctrl-Alt-T` (gnome, xfce), or
 Win+Enter (i3)).
 
 
-### MacOS ###
+### MacOS ###
 
 Type `terminal` in the Spotlight search field. 
 
 Alternatively, you can open a `Finder` window and select the `Application`
 folder, then the `Utilities` folder, then double-click on the `Terminal` icon..
+
 
 ### Windows ###
 
