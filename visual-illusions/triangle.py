@@ -1,16 +1,13 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-03-09 09:45:17 christophe@pallier.org>
+# Time-stamp: <2019-03-09 09:54:21 christophe@pallier.org>
 
-""" Draw a circle using pygame (see <http://www.pygame.org>). """
+""" Draw a triangle using pygame (see <http://www.pygame.org>). """
 
 import pygame
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
 
 W, H = 500, 500  # graphic window size
 
@@ -18,14 +15,18 @@ pygame.init()
 screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
 screen.fill(WHITE)
 
-# https://www.pygame.org/docs/ref/draw.html#pygame.draw.circle
-pygame.draw.circle(screen, RED, (W // 2, H // 2), 100, 0)
+# https://www.pygame.org/docs/ref/draw.html#pygame.draw.lines
+size = 60
+point1 = W//2 - size, H//2 + size
+point2 = W//2 + size, H//2 + size
+point3 = W//2, H//2 - size
+pygame.draw.lines(screen, BLACK, True, (point1, point2, point3), 5)
 
 # display the backbuffer
 pygame.display.flip()
 
 # save the image into a file
-pygame.image.save(screen, "circle-red.png")
+pygame.image.save(screen, "triangle-black.png")
 
 # wait till the window is closed
 done = False

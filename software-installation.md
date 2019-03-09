@@ -1,7 +1,7 @@
 PCBS: Software Installation
 ===========================
 
-Time-stamp: <2019-02-17 22:52:49 christophe@pallier.org>
+Time-stamp: <2019-02-18 09:53:55 christophe@pallier.org>
 
 
 
@@ -52,7 +52,8 @@ For the PCBS lectures, you will need the following software:
 1. Open a Terminal:
 
 * Under Linux, launch `Terminal` from your applications menu or use `Ctrl-Alt-T`. 
-* under MacOS: type `terminal` in the Spotlight search field. Alternatively, you can open a `Finder` window and select the `Application` folder, then the `Utilities` folder, then double-click on the `Terminal` icon..
+* under MacOS: type `terminal` in the Spotlight search field. Alternatively, you can open a `Finder` window and select the `Application` folder, then the `Utilities` folder, then double-click on the `Terminal` icon.
+
 * Under Windows, launch `Anaconda Prompt`
  
  
