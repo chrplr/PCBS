@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 13:56:57 christophe@pallier.org>
+% Time-stamp: <2019-03-09 17:56:15 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -37,7 +37,7 @@ To download them, open a terminal (`git bash` under Windows) and type:
 
 - [Objectives](#objectives)
 - [Prerequisites](#prerequisites)
-- [Required software](#required-software)
+- [Software installation](#software-installation)
     - [Warnings](#warnings)
     - [Anaconda Python3](#anaconda-python3)
     - [Expyriment](#expyriment)
@@ -55,18 +55,33 @@ To download them, open a terminal (`git bash` under Windows) and type:
 - [Creating static visual stimuli](#creating-static-visual-stimuli)
     - [Kanizsa illusory contours](#kanizsa-illusory-contours)
     - [Herman grid](#herman-grid)
-    - [Ebbginhaus-Titchener](#ebbginhaus-titchener)
+    - [Ebbinghaus-Titchener](#ebbinghaus-titchener)
     - [Honeycomb and Extinction illusions.](#honeycomb-and-extinction-illusions)
+    - [Random-dot stereograms](#random-dot-stereograms)
 - [Creating dynamic visual stimuli](#creating-dynamic-visual-stimuli)
     - [Wertheimer line-motion illusion.](#wertheimer-line-motion-illusion)
     - [Flash-lag illusion](#flash-lag-illusion)
+    - [Dynamic version of the  Ebbinghaus-Titchener](#dynamic-version-of-the--ebbinghaus-titchener)
 - [Creating and playing sounds](#creating-and-playing-sounds)
     - [Sound localisation from binaural dephasing](#sound-localisation-from-binaural-dephasing)
     - [Pulsation (Povel & Essen, 1985)](#pulsation-povel--essen-1985)
 - [Experiments](#experiments)
     - [Simple reaction times](#simple-reaction-times)
+    - [Posner's attentional cueing task](#posners-attentional-cueing-task)
+    - [Stroop Effect](#stroop-effect)
+    - [Lexical Decision Task](#lexical-decision-task)
+    - [A general audio visual stimulus presentation script](#a-general-audio-visual-stimulus-presentation-script)
+    - [More examples using expyriment.org](#more-examples-using-expyrimentorg)
+- [Data Analyses](#data-analyses)
+    - [Basic Data Analysis with R](#basic-data-analysis-with-r)
+    - [Comparing means using Easy ANOVA (Analysis of Variance)](#comparing-means-using-easy-anova-analysis-of-variance)
+    - [Permutation tests](#permutation-tests)
+    - [Bootstrap](#bootstrap)
+- [Lexical Statistics](#lexical-statistics)
+    - [Zipf law](#zipf-law)
     - [Benford's law.](#benfords-law)
 - [Simulations](#simulations-1)
+    - [Fractals](#fractals)
     - [Cellular Automata](#cellular-automata)
     - [Artificial Neural networks](#artificial-neural-networks)
     - [Natural Language Parsing](#natural-language-parsing)
@@ -112,17 +127,18 @@ of real-time experiments, simulations...).
 * know how to download a Python script from the Internet and execute it from the
   command line in a Terminal:
   
-  Try it: Download [games/hammurabi.py](games/hammurabi.py) and
+  Try it: Download [games/matches.py](games/matches.py) and
   run it in a terminal
 
 * know how to create and/or modify scripts with a text editor such as [Sublime
-  Text](https://www.sublimetext.com/) or an Integrated Development Environment
+  Text](https://www.sublimetext.com/) or using an Integrated Development Environment
   like Spyder (included in Anaconda).
 
 * know basic programming concepts expressions, instructions, variables, lists,
   dictionaries, tests (if..then..else), string manipulations, loops (while and
   for), functions (call, definition, local variables), file input/output
-  operations ) and their implementation in Python3.
+  operations ) and their implementation in Python3. For instance, you should be able 
+  to understand the scripts in the [games](games/) folder.
   
   Check out [Resources to learn Python in the Appendix](#resources-to-learn-python)
 
@@ -134,7 +150,7 @@ of real-time experiments, simulations...).
 
 -------------------------------------------------------------------------------
 
-# Required software #
+# Software installation #
 
   * **Python3**. 
   * The Python library **Expyriment** 
@@ -161,7 +177,7 @@ of real-time experiments, simulations...).
 
 ## Anaconda Python3 ##
 
-We use the [Anaconda distribution](https://www.continuum.io)
+We will make use of the [Anaconda distribution](https://www.continuum.io)
 
 1. Download the Anaconda Python3 distribution Python from
    <https://www.continuum.io/download>.
@@ -186,7 +202,6 @@ We will make use of the Python library [Expyriment](http://www.expyriment.org/)
   can open a `Finder` window and select the `Application` folder, then the
   `Utilities` folder, then double-click on the `Terminal` icon..
 * Under Windows, launch `Anaconda Prompt`
- 
  
 2. Type:
 
@@ -227,15 +242,17 @@ R is a programming language specialized for data analyses.
  <https://cran.rstudio.com/bin/macosx/>
  * **Linux**: Find the version relevant for your distribution at
  <https://cran.rstudio.com/bin/linux/> and follow the instructions in the
- `README.html** file.
- 
+ `README.html`  file.
+
 
 ## Rstudio Desktop ##
 
-Rstudio is an Integrated Developpement Environment for R which greatly simplifies the use of *RMarkdown**
+Rstudio is an Integrated Developpement Environment for R which greatly
+simplifies the use of *RMarkdown**
 
 Download and install the latest version of RStudio Desktop from
 <https://www.rstudio.com/products/rstudio/download/>
+
 
 -------------------------------------------------------------------------------
 
@@ -347,14 +364,12 @@ grid](https://en.wikipedia.org/wiki/Grid_illusion)
 * Optional: Read <https://stackabuse.com/command-line-arguments-in-python/> and use the sys.argv[] array from the sys module (or use the argparse module) to get from the command lines the number of columns, rows, the size of square and the size of the margins. Play with those parameters to see if you can make the illusion come and go.
 
 
-## Ebbginhaus-Titchener ##
+## Ebbinghaus-Titchener ##
 
 Create the static [Ebbinghaus–Titchener
-stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC). You
-can also watch [this video](https://www.youtube.com/watch?v=hRlWqfd5pn8).
+stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC). 
 
    ![Ebbinghaus illusion](images/ebbinghaus-titchener.png)
-
 
 
 ## Honeycomb and Extinction illusions. ##
@@ -377,8 +392,22 @@ Check [my solution](visual-illusions/extinction.py)
   psychopy](visual-illusions/Honeycomb.py) from [Bertamini's web
   site](https://www.programmingvisualillusionsforeveryone.online/scripts.html)
     
- 
+
+## Random-dot stereograms
+
+A random-dot stereogram is stereo pair of images of random dots which, when
+viewed with the eyes focused on a point in front of or behind the images,
+produces a sensation of depth. See
+<https://en.wikipedia.org/wiki/Random_dot_stereogram>.
+
+* Write a script that generate random-dot stereograms.
+
+My solution: [random_dot_stereogram.py](random-dot-stereograms/random_dot_stereogram.py)
+
+--------------------------------------------------------------------------------
+
 # Creating dynamic visual stimuli #
+
 
 ## Wertheimer line-motion illusion. ##
 
@@ -394,26 +423,63 @@ illusion](https://en.wikipedia.org/wiki/Flash_lag_illusion). Program the
 stimulus. Compare with
 [visual-illusions/flash-lag.py](visual-illusions/flash-lag.py)
 
+## Dynamic version of the  Ebbinghaus-Titchener ##
+
+Watch [this video](https://www.youtube.com/watch?v=hRlWqfd5pn8).
+Program a version where the outer circles (inducers) grow and shrink in size.
+
+--------------------------------------------------------------------------------
 
 # Creating and playing sounds #
 
-Install the _simpleaudio_ module if it is not already installed on your computer
+* Install the _simpleaudio_ module if it is not already installed on your computer
 (check with ipython: `import simpleaudio`), :
-    ``` pip install simpleaudio ```
+     
+    pip install simpleaudio
 
 Run the quick check with ipython:
 
-    ``` import simpleaudio.functionchecks as fc fc.LeftRightCheck.run() ```
+    import simpleaudio.functionchecks as fc 
+    fc.LeftRightCheck.run() 
 
-Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
+* Check out [simpleaudio tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
 
-Study [sound_synth.py](sound/sound_synth.py)`.
+* Study [sound_synth.py](sound/sound_synth.py).
+
+* Write a script that loads the wav file cymbal.wav and plays it 10 times, at a rhythm of one per seconds.
+
+Hint:
+* you can use the following functions:
+
+
+    import scipy.io.wavfile  # for scipy.io.wavfile.read
+    import simpleaudio  # to play sound
+
+
+    def load_sound_as_array(filename):
+       [sample_rate, audio_data] = scipy.io.wavfile.read(filename)
+       return [sample_rate, audio_data]
+
+    def play_mono(nparray, sample_rate=22050, normalize=True):
+        audio = nparray[:]
+        if normalize:  # normalize to 16-bit range
+            audio *= 32767 / np.max(np.abs(audio))
+        # convert to 16-bit data
+        audio = audio.astype(np.int16)
+        play_obj = simpleaudio.play_buffer(audio, 1, 2, sample_rate)
+        # wait for playback to finish before exiting
+        play_obj.wait_done()
 
 
 ## Sound localisation from binaural dephasing ##
 
 Take a mono sound and create a stereo sound by progressively dephasing the two
 channels.
+
+Hints:
+* load the sound file into a one dimensional numpy array 
+* make a copy of the array and shift it
+* assamble the two arrays in a bidimensional array (matrix) and save it as a stereo file 
 
 ## Pulsation (Povel & Essen, 1985) ##
 
@@ -440,10 +506,16 @@ channels.
     Run the previous script. Check the results file in the folder `data`. Launch
     ipython in the `data` folder and type:
     
-    ``` import pandas as pd d = pd.read_csv('simple-detection... .xpd',
-    comment='#') d.RT.mean() d.RT.std() d.RT[1:].mean()
+
+    import pandas as pd 
+    d = pd.read_csv('simple-detection... .xpd',comment='#') 
+    d.RT.mean() 
+    d.RT.std() 
+    d.RT[1:].mean()
     
-    import matplotlib.pyplot as plt plt.hist(d.RT) ```
+    import matplotlib.pyplot as plt plt.hist(d.RT) 
+
+
 
 3. Read <https://docs.expyriment.org/Tutorial.html> to understand the basic
    pinciples of expyriment. See `PCBS/expyriment_template.py``
@@ -511,6 +583,30 @@ See <https://www.github.com/chrplr/audiovis>
   new scripts!
 
 
+# Data Analyses #
+
+## Basic Data Analysis with R
+
+See <http://www.pallier.org/examples-of-basic-data-analyses-with-r.html#examples-of-basic-data-analyses-with-r>
+
+## Comparing means using Easy ANOVA (Analysis of Variance) ##
+
+See <http://www.pallier.org/easy-anova-with-r.html#easy-anova-with-r>
+
+## Permutation tests ##
+
+* Implement the [permutation test](https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests) 
+to compare two samples.
+
+My solution: [permutation_test/permutation_test.py](permutation_test/permutation_test.py)
+
+## Bootstrap ##
+
+* Implement the [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) 
+to obtain confidence intervals on the means of a sample. 
+
+--------------------------------------------------------------------------------
+
 # Lexical Statistics #
 
 ## Zipf law ##
@@ -522,11 +618,11 @@ See <https://www.github.com/chrplr/audiovis>
 
    Note: To remove the punctuation, you can use the following function:
 
-   ```
+
     import string def remove_punctuation(text):
         punct = string.punctuation + chr(10) return
         text.translate(str.maketrans(punct, " " * len(punct)))
-   ```
+
 
 * Zipf law states that the product rank X frequency is roughly constant. This
   'law' was discovered by Estoup and popularized by Zipf. See
@@ -565,7 +661,24 @@ set of numbers. Apply it to the variables in
 
 A solution: [Benford-law/Benford.py](Benford-law/Benford.py)
 
+--------------------------------------------------------------------------------
+
 # Simulations #
+
+## Fractals ##
+
+[Fractals](https://en.wikipedia.org/wiki/Fractal) are figures that are
+self-similar at several scales.
+
+* Write a script that displays the [Koch
+  snowflake](https://en.wikipedia.org/wiki/Koch_snowflake)
+
+Hints: 
+* use the turtle module
+* use recursion
+
+My solution: [games/koch.py](games/koch.py)
+
 
 ## Cellular Automata ##
 
