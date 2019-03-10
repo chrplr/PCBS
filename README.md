@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-09 18:49:42 christophe@pallier.org>
+% Time-stamp: <2019-03-10 10:16:56 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -69,6 +69,7 @@ To download them, open a terminal (`git bash` under Windows) and type:
     - [Comparing means using Easy ANOVA (Analysis of Variance)](#comparing-means-using-easy-anova-analysis-of-variance)
     - [Permutation tests](#permutation-tests)
     - [Bootstrap](#bootstrap)
+    - [Frequency Analysis](#frequency-analysis)
 - [Lexical Statistics](#lexical-statistics)
     - [Zipf law](#zipf-law)
     - [Benford's law.](#benfords-law)
@@ -311,8 +312,13 @@ Here is the Honeycom illusion:
   
 * Optional: Try to program the honeycomb stimulus above. A [solution using
   psychopy](visual-illusions/Honeycomb.py) is available on [Bertamini's web
-  site](https://www.programmingvisualillusionsforeveryone.online/scripts.html)
-    
+  site](https://www.programmingvisualillusionsforeveryone.online/scripts.html).
+  To run it you might need to install:
+
+        conda install wxPython
+        pip install psychopy
+
+
 ## Random-dot stereograms
 
 A random-dot stereogram is stereo pair of images of random dots which, when
@@ -363,44 +369,44 @@ visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf).
 # Creating and playing sounds #
 
 * Install the _simpleaudio_ module if it is not already installed on your
-computer (check with ipython: `import simpleaudio`), :
+computer (check with ipython: `import simpleaudio`) :
      
-    pip install simpleaudio
+        pip install simpleaudio
 
-Run the quick check with ipython:
+ Run the quick check with ipython:
 
-    import simpleaudio.functionchecks as fc 
-    fc.LeftRightCheck.run() 
+        import simpleaudio.functionchecks as fc 
+        fc.LeftRightCheck.run() 
 
 * Check out [simpleaudio
   tutorials](https://simpleaudio.readthedocs.io/en/latest/tutorial.html)
 
 * Study [sound_synth.py](sound/sound_synth.py).
 
-* Write a script that loads the wav file cymbal.wav and plays it 10 times, at a
+* Write a script that loads the wav file `cymbal.wav` and plays it 10 times, at a
   rhythm of one per seconds.
 
-Hint:
-* use the following functions:
+  Hint:
+  * use the following functions:
 
 
-    import scipy.io.wavfile  # for scipy.io.wavfile.read
-    import simpleaudio  # to play sound
+        import scipy.io.wavfile  # for scipy.io.wavfile.read
+        import simpleaudio  # to play sound
 
 
-    def load_sound_as_array(filename):
-       [sample_rate, audio_data] = scipy.io.wavfile.read(filename)
-       return [sample_rate, audio_data]
+        def load_sound_as_array(filename):
+           [sample_rate, audio_data] = scipy.io.wavfile.read(filename)
+           return [sample_rate, audio_data]
 
-    def play_mono(nparray, sample_rate=22050, normalize=True):
-        audio = nparray[:]
-        if normalize:  # normalize to 16-bit range
-            audio *= 32767 / np.max(np.abs(audio))
-        # convert to 16-bit data
-        audio = audio.astype(np.int16)
-        play_obj = simpleaudio.play_buffer(audio, 1, 2, sample_rate)
-        # wait for playback to finish before exiting
-        play_obj.wait_done()
+        def play_mono(nparray, sample_rate=22050, normalize=True):
+            audio = nparray[:]
+            if normalize:  # normalize to 16-bit range
+               audio *= 32767 / np.max(np.abs(audio))
+            # convert to 16-bit data
+            audio = audio.astype(np.int16)
+            play_obj = simpleaudio.play_buffer(audio, 1, 2, sample_rate)
+            # wait for playback to finish before exiting
+            play_obj.wait_done()
 
 
 ## Sound localisation from binaural dephasing ##
@@ -415,7 +421,7 @@ Hints:
 
 ## Pulsation (Povel & Essen, 1985) ##
 
-3. Create rhythmic stimuli as described in [Povel and Essen (1985) _Perception
+3. Create rhythmic stimuli such as the ones described in [Povel and Essen (1985) _Perception
    of Temporal
    Patterns_](http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf)
 
@@ -429,34 +435,34 @@ Hints:
    mouse as quickly as possible. The reaction times must be recorded in a file
    for further analyses.
 
-    - Here is a [solution using
+2. Here is a [solution using
     pygame](reaction-times/simple-detection-visual-pygame.py). Run it and check
     `reaction_times.csv`.
-    - Here is a [solution using
+
+3. Here is a [solution using
     expyriment](reaction-times/simple-detection-visual-expyriment.py).
     
-    Run the previous script. Check the results file in the folder `data`. Launch
+   Run the previous script. Check the results file in the folder `data`. Launch
     ipython in the `data` folder and type:
     
 
-    import pandas as pd 
-    d = pd.read_csv('simple-detection... .xpd',comment='#') 
-    d.RT.mean() 
-    d.RT.std() 
-    d.RT[1:].mean()
+         import pandas as pd 
+         d = pd.read_csv('simple-detection... .xpd',comment='#') 
+         d.RT.mean() 
+         d.RT.std() 
+         d.RT[1:].mean()
     
-    import matplotlib.pyplot as plt plt.hist(d.RT) 
+         import matplotlib.pyplot as plt plt.hist(d.RT) 
 
 
+4. Read <https://docs.expyriment.org/Tutorial.html> to understand the basic
+   principles of expyriment. See `PCBS/expyriment_template.py``
 
-3. Read <https://docs.expyriment.org/Tutorial.html> to understand the basic
-   pinciples of expyriment. See `PCBS/expyriment_template.py``
+5. Modify `simple-detection-visual-expyriment.py` to play a short sound
+   (`click.wav`) in lieu of displaying a cross. Thus you have created a simple
+   detection audio experiment.
 
-4. Modify `simple-detection-visual-expyriment.py` to play a short sound
-   (`click.wav`) in lieu of displaying a cross. Thus you have a simple detection
-   audio experiment.
-
-5. Modify the script to have 3 blocks of trials: one in which the target is
+6. Modify the script to have 3 blocks of trials: one in which the target is
    visual, one in which it is audio, and one in which it is randomly visual or
    auditory. Are we slowed down in the latter condition?
 
@@ -514,6 +520,7 @@ See <https://www.github.com/chrplr/audiovis>
 * Fork <https://github.com/expyriment/expyriment-stash> and contribute by adding
   new scripts!
 
+--------------------------------------------------------------------------------
 
 # Data Analyses #
 
@@ -536,6 +543,10 @@ My solution: [permutation_test/permutation_test.py](permutation_test/permutation
 
 * Implement the [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) 
 to obtain confidence intervals on the means of a sample. 
+
+## Frequency Analysis ##
+
+* See [data-analysis/short-intro-fourier](data/analysis/short-intro-fourier) and the associated jupyter notebook [data-analysis/short intro to frequency analysis (Fourier series).ipynb](data-analysis/short intro to frequency analysis (Fourier series).ipynb)
 
 --------------------------------------------------------------------------------
 
@@ -605,12 +616,11 @@ self-similar at several scales.
 * Write a script that displays the [Koch
   snowflake](https://en.wikipedia.org/wiki/Koch_snowflake)
 
-Hints: 
-* use the turtle module
-* use recursion
+  Hints: 
+   - use the turtle module
+   - use recursion
 
-My solution: [games/koch.py](games/koch.py)
-
+  My solution: [games/koch.py](games/koch.py)
 
 ## Cellular Automata ##
 
@@ -637,8 +647,9 @@ Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). Watch
 
 ## Artificial Neural networks ##
  
-To understand the basics of artificial neural networks, I recommend thayt you
-watch the four excellent videos at
+To understand the basics of artificial neural networks, I recommend that you
+first read <https://victorzhou.com/blog/intro-to-neural-networks/>
+and then watch the four excellent videos at
 <https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi> . The
 last two of them focus on the backpropagation algorithm that allow to train
 network to learn mapping.
@@ -673,9 +684,12 @@ Toolkit](https://www.nltk.org/).
 
 ## Neuroimaging ##
 
-Check [nilearn](http://nilearn.github.io/) and
+
+* Check out [nilearn](http://nilearn.github.io/) and
 [nistats](https://nistats.github.io/) and
 [MNE-python](https://martinos.org/mne/stable/index.html)
+
+* See [data-analysis/Example of a single subject-single run fMRI analysis with nistats.ipynb](data-analysis/Example of a single subject-single run fMRI analysis with nistats.ipynb)
 
 
 

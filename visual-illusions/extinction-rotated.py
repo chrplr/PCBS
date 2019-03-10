@@ -1,5 +1,5 @@
-#! /usr/bin/env python
-# Time-stamp: <2019-03-10 10:25:57 christophe@pallier.org>
+#! /usr/bin/env python3
+# Time-stamp: <2019-03-10 10:26:08 christophe@pallier.org>
 
 import pygame  # see www.pygame.org
 
@@ -18,22 +18,27 @@ W, H = n * (l + e) + e, n * (l + e) + e  # graphic window size
 
 pygame.init()
 screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
-screen.fill(GRAY)
 
-# Create a rectangle https://www.pygame.org/docs/ref/rect.html
 
-for row in range(n):
-    for col in range(n):
+canvas = pygame.Surface((2 * H, 2 * W)) # we use a larger area to draw because of the rotation
+canvas.fill(GRAY)
+
+for row in range(2 * n):
+    for col in range(2 * n):
         left, top = e + col * (l + e), e + row * (l + e)
         myrect = pygame.Rect(left, top, l, l)
-        pygame.draw.rect(screen, BLACK, myrect)
-        pygame.draw.circle(screen, WHITE, (left - e//2, top - e//2), e//2)
+        pygame.draw.rect(canvas, BLACK, myrect)
+        pygame.draw.circle(canvas, WHITE, (left - e//2, top - e//2), e//2)
+
+rot_image = pygame.transform.rotate(canvas, 45)
+screen.fill(WHITE)
+screen.blit(rot_image, (-W, -H))
 
 # display the backbuffer
 pygame.display.flip()
 
 # save the image into a file
-pygame.image.save(screen, "extinction-grid.png")
+pygame.image.save(screen, "extinction-grid-rotated.png")
 
 # wait till the window is closed
 done = False
