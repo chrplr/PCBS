@@ -36,12 +36,12 @@ Although 3 is still the most widespread strategy among scientist, I cannot recom
 **Literate programming**  mixes code and text to produce a human readable document. It goes way beyond simply documenting one's code with comments. 
 For example:
 
-* rmarkdown: 
-     - [comparing two treatments with R](r-examples/comparing-two-d ..means-dependent-groups.html) ([source](r-examples/comparing-two-means-dependent-groups.Rmd))
-     - see more at https://github.com/chrplr/statistics_with_R
+* Rmarkdown: 
+     - [comparing two treatments with R](data-analysis/comparing-two-means-dependent-groups.html) ([source](data-analysis/comparing-two-means-dependent-groups.Rmd))
+     - see more at <https://github.com/chrplr/statistics_with_R>
 * jupyter notebook: 
-     - [tutorial on Fourier analysis](./python-notebooks/short-intro-fourier.html)
-     - [tutorial on fMRI data analysis](./python-notebooks/Example+of+a+single+subject-single+run+fMRI+analysis+with+nistats.html)
+     - [tutorial on Fourier analysis](data-analysis/short-intro-fourier.html)
+     - [tutorial on fMRI data analysis](data-analysis/Example+of+a+single+subject-single+run+fMRI+analysis+with+nistats.html)
      - see more at https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks
      
 Remarks:
