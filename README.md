@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-11 09:57:50 christophe@pallier.org>
+% Time-stamp: <2019-03-11 10:10:32 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -284,7 +284,7 @@ stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC).
    ![Ebbinghaus illusion](images/ebbinghaus-titchener.png)
 
 Hint: 
-  - a bit of [trigonometry](trigonometry) can help: if you want to draw a circle at angle `alpha` from the horizontal ligne and distance `R` from, the coordinates of its center are `(R  cos(alpha), R * sin(alpha))`
+  - a bit of [trigonometry](https://en.wikipedia.org/wiki/Unit_circle) can help: if you want to draw a circle at angle `alpha` from the horizontal line and at distance `R` from the origin, the coordinates of its center are `(R ** cos(alpha), R * sin(alpha))`
 * Check out my solution [visual-illusions/ebbinghaus.py](visual-illusions/ebbinghaus.py)
 
 ## Honeycomb and Extinction illusions. ##
