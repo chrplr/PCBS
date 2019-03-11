@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-10 10:16:56 christophe@pallier.org>
+% Time-stamp: <2019-03-11 09:44:47 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -12,8 +12,7 @@ Its source as well as the course materials (scripts, etc.) are available at
 To download them, open a terminal (`git bash` under Windows) and type:
 
 ```
-    git clone https://github.com/chrplr/PCBS 
-        
+    git clone https://github.com/chrplr/PCBS  
 ```
 
 -------------------------------------------------------------------------------
@@ -177,30 +176,24 @@ files, extracting information from web pages, etc.
 
 ## Stimulus/Experiment generation modules ##
 
-* <http://www.pygame.org>
-     - Tutorial "PyGame Drawing Basics":
-     <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>
+* <http://www.pygame.org> (See [PyGame Drawing Basics](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/))
 * <http://www.lexique.org>
-* <http://www.expyriment.org> (my favorite)
-     - Tutorial: <https://docs.expyriment.org/Tutorial.html>
-* <http://psychopy.org>
-     - Tutorial "Programming with PsychoPy":
-     <https://www.socsci.ru.nl/wilberth/nocms/psychopy/print.php>
-* <http://psychtoolbox.org/> (Matlab only)
+* <http://www.expyriment.org> (See [Get started with Expyriment](https://docs.expyriment.org/Tutorial.html)
+* <http://psychopy.org> (See [Programming with PsychoPy](https://www.socsci.ru.nl/wilberth/nocms/psychopy/print.php))
+* <http://psychtoolbox.org/> (See [Psychtoolbox demos](http://peterscarfe.com/ptbtutorials.html))
 
 ## Data analyses, Statistics ##
 
 * Modules: numpy, scipy, pandas, seaborn, statsmodel, sklearn
-   - Data manipulation:
-   <http://pandas.pydata.org/pandas-docs/stable/tutorials.html>
+   - Data manipulation: 
+      - <http://pandas.pydata.org/pandas-docs/stable/tutorials.html>
    - Plotting:
       - <http://matplotlib.org/users/pyplot_tutorial.html>
       - <https://seaborn.pydata.org/tutorial.html>
 
 * _Scipy Lecture Notes_: <http://www.scipy-lectures.org/>
 * _Think Stats_ by Allen B. Downey: <http://greenteapress.com/thinkstats2/>
-* _Python Data Science Handbook_ by Jake VanderPlas:
-  <https://jakevdp.github.io/PythonDataScienceHandbook>
+* _Python Data Science Handbook_ by Jake VanderPlas: <https://jakevdp.github.io/PythonDataScienceHandbook>
 
 
 ## Simulations ##
@@ -228,10 +221,8 @@ files, extracting information from web pages, etc.
 ## Programming skills ##
  
 * See my [Tips for writing clean code](tips.md)
-
 * [Software Carpentry](https://software-carpentry.org/lessons/) provides
    lessons on writing software for science.
-
 * [Software Carpentry](https://software-carpentry.org/lessons/) provides
    nice lessons about writing software for science.
 
@@ -254,9 +245,9 @@ pygame](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/).
 
    ![Kanizsa triangle](images/Kanizsa1.png)
 
-  You can find more examples by googling 'illusory contours'.
+   You can find more examples by googling 'illusory contours'.
 
-  Check [my solution](visual-illusions/kanizsa-square.py)
+   Check [my solution](visual-illusions/kanizsa-square.py)
 
 ## Herman grid ##
 
@@ -287,6 +278,8 @@ stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC).
 
    ![Ebbinghaus illusion](images/ebbinghaus-titchener.png)
 
+Hint: 
+  - a bit of [trigonometry](trigonometry) can help: if you want to draw a circle at angle `alpha` from the horizontal ligne and distance `R` from, the coordinates of its center are `(R  cos(alpha), R * sin(alpha))`
 * Check out my solution [visual-illusions/ebbinghaus.py](visual-illusions/ebbinghaus.py)
 
 ## Honeycomb and Extinction illusions. ##
@@ -607,6 +600,12 @@ A solution: [Benford-law/Benford.py](Benford-law/Benford.py)
 --------------------------------------------------------------------------------
 
 # Simulations #
+
+## Monte Carlo Estimation ##
+
+* Read about [Monte Carlo estimation of PI](https://academo.org/demos/estimating-pi-monte-carlo/)
+
+* Write a script that estimate pi using this method (then check my solution: [simulations/estimate_PI_by_MonteCarlo.py](simulations/estimate_PI_by_MonteCarlo.py))
 
 ## Fractals ##
 
