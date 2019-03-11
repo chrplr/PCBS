@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-11 10:10:32 christophe@pallier.org>
+% Time-stamp: <2019-03-11 15:00:34 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -36,13 +36,6 @@ To download them, open a terminal (`git bash` under Windows) and type:
 
 - [Objectives](#objectives)
 - [Prerequisites](#prerequisites)
-- [Resources](#resources)
-    - [Manipulations](#manipulations)
-    - [Stimulus/Experiment generation modules](#stimulusexperiment-generation-modules)
-    - [Data analyses, Statistics](#data-analyses-statistics)
-    - [Simulations](#simulations)
-    - [Books relevant to Cognitive and Brain Sciences Programming](#books-relevant-to-cognitive-and-brain-sciences-programming)
-    - [Programming skills](#programming-skills)
 - [Creating static visual stimuli](#creating-static-visual-stimuli)
     - [Kanizsa illusory contours](#kanizsa-illusory-contours)
     - [Herman grid](#herman-grid)
@@ -72,7 +65,7 @@ To download them, open a terminal (`git bash` under Windows) and type:
 - [Lexical Statistics](#lexical-statistics)
     - [Zipf law](#zipf-law)
     - [Benford's law.](#benfords-law)
-- [Simulations](#simulations-1)
+- [Simulations](#simulations)
     - [Monte Carlo Estimation](#monte-carlo-estimation)
     - [Fractals](#fractals)
     - [Cellular Automata](#cellular-automata)
@@ -96,6 +89,11 @@ To download them, open a terminal (`git bash` under Windows) and type:
     - [Resources to learn the command shell](#resources-to-learn-the-command-shell)
     - [Resources to learn Python](#resources-to-learn-python)
     - [Resources to learn Git](#resources-to-learn-git)
+    - [Stimulus/Experiment generation modules](#stimulusexperiment-generation-modules)
+    - [Data analyses, Statistics](#data-analyses-statistics)
+    - [Simulations](#simulations-1)
+    - [Books relevant to Cognitive and Brain Sciences Programming](#books-relevant-to-cognitive-and-brain-sciences-programming)
+    - [Programming skills](#programming-skills)
 
 <!-- markdown-toc end -->
 
@@ -163,69 +161,6 @@ You should:
   commands`git clone, git pull, git init, git add, git status, git commit` 
   
   Check out [Resources to learn Git in the Appendix](#resources-to-learn-git)
-
-
--------------------------------------------------------------------------------
-
-# Resources #
-
-## Manipulations ##
-
-_Automate the boring stuff with Python_ by Al Sweigart
-(<http://automatetheboringstuff.com/>) is a great book to learn to manipulate
-files, extracting information from web pages, etc.
-
-## Stimulus/Experiment generation modules ##
-
-* <http://www.pygame.org> (See [PyGame Drawing Basics](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/))
-* <http://www.lexique.org>
-* <http://www.expyriment.org> (See [Get started with Expyriment](https://docs.expyriment.org/Tutorial.html)
-* <http://psychopy.org> (See [Programming with PsychoPy](https://www.socsci.ru.nl/wilberth/nocms/psychopy/print.php))
-* <http://psychtoolbox.org/> (See [Psychtoolbox demos](http://peterscarfe.com/ptbtutorials.html))
-
-## Data analyses, Statistics ##
-
-* Modules: numpy, scipy, pandas, seaborn, statsmodel, sklearn
-   - Data manipulation: 
-      - <http://pandas.pydata.org/pandas-docs/stable/tutorials.html>
-   - Plotting:
-      - <http://matplotlib.org/users/pyplot_tutorial.html>
-      - <https://seaborn.pydata.org/tutorial.html>
-
-* _Scipy Lecture Notes_: <http://www.scipy-lectures.org/>
-* _Think Stats_ by Allen B. Downey: <http://greenteapress.com/thinkstats2/>
-* _Python Data Science Handbook_ by Jake VanderPlas: <https://jakevdp.github.io/PythonDataScienceHandbook>
-
-
-## Simulations ##
-
-* [_Think Complexity_](http://greenteapress.com/wp/think-complexity-2e/) by
-  Allen B. Downey
-* The [Brian spiking neural network simulator](http://briansimulator.org/)
-* [Deep Learning for Natural Language Processing with
-  Pytorch](https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html)
-
-
-## Books relevant to Cognitive and Brain Sciences Programming ##
-
-* [_Programming Visual Illusions for
-  Everyone_](https://www.programmingvisualillusionsforeveryone.online/) by Marco
-  Bertamini:
-* _Neural Data Science: A Primer with MATLAB and Python_ by von Erik Lee Nylen
-  and Pascal Wallisch
-* _Matlab for Brain and Cognitive Scientists_ and _Analyzing neural time series
-  data_ by Mike X Cohen
-* [_Python in
-  Neuroscience_](https://www.frontiersin.org/research-topics/8/python-in-neuroscience)
-* _Modeling Psychophysical Data in R_ by Kenneth Knoblauch & Laurence T. Maloney
-
-## Programming skills ##
- 
-* See my [Tips for writing clean code](tips.md)
-* [Software Carpentry](https://software-carpentry.org/lessons/) provides
-   lessons on writing software for science.
-* [Software Carpentry](https://software-carpentry.org/lessons/) provides
-   nice lessons about writing software for science.
 
 -------------------------------------------------------------------------------
 
@@ -895,8 +830,7 @@ Why learn the command shell?
 
   - [The Linux Command Line](http://linuxcommand.org/tlcl.php) by Williams
   Shotts.
-  - [Openclassrooms
-  MOOC](https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux)
+  - [Openclassrooms MOOC](https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux)
   
 --------------------------------------------------------------------------------  
 
@@ -926,3 +860,64 @@ Why learn the command shell?
   * <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
   * my own [git cheat
   page](http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git)
+
+-------------------------------------------------------------------------------
+
+
+## Stimulus/Experiment generation modules ##
+
+* <http://www.pygame.org> (See [PyGame Drawing Basics](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/))
+* <http://www.lexique.org>
+* <http://www.expyriment.org> (See [Get started with Expyriment](https://docs.expyriment.org/Tutorial.html)
+* <http://psychopy.org> (See [Programming with PsychoPy](https://www.socsci.ru.nl/wilberth/nocms/psychopy/print.php))
+* <http://psychtoolbox.org/> (See [Psychtoolbox demos](http://peterscarfe.com/ptbtutorials.html))
+
+--------------------------------------------------------------------------------
+
+## Data analyses, Statistics ##
+
+* Modules: numpy, scipy, pandas, seaborn, statsmodel, sklearn
+   - Data manipulation: 
+      - <http://pandas.pydata.org/pandas-docs/stable/tutorials.html>
+   - Plotting:
+      - <http://matplotlib.org/users/pyplot_tutorial.html>
+      - <https://seaborn.pydata.org/tutorial.html>
+
+* _Scipy Lecture Notes_: <http://www.scipy-lectures.org/>
+* _Think Stats_ by Allen B. Downey: <http://greenteapress.com/thinkstats2/>
+* _Python Data Science Handbook_ by Jake VanderPlas: <https://jakevdp.github.io/PythonDataScienceHandbook>
+
+----------------------------------------------------------------------------------
+
+## Simulations ##
+
+* [_Think Complexity_](http://greenteapress.com/wp/think-complexity-2e/) by
+  Allen B. Downey
+* The [Brian spiking neural network simulator](http://briansimulator.org/)
+* [Deep Learning for Natural Language Processing with
+  Pytorch](https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html)
+
+----------------------------------------------------------------------------------
+
+## Books relevant to Cognitive and Brain Sciences Programming ##
+
+* [_Programming Visual Illusions for
+  Everyone_](https://www.programmingvisualillusionsforeveryone.online/) by Marco
+  Bertamini:
+* _Neural Data Science: A Primer with MATLAB and Python_ by von Erik Lee Nylen
+  and Pascal Wallisch
+* _Matlab for Brain and Cognitive Scientists_ and _Analyzing neural time series
+  data_ by Mike X Cohen
+* [_Python in
+  Neuroscience_](https://www.frontiersin.org/research-topics/8/python-in-neuroscience)
+* _Modeling Psychophysical Data in R_ by Kenneth Knoblauch & Laurence T. Maloney
+
+-------------------------------------------------------------------------------------
+
+## Programming skills ##
+ 
+* See my [Tips for writing clean code](tips.md)
+* [Software Carpentry](https://software-carpentry.org/lessons/) provides
+   lessons on writing software for science.
+* [Software Carpentry](https://software-carpentry.org/lessons/) provides
+   nice lessons about writing software for science.
