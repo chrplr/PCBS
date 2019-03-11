@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-11 09:44:47 christophe@pallier.org>
+% Time-stamp: <2019-03-11 09:57:50 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -73,6 +73,7 @@ To download them, open a terminal (`git bash` under Windows) and type:
     - [Zipf law](#zipf-law)
     - [Benford's law.](#benfords-law)
 - [Simulations](#simulations-1)
+    - [Monte Carlo Estimation](#monte-carlo-estimation)
     - [Fractals](#fractals)
     - [Cellular Automata](#cellular-automata)
     - [Artificial Neural networks](#artificial-neural-networks)
@@ -230,24 +231,28 @@ files, extracting information from web pages, etc.
 
 # Creating static visual stimuli #
 
-We are going to use [pygame](http://www.pygame.org). You can read a [quick
+We are going to use [pygame](http://www.pygame.org). 
+
+Please read this [quick
 introduction on drawing with
-pygame](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/).
+pygame](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/) and
+run and study the scripts [square.py](visual-illusions/square.py),
+   [circle.py](visual-illusions/circle.py) and
+   [triangle.py](visual-illusions/triangle.py).
 
 ## Kanizsa illusory contours ##
 
-0. Run and study the scripts [square.py](visual-illusions/square.py),
-   [circle.py](visual-illusions/circle.py) and
-   [triangle.py](visual-illusions/triangle.py), and create new scripts to
-   create the Kanizsa figures:
+0. Starting from the `square.py` and `circle.py` scripts, create a new script to display the 
+   Kanizsa squares:
 
    ![Kanizsa square](images/Kanizsa-square.jpeg)
 
    ![Kanizsa triangle](images/Kanizsa1.png)
 
-   You can find more examples by googling 'illusory contours'.
 
-   Check [my solution](visual-illusions/kanizsa-square.py)
+   Check out my solution: [visual-illusions/kanizsa-square.py](visual-illusions/kanizsa-square.py)
+
+   To find out more, google `illusory contours`.`
 
 ## Herman grid ##
 
@@ -366,7 +371,7 @@ computer (check with ipython: `import simpleaudio`) :
      
         pip install simpleaudio
 
- Run the quick check with ipython:
+   Run the quick check with ipython:
 
         import simpleaudio.functionchecks as fc 
         fc.LeftRightCheck.run() 
@@ -483,7 +488,8 @@ task, avoiding repetitions of colors.
    * Run [stroop_task.py](Stroop-effect/stroop_task.py) and check the naming
    times in `data`. Compute the average reading times as a function of the
    language (you can use R or Python).
-   
+
+
 ## Lexical Decision Task ##
 
 In a lexical decision experiment, a string of characters is flashed at the
@@ -493,19 +499,19 @@ time is measured from the word onset, providing an estimate of the speed of word
 recognition.
 
    * Using [lexical-decision/select-words-from-lexique.py] as an example, select
-   20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and
-   20 low frequency verbs, from Lexique382.txt --- from
-   <http://www.lexique.org/public/Lexique382.zip>.They must all have a length of
-   5 to 8 characters.
-   * generate 50 pseudowords using either [Lexique
+     20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and
+     20 low frequency verbs, from Lexique382.txt --- from <http://www.lexique.org/public/Lexique382.zip>. They must all have a length of 5 to 8 characters.
+   * Generate 50 pseudowords using either [Lexique
    tools](http://www.lexique.org/toolbox/toolbox.pub/) or
    [Wuggy](http://crr.ugent.be/programs-data/wuggy)
    * Program a lexical decision using expyriment.
    * Run it and compute the average decision times using pandas
 
+
 ## A general audio visual stimulus presentation script ##
 
-See <https://www.github.com/chrplr/audiovis>
+In some experiments, we know in avdvance the precise timing of all stimuli (the program flow does not  depends on external events). I wrote a script that reads the timing of audiovisual stimuli and present them at the expected times --- Its code is  available at <https://www.github.com/chrplr/audiovis>
+
 
 ## More examples using expyriment.org ##
 
@@ -517,20 +523,25 @@ See <https://www.github.com/chrplr/audiovis>
 
 # Data Analyses #
 
+
 ## Basic Data Analysis with R
 
 See <http://www.pallier.org/examples-of-basic-data-analyses-with-r.html#examples-of-basic-data-analyses-with-r>
+
 
 ## Comparing means using Easy ANOVA (Analysis of Variance) ##
 
 See <http://www.pallier.org/easy-anova-with-r.html#easy-anova-with-r>
 
+
 ## Permutation tests ##
 
-* Implement the [permutation test](https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests) 
-to compare two samples.
+* Read about the principle odf [permutation tests](https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests) 
 
-My solution: [permutation_test/permutation_test.py](permutation_test/permutation_test.py)
+* Implement a python script that uses a permutation test to compare two samples.
+
+* Check out my solution: [permutation_test/permutation_test.py](permutation_test/permutation_test.py)
+
 
 ## Bootstrap ##
 
