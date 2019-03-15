@@ -1,74 +1,59 @@
 ## Exercices de programmation en Python ##
 
-% Time-stamp: <2019-03-15 10:18:24 christophe@pallier.org>
+% Time-stamp: <2019-03-15 11:59:24 christophe@pallier.org>
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [-](#-)
+
+- [lists](#lists)
+- [multiplication tables](#multiplication-tables)
+- [Pascal triangle](#pascal-triangle)
 - [computer-guess-a-number](#computer-guess-a-number)
 - [prime numbers](#prime-numbers)
-- [multiplication tables](#multiplication-tables)
-- [maximum](#maximum)
-- [second max](#second-max)
-- [Pascal triangle](#pascal-triangle)
-- [string-detector](#string-detector)
-- [Rodrego-simulator](#rodrego-simulator)
-- [*unique*](#unique)
+- [unique](#unique)
 - [word count](#word-count)
 - [head](#head)
 - [tail](#tail)
 - [Taxis](#taxis)
+- [string-detector](#string-detector)
+- [Rodrego-simulator](#rodrego-simulator)
 - [detection experiment](#detection-experiment)
-    - [RPN Calculator](#rpn-calculator)
-    - [Experimental lists 1](#experimental-lists-1)
-    - [Experimental lists 2](#experimental-lists-2)
-    - [Kaprekar-numbers](#kaprekar-numbers)
-    - [Posner cuing task](#posner-cuing-task)
-    - [Zipf law](#zipf-law)
+- [RPN Calculator](#rpn-calculator)
+- [Experimental lists 1](#experimental-lists-1)
+- [Experimental lists 2](#experimental-lists-2)
+- [Kaprekar-numbers](#kaprekar-numbers)
+- [Posner cuing task](#posner-cuing-task)
+- [Zipf law](#zipf-law)
 
 <!-- markdown-toc end -->
 
 
-## computer-guess-a-number ##
 
-Read chapter 3 of _Invent your own games with Python_
-https://inventwithpython.com/invent4thed/chapter3.html where the author presents
-a game where the computer chooses a random number that the user must guess.
-Study the code.
+## lists ##
 
-Now, your task is to write another program, where the roles are inverted: the
-computer tries to guess a number that the user has in mind. The computer
-proposes a number and the user answers with '+' (the number he has is mind is
-larger), '-' (if it is smaller), 'y' (if the guess is correct)
+* Read about:
+   - [Python Lists](https://www.w3schools.com/python/python_lists.asp)
+   - [List comprehensions](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python)
+   - if you have time, read <https://automatetheboringstuff.com/chapter4/>
 
-## prime numbers ##
+* Given a list of numbers, print their sum
 
-Write a script that lists all prime numbers between 1 and 10000 (A prime number is a integer that has no divisors except 1 and itself). You may use the following function:
+* Given a list of numbers, print the sum of their square
 
-    ```
-    def is_divisor(a, b):
-        """ Args: a, b integers;
-             Return True if b is a divisor of a, else False"
-        return a % b == 0
-    ```
+* Given a list of numbers, print the largest one.
+
+* Given a list of numbers, print the second largest one.
+
 
 ## multiplication tables ##
 
+
 * Given a list of numbers, print them separated by a space (e.g. `[1, 2, 4]` -> `1 2 3`).
 
-* Read https://pyformat.info/#number_padding 
+* Read <https://pyformat.info/#number_padding> 
 
-* write a script that displays the table of multiplication from 1 to 9 in a nice format.
-
-
-## maximum ##
-
-Given a list of numbers, print the largest one.
-
-## second max ##
-
-Given a list of numbers, print the second largest one.
+* write a script that displays the tables of multiplication from 1 to 9 in a nice format.
 
 
 ## Pascal triangle ##
@@ -91,6 +76,61 @@ Write a program that prints the first rows of Pascal's triangle (see https://www
 
 Pour résoudre ce problème, une solution consiste à stocker les valeurs de la ligne courante dans une liste Python, et d'écrire une fonction qui étant donnée une liste en argument, calcule et renvoit la ligne suivante dans une nouvelle liste.
 
+
+## computer-guess-a-number ##
+
+Read [chapter 3 of _Invent your own games with Python_](https://inventwithpython.com/invent4thed/chapter3.html) where the author presents
+a game where the computer chooses a random number that the user must guess.
+Study the code.
+
+Now, your task is to write another program, where the roles are inverted: the
+computer tries to guess a number that the user has in mind. The computer
+proposes a number and the user answers with '+' (the number he has is mind is
+larger), '-' (if it is smaller), 'y' (if the guess is correct)
+
+## prime numbers ##
+
+Write a script that lists all prime numbers between 1 and 10000 (A prime number
+is a integer that has no divisors except 1 and itself). You may use the
+following function:
+
+    ```
+    def is_divisor(a, b):
+        """ Args: a, b integers;
+             Return True if b is a divisor of a, else False"
+        return a % b == 0
+    ```
+
+## unique ##
+
+Given a list of words, print how many different words are in that list (hint:
+use a dictionary or a set)
+
+## word count ##
+
+Given a list of words, count the number of times each word appears in the list.
+Eg. `[Jim, Alan, Jim, Joe]` -> `Jim:2, Alan:1, Joe:1` (hint: use dictionary)
+
+
+## head ##
+
+Write a script that prints the first 10 lines of a file (or the whole file is it
+is less than 10 lines long).
+
+## tail ##
+
+Write a script that prints the last 10 lines of a file (or the whole file is it
+is less than 10 lines long).
+
+## Taxis ##
+
+Two taxi companies propose differents pricing schemes: "A charges 
+rge 4.80€ plus 1.15€ by km travelled; B 3.20€ plus  
+##20€ by km travelled. Write a script that finds which company is the cheapest
+as a function of the distance to travel.
+
+
+
 ## string-detector ##
 
 Lisez le chapitre 8 de _Automate the boring stuff_ (http://automatetheboringstuff.com/chapter8/). Ecrire un programme qui ouvre et lit un fichier texte, puis affiche toutes les lignes qui contiennent un mot donné, par exemple "Cogmaster". 
@@ -100,30 +140,6 @@ Lisez le chapitre 8 de _Automate the boring stuff_ (http://automatetheboringstuf
 
 (optionnel: seulement pour ceux qui se sentent capables et sont motivés) Ecrire un programme qui simule une machine RodRego à 10 registres (http://sites.tufts.edu/rodrego/). Le programme est stocké dans un fichier texte qui est lu, puis executé.  Votre programme doit contenir une fonction qui etant donnée les 10 valeurs initiales des registres, et le programme, renvoit les nouvelles valeurs des registres quand l'instruction END est atteinte.
 
-## *unique* ##
-
-Given a list of words, print how many different
-words are in that list (hint: use a dictionary or a set)
-
-## word count ##
-
-Given a list of words, count the number of times each word appears in the list. Eg. `[Jim, Alan, Jim, Joe]` -> `Jim:2, Alan:1, Joe:1`  (hint: use dictionary)
-
-
-## head ##
-
-Write a script that prints the first 10 lines of a file (or the whole file is it is less than 10 lines long).
-
-## tail ##
-
-Write a script that prints the last 10 lines of a file  (or the whole file is it is less than 10 lines long).
-
-## Taxis ##
-
-Two taxi companies propose differents pricing schemes: "A charges 
-rge 4.80€ plus 1.15€ by km travelled; B 3.20€ plus  
-##20€ by km travelled. Write a script that finds which company is the cheapest
-as a function of the distance to travel.
 
 # detection experiment #
 
