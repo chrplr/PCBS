@@ -1,6 +1,6 @@
 ## Exercices de programmation en Python ##
 
-% Time-stamp: <2019-03-15 11:59:24 christophe@pallier.org>
+% Time-stamp: <2019-03-15 14:11:35 christophe@pallier.org>
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**

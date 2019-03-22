@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-22 11:03:59 christophe@pallier.org>
+% Time-stamp: <2019-03-22 14:11:39 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -682,11 +682,10 @@ We will install:
 
 ### Anaconda Python3 ###
 
-We will make use of the [Anaconda distribution](https://www.continuum.io)
+We will make use of the [Anaconda distribution](https://www.anaconda.com/distribution)
 
-1. Download the Anaconda Python3 distribution Python from
-   <https://www.continuum.io/download>.
-2. Go to your download folder and execute the Anaconda3 file installer.
+1. Go to the [Anaconda Python distribution page](https://www.anaconda.com/distribution). Select your OS (Windows, MacOS or Linux) and download the _Python 3.7_ 64 bits installer.
+2. Go to your download folder and execute the Anaconda3 installer.
 3. In the Anaconda Setup Wizard, beware, pay attention to the following options
    option:
    - verify that you Install for `Just Me (recommended)`, then click on `Next`
@@ -733,7 +732,7 @@ To configure git, open a Terminal (or launch *Git Bash* under Windows) and type:
 ### Sublime Text Editor ###
 
 Unless you already master a text editor, we recommend that you download and
-install _Sublime Text_ from <https://www.sublime text.com/>. Follow the
+install _Sublime Text_ from <https://www.sublimetext.com/>. Follow the
 instructions specific for your Operating System.
 
 
