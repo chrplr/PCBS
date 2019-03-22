@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-03-11 15:00:34 christophe@pallier.org>
+% Time-stamp: <2019-03-22 11:03:59 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -19,6 +19,7 @@ To download them, open a terminal (`git bash` under Windows) and type:
 
 **Companion documents**
 
+* [Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Computers.md)
 * [How to solve problems](how-to-solve-problems.md)
 * [Tips for writing clean code](tips.md)
 * [Tools for reproducible science](tools-for-reproducible-science.md)
