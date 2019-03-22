@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-10-18 17:23:31 cp983411>
+# Time-stamp: <2019-03-22 09:10:27 christophe@pallier.org>
 
 import numpy as np
 
@@ -10,7 +10,7 @@ def print_row(u):
     """ prints all first non null elements of u"""
     for e in u:
         if e != 0:
-            print(e, end=' ')
+            print(f'{e:4d}', end=' ')
         else:
             break
     print('\n', end='')
