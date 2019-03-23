@@ -62,3 +62,25 @@ visual illusions at
   <https://chrplr.github.io/PCBS/#simple-reaction-times>
 
 
+## GiT and Markdown
+
+* During lecture 3, we saw :
+
+- how to create a repository on github.com
+
+- how to clone it locally on the computer (using the command 'git clone' in a terminal "Git Bash" under Windows),
+
+- add files to track with 'git add',
+
+- create a snapshot of the files with 'git commit'
+
+- save a copy on github with 'git push'.
+
+All this is explained in part#1 and part#2 of https://openclassrooms.com/en/courses/2342361-gerez-votre-code-avec-git-et-github
+
+To learn more about git and github, check out the links in the appendix of the course's home page.
+
+* We also saw that the README.md file at the root of the repository can be written using the Markdown markup language.
+
+It is important that you learn how to write in markdown (it is super easy), using a text editor (atom, sublimetext, ...). Check out https://www.markdowntutorial.com/
+
