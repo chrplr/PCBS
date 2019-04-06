@@ -10,41 +10,39 @@ output:
 
 ## Introduction
 
-Ce document montre comment interroger et manipuler la base [Lexique](http://www.lexique.org) avec la langage R. Merci de signaler d'éventuelles erreurs à <christophe@pallier.org>
+Ce document montre comment interroger et manipuler la base [Lexique](http://www.lexique.org) en [R](https://fr.wikipedia.org/wiki/R_(langage)) 
 
-Il fait parti du cours [Programmation pour les Sciences Cognitives](https://chrplr.github.io/PCBS/) ou vous pourrez trouver d'autres documents potentiellement intéressants.
+Il fait parti du cours [Programmation pour les Sciences Cognitives](https://chrplr.github.io/PCBS/). Merci de signaler d'éventuelles erreurs à <christophe@pallier.org>
 
 
-## Prérequis 
+## Préparation
 
 1. S'ils sont pas déjà installés sur votre ordinateur, vous devrez installer les logiciels [R](https://cran.r-project.org/) et  [R-Studio Desktop](https://www.rstudio.com/products/rstudio/#Desktop).
 
+2. Télécharger <http://www.lexique.org/databases/Lexique382/Lexique382.zip>
 
-2. Téléchargez <http://www.lexique.org/databases/Lexique382/Lexique382.zip>
-
-3. Créer un répertoire `Lexique` puis désippez-y le fichier `Lexique382.zip` précédemment téléchargé.
+3. Créer un répertoire `Lexique` puis désipper dans ce répertoire le fichier `Lexique382.zip` précédemment téléchargé.
 
 4. Démarrer le programme **Rstudio** 
 
-   Sélectionner le menu `File/New Project`; Choisir "Existing directory" et naviguer jusqu'au répertoire `Lexique` que vous venez de créer; cliquez sur le bouton `create project`. 
-   
-   Dans la fenêtre en bas à droite,parmis la liste de fichier sous l'onglet *Files*, vous devez voir `Lexique382.tsv`. Si ce n'est pas le cas, vérifiez que vous avez bien suivi les instructions.
+   - Sélectionner le menu `File/New Project`; 
+   - Choisir "Existing directory" et naviguer jusqu'au répertoire `Lexique` que vous venez de créer; cliquer sur le bouton `create project`. 
+   - Dans la fenêtre en bas à droite, parmis la liste des fichiers listés sous l'onglet *Files*, vous devez voir `Lexique382.tsv`. Si tel n'est pas le cas, vérifiez que vous avez bien suivi les instructions.
 
-5. Dans la fenêtre en bas à gauche de Rstudio, dans l'onglet *Console*, copier la ligne suivante puis appuez sur 'Entrée'
+5. Dans la fenêtre en bas à gauche de Rstudio, dans l'onglet *Console*, copier la ligne suivante puis appuyez sur 'Entrée'
 
     install.packages('tidyverse')
 
-Vous êtes prêt !
+Laissez rstudio se débrouiller. Quand il a fini, vous êtes prêt ! Vous n'aurez plus à refaire ces étapes.
 
 ## Chargement de la table "Lexique.org"
 
-Tout se déroule dans Rstudio. Soyez sûr de bien travailler dans le projet "lexique" créé dans la section "prérequis". Après un rdemarrage de rstsudio, utilisez le menu `File/Recent Projects`.
+Tout se déroule dans Rstudio.Assurez vous de bien travailler dans le projet "lexique" créé dans la section "préparation". Après un redémarrage de rstudio, utilisez le menu `File/Recent Projects` pour retrouver ce projet.
 
-* Cliquez le menu "File / New File / R Notebook". Un document "Untitled" apparait dans le fenetre en haut à gauche. 
+- Cliquez le menu "File / New File / R Notebook". Un document "Untitled" apparait dans le fenetre en haut à gauche. 
+- C'est dans ce document que nous allons entrer du code R:
 
-* C'est dans ce document que nous allons entrer du code R:
-
-  Déplacez vous à la ligne 5 (après la ligne contenant '---'), et cliquez sur le bouton *Insert* puis choisisez *R* (vous pouvez aller plus vite en appuyant sur *Ctrl+Alt+I*). 
+  Déplacez vous à la ligne 5 (juste après la ligne contenant '---'), et cliquez sur le bouton *Insert* puis choisisez *R* (vous pouvez aller plus vite en appuyant sur *Ctrl+Alt+I*). 
   
   Copiez les trois lignes suivantes dans le bloc de code qui vient d'être créé. 
 
@@ -59,8 +57,7 @@ Tout se déroule dans Rstudio. Soyez sûr de bien travailler dans le projet "lex
 
 ## Sélection de mots entiers
 
-
-Supposons que vous vouliez extraire les lignes de lexiques correspondant, par exemple, aux mots 'bateau', 'avion', 'maison', 'arbre'. Le code suivant fait précisemment cela:
+Supposons que vous vouliez extraire les lignes de la table lexique correspondant, par exemple, aux mots 'bateau', 'avion', 'maison', 'arbre'. Le code suivant fait précisemment cela:
 
 
 ```{r}
@@ -71,21 +68,20 @@ selection <- subset(lexique, ortho %in% items)
 head(selection)
 ```
 
-Vous pouvez inspecter le contenu de la table `selection` en cliquant sur son nom dans l'onglet Environnment dans la fenetre en haut à droite dans rstudio.
+Vous pouvez inspecter le contenu de la table `selection` en cliquant sur son nom dans l'onglet *Environment* situé dans la fenetre en haut à droite de rstudio.
 
 
-Vous pouvez également sauvegarder cette novuelle table dans un fichier avec la ligne suivante:
+Vous pouvez également sauvegarder les résultats obtenus dans un fichier,  avec la commande suivante:
 
 ```{r}
 write_tsv(selection, 'selection.tsv')
 ```
 
-Notez que les fichiers avec l'extension `csv` (tab-separated-values) peuvent être [ouverts avec Excel](https://rievent.zendesk.com/hc/en-us/articles/360000029172-FAQ-How-do-I-open-a-tsv-file-in-Excel-).
-
+Notez que les fichiers ayant l'extension `csv` (tab-separated-values) peuvent être [ouverts avec Excel](https://rievent.zendesk.com/hc/en-us/articles/360000029172-FAQ-How-do-I-open-a-tsv-file-in-Excel-), ou OpenOffice Cal, ou même avec n'importe quel éditeur de texte. Note: le package `readr` de R fournit aussi des fonctions `write_excel_csv` et `write_excel_csv2` qui peuvent intéresser certains.
 
 ## Sélection par critères
 
-Supposont que vous vouliez sélectionner les noms de 5 lettres, singuliers, de fréquence lexicale (films) comprisent entre 10 et 100.
+Supposonsque vous vouliez sélectionner les noms de 5 lettres, singuliers, de fréquence lexicale (films) comprise entre 10 et 100. Voici la ligne magique:
 
 ```{r}
 selection = subset(lexique, cgram=='NOM' & nombre != 'p' & nblettres==5 & freqlivres > 10 & freqlivres < 100)
@@ -96,8 +92,7 @@ head(selection)
 
 ### Les expressions régulières
 
-Les expressions regulières, ou **regex**, sont des “patterns” qui permettent de rechercher des mots ayant certaines propriétés. 
-Voici quelques exemples d’expressions régulières:
+Les expressions réulières, ou **regex**, sont des “patterns” qui permettent de rechercher des mots ayant certaines propriétés. Par exemple n'importe `a.b` désigne un mot contenant un `a` et un `b` séparés par une lettre quelonque. Voici d'autre exemples:
 
 - **`^maison$`** : recherche le mot “maison” exactement
 - **`^anti`** : recherche tous les mots commençant par “anti”
@@ -111,15 +106,15 @@ Voici quelques exemples d’expressions régulières:
 - **`^[aeiou]`** : mots commençant par une voyelle
 - **`^[^aeriou]`** : mots ne commençant pas par une voyelle
 
-Il existe beaucoup de tutoriaux sur les regex sur le web, notamment [celui-ci](http://www.canyouseome.com/guide-regex/). La bible sur le sujet est le livre _[Mastering Regular Expressions](http://regex.info/book.html)_  de Jeff Friedl. 
+Il existe de nombreux tutoriaux sur les regex sur le web, notamment [celui-ci](http://www.canyouseome.com/guide-regex/). La bible sur le sujet est le livre _[Mastering Regular Expressions](http://regex.info/book.html)_  de Jeff Friedl. 
 
-Une regex décrit un automate de transition à états finis. Le site <https://regexper.com/> vous permet de visualiser l’automate associé à votre regex. Par exemple `[ptk].*[aiou][aiou].?ion$` correspond à l’automate fini:
+Une expression régulière décrit un automate de transitions à états finis. Le site <https://regexper.com/> vous permet de visualiser l’automate associé à une regex. Par exemple `[ptk].*[aiou][aiou].?ion$` correspond à l’automate fini:
 
 ![](fsa.png)
 
 ### Recherches dans R avec grepl
 
-R permet d'effectuer des recherches par pattern grâce à la fonction `grepl`. La syntaxe est `grepl(`_regex_, _variable_`)` pour rechercher les lignes où la variable matche la regex (Voir la [doc R de grepl](https://stat.ethz.ch/R-manual/R-devel/library/base/html/grep.html).
+R permet d'effectuer des recherches par pattern grâce à la fonction `grepl`. La syntaxe est `grepl(`_regex_, _variable_`)` pour rechercher les lignes où la variable "matche" la regex (Voir la [doc R de grepl](https://stat.ethz.ch/R-manual/R-devel/library/base/html/grep.html).
 
 Cette fonction permet de localiser les lignes qui 'matchent' une expression, ou bien, en la niant avec le signe `!`, de supprimer des lignes qui matchent un pattern.
 
@@ -132,7 +127,12 @@ lexique %>% filter(grepl("tion$", ortho)) -> selection2
 head(selection2)
 ```
 
-Voous pouvez sauvegarder ces résultats avec la commande `write_tsv(selection2, 'mots-en-tion.tsv')`.
+Encore une fois, vous pouvez sauvegarder ces résultats avec:
+
+
+```{r}
+write_tsv(selection2, 'mots-en-tion.tsv')
+```
 
 * Pour lister tous les mots contenant un cluster de consonnes plosives, mais pas debut de mot:
 
@@ -142,7 +142,10 @@ head(selection3)
 ```
 
 
-L'opérateur `filter`peut être appeler plusieurs fois pour affiner progressivement la recherche. Par exemple, pour obtenir tous les mots de 8 lettres qui ne finissent pas 'ent':
+* L'opérateur `filter`peut être appeler plusieurs fois pour affiner progressivement la recherche. 
+
+  Par exemple, pour obtenir tous les mots de 8 lettres qui ne finissent pas `ent`:
+  
 ```{r}
 lexique %>% filter(nblettres == 8) %>% filter(!grepl("ent$", ortho)) -> selection4
 head(selection4)
