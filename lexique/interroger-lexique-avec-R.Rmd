@@ -1,9 +1,11 @@
 ---
 title: "Interroger Lexique avec R"
 author: "Christophe Pallier"
-output: 
+output:
   html_notebook:
-    toc: true
+    toc: yes
+  pdf_document:
+    toc: yes
 ---
 
 ## Introduction
@@ -44,35 +46,27 @@ Tout se déroule dans Rstudio. Soyez sûr de bien travailler dans le projet "lex
 
   Déplacez vous à la ligne 5 (après la ligne contenant '---'), et cliquez sur le bouton *Insert* puis choisisez *R* (vous pouvez aller plus vite en appuyant sur *Ctrl+Alt+I*). 
   
-  Copiez les deux lignes suivantes dans le bloc de code qui vient d'être créé; puis, en faisant bien attention que le curseur soit à l'intérieur du bloc de code, cliquer sur *Run / Run current chunk* (ou bien appuyer sur la petite *fleche verte*, ou sur *Ctrl-Shift-Enter*)
-
+  Copiez les trois lignes suivantes dans le bloc de code qui vient d'être créé. 
 
 ```{r}
     require(tidyverse)  # you must have ran "install.packages('tidyverse')" earlier
     lexique = read_delim("Lexique382.tsv", delim="\t")
+    head(lexique, 25)
 ```
 
-Puis insérer et executer la ligne suivante pour afficher les premières lignes de la table _lexique_ :
-
-
-```{r}
-head(lex, 25)
-```
-   
-
+   Puis, en faisant bien attention que le curseur soit à l'intérieur du bloc de code, cliquer sur *Run / Run current chunk* (ou bien appuyer sur la petite *fleche verte*, ou sur *Ctrl-Shift-Enter*). Vous devriez voir le première lignes de la table lexique"82 s'afficher.
 
 
 ## Sélection de mots entiers
 
 
-Supposons que vous vouliez extraire les lignes de lexiques correspondant, par exemple, aux mots 'bateau', 'avion', 'maison', 'arbre'. Le code suivant
-fait précisemment cela:
+Supposons que vous vouliez extraire les lignes de lexiques correspondant, par exemple, aux mots 'bateau', 'avion', 'maison', 'arbre'. Le code suivant fait précisemment cela:
 
 
 ```{r}
 items <- c('bateau', 'avion', 'maison', 'arbre')
 
-selection <- subset(lex, ortho %in% items)
+selection <- subset(lexique, ortho %in% items)
 
 head(selection)
 ```
@@ -100,9 +94,10 @@ head(selection)
 
 ## Sélection par "pattern"
 
-### Les exoressions régulières
+### Les expressions régulières
 
-Les expressions regulières, ou regex, sont des “patterns” qui permettent de rechercher des mots ayant certaines propriétés. Vous pouvez utilisez ces regex dans les champs de recherche placés au dessus des colonnes dans les tables affichées sur ce site. Voici quelques exemples d’expressions régulières:
+Les expressions regulières, ou **regex**, sont des “patterns” qui permettent de rechercher des mots ayant certaines propriétés. 
+Voici quelques exemples d’expressions régulières:
 
 - **`^maison$`** : recherche le mot “maison” exactement
 - **`^anti`** : recherche tous les mots commençant par “anti”

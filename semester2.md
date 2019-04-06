@@ -1,10 +1,13 @@
 
 # Lecture 1 #
 
-First we checked that everybody knows how to download a python script from the
-internet and execute it in a terminal. Check the appendix
+First we checked the prerequesites:
+
+- you must know how to download a python script from the internet and execute it
+in a terminal. Check the appendix
 <https://chrplr.github.io/PCBS/#resources-to-learn-the-command-shell> if you do
-not, to learn to use 'cd' to navigate the filesystem of your computer.
+not; learn to use thes command 'pwd', 'ls' and 'cd', to navigate the filesystem
+of your computer while in terminal.
 
 Then, we worked on the section <https://chrplr.github.io/PCBS/#creating-static-visual-stimuli>. We programmed
 the Kanisza square and the Hermann grid using the python library pygame
@@ -16,7 +19,8 @@ this is too easy, program the dynamic version
 
 Recommended reading: Read <http://automatetheboringstuff.com/chapter3/> about
 functions in Python. Check if you can answer the ""Practice Questions"" at the
-end of the chapter. If anythink is unclear, ask on the discussion forum on
+end of the chasudo apt install udiskie
+pter. If anythink is unclear, ask on the discussion forum on
 Schoology.
 
 
