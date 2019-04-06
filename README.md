@@ -1,7 +1,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-04-06 12:01:44 christophe@pallier.org>
+% Time-stamp: <2019-04-06 12:06:10 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -435,7 +435,7 @@ time is measured from the word onset, providing an estimate of the speed of word
 recognition.
 
    * Visit the web site <http://www.lexique.org>
-   * To learn to use lexique with R, follow the document <http://chrplr.github.io/PCBS/lexique/lexique/interroger-lexique-avec-R.nb.html>
+   * To learn to use lexique with R, follow the document <http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html>
    * Using [lexical-decision/select-words-from-lexique.py] as an example, select
      20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and
      20 low frequency verbs, from Lexique382.txt --- from <http://www.lexique.org/public/Lexique382.zip>. They must all have a length of 5 to 8 characters.
