@@ -31,13 +31,15 @@ Il fait parti du cours [Programmation pour les Sciences Cognitives](https://chrp
 
 5. Dans la fenêtre en bas à gauche de Rstudio, dans l'onglet *Console*, copier la ligne suivante puis appuyez sur 'Entrée'
 
+```
     install.packages('tidyverse')
+```
 
 Laissez rstudio se débrouiller. Quand il a fini, vous êtes prêt ! Vous n'aurez plus à refaire ces étapes.
 
 ## Chargement de la table "Lexique.org"
 
-Tout se déroule dans Rstudio.Assurez vous de bien travailler dans le projet "lexique" créé dans la section "préparation". Après un redémarrage de rstudio, utilisez le menu `File/Recent Projects` pour retrouver ce projet.
+Tout se déroule dans Rstudio. Assurez vous de bien travailler dans le projet "lexique" créé dans la section "préparation". Après un redémarrage de rstudio, utilisez le menu `File/Recent Projects` pour retrouver ce projet.
 
 - Cliquez le menu "File / New File / R Notebook". Un document "Untitled" apparait dans le fenetre en haut à gauche. 
 - C'est dans ce document que nous allons entrer du code R:
@@ -52,7 +54,10 @@ Tout se déroule dans Rstudio.Assurez vous de bien travailler dans le projet "le
     head(lexique, 25)
 ```
 
-   Puis, en faisant bien attention que le curseur soit à l'intérieur du bloc de code, cliquer sur *Run / Run current chunk* (ou bien appuyer sur la petite *fleche verte*, ou sur *Ctrl-Shift-Enter*). Vous devriez voir le première lignes de la table lexique"82 s'afficher.
+   Puis, en faisant bien attention que le curseur soit à l'intérieur du bloc de code, cliquer sur *Run / Run current chunk* (ou bien appuyer sur la petite *fleche verte*, ou sur *Ctrl-Shift-Enter*). Vous devriez voir les premières lignes de la table lexique s'afficher. Celle doit également apparaitre dans l'onglet "Environment" en haut à droite. 
+
+
+Conseil: Lorsque vous quitterez rstudio, acceptez la proposition "sauvegarder le worskpace". Ainsi, la prochaine fois que vous ouvrirez le projet 'lexique' dans rstudio, la table sera déjà présente dans l'environnement, et il ne sera donc pas nécessaire d'exécuter les lignes ci-dessus (`read_delim`...).
 
 
 ## Sélection de mots entiers
@@ -79,9 +84,19 @@ write_tsv(selection, 'selection.tsv')
 
 Notez que les fichiers ayant l'extension `csv` (tab-separated-values) peuvent être [ouverts avec Excel](https://rievent.zendesk.com/hc/en-us/articles/360000029172-FAQ-How-do-I-open-a-tsv-file-in-Excel-), ou OpenOffice Cal, ou même avec n'importe quel éditeur de texte. Note: le package `readr` de R fournit aussi des fonctions `write_excel_csv` et `write_excel_csv2` qui peuvent intéresser certains.
 
+Si vous avez une liste de mots plus longues, il serait fastidieux d'écrire la ligne `items <- ...`. Plus simplement vous pouvez utiliser:
+
+```{r}
+items = scan(what='characters')
+```
+
+Et copier la liste de mots. Entrer une ligne vide termine le processus. 
+
+La fonction `scan` permet aussi de lire la liste dans un fichier externe.
+
 ## Sélection par critères
 
-Supposonsque vous vouliez sélectionner les noms de 5 lettres, singuliers, de fréquence lexicale (films) comprise entre 10 et 100. Voici la ligne magique:
+Supposons que vous vouliez sélectionner tous les noms de 5 lettres, singuliers, de fréquence lexicale (films) comprise entre 10 et 100. Voici la ligne magique:
 
 ```{r}
 selection = subset(lexique, cgram=='NOM' & nombre != 'p' & nblettres==5 & freqlivres > 10 & freqlivres < 100)
