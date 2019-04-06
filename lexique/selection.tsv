@@ -1,0 +1,5 @@
+ortho	phon	lemme	cgram	genre	nombre	freqlemfilms2	freqlemlivres	freqfilms2	freqlivres	infover	nbhomogr	nbhomoph	islem	nblettres	nbphons	cvcv	p_cvcv	voisorth	voisphon	puorth	puphon	syll	nbsyll	cv-cv	orthrenv	phonrenv	orthosyll	cgramortho	deflem	defobs	old20	pld20	morphoder	nbmorph
+arbre	aRbR	arbre	NOM	m	s	81.69	208.58	49.29	67.16	NA	1	2	1	5	4	VCCCV	VCCC	2	2	5	4	aRbR	1	VCCC	erbra	RbRa	ar-bre	NOM	100	20	1.75	1.75	arbre	1
+avion	avj§	avion	NOM	m	s	128.35	78.04	105.54	46.82	NA	1	4	1	5	4	VCVVC	VCYV	1	6	5	4	a-vj§	2	V-CYV	noiva	§jva	a-vion	NOM	100	18	1.85	1.45	avion	1
+bateau	bato	bateau	NOM	m	s	124.82	82.36	106.55	61.22	NA	1	2	1	6	4	CVCVVV	CVCV	0	17	6	4	ba-to	2	CV-CV	uaetab	otab	ba-teau	NOM	95	23	1.95	1.05	bateau	1
+maison	mEz§	maison	NOM	NA	s	605.75	575.34	570.3	461.55	NA	1	2	1	6	4	CVVCVC	CVCV	2	8	6	4	mE-z§	2	CV-CV	nosiam	§zEm	mai-son	NOM	93	30	1.85	1.6	maison	1
