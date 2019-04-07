@@ -17,17 +17,17 @@ Il fait parti du cours [Programmation pour les Sciences Cognitives](https://chrp
 
 ## Préparation
 
-1. S'ils sont pas déjà installés sur votre ordinateur, vous devrez installer les logiciels [R](https://cran.r-project.org/) et  [R-Studio Desktop](https://www.rstudio.com/products/rstudio/#Desktop).
+1. S'ils ne sont pas déjà installés sur votre ordinateur, vous devrez installer les logiciels [R](https://cran.r-project.org/) et  [R-Studio Desktop](https://www.rstudio.com/products/rstudio/#Desktop).
 
 2. Télécharger <http://www.lexique.org/databases/Lexique382/Lexique382.zip>
 
-3. Créer un répertoire `Lexique` puis désipper dans ce répertoire le fichier `Lexique382.zip` précédemment téléchargé.
+3. Créer un répertoire `Lexique` puis dézipper dans ce répertoire le fichier `Lexique382.zip` précédemment téléchargé.
 
 4. Démarrer le programme **Rstudio** 
 
    - Sélectionner le menu `File/New Project`; 
    - Choisir "Existing directory" et naviguer jusqu'au répertoire `Lexique` que vous venez de créer; cliquer sur le bouton `create project`. 
-   - Dans la fenêtre en bas à droite, parmis la liste des fichiers listés sous l'onglet *Files*, vous devez voir `Lexique382.tsv`. Si tel n'est pas le cas, vérifiez que vous avez bien suivi les instructions.
+   - Dans la fenêtre en bas à droite, parmi la liste des fichiers listés sous l'onglet *Files*, il doit apparaitre `Lexique382.tsv`. Si tel n'est pas le cas, vérifiez que vous avez bien suivi les instructions.
 
 5. Dans la fenêtre en bas à gauche de Rstudio, dans l'onglet *Console*, copier la ligne suivante puis appuyez sur 'Entrée'
 
@@ -35,7 +35,7 @@ Il fait parti du cours [Programmation pour les Sciences Cognitives](https://chrp
     install.packages('tidyverse')
 ```
 
-Laissez rstudio se débrouiller. Quand il a fini, vous êtes prêt ! Vous n'aurez plus à refaire ces étapes.
+Laissez rstudio se débrouiller (mais vous devrez peut-être sélectionner un serveur). Quand il a fini, vous êtes prêt ! Vous n'aurez plus jamais à refaire ces étapes.
 
 ## Chargement de la table "Lexique.org"
 
