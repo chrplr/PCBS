@@ -1,7 +1,7 @@
-% Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
+<<% Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-04-06 12:06:10 christophe@pallier.org>
+% Time-stamp: <2019-04-22 10:38:47 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -721,7 +721,7 @@ Git is a version control tool for software development, an indispensable tool fo
 * **Ubuntu Linux** : Just execute `sudo apt install git` in a terminal.
 * **Windows**: Download `Git for windows` from
   <https://git-scm.com/download/win> and execute it. Accept all the defaults.
-* **MacOS***: Download the `Git for Lac` installer from
+* **MacOS**: Download the `Git for Mac` installer from
   <https://git-scm.com/download/mac> and execute it. Accept all the defaults.
 
 To configure git, open a Terminal (or launch *Git Bash* under Windows) and type:
@@ -754,10 +754,7 @@ R is a programming language specialized for data analyses.
 ### Rstudio Desktop ###
 
 Rstudio is an Integrated Developpement Environment for R which greatly
-simplifies the use of *RMarkdown**
-
-Download and install the latest version of RStudio Desktop from
-<https://www.rstudio.com/products/rstudio/download/>
+simplifies the use of __RMarkdown_. You can download and install the latest version of __RStudio Desktop_ from <https://www.rstudio.com/products/rstudio/download/>. Make sure to select the correct Operating System!
 
 --------------------------------------------------------------------------------
 
@@ -847,20 +844,21 @@ Why learn the command shell?
        Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python)
        * [Python 3 : des fondamentaux aux concepts avancés du
        langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/).
-   - Books: [_Apprendre à Programmer avec
-   Python3_](https://inforef.be/swi/python.htm) , [_Think
-   Python_](http://greenteapress.com/thinkpython2/),
+   - Books: 
+       * [_Automate the boring stuff with Python_](https://automatetheboringstuff.com/) (highly recommended!)
+       * [_Apprendre à Programmer avec
+   Python3_](https://inforef.be/swi/python.htm) 
+       * [_Think Python_](http://greenteapress.com/thinkpython2/),
 
 --------------------------------------------------------------------------------
 
 ## Resources to learn Git ##
 
-  * The [Git Book](https://www.gitbook.com/)
-  * Openclassrooms' MOOC
-  <https://openclassrooms.com/en/courses/3321726-manage-your-code-with-git-and-github?status=published>
+  * Openclassrooms' MOOC [Manage your code with Git and Github](https://openclassrooms.com/en/courses/3321726-manage-your-code-with-git-and-github?status=published)
   * <https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners>
   * <https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>
-  * my own [git cheat
+  * The [Git Book](https://git-scm.com/book/en/v2)
+  * My own [git cheat
   page](http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git)
 
 -------------------------------------------------------------------------------
