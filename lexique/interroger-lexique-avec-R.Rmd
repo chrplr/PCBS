@@ -141,7 +141,7 @@ Les expressions réulières, ou **regex**, sont des “patterns” qui permetten
 - **`^[aeiou]`** : mots commençant par une voyelle
 - **`^[^aeriou]`** : mots ne commençant pas par une voyelle
 
-Il existe de nombreux tutoriaux sur les regex sur le web, notamment [celui-ci](http://www.canyouseome.com/guide-regex/). La bible sur le sujet est le livre _[Mastering Regular Expressions](http://regex.info/book.html)_  de Jeff Friedl. 
+Il existe de nombreux tutoriaux sur les regex sur le web, notamment <http://regextutorials.com/intro.html> 
 
 Une expression régulière décrit un automate de transitions à états finis. Le site <https://regexper.com/> vous permet de visualiser l’automate associé à une regex. Par exemple `[ptk].*[aiou][aiou].?ion$` correspond à l’automate fini:
 
