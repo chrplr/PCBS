@@ -2,68 +2,74 @@
 title: "Interroger Lexique avec R"
 author: "Christophe Pallier"
 output:
+  html_document:
+    df_print: paged
+    toc: yes
   html_notebook:
     toc: yes
   pdf_document:
     toc: yes
 ---
 
-## Introduction
 
-Ce document montre comment interroger et manipuler la base [Lexique](http://www.lexique.org) en [R](https://fr.wikipedia.org/wiki/R_(langage)) 
+Ce document montre comment interroger et manipuler la base [Lexique](http://www.lexique.org) hors-ligne avec le logiciel [R](https://fr.wikipedia.org/wiki/R_(langage)) 
 
-Il fait parti du cours [Programmation pour les Sciences Cognitives](https://chrplr.github.io/PCBS/). Merci de signaler d'éventuelles erreurs à <christophe@pallier.org>
+Note: Il fait parti du cours [Programmation pour les Sciences Cognitives](https://chrplr.github.io/PCBS/). Merci de signaler d'éventuelles erreurs à <christophe@pallier.org>
 
 
-## Préparation
+## Installation
 
-1. S'ils ne sont pas déjà installés sur votre ordinateur, vous devrez installer les logiciels [R](https://cran.r-project.org/) et  [R-Studio Desktop](https://www.rstudio.com/products/rstudio/#Desktop).
+1. S'ils ne sont pas déjà installés sur votre ordinateur, vous devrez installer les deux logiciels (en acceptant les options par défaut):
 
-2. Télécharger <http://www.lexique.org/databases/Lexique382/Lexique382.zip>
+   * [R](https://cran.r-project.org/) 
+   * [RStudio Desktop](https://www.rstudio.com/products/rstudio/#Desktop). 
+   
+2. Démarrer le programme **Rstudio** puis, dans l'onglet **Console** situé dans la fenêtre en bas à gauche, copier la ligne suivante puis appuyez sur 'Entrée'
 
-3. Créer un répertoire `Lexique` puis dézipper dans ce répertoire le fichier `Lexique382.zip` précédemment téléchargé.
+    ```{r warning=FALSE,  message=FALSE, results='hide'}
+    install.packages(c('rjson', 'tidyverse'))
+    ```
 
-4. Démarrer le programme **Rstudio** 
+    Laissez RStudio se débrouiller (mais vous devrez peut-être sélectionner un serveur). 
 
-   - Sélectionner le menu `File/New Project`; 
-   - Choisir "Existing directory" et naviguer jusqu'au répertoire `Lexique` que vous venez de créer; cliquer sur le bouton `create project`. 
-   - Dans la fenêtre en bas à droite, parmi la liste des fichiers listés sous l'onglet *Files*, il doit apparaitre `Lexique382.tsv`. Si tel n'est pas le cas, vérifiez que vous avez bien suivi les instructions.
 
-5. Dans la fenêtre en bas à gauche de Rstudio, dans l'onglet *Console*, copier la ligne suivante puis appuyez sur 'Entrée'
+   Puis créez un nouveau projet (Menu `File/New Project/New Directory/New project`) que vous nommerez 'Lexique'. 
 
-```
-    install.packages('tidyverse')
-```
 
-Laissez rstudio se débrouiller (mais vous devrez peut-être sélectionner un serveur). Quand il a fini, vous êtes prêt ! Vous n'aurez plus jamais à refaire ces étapes.
+   Vous êtes  prêt ! Vous n'aurez plus jamais à refaire ces étapes.
 
-## Chargement de la table "Lexique.org"
+## Chargement de la table *lexique*
 
-Tout se déroule dans Rstudio. Assurez vous de bien travailler dans le projet "lexique" créé dans la section "préparation". Après un redémarrage de rstudio, utilisez le menu `File/Recent Projects` pour retrouver ce projet.
+Tout se déroule dans le logiciel **RStudio**. 
 
-- Cliquez le menu "File / New File / R Notebook". Un document "Untitled" apparait dans le fenetre en haut à gauche. 
-- C'est dans ce document que nous allons entrer du code R:
+Dans le menu `File`, ouvrez le projet *lexique* créé dans la section précédente (Après un redémarrage de RStudio, vous pouvez utiliser le menu `File/Recent Projects` pour retrouver ce projet).
 
-  Déplacez vous à la ligne 5 (juste après la ligne contenant '---'), et cliquez sur le bouton *Insert* puis choisisez *R* (vous pouvez aller plus vite en appuyant sur *Ctrl+Alt+I*). 
+- Cliquez le menu `File/New File/R Notebook`: Un document "Untitled" apparait dans la fenêtre en haut à gauche. C'est dans ce document que nous allons entrer du code R.
+
+- Commencez par supprimer tout ce que se trouve après la ligne 4 (ne conservez que les 4 premières lignes).
+
+- Placez le curseur sur la ligne 5 (juste après la ligne contenant '---'), et cliquez sur le bouton *Insert* puis choisisez *R* (ou appuyer sur *Ctrl+Alt+I*). 
   
-  Copiez les trois lignes suivantes dans le bloc de code qui vient d'être créé. 
+  Copiez les lignes suivantes à l'intérieur du bloc de code qui vient d'être créé. 
 
-```{r}
-    require(tidyverse)  # you must have ran "install.packages('tidyverse')" earlier
-    lexique = read_delim("Lexique382.tsv", delim="\t")
-    head(lexique, 25)
-```
-
-   Puis, en faisant bien attention que le curseur soit à l'intérieur du bloc de code, cliquer sur *Run / Run current chunk* (ou bien appuyer sur la petite *fleche verte*, ou sur *Ctrl-Shift-Enter*). Vous devriez voir les premières lignes de la table lexique s'afficher. Celle doit également apparaitre dans l'onglet "Environment" en haut à droite. 
-
-
-Conseil: Lorsque vous quitterez rstudio, acceptez la proposition "sauvegarder le worskpace". Ainsi, la prochaine fois que vous ouvrirez le projet 'lexique' dans rstudio, la table sera déjà présente dans l'environnement, et il ne sera donc pas nécessaire d'exécuter les lignes ci-dessus (`read_delim`...).
+    ```{r warning=FALSE,  message=FALSE, results='hide'}
+    require(tidyverse)
+    require(rjson)
+    source('https://raw.githubusercontent.com/chrplr/openlexicon/master/datasets-info/fetch_datasets.R')
+    lexique <- get_lexique382()
+    ```
 
 
-## Sélection de mots entiers
+   Puis, en faisant bien attention que le curseur soit à l'intérieur du bloc de code, cliquez sur `Run/Run current chunk` (ou bien appuyez sur la petite *fleche verte*, ou bien encore sur les touches *Ctrl-Shift-Enter*). 
 
-Supposons que vous vouliez extraire les lignes de la table lexique correspondant, par exemple, aux mots 'bateau', 'avion', 'maison', 'arbre'. Le code suivant fait précisemment cela:
+  La variable `lexique` doit maintenant apparaitre dans l'onglet **Environment** en haut à droite ; Cliquez dessus pour consulter la table. 
 
+
+## Recherche de mots
+
+Supposons que vous vouliez extraire les lignes de la table lexique correspondant, par exemple, aux mots *bateau, avion, maison, arbre*. 
+
+Créez un bloc de code (Ctrl-Alt-I) et copiez-y le code suivant :
 
 ```{r}
 items <- c('bateau', 'avion', 'maison', 'arbre')
@@ -73,26 +79,37 @@ selection <- subset(lexique, ortho %in% items)
 head(selection)
 ```
 
-Vous pouvez inspecter le contenu de la table `selection` en cliquant sur son nom dans l'onglet *Environment* situé dans la fenetre en haut à droite de rstudio.
+Exécutez ce code (Ctrl-Shift-Enter). La variable `selection` doit contenir les lignes pertinente. Vous pouvez inspecter son contenu en cliquant sur son nom dans l'onglet **Environment** situé dans la fenêtre en haut à droite de RStudio.
 
-
-Vous pouvez également sauvegarder les résultats obtenus dans un fichier,  avec la commande suivante:
+Pour sauvegarder les résultats obtenus dans un fichier, exéctuez la commande suivante:
 
 ```{r}
 write_tsv(selection, 'selection.tsv')
 ```
 
-Notez que les fichiers ayant l'extension `csv` (tab-separated-values) peuvent être [ouverts avec Excel](https://rievent.zendesk.com/hc/en-us/articles/360000029172-FAQ-How-do-I-open-a-tsv-file-in-Excel-), ou OpenOffice Cal, ou même avec n'importe quel éditeur de texte. Note: le package `readr` de R fournit aussi des fonctions `write_excel_csv` et `write_excel_csv2` qui peuvent intéresser certains.
 
-Si vous avez une liste de mots plus longues, il serait fastidieux d'écrire la ligne `items <- ...`. Plus simplement vous pouvez utiliser:
+Cela doit créer un fichier `selection.tsv` dans le répertoire du projet (*lexique*).
+
+Notez que les fichiers ayant l'extension `tsv` (tab-separated-values) peuvent être [ouverts avec Excel](https://rievent.zendesk.com/hc/en-us/articles/360000029172-FAQ-How-do-I-open-a-tsv-file-in-Excel-), ou OpenOffice Calc, ou même avec n'importe quel éditeur de texte. Note: le package `readr` de R fournit aussi des fonctions `write_excel_csv` et `write_excel_csv2` qui peuvent intéresser certains.
+
+Si vous avez une liste de mots plus longue, il serait fastidieux d'écrire la ligne `items <- ...`. Plus simplement vous pouvez utiliser:
 
 ```{r}
 items = scan(what='characters')
 ```
 
-Et copier la liste de mots. Entrer une ligne vide termine le processus. 
+Et coller la liste de mots. Pour finir la liste,  entrez une ligne vide (en appuyant deux fois successivement sur la touche *Entrée*), puis, à nouveau:
 
-La fonction `scan` permet aussi de lire la liste dans un fichier externe.
+```{r}
+selection <- subset(lexique, ortho %in% items)
+```
+
+Comme la fonction `scan` permet aussi de lire la liste dans un fichier externe, si vous avez une liste de mots dans fichier `liste.txt`, vous pouvez extraire les lignes de lexique qui contiennent spécifiquement ces mots avec le code suivant:
+
+```{r}
+liste <- scan('liste.txt', what='characters')
+selection <- subset(lexique, ortho %in% liste)
+```
 
 ## Sélection par critères
 
@@ -103,15 +120,18 @@ selection = subset(lexique, cgram=='NOM' & nombre != 'p' & nblettres==5 & freqli
 head(selection)
 ```
 
+
+Le symbole `&` signifie 'et'. L'expression `nombre != p` signitif que la valeur dans la colonne *nombre* ne doit pas être `p`.
+
 ## Sélection par "pattern"
 
 ### Les expressions régulières
 
-Les expressions réulières, ou **regex**, sont des “patterns” qui permettent de rechercher des mots ayant certaines propriétés. Par exemple n'importe `a.b` désigne un mot contenant un `a` et un `b` séparés par une lettre quelonque. Voici d'autre exemples:
+Les expressions réulières, ou **regex**, sont des “patterns” qui permettent de rechercher des mots ayant certaines propriétés. Par exemple n'importe `a.b` désigne un mot contenant un `a` et un `b` séparés par une lettre quelconque. Voici d'autre exemples:
 
 - **`^maison$`** : recherche le mot “maison” exactement
 - **`^anti`** : recherche tous les mots commençant par “anti”
-- **`^jour$|^nuit$|^matin$|^soir$`** : “jour” ou “nuit” ou “matin” ou “soir” (permet de rechercher une liste de mots)
+- **`^(jour|nuit|matin|soir)$`** : “jour” ou “nuit” ou “matin” ou “soir” (permet de rechercher une liste de mots)
 - **`ion`** : recherche les mots qui contiennent la chaine “ion” dans n’importe quelle position
 - **`ion$`** : mots se terminant par “ion”
 - **`^pr`** : mots commençant par “pr”

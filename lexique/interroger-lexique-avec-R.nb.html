@@ -75,7 +75,7 @@ display: none;
 padding: 0 4px 0 4px;
 }
 .pagedtable .even {
-background-color: #fcfcfc;
+background-color: rgba(140, 140, 140, 0.1);
 }
 .pagedtable-padding-col {
 display: none;
@@ -1479,7 +1479,7 @@ window.initializeCodeFolding = function(show) {
   var currentIndex = 1;
 
   // select all R code blocks
-  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan');
+  var rCodeBlocks = $('pre.r, pre.python, pre.bash, pre.sql, pre.cpp, pre.stan, pre.julia');
   rCodeBlocks.each(function() {
 
     // create a collapsable div to wrap the code in
@@ -1600,9 +1600,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type="text/css">
 .main-container {
@@ -1626,6 +1624,9 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -1655,12 +1656,71 @@ button.code-folding-btn:focus {
 </style>
 
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
@@ -1676,6 +1736,14 @@ $(document).ready(function () {
 </script>
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -1695,16 +1763,15 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Interroger Lexique avec R</h1>
-<h4 class="author"><em>Christophe Pallier</em></h4>
+<h4 class="author">Christophe Pallier</h4>
 
 </div>
 
 <div id="TOC">
 <ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#preparation">Préparation</a></li>
-<li><a href="#chargement-de-la-table-lexique.org">Chargement de la table “Lexique.org”</a></li>
-<li><a href="#selection-de-mots-entiers">Sélection de mots entiers</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#chargement-de-la-table-lexique">Chargement de la table <em>lexique</em></a></li>
+<li><a href="#recherche-de-mots">Recherche de mots</a></li>
 <li><a href="#selection-par-criteres">Sélection par critères</a></li>
 <li><a href="#selection-par-pattern">Sélection par “pattern”</a><ul>
 <li><a href="#les-expressions-regulieres">Les expressions régulières</a></li>
@@ -1714,70 +1781,60 @@ $(document).ready(function () {
 </div>
 
 <!-- rnb-text-begin -->
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
-<p>Ce document montre comment interroger et manipuler la base <a href="http://www.lexique.org">Lexique</a> en <a href="https://fr.wikipedia.org/wiki/R_(langage)">R</a></p>
-<p>Il fait parti du cours <a href="https://chrplr.github.io/PCBS/">Programmation pour les Sciences Cognitives</a>. Merci de signaler d’éventuelles erreurs à <a href="mailto:christophe@pallier.org">christophe@pallier.org</a></p>
-</div>
-<div id="preparation" class="section level2">
-<h2>Préparation</h2>
+<p>Ce document montre comment interroger et manipuler la base <a href="http://www.lexique.org">Lexique</a> hors-ligne avec le logiciel <a href="https://fr.wikipedia.org/wiki/R_(langage)">R</a></p>
+<p>Note: Il fait parti du cours <a href="https://chrplr.github.io/PCBS/">Programmation pour les Sciences Cognitives</a>. Merci de signaler d’éventuelles erreurs à <a href="mailto:christophe@pallier.org" class="email">christophe@pallier.org</a></p>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
 <ol style="list-style-type: decimal">
-<li><p>S’ils ne sont pas déjà installés sur votre ordinateur, vous devrez installer les logiciels <a href="https://cran.r-project.org/">R</a> et <a href="https://www.rstudio.com/products/rstudio/#Desktop">R-Studio Desktop</a>.</p></li>
-<li><p>Télécharger <a href="http://www.lexique.org/databases/Lexique382/Lexique382.zip" class="uri">http://www.lexique.org/databases/Lexique382/Lexique382.zip</a></p></li>
-<li><p>Créer un répertoire <code>Lexique</code> puis dézipper dans ce répertoire le fichier <code>Lexique382.zip</code> précédemment téléchargé.</p></li>
-<li><p>Démarrer le programme <strong>Rstudio</strong></p>
+<li><p>S’ils ne sont pas déjà installés sur votre ordinateur, vous devrez installer les deux logiciels (en acceptant les options par défaut):</p>
 <ul>
-<li>Sélectionner le menu <code>File/New Project</code>;</li>
-<li>Choisir “Existing directory” et naviguer jusqu’au répertoire <code>Lexique</code> que vous venez de créer; cliquer sur le bouton <code>create project</code>.</li>
-<li>Dans la fenêtre en bas à droite, parmi la liste des fichiers listés sous l’onglet <em>Files</em>, il doit apparaitre <code>Lexique382.tsv</code>. Si tel n’est pas le cas, vérifiez que vous avez bien suivi les instructions.</li>
+<li><a href="https://cran.r-project.org/">R</a></li>
+<li><a href="https://www.rstudio.com/products/rstudio/#Desktop">RStudio Desktop</a>.</li>
 </ul></li>
-<li><p>Dans la fenêtre en bas à gauche de Rstudio, dans l’onglet <em>Console</em>, copier la ligne suivante puis appuyez sur ‘Entrée’</p></li>
+<li><p>Démarrer le programme <strong>Rstudio</strong> puis, dans l’onglet <strong>Console</strong> situé dans la fenêtre en bas à gauche, copier la ligne suivante puis appuyez sur ‘Entrée’</p></li>
 </ol>
-<pre><code>    install.packages('tidyverse')</code></pre>
-<p>Laissez rstudio se débrouiller (mais vous devrez peut-être sélectionner un serveur). Quand il a fini, vous êtes prêt ! Vous n’aurez plus jamais à refaire ces étapes.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<pre><code>Laissez RStudio se débrouiller (mais vous devrez peut-être sélectionner un serveur). </code></pre>
+<p>Puis créez un nouveau projet (Menu <code>File/New Project/New Directory/New project</code>) que vous nommerez ‘Lexique’.</p>
+<p>Vous êtes prêt ! Vous n’aurez plus jamais à refaire ces étapes.</p>
 </div>
-<div id="chargement-de-la-table-lexique.org" class="section level2">
-<h2>Chargement de la table “Lexique.org”</h2>
-<p>Tout se déroule dans Rstudio. Assurez vous de bien travailler dans le projet “lexique” créé dans la section “préparation”. Après un redémarrage de rstudio, utilisez le menu <code>File/Recent Projects</code> pour retrouver ce projet.</p>
+<div id="chargement-de-la-table-lexique" class="section level2">
+<h2>Chargement de la table <em>lexique</em></h2>
+<p>Tout se déroule dans le logiciel <strong>RStudio</strong>.</p>
+<p>Dans le menu <code>File</code>, ouvrez le projet <em>lexique</em> créé dans la section précédente (Après un redémarrage de RStudio, vous pouvez utiliser le menu <code>File/Recent Projects</code> pour retrouver ce projet).</p>
 <ul>
-<li>Cliquez le menu “File / New File / R Notebook”. Un document “Untitled” apparait dans le fenetre en haut à gauche.</li>
-<li><p>C’est dans ce document que nous allons entrer du code R:</p>
-<p>Déplacez vous à la ligne 5 (juste après la ligne contenant ‘—’), et cliquez sur le bouton <em>Insert</em> puis choisisez <em>R</em> (vous pouvez aller plus vite en appuyant sur <em>Ctrl+Alt+I</em>).</p>
-<p>Copiez les trois lignes suivantes dans le bloc de code qui vient d’être créé.</p></li>
+<li><p>Cliquez le menu <code>File/New File/R Notebook</code>: Un document “Untitled” apparait dans la fenêtre en haut à gauche. C’est dans ce document que nous allons entrer du code R.</p></li>
+<li><p>Commencez par supprimer tout ce que se trouve après la ligne 4 (ne conservez que les 4 premières lignes).</p></li>
+<li><p>Placez le curseur sur la ligne 5 (juste après la ligne contenant ‘—’), et cliquez sur le bouton <em>Insert</em> puis choisisez <em>R</em> (ou appuyer sur <em>Ctrl+Alt+I</em>).</p>
+<p>Copiez les lignes suivantes à l’intérieur du bloc de code qui vient d’être créé.</p></li>
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICAgIHJlcXVpcmUodGlkeXZlcnNlKSAgIyB5b3UgbXVzdCBoYXZlIHJhbiBcImluc3RhbGwucGFja2FnZXMoJ3RpZHl2ZXJzZScpXCIgZWFybGllclxuICAgIGxleGlxdWUgPSByZWFkX2RlbGltKFwiTGV4aXF1ZTM4Mi50c3ZcIiwgZGVsaW09XCJcXHRcIilcbiAgICBoZWFkKGxleGlxdWUsIDI1KVxuYGBgIn0= -->
-<pre class="r"><code>    require(tidyverse)  # you must have ran &quot;install.packages('tidyverse')&quot; earlier
-    lexique = read_delim(&quot;Lexique382.tsv&quot;, delim=&quot;\t&quot;)
-    head(lexique, 25)</code></pre>
-<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Puis, en faisant bien attention que le curseur soit à l’intérieur du bloc de code, cliquer sur <em>Run / Run current chunk</em> (ou bien appuyer sur la petite <em>fleche verte</em>, ou sur <em>Ctrl-Shift-Enter</em>). Vous devriez voir les premières lignes de la table lexique s’afficher. Celle doit également apparaitre dans l’onglet “Environment” en haut à droite.</p>
-<p>Conseil: Lorsque vous quitterez rstudio, acceptez la proposition “sauvegarder le worskpace”. Ainsi, la prochaine fois que vous ouvrirez le projet ‘lexique’ dans rstudio, la table sera déjà présente dans l’environnement, et il ne sera donc pas nécessaire d’exécuter les lignes ci-dessus (<code>read_delim</code>…).</p>
+<p>Puis, en faisant bien attention que le curseur soit à l’intérieur du bloc de code, cliquez sur <code>Run/Run current chunk</code> (ou bien appuyez sur la petite <em>fleche verte</em>, ou bien encore sur les touches <em>Ctrl-Shift-Enter</em>).</p>
+<p>La variable <code>lexique</code> doit maintenant apparaitre dans l’onglet <strong>Environment</strong> en haut à droite ; Cliquez dessus pour consulter la table.</p>
 </div>
-<div id="selection-de-mots-entiers" class="section level2">
-<h2>Sélection de mots entiers</h2>
-<p>Supposons que vous vouliez extraire les lignes de la table lexique correspondant, par exemple, aux mots ‘bateau’, ‘avion’, ‘maison’, ‘arbre’. Le code suivant fait précisemment cela:</p>
+<div id="recherche-de-mots" class="section level2">
+<h2>Recherche de mots</h2>
+<p>Supposons que vous vouliez extraire les lignes de la table lexique correspondant, par exemple, aux mots <em>bateau, avion, maison, arbre</em>.</p>
+<p>Créez un bloc de code (Ctrl-Alt-I) et copiez-y le code suivant :</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXRlbXMgPC0gYygnYmF0ZWF1JywgJ2F2aW9uJywgJ21haXNvbicsICdhcmJyZScpXG5zZWxlY3Rpb24gPC0gc3Vic2V0KGxleGlxdWUsIG9ydGhvICVpbiUgaXRlbXMpXG5oZWFkKHNlbGVjdGlvbilcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXRlbXMgPC0gYygnYmF0ZWF1JywgJ2F2aW9uJywgJ21haXNvbicsICdhcmJyZScpXG5cbnNlbGVjdGlvbiA8LSBzdWJzZXQobGV4aXF1ZSwgb3J0aG8gJWluJSBpdGVtcylcblxuaGVhZChzZWxlY3Rpb24pXG5gYGAifQ== -->
 <pre class="r"><code>items &lt;- c('bateau', 'avion', 'maison', 'arbre')
+
 selection &lt;- subset(lexique, ortho %in% items)
+
 head(selection)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MzUsIm5yb3ciOjR9LCJyZGYiOiJINHNJQUFBQUFBQUFBNzFXUFd6VFFCUytKbmJTQkxWVTBJRUprTHFVd1JHMGxaZ2dsa0pWRmdxVUtyUlZwWEpPbk1URnZqTzJZNkJpYUNzeGQwUWd0Z3AxWTJaRVpVTmxZWUdWR1FsMXFSQUlDbmYyM2Zuc3RrQVI0cVRrdmUvOTNMdjMzdDFMcGk3TmpKUm55Z0NBSE1qbmN5Q1hKNnlTSTE4OVFBRWxTdThCa0Q5T21DSHlHYUJhcGxDaFozaW1BS0dGRVFNRkF3WW03SExrUU1zbnVyUzNBcWVNS1FDV21mUGk1Z1pYRUdmTUZjNzRFbEg4eTdqNXlhdFhmcyttZlhxY2ZSZ0FTai9JeXByNnYySUE2S2UyK3JROXZMTzVOcS9mT2pKS2w3NHd0dlJoNHZtZ3Z2b0pzQlhiTFI1Ym14L2VlYVhmV0kzcDlLUHlCWGY5bmI3eTljWDFqdzlQQ2J2THowNVNnVDVueEhaejYvRytLMjliZEFtN2E2K3BlMW1mNk5Ed1ovVEpwL0U1SHJ6Zkl1dU55Q1hKN1NBYTdWZmRqZzk3RUJWeEdkQUhHQVZwZXVqOUJway9weWZTVk5qeGVBZFFrTGxZOVZxdFZrOUF2VjdqVjZsR1VUMUJCTll5M2dyMVR2aFpicTFRM3hTZnFZcVUzYjVWRWRYaVdaNWo5UFIvcVlyOFVBdFFrMTZxYWtCTlBOV0NNNjdGYnpYVlNuSDR2Y21sZ2tqRlUrdGFVajIxUmxBR1pMcG1rbkVBT1VEWUNqa29kS0VaUUlNamhIMExPdG5BSkRuSXA4M214cUp3VmpCMUZZcWw4YXhuQVhwYU1vZG9aWkpCVktTVlNTWlJrVXdpN2U5SFVkeTFXVlpBVG0rK1pGU1VOTFliWS9vUlJzOHplaEdrN0tyZllsRDkvcGl1SjlVZjBjZ1k1WGlQM1dlbTM5Nktaa1gxaTdCTGRlUFF3L2tQWDM3cU4wbEYwREY5Rm5xSUM3RVhkREJ2bjlzUmtWWGJkQnh4cGtiYmczeU1xMjBUSlMxRTJFbk8zdGZ5ekR2RXNXWFpqaitTRWRwVzZKbDhycGVwTUdVV1NWSTJSUXUxY0doNkRQWWlvNE1kM001Z3Q4UFBaZmtrQ2dNbFpOaG1FRWliSVlObXg2SFNDQnNoejhGZGtGQnZpRW1SU1ZWa0xCV200SFlsTFVHU1R2SHYyN2FvakNFaHRSRnFTUWk2Z1djaWdla1dFaTVGVFpHOHkxSDk1VllWbW1ZcnlaWWliUGlpcDNaejVDd0hyZ1JLWkE4U3F5bHFTcW9TaWJKWHBXRkRuMThWTGl3M1lRQXJMWElRTTJOZTh2RGRDcjlkZmVTVFd5WmY1RGVQUG9QZGpIRVJ1NEZGR3dGeTlBK1Ntb25TNDJVRVI3dUlidDNVR3AwdXVxM1JGMXFPMVBIcVk3d2k4VU54eUJ6L242SHlNcG1vYlNGeHFXMW9tTHpDL1NTRktJT0s2MWtvNENrVHFWOEp5RlJMT29GdExvbHlBN3MvQWVVakY1UU9DZ0FBIn0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["ortho"],"name":[1],"type":["chr"],"align":["left"]},{"label":["phon"],"name":[2],"type":["chr"],"align":["left"]},{"label":["lemme"],"name":[3],"type":["chr"],"align":["left"]},{"label":["cgram"],"name":[4],"type":["chr"],"align":["left"]},{"label":["genre"],"name":[5],"type":["chr"],"align":["left"]},{"label":["nombre"],"name":[6],"type":["chr"],"align":["left"]},{"label":["freqlemfilms2"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["freqlemlivres"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["freqfilms2"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["freqlivres"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["infover"],"name":[11],"type":["chr"],"align":["left"]},{"label":["nbhomogr"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["nbhomoph"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["islem"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["nblettres"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["nbphons"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["cvcv"],"name":[17],"type":["chr"],"align":["left"]},{"label":["p_cvcv"],"name":[18],"type":["chr"],"align":["left"]},{"label":["voisorth"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["voisphon"],"name":[20],"type":["dbl"],"align":["right"]},{"label":["puorth"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["puphon"],"name":[22],"type":["dbl"],"align":["right"]},{"label":["syll"],"name":[23],"type":["chr"],"align":["left"]},{"label":["nbsyll"],"name":[24],"type":["dbl"],"align":["right"]},{"label":["cv-cv"],"name":[25],"type":["chr"],"align":["left"]},{"label":["orthrenv"],"name":[26],"type":["chr"],"align":["left"]},{"label":["phonrenv"],"name":[27],"type":["chr"],"align":["left"]},{"label":["orthosyll"],"name":[28],"type":["chr"],"align":["left"]},{"label":["cgramortho"],"name":[29],"type":["chr"],"align":["left"]},{"label":["deflem"],"name":[30],"type":["dbl"],"align":["right"]},{"label":["defobs"],"name":[31],"type":["dbl"],"align":["right"]},{"label":["old20"],"name":[32],"type":["dbl"],"align":["right"]},{"label":["pld20"],"name":[33],"type":["dbl"],"align":["right"]},{"label":["morphoder"],"name":[34],"type":["chr"],"align":["left"]},{"label":["nbmorph"],"name":[35],"type":["dbl"],"align":["right"]}],"data":[{"1":"arbre","2":"aRbR","3":"arbre","4":"NOM","5":"m","6":"s","7":"81.69","8":"208.58","9":"49.29","10":"67.16","11":"NA","12":"1","13":"2","14":"1","15":"5","16":"4","17":"VCCCV","18":"VCCC","19":"2","20":"2","21":"5","22":"4","23":"aRbR","24":"1","25":"VCCC","26":"erbra","27":"RbRa","28":"ar-bre","29":"NOM","30":"100","31":"20","32":"1.75","33":"1.75","34":"arbre","35":"1"},{"1":"avion","2":"avj§","3":"avion","4":"NOM","5":"m","6":"s","7":"128.35","8":"78.04","9":"105.54","10":"46.82","11":"NA","12":"1","13":"4","14":"1","15":"5","16":"4","17":"VCVVC","18":"VCYV","19":"1","20":"6","21":"5","22":"4","23":"a-vj§","24":"2","25":"V-CYV","26":"noiva","27":"§jva","28":"a-vion","29":"NOM","30":"100","31":"18","32":"1.85","33":"1.45","34":"avion","35":"1"},{"1":"bateau","2":"bato","3":"bateau","4":"NOM","5":"m","6":"s","7":"124.82","8":"82.36","9":"106.55","10":"61.22","11":"NA","12":"1","13":"2","14":"1","15":"6","16":"4","17":"CVCVVV","18":"CVCV","19":"0","20":"17","21":"6","22":"4","23":"ba-to","24":"2","25":"CV-CV","26":"uaetab","27":"otab","28":"ba-teau","29":"NOM","30":"95","31":"23","32":"1.95","33":"1.05","34":"bateau","35":"1"},{"1":"maison","2":"mEz§","3":"maison","4":"NOM","5":"NA","6":"s","7":"605.75","8":"575.34","9":"570.30","10":"461.55","11":"NA","12":"1","13":"2","14":"1","15":"6","16":"4","17":"CVVCVC","18":"CVCV","19":"2","20":"8","21":"6","22":"4","23":"mE-z§","24":"2","25":"CV-CV","26":"nosiam","27":"§zEm","28":"mai-son","29":"NOM","30":"93","31":"30","32":"1.85","33":"1.60","34":"maison","35":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[35]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Vous pouvez inspecter le contenu de la table <code>selection</code> en cliquant sur son nom dans l’onglet <em>Environment</em> situé dans la fenetre en haut à droite de rstudio.</p>
-<p>Vous pouvez également sauvegarder les résultats obtenus dans un fichier, avec la commande suivante:</p>
+<p>Exécutez ce code (Ctrl-Shift-Enter). La variable <code>selection</code> doit contenir les lignes pertinente. Vous pouvez inspecter son contenu en cliquant sur son nom dans l’onglet <strong>Environment</strong> situé dans la fenêtre en haut à droite de RStudio.</p>
+<p>Pour sauvegarder les résultats obtenus dans un fichier, exéctuez la commande suivante:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGVfdHN2KHNlbGVjdGlvbiwgJ3NlbGVjdGlvbi50c3YnKVxuYGBgIn0= -->
@@ -1785,21 +1842,33 @@ head(selection)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Notez que les fichiers ayant l’extension <code>csv</code> (tab-separated-values) peuvent être <a href="https://rievent.zendesk.com/hc/en-us/articles/360000029172-FAQ-How-do-I-open-a-tsv-file-in-Excel-">ouverts avec Excel</a>, ou OpenOffice Cal, ou même avec n’importe quel éditeur de texte. Note: le package <code>readr</code> de R fournit aussi des fonctions <code>write_excel_csv</code> et <code>write_excel_csv2</code> qui peuvent intéresser certains.</p>
-<p>Si vous avez une liste de mots plus longues, il serait fastidieux d’écrire la ligne <code>items &lt;- ...</code>. Plus simplement vous pouvez utiliser:</p>
+<p>Cela doit créer un fichier <code>selection.tsv</code> dans le répertoire du projet (<em>lexique</em>).</p>
+<p>Notez que les fichiers ayant l’extension <code>tsv</code> (tab-separated-values) peuvent être <a href="https://rievent.zendesk.com/hc/en-us/articles/360000029172-FAQ-How-do-I-open-a-tsv-file-in-Excel-">ouverts avec Excel</a>, ou OpenOffice Calc, ou même avec n’importe quel éditeur de texte. Note: le package <code>readr</code> de R fournit aussi des fonctions <code>write_excel_csv</code> et <code>write_excel_csv2</code> qui peuvent intéresser certains.</p>
+<p>Si vous avez une liste de mots plus longue, il serait fastidieux d’écrire la ligne <code>items &lt;- ...</code>. Plus simplement vous pouvez utiliser:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXRlbXMgPSBzY2FuKHdoYXQ9J2NoYXJhY3RlcnMnKVxuYWxsZXJcbmBgYCJ9 -->
-<pre class="r"><code>items = scan(what='characters')
-aller</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaXRlbXMgPSBzY2FuKHdoYXQ9J2NoYXJhY3RlcnMnKVxuYGBgIn0= -->
+<pre class="r"><code>items = scan(what='characters')</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUmVhZCAxIGl0ZW1cbiJ9 -->
-<pre><code>Read 1 item</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Et copier la liste de mots. Entrer une ligne vide termine le processus.</p>
-<p>La fonction <code>scan</code> permet aussi de lire la liste dans un fichier externe.</p>
+<p>Et coller la liste de mots. Pour finir la liste, entrez une ligne vide (en appuyant deux fois successivement sur la touche <em>Entrée</em>), puis, à nouveau:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2VsZWN0aW9uIDwtIHN1YnNldChsZXhpcXVlLCBvcnRobyAlaW4lIGl0ZW1zKVxuYGBgIn0= -->
+<pre class="r"><code>selection &lt;- subset(lexique, ortho %in% items)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Comme la fonction <code>scan</code> permet aussi de lire la liste dans un fichier externe, si vous avez une liste de mots dans fichier <code>liste.txt</code>, vous pouvez extraire les lignes de lexique qui contiennent spécifiquement ces mots avec le code suivant:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdGUgPC0gc2NhbignbGlzdGUudHh0Jywgd2hhdD0nY2hhcmFjdGVycycpXG5zZWxlY3Rpb24gPC0gc3Vic2V0KGxleGlxdWUsIG9ydGhvICVpbiUgbGlzdGUpXG5gYGAifQ== -->
+<pre class="r"><code>liste &lt;- scan('liste.txt', what='characters')
+selection &lt;- subset(lexique, ortho %in% liste)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 <div id="selection-par-criteres" class="section level2">
 <h2>Sélection par critères</h2>
@@ -1810,25 +1879,19 @@ aller</code></pre>
 <pre class="r"><code>selection = subset(lexique, cgram=='NOM' &amp; nombre != 'p' &amp; nblettres==5 &amp; freqlivres &gt; 10 &amp; freqlivres &lt; 100)
 head(selection)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MzUsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNzFXVFlnY1JSU3VuZW1ablduWXVPQWVSQ1NDUzJReDZTRk1vZ1JEbU5KUmN6S0xLMHl5d1NEVjA5VXp2ZmJQcEx0bmRQV3lGOCtlSXlLSTkwSHdFc2hGbkt1ZVBlZml4VXRBZHBHZ0cxOTExMThYdTVwZDBCcW0zL3ZlWDFXOVYxMnZ0OTY2MWJWdjJRaWhHcXJYYTZoV0I5YXF3V01KV2FqTjZDY0kxWjhGWmgzK3EvQnZJclRIRkUzaUx1WVI1V1lOTWh5VFhJR0FwaEo0QVoxS0o5OWZQRkIySXhybk1tNHB0SWdiUkp5dmsvZUpGR2M3VlBMZVRsZWErTHVTdlkzL3AwWFdiMnkrZTFxMkdta3BPaGxqZUdjbll4QTZ3N3p4Yy9hMXliZS8ySGg5RDdHQnovLzR4UWNiK3d2OHpwWDNmdnY4N1AzZXdmMkM0anU3OTJCOEtmMHVmN1d4RDZiNEludHVIT0EzWG45NGZiNzJHZTQzempJUC9QTDNsOWpBL1c5QS9PbEQ2YmRXcUYvRWF6K3g4VE0reiszZWpNSHErcnkzeitlLytYd1JUL281blVLUHovM3FzNEh4ZDdEcWEzZnhWYjd1YzErWGNWOHJzYW8rYWorQmNRSmF6c2VEOUI1VjZYRnlsVTl1MStKMDFjQ29Tb1dmR2UvZnFNb25qL2VVVlBxWjYxbzFhS3RLVWZXME5RWjkrQ2tBU05OVXdiRm0vYjRSMVJvb2c3cUtEK0x0bzNqTnBHREYxdFNTelpSVmh0aXE5SHVKeTd2VmxNblN2OERwSzRhZm1Xb3psZjlSQ1lpanJrZUxPUEorQklXNklBR29HeEtzNUJVSmZIRkhWazc3MDFKektRTkhGYzVpUUZOc0h3bDBxNUkzcm1zYUxlYXUzRkpPeGtNSlVob29NS1dCUjRSVHZuamcrOG9wcGlOaUxOV0tBaGxWN3lsMEo1TjhkOGVUSnJzeVhCM2ZKc1lpVzFDQ3hkeVJYYVZKSEsydE1LVDZDaUN0c1N3VDM5RTZDeWlQYUMzTDBDTXVETjdlK3NkR1VoaHQzdGc4dHNXVUJkN21CYnpKNmVDSGtncjVWaFZMdnl0Y2Y0SFREVTVmNWZReXAxZXJmcjNIeFMzdDkvNjZWN1NOM2lISG5JcUQxUHZEOFB1OTZBYVg1SFVuOEo5bHUrZ2Q4RGlQcEYvbDFKeW15YmZLSnE4cGVTMU9lVEZYUHBvYU1ZbG94cGU1TG9SSm1vOFRjZHdtNHlRV2lwQkdhdm5EVVVyRUM5NkFOYVh5bk1WSjVFcTA0cWYwTGpqNlFSaGxYVU1ZQnJPVWlyWnZNMkhGckpCVWJKYUQyRTltTWhtdDJCMG5VVEl5OEdRczFoVmtNQXNIN2RnTmFaNXJ3V0tYN1U1QWF6Z2J6c1FlSmg5cXFEVkxnb3hsUmNkYVlwcVRxYVlGcE9tc2JEY01aV1pjRFRXR00wZE53UUtrTkphWWhkQnd1eWlLNW0wWCtkZEwxZlNvcjNiTFVPSm1zcWFoMTcwb3dFUURiWWdCYzNreXA1Q1ZRbVFlbFdGSU1uRlVoTkQyU0U0NlBpeUVHdWJ0TlBtNEkwN1hDdnhyZS9DQVQ1akhRQTRONCtWa2tnZXNFS2pHdnVBYnhpeExxU0Y0WmhxejBCN2NaOVA0STRlOTdYYWhMc2NLNTVzYXYxNU9XWHZDUXpWRW1tZzhDbUo1cUVQaVVwSGhNN0NGWWdlZFNSckU0azIxUVpwMThpUW5xaEpKS0NURjN0RGgzLy9yQkxxdkRBQUEifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["ortho"],"name":[1],"type":["chr"],"align":["left"]},{"label":["phon"],"name":[2],"type":["chr"],"align":["left"]},{"label":["lemme"],"name":[3],"type":["chr"],"align":["left"]},{"label":["cgram"],"name":[4],"type":["chr"],"align":["left"]},{"label":["genre"],"name":[5],"type":["chr"],"align":["left"]},{"label":["nombre"],"name":[6],"type":["chr"],"align":["left"]},{"label":["freqlemfilms2"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["freqlemlivres"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["freqfilms2"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["freqlivres"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["infover"],"name":[11],"type":["chr"],"align":["left"]},{"label":["nbhomogr"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["nbhomoph"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["islem"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["nblettres"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["nbphons"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["cvcv"],"name":[17],"type":["chr"],"align":["left"]},{"label":["p_cvcv"],"name":[18],"type":["chr"],"align":["left"]},{"label":["voisorth"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["voisphon"],"name":[20],"type":["dbl"],"align":["right"]},{"label":["puorth"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["puphon"],"name":[22],"type":["dbl"],"align":["right"]},{"label":["syll"],"name":[23],"type":["chr"],"align":["left"]},{"label":["nbsyll"],"name":[24],"type":["dbl"],"align":["right"]},{"label":["cv-cv"],"name":[25],"type":["chr"],"align":["left"]},{"label":["orthrenv"],"name":[26],"type":["chr"],"align":["left"]},{"label":["phonrenv"],"name":[27],"type":["chr"],"align":["left"]},{"label":["orthosyll"],"name":[28],"type":["chr"],"align":["left"]},{"label":["cgramortho"],"name":[29],"type":["chr"],"align":["left"]},{"label":["deflem"],"name":[30],"type":["dbl"],"align":["right"]},{"label":["defobs"],"name":[31],"type":["dbl"],"align":["right"]},{"label":["old20"],"name":[32],"type":["dbl"],"align":["right"]},{"label":["pld20"],"name":[33],"type":["dbl"],"align":["right"]},{"label":["morphoder"],"name":[34],"type":["chr"],"align":["left"]},{"label":["nbmorph"],"name":[35],"type":["dbl"],"align":["right"]}],"data":[{"1":"abîme","2":"abim","3":"abîme","4":"NOM","5":"m","6":"s","7":"6.01","8":"20.61","9":"5.03","10":"14.59","11":"NA","12":"2","13":"6","14":"1","15":"5","16":"4","17":"VCVCV","18":"VCVC","19":"3","20":"9","21":"5","22":"4","23":"a-bim","24":"2","25":"V-CVC","26":"emîba","27":"miba","28":"a-bî-me","29":"NOM,VER","30":"100","31":"24","32":"1.65","33":"1.2","34":"abîme","35":"1"},{"1":"achat","2":"aSa","3":"achat","4":"NOM","5":"m","6":"s","7":"9.75","8":"16.96","9":"5.20","10":"10.95","11":"NA","12":"1","13":"3","14":"1","15":"5","16":"3","17":"VCCVC","18":"VCV","19":"0","20":"18","21":"5","22":"3","23":"a-Sa","24":"2","25":"V-CV","26":"tahca","27":"aSa","28":"a-chat","29":"NOM","30":"92","31":"14","32":"1.85","33":"1.0","34":"achat","35":"1"},{"1":"acier","2":"asje","3":"acier","4":"NOM","5":"m","6":"s","7":"13.88","8":"34.46","9":"13.85","10":"33.38","11":"NA","12":"1","13":"4","14":"1","15":"5","16":"4","17":"VCVVC","18":"VCYV","19":"1","20":"5","21":"4","22":"4","23":"a-sje","24":"2","25":"V-CYV","26":"reica","27":"ejsa","28":"a-cier","29":"NOM","30":"91","31":"12","32":"1.90","33":"1.2","34":"acier","35":"1"},{"1":"adieu","2":"adj2","3":"adieu","4":"NOM","5":"m","6":"s","7":"44.44","8":"38.04","9":"36.86","10":"27.50","11":"NA","12":"2","13":"3","14":"1","15":"5","16":"4","17":"VCVVV","18":"VCYV","19":"0","20":"1","21":"4","22":"4","23":"a-dj2","24":"2","25":"V-CYV","26":"ueida","27":"2jda","28":"a-dieu","29":"NOM,ONO","30":"100","31":"21","32":"1.90","33":"1.8","34":"adieu","35":"1"},{"1":"affût","2":"afy","3":"affût","4":"NOM","5":"m","6":"s","7":"1.42","8":"11.35","9":"1.36","10":"10.81","11":"NA","12":"1","13":"2","14":"1","15":"5","16":"3","17":"VCCVC","18":"VCV","19":"0","20":"7","21":"5","22":"3","23":"a-fy","24":"2","25":"V-CV","26":"tûffa","27":"yfa","28":"af-fût","29":"NOM","30":"75","31":"20","32":"2.00","33":"1.4","34":"affûter","35":"1"},{"1":"agent","2":"aZ@","3":"agent","4":"NOM","5":"m","6":"s","7":"117.90","8":"39.26","9":"92.42","10":"22.50","11":"NA","12":"1","13":"2","14":"1","15":"5","16":"3","17":"VCVCC","18":"VCV","19":"4","20":"13","21":"5","22":"3","23":"a-Z@","24":"2","25":"V-CV","26":"tnega","27":"@Za","28":"a-gent","29":"NOM","30":"100","31":"27","32":"1.50","33":"1.0","34":"agent","35":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[35]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Le symbole <code>&amp;</code> signifie ‘et’. L’expression <code>nombre != p</code> signitif que la valeur dans la colonne <em>nombre</em> ne doit pas être <code>p</code>.</p>
 </div>
 <div id="selection-par-pattern" class="section level2">
 <h2>Sélection par “pattern”</h2>
 <div id="les-expressions-regulieres" class="section level3">
 <h3>Les expressions régulières</h3>
-<p>Les expressions réulières, ou <strong>regex</strong>, sont des “patterns” qui permettent de rechercher des mots ayant certaines propriétés. Par exemple n’importe <code>a.b</code> désigne un mot contenant un <code>a</code> et un <code>b</code> séparés par une lettre quelonque. Voici d’autre exemples:</p>
+<p>Les expressions réulières, ou <strong>regex</strong>, sont des “patterns” qui permettent de rechercher des mots ayant certaines propriétés. Par exemple n’importe <code>a.b</code> désigne un mot contenant un <code>a</code> et un <code>b</code> séparés par une lettre quelconque. Voici d’autre exemples:</p>
 <ul>
 <li><strong><code>^maison$</code></strong> : recherche le mot “maison” exactement</li>
 <li><strong><code>^anti</code></strong> : recherche tous les mots commençant par “anti”</li>
-<li><strong><code>^jour$|^nuit$|^matin$|^soir$</code></strong> : “jour” ou “nuit” ou “matin” ou “soir” (permet de rechercher une liste de mots)</li>
+<li><strong><code>^(jour|nuit|matin|soir)$</code></strong> : “jour” ou “nuit” ou “matin” ou “soir” (permet de rechercher une liste de mots)</li>
 <li><strong><code>ion</code></strong> : recherche les mots qui contiennent la chaine “ion” dans n’importe quelle position</li>
 <li><strong><code>ion$</code></strong> : mots se terminant par “ion”</li>
 <li><strong><code>^pr</code></strong> : mots commençant par “pr”</li>
@@ -1856,13 +1919,6 @@ head(selection)</code></pre>
 <pre class="r"><code>lexique %&gt;% filter(grepl(&quot;tion$&quot;, ortho)) -&gt; selection2
 head(selection2)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MzUsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBOFZYUFl3VFJ4UWUyMnVmdmNlUlExeEJnUkxFcGFEWkV6citLclFyR1lzMEljSlNObkJDaW5iWDYvUGE2MTJ6NnpVNEthQkpUUjNLcEVCcHFDblIxVkNmUktJb3FVT0JFRFNSY3NlYlg4K011WU1MU015ZC9mWjk4NzMzWnQ2OG5SbTNMMTFiTjYrWkNLRXlxbFRLcUZ5QlI2TU1YeVZrb0FhV3R4R3FISVdIVmZnc3c2ZkdPa3pQNzBTQk40N1NoQ0VOUUlwQUFvQVNacGxHNlljYXBWOG9sTHJueDFUbjhkQmRFVy9nNWYydEJ3ekI4YVlERldpMU5jWkdTMmFBazQycFFpSGhxUDZKcGtmeHlwVnZ2djYvajZxblV2ZGdENXAxZnJBSGhBNWphL3UzbjNHN0wrVExlemRPdmQ2NlovOTE5WitmUG4vVVJxelpmenpCN2FtdzJ5VzBHN3pmT2JKdFhoejl1dTJVdTZUWmY2Nzg4UGZsaHl2MmErcDN6M2pQQ2UxSGUvc2hNUkR4Zm9mb01BUmg5eDlSdnhEeFRHcm5sQzVqdzYvc1p6aTZlZEYrUmZGWkVhTEdMclFEU0JydkJSdkhlMHB1NXlBVjUvcGU4b1BqZmNuOG5XUnlMLzJFWm5kU3hlY2s3ejh1N0phUjlKYTV6YWFMLzl3bWY0VUlJZ0dtMjZTa2ZTbWFsN293VWVNMUdQTzZxeEFWZmQvK09RY0xCQUNWSllUUFVrcndXeFB2ekxvVU83Mjl5ODVaVVJNOEo0L05MUUMxTzZiMXIyaTZoaU4xTjE3eWZLc1RXUVBQa3ZiU1JReE9CekoweUxQOGx0V2VvOEcyTEVQWTNjWlU0NWxnRzNPRWpYcVpqYXJPNUR0MHBDNy9JYmRwTlYzeUx4YlFKRmhUUWhiZDl5Qzl6VlVERkFab1paNmswZGdMb283dmNTcEdnbUlHVUVxV2hSb2w3T3VVWW9iVUNSS0RycDJWV3cvNnVUY2c4ZGhKaUpIQlZBTzhka3RqdERZRVFKMjBwek9rVGhBNUhCMEdLNGJBczlqQlJyZEEzbW5CTVdsbHJKT2xHQ3pncEpRaDdLUmZhRHhXQWgvOXZLVEZkUFV1cVpBN0wvRDN3aS9PZDQ5cDhYenJVTWxPTGNkOXpJdUoycDFGcXQwNXh1TnluY2tMU0xXcm5pSE5xZEF6eTZuUnM5QXhHTjlnZW9ueWhKMUJ6MEtud3UyWjVIWnM4N0IzS0U4dmVueVR1Vm5BR2lqM0VueVhzZVNyQzFtbWZlNHlpK1F1bzNEa3k0eHliQW5KM2tOOTk1cnRqc3Bsc3hyQVhTeG40K2VnMmZIRzNsbzM4NGFoUm05azZhMjFCSEJzc2dTZk1sNVFLTDEvZGIrY2hQMnVjakROeHIyVUtjYW9KMlpWamNNaHhPSkQyb1RJWE5rTWs0ejMxSkowNkF0dHFadUZOOEd3RzhYRGZGMEQ0MmlTaGZ6U1pHSlFvUkZFNFN4RVNUZWRoSmw0ei8xZU9rdzNOWDNVNCtPS2NvZ2k5ZzAvRHNkanlWbmk0OWx4MVFnbXdZVFBZZlM5cE5VbmFaVGpyTWk2bEpqYXFKQjZRWlA2akh3YXh5SXp2cVJWZzRrMUM0RWRaR0VpZE94QzBodGtVU1JyaytSZlhxcGFKK3pPWm91MTFNL0Ztc2FkOWROY0dVbEtBM3hBckk3SUtXU0ZRUEM0bzVYTFFqckNSUTBGVThhL2ZLcGFRWll5RGZpc1NIQ0JkYXlnVnlRRDZ6d2VOdW1tYllrOTE2VG5WUnJTMkdXdXFudzZZYklaSmFMNFl2aUp3VE54R0txZDFQSGFLSXVTTWM4UG9QbmFPSVZqUUdRc2pUbEM1b1oyM2dEdWYwc0M1dzBBQUE9PSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["ortho"],"name":[1],"type":["chr"],"align":["left"]},{"label":["phon"],"name":[2],"type":["chr"],"align":["left"]},{"label":["lemme"],"name":[3],"type":["chr"],"align":["left"]},{"label":["cgram"],"name":[4],"type":["chr"],"align":["left"]},{"label":["genre"],"name":[5],"type":["chr"],"align":["left"]},{"label":["nombre"],"name":[6],"type":["chr"],"align":["left"]},{"label":["freqlemfilms2"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["freqlemlivres"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["freqfilms2"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["freqlivres"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["infover"],"name":[11],"type":["chr"],"align":["left"]},{"label":["nbhomogr"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["nbhomoph"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["islem"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["nblettres"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["nbphons"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["cvcv"],"name":[17],"type":["chr"],"align":["left"]},{"label":["p_cvcv"],"name":[18],"type":["chr"],"align":["left"]},{"label":["voisorth"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["voisphon"],"name":[20],"type":["dbl"],"align":["right"]},{"label":["puorth"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["puphon"],"name":[22],"type":["dbl"],"align":["right"]},{"label":["syll"],"name":[23],"type":["chr"],"align":["left"]},{"label":["nbsyll"],"name":[24],"type":["dbl"],"align":["right"]},{"label":["cv-cv"],"name":[25],"type":["chr"],"align":["left"]},{"label":["orthrenv"],"name":[26],"type":["chr"],"align":["left"]},{"label":["phonrenv"],"name":[27],"type":["chr"],"align":["left"]},{"label":["orthosyll"],"name":[28],"type":["chr"],"align":["left"]},{"label":["cgramortho"],"name":[29],"type":["chr"],"align":["left"]},{"label":["deflem"],"name":[30],"type":["dbl"],"align":["right"]},{"label":["defobs"],"name":[31],"type":["dbl"],"align":["right"]},{"label":["old20"],"name":[32],"type":["dbl"],"align":["right"]},{"label":["pld20"],"name":[33],"type":["dbl"],"align":["right"]},{"label":["morphoder"],"name":[34],"type":["chr"],"align":["left"]},{"label":["nbmorph"],"name":[35],"type":["dbl"],"align":["right"]}],"data":[{"1":"abdication","2":"abdikasj§","3":"abdication","4":"NOM","5":"f","6":"s","7":"0.05","8":"1.96","9":"0.05","10":"1.82","11":"NA","12":"1","13":"2","14":"1","15":"10","16":"9","17":"VCCVCVCVVC","18":"VCCVCVCYV","19":"0","20":"0","21":"5","22":"6","23":"ab-di-ka-sj§","24":"4","25":"VC-CV-CV-CYV","26":"noitacidba","27":"§jsakidba","28":"ab-di-ca-tion","29":"NOM","30":"70","31":"20","32":"2.65","33":"2.55","34":"abdiquer-ion","35":"2"},{"1":"abduction","2":"abdyksj§","3":"abduction","4":"NOM","5":"f","6":"s","7":"0.05","8":"0.00","9":"0.05","10":"0.00","11":"NA","12":"1","13":"1","14":"1","15":"9","16":"8","17":"VCCVCCVVC","18":"VCCVCCYV","19":"1","20":"0","21":"7","22":"6","23":"ab-dyk-sj§","24":"3","25":"VC-CVC-CYV","26":"noitcudba","27":"§jskydba","28":"NA","29":"NOM","30":"NA","31":"NA","32":"2.45","33":"2.40","34":"abduct-ion","35":"2"},{"1":"aberration","2":"abERasj§","3":"aberration","4":"NOM","5":"f","6":"s","7":"1.16","8":"4.46","9":"0.89","10":"3.31","11":"NA","12":"1","13":"2","14":"1","15":"10","16":"8","17":"VCVCCVCVVC","18":"VCVCVCYV","19":"0","20":"0","21":"7","22":"5","23":"a-bE-Ra-sj§","24":"4","25":"V-CV-CV-CYV","26":"noitarreba","27":"§jsaREba","28":"a-ber-ra-tion","29":"NOM","30":"95","31":"21","32":"2.85","33":"2.40","34":"a-ber-ion","35":"3"},{"1":"abjection","2":"abZEksj§","3":"abjection","4":"NOM","5":"f","6":"s","7":"0.51","8":"2.30","9":"0.37","10":"2.16","11":"NA","12":"1","13":"2","14":"1","15":"9","16":"8","17":"VCCVCCVVC","18":"VCCVCCYV","19":"1","20":"1","21":"7","22":"6","23":"ab-ZEk-sj§","24":"3","25":"VC-CVC-CYV","26":"noitcejba","27":"§jskEZba","28":"ab-jec-tion","29":"NOM","30":"85","31":"21","32":"2.50","33":"2.50","34":"abjection","35":"1"},{"1":"abjuration","2":"abZyRasj§","3":"abjuration","4":"NOM","5":"f","6":"s","7":"0.00","8":"0.47","9":"0.00","10":"0.41","11":"NA","12":"1","13":"2","14":"1","15":"10","16":"9","17":"VCCVCVCVVC","18":"VCCVCVCYV","19":"1","20":"1","21":"6","22":"6","23":"ab-Zy-Ra-sj§","24":"4","25":"VC-CV-CV-CYV","26":"noitarujba","27":"§jsaRyZba","28":"ab-ju-ra-tion","29":"NOM","30":"72","31":"18","32":"2.60","33":"2.75","34":"abjurer-ion","35":"2"},{"1":"ablation","2":"ablasj§","3":"ablation","4":"NOM","5":"f","6":"s","7":"0.45","8":"1.35","9":"0.43","10":"1.28","11":"NA","12":"1","13":"2","14":"1","15":"8","16":"7","17":"VCCVCVVC","18":"VCCVCYV","19":"2","20":"2","21":"7","22":"5","23":"a-bla-sj§","24":"3","25":"V-CCV-CYV","26":"noitalba","27":"§jsalba","28":"a-bla-tion","29":"NOM","30":"91","31":"23","32":"2.15","33":"1.90","34":"ablation","35":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[35]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Encore une fois, vous pouvez sauvegarder ces résultats avec:</p>
@@ -1882,13 +1938,6 @@ head(selection2)</code></pre>
 <pre class="r"><code>lexique %&gt;% filter(grepl('.[ptkbdg][ptkbdg]', phon)) -&gt; selection3
 head(selection3)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MzUsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNjFYUFcvVU1CajJmWCtVbGtwMFlFQ0FLRUl3cElLV0FjclFrNDZLQ1JBTUVVaEl5TG5rZXFZNUowMXl4OGZVaFprWi9rREZnc1RHU2pmK0JCSnpHVmhZRUY5MjdOZHhmRit0d0hlNXg4L2p2SDd0MTI5aTMvMmJEMWFiRDVvSW9TSXFsWXFvV0dMVmNwSDlGRkFaTlRnK1E2aDBnbFdXMmJYSXJxcHNhR0xISlIyY2tJQktaUzVUWWluVnVMUXp3SkxXSlNXNkJlY2VUYVRVQUNsVy90Q3U4cmVONHlmN2UyTVVZVndWU281dFRtV3o1alNxeURsNDBaRjUzbGZwenQzYlk2cjI1djNaMVh4UGhXNVdZUUg4dzhvVXpGbkNPaFhDUTFndWNNdU50Njk1ZWFQdzg5S0xMN2ZlTFUxQ1pmZm4wY1h2KzY4ZUFiYXFLVnlhaEtZL2RQZ2k3SDZkL25EdjRPV1pqWThITDFudDY4WW5PZDcza2dQSzlpemJqSG5MVENYVVhROXh2TDRXM3pDbEszbUo5TVAxdFhCRTRuZkIyTDZKZ1I0V3dhNGxDU0MwdHhiSG8rbnZDRVg0T3kvN3V5RHhsTVN6aG43T3NEdVgxMXNucHlNeW5rSzczYmI1eDI1REVETUZwSnFRYkhqS0pMWHpGclptMFFDcGJmaVREZTJIOWlTaEtvUWpNQmtKTTZ5dENlRTJWM3JFcmo0ZFZlU1hKamlZWElUZDZJck1Lb3NvZXpmUFk4ZHlpYldOTGUzMWJJanFiU2hFZzIvTzVERFNSVGxTd05tUkVTTVYvUjJ6MjFiYlRyOXFkY2RwZGRDT3pJMWNwZ0ZKY0llNERzeDRMaDZSYW5pd285RTZ5Zk81aEhxRzFJaVZZT3lTKzN0UFlyd3RXa1lVMlB0eWJITTJ5ODlKTG13SFc5cTJ1SkFUWVY5cENEVTdBVFNWUVBLOTVVOEJjNWtZby8rNWI0b2N1cmNyY2dUd0lacUt5dTZxMUFHdlQwZGxWMWxMUzBzKzE2MkM1TVZ1V2xSN1NlMTF3cTRzMnlWdS9CVDJrOURNZFRoNVdOa3lqZFArNVVRemRWK2F2Si9sanBpVmpvOWpXR1lRbXk1TzhFbzN3bjNQdUwwUkJVOVhLTk81eVR5N2lydnNoMjNWUDh4KzRTYmU3ektJUVpUMEFrbktZVTlGb2VKN2ZlWUxoclRGUEFQWjhtZ0VMVlVhOUIzRjVydVJ0OE1NdThUdng2dUc2Sk5oNU1HVDBPUmk3clpVeWQxVEk3UWJETE00VTZjWDlJTXRnNGM5R0JlSm1SZUlDblY4TDBtMHpxakRad2UwM0JsMmhqQ0g4TEhHNnNPQXhEd3FPdGNDVXcwSFdpdGpXbHM1ZnU3N0tqS094aXFkb1pXNTRCMUVIbFdjZDZIeFJyb29tblV6amIrK1ZGWFg2MmF6NVN4d1lyV212cnQ2R1Vpb2tRYnJnL2x5VlV4WlZGS0pWWDhiNlZJTFF2SHFRa1grZjZkaUpHUWhNb1RqQThvVHpMVTZ2UUhkdHE3eFlhZk5vc3pMZWxXckx3dVhaVGlIVjJBNkh0MGlWQ1dmangwUElySEFzajNONDVVd0l1cjkyR1JxdkpJRUNjNGlGdmlncEhORHYvOENtRE53b2QwTkFBQT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["ortho"],"name":[1],"type":["chr"],"align":["left"]},{"label":["phon"],"name":[2],"type":["chr"],"align":["left"]},{"label":["lemme"],"name":[3],"type":["chr"],"align":["left"]},{"label":["cgram"],"name":[4],"type":["chr"],"align":["left"]},{"label":["genre"],"name":[5],"type":["chr"],"align":["left"]},{"label":["nombre"],"name":[6],"type":["chr"],"align":["left"]},{"label":["freqlemfilms2"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["freqlemlivres"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["freqfilms2"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["freqlivres"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["infover"],"name":[11],"type":["chr"],"align":["left"]},{"label":["nbhomogr"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["nbhomoph"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["islem"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["nblettres"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["nbphons"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["cvcv"],"name":[17],"type":["chr"],"align":["left"]},{"label":["p_cvcv"],"name":[18],"type":["chr"],"align":["left"]},{"label":["voisorth"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["voisphon"],"name":[20],"type":["dbl"],"align":["right"]},{"label":["puorth"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["puphon"],"name":[22],"type":["dbl"],"align":["right"]},{"label":["syll"],"name":[23],"type":["chr"],"align":["left"]},{"label":["nbsyll"],"name":[24],"type":["dbl"],"align":["right"]},{"label":["cv-cv"],"name":[25],"type":["chr"],"align":["left"]},{"label":["orthrenv"],"name":[26],"type":["chr"],"align":["left"]},{"label":["phonrenv"],"name":[27],"type":["chr"],"align":["left"]},{"label":["orthosyll"],"name":[28],"type":["chr"],"align":["left"]},{"label":["cgramortho"],"name":[29],"type":["chr"],"align":["left"]},{"label":["deflem"],"name":[30],"type":["dbl"],"align":["right"]},{"label":["defobs"],"name":[31],"type":["dbl"],"align":["right"]},{"label":["old20"],"name":[32],"type":["dbl"],"align":["right"]},{"label":["pld20"],"name":[33],"type":["dbl"],"align":["right"]},{"label":["morphoder"],"name":[34],"type":["chr"],"align":["left"]},{"label":["nbmorph"],"name":[35],"type":["dbl"],"align":["right"]}],"data":[{"1":"abdication","2":"abdikasj§","3":"abdication","4":"NOM","5":"f","6":"s","7":"0.05","8":"1.96","9":"0.05","10":"1.82","11":"NA","12":"1","13":"2","14":"1","15":"10","16":"9","17":"VCCVCVCVVC","18":"VCCVCVCYV","19":"0","20":"0","21":"5","22":"6","23":"ab-di-ka-sj§","24":"4","25":"VC-CV-CV-CYV","26":"noitacidba","27":"§jsakidba","28":"ab-di-ca-tion","29":"NOM","30":"70","31":"20","32":"2.65","33":"2.55","34":"abdiquer-ion","35":"2"},{"1":"abdications","2":"abdikasj§","3":"abdication","4":"NOM","5":"f","6":"p","7":"0.05","8":"1.96","9":"0.00","10":"0.14","11":"NA","12":"1","13":"2","14":"0","15":"11","16":"9","17":"VCCVCVCVVCC","18":"VCCVCVCYV","19":"0","20":"0","21":"0","22":"6","23":"ab-di-ka-sj§","24":"4","25":"VC-CV-CV-CYV","26":"snoitacidba","27":"§jsakidba","28":"ab-di-ca-tions","29":"NOM","30":"70","31":"20","32":"2.75","33":"2.55","34":"abdiquer-ion","35":"2"},{"1":"abdiqua","2":"abdika","3":"abdiquer","4":"VER","5":"NA","6":"NA","7":"0.47","8":"2.77","9":"0.00","10":"0.20","11":"ind:pas:3s;","12":"1","13":"1","14":"0","15":"7","16":"6","17":"VCCVCVV","18":"VCCVCV","19":"2","20":"3","21":"0","22":"0","23":"ab-di-ka","24":"3","25":"VC-CV-CV","26":"auqidba","27":"akidba","28":"ab-di-qua","29":"VER","30":"100","31":"25","32":"2.15","33":"1.75","34":"abdiquer","35":"1"},{"1":"abdiquai","2":"abdikE","3":"abdiquer","4":"VER","5":"NA","6":"NA","7":"0.47","8":"2.77","9":"0.00","10":"0.07","11":"ind:pas:1s;","12":"1","13":"4","14":"0","15":"8","16":"6","17":"VCCVCVVV","18":"VCCVCV","19":"0","20":"3","21":"0","22":"0","23":"ab-di-kE","24":"3","25":"VC-CV-CV","26":"iauqidba","27":"Ekidba","28":"ab-di-quai","29":"VER","30":"100","31":"25","32":"2.30","33":"1.75","34":"abdiquer","35":"1"},{"1":"abdiquaient","2":"abdikE","3":"abdiquer","4":"VER","5":"NA","6":"NA","7":"0.47","8":"2.77","9":"0.00","10":"0.07","11":"ind:imp:3p;","12":"1","13":"4","14":"0","15":"11","16":"6","17":"VCCVCVVVVCC","18":"VCCVCV","19":"0","20":"3","21":"0","22":"0","23":"ab-di-kE","24":"3","25":"VC-CV-CV","26":"tneiauqidba","27":"Ekidba","28":"ab-di-quaient","29":"VER","30":"100","31":"25","32":"2.65","33":"1.75","34":"abdiquer","35":"1"},{"1":"abdiquais","2":"abdikE","3":"abdiquer","4":"VER","5":"NA","6":"NA","7":"0.47","8":"2.77","9":"0.00","10":"0.14","11":"ind:imp:1s;","12":"1","13":"4","14":"0","15":"9","16":"6","17":"VCCVCVVVC","18":"VCCVCV","19":"1","20":"3","21":"0","22":"0","23":"ab-di-kE","24":"3","25":"VC-CV-CV","26":"siauqidba","27":"Ekidba","28":"ab-di-quais","29":"VER","30":"100","31":"25","32":"2.45","33":"1.75","34":"abdiquer","35":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[35]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ul>
@@ -1901,20 +1950,13 @@ head(selection3)</code></pre>
 <pre class="r"><code>lexique %&gt;% filter(nblettres == 8) %&gt;% filter(!grepl(&quot;ent$&quot;, ortho)) -&gt; selection4
 head(selection4)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MzUsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNjFYUFl6Y1JCU2U3TnI3NDlNZEp5VUZGVnJwS0VCaVRtR3B1Q2l5MGVZVUdqaGxDNU9MSWlGNzdkMmR4ZXR4N0wzbHIwaWExS21oQkdva3V0QWlTaWlva0NpUWtPaWdPQW9RQ2hCNFkvdU43Zkg2N2dwRzhyNzN2VGZ2dlprM3ovTzg0eHUzaDhadGd4RFNJdTEyaTdUYXdHb3QrTGxFTk5JWDlEMUMycGVCMllObkY1NU9ydWc1Z3huamNjZ0xITVVnWUkzWWRWaVNPQXIyWXdVbnRUamVuY1hSdUJRbkdyTUZIN01HckR2dVlYSllBRC94YzZBSnpmK3ppOXFxNjdnYXAvM2FEWHNEKytiUkc4amFoK01HRmowUjB2OFhocVQ1QVMxcmlvSnVOanlmN3VSMjZUQlBQLzNldUI1OVp2NXdQUktjZGZueHJWOGVQdmRZcFdobmZuZno4eXNmL1BTNnRmT05HTithUHdJQ2tUVTBVZ2NxcmNYNytZWGZ2M3AwOTBXTVozNzVrUmdmbTcrbDhKNzVkZXJ1dzFvODdkRmRZWW54ekMvRXFtNzlhblV6UGVKejg1SWxkb3VGM2tIa0pBY3ZKOWV3Z2xnNHZWWlJ4LzdCRU5TNGt0TnNCeGFwVXBTckZPM2svRjREZlQ2bnoxYnR6dkM3RWN0NGc5emZCZW01ZGxjVXVpdnRCQ2RmTm5zd3N1M1J5QzVoSVdqRzJYUVZqMnBZalRNYUhWZmlBSDlzTjJJZDJNMUFzelB2RjhxMmhiUlh6UnBwR0RKYmlJdXNaZG51VmVVbGZZWUhOWmVaSGM1WFRxVVd0L0MzUzRyc0dZNUh4WTFMNWFXNDVWQzRZK21DVTNuTGJoQjFIZW9lVW5uMUN1aFRlZm5xUXB1Y3Q3VmE0UmVycml6UkhsRnh3bFFlMUpaTjRVenBzWDJtcUN2NFJxZ0x2bFpMUEl3NW13MGN4QXhnSEoyQm5TUmgwQVVReDM0Vko0aHJjY1pIaXp0ZTRXZk1GMndjTldFZG1weDBxa09UazBCTEZWWHYvYXpORlVmYXovb2FsWTJ0SmpEZ3dLQ1YwYUpqUzRuc2RvVkU3YXVsSnRjRjlxV2kwU253ekw2WDFzcjlVM0g4M1UrUVdtOWxWV0VkazQyMDBlNXFQdS9WelJUdHNHMVpPOU4wSURYL3lkdlFYNitrdzN5U3lXdDJSdTQzcCthZk9mMDdiNGQvU0x0S0FUaFUrUktoeXBlSGlpLytKVkp0TWdwdHZ0WXFINEw2SklES3poZU5Rc056VnM3K05IYVd2aks5SC9OMzkwT1FDNU50ZUZvUDRBZTY2eFBWTDA0U2Z2ZFF5T1BWSERPaFJYTWVvaUx3bDB0NXAweG1FQm5CekE5ajFIUkN2blFsMnA3Ry9qMHduTEpnbVF3VlljRFc4SXJpZm9Td01pMlZWT1owNFNPQXI0czhoKzZjTC9sTXdkRWMxOFVTaUlKWkNkM0FYNjFLemtKWDdBNmhObGxQMXJpSDZPMFM2cTA1UzBSV3lyaVVtRTUwVXRJQ0t1bTA1UDBna0pseFMwaWZyR2tSUWppSS9WQmk0YUtFKyttaGxLeU5OUC9sbytwNC9yVFlyVURjVGVTWkJ0N3dLb0tvQlByZ0EySjVNcWVRbFZRRTdGT2xYTG84V2pHUk1OSVMvMHAwcFNBdnhZcmdtWk5RRkpoSEovT1Q4QjBxM25ValZXZGpPK2M3Slg0dkM2bmhCN1NPMi9IREdRdGw4UVh3M3dJenNRUFZudGJ4UHJ5ajRRcnpBOUprZjhWWFRwRXhIcUFrM1J0NStoK0YxTHpJZ3cwQUFBPT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["ortho"],"name":[1],"type":["chr"],"align":["left"]},{"label":["phon"],"name":[2],"type":["chr"],"align":["left"]},{"label":["lemme"],"name":[3],"type":["chr"],"align":["left"]},{"label":["cgram"],"name":[4],"type":["chr"],"align":["left"]},{"label":["genre"],"name":[5],"type":["chr"],"align":["left"]},{"label":["nombre"],"name":[6],"type":["chr"],"align":["left"]},{"label":["freqlemfilms2"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["freqlemlivres"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["freqfilms2"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["freqlivres"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["infover"],"name":[11],"type":["chr"],"align":["left"]},{"label":["nbhomogr"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["nbhomoph"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["islem"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["nblettres"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["nbphons"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["cvcv"],"name":[17],"type":["chr"],"align":["left"]},{"label":["p_cvcv"],"name":[18],"type":["chr"],"align":["left"]},{"label":["voisorth"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["voisphon"],"name":[20],"type":["dbl"],"align":["right"]},{"label":["puorth"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["puphon"],"name":[22],"type":["dbl"],"align":["right"]},{"label":["syll"],"name":[23],"type":["chr"],"align":["left"]},{"label":["nbsyll"],"name":[24],"type":["dbl"],"align":["right"]},{"label":["cv-cv"],"name":[25],"type":["chr"],"align":["left"]},{"label":["orthrenv"],"name":[26],"type":["chr"],"align":["left"]},{"label":["phonrenv"],"name":[27],"type":["chr"],"align":["left"]},{"label":["orthosyll"],"name":[28],"type":["chr"],"align":["left"]},{"label":["cgramortho"],"name":[29],"type":["chr"],"align":["left"]},{"label":["deflem"],"name":[30],"type":["dbl"],"align":["right"]},{"label":["defobs"],"name":[31],"type":["dbl"],"align":["right"]},{"label":["old20"],"name":[32],"type":["dbl"],"align":["right"]},{"label":["pld20"],"name":[33],"type":["dbl"],"align":["right"]},{"label":["morphoder"],"name":[34],"type":["chr"],"align":["left"]},{"label":["nbmorph"],"name":[35],"type":["dbl"],"align":["right"]}],"data":[{"1":"a giorno","2":"adZjORno","3":"a giorno","4":"ADV","5":"NA","6":"NA","7":"0.00","8":"0.27","9":"0.00","10":"0.27","11":"NA","12":"1","13":"2","14":"1","15":"8","16":"8","17":"V CVVCCV","18":"VCCYVCCV","19":"1","20":"0","21":"3","22":"4","23":"ad-ZjOR-no","24":"3","25":"VC-CYVC-CV","26":"onroig a","27":"onROjZda","28":"a gior-no","29":"ADV","30":"NA","31":"NA","32":"3.85","33":"3.85","34":"a-giorno","35":"2"},{"1":"a priori","2":"apRijoRi","3":"a priori","4":"ADV","5":"NA","6":"NA","7":"1.04","8":"3.85","9":"0.63","10":"2.57","11":"NA","12":"2","13":"3","14":"1","15":"8","16":"8","17":"V CCVVCV","18":"VCCVYVCV","19":"1","20":"0","21":"4","22":"5","23":"a-pRi-jo-Ri","24":"4","25":"V-CCV-YV-CV","26":"iroirp a","27":"iRojiRpa","28":"a prio-ri","29":"ADV,NOM","30":"NA","31":"NA","32":"3.80","33":"3.25","34":"a-priori","35":"2"},{"1":"a priori","2":"apRijoRi","3":"a priori","4":"NOM","5":"m","6":"NA","7":"0.41","8":"0.47","9":"0.41","10":"0.47","11":"NA","12":"2","13":"3","14":"1","15":"8","16":"8","17":"V CCVVCV","18":"VCCVYVCV","19":"1","20":"0","21":"4","22":"5","23":"a-pRi-jo-Ri","24":"4","25":"V-CCV-YV-CV","26":"iroirp a","27":"iRojiRpa","28":"a prio-ri","29":"ADV,NOM","30":"93","31":"16","32":"3.80","33":"3.25","34":"a-priori","35":"2"},{"1":"abaissai","2":"abEsE","3":"abaisser","4":"VER","5":"NA","6":"NA","7":"4.93","8":"18.04","9":"0.10","10":"0.07","11":"ind:pas:1s;","12":"1","13":"3","14":"0","15":"8","16":"5","17":"VCVVCCVV","18":"VCVCV","19":"0","20":"5","21":"0","22":"0","23":"a-bE-sE","24":"3","25":"V-CV-CV","26":"iassiaba","27":"EsEba","28":"a-bais-sai","29":"VER","30":"100","31":"25","32":"1.85","33":"1.50","34":"abaisser","35":"1"},{"1":"abaisser","2":"abese","3":"abaisser","4":"VER","5":"NA","6":"NA","7":"4.93","8":"18.04","9":"1.09","10":"2.91","11":"inf;","12":"1","13":"10","14":"1","15":"8","16":"5","17":"VCVVCCVC","18":"VCVCV","19":"2","20":"2","21":"8","22":"5","23":"a-be-se","24":"3","25":"V-CV-CV","26":"ressiaba","27":"eseba","28":"a-bais-ser","29":"VER","30":"100","31":"25","32":"1.70","33":"1.80","34":"abaisser","35":"1"},{"1":"abaisses","2":"abEs","3":"abaisser","4":"VER","5":"NA","6":"NA","7":"4.93","8":"18.04","9":"0.16","10":"0.07","11":"ind:pre:2s;","12":"1","13":"6","14":"0","15":"8","16":"4","17":"VCVVCCVC","18":"VCVC","19":"3","20":"4","21":"0","22":"4","23":"a-bEs","24":"2","25":"V-CVC","26":"sessiaba","27":"sEba","28":"a-bais-ses","29":"VER","30":"100","31":"25","32":"1.65","33":"1.40","34":"abaisser","35":"1"}],"options":{"columns":{"min":{},"max":[10],"total":[35]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50ZXJyb2dlciBMZXhpcXVlIGF2ZWMgUiIKYXV0aG9yOiAiQ2hyaXN0b3BoZSBQYWxsaWVyIgpvdXRwdXQ6CiAgaHRtbF9ub3RlYm9vazoKICAgIHRvYzogeWVzCiAgcGRmX2RvY3VtZW50OgogICAgdG9jOiB5ZXMKLS0tCgojIyBJbnRyb2R1Y3Rpb24KCkNlIGRvY3VtZW50IG1vbnRyZSBjb21tZW50IGludGVycm9nZXIgZXQgbWFuaXB1bGVyIGxhIGJhc2UgW0xleGlxdWVdKGh0dHA6Ly93d3cubGV4aXF1ZS5vcmcpIGVuIFtSXShodHRwczovL2ZyLndpa2lwZWRpYS5vcmcvd2lraS9SXyhsYW5nYWdlKSkgCgpJbCBmYWl0IHBhcnRpIGR1IGNvdXJzIFtQcm9ncmFtbWF0aW9uIHBvdXIgbGVzIFNjaWVuY2VzIENvZ25pdGl2ZXNdKGh0dHBzOi8vY2hycGxyLmdpdGh1Yi5pby9QQ0JTLykuIE1lcmNpIGRlIHNpZ25hbGVyIGQnw6l2ZW50dWVsbGVzIGVycmV1cnMgw6AgPGNocmlzdG9waGVAcGFsbGllci5vcmc+CgoKIyMgUHLDqXBhcmF0aW9uCgoxLiBTJ2lscyBuZSBzb250IHBhcyBkw6lqw6AgaW5zdGFsbMOpcyBzdXIgdm90cmUgb3JkaW5hdGV1ciwgdm91cyBkZXZyZXogaW5zdGFsbGVyIGxlcyBsb2dpY2llbHMgW1JdKGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnLykgZXQgIFtSLVN0dWRpbyBEZXNrdG9wXShodHRwczovL3d3dy5yc3R1ZGlvLmNvbS9wcm9kdWN0cy9yc3R1ZGlvLyNEZXNrdG9wKS4KCjIuIFTDqWzDqWNoYXJnZXIgPGh0dHA6Ly93d3cubGV4aXF1ZS5vcmcvZGF0YWJhc2VzL0xleGlxdWUzODIvTGV4aXF1ZTM4Mi56aXA+CgozLiBDcsOpZXIgdW4gcsOpcGVydG9pcmUgYExleGlxdWVgIHB1aXMgZMOpemlwcGVyIGRhbnMgY2UgcsOpcGVydG9pcmUgbGUgZmljaGllciBgTGV4aXF1ZTM4Mi56aXBgIHByw6ljw6lkZW1tZW50IHTDqWzDqWNoYXJnw6kuCgo0LiBEw6ltYXJyZXIgbGUgcHJvZ3JhbW1lICoqUnN0dWRpbyoqIAoKICAgLSBTw6lsZWN0aW9ubmVyIGxlIG1lbnUgYEZpbGUvTmV3IFByb2plY3RgOyAKICAgLSBDaG9pc2lyICJFeGlzdGluZyBkaXJlY3RvcnkiIGV0IG5hdmlndWVyIGp1c3F1J2F1IHLDqXBlcnRvaXJlIGBMZXhpcXVlYCBxdWUgdm91cyB2ZW5leiBkZSBjcsOpZXI7IGNsaXF1ZXIgc3VyIGxlIGJvdXRvbiBgY3JlYXRlIHByb2plY3RgLiAKICAgLSBEYW5zIGxhIGZlbsOqdHJlIGVuIGJhcyDDoCBkcm9pdGUsIHBhcm1pIGxhIGxpc3RlIGRlcyBmaWNoaWVycyBsaXN0w6lzIHNvdXMgbCdvbmdsZXQgKkZpbGVzKiwgaWwgZG9pdCBhcHBhcmFpdHJlIGBMZXhpcXVlMzgyLnRzdmAuIFNpIHRlbCBuJ2VzdCBwYXMgbGUgY2FzLCB2w6lyaWZpZXogcXVlIHZvdXMgYXZleiBiaWVuIHN1aXZpIGxlcyBpbnN0cnVjdGlvbnMuCgo1LiBEYW5zIGxhIGZlbsOqdHJlIGVuIGJhcyDDoCBnYXVjaGUgZGUgUnN0dWRpbywgZGFucyBsJ29uZ2xldCAqQ29uc29sZSosIGNvcGllciBsYSBsaWduZSBzdWl2YW50ZSBwdWlzIGFwcHV5ZXogc3VyICdFbnRyw6llJwoKYGBgCiAgICBpbnN0YWxsLnBhY2thZ2VzKCd0aWR5dmVyc2UnKQpgYGAKCkxhaXNzZXogcnN0dWRpbyBzZSBkw6licm91aWxsZXIgKG1haXMgdm91cyBkZXZyZXogcGV1dC3DqnRyZSBzw6lsZWN0aW9ubmVyIHVuIHNlcnZldXIpLiBRdWFuZCBpbCBhIGZpbmksIHZvdXMgw6p0ZXMgcHLDqnQgISBWb3VzIG4nYXVyZXogcGx1cyBqYW1haXMgw6AgcmVmYWlyZSBjZXMgw6l0YXBlcy4KCiMjIENoYXJnZW1lbnQgZGUgbGEgdGFibGUgIkxleGlxdWUub3JnIgoKVG91dCBzZSBkw6lyb3VsZSBkYW5zIFJzdHVkaW8uIEFzc3VyZXogdm91cyBkZSBiaWVuIHRyYXZhaWxsZXIgZGFucyBsZSBwcm9qZXQgImxleGlxdWUiIGNyw6nDqSBkYW5zIGxhIHNlY3Rpb24gInByw6lwYXJhdGlvbiIuIEFwcsOocyB1biByZWTDqW1hcnJhZ2UgZGUgcnN0dWRpbywgdXRpbGlzZXogbGUgbWVudSBgRmlsZS9SZWNlbnQgUHJvamVjdHNgIHBvdXIgcmV0cm91dmVyIGNlIHByb2pldC4KCi0gQ2xpcXVleiBsZSBtZW51ICJGaWxlIC8gTmV3IEZpbGUgLyBSIE5vdGVib29rIi4gVW4gZG9jdW1lbnQgIlVudGl0bGVkIiBhcHBhcmFpdCBkYW5zIGxlIGZlbmV0cmUgZW4gaGF1dCDDoCBnYXVjaGUuIAotIEMnZXN0IGRhbnMgY2UgZG9jdW1lbnQgcXVlIG5vdXMgYWxsb25zIGVudHJlciBkdSBjb2RlIFI6CgogIETDqXBsYWNleiB2b3VzIMOgIGxhIGxpZ25lIDUgKGp1c3RlIGFwcsOocyBsYSBsaWduZSBjb250ZW5hbnQgJy0tLScpLCBldCBjbGlxdWV6IHN1ciBsZSBib3V0b24gKkluc2VydCogcHVpcyBjaG9pc2lzZXogKlIqICh2b3VzIHBvdXZleiBhbGxlciBwbHVzIHZpdGUgZW4gYXBwdXlhbnQgc3VyICpDdHJsK0FsdCtJKikuIAogIAogIENvcGlleiBsZXMgdHJvaXMgbGlnbmVzIHN1aXZhbnRlcyBkYW5zIGxlIGJsb2MgZGUgY29kZSBxdWkgdmllbnQgZCfDqnRyZSBjcsOpw6kuIAoKYGBge3J9CiAgICByZXF1aXJlKHRpZHl2ZXJzZSkgICMgeW91IG11c3QgaGF2ZSByYW4gImluc3RhbGwucGFja2FnZXMoJ3RpZHl2ZXJzZScpIiBlYXJsaWVyCiAgICBsZXhpcXVlID0gcmVhZF9kZWxpbSgiTGV4aXF1ZTM4Mi50c3YiLCBkZWxpbT0iXHQiKQogICAgaGVhZChsZXhpcXVlLCAyNSkKYGBgCgogICBQdWlzLCBlbiBmYWlzYW50IGJpZW4gYXR0ZW50aW9uIHF1ZSBsZSBjdXJzZXVyIHNvaXQgw6AgbCdpbnTDqXJpZXVyIGR1IGJsb2MgZGUgY29kZSwgY2xpcXVlciBzdXIgKlJ1biAvIFJ1biBjdXJyZW50IGNodW5rKiAob3UgYmllbiBhcHB1eWVyIHN1ciBsYSBwZXRpdGUgKmZsZWNoZSB2ZXJ0ZSosIG91IHN1ciAqQ3RybC1TaGlmdC1FbnRlciopLiBWb3VzIGRldnJpZXogdm9pciBsZXMgcHJlbWnDqHJlcyBsaWduZXMgZGUgbGEgdGFibGUgbGV4aXF1ZSBzJ2FmZmljaGVyLiBDZWxsZSBkb2l0IMOpZ2FsZW1lbnQgYXBwYXJhaXRyZSBkYW5zIGwnb25nbGV0ICJFbnZpcm9ubWVudCIgZW4gaGF1dCDDoCBkcm9pdGUuIAoKCkNvbnNlaWw6IExvcnNxdWUgdm91cyBxdWl0dGVyZXogcnN0dWRpbywgYWNjZXB0ZXogbGEgcHJvcG9zaXRpb24gInNhdXZlZ2FyZGVyIGxlIHdvcnNrcGFjZSIuIEFpbnNpLCBsYSBwcm9jaGFpbmUgZm9pcyBxdWUgdm91cyBvdXZyaXJleiBsZSBwcm9qZXQgJ2xleGlxdWUnIGRhbnMgcnN0dWRpbywgbGEgdGFibGUgc2VyYSBkw6lqw6AgcHLDqXNlbnRlIGRhbnMgbCdlbnZpcm9ubmVtZW50LCBldCBpbCBuZSBzZXJhIGRvbmMgcGFzIG7DqWNlc3NhaXJlIGQnZXjDqWN1dGVyIGxlcyBsaWduZXMgY2ktZGVzc3VzIChgcmVhZF9kZWxpbWAuLi4pLgoKCiMjIFPDqWxlY3Rpb24gZGUgbW90cyBlbnRpZXJzCgpTdXBwb3NvbnMgcXVlIHZvdXMgdm91bGlleiBleHRyYWlyZSBsZXMgbGlnbmVzIGRlIGxhIHRhYmxlIGxleGlxdWUgY29ycmVzcG9uZGFudCwgcGFyIGV4ZW1wbGUsIGF1eCBtb3RzICdiYXRlYXUnLCAnYXZpb24nLCAnbWFpc29uJywgJ2FyYnJlJy4gTGUgY29kZSBzdWl2YW50IGZhaXQgcHLDqWNpc2VtbWVudCBjZWxhOgoKCmBgYHtyfQppdGVtcyA8LSBjKCdiYXRlYXUnLCAnYXZpb24nLCAnbWFpc29uJywgJ2FyYnJlJykKCnNlbGVjdGlvbiA8LSBzdWJzZXQobGV4aXF1ZSwgb3J0aG8gJWluJSBpdGVtcykKCmhlYWQoc2VsZWN0aW9uKQpgYGAKClZvdXMgcG91dmV6IGluc3BlY3RlciBsZSBjb250ZW51IGRlIGxhIHRhYmxlIGBzZWxlY3Rpb25gIGVuIGNsaXF1YW50IHN1ciBzb24gbm9tIGRhbnMgbCdvbmdsZXQgKkVudmlyb25tZW50KiBzaXR1w6kgZGFucyBsYSBmZW5ldHJlIGVuIGhhdXQgw6AgZHJvaXRlIGRlIHJzdHVkaW8uCgoKVm91cyBwb3V2ZXogw6lnYWxlbWVudCBzYXV2ZWdhcmRlciBsZXMgcsOpc3VsdGF0cyBvYnRlbnVzIGRhbnMgdW4gZmljaGllciwgIGF2ZWMgbGEgY29tbWFuZGUgc3VpdmFudGU6CgpgYGB7cn0Kd3JpdGVfdHN2KHNlbGVjdGlvbiwgJ3NlbGVjdGlvbi50c3YnKQpgYGAKCk5vdGV6IHF1ZSBsZXMgZmljaGllcnMgYXlhbnQgbCdleHRlbnNpb24gYGNzdmAgKHRhYi1zZXBhcmF0ZWQtdmFsdWVzKSBwZXV2ZW50IMOqdHJlIFtvdXZlcnRzIGF2ZWMgRXhjZWxdKGh0dHBzOi8vcmlldmVudC56ZW5kZXNrLmNvbS9oYy9lbi11cy9hcnRpY2xlcy8zNjAwMDAwMjkxNzItRkFRLUhvdy1kby1JLW9wZW4tYS10c3YtZmlsZS1pbi1FeGNlbC0pLCBvdSBPcGVuT2ZmaWNlIENhbCwgb3UgbcOqbWUgYXZlYyBuJ2ltcG9ydGUgcXVlbCDDqWRpdGV1ciBkZSB0ZXh0ZS4gTm90ZTogbGUgcGFja2FnZSBgcmVhZHJgIGRlIFIgZm91cm5pdCBhdXNzaSBkZXMgZm9uY3Rpb25zIGB3cml0ZV9leGNlbF9jc3ZgIGV0IGB3cml0ZV9leGNlbF9jc3YyYCBxdWkgcGV1dmVudCBpbnTDqXJlc3NlciBjZXJ0YWlucy4KClNpIHZvdXMgYXZleiB1bmUgbGlzdGUgZGUgbW90cyBwbHVzIGxvbmd1ZXMsIGlsIHNlcmFpdCBmYXN0aWRpZXV4IGQnw6ljcmlyZSBsYSBsaWduZSBgaXRlbXMgPC0gLi4uYC4gUGx1cyBzaW1wbGVtZW50IHZvdXMgcG91dmV6IHV0aWxpc2VyOgoKYGBge3J9Cml0ZW1zID0gc2Nhbih3aGF0PSdjaGFyYWN0ZXJzJykKYGBgCgpFdCBjb3BpZXIgbGEgbGlzdGUgZGUgbW90cy4gRW50cmVyIHVuZSBsaWduZSB2aWRlIHRlcm1pbmUgbGUgcHJvY2Vzc3VzLiAKCkxhIGZvbmN0aW9uIGBzY2FuYCBwZXJtZXQgYXVzc2kgZGUgbGlyZSBsYSBsaXN0ZSBkYW5zIHVuIGZpY2hpZXIgZXh0ZXJuZS4KCiMjIFPDqWxlY3Rpb24gcGFyIGNyaXTDqHJlcwoKU3VwcG9zb25zIHF1ZSB2b3VzIHZvdWxpZXogc8OpbGVjdGlvbm5lciB0b3VzIGxlcyBub21zIGRlIDUgbGV0dHJlcywgc2luZ3VsaWVycywgZGUgZnLDqXF1ZW5jZSBsZXhpY2FsZSAoZmlsbXMpIGNvbXByaXNlIGVudHJlIDEwIGV0IDEwMC4gVm9pY2kgbGEgbGlnbmUgbWFnaXF1ZToKCmBgYHtyfQpzZWxlY3Rpb24gPSBzdWJzZXQobGV4aXF1ZSwgY2dyYW09PSdOT00nICYgbm9tYnJlICE9ICdwJyAmIG5ibGV0dHJlcz09NSAmIGZyZXFsaXZyZXMgPiAxMCAmIGZyZXFsaXZyZXMgPCAxMDApCmhlYWQoc2VsZWN0aW9uKQpgYGAKCiMjIFPDqWxlY3Rpb24gcGFyICJwYXR0ZXJuIgoKIyMjIExlcyBleHByZXNzaW9ucyByw6lndWxpw6hyZXMKCkxlcyBleHByZXNzaW9ucyByw6l1bGnDqHJlcywgb3UgKipyZWdleCoqLCBzb250IGRlcyDigJxwYXR0ZXJuc+KAnSBxdWkgcGVybWV0dGVudCBkZSByZWNoZXJjaGVyIGRlcyBtb3RzIGF5YW50IGNlcnRhaW5lcyBwcm9wcmnDqXTDqXMuIFBhciBleGVtcGxlIG4naW1wb3J0ZSBgYS5iYCBkw6lzaWduZSB1biBtb3QgY29udGVuYW50IHVuIGBhYCBldCB1biBgYmAgc8OpcGFyw6lzIHBhciB1bmUgbGV0dHJlIHF1ZWxvbnF1ZS4gVm9pY2kgZCdhdXRyZSBleGVtcGxlczoKCi0gKipgXm1haXNvbiRgKiogOiByZWNoZXJjaGUgbGUgbW90IOKAnG1haXNvbuKAnSBleGFjdGVtZW50Ci0gKipgXmFudGlgKiogOiByZWNoZXJjaGUgdG91cyBsZXMgbW90cyBjb21tZW7Dp2FudCBwYXIg4oCcYW50aeKAnQotICoqYF5qb3VyJHxebnVpdCR8Xm1hdGluJHxec29pciRgKiogOiDigJxqb3Vy4oCdIG91IOKAnG51aXTigJ0gb3Ug4oCcbWF0aW7igJ0gb3Ug4oCcc29pcuKAnSAocGVybWV0IGRlIHJlY2hlcmNoZXIgdW5lIGxpc3RlIGRlIG1vdHMpCi0gKipgaW9uYCoqIDogcmVjaGVyY2hlIGxlcyBtb3RzIHF1aSBjb250aWVubmVudCBsYSBjaGFpbmUg4oCcaW9u4oCdIGRhbnMgbuKAmWltcG9ydGUgcXVlbGxlIHBvc2l0aW9uCi0gKipgaW9uJGAqKiA6IG1vdHMgc2UgdGVybWluYW50IHBhciDigJxpb27igJ0KLSAqKmBecHJgKiogOiBtb3RzIGNvbW1lbsOnYW50IHBhciDigJxwcuKAnQotICoqYF5wLi5yYCQqKiA6IG1vdHMgZGUgcXVhdHJlIGxldHRyZXMgY29tbWVuw6dhbnQgcGFyIOKAnHDigJ0sIGZpbmlzYW50IHBhcyDigJxy4oCdCi0gKipgXnAuKnIkYCoqIDogbW90cyBjb21tZW5jYW50IHBhciDigJjigJ1w4oCZIGV0IGZpbmlzc2FudCBwYXIg4oCccuKAnQotICoqYFthZWlvdV1bYWVpb3VdYCoqIDogbW90cyBjb250ZW5hbnQgMiB2b3llbGxlcyBzdWNjZXNzaXZlcwotICoqYF5bYWVpb3VdYCoqIDogbW90cyBjb21tZW7Dp2FudCBwYXIgdW5lIHZveWVsbGUKLSAqKmBeW15hZXJpb3VdYCoqIDogbW90cyBuZSBjb21tZW7Dp2FudCBwYXMgcGFyIHVuZSB2b3llbGxlCgpJbCBleGlzdGUgZGUgbm9tYnJldXggdHV0b3JpYXV4IHN1ciBsZXMgcmVnZXggc3VyIGxlIHdlYiwgbm90YW1tZW50IFtjZWx1aS1jaV0oaHR0cDovL3d3dy5jYW55b3VzZW9tZS5jb20vZ3VpZGUtcmVnZXgvKS4gTGEgYmlibGUgc3VyIGxlIHN1amV0IGVzdCBsZSBsaXZyZSBfW01hc3RlcmluZyBSZWd1bGFyIEV4cHJlc3Npb25zXShodHRwOi8vcmVnZXguaW5mby9ib29rLmh0bWwpXyAgZGUgSmVmZiBGcmllZGwuIAoKVW5lIGV4cHJlc3Npb24gcsOpZ3VsacOocmUgZMOpY3JpdCB1biBhdXRvbWF0ZSBkZSB0cmFuc2l0aW9ucyDDoCDDqXRhdHMgZmluaXMuIExlIHNpdGUgPGh0dHBzOi8vcmVnZXhwZXIuY29tLz4gdm91cyBwZXJtZXQgZGUgdmlzdWFsaXNlciBs4oCZYXV0b21hdGUgYXNzb2Npw6kgw6AgdW5lIHJlZ2V4LiBQYXIgZXhlbXBsZSBgW3B0a10uKlthaW91XVthaW91XS4/aW9uJGAgY29ycmVzcG9uZCDDoCBs4oCZYXV0b21hdGUgZmluaToKCiFbXShmc2EucG5nKQoKIyMjIFJlY2hlcmNoZXMgZGFucyBSIGF2ZWMgZ3JlcGwKClIgcGVybWV0IGQnZWZmZWN0dWVyIGRlcyByZWNoZXJjaGVzIHBhciBwYXR0ZXJuIGdyw6JjZSDDoCBsYSBmb25jdGlvbiBgZ3JlcGxgLiBMYSBzeW50YXhlIGVzdCBgZ3JlcGwoYF9yZWdleF8sIF92YXJpYWJsZV9gKWAgcG91ciByZWNoZXJjaGVyIGxlcyBsaWduZXMgb8O5IGxhIHZhcmlhYmxlICJtYXRjaGUiIGxhIHJlZ2V4IChWb2lyIGxhIFtkb2MgUiBkZSBncmVwbF0oaHR0cHM6Ly9zdGF0LmV0aHouY2gvUi1tYW51YWwvUi1kZXZlbC9saWJyYXJ5L2Jhc2UvaHRtbC9ncmVwLmh0bWwpLgoKQ2V0dGUgZm9uY3Rpb24gcGVybWV0IGRlIGxvY2FsaXNlciBsZXMgbGlnbmVzIHF1aSAnbWF0Y2hlbnQnIHVuZSBleHByZXNzaW9uLCBvdSBiaWVuLCBlbiBsYSBuaWFudCBhdmVjIGxlIHNpZ25lIGAhYCwgZGUgc3VwcHJpbWVyIGRlcyBsaWduZXMgcXVpIG1hdGNoZW50IHVuIHBhdHRlcm4uCgpWb2ljaSBxdWVscXVlcyBleGVtcGxlczoKCiogUG91ciBvYnRlbmlyIHRvdXMgbGVzIG1vdHMgcXVpIGZpbmlzc2VudCBwYXIgYHRpb25gIDoKCmBgYHtyfQpsZXhpcXVlICU+JSBmaWx0ZXIoZ3JlcGwoInRpb24kIiwgb3J0aG8pKSAtPiBzZWxlY3Rpb24yCmhlYWQoc2VsZWN0aW9uMikKYGBgCgpFbmNvcmUgdW5lIGZvaXMsIHZvdXMgcG91dmV6IHNhdXZlZ2FyZGVyIGNlcyByw6lzdWx0YXRzIGF2ZWM6CgoKYGBge3J9CndyaXRlX3RzdihzZWxlY3Rpb24yLCAnbW90cy1lbi10aW9uLnRzdicpCmBgYAoKKiBQb3VyIGxpc3RlciB0b3VzIGxlcyBtb3RzIGNvbnRlbmFudCB1biBjbHVzdGVyIGRlIGNvbnNvbm5lcyBwbG9zaXZlcywgbWFpcyBwYXMgZGVidXQgZGUgbW90OgoKYGBge3J9CmxleGlxdWUgJT4lIGZpbHRlcihncmVwbCgnLltwdGtiZGddW3B0a2JkZ10nLCBwaG9uKSkgLT4gc2VsZWN0aW9uMwpoZWFkKHNlbGVjdGlvbjMpCmBgYAoKCiogTCdvcMOpcmF0ZXVyIGBmaWx0ZXJgcGV1dCDDqnRyZSBhcHBlbGVyIHBsdXNpZXVycyBmb2lzIHBvdXIgYWZmaW5lciBwcm9ncmVzc2l2ZW1lbnQgbGEgcmVjaGVyY2hlLiAKCiAgUGFyIGV4ZW1wbGUsIHBvdXIgb2J0ZW5pciB0b3VzIGxlcyBtb3RzIGRlIDggbGV0dHJlcyBxdWkgbmUgZmluaXNzZW50IHBhcyBgZW50YDoKICAKYGBge3J9CmxleGlxdWUgJT4lIGZpbHRlcihuYmxldHRyZXMgPT0gOCkgJT4lIGZpbHRlcighZ3JlcGwoImVudCQiLCBvcnRobykpIC0+IHNlbGVjdGlvbjQKaGVhZChzZWxlY3Rpb240KQpgYGAKCgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSW50ZXJyb2dlciBMZXhpcXVlIGF2ZWMgUiIKYXV0aG9yOiAiQ2hyaXN0b3BoZSBQYWxsaWVyIgpvdXRwdXQ6CiAgaHRtbF9kb2N1bWVudDoKICAgIGRmX3ByaW50OiBwYWdlZAogICAgdG9jOiB5ZXMKICBodG1sX25vdGVib29rOgogICAgdG9jOiB5ZXMKICBwZGZfZG9jdW1lbnQ6CiAgICB0b2M6IHllcwotLS0KCgpDZSBkb2N1bWVudCBtb250cmUgY29tbWVudCBpbnRlcnJvZ2VyIGV0IG1hbmlwdWxlciBsYSBiYXNlIFtMZXhpcXVlXShodHRwOi8vd3d3LmxleGlxdWUub3JnKSBob3JzLWxpZ25lIGF2ZWMgbGUgbG9naWNpZWwgW1JdKGh0dHBzOi8vZnIud2lraXBlZGlhLm9yZy93aWtpL1JfKGxhbmdhZ2UpKSAKCk5vdGU6IElsIGZhaXQgcGFydGkgZHUgY291cnMgW1Byb2dyYW1tYXRpb24gcG91ciBsZXMgU2NpZW5jZXMgQ29nbml0aXZlc10oaHR0cHM6Ly9jaHJwbHIuZ2l0aHViLmlvL1BDQlMvKS4gTWVyY2kgZGUgc2lnbmFsZXIgZCfDqXZlbnR1ZWxsZXMgZXJyZXVycyDDoCA8Y2hyaXN0b3BoZUBwYWxsaWVyLm9yZz4KCgojIyBJbnN0YWxsYXRpb24KCjEuIFMnaWxzIG5lIHNvbnQgcGFzIGTDqWrDoCBpbnN0YWxsw6lzIHN1ciB2b3RyZSBvcmRpbmF0ZXVyLCB2b3VzIGRldnJleiBpbnN0YWxsZXIgbGVzIGRldXggbG9naWNpZWxzIChlbiBhY2NlcHRhbnQgbGVzIG9wdGlvbnMgcGFyIGTDqWZhdXQpOgoKICAgKiBbUl0oaHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvKSAKICAgKiBbUlN0dWRpbyBEZXNrdG9wXShodHRwczovL3d3dy5yc3R1ZGlvLmNvbS9wcm9kdWN0cy9yc3R1ZGlvLyNEZXNrdG9wKS4gCiAgIAoyLiBEw6ltYXJyZXIgbGUgcHJvZ3JhbW1lICoqUnN0dWRpbyoqIHB1aXMsIGRhbnMgbCdvbmdsZXQgKipDb25zb2xlKiogc2l0dcOpIGRhbnMgbGEgZmVuw6p0cmUgZW4gYmFzIMOgIGdhdWNoZSwgY29waWVyIGxhIGxpZ25lIHN1aXZhbnRlIHB1aXMgYXBwdXlleiBzdXIgJ0VudHLDqWUnCgogICAgYGBge3Igd2FybmluZz1GQUxTRSwgIG1lc3NhZ2U9RkFMU0UsIHJlc3VsdHM9J2hpZGUnfQogICAgaW5zdGFsbC5wYWNrYWdlcyhjKCdyanNvbicsICd0aWR5dmVyc2UnKSkKICAgIGBgYAoKICAgIExhaXNzZXogUlN0dWRpbyBzZSBkw6licm91aWxsZXIgKG1haXMgdm91cyBkZXZyZXogcGV1dC3DqnRyZSBzw6lsZWN0aW9ubmVyIHVuIHNlcnZldXIpLiAKCgogICBQdWlzIGNyw6lleiB1biBub3V2ZWF1IHByb2pldCAoTWVudSBgRmlsZS9OZXcgUHJvamVjdC9OZXcgRGlyZWN0b3J5L05ldyBwcm9qZWN0YCkgcXVlIHZvdXMgbm9tbWVyZXogJ0xleGlxdWUnLiAKCgogICBWb3VzIMOqdGVzICBwcsOqdCAhIFZvdXMgbidhdXJleiBwbHVzIGphbWFpcyDDoCByZWZhaXJlIGNlcyDDqXRhcGVzLgoKIyMgQ2hhcmdlbWVudCBkZSBsYSB0YWJsZSAqbGV4aXF1ZSoKClRvdXQgc2UgZMOpcm91bGUgZGFucyBsZSBsb2dpY2llbCAqKlJTdHVkaW8qKi4gCgpEYW5zIGxlIG1lbnUgYEZpbGVgLCBvdXZyZXogbGUgcHJvamV0ICpsZXhpcXVlKiBjcsOpw6kgZGFucyBsYSBzZWN0aW9uIHByw6ljw6lkZW50ZSAoQXByw6hzIHVuIHJlZMOpbWFycmFnZSBkZSBSU3R1ZGlvLCB2b3VzIHBvdXZleiB1dGlsaXNlciBsZSBtZW51IGBGaWxlL1JlY2VudCBQcm9qZWN0c2AgcG91ciByZXRyb3V2ZXIgY2UgcHJvamV0KS4KCi0gQ2xpcXVleiBsZSBtZW51IGBGaWxlL05ldyBGaWxlL1IgTm90ZWJvb2tgOiBVbiBkb2N1bWVudCAiVW50aXRsZWQiIGFwcGFyYWl0IGRhbnMgbGEgZmVuw6p0cmUgZW4gaGF1dCDDoCBnYXVjaGUuIEMnZXN0IGRhbnMgY2UgZG9jdW1lbnQgcXVlIG5vdXMgYWxsb25zIGVudHJlciBkdSBjb2RlIFIuCgotIENvbW1lbmNleiBwYXIgc3VwcHJpbWVyIHRvdXQgY2UgcXVlIHNlIHRyb3V2ZSBhcHLDqHMgbGEgbGlnbmUgNCAobmUgY29uc2VydmV6IHF1ZSBsZXMgNCBwcmVtacOocmVzIGxpZ25lcykuCgotIFBsYWNleiBsZSBjdXJzZXVyIHN1ciBsYSBsaWduZSA1IChqdXN0ZSBhcHLDqHMgbGEgbGlnbmUgY29udGVuYW50ICctLS0nKSwgZXQgY2xpcXVleiBzdXIgbGUgYm91dG9uICpJbnNlcnQqIHB1aXMgY2hvaXNpc2V6ICpSKiAob3UgYXBwdXllciBzdXIgKkN0cmwrQWx0K0kqKS4gCiAgCiAgQ29waWV6IGxlcyBsaWduZXMgc3VpdmFudGVzIMOgIGwnaW50w6lyaWV1ciBkdSBibG9jIGRlIGNvZGUgcXVpIHZpZW50IGQnw6p0cmUgY3LDqcOpLiAKCiAgICBgYGB7ciB3YXJuaW5nPUZBTFNFLCAgbWVzc2FnZT1GQUxTRSwgcmVzdWx0cz0naGlkZSd9CiAgICByZXF1aXJlKHRpZHl2ZXJzZSkKICAgIHJlcXVpcmUocmpzb24pCiAgICBzb3VyY2UoJ2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9jaHJwbHIvb3BlbmxleGljb24vbWFzdGVyL2RhdGFzZXRzLWluZm8vZmV0Y2hfZGF0YXNldHMuUicpCiAgICBsZXhpcXVlIDwtIGdldF9sZXhpcXVlMzgyKCkKICAgIGBgYAoKCiAgIFB1aXMsIGVuIGZhaXNhbnQgYmllbiBhdHRlbnRpb24gcXVlIGxlIGN1cnNldXIgc29pdCDDoCBsJ2ludMOpcmlldXIgZHUgYmxvYyBkZSBjb2RlLCBjbGlxdWV6IHN1ciBgUnVuL1J1biBjdXJyZW50IGNodW5rYCAob3UgYmllbiBhcHB1eWV6IHN1ciBsYSBwZXRpdGUgKmZsZWNoZSB2ZXJ0ZSosIG91IGJpZW4gZW5jb3JlIHN1ciBsZXMgdG91Y2hlcyAqQ3RybC1TaGlmdC1FbnRlciopLiAKCiAgTGEgdmFyaWFibGUgYGxleGlxdWVgIGRvaXQgbWFpbnRlbmFudCBhcHBhcmFpdHJlIGRhbnMgbCdvbmdsZXQgKipFbnZpcm9ubWVudCoqIGVuIGhhdXQgw6AgZHJvaXRlIDsgQ2xpcXVleiBkZXNzdXMgcG91ciBjb25zdWx0ZXIgbGEgdGFibGUuIAoKCiMjIFJlY2hlcmNoZSBkZSBtb3RzCgpTdXBwb3NvbnMgcXVlIHZvdXMgdm91bGlleiBleHRyYWlyZSBsZXMgbGlnbmVzIGRlIGxhIHRhYmxlIGxleGlxdWUgY29ycmVzcG9uZGFudCwgcGFyIGV4ZW1wbGUsIGF1eCBtb3RzICpiYXRlYXUsIGF2aW9uLCBtYWlzb24sIGFyYnJlKi4gCgpDcsOpZXogdW4gYmxvYyBkZSBjb2RlIChDdHJsLUFsdC1JKSBldCBjb3BpZXoteSBsZSBjb2RlIHN1aXZhbnQgOgoKYGBge3J9Cml0ZW1zIDwtIGMoJ2JhdGVhdScsICdhdmlvbicsICdtYWlzb24nLCAnYXJicmUnKQoKc2VsZWN0aW9uIDwtIHN1YnNldChsZXhpcXVlLCBvcnRobyAlaW4lIGl0ZW1zKQoKaGVhZChzZWxlY3Rpb24pCmBgYAoKRXjDqWN1dGV6IGNlIGNvZGUgKEN0cmwtU2hpZnQtRW50ZXIpLiBMYSB2YXJpYWJsZSBgc2VsZWN0aW9uYCBkb2l0IGNvbnRlbmlyIGxlcyBsaWduZXMgcGVydGluZW50ZS4gVm91cyBwb3V2ZXogaW5zcGVjdGVyIHNvbiBjb250ZW51IGVuIGNsaXF1YW50IHN1ciBzb24gbm9tIGRhbnMgbCdvbmdsZXQgKipFbnZpcm9ubWVudCoqIHNpdHXDqSBkYW5zIGxhIGZlbsOqdHJlIGVuIGhhdXQgw6AgZHJvaXRlIGRlIFJTdHVkaW8uCgpQb3VyIHNhdXZlZ2FyZGVyIGxlcyByw6lzdWx0YXRzIG9idGVudXMgZGFucyB1biBmaWNoaWVyLCBleMOpY3R1ZXogbGEgY29tbWFuZGUgc3VpdmFudGU6CgpgYGB7cn0Kd3JpdGVfdHN2KHNlbGVjdGlvbiwgJ3NlbGVjdGlvbi50c3YnKQpgYGAKCgpDZWxhIGRvaXQgY3LDqWVyIHVuIGZpY2hpZXIgYHNlbGVjdGlvbi50c3ZgIGRhbnMgbGUgcsOpcGVydG9pcmUgZHUgcHJvamV0ICgqbGV4aXF1ZSopLgoKTm90ZXogcXVlIGxlcyBmaWNoaWVycyBheWFudCBsJ2V4dGVuc2lvbiBgdHN2YCAodGFiLXNlcGFyYXRlZC12YWx1ZXMpIHBldXZlbnQgw6p0cmUgW291dmVydHMgYXZlYyBFeGNlbF0oaHR0cHM6Ly9yaWV2ZW50LnplbmRlc2suY29tL2hjL2VuLXVzL2FydGljbGVzLzM2MDAwMDAyOTE3Mi1GQVEtSG93LWRvLUktb3Blbi1hLXRzdi1maWxlLWluLUV4Y2VsLSksIG91IE9wZW5PZmZpY2UgQ2FsYywgb3UgbcOqbWUgYXZlYyBuJ2ltcG9ydGUgcXVlbCDDqWRpdGV1ciBkZSB0ZXh0ZS4gTm90ZTogbGUgcGFja2FnZSBgcmVhZHJgIGRlIFIgZm91cm5pdCBhdXNzaSBkZXMgZm9uY3Rpb25zIGB3cml0ZV9leGNlbF9jc3ZgIGV0IGB3cml0ZV9leGNlbF9jc3YyYCBxdWkgcGV1dmVudCBpbnTDqXJlc3NlciBjZXJ0YWlucy4KClNpIHZvdXMgYXZleiB1bmUgbGlzdGUgZGUgbW90cyBwbHVzIGxvbmd1ZSwgaWwgc2VyYWl0IGZhc3RpZGlldXggZCfDqWNyaXJlIGxhIGxpZ25lIGBpdGVtcyA8LSAuLi5gLiBQbHVzIHNpbXBsZW1lbnQgdm91cyBwb3V2ZXogdXRpbGlzZXI6CgpgYGB7cn0KaXRlbXMgPSBzY2FuKHdoYXQ9J2NoYXJhY3RlcnMnKQpgYGAKCkV0IGNvbGxlciBsYSBsaXN0ZSBkZSBtb3RzLiBQb3VyIGZpbmlyIGxhIGxpc3RlLCAgZW50cmV6IHVuZSBsaWduZSB2aWRlIChlbiBhcHB1eWFudCBkZXV4IGZvaXMgc3VjY2Vzc2l2ZW1lbnQgc3VyIGxhIHRvdWNoZSAqRW50csOpZSopLCBwdWlzLCDDoCBub3V2ZWF1OgoKYGBge3J9CnNlbGVjdGlvbiA8LSBzdWJzZXQobGV4aXF1ZSwgb3J0aG8gJWluJSBpdGVtcykKYGBgCgpDb21tZSBsYSBmb25jdGlvbiBgc2NhbmAgcGVybWV0IGF1c3NpIGRlIGxpcmUgbGEgbGlzdGUgZGFucyB1biBmaWNoaWVyIGV4dGVybmUsIHNpIHZvdXMgYXZleiB1bmUgbGlzdGUgZGUgbW90cyBkYW5zIGZpY2hpZXIgYGxpc3RlLnR4dGAsIHZvdXMgcG91dmV6IGV4dHJhaXJlIGxlcyBsaWduZXMgZGUgbGV4aXF1ZSBxdWkgY29udGllbm5lbnQgc3DDqWNpZmlxdWVtZW50IGNlcyBtb3RzIGF2ZWMgbGUgY29kZSBzdWl2YW50OgoKYGBge3J9Cmxpc3RlIDwtIHNjYW4oJ2xpc3RlLnR4dCcsIHdoYXQ9J2NoYXJhY3RlcnMnKQpzZWxlY3Rpb24gPC0gc3Vic2V0KGxleGlxdWUsIG9ydGhvICVpbiUgbGlzdGUpCmBgYAoKIyMgU8OpbGVjdGlvbiBwYXIgY3JpdMOocmVzCgpTdXBwb3NvbnMgcXVlIHZvdXMgdm91bGlleiBzw6lsZWN0aW9ubmVyIHRvdXMgbGVzIG5vbXMgZGUgNSBsZXR0cmVzLCBzaW5ndWxpZXJzLCBkZSBmcsOpcXVlbmNlIGxleGljYWxlIChmaWxtcykgY29tcHJpc2UgZW50cmUgMTAgZXQgMTAwLiBWb2ljaSBsYSBsaWduZSBtYWdpcXVlOgoKYGBge3J9CnNlbGVjdGlvbiA9IHN1YnNldChsZXhpcXVlLCBjZ3JhbT09J05PTScgJiBub21icmUgIT0gJ3AnICYgbmJsZXR0cmVzPT01ICYgZnJlcWxpdnJlcyA+IDEwICYgZnJlcWxpdnJlcyA8IDEwMCkKaGVhZChzZWxlY3Rpb24pCmBgYAoKCkxlIHN5bWJvbGUgYCZgIHNpZ25pZmllICdldCcuIEwnZXhwcmVzc2lvbiBgbm9tYnJlICE9IHBgIHNpZ25pdGlmIHF1ZSBsYSB2YWxldXIgZGFucyBsYSBjb2xvbm5lICpub21icmUqIG5lIGRvaXQgcGFzIMOqdHJlIGBwYC4KCiMjIFPDqWxlY3Rpb24gcGFyICJwYXR0ZXJuIgoKIyMjIExlcyBleHByZXNzaW9ucyByw6lndWxpw6hyZXMKCkxlcyBleHByZXNzaW9ucyByw6l1bGnDqHJlcywgb3UgKipyZWdleCoqLCBzb250IGRlcyDigJxwYXR0ZXJuc+KAnSBxdWkgcGVybWV0dGVudCBkZSByZWNoZXJjaGVyIGRlcyBtb3RzIGF5YW50IGNlcnRhaW5lcyBwcm9wcmnDqXTDqXMuIFBhciBleGVtcGxlIG4naW1wb3J0ZSBgYS5iYCBkw6lzaWduZSB1biBtb3QgY29udGVuYW50IHVuIGBhYCBldCB1biBgYmAgc8OpcGFyw6lzIHBhciB1bmUgbGV0dHJlIHF1ZWxjb25xdWUuIFZvaWNpIGQnYXV0cmUgZXhlbXBsZXM6CgotICoqYF5tYWlzb24kYCoqIDogcmVjaGVyY2hlIGxlIG1vdCDigJxtYWlzb27igJ0gZXhhY3RlbWVudAotICoqYF5hbnRpYCoqIDogcmVjaGVyY2hlIHRvdXMgbGVzIG1vdHMgY29tbWVuw6dhbnQgcGFyIOKAnGFudGnigJ0KLSAqKmBeKGpvdXJ8bnVpdHxtYXRpbnxzb2lyKSRgKiogOiDigJxqb3Vy4oCdIG91IOKAnG51aXTigJ0gb3Ug4oCcbWF0aW7igJ0gb3Ug4oCcc29pcuKAnSAocGVybWV0IGRlIHJlY2hlcmNoZXIgdW5lIGxpc3RlIGRlIG1vdHMpCi0gKipgaW9uYCoqIDogcmVjaGVyY2hlIGxlcyBtb3RzIHF1aSBjb250aWVubmVudCBsYSBjaGFpbmUg4oCcaW9u4oCdIGRhbnMgbuKAmWltcG9ydGUgcXVlbGxlIHBvc2l0aW9uCi0gKipgaW9uJGAqKiA6IG1vdHMgc2UgdGVybWluYW50IHBhciDigJxpb27igJ0KLSAqKmBecHJgKiogOiBtb3RzIGNvbW1lbsOnYW50IHBhciDigJxwcuKAnQotICoqYF5wLi5yYCQqKiA6IG1vdHMgZGUgcXVhdHJlIGxldHRyZXMgY29tbWVuw6dhbnQgcGFyIOKAnHDigJ0sIGZpbmlzYW50IHBhcyDigJxy4oCdCi0gKipgXnAuKnIkYCoqIDogbW90cyBjb21tZW5jYW50IHBhciDigJjigJ1w4oCZIGV0IGZpbmlzc2FudCBwYXIg4oCccuKAnQotICoqYFthZWlvdV1bYWVpb3VdYCoqIDogbW90cyBjb250ZW5hbnQgMiB2b3llbGxlcyBzdWNjZXNzaXZlcwotICoqYF5bYWVpb3VdYCoqIDogbW90cyBjb21tZW7Dp2FudCBwYXIgdW5lIHZveWVsbGUKLSAqKmBeW15hZXJpb3VdYCoqIDogbW90cyBuZSBjb21tZW7Dp2FudCBwYXMgcGFyIHVuZSB2b3llbGxlCgpJbCBleGlzdGUgZGUgbm9tYnJldXggdHV0b3JpYXV4IHN1ciBsZXMgcmVnZXggc3VyIGxlIHdlYiwgbm90YW1tZW50IFtjZWx1aS1jaV0oaHR0cDovL3d3dy5jYW55b3VzZW9tZS5jb20vZ3VpZGUtcmVnZXgvKS4gTGEgYmlibGUgc3VyIGxlIHN1amV0IGVzdCBsZSBsaXZyZSBfW01hc3RlcmluZyBSZWd1bGFyIEV4cHJlc3Npb25zXShodHRwOi8vcmVnZXguaW5mby9ib29rLmh0bWwpXyAgZGUgSmVmZiBGcmllZGwuIAoKVW5lIGV4cHJlc3Npb24gcsOpZ3VsacOocmUgZMOpY3JpdCB1biBhdXRvbWF0ZSBkZSB0cmFuc2l0aW9ucyDDoCDDqXRhdHMgZmluaXMuIExlIHNpdGUgPGh0dHBzOi8vcmVnZXhwZXIuY29tLz4gdm91cyBwZXJtZXQgZGUgdmlzdWFsaXNlciBs4oCZYXV0b21hdGUgYXNzb2Npw6kgw6AgdW5lIHJlZ2V4LiBQYXIgZXhlbXBsZSBgW3B0a10uKlthaW91XVthaW91XS4/aW9uJGAgY29ycmVzcG9uZCDDoCBs4oCZYXV0b21hdGUgZmluaToKCiFbXShmc2EucG5nKQoKIyMjIFJlY2hlcmNoZXMgZGFucyBSIGF2ZWMgZ3JlcGwKClIgcGVybWV0IGQnZWZmZWN0dWVyIGRlcyByZWNoZXJjaGVzIHBhciBwYXR0ZXJuIGdyw6JjZSDDoCBsYSBmb25jdGlvbiBgZ3JlcGxgLiBMYSBzeW50YXhlIGVzdCBgZ3JlcGwoYF9yZWdleF8sIF92YXJpYWJsZV9gKWAgcG91ciByZWNoZXJjaGVyIGxlcyBsaWduZXMgb8O5IGxhIHZhcmlhYmxlICJtYXRjaGUiIGxhIHJlZ2V4IChWb2lyIGxhIFtkb2MgUiBkZSBncmVwbF0oaHR0cHM6Ly9zdGF0LmV0aHouY2gvUi1tYW51YWwvUi1kZXZlbC9saWJyYXJ5L2Jhc2UvaHRtbC9ncmVwLmh0bWwpLgoKQ2V0dGUgZm9uY3Rpb24gcGVybWV0IGRlIGxvY2FsaXNlciBsZXMgbGlnbmVzIHF1aSAnbWF0Y2hlbnQnIHVuZSBleHByZXNzaW9uLCBvdSBiaWVuLCBlbiBsYSBuaWFudCBhdmVjIGxlIHNpZ25lIGAhYCwgZGUgc3VwcHJpbWVyIGRlcyBsaWduZXMgcXVpIG1hdGNoZW50IHVuIHBhdHRlcm4uCgpWb2ljaSBxdWVscXVlcyBleGVtcGxlczoKCiogUG91ciBvYnRlbmlyIHRvdXMgbGVzIG1vdHMgcXVpIGZpbmlzc2VudCBwYXIgYHRpb25gIDoKCmBgYHtyfQpsZXhpcXVlICU+JSBmaWx0ZXIoZ3JlcGwoInRpb24kIiwgb3J0aG8pKSAtPiBzZWxlY3Rpb24yCmhlYWQoc2VsZWN0aW9uMikKYGBgCgpFbmNvcmUgdW5lIGZvaXMsIHZvdXMgcG91dmV6IHNhdXZlZ2FyZGVyIGNlcyByw6lzdWx0YXRzIGF2ZWM6CgoKYGBge3J9CndyaXRlX3RzdihzZWxlY3Rpb24yLCAnbW90cy1lbi10aW9uLnRzdicpCmBgYAoKKiBQb3VyIGxpc3RlciB0b3VzIGxlcyBtb3RzIGNvbnRlbmFudCB1biBjbHVzdGVyIGRlIGNvbnNvbm5lcyBwbG9zaXZlcywgbWFpcyBwYXMgZGVidXQgZGUgbW90OgoKYGBge3J9CmxleGlxdWUgJT4lIGZpbHRlcihncmVwbCgnLltwdGtiZGddW3B0a2JkZ10nLCBwaG9uKSkgLT4gc2VsZWN0aW9uMwpoZWFkKHNlbGVjdGlvbjMpCmBgYAoKCiogTCdvcMOpcmF0ZXVyIGBmaWx0ZXJgcGV1dCDDqnRyZSBhcHBlbGVyIHBsdXNpZXVycyBmb2lzIHBvdXIgYWZmaW5lciBwcm9ncmVzc2l2ZW1lbnQgbGEgcmVjaGVyY2hlLiAKCiAgUGFyIGV4ZW1wbGUsIHBvdXIgb2J0ZW5pciB0b3VzIGxlcyBtb3RzIGRlIDggbGV0dHJlcyBxdWkgbmUgZmluaXNzZW50IHBhcyBgZW50YDoKICAKYGBge3J9CmxleGlxdWUgJT4lIGZpbHRlcihuYmxldHRyZXMgPT0gOCkgJT4lIGZpbHRlcighZ3JlcGwoImVudCQiLCBvcnRobykpIC0+IHNlbGVjdGlvbjQKaGVhZChzZWxlY3Rpb240KQpgYGAKCgoK</div>
 
 
 
