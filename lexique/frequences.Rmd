@@ -1,9 +1,12 @@
 ---
 title: "R Notebook"
 author: "Christophe@pallier.org"
-output: 
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
   html_document:
-    toc: true
+    toc: yes
     toc_depth: 2
 ---
 
@@ -69,6 +72,25 @@ b4[sample(1:nrow(b4), 10),]
 b5 <- subset(lexique1, ((logfreq > 2.5) & (logfreq < 2.6) & (cgram == 'NOM') & (islem==1)), c('ortho',  'freqlivres', 'logfreq'))
 b5[sample(1:nrow(b5), 10),]
 ```
+
+
+# Comparaison d'estimations de fréquences 
+
+Lexique3 fournit également des fréquences lexicales estimées à partir d'un corpus de sous-titres de films (`freqfilms2`).
+
+Examinons la relation entre les fréquences estimées sur les libvres (corpus Frantext) et celles estimées à partir des sous-titres.
+
+
+```{r}
+lexique1$logfreqfilms = log10(lexique1$freqfilms2)
+with(lexique1, plot(logfreq, logfreqfilms, pch='.'))
+```
+
+Pour sélectionner des mots peu fréquents, pour lesquels les fréquences peuvent être mal estimées, il peut être une bonne idée de combiner les critères sur les deux type de fréquences.
+
+
+
+
 
 
 
