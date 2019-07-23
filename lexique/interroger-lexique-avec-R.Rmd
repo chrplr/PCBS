@@ -2,12 +2,12 @@
 title: "Interroger Lexique avec R"
 author: "Christophe Pallier"
 output:
-  html_document:
-    df_print: paged
+  pdf_document:
     toc: yes
   html_notebook:
     toc: yes
-  pdf_document:
+  html_document:
+    df_print: paged
     toc: yes
 ---
 
@@ -30,13 +30,11 @@ Note: Il fait parti du cours [Programmation pour les Sciences Cognitives](https:
     install.packages(c('rjson', 'tidyverse'))
     ```
 
-    Laissez RStudio se débrouiller (mais vous devrez peut-être sélectionner un serveur). 
+   Laissez RStudio se débrouiller (mais vous devrez peut-être sélectionner un serveur). 
 
+   Puis créez un nouveau projet (Menu `File/New Project/New Directory/New project`) que vous nommerez *lexique*. 
 
-   Puis créez un nouveau projet (Menu `File/New Project/New Directory/New project`) que vous nommerez 'Lexique'. 
-
-
-   Vous êtes  prêt ! Vous n'aurez plus jamais à refaire ces étapes.
+   Vous êtes prêt ! Vous n'aurez plus jamais à refaire ces étapes.
 
 ## Chargement de la table *lexique*
 
@@ -60,10 +58,35 @@ Dans le menu `File`, ouvrez le projet *lexique* créé dans la section précéde
     ```
 
 
-   Puis, en faisant bien attention que le curseur soit à l'intérieur du bloc de code, cliquez sur `Run/Run current chunk` (ou bien appuyez sur la petite *fleche verte*, ou bien encore sur les touches *Ctrl-Shift-Enter*). 
+La fenêtre `Rstudio` doit ressembler à la fiugure suivante :
 
-  La variable `lexique` doit maintenant apparaitre dans l'onglet **Environment** en haut à droite ; Cliquez dessus pour consulter la table. 
+![Téléchargment de Lexique](getlex.png)
 
+   En faisant bien attention que le curseur soit _à l'intérieur du bloc de code_, cliquez sur `Run/Run current chunk` (ou bien appuyez sur la petite *flèche verte*, ou bien encore sur les touches *Ctrl-Shift-Enter*). 
+
+  La variable `lexique` doit maintenant apparaitre dans l'onglet **Environment** en haut à droite ; Vous pouvez cliquez dessus pour consulter la table. 
+
+
+## Exploration de la distribution des fréquences
+
+Supprimons les mots très rares, de fréquence d'occurrence inférieure à 0.5 par million dans le corpus des livres :
+
+```{r}
+lexique1 <- subset(lexique, freqlivres > 0.5)
+lexique1$logfreq <- log10(lexique1$freqlivres)
+```
+
+Puis calculons l'histogramme des fréquences, et affichons le sur un graphique avec des axes logarithmiques:
+
+```{r}
+with(lexique1, {
+  histdata <- hist(logfreq, plot=FALSE, nclass=50)
+  plot(histdata$breaks[-1], histdata$count, log="y", type='h', lwd=10, lend=2, las=1, xlab='log10(freqlivres)', ylab='count')
+  }
+)
+```
+
+Note: On retrouve la [loi de Zipf](https://fr.wikipedia.org/wiki/Loi_de_Zipf), c'est à dire une relation à peu près linéaire sur ce graphique log-log, qui reflète une distribution en loi de puissance.  
 
 ## Recherche de mots
 
@@ -79,14 +102,13 @@ selection <- subset(lexique, ortho %in% items)
 head(selection)
 ```
 
-Exécutez ce code (Ctrl-Shift-Enter). La variable `selection` doit contenir les lignes pertinente. Vous pouvez inspecter son contenu en cliquant sur son nom dans l'onglet **Environment** situé dans la fenêtre en haut à droite de RStudio.
+Exécutez ce code (Ctrl-Shift-Enter). La variable `selection` doit contenir les lignes pertinentes. Vous pouvez inspecter son contenu en cliquant sur son nom dans l'onglet **Environment** situé dans la fenêtre en haut à droite de RStudio.
 
 Pour sauvegarder les résultats obtenus dans un fichier, exéctuez la commande suivante:
 
 ```{r}
 write_tsv(selection, 'selection.tsv')
 ```
-
 
 Cela doit créer un fichier `selection.tsv` dans le répertoire du projet (*lexique*).
 
@@ -185,6 +207,21 @@ head(selection3)
 lexique %>% filter(nblettres == 8) %>% filter(!grepl("ent$", ortho)) -> selection4
 head(selection4)
 ```
+
+
+# Chargement d'autres tables d'OpenLexicon
+
+
+Le projet [OpenLexicon](https://github.com/chrplr/openlexicon) comprend de nombreuses tables lexicales (voir <https://chrplr.github.io/openlexicon/datasets-info/>).
+
+Pour accéder à ces tables, vous pouvez utiliser la fonction `fetch_datatset` définie dans <https://raw.githubusercontent.com/chrplr/openlexicon/master/datasets-info/fetch_datasets.R>. 
+
+Par exemple, pour charger la table SUBTLEX-US:
+
+    ```{r}
+    source('https://raw.githubusercontent.com/chrplr/openlexicon/master/datasets-info/fetch_datasets.R')
+    subtlexus <- readRDS(fetch_dataset('SUBTLEX-US', format='rds')$datatables[[1]])
+    ```
 
 
 

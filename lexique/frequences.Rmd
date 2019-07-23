@@ -1,0 +1,78 @@
+---
+title: "R Notebook"
+author: "Christophe@pallier.org"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+
+
+
+On télécharge d'abord la table Lexique3:
+
+```{r}
+require(rjson)
+source('https://raw.githubusercontent.com/chrplr/openlexicon/master/datasets-info/fetch_datasets.R')
+lexique <- get_lexique383()
+```
+
+Puis, supprimons les items de très basse fréquence (inférieure à 0.5 par million):
+
+```{r}
+lexique1 = subset(lexique, freqlivres > 0.5)
+lexique1$logfreq <- log10(lexique1$freqlivres)
+```
+
+# Distribution des fréquences lexicales 
+
+Calculons l'histogramme des fréquences par million dans le corpus des livres, et affichons sur un graphique avec des axes logarithmiques:
+
+```{r}
+with(lexique1, {
+  histdata <- hist(logfreq, plot=FALSE, nclass=50)
+  plot(histdata$breaks[-1], histdata$count, log="y", type='h', lwd=10, lend=2, las=1, xlab='log10(freqlivres)', ylab='count')
+  }
+)
+```
+
+Note: On retrouve la [loi de Zipf](https://fr.wikipedia.org/wiki/Loi_de_Zipf), c'est à dire une relation à peu près linéaire sur ce graphique log-log, qui reflète une distribution en loi de puissance.  
+
+
+# Exemples de noms tirés dans différentes bandes de fréquence:
+
+```{r}
+b1 <- subset(lexique1, ((logfreq < 0.1) & (cgram == 'NOM') & (islem==1)), c('ortho',  'freqlivres', 'logfreq'))
+b1[sample(1:nrow(b1), 10),]
+```
+
+
+```{r}
+b2 <- subset(lexique1, ((logfreq > 1) & (logfreq < 1.1) & (cgram == 'NOM') & (islem==1)), c('ortho',  'freqlivres', 'logfreq'))
+b2[sample(1:nrow(b2), 10),]
+```
+
+
+```{r}
+b3 <- subset(lexique1, ((logfreq > 1.5) & (logfreq < 1.6) & (cgram == 'NOM') & (islem==1)), c('ortho',  'freqlivres', 'logfreq'))
+b3[sample(1:nrow(b3), 10),]
+```
+
+
+```{r}
+b4 <- subset(lexique1, ((logfreq > 2.0) & (logfreq < 2.1) & (cgram == 'NOM') & (islem==1)), c('ortho',  'freqlivres', 'logfreq'))
+b4[sample(1:nrow(b4), 10),]
+```
+
+
+```{r}
+b5 <- subset(lexique1, ((logfreq > 2.5) & (logfreq < 2.6) & (cgram == 'NOM') & (islem==1)), c('ortho',  'freqlivres', 'logfreq'))
+b5[sample(1:nrow(b5), 10),]
+```
+
+
+
+
+
+
+
