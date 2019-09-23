@@ -14,7 +14,7 @@ The one left with the last match loses.
 
 import random
 
-n_matches = 21 + random.randint(0, 11)
+n_matches = 11 + random.randint(0, 11)
 
 print("""Welcome. Let's play the game of Matches:
 We take turns to remove 1, 2 or 3 matches.

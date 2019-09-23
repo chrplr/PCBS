@@ -1,7 +1,7 @@
 <<% Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-04-22 10:38:47 christophe@pallier.org>
+% Time-stamp: <2019-09-23 15:54:01 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -19,7 +19,6 @@ To download them, open a terminal (`git bash` under Windows) and type:
 
 **Companion documents**
 
-* [Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Computers.md)
 * [How to solve problems](how-to-solve-problems.md)
 * [Tips for writing clean code](tips.md)
 * [Tools for reproducible science](tools-for-reproducible-science.md)
@@ -37,6 +36,12 @@ To download them, open a terminal (`git bash` under Windows) and type:
 
 - [Objectives](#objectives)
 - [Prerequisites](#prerequisites)
+    - [Software Installation](#software-installation)
+    - [Basic programming concepts](#basic-programming-concepts)
+- [Lecture 0](#lecture-0)
+    - [Basic skills](#basic-skills)
+        - [how to open a Terminal](#how-to-open-a-terminal)
+        - [how to start [ipython](http://ipython.org)](#how-to-start-ipythonhttpipythonorg)
 - [Creating static visual stimuli](#creating-static-visual-stimuli)
     - [Kanizsa illusory contours](#kanizsa-illusory-contours)
     - [Herman grid](#herman-grid)
@@ -83,12 +88,8 @@ To download them, open a terminal (`git bash` under Windows) and type:
         - [Sublime Text Editor](#sublime-text-editor)
         - [R](#r)
         - [Rstudio Desktop](#rstudio-desktop)
-    - [How to open a Terminal](#how-to-open-a-terminal)
-        - [Linux](#linux)
-        - [MacOS](#macos)
-        - [Windows](#windows)
-    - [Resources to learn the command shell](#resources-to-learn-the-command-shell)
     - [Resources to learn Python](#resources-to-learn-python)
+    - [Resources to learn the command shell](#resources-to-learn-the-command-shell)
     - [Resources to learn Git](#resources-to-learn-git)
     - [Stimulus/Experiment generation modules](#stimulusexperiment-generation-modules)
     - [Data analyses, Statistics](#data-analyses-statistics)
@@ -113,57 +114,107 @@ of real-time experiments, simulations...).
 
 # Prerequisites #
 
-You should:
+## Software Installation ##
 
-* have installed the following software on your computer
-  ([Instructions](#instructions-for-software-installation) are provided in the
-  appendix):
+You should have installed the following software on your computer: _Anaconda
+Python 3_, the _expyriment_ module, _Git_, a text editor (e.g. _Sublime Text_ or _Atom_),
+_R_ and _RStudio Desktop_ (see [Instructions for software
+installation](#instructions-for-software-installation))
 
-  * **Python3**. 
-  * The Python library **Expyriment** 
-  * **Git** from <https://git-scm.com/>
-  * **Sublime Text** (text editor) from [Sublime
-  Text](https://www.sublimetext.com/) (Unless you are already using a text
-  editor that you are happy with)
-  * **R** from <https://cran.r-project.org/>
-  * **Rstudio Desktop** from <https://www.rstudio.com>
+## Basic programming concepts ##
 
-
-* know [how to open a Terminal](#how-to-open-a-terminal)  and navigate the
-  directory structure with `cd`, `pwd` and `ls`.
+Ideally, you should be acquainted with some basic programming concepts, such as expressions, instructions, variables, lists, dictionaries, tests (if...then...else), string manipulations, loops (while and for). 
   
-  Try it: Open a Terminal, use `cd` and `pwd` to navigate to the `PCBS` folder
-  that you have previously downloaded with `git clone`, and list the files with
-  `ls`).
+You should be able to understand the scripts in the [games](games/) folder.
 
-* know how to launch [ipython](http://ipython.org) in a Terminal.
+Check out [Resources to learn Python in the Appendix](#resources-to-learn-python)
+
+
+# Lecture 0
+
+## Automata, Turing Machines and Computers ##
+
+[Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Computers.md)
+
+## Basic skills ##
+
+Here a few skills that you will need to rapidly master:
+
+### how to open a Terminal ###
+
+- **Linux**: Launch `Terminal` from your application menu  or use `Ctrl-Alt-T** (gnome, xfce), or
+Win+Enter (i3)).
+
+- **MacOS**: Type `terminal` in the Spotlight search field.  Alternatively, you can open a `Finder` window and select the `Application` folder, then the `Utilities` folder, then double-click on the `Terminal` icon..
+
+- **Windows**: Start `Git Bash` (This assumes that you have installed `Git for windows` from
+<https://git-scm.com/download/win ):
+
+ 1. Click the Windows or Start icon.
+ 2. In the Programs list, open the Git folder.
+ 3. Click the option for Git Bash.
+
+Inside a terminal, you interact with a program that expects you to type commands. This program is called a _shell_. 
+You will need to know the following commands in order to navigate the filesystem. 
+
+   - _ls_: list the content of the current working directory
+   - _pwd_: path of current working directory
+   - _cd_: change directory
+   
+This will be enough but if you want to learn more about how to use the shell; check out the section [Resources to learn the command shell](#resources-to-learn-the-command-shell).
+
+   
+### knowing how to download a Python script from the Internet and execute it from a command line ###
+
+  Try the following:
   
-  Try it: Open a Terminal, type `ipython`, and enter `2**64`
-
-* know how to download a Python script from the Internet and execute it from the
-  command line in a Terminal:
+  - Download the python script [games/matches.py](games/matches.py)
+  - Open a terminal and use the 'cd', 'pwd', and 'ls' commands to navigage to the directory containing the file that you have just downloaded; Then, type:
   
-  Try it: Download [games/matches.py](games/matches.py) and
-  run it in a terminal
+      python3 matches.py
 
-* know how to create and/or modify scripts with a text editor such as [Sublime
-  Text](https://www.sublimetext.com/) or using an Integrated Development Environment
-  like Spyder (included in Anaconda).
+ 
+### how to start [ipython](http://ipython.org) ###
 
-* know basic programming concepts expressions, instructions, variables, lists,
-  dictionaries, tests (if..then..else), string manipulations, loops (while and
-  for), functions (call, definition, local variables), file input/output
-  operations ) and their implementation in Python3. For instance, you should be able 
-  to understand the scripts in the [games](games/) folder.
+ 
+  Try it: 
   
-  Check out [Resources to learn Python in the Appendix](#resources-to-learn-python)
-
-* know the basic usage of [Git](https://www.gitbook.com/), that is the
-  commands`git clone, git pull, git init, git add, git status, git commit` 
+  - Open a Terminal, type `ipython3` and press "Return", 
+  - After the prompt `In [1]: `, type `2**64` and 'Return'
+  - Then, type the following lines in the ipython shell:
   
-  Check out [Resources to learn Git in the Appendix](#resources-to-learn-git)
+      import matplotlib.pyplot as plt
+      import numpy as np
+      t = np.linspace(0, 30, num=3001)
+      plt.plot(t, np.sin(t))
+  
+     If a Windows open with a graphical representation of the sine function, Congratulations! (you can press 'q' in the Window to close it)
+     
+   - Type `quit()` to quit ipython, then `exit` to quit the shell and close the terminal.
+
+
+  
+### create and/or modify scripts with a text editor ###
+
+You can use a  text editor like [micro](https://micro-editor.github.io/), [Sublime Text](https://www.sublimetext.com/) or [Atom](http://atom.io), or an Integrated Development Environment like Spyder or PyCharm.
+
+
+To work you will basically need two windows side by side: one with a text editor displaying the code, and one with ipython to test it (add maybe a browser when you need to google for help about Python) 
+
+
+### use Git to keep  your project clean ###
+
+
+[Git](https://www.gitbook.com/) is a software that allow you to keep track of the modifications of your files, to test alternatives, to share the work. Althought it is a complex tools, you will only need to know the commands:
+  commands `git clone, git pull, git init, git add, git status, git commit` 
+
+Check out [Resources to learn Git in the Appendix](#resources-to-learn-git)
+
+
 
 -------------------------------------------------------------------------------
+
+
 
 # Creating static visual stimuli #
 
@@ -365,40 +416,40 @@ Hints:
 ## Simple reaction times ##
 
 1. Write a script that presents a series of trials in which a dot or a cross is
-   presented at the center of the screen and the participant must click on the
-   mouse as quickly as possible. The reaction times must be recorded in a file
-   for further analyses.
+presented at the center of the screen and the participant must click on the
+mouse as quickly as possible. The reaction times must be recorded in a file
+for further analyses.
 
 2. Here is a [solution using
-    pygame](reaction-times/simple-detection-visual-pygame.py). Run it and check
-    `reaction_times.csv`.
+pygame](reaction-times/simple-detection-visual-pygame.py). Run it and check
+`reaction_times.csv`.
 
 3. Here is a [solution using
-    expyriment](reaction-times/simple-detection-visual-expyriment.py).
-    
-   Run the previous script. Check the results file in the folder `data`. Launch
-    ipython in the `data` folder and type:
-    
+expyriment](reaction-times/simple-detection-visual-expyriment.py).
 
-         import pandas as pd 
-         d = pd.read_csv('simple-detection... .xpd',comment='#') 
-         d.RT.mean() 
-         d.RT.std() 
-         d.RT[1:].mean()
-    
-         import matplotlib.pyplot as plt plt.hist(d.RT) 
+Run the previous script. Check the results file in the folder `data`. Launch
+ipython in the `data` folder and type:
+
+
+import pandas as pd 
+d = pd.read_csv('simple-detection... .xpd',comment='#') 
+d.RT.mean() 
+d.RT.std() 
+d.RT[1:].mean()
+
+import matplotlib.pyplot as plt plt.hist(d.RT) 
 
 
 4. Read <https://docs.expyriment.org/Tutorial.html> to understand the basic
-   principles of expyriment. See `PCBS/expyriment_template.py``
+principles of expyriment. See `PCBS/expyriment_template.py``
 
 5. Modify `simple-detection-visual-expyriment.py` to play a short sound
-   (`click.wav`) in lieu of displaying a cross. Thus you have created a simple
-   detection audio experiment.
+(`click.wav`) in lieu of displaying a cross. Thus you have created a simple
+detection audio experiment.
 
 6. Modify the script to have 3 blocks of trials: one in which the target is
-   visual, one in which it is audio, and one in which it is randomly visual or
-   auditory. Are we slowed down in the latter condition?
+visual, one in which it is audio, and one in which it is randomly visual or
+auditory. Are we slowed down in the latter condition?
 
 ## Posner's attentional cueing task ##
 
@@ -412,18 +463,18 @@ task](https://en.wikipedia.org/wiki/Posner_cueing_task) See solution in
 The [Stroop Effect](https://en.wikipedia.org/wiki/Stroop_effect) demonstrates
 the automaticity of reading. Write a python script to create 4x8 cards for the
 task, avoiding repetitions of colors.
- 
-![Stroop card](images/stroop.png)
- 
-  You can read a tutorial on [how to display text with
-  pygame](https://nerdparadise.com/programming/pygame/part5)
- 
-   * After trying to program it yourself, you can compare with [my
-   solution](Stroop-effect/create_stroop_cards.py)
 
-   * Run [stroop_task.py](Stroop-effect/stroop_task.py) and check the naming
-   times in `data`. Compute the average reading times as a function of the
-   language (you can use R or Python).
+![Stroop card](images/stroop.png)
+
+You can read a tutorial on [how to display text with
+pygame](https://nerdparadise.com/programming/pygame/part5)
+
+* After trying to program it yourself, you can compare with [my
+solution](Stroop-effect/create_stroop_cards.py)
+
+* Run [stroop_task.py](Stroop-effect/stroop_task.py) and check the naming
+times in `data`. Compute the average reading times as a function of the
+language (you can use R or Python).
 
 
 ## Lexical Decision Task ##
@@ -434,16 +485,16 @@ not, indicating his/her decision by pressing a left or right button. Reaction
 time is measured from the word onset, providing an estimate of the speed of word
 recognition.
 
-   * Visit the web site <http://www.lexique.org>
-   * To learn to use lexique with R, follow the document <http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html>
-   * Using [lexical-decision/select-words-from-lexique.py] as an example, select
-     20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and
-     20 low frequency verbs, from Lexique382.txt --- from <http://www.lexique.org/public/Lexique382.zip>. They must all have a length of 5 to 8 characters.
-   * Generate 50 pseudowords using either [Lexique
-   tools](http://www.lexique.org/toolbox/toolbox.pub/) or
-   [Wuggy](http://crr.ugent.be/programs-data/wuggy)
-   * Program a lexical decision using expyriment.
-   * Run it and compute the average decision times using pandas
+* Visit the web site <http://www.lexique.org>
+* To learn to use lexique with R, follow the document <http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html>
+* Using [lexical-decision/select-words-from-lexique.py] as an example, select
+20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and
+20 low frequency verbs, from Lexique382.txt --- from <http://www.lexique.org/public/Lexique382.zip>. They must all have a length of 5 to 8 characters.
+* Generate 50 pseudowords using either [Lexique
+tools](http://www.lexique.org/toolbox/toolbox.pub/) or
+[Wuggy](http://crr.ugent.be/programs-data/wuggy)
+* Program a lexical decision using expyriment.
+* Run it and compute the average decision times using pandas
 
 
 ## A general audio visual stimulus presentation script ##
@@ -455,7 +506,7 @@ In some experiments, we know in avdvance the precise timing of all stimuli (the 
 
 * See <http://docs.expyriment.org/old/0.9.0/Examples.html>
 * Fork <https://github.com/expyriment/expyriment-stash> and contribute by adding
-  new scripts!
+new scripts!
 
 --------------------------------------------------------------------------------
 
@@ -657,9 +708,9 @@ LICENSE](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 ## Instructions for Software installation ##
 
-We will install:
+Follow those instruction to install:
 
-  * **Python3**. 
+  * **Anaconda Python 3**. 
   * The Python library **Expyriment** 
   * **Git** from <https://git-scm.com/>
   * **Sublime Text** (text editor) from [Sublime
@@ -674,19 +725,19 @@ We will install:
 * You will need to download about 1GB of software from the Internet. Therefore,
   make sure to have a decent connection.
 * Make sure that you have at least 5GB of free space on your hard drive to
-  unpack the softwares.
+  unpack the various software.
 * You might need to have administrator rights to install some of the softwares.
   If you are using a computer from an Institution, this is not always the case.
   Check with your IT team.
 * If you are using Windows 10, make sure your user name doesn't include spaces
   or characters that don't belong to the English alphabet (accents,
-  ideograms,...). If you do, better create a new user with a
+  ideograms,...). If you do, better create a new user with a simple identifier. 
 
 ### Anaconda Python3 ###
 
-We will make use of the [Anaconda distribution](https://www.anaconda.com/distribution)
+Among various python distribution, we recommend the [Anaconda distribution](https://www.anaconda.com/distribution) because it comes with most of the packages needed for the lectures. 
 
-1. Go to the [Anaconda Python distribution page](https://www.anaconda.com/distribution). Select your OS (Windows, MacOS or Linux) and download the _Python 3.7_ 64 bits installer.
+1. Go to the [Anaconda Python distribution page](https://www.anaconda.com/distribution). Select your OS --- Windows, MacOS or Linux --- and download the _Python 3.7_ 64 bits installer.
 2. Go to your download folder and execute the Anaconda3 installer.
 3. In the Anaconda Setup Wizard, beware, pay attention to the following options
    option:
@@ -698,7 +749,7 @@ We will make use of the [Anaconda distribution](https://www.anaconda.com/distrib
 
 ### Expyriment ###
 
-We will make use of the Python library [Expyriment](http://www.expyriment.org/)
+We will need the Python library [Expyriment](http://www.expyriment.org/)
 
 1. Open a Terminal:
 
@@ -754,34 +805,31 @@ R is a programming language specialized for data analyses.
 ### Rstudio Desktop ###
 
 Rstudio is an Integrated Developpement Environment for R which greatly
-simplifies the use of __RMarkdown_. You can download and install the latest version of __RStudio Desktop_ from <https://www.rstudio.com/products/rstudio/download/>. Make sure to select the correct Operating System!
+simplifies the use of __RMarkdown_. You can download and install the latest
+version of __RStudio Desktop_ from
+<https://www.rstudio.com/products/rstudio/download/>. Make sure to select the
+correct Operating System!
+
 
 --------------------------------------------------------------------------------
 
-## How to open a Terminal ##
+## Resources to learn Python ##
 
-### Linux ###
+  - MOOCs:
+       * [Udemy's Python programming for absolute
+       beginners](https://www.udemy.com/python-programming-for-absolute-beginners/)
+       * [Code Academy's _Learn Python_
+       module](https://www.codecademy.com/learn/learn-python)
+       * [Openclassrooms' Apprendre à programmer en
+       Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python)
+       * [Python 3 : des fondamentaux aux concepts avancés du
+       langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/).
+   - Books: 
+       * [_Automate the boring stuff with Python_](https://automatetheboringstuff.com/) (highly recommended!)
+       * [_Apprendre à Programmer avec
+   Python3_](https://inforef.be/swi/python.htm) 
+       * [_Think Python_](http://greenteapress.com/thinkpython2/),
 
-Launch `Terminal` from your applications or use `Ctrl-Alt-T` (gnome, xfce), or
-Win+Enter (i3)).
-
-
-### MacOS ###
-
-Type `terminal` in the Spotlight search field. 
-
-Alternatively, you can open a `Finder` window and select the `Application`
-folder, then the `Utilities` folder, then double-click on the `Terminal` icon..
-
-
-### Windows ###
-
-Launch `Git Bash` (This assumes that you have installed `Git for windows` from
-<https://git-scm.com/download/win ):
-
- 1. Click the Windows or Start icon.
- 2. In the Programs list, open the Git folder.
- 3. Click the option for Git Bash.
 
 --------------------------------------------------------------------------------
 
@@ -831,26 +879,16 @@ Why learn the command shell?
   Shotts.
   - [Openclassrooms MOOC](https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux)
   
+Remarks;
+- Under Windows, after having installed Git,  you have access to "git bash", which provides a terminal with the bash shell and emulates many unix commands.
+- Under Windows 10, Microsoft has recently made available the "Windows Subsystem for Linux", which provides a virtual Linux system running inside Windows. (See
+                   <https://itsfoss.com/install-bash-on-windows/>, and <https://itsfoss.com/windows-linux-kernel-wsl-2/>).  
+
+- Under MacOSX, when you open a terminal, you may be interacting with the bash shell or the zsh shell (to know which, type  `echo $SHELL`). 
+
+
 --------------------------------------------------------------------------------  
 
-## Resources to learn Python ##
-
-  - MOOCs:
-       * [Udemy's Python programming for absolute
-       beginners](https://www.udemy.com/python-programming-for-absolute-beginners/)
-       * [Code Academy's _Learn Python_
-       module](https://www.codecademy.com/learn/learn-python)
-       * [Openclassrooms' Apprendre à programmer en
-       Python](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python)
-       * [Python 3 : des fondamentaux aux concepts avancés du
-       langage](https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/).
-   - Books: 
-       * [_Automate the boring stuff with Python_](https://automatetheboringstuff.com/) (highly recommended!)
-       * [_Apprendre à Programmer avec
-   Python3_](https://inforef.be/swi/python.htm) 
-       * [_Think Python_](http://greenteapress.com/thinkpython2/),
-
---------------------------------------------------------------------------------
 
 ## Resources to learn Git ##
 
