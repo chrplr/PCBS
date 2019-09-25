@@ -1,0 +1,31 @@
+Responsive design for slides:
+
+On android:
+<meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1, user-scalable=no"/>
+
+user-scalable=no prevents user zooming! That is probably a bad thing to do.
+
+The android browser generally treats its screen size as 320 x something for compatibility with sites designed for the iPhone. You can override this with the meta tag.
+
+You can use separate style sheets, e.g.
+
+<link media="screen and (min-device-width: 481px)"
+  href="desktop.css" rel="stylesheet" type="text/css">
+<link media="only screen and (max-device-width: 480px)"
+  href="mobile.css" rel="stylesheet" type="text/css">
+
+Notice word 'only' - this link to mobile.css will be ignored by browsers which don't support media queries. Don't forget to add meta tag, otherwise your smartphone browser will think it's a big screen:
+
+<meta name="viewport" content="initial-scale=1.0" />
+
+The meta element is specific to Android. I would prefer to do some detection in the script and inject the meta element as appropriate to the device, or perhaps there is a platform specific API for setting the initial scale?
+
+I need to increase the scale of the table of contents to avoid the need to zoom the page before selecting the slide, and then rezooming to the original scale on the new slide.
+
+I currently use a single touch swipe for gestures (prev/next slide, show/hide contents). To scroll or zoom you need to use two fingers.  This isn't ideal!
+
+It may be possible to define smarter heuristics for distinguishing slidy gestures from scrolling or zooming.
+
+A possible but unpalatable solution is to use 3 fingers for slidy gestures!
+
+

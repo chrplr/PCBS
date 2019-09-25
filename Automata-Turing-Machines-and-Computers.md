@@ -279,6 +279,9 @@ When you open a terminal, a program called a **shell** is started that displays 
 
 ![Picture of a 'virtual' terminal in Linux](images/terminal.png)
 
+
+---------------------
+
 # How to open a Terminal
 
 - Ubuntu-Linux: Ctrl-Alt-T (see <https://help.ubuntu.com/community/UsingTheTerminal>)

@@ -1,28 +1,25 @@
+# Time-stamp: <2019-09-25 22:15:37 christophe@pallier.org>
+
+PANDOC_DOC_OPTS := --standalone -s  --toc -c pandoc.css
+PANDOC_SLIDES_OPTS := --standalone -s --toc -t slidy -V slidy-url=css 
+
+
 INPUT_MDS := $(wildcard *.md)
-INPUT_NB := $(wildcard *.ipynb)
 
-OUTPUT_PDF = $(INPUT_MDS:.md=.pdf)
-OUTPUT_HTML = $(INPUT_MDS:.md=.html) 
-OUTPUT_NB = $(INPUT_NB:.ipynb=.html)
+OUTPUT_HTML = $(INPUT_MDS:.md=-doc.html) $(INPUT_MDS:.md=-slides.html) 
 
-.PHONY: all html pdf clean
+.PHONY: all html clean
 
-all: html pdf
-
-pdf: $(OUTPUT_PDF)
-
-%.pdf: %.md
-	Rscript -e "rmarkdown::render('$<', output_file='$@', output_format='tufte::tufte_handout')"
+all: html 
 
 html: $(OUTPUT_HTML)
 
-%.html: %.md
-	Rscript -e "rmarkdown::render('$<', output_file='$@', output_format='tufte::tufte_html')"
+%-slides.html: %.md
+	pandoc $(PANDOC_SLIDES_OPTS) $< -o $@
 
-notebooks: $(OUTPUT_NB)
 
-%.html: %.ipynb
-	jupyter nbconvert $< --to html
+%-doc.html: %.md
+	pandoc $(PANDOC_DOC_OPTS) $< -o $@
 
 clean:
-	@rm -f $(OUTPUT_HTML) $(OUTPUT_PDF) $(OUTPUT_NB)
+	@rm -f $(OUTPUT_HTML)

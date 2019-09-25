@@ -1,7 +1,8 @@
-<<% Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
+
+% Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-09-23 15:54:01 christophe@pallier.org>
+% Time-stamp: <2019-09-25 22:25:06 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -39,9 +40,13 @@ To download them, open a terminal (`git bash` under Windows) and type:
     - [Software Installation](#software-installation)
     - [Basic programming concepts](#basic-programming-concepts)
 - [Lecture 0](#lecture-0)
+    - [Automata, Turing Machines and Computers](#automata-turing-machines-and-computers)
     - [Basic skills](#basic-skills)
         - [how to open a Terminal](#how-to-open-a-terminal)
+        - [how to download a Python script from the Internet and execute it from a command line](#how-to-download-a-python-script-from-the-internet-and-execute-it-from-a-command-line)
         - [how to start [ipython](http://ipython.org)](#how-to-start-ipythonhttpipythonorg)
+        - [create and/or modify scripts with a text editor](#create-andor-modify-scripts-with-a-text-editor)
+        - [use Git to keep  your project clean](#use-git-to-keep--your-project-clean)
 - [Creating static visual stimuli](#creating-static-visual-stimuli)
     - [Kanizsa illusory contours](#kanizsa-illusory-contours)
     - [Herman grid](#herman-grid)
@@ -85,7 +90,7 @@ To download them, open a terminal (`git bash` under Windows) and type:
         - [Anaconda Python3](#anaconda-python3)
         - [Expyriment](#expyriment)
         - [Git](#git)
-        - [Sublime Text Editor](#sublime-text-editor)
+        - [A Text Editor](#a-text-editor)
         - [R](#r)
         - [Rstudio Desktop](#rstudio-desktop)
     - [Resources to learn Python](#resources-to-learn-python)
@@ -105,7 +110,13 @@ To download them, open a terminal (`git bash` under Windows) and type:
 
 # Objectives #
 
-The purpose of these lectures is to allow students to write clean programs in
+Students in Cognitive-(Neuro)-science need to learn programming:
+
+1. to understand how computers work, because they represent one model for the Mind.
+2. to automate the boring stuff (e.g. repetitive work on files, web scrapping,)
+3. to do reproducible science: designing experiments, running them, analysing them.
+
+The main purpose of these lectures is to allow students to write *clean programs* in
 order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...).
@@ -161,15 +172,15 @@ You will need to know the following commands in order to navigate the filesystem
    - _pwd_: path of current working directory
    - _cd_: change directory
    
-This will be enough but if you want to learn more about how to use the shell; check out the section [Resources to learn the command shell](#resources-to-learn-the-command-shell).
+This will be enough for our course but if you want to learn more about how to use the Terminal/Shell and become a 'power-user', check out the section [Resources to learn the command shell](#resources-to-learn-the-command-shell).
 
    
-### knowing how to download a Python script from the Internet and execute it from a command line ###
+###  how to download a Python script from the Internet and execute it from a command line ###
 
   Try the following:
   
-  - Download the python script [games/matches.py](games/matches.py)
-  - Open a terminal and use the 'cd', 'pwd', and 'ls' commands to navigage to the directory containing the file that you have just downloaded; Then, type:
+  1. Download the script, e.g. [games/matches.py](games/matches.py).  Make sure you know in which directory the file has been saved.  
+  2. Open a terminal and use the 'cd', 'pwd', and 'ls' commands to navigate to the directory containing the file that you have just downloaded; Then, type:
   
       python3 matches.py
 
@@ -298,7 +309,7 @@ Here is the Honeycom illusion:
 * Optional: Try to program the honeycomb stimulus above. A [solution using
   psychopy](visual-illusions/Honeycomb.py) is available on [Bertamini's web
   site](https://www.programmingvisualillusionsforeveryone.online/scripts.html).
-  To run it you might need to install:
+  To run it you might need to install "wxpython" (beware: it can be troublesome)
 
         conda install wxPython
         pip install psychopy
@@ -713,8 +724,8 @@ Follow those instruction to install:
   * **Anaconda Python 3**. 
   * The Python library **Expyriment** 
   * **Git** from <https://git-scm.com/>
-  * **Sublime Text** (text editor) from [Sublime
-  Text](https://www.sublimetext.com/) (Unless you are already using a text
+  * A text editor, for example [micro](https://micro-editor.github.io/), [Sublime
+  Text](https://www.sublimetext.com/) or [Atom](http://atom.io) (Unless you are already using a text
   editor that you are happy with)
   * **R** from <https://cran.r-project.org/>
   * **Rstudio Desktop** from <https://www.rstudio.com>
@@ -782,11 +793,15 @@ To configure git, open a Terminal (or launch *Git Bash* under Windows) and type:
     git config --global core.editor nano
 
 
-### Sublime Text Editor ###
+### A Text Editor ###
 
 Unless you already master a text editor, we recommend that you download and
 install _Sublime Text_ from <https://www.sublimetext.com/>. Follow the
-instructions specific for your Operating System.
+instructions specific for your Operating System. 
+If you prefer opensource software, try [Atom](http://atom.io), but it is slower and more buggy than sublime text.
+
+If you find sublime text or atom too complicated, you can instead use the lightweight editor
+[micro](https://micro-editor.github.io/) 
 
 
 ### R ###
