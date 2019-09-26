@@ -2,7 +2,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-09-26 07:45:13 christophe@pallier.org>
+% Time-stamp: <2019-09-26 16:58:36 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -23,8 +23,7 @@ To download them, open a terminal (`git bash` under Windows) and type:
 * [Tips for writing clean code](tips.md)
 * [Tools for reproducible science](tools-for-reproducible-science.md)
 * [Additional exercises](exercices.md). I answer questions on a [slack
-  discussion forum](https://cogmaster-pcbs.slack.com) Please [join!](
- https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNDUzNDk0NTMyNjk0LTM0YzVhMmI1YjU3ZjRhMjNmZDRjMmVmYzYwYWJiZjA1YTE2MjNkYjE3MzAyNGU3OWI0MTA3NGMyOTFiYmM3NzU)
+  discussion forum](https://cogmaster-pcbs.slack.com) Please [join!](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ)
 * Programming projects towards validation:
     - [A few suggestions for projects](ideas-for-projects.md)
     - [Your projects](projects.md)
@@ -128,7 +127,7 @@ of real-time experiments, simulations...).
 
 # Resources #
 
-- Discussion board: <http://cogmaster-pcbs.slack.com> ([inscription](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ))
+- Discussion board at <http://cogmaster-pcbs.slack.com> ([Join!](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ))
 
 - Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is KN88-5TR4-XQG29.
 
@@ -212,7 +211,8 @@ This will be enough for our course but if you want to learn more about how to us
   
       import matplotlib.pyplot as plt
       import numpy as np
-      t = np.linspace(0, 30, num=3001)
+
+t = np.linspace(0, 30, num=3001)
       plt.plot(t, np.sin(t))
   
      If a Windows open with a graphical representation of the sine function, Congratulations! (you can press 'q' in the Window to close it)
