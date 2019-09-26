@@ -2,7 +2,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-09-25 22:25:06 christophe@pallier.org>
+% Time-stamp: <2019-09-26 07:45:13 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -16,7 +16,6 @@ To download them, open a terminal (`git bash` under Windows) and type:
     git clone https://github.com/chrplr/PCBS  
 ```
 
--------------------------------------------------------------------------------
 
 **Companion documents**
 
@@ -32,10 +31,12 @@ To download them, open a terminal (`git bash` under Windows) and type:
 
 -------------------------------------------------------------------------------
 
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
 - [Objectives](#objectives)
+- [Resources](#resources)
 - [Prerequisites](#prerequisites)
     - [Software Installation](#software-installation)
     - [Basic programming concepts](#basic-programming-concepts)
@@ -120,6 +121,21 @@ The main purpose of these lectures is to allow students to write *clean programs
 order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...).
+
+
+"_An expert is a man who has made all the mistakes which can be made, in a narrow field._" (attributed to Niels Bohr)
+
+
+# Resources #
+
+- Discussion board: <http://cogmaster-pcbs.slack.com> ([inscription](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ))
+
+- Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is KN88-5TR4-XQG29.
+
+**Note***: DO NOT send me emails to communicate! Use slack to get support, schoology for other matters.
+
+- Check the [Appendices](#appendices) for links to books, MOOCS, ... 
+
 
 -------------------------------------------------------------------------------
 
