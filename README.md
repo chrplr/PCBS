@@ -2,7 +2,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-09-26 16:58:36 christophe@pallier.org>
+% Time-stamp: <2019-09-27 10:13:10 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -128,7 +128,7 @@ of real-time experiments, simulations...).
 # Resources #
 
 - Discussion board at <http://cogmaster-pcbs.slack.com> ([Join!](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ))
-
+o
 - Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is KN88-5TR4-XQG29.
 
 **Note***: DO NOT send me emails to communicate! Use slack to get support, schoology for other matters.
@@ -197,27 +197,32 @@ This will be enough for our course but if you want to learn more about how to us
   1. Download the script, e.g. [games/matches.py](games/matches.py).  Make sure you know in which directory the file has been saved.  
   2. Open a terminal and use the 'cd', 'pwd', and 'ls' commands to navigate to the directory containing the file that you have just downloaded; Then, type:
   
+```
       python3 matches.py
+```
+
 
  
 ### how to start [ipython](http://ipython.org) ###
 
  
-  Try it: 
+Try it: 
   
-  - Open a Terminal, type `ipython3` and press "Return", 
-  - After the prompt `In [1]: `, type `2**64` and 'Return'
-  - Then, type the following lines in the ipython shell:
+- Open a Terminal, type `ipython3` and press "Return", 
+- After the prompt `In [1]: `, type `2**64` and 'Return'
+- Then, type the following lines in the ipython shell:
   
-      import matplotlib.pyplot as plt
-      import numpy as np
-
-t = np.linspace(0, 30, num=3001)
-      plt.plot(t, np.sin(t))
-  
-     If a Windows open with a graphical representation of the sine function, Congratulations! (you can press 'q' in the Window to close it)
+```
+     import matplotlib.pyplot as plt
+     import numpy as np
+     t = np.linspace(0, 30, num=3001)
+     plt.plot(t, np.sin(t))
+```
+   
+   
+If a Windows open with a graphical representation of the sine function, Congratulations! (you can press 'q' in the Window to close it)
      
-   - Type `quit()` to quit ipython, then `exit` to quit the shell and close the terminal.
+- Type `quit()` to quit ipython, then `exit` to quit the shell and close the terminal.
 
 
   
