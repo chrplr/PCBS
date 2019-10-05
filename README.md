@@ -2,7 +2,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-09-27 10:13:10 christophe@pallier.org>
+% Time-stamp: <2019-10-05 10:53:30 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -128,12 +128,15 @@ of real-time experiments, simulations...).
 # Resources #
 
 - Discussion board at <http://cogmaster-pcbs.slack.com> ([Join!](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ))
+
 o
 - Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is KN88-5TR4-XQG29.
 
 **Note***: DO NOT send me emails to communicate! Use slack to get support, schoology for other matters.
 
-- Check the [Appendices](#appendices) for links to books, MOOCS, ... 
+- I strongly recommend the freely availble book [_Automate the boring stuff with Python: Practical programming for total beginners._](https://automatetheboringstuff.com/) to total novices (as well as the other books by the author). For those who do like to read, there are videos on the site. 
+
+- Check the [Appendices](#appendices) for more recommendations of online lectures and books.
 
 
 -------------------------------------------------------------------------------
@@ -198,9 +201,8 @@ This will be enough for our course but if you want to learn more about how to us
   2. Open a terminal and use the 'cd', 'pwd', and 'ls' commands to navigate to the directory containing the file that you have just downloaded; Then, type:
   
 ```
-      python3 matches.py
+      python matches.py
 ```
-
 
  
 ### how to start [ipython](http://ipython.org) ###
@@ -208,7 +210,7 @@ This will be enough for our course but if you want to learn more about how to us
  
 Try it: 
   
-- Open a Terminal, type `ipython3` and press "Return", 
+- Open a Terminal, type `ipython` and press "Return", 
 - After the prompt `In [1]: `, type `2**64` and 'Return'
 - Then, type the following lines in the ipython shell:
   
@@ -228,17 +230,31 @@ If a Windows open with a graphical representation of the sine function, Congratu
   
 ### create and/or modify scripts with a text editor ###
 
-You can use a  text editor like [micro](https://micro-editor.github.io/), [Sublime Text](https://www.sublimetext.com/) or [Atom](http://atom.io), or an Integrated Development Environment like Spyder or PyCharm.
 
+You can use a  text editor like [micro](https://micro-editor.github.io/), [Sublime Text](https://www.sublimetext.com/) or [Atom](http://atom.io), or an Integrated Development Environment like Spyder or PyCharm.
 
 To work you will basically need two windows side by side: one with a text editor displaying the code, and one with ipython to test it (add maybe a browser when you need to google for help about Python) 
 
 
-### use Git to keep  your project clean ###
+### Use Git to keep  your project clean ###
 
 
 [Git](https://www.gitbook.com/) is a software that allow you to keep track of the modifications of your files, to test alternatives, to share the work. Althought it is a complex tools, you will only need to know the commands:
   commands `git clone, git pull, git init, git add, git status, git commit` 
+
+
+To download the all of the lectures materials, open a terminal (git bash under Windows) and type
+
+```
+       git clone https://github.com/chrplr/PCBS.git
+```
+
+Later, when you will need to update the materials to their latest versions:
+
+```
+      cd PCBS
+      git pull
+```
 
 Check out [Resources to learn Git in the Appendix](#resources-to-learn-git)
 
