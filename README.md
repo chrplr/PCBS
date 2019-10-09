@@ -2,7 +2,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-10-09 21:01:30 christophe@pallier.org>
+% Time-stamp: <2019-10-09 21:08:10 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -10,20 +10,13 @@ The latest version of this document -- a work in progress -- is at
 Its source as well as the course materials (scripts, etc.) are available at
 [http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS).
 
-To download them, open a terminal (`git bash` under Windows) and type:
-
-```
-    git clone https://github.com/chrplr/PCBS  
-```
-
 
 **Companion documents**
 
 * [How to solve problems](how-to-solve-problems.md)
 * [Tips for writing clean code](tips.md)
 * [Tools for reproducible science](tools-for-reproducible-science.md)
-* [Additional exercises](exercices.md). I answer questions on a [slack
-  discussion forum](https://cogmaster-pcbs.slack.com) Please [join!](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ)
+* [Additional exercises](exercices.md).
 * Programming projects towards validation:
     - [A few suggestions for projects](ideas-for-projects.md)
     - [Your projects](projects.md)
@@ -220,9 +213,7 @@ If a Windows open with a graphical representation of the sine function, Congratu
 
 You can use a  text editor like [micro](https://micro-editor.github.io/), [Sublime Text](https://www.sublimetext.com/) or [Atom](http://atom.io), or an Integrated Development Environment like Spyder or PyCharm.
 
-To work you will basically need two windows side by side: one with a text editor displaying the code, and one with ipython to test it (add maybe a browser when you need to google for help about Python) 
-
-See (running python)[running-python.md]
+To work you will basically need two windows side by side: one with a text editor displaying the code, and one with ipython to test it (add maybe a browser when you need to google for help about Python). See [running python](running-python.md)
 
 ### Use Git to keep  your project clean ###
 
@@ -246,7 +237,7 @@ Later, when you will need to update the materials to their latest versions:
 
 Check out [Resources to learn Git in the Appendix](#resources-to-learn-git)
 
-
+---------------------------------
 
 
 # Automata, Turing Machines and Computers #
