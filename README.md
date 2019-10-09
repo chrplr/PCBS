@@ -2,7 +2,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-10-05 10:53:30 christophe@pallier.org>
+% Time-stamp: <2019-10-09 20:46:00 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -132,9 +132,9 @@ of real-time experiments, simulations...).
 o
 - Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is KN88-5TR4-XQG29.
 
-**Note***: DO NOT send me emails to communicate! Use slack to get support, schoology for other matters.
+**Note***: DO NOT send me emails! (my response rate is less than 10%). Use slack to get support, schoology for other matters.
 
-- I strongly recommend the freely availble book [_Automate the boring stuff with Python: Practical programming for total beginners._](https://automatetheboringstuff.com/) to total novices (as well as the other books by the author). For those who do like to read, there are videos on the site. 
+- I **strongly recommend** the freely available book [_Automate the boring stuff with Python: Practical programming for total beginners._](https://automatetheboringstuff.com/) to total novices (as well as the other books by the author). For those who dislike reading, there are videos on the site. 
 
 - Check the [Appendices](#appendices) for more recommendations of online lectures and books.
 
@@ -152,18 +152,17 @@ installation](#instructions-for-software-installation))
 
 ## Basic programming concepts ##
 
-Ideally, you should be acquainted with some basic programming concepts, such as expressions, instructions, variables, lists, dictionaries, tests (if...then...else), string manipulations, loops (while and for). 
-  
-You should be able to understand the scripts in the [games](games/) folder.
+You should be acquainted with some basic programming concepts, such as expressions, instructions, variables, lists, dictionaries, tests (if...then...else), string manipulations, loops (while and for). 
+
+We recommend you to:
+
+- read [Starting-from-scratch](01_Starting-from-Scratch/Starting-from-Scratch.md)
+- read [Python in a Nutshell](02-Python_in_a_nutshell/Python_in_a_nutshell.md)
+- read the Python scripts in the [games](games/) folder.
 
 Check out [Resources to learn Python in the Appendix](#resources-to-learn-python)
 
 
-# Lecture 0
-
-## Automata, Turing Machines and Computers ##
-
-[Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Computers.md)
 
 ## Basic skills ##
 
@@ -184,7 +183,7 @@ Win+Enter (i3)).
  3. Click the option for Git Bash.
 
 Inside a terminal, you interact with a program that expects you to type commands. This program is called a _shell_. 
-You will need to know the following commands in order to navigate the filesystem. 
+You need to know the following commands in order to navigate the filesystem. 
 
    - _ls_: list the content of the current working directory
    - _pwd_: path of current working directory
@@ -235,6 +234,7 @@ You can use a  text editor like [micro](https://micro-editor.github.io/), [Subli
 
 To work you will basically need two windows side by side: one with a text editor displaying the code, and one with ipython to test it (add maybe a browser when you need to google for help about Python) 
 
+See (running python)[running-python.md]
 
 ### Use Git to keep  your project clean ###
 
@@ -258,6 +258,14 @@ Later, when you will need to update the materials to their latest versions:
 
 Check out [Resources to learn Git in the Appendix](#resources-to-learn-git)
 
+
+
+
+# Lecture 0
+
+## Automata, Turing Machines and Computers ##
+
+[Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Computers.md)
 
 
 -------------------------------------------------------------------------------
