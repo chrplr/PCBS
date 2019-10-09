@@ -2,7 +2,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-10-09 20:46:00 christophe@pallier.org>
+% Time-stamp: <2019-10-09 21:01:30 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -39,14 +39,14 @@ To download them, open a terminal (`git bash` under Windows) and type:
 - [Prerequisites](#prerequisites)
     - [Software Installation](#software-installation)
     - [Basic programming concepts](#basic-programming-concepts)
-- [Lecture 0](#lecture-0)
-    - [Automata, Turing Machines and Computers](#automata-turing-machines-and-computers)
     - [Basic skills](#basic-skills)
         - [how to open a Terminal](#how-to-open-a-terminal)
         - [how to download a Python script from the Internet and execute it from a command line](#how-to-download-a-python-script-from-the-internet-and-execute-it-from-a-command-line)
         - [how to start [ipython](http://ipython.org)](#how-to-start-ipythonhttpipythonorg)
         - [create and/or modify scripts with a text editor](#create-andor-modify-scripts-with-a-text-editor)
-        - [use Git to keep  your project clean](#use-git-to-keep--your-project-clean)
+        - [Use Git to keep  your project clean](#use-git-to-keep--your-project-clean)
+- [Lecture 0](#lecture-0)
+    - [Automata, Turing Machines and Computers](#automata-turing-machines-and-computers)
 - [Creating static visual stimuli](#creating-static-visual-stimuli)
     - [Kanizsa illusory contours](#kanizsa-illusory-contours)
     - [Herman grid](#herman-grid)
@@ -127,16 +127,13 @@ of real-time experiments, simulations...).
 
 # Resources #
 
-- Discussion board at <http://cogmaster-pcbs.slack.com> ([Join!](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ))
+- Discussion board at <http://cogmaster-pcbs.slack.com> (Click [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ) t join.)
 
-o
+
 - Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is KN88-5TR4-XQG29.
 
-**Note***: DO NOT send me emails! (my response rate is less than 10%). Use slack to get support, schoology for other matters.
+**Note*: DO NOT send me emails! (my response rate is less than 10%). Use slack to get support, schoology for other matters.
 
-- I **strongly recommend** the freely available book [_Automate the boring stuff with Python: Practical programming for total beginners._](https://automatetheboringstuff.com/) to total novices (as well as the other books by the author). For those who dislike reading, there are videos on the site. 
-
-- Check the [Appendices](#appendices) for more recommendations of online lectures and books.
 
 
 -------------------------------------------------------------------------------
@@ -152,16 +149,7 @@ installation](#instructions-for-software-installation))
 
 ## Basic programming concepts ##
 
-You should be acquainted with some basic programming concepts, such as expressions, instructions, variables, lists, dictionaries, tests (if...then...else), string manipulations, loops (while and for). 
-
-We recommend you to:
-
-- read [Starting-from-scratch](01_Starting-from-Scratch/Starting-from-Scratch.md)
-- read [Python in a Nutshell](02-Python_in_a_nutshell/Python_in_a_nutshell.md)
-- read the Python scripts in the [games](games/) folder.
-
-Check out [Resources to learn Python in the Appendix](#resources-to-learn-python)
-
+You should be acquainted with some basic programming concepts, such as instructions, variables, tests (if...then...else) and loops (while and for). See [Starting-from-scratch](01_Starting-from-Scratch/Starting-from-Scratch.md)
 
 
 ## Basic skills ##
@@ -261,25 +249,33 @@ Check out [Resources to learn Git in the Appendix](#resources-to-learn-git)
 
 
 
-# Lecture 0
+# Automata, Turing Machines and Computers #
 
-## Automata, Turing Machines and Computers ##
-
-[Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Computers.md)
+See [Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Computers.md)
 
 
--------------------------------------------------------------------------------
+# Starting from Scratch # 
 
+See [Starting-from-scratch](01_Starting-from-Scratch/Starting-from-Scratch.md)
+
+
+# Python in a Nutshell #
+
+- See [Python in a Nutshell](02-Python_in_a_nutshell/Python_in_a_nutshell.md)
+
+- Read the Python scripts in the [games](games/) folder.
+
+- I **strongly recommend** the freely available book [_Automate the boring stuff with Python: Practical programming for total beginners._](https://automatetheboringstuff.com/) to total novices (as well as the other books by the author). For those who dislike reading, there are videos on the site. 
+
+
+- Check out [Resources to learn Python in the Appendix](#resources-to-learn-python)
 
 
 # Creating static visual stimuli #
 
 We are going to use [pygame](http://www.pygame.org). 
 
-Please read this [quick
-introduction on drawing with
-pygame](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/) and
-run and study the scripts [square.py](visual-illusions/square.py),
+Please read this [quick introduction on drawing with pygame](https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/) and run and study the scripts [square.py](visual-illusions/square.py),
    [circle.py](visual-illusions/circle.py) and
    [triangle.py](visual-illusions/triangle.py).
 
@@ -377,7 +373,6 @@ produces a sensation of depth. See
 
 # Creating dynamic visual stimuli #
 
-
 ## Wertheimer line-motion illusion. ##
 
 * Check out [Jancke et al (2004) Imaging cortical correlates of illusion in early
@@ -385,8 +380,7 @@ visual cortex](http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf).
 
 * Program the stimulus. 
 
-* Check out my solution
-[visual-illusions/line-motion.py](visual-illusions/line-motion.py)
+* Check out my solution [visual-illusions/line-motion.py](visual-illusions/line-motion.py)
 
 ## Flash-lag illusion ##
 
