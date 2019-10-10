@@ -2,7 +2,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-10-10 13:38:05 christophe@pallier.org>
+% Time-stamp: <2019-10-10 13:59:13 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -120,12 +120,12 @@ of real-time experiments, simulations...).
 
 # Resources #
 
-- Discussion board at <http://cogmaster-pcbs.slack.com> (Click [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ) t join.)
+- Discussion board at <http://cogmaster-pcbs.slack.com> (Click [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ) to join.)
 
 
 - Schoology (for Cogmaster students): The [course](https://app.schoology.com/course/2239019136/)'s code is KN88-5TR4-XQG29.
 
-- "Automate the Boring Stuff": https://automatetheboringstuff.com/#toc
+- [Automate the Boring Stuff](https://automatetheboringstuff.com)
 
 **Note*: DO NOT send me emails! (my response rate is less than 10%). Use slack to get support, schoology for other matters.
 
