@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#programming-for-cognitive-and-brain-sciences">Programming for Cognitive and Brain Sciences</a></li>
+<li><a href="#objectives">Objectives</a></li>
+<li><a href="#first-things-first">First things first</a><ul>
+<li><a href="#companion-documents">Companion documents</a></li>
+</ul></li>
+<li><a href="#prerequisites">Prerequisites</a><ul>
+<li><a href="#software-installation">Software Installation</a></li>
+<li><a href="#know-how-to-open-a-terminal">Know how to open a Terminal</a></li>
+<li><a href="#downloading-the-course-materials">Downloading the course materials</a></li>
+<li><a href="#basic-programming-concepts">Basic programming concepts</a></li>
+<li><a href="#basic-skills">Basic skills</a><ul>
+<li><a href="#how-to-download-a-python-script-from-the-internet-and-execute-it-from-a-command-line">how to download a Python script from the Internet and execute it from a command line</a></li>
+<li><a href="#how-to-start-ipython">how to start <span>ipython</span></a></li>
+<li><a href="#create-andor-modify-scripts-with-a-text-editor">create and/or modify scripts with a text editor</a></li>
+<li><a href="#use-git-to-keep-your-project-clean">Use Git to keep your project clean</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#starting-from-scratch">Starting from Scratch</a></li>
+<li><a href="#automata-turing-machines-and-computers">Automata, Turing Machines and Computers</a></li>
+<li><a href="#python-in-a-nutshell">Python in a Nutshell</a></li>
+<li><a href="#creating-static-visual-stimuli">Creating static visual stimuli</a><ul>
+<li><a href="#kanizsa-illusory-contours">Kanizsa illusory contours</a></li>
+<li><a href="#herman-grid">Herman grid</a></li>
+<li><a href="#ebbinghaus-titchener">Ebbinghaus-Titchener</a></li>
+<li><a href="#honeycomb-and-extinction-illusions.">Honeycomb and Extinction illusions.</a></li>
+<li><a href="#random-dot-stereograms">Random-dot stereograms</a></li>
+</ul></li>
+<li><a href="#creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</a><ul>
+<li><a href="#wertheimer-line-motion-illusion.">Wertheimer line-motion illusion.</a></li>
+<li><a href="#flash-lag-illusion">Flash-lag illusion</a></li>
+<li><a href="#dynamic-version-of-the-ebbinghaus-titchener">Dynamic version of the Ebbinghaus-Titchener</a></li>
+</ul></li>
+<li><a href="#creating-and-playing-sounds">Creating and playing sounds</a><ul>
+<li><a href="#sound-localisation-from-binaural-dephasing">Sound localisation from binaural dephasing</a></li>
+<li><a href="#pulsation-povel-essen-1985">Pulsation (Povel &amp; Essen, 1985)</a></li>
+</ul></li>
+<li><a href="#experiments">Experiments</a><ul>
+<li><a href="#simple-reaction-times">Simple reaction times</a></li>
+<li><a href="#posners-attentional-cueing-task">Posner’s attentional cueing task</a></li>
+<li><a href="#stroop-effect">Stroop Effect</a></li>
+<li><a href="#lexical-decision-task">Lexical Decision Task</a></li>
+<li><a href="#a-general-audio-visual-stimulus-presentation-script">A general audio visual stimulus presentation script</a></li>
+<li><a href="#more-examples-using-expyriment.org">More examples using expyriment.org</a></li>
+</ul></li>
+<li><a href="#data-analyses">Data Analyses</a><ul>
+<li><a href="#basic-data-analysis-with-r">Basic Data Analysis with R</a></li>
+<li><a href="#comparing-means-using-easy-anova-analysis-of-variance">Comparing means using Easy ANOVA (Analysis of Variance)</a></li>
+<li><a href="#permutation-tests">Permutation tests</a></li>
+<li><a href="#bootstrap">Bootstrap</a></li>
+<li><a href="#frequency-analysis">Frequency Analysis</a></li>
+</ul></li>
+<li><a href="#lexical-statistics">Lexical Statistics</a><ul>
+<li><a href="#zipf-law">Zipf law</a></li>
+<li><a href="#benfords-law.">Benford’s law.</a></li>
+</ul></li>
+<li><a href="#simulations">Simulations</a><ul>
+<li><a href="#monte-carlo-estimation">Monte Carlo Estimation</a></li>
+<li><a href="#fractals">Fractals</a></li>
+<li><a href="#cellular-automata">Cellular Automata</a></li>
+<li><a href="#artificial-neural-networks">Artificial Neural networks</a></li>
+<li><a href="#natural-language-parsing">Natural Language Parsing</a></li>
+<li><a href="#neuroimaging">Neuroimaging</a></li>
+</ul></li>
+<li><a href="#license">License</a></li>
+<li><a href="#appendices">Appendices</a><ul>
+<li><a href="#instructions-for-software-installation">Instructions for Software installation</a><ul>
+<li><a href="#warnings">Warnings</a></li>
+<li><a href="#anaconda-python3">Anaconda Python3</a></li>
+<li><a href="#expyriment">Expyriment</a></li>
+<li><a href="#git">Git</a></li>
+<li><a href="#a-text-editor">A Text Editor</a></li>
+<li><a href="#r">R</a></li>
+<li><a href="#rstudio-desktop">Rstudio Desktop</a></li>
+</ul></li>
+<li><a href="#resources-to-learn-python">Resources to learn Python</a></li>
+<li><a href="#resources-to-learn-the-command-shell">Resources to learn the command shell</a></li>
+<li><a href="#resources-to-learn-git">Resources to learn Git</a></li>
+<li><a href="#stimulusexperiment-generation-modules">Stimulus/Experiment generation modules</a></li>
+<li><a href="#data-analyses-statistics">Data analyses, Statistics</a></li>
+<li><a href="#simulations-1">Simulations</a></li>
+<li><a href="#books-relevant-to-cognitive-and-brain-sciences-programming">Books relevant to Cognitive and Brain Sciences Programming</a></li>
+<li><a href="#programming-skills">Programming skills</a></li>
+<li><a href="#coding-exercices">Coding exercices</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="programming-for-cognitive-and-brain-sciences">Programming for Cognitive and Brain Sciences</h1>
+<p>% Time-stamp: &lt;2019-10-11 11:19:55 christophe@pallier.org&gt;</p>
+<p><strong>Main web page:</strong>: [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS**.</p>
+<p><strong>Materials:</strong> <a href="https://github.com/chrplr/PCBS" class="uri">https://github.com/chrplr/PCBS</a></p>
+<p>(Note: to download the course materials (scripts, etc.) check out <a href="#downloading-the-course-materials">Downloading the course materials</a>)</p>
+<p><strong>Discussion board:</strong> <a href="http://cogmaster-pcbs.slack.com" class="uri">http://cogmaster-pcbs.slack.com</a> (Click <a href="https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ">here</a> to join). This is the place to ask for support. Do not hesitate!</p>
+<h1 id="objectives">Objectives</h1>
+<p>Students in Cognitive-(Neuro)-science need to learn programming:</p>
+<ol type="1">
+<li>to understand how computers work, because they represent one model for the Mind.</li>
+<li>to automate the boring stuff (e.g. repetitive work on files, web scrapping,)</li>
+<li>to do reproducible science: designing experiments, running them, analysing them.</li>
+</ol>
+<p>The main purpose of these lectures is to allow students to write <em>clean programs</em> in order to solve the tasks that are typically encountered in cognitive or neurosciences (data manipulation and analysis, creation of stimuli, programming of real-time experiments, simulations…).</p>
+<p>“<em>An expert is a man who has made all the mistakes which can be made, in a narrow field.</em>” (attributed to Niels Bohr)</p>
+<h1 id="first-things-first">First things first</h1>
+<ul>
+<li><p>Before attending the first lecture, read the <a href="#prerequisites">Prerequisites</a> and make sure to install the software according to the “<a href="#instructions-for-software-installation">Instructions for software installation</a>”. (You will need a laptop, and preferably an internet connection durong the course).</p></li>
+<li><p>Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is <code>KN88-5TR4-XQG29</code>.`</p></li>
+</ul>
+<p>**Note*: Please, do not send me emails (my answer rate is dismal). Use slack (preferably the <code>#general</code> channel) to get support, schoology for other matters.</p>
+<h2 id="companion-documents">Companion documents</h2>
+<p>Must read!</p>
+<ul>
+<li><a href="how-to-solve-problems.md">How to solve problems</a></li>
+<li><a href="tips.md">Tips for writing clean code</a></li>
+<li><a href="tools-for-reproducible-science.md">Tools for reproducible science</a></li>
+<li>Projects towards validation:
+<ul>
+<li><a href="projects.md">Example of past years’ projects</a></li>
+<li><a href="ideas-for-projects.md">Some ideas of potential projects</a></li>
+</ul></li>
+</ul>
+<hr />
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#programming-for-cognitive-and-brain-sciences">Programming for Cognitive and Brain Sciences</a></li>
+<li><a href="#objectives">Objectives</a></li>
+<li><a href="#first-things-first">First things first</a>
+<ul>
+<li><a href="#companion-documents">Companion documents</a></li>
+</ul></li>
+<li><a href="#prerequisites">Prerequisites</a>
+<ul>
+<li><a href="#software-installation">Software Installation</a></li>
+<li><a href="#know-how-to-open-a-terminal">Know how to open a Terminal</a></li>
+<li><a href="#downloading-the-course-materials">Downloading the course materials</a></li>
+<li><a href="#basic-programming-concepts">Basic programming concepts</a></li>
+<li><a href="#basic-skills">Basic skills</a>
+<ul>
+<li><a href="#how-to-download-a-python-script-from-the-internet-and-execute-it-from-a-command-line">how to download a Python script from the Internet and execute it from a command line</a></li>
+<li><a href="#how-to-start-ipythonhttpipythonorg">how to start [ipython](http://ipython.org)</a></li>
+<li><a href="#create-andor-modify-scripts-with-a-text-editor">create and/or modify scripts with a text editor</a></li>
+<li><a href="#use-git-to-keep--your-project-clean">Use Git to keep your project clean</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#starting-from-scratch-">Starting from Scratch #</a></li>
+<li><a href="#automata-turing-machines-and-computers">Automata, Turing Machines and Computers</a></li>
+<li><a href="#python-in-a-nutshell">Python in a Nutshell</a></li>
+<li><a href="#creating-static-visual-stimuli">Creating static visual stimuli</a>
+<ul>
+<li><a href="#kanizsa-illusory-contours">Kanizsa illusory contours</a></li>
+<li><a href="#herman-grid">Herman grid</a></li>
+<li><a href="#ebbinghaus-titchener">Ebbinghaus-Titchener</a></li>
+<li><a href="#honeycomb-and-extinction-illusions">Honeycomb and Extinction illusions.</a></li>
+<li><a href="#random-dot-stereograms">Random-dot stereograms</a></li>
+</ul></li>
+<li><a href="#creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</a>
+<ul>
+<li><a href="#wertheimer-line-motion-illusion">Wertheimer line-motion illusion.</a></li>
+<li><a href="#flash-lag-illusion">Flash-lag illusion</a></li>
+<li><a href="#dynamic-version-of-the--ebbinghaus-titchener">Dynamic version of the Ebbinghaus-Titchener</a></li>
+</ul></li>
+<li><a href="#creating-and-playing-sounds">Creating and playing sounds</a>
+<ul>
+<li><a href="#sound-localisation-from-binaural-dephasing">Sound localisation from binaural dephasing</a></li>
+<li><a href="#pulsation-povel--essen-1985">Pulsation (Povel &amp; Essen, 1985)</a></li>
+</ul></li>
+<li><a href="#experiments">Experiments</a>
+<ul>
+<li><a href="#simple-reaction-times">Simple reaction times</a></li>
+<li><a href="#posners-attentional-cueing-task">Posner’s attentional cueing task</a></li>
+<li><a href="#stroop-effect">Stroop Effect</a></li>
+<li><a href="#lexical-decision-task">Lexical Decision Task</a></li>
+<li><a href="#a-general-audio-visual-stimulus-presentation-script">A general audio visual stimulus presentation script</a></li>
+<li><a href="#more-examples-using-expyrimentorg">More examples using expyriment.org</a></li>
+</ul></li>
+<li><a href="#data-analyses">Data Analyses</a>
+<ul>
+<li><a href="#basic-data-analysis-with-r">Basic Data Analysis with R</a></li>
+<li><a href="#comparing-means-using-easy-anova-analysis-of-variance">Comparing means using Easy ANOVA (Analysis of Variance)</a></li>
+<li><a href="#permutation-tests">Permutation tests</a></li>
+<li><a href="#bootstrap">Bootstrap</a></li>
+<li><a href="#frequency-analysis">Frequency Analysis</a></li>
+</ul></li>
+<li><a href="#lexical-statistics">Lexical Statistics</a>
+<ul>
+<li><a href="#zipf-law">Zipf law</a></li>
+<li><a href="#benfords-law">Benford’s law.</a></li>
+</ul></li>
+<li><a href="#simulations">Simulations</a>
+<ul>
+<li><a href="#monte-carlo-estimation">Monte Carlo Estimation</a></li>
+<li><a href="#fractals">Fractals</a></li>
+<li><a href="#cellular-automata">Cellular Automata</a></li>
+<li><a href="#artificial-neural-networks">Artificial Neural networks</a></li>
+<li><a href="#natural-language-parsing">Natural Language Parsing</a></li>
+<li><a href="#neuroimaging">Neuroimaging</a></li>
+</ul></li>
+<li><a href="#license">License</a></li>
+<li><a href="#appendices">Appendices</a>
+<ul>
+<li><a href="#instructions-for-software-installation">Instructions for Software installation</a>
+<ul>
+<li><a href="#warnings">Warnings</a></li>
+<li><a href="#anaconda-python3">Anaconda Python3</a></li>
+<li><a href="#expyriment">Expyriment</a></li>
+<li><a href="#git">Git</a></li>
+<li><a href="#a-text-editor">A Text Editor</a></li>
+<li><a href="#r">R</a></li>
+<li><a href="#rstudio-desktop">Rstudio Desktop</a></li>
+</ul></li>
+<li><a href="#resources-to-learn-python">Resources to learn Python</a></li>
+<li><a href="#resources-to-learn-the-command-shell">Resources to learn the command shell</a></li>
+<li><a href="#resources-to-learn-git">Resources to learn Git</a></li>
+<li><a href="#stimulusexperiment-generation-modules">Stimulus/Experiment generation modules</a></li>
+<li><a href="#data-analyses-statistics">Data analyses, Statistics</a></li>
+<li><a href="#simulations-1">Simulations</a></li>
+<li><a href="#books-relevant-to-cognitive-and-brain-sciences-programming">Books relevant to Cognitive and Brain Sciences Programming</a></li>
+<li><a href="#programming-skills">Programming skills</a></li>
+<li><a href="#coding-exercices">Coding exercices</a></li>
+</ul></li>
+</ul>
+<!-- markdown-toc end -->
+<hr />
+<hr />
+<h1 id="prerequisites">Prerequisites</h1>
+<h2 id="software-installation">Software Installation</h2>
+<p>You will need <em>Anaconda Python 3</em>, the <em>expyriment</em> module, <em>Git</em> a text editor, <em>R</em> and <em>R studio</em>. Detailed explanations are provided in the appendix “<a href="#instructions-for-software-installation">Instructions for software installation</a>”.</p>
+<h2 id="know-how-to-open-a-terminal">Know how to open a Terminal</h2>
+<ul>
+<li><p><strong>Linux</strong>: Launch <code>Terminal</code> from your application menu or use `Ctrl-Alt-T** (gnome, xfce), or Win+Enter (i3)).</p></li>
+<li><p><strong>MacOS</strong>: Type <code>terminal</code> in the Spotlight search field. Alternatively, you can open a <code>Finder</code> window and select the <code>Application</code> folder, then the <code>Utilities</code> folder, then double-click on the <code>Terminal</code> icon..</p></li>
+<li><p><strong>Windows</strong>: Start <code>Git Bash</code> (This assumes that you have installed <code>Git for windows</code> as described in <a href="#instructions-for-software-installation">Instructions for software installation</a>)</p></li>
+</ul>
+<ol type="1">
+<li>Click the Windows or Start icon.</li>
+<li>In the Programs list, open the Git folder.</li>
+<li>Click the option for Git Bash.</li>
+</ol>
+<p>Inside a terminal, you interact with a program that expects you to type commands. This program is called a <em>shell</em>. You need to know the following commands in order to navigate the filesystem.</p>
+<ul>
+<li><em>ls</em>: list the content of the current working directory</li>
+<li><em>pwd</em>: path of current working directory</li>
+<li><em>cd</em>: change directory</li>
+</ul>
+<p>This will be sufficient for this lecture, but if you want to learn more about how to use the Terminal/Shell, check out the section <a href="#resources-to-learn-the-command-shell">Resources to learn the command shell</a>.</p>
+<h2 id="downloading-the-course-materials">Downloading the course materials</h2>
+<p>Once you have installed Git on your computer, you can download the course materials: Open a terminal and type:</p>
+<pre><code>    git clone https://github.com/chrplr/PCBS.git</code></pre>
+<p>This should download the course materials in a folder named ‘PCBS’ (Remark: if a folder with that name already exists, git will stop and not download the content of the website. In that case, delete or move the existing PCBS folder before running the <code>git clone</code> command above)</p>
+<p>I do often update the materials. To synchronize your local copy with the latest version, you just need to open a terminal and type:</p>
+<pre><code>   cd PCBS
+   git pull</code></pre>
+<p>Remark: do not manually modify or create new files in the PCBS folder. If you do so, git will notice it and might prevent an automatic upgrade and ask us to ‘resolve conflicts’. If you get such a message, the simplest course of action for beginner, is to delete the PCBS folder (or move it if you wnat to keep a copy of your modifications) and reuse the git clone command above to reload the full folder.</p>
+<h2 id="basic-programming-concepts">Basic programming concepts</h2>
+<p>If you are a complete beginner, to get acquainted with some basic programming concepts (instructions, variables, tests (if…then…else) and loops (while and for)), I recommend that you learn to play with Scratch <a href="01_Starting-from-Scratch/Starting-from-Scratch.md">Starting-from-scratch</a></p>
+<h2 id="basic-skills">Basic skills</h2>
+<p>Beyond knowing how to open a terminal (see above), there are few skills that you need to acquire:</p>
+<h3 id="how-to-download-a-python-script-from-the-internet-and-execute-it-from-a-command-line">how to download a Python script from the Internet and execute it from a command line</h3>
+<p>Try the following:</p>
+<ol type="1">
+<li>Download the script, e.g. <a href="games/matches.py" class="uri">games/matches.py</a>. Make sure you know in which directory the file has been saved.<br />
+</li>
+<li>Open a terminal and use the <code>cd</code>, <code>pwd</code> , and <code>ls</code> commands to navigate to the directory containing the file that you have just downloaded; Then, type:</li>
+</ol>
+<pre><code>      python matches.py</code></pre>
+<h3 id="how-to-start-ipython">how to start <a href="http://ipython.org">ipython</a></h3>
+<p>Try it:</p>
+<ul>
+<li>Open a Terminal, type <code>ipython</code> and press “Return”,</li>
+<li>After the prompt <code>In [1]:</code>, type <code>2**64</code> and ‘Return’</li>
+<li>Then, type the following lines in the ipython shell:</li>
+</ul>
+<pre><code>     import matplotlib.pyplot as plt
+     import numpy as np
+     t = np.linspace(0, 30, num=3001)
+     plt.plot(t, np.sin(t))</code></pre>
+<p>If a Window open with a graphical representation of the sine function, Congratulations! (you can press ‘q’ in the Window to close it)</p>
+<ul>
+<li>Type <code>quit()</code> to quit ipython, then <code>exit</code> to quit the shell and close the terminal.</li>
+</ul>
+<h3 id="create-andor-modify-scripts-with-a-text-editor">create and/or modify scripts with a text editor</h3>
+<p>You can use a text editor like <a href="https://micro-editor.github.io/">micro</a>, <a href="https://www.sublimetext.com/">Sublime Text</a> or <a href="http://atom.io">Atom</a>, or an Integrated Development Environment like Spyder or PyCharm.</p>
+<p>To work you will basically need two windows side by side: one with a text editor displaying the code, and one with ipython to test it (add maybe a browser when you need to google for help about Python).</p>
+<p>See <a href="running-python.md">running python</a></p>
+<h3 id="use-git-to-keep-your-project-clean">Use Git to keep your project clean</h3>
+<p><a href="https://www.gitbook.com/">Git</a> is a software that allow you to keep track of the modifications of your files, to test alternatives, to share the work.</p>
+<p>Git is a quite complex tool, but for this lecture, you will only need to know very few commands (`git clone, git pull, git init, git add, git status, git commit and git push``)</p>
+<p>Check out <a href="#resources-to-learn-git">Resources to learn Git in the Appendix</a></p>
+<hr />
+<h1 id="starting-from-scratch">Starting from Scratch</h1>
+<p>See <a href="01_Starting-from-Scratch/Starting-from-Scratch.md">Starting-from-scratch</a></p>
+<h1 id="automata-turing-machines-and-computers">Automata, Turing Machines and Computers</h1>
+<p>See <a href="Automata-Turing-Machines-and-Computers.md">Automata, Turing Machines and Computers</a></p>
+<h1 id="python-in-a-nutshell">Python in a Nutshell</h1>
+<ul>
+<li><p>See <a href="02-Python_in_a_nutshell/Python_in_a_nutshell.md">Python in a Nutshell</a></p></li>
+<li><p>Read the Python scripts in the <a href="games/">games</a> folder.</p></li>
+<li><p>I <strong>strongly recommend</strong> the freely available book <a href="https://automatetheboringstuff.com/"><em>Automate the boring stuff with Python: Practical programming for total beginners.</em></a> to total novices (as well as the other books by the author). For those who dislike reading, there are videos on the site.</p></li>
+<li><p>Check out <a href="#resources-to-learn-python">Resources to learn Python in the Appendix</a></p></li>
+</ul>
+<h1 id="creating-static-visual-stimuli">Creating static visual stimuli</h1>
+<p>We are going to use <a href="http://www.pygame.org">pygame</a>.</p>
+<p>Please read this <a href="https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/">quick introduction on drawing with pygame</a> and run and study the scripts <a href="visual-illusions/square.py">square.py</a>, <a href="visual-illusions/circle.py">circle.py</a> and <a href="visual-illusions/triangle.py">triangle.py</a>.</p>
+<h2 id="kanizsa-illusory-contours">Kanizsa illusory contours</h2>
+<ol start="0" type="1">
+<li><p>Starting from the <code>square.py</code> and <code>circle.py</code> scripts, create a new script to display the Kanizsa squares:</p>
+<figure>
+<img src="images/Kanizsa-square.jpeg" alt="Kanizsa square" /><figcaption>Kanizsa square</figcaption>
+</figure>
+<figure>
+<img src="images/Kanizsa1.png" alt="Kanizsa triangle" /><figcaption>Kanizsa triangle</figcaption>
+</figure>
+<p>Check out my solution: <a href="visual-illusions/kanizsa-square.py" class="uri">visual-illusions/kanizsa-square.py</a></p>
+<p>To find out more, google <code>illusory contours</code>.`</p></li>
+</ol>
+<h2 id="herman-grid">Herman grid</h2>
+<ul>
+<li><p>Starting from <a href="visual-illusions/square.py">square.py</a>, write a program to display the <a href="https://en.wikipedia.org/wiki/Grid_illusion">Herman grid</a></p>
+<figure>
+<img src="images/HermannGrid.png" alt="Hermann Grid" /><figcaption>Hermann Grid</figcaption>
+</figure>
+Hints:
+<ul>
+<li>use paper and pencil to draw the figure</li>
+<li>find out the formulas to compute the left top of the square in the ith row and jth column</li>
+<li>in your python scripts, use nested for loops over rows and columns to display each square one by one</li>
+</ul></li>
+<li><p>Check out <a href="visual-illusions/grid.py">my solution</a></p></li>
+<li><p>Optional: Read <a href="https://stackabuse.com/command-line-arguments-in-python/" class="uri">https://stackabuse.com/command-line-arguments-in-python/</a> and use the <code>sys.argv[]</code> array from the <code>sys</code> module (or use the <code>argparse</code> module) to get from the command lines the number of columns, rows, the size of square and the size of the margins. Play with those parameters to see if you can make the illusion come and go.</p></li>
+</ul>
+<h2 id="ebbinghaus-titchener">Ebbinghaus-Titchener</h2>
+<ul>
+<li><p>Create the static <a href="http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC">Ebbinghaus–Titchener stimulus</a>.</p>
+<figure>
+<img src="images/ebbinghaus-titchener.png" alt="Ebbinghaus illusion" /><figcaption>Ebbinghaus illusion</figcaption>
+</figure></li>
+</ul>
+<p>Hint: - a bit of <a href="https://en.wikipedia.org/wiki/Unit_circle">trigonometry</a> can help: if you want to draw a circle at angle <code>alpha</code> from the horizontal line and at distance <code>R</code> from the origin, the coordinates of its center are <code>(R * cos(alpha), R * sin(alpha))</code></p>
+<ul>
+<li>Check out my solution <a href="visual-illusions/ebbinghaus.py" class="uri">visual-illusions/ebbinghaus.py</a></li>
+</ul>
+<h2 id="honeycomb-and-extinction-illusions.">Honeycomb and Extinction illusions.</h2>
+<p>The extinction illusion is a variant of the Herman grid:</p>
+<figure>
+<img src="images/extinction.png" alt="Extinction illusion" /><figcaption>Extinction illusion</figcaption>
+</figure>
+<ul>
+<li><p>Program the stimulus (the lines can be horizontal and vertical rather than oblique)</p></li>
+<li><p>Check out <a href="visual-illusions/extinction.py">my solution</a></p></li>
+</ul>
+<p>Here is the Honeycom illusion:</p>
+<figure>
+<img src="images/honeycomb.png" alt="Honeycomb illusion" /><figcaption>Honeycomb illusion</figcaption>
+</figure>
+<ul>
+<li>Watch <a href="https://www.youtube.com/watch?v=fDBYSFDXsuE">this video</a></li>
+<li><p>Check out <a href="https://doi.org/10.1177/2041669516660727.%20https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5030753/pdf/10.1177_2041669516660727.pdf">Bertamini, Herzog, and Bruno (2016). “The Honeycomb Illusion: Uniform Textures Not Perceived as Such.”</a></p></li>
+<li><p>Optional: Try to program the honeycomb stimulus above. A <a href="visual-illusions/Honeycomb.py">solution using psychopy</a> is available on <a href="https://www.programmingvisualillusionsforeveryone.online/scripts.html">Bertamini’s web site</a>. To run it you might need to install “wxpython” (beware: it can be troublesome)</p>
+<pre><code>  conda install wxPython
+  pip install psychopy</code></pre></li>
+</ul>
+<h2 id="random-dot-stereograms">Random-dot stereograms</h2>
+<p>A random-dot stereogram is stereo pair of images of random dots which, when viewed with the eyes focused on a point in front of or behind the images, produces a sensation of depth. See <a href="https://en.wikipedia.org/wiki/Random_dot_stereogram" class="uri">https://en.wikipedia.org/wiki/Random_dot_stereogram</a>.</p>
+<figure>
+<img src="images/stereogram.jpg" alt="stereogram" /><figcaption>stereogram</figcaption>
+</figure>
+<ul>
+<li><p>Write a script that generate random-dot stereograms.</p></li>
+<li><p>Check out my solution: <a href="random-dot-stereograms/random_dot_stereogram.py">random_dot_stereogram.py</a></p></li>
+</ul>
+<hr />
+<h1 id="creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</h1>
+<h2 id="wertheimer-line-motion-illusion.">Wertheimer line-motion illusion.</h2>
+<ul>
+<li><p>Check out <a href="http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf">Jancke et al (2004) Imaging cortical correlates of illusion in early visual cortex</a>.</p></li>
+<li><p>Program the stimulus.</p></li>
+<li><p>Check out my solution <a href="visual-illusions/line-motion.py" class="uri">visual-illusions/line-motion.py</a></p></li>
+</ul>
+<h2 id="flash-lag-illusion">Flash-lag illusion</h2>
+<ul>
+<li><p>Read about the <a href="https://en.wikipedia.org/wiki/Flash_lag_illusion">Flash-lag illusion</a>.</p></li>
+<li><p>Program the stimulus.</p></li>
+<li><p>Check out my solution <a href="visual-illusions/flash-lag.py" class="uri">visual-illusions/flash-lag.py</a></p></li>
+</ul>
+<h2 id="dynamic-version-of-the-ebbinghaus-titchener">Dynamic version of the Ebbinghaus-Titchener</h2>
+<ul>
+<li><p>Watch <a href="https://www.youtube.com/watch?v=hRlWqfd5pn8">this video</a>.</p></li>
+<li><p>Program a version where the outer circles (inducers) grow and shrink in size.</p></li>
+<li><p>Check out my solution <a href="visual-illusions/ebbinghaus-dynamic.py" class="uri">visual-illusions/ebbinghaus-dynamic.py</a></p></li>
+</ul>
+<hr />
+<h1 id="creating-and-playing-sounds">Creating and playing sounds</h1>
+<ul>
+<li><p>Install the <em>simpleaudio</em> module if it is not already installed on your computer (check with ipython: <code>import simpleaudio</code>) :</p>
+<pre><code>  pip install simpleaudio</code></pre>
+<p>Run the quick check with ipython:</p>
+<pre><code>  import simpleaudio.functionchecks as fc 
+  fc.LeftRightCheck.run() </code></pre></li>
+<li><p>Check out <a href="https://simpleaudio.readthedocs.io/en/latest/tutorial.html">simpleaudio tutorials</a></p></li>
+<li><p>Study <a href="sound/sound_synth.py">sound_synth.py</a>.</p></li>
+<li><p>Write a script that loads the wav file <code>cymbal.wav</code> and plays it 10 times, at a rhythm of one per seconds.</p>
+Hint:
+<ul>
+<li><p>use the following functions:</p>
+<pre><code>import scipy.io.wavfile  # for scipy.io.wavfile.read
+import simpleaudio  # to play sound
+
+
+def load_sound_as_array(filename):
+   [sample_rate, audio_data] = scipy.io.wavfile.read(filename)
+   return [sample_rate, audio_data]
+
+def play_mono(nparray, sample_rate=22050, normalize=True):
+    audio = nparray[:]
+    if normalize:  # normalize to 16-bit range
+       audio *= 32767 / np.max(np.abs(audio))
+    # convert to 16-bit data
+    audio = audio.astype(np.int16)
+    play_obj = simpleaudio.play_buffer(audio, 1, 2, sample_rate)
+    # wait for playback to finish before exiting
+    play_obj.wait_done()</code></pre></li>
+</ul></li>
+</ul>
+<h2 id="sound-localisation-from-binaural-dephasing">Sound localisation from binaural dephasing</h2>
+<p>Take a mono sound and create a stereo sound by progressively dephasing the two channels.</p>
+<p>Hints: * load the sound file into a one dimensional numpy array * make a copy of the array and shift it * assemble the two arrays in a bidimensional array (matrix) and save it as a stereo file</p>
+<h2 id="pulsation-povel-essen-1985">Pulsation (Povel &amp; Essen, 1985)</h2>
+<ol start="3" type="1">
+<li>Create rhythmic stimuli such as the ones described in <a href="http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf">Povel and Essen (1985) <em>Perception of Temporal Patterns</em></a></li>
+</ol>
+<h1 id="experiments">Experiments</h1>
+<h2 id="simple-reaction-times">Simple reaction times</h2>
+<ol type="1">
+<li><p>Write a script that presents a series of trials in which a dot or a cross is presented at the center of the screen and the participant must click on the mouse as quickly as possible. The reaction times must be recorded in a file for further analyses.</p></li>
+<li><p>Here is a <a href="reaction-times/simple-detection-visual-pygame.py">solution using pygame</a>. Run it and check <code>reaction_times.csv</code>.</p></li>
+<li><p>Here is a <a href="reaction-times/simple-detection-visual-expyriment.py">solution using expyriment</a>.</p></li>
+</ol>
+<p>Run the previous script. Check the results file in the folder <code>data</code>. Launch ipython in the <code>data</code> folder and type:</p>
+<p>import pandas as pd d = pd.read_csv(‘simple-detection… .xpd’,comment=‘#’) d.RT.mean() d.RT.std() d.RT[1:].mean()</p>
+<p>import matplotlib.pyplot as plt plt.hist(d.RT)</p>
+<ol start="4" type="1">
+<li><p>Read <a href="https://docs.expyriment.org/Tutorial.html" class="uri">https://docs.expyriment.org/Tutorial.html</a> to understand the basic principles of expyriment. See `PCBS/expyriment_template.py``</p></li>
+<li><p>Modify <code>simple-detection-visual-expyriment.py</code> to play a short sound (<code>click.wav</code>) in lieu of displaying a cross. Thus you have created a simple detection audio experiment.</p></li>
+<li><p>Modify the script to have 3 blocks of trials: one in which the target is visual, one in which it is audio, and one in which it is randomly visual or auditory. Are we slowed down in the latter condition?</p></li>
+</ol>
+<h2 id="posners-attentional-cueing-task">Posner’s attentional cueing task</h2>
+<p>Program <a href="https://en.wikipedia.org/wiki/Posner_cueing_task">Posner’s attentional cueing task</a> See solution in <a href="Posner-attention/posner_task.py" class="uri">Posner-attention/posner_task.py</a>.</p>
+<h2 id="stroop-effect">Stroop Effect</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Stroop_effect">Stroop Effect</a> demonstrates the automaticity of reading. Write a python script to create 4x8 cards for the task, avoiding repetitions of colors.</p>
+<figure>
+<img src="images/stroop.png" alt="Stroop card" /><figcaption>Stroop card</figcaption>
+</figure>
+<p>You can read a tutorial on <a href="https://nerdparadise.com/programming/pygame/part5">how to display text with pygame</a></p>
+<ul>
+<li><p>After trying to program it yourself, you can compare with <a href="Stroop-effect/create_stroop_cards.py">my solution</a></p></li>
+<li><p>Run <a href="Stroop-effect/stroop_task.py">stroop_task.py</a> and check the naming times in <code>data</code>. Compute the average reading times as a function of the language (you can use R or Python).</p></li>
+</ul>
+<h2 id="lexical-decision-task">Lexical Decision Task</h2>
+<p>In a lexical decision experiment, a string of characters is flashed at the center of the screen and the participant has to decide if it is real word or not, indicating his/her decision by pressing a left or right button. Reaction time is measured from the word onset, providing an estimate of the speed of word recognition.</p>
+<ul>
+<li>Visit the web site <a href="http://www.lexique.org" class="uri">http://www.lexique.org</a></li>
+<li>To learn to use lexique with R, follow the document <a href="http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html" class="uri">http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html</a></li>
+<li>Using [lexical-decision/select-words-from-lexique.py] as an example, select 20 high frequency nouns, 20 low frequency nouns, 20 high frequency verbs and 20 low frequency verbs, from Lexique382.txt — from <a href="http://www.lexique.org/public/Lexique382.zip" class="uri">http://www.lexique.org/public/Lexique382.zip</a>. They must all have a length of 5 to 8 characters.</li>
+<li>Generate 50 pseudowords using either <a href="http://www.lexique.org/toolbox/toolbox.pub/">Lexique tools</a> or <a href="http://crr.ugent.be/programs-data/wuggy">Wuggy</a></li>
+<li>Program a lexical decision using expyriment.</li>
+<li>Run it and compute the average decision times using pandas</li>
+</ul>
+<h2 id="a-general-audio-visual-stimulus-presentation-script">A general audio visual stimulus presentation script</h2>
+<p>In some experiments, we know in avdvance the precise timing of all stimuli (the program flow does not depends on external events). I wrote a script that reads the timing of audiovisual stimuli and present them at the expected times — Its code is available at <a href="https://www.github.com/chrplr/audiovis" class="uri">https://www.github.com/chrplr/audiovis</a></p>
+<h2 id="more-examples-using-expyriment.org">More examples using expyriment.org</h2>
+<ul>
+<li>See <a href="http://docs.expyriment.org/old/0.9.0/Examples.html" class="uri">http://docs.expyriment.org/old/0.9.0/Examples.html</a></li>
+<li>Fork <a href="https://github.com/expyriment/expyriment-stash" class="uri">https://github.com/expyriment/expyriment-stash</a> and contribute by adding new scripts!</li>
+</ul>
+<hr />
+<h1 id="data-analyses">Data Analyses</h1>
+<h2 id="basic-data-analysis-with-r">Basic Data Analysis with R</h2>
+<p>See <a href="http://www.pallier.org/examples-of-basic-data-analyses-with-r.html#examples-of-basic-data-analyses-with-r" class="uri">http://www.pallier.org/examples-of-basic-data-analyses-with-r.html#examples-of-basic-data-analyses-with-r</a></p>
+<h2 id="comparing-means-using-easy-anova-analysis-of-variance">Comparing means using Easy ANOVA (Analysis of Variance)</h2>
+<p>See <a href="http://www.pallier.org/easy-anova-with-r.html#easy-anova-with-r" class="uri">http://www.pallier.org/easy-anova-with-r.html#easy-anova-with-r</a></p>
+<h2 id="permutation-tests">Permutation tests</h2>
+<ul>
+<li><p>Read about the principle odf <a href="https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests">permutation tests</a></p></li>
+<li><p>Implement a python script that uses a permutation test to compare two samples.</p></li>
+<li><p>Check out my solution: <a href="permutation_test/permutation_test.py" class="uri">permutation_test/permutation_test.py</a></p></li>
+</ul>
+<h2 id="bootstrap">Bootstrap</h2>
+<ul>
+<li>Implement the <a href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)">bootstrap</a> to obtain confidence intervals on the means of a sample.</li>
+</ul>
+<h2 id="frequency-analysis">Frequency Analysis</h2>
+<ul>
+<li>See <a href="data/analysis/short-intro-fourier">data-analysis/short-intro-fourier</a> and the associated jupyter notebook <a href="data-analysis/short%20intro%20to%20frequency%20analysis%20(Fourier%20series).ipynb">data-analysis/short intro to frequency analysis (Fourier series).ipynb</a></li>
+</ul>
+<hr />
+<h1 id="lexical-statistics">Lexical Statistics</h1>
+<h2 id="zipf-law">Zipf law</h2>
+<ul>
+<li><p>The script (word-count.py])[Zipf/word-count.py] computes the distribution of frequencies of occurences in a list of words. Use it to compute the distribution of word frequencies in <a href="http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt"><em>Alice in Wonderland</em></a>.</p>
+<p>Note: To remove the punctuation, you can use the following function:</p>
+<p>import string def remove_punctuation(text): punct = string.punctuation + chr(10) return text.translate(str.maketrans(punct, &quot; &quot; * len(punct)))</p></li>
+<li><p>Zipf law states that the product rank X frequency is roughly constant. This ‘law’ was discovered by Estoup and popularized by Zipf. See <a href="http://en.wikipedia.org/wiki/Zipf%27s_law">http://en.wikipedia.org/wiki/Zipf%27s_law</a>. Create the Zipf plot for the text of <a href="Zipf/alice.txt"><em>Alice in Wonderland</em></a> showing, on the y axis, the log of the frequency and on the x axis the word rank (sorting words from the most frequent to the least frequent).</p></li>
+<li><p>Display the relationship between word length and word frequencies from the data in <a href="lexical-decision/lexique382-reduced.txt" class="uri">lexical-decision/lexique382-reduced.txt</a></p></li>
+<li><p>Generate random text (each letter from a-z being equiprobable, and the spacecharacter being 8 times more probable) of 1 million characters. Compute the frequencies of each ‘pseudowords’ and plot the rank/frequency diagram.</p></li>
+<li><p>To know more about lexical frequencies:</p>
+<ul>
+<li>Read Harald Baayen (2001) <em>Word Frequency Distributions</em> Kluwer Academic Publishers.</li>
+<li>Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett, et al. 2010. “Quantitative Analysis of Culture Using Millions of Digitized Books.” Science, December. <a href="https://doi.org/10.1126/science.1199644." class="uri">https://doi.org/10.1126/science.1199644.</a> (use scholar.google.com to find a pdf copy). Check out <strong>google ngrams</strong> at <a href="https://books.google.com/ngrams" class="uri">https://books.google.com/ngrams</a>. (Note that at the bottom of the page, there is a message “Raw data is available for download here”).</li>
+</ul></li>
+</ul>
+<h2 id="benfords-law.">Benford’s law.</h2>
+<p>Learn about <a href="https://brilliant.org/wiki/benfords-law/">Benford’s law</a>. Write a Python script that displays the distribution of the most significant digit in a set of numbers. Apply it to the variables in <a href="Benford-law/countries.xlsx" class="uri">Benford-law/countries.xlsx</a>.</p>
+<p>A solution: <a href="Benford-law/Benford.py" class="uri">Benford-law/Benford.py</a></p>
+<hr />
+<h1 id="simulations">Simulations</h1>
+<h2 id="monte-carlo-estimation">Monte Carlo Estimation</h2>
+<ul>
+<li><p>Read about <a href="https://academo.org/demos/estimating-pi-monte-carlo/">Monte Carlo estimation of PI</a></p></li>
+<li><p>Write a script that estimate pi using this method (then check my solution: <a href="simulations/estimate_PI_by_MonteCarlo.py" class="uri">simulations/estimate_PI_by_MonteCarlo.py</a>)</p></li>
+</ul>
+<h2 id="fractals">Fractals</h2>
+<p><a href="https://en.wikipedia.org/wiki/Fractal">Fractals</a> are figures that are self-similar at several scales.</p>
+<ul>
+<li><p>Write a script that displays the <a href="https://en.wikipedia.org/wiki/Koch_snowflake">Koch snowflake</a></p>
+Hints:
+<ul>
+<li>use the turtle module</li>
+<li>use recursion</li>
+</ul>
+<p>My solution: <a href="games/koch.py" class="uri">games/koch.py</a></p></li>
+</ul>
+<h2 id="cellular-automata">Cellular Automata</h2>
+<p>Learn about Conway’s <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of Life</a>. Watch <a href="https://www.youtube.com/watch?v=S-W0NX97DB0">this</a> and <a href="https://www.youtube.com/watch?v=C2vgICfQawE">that</a> videos.</p>
+<ul>
+<li><p>Implement an <a href="https://en.wikipedia.org/wiki/Elementary_cellular_automaton">Elementary cellular automaton</a>. The aim is to reproduce the graphics shown at the bottom on the previous page. you can take inspiration from the excellent <a href="http://greenteapress.com/wp/think-complexity-2e/"><em>Think Complexity</em></a> by Allen B. Downey. My solution is at <a href="cellular-automata/1d-ca.py" class="uri">cellular-automata/1d-ca.py</a>.</p></li>
+<li><p>Implement the Game of Life in 2D.</p></li>
+<li><p>Going futher: If you enjoy Cellular Automata, you can read Stephen Wolfram’s <a href="https://en.wikipedia.org/wiki/A_New_Kind_of_Science"><em>A New Kind of Science</em></a>. A more general book about Complexity is Melanie Mitchell’s <em>Complexity: a guided tour</em>.</p></li>
+</ul>
+<h2 id="artificial-neural-networks">Artificial Neural networks</h2>
+<p>To understand the basics of artificial neural networks, I recommend that you first read <a href="https://victorzhou.com/blog/intro-to-neural-networks/" class="uri">https://victorzhou.com/blog/intro-to-neural-networks/</a> and then watch the four excellent videos at <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" class="uri">https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi</a> . The last two of them focus on the backpropagation algorithm that allow to train network to learn mapping.</p>
+<p>Next, you can read and try to understand this <a href="https://visualstudiomagazine.com/articles/2017/06/01/back-propagation.aspx">implementation</a> of the backpropagation algorithm.</p>
+<p>Then, see a modern and efficient implementation of neural networks: <a href="https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html" class="uri">https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html</a></p>
+<p>More readings:</p>
+<ul>
+<li><p><a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a> on Andrej Karpathy’s blog.</p></li>
+<li><p><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">understanding LSTM Networks</a></p></li>
+<li><p><a href="https://www.springer.com/fr/book/9780387310732">Pattern recognition and machine learning</a> by Christopher M. Bishop</p></li>
+</ul>
+<h2 id="natural-language-parsing">Natural Language Parsing</h2>
+<p>Parsing refers to building the syntactic structure of a sentence from the linear sequence of words that compose it. Explore the <a href="http://www.nltk.org/book/ch08.html">various parsing algorithms</a>using the <a href="https://www.nltk.org/">Natural Language Toolkit</a>.</p>
+<h2 id="neuroimaging">Neuroimaging</h2>
+<ul>
+<li><p>Check out <a href="http://nilearn.github.io/">nilearn</a> and <a href="https://nistats.github.io/">nistats</a> and <a href="https://martinos.org/mne/stable/index.html">MNE-python</a></p></li>
+<li><p>See <a href="data-analysis/Example%20of%20a%20single%20subject-single%20run%20fMRI%20analysis%20with%20nistats.ipynb">data-analysis/Example of a single subject-single run fMRI analysis with nistats.ipynb</a></p></li>
+</ul>
+<hr />
+<h1 id="license">License</h1>
+<p>All documents in this repository are distributed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4</a>. The code is distributed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL v3 LICENSE</a>.</p>
+<hr />
+<h1 id="appendices">Appendices</h1>
+<h2 id="instructions-for-software-installation">Instructions for Software installation</h2>
+<p>Follow those instruction to install:</p>
+<ul>
+<li><strong>Anaconda Python 3</strong>.</li>
+<li>The Python library <strong>Expyriment</strong></li>
+<li><strong>Git</strong> from <a href="https://git-scm.com/" class="uri">https://git-scm.com/</a></li>
+<li>A text editor, for example <a href="https://micro-editor.github.io/">micro</a>, <a href="https://www.sublimetext.com/">Sublime Text</a> or <a href="http://atom.io">Atom</a> (Unless you are already using a text editor that you are happy with)</li>
+<li><strong>R</strong> from <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
+<li><strong>Rstudio Desktop</strong> from <a href="https://www.rstudio.com" class="uri">https://www.rstudio.com</a></li>
+</ul>
+<h3 id="warnings">Warnings</h3>
+<ul>
+<li>You will need to download about 1GB of software from the Internet. Therefore, make sure to have a decent connection.</li>
+<li>Make sure that you have at least 5GB of free space on your hard drive to unpack the various software.</li>
+<li>You might need to have administrator rights to install some of the softwares. If you are using a computer from an Institution, this is not always the case. Check with your IT team.</li>
+<li>If you are using Windows 10, make sure your user name doesn’t include spaces or characters that don’t belong to the English alphabet (accents, ideograms,…). If you do, better create a new user with a simple identifier.</li>
+</ul>
+<h3 id="anaconda-python3">Anaconda Python3</h3>
+<p>Among various python distributions, we recommend the <a href="https://www.anaconda.com/distribution">Anaconda distribution</a> because it comes with most of the packages needed for the lectures.</p>
+<ol type="1">
+<li>Go to the <a href="https://www.anaconda.com/distribution">Anaconda Python distribution page</a>. Select your OS — Windows, MacOS or Linux — and download the <em>Python 3.7</em> 64 bits installer.</li>
+<li>Go to your download folder and execute the Anaconda3 installer.</li>
+<li>In the Anaconda Setup Wizard, beware, pay attention to the following options option:
+<ul>
+<li>verify that you Install for <code>Just Me (recommended)</code>, then click on <code>Next</code></li>
+<li>Accept the default Destination folder and click on <code>Next</code></li>
+<li>IMPORTANT: Check the boxes “Add Anaconda to my PATH” and “Register Anaconda as my default Python” and click on <code>Install</code></li>
+<li>upon completion, click on ‘Next’, then <code>Finish</code></li>
+</ul></li>
+</ol>
+<h3 id="expyriment">Expyriment</h3>
+<p>We will need the Python library <a href="http://www.expyriment.org/">Expyriment</a></p>
+<ol type="1">
+<li>Open a Terminal:</li>
+</ol>
+<ul>
+<li>Under Linux, launch <code>Terminal</code> from your applications menu or use <code>Ctrl-Alt-T</code>.</li>
+<li>under MacOS: type <code>terminal</code> in the Spotlight search field. Alternatively, you can open a <code>Finder</code> window and select the <code>Application</code> folder, then the <code>Utilities</code> folder, then double-click on the <code>Terminal</code> icon..</li>
+<li>Under Windows, launch <code>Anaconda Prompt</code></li>
+</ul>
+<ol start="2" type="1">
+<li>Type:</li>
+</ol>
+<pre><code>    pip install expyriment</code></pre>
+<ol start="3" type="1">
+<li>Test that the installation went fine. In the terminal, type:</li>
+</ol>
+<pre><code>   ipython</code></pre>
+<p>This should display something like:</p>
+<pre><code>Python 3.7.4 (default, Aug  9 2019, 18:51:30) 
+Type &#39;copyright&#39;, &#39;credits&#39; or &#39;license&#39; for more information
+IPython 7.8.0 -- An enhanced Interactive Python. Type &#39;?&#39; for help.</code></pre>
+<p>It means that you are interacting with the ipython programme. Now type:</p>
+<pre><code>   import expyriment</code></pre>
+<p>If all went well, you should see a message such as:</p>
+<pre><code>pygame 1.9.6
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Expyriment 0.9.0 (Python 3.7.4) </code></pre>
+<p>Finally, press ‘Ctrl-D’ to exit ipython, and type <code>exit</code> to close the terminal.</p>
+<h3 id="git">Git</h3>
+<p>Git is a version control tool for software development, an indispensable tool for reproducible science.</p>
+<ul>
+<li><strong>Ubuntu Linux</strong> : Just execute <code>sudo apt install git</code> in a terminal.</li>
+<li><strong>MacOS</strong>: Download the <code>Git for Mac</code> installer from <a href="https://git-scm.com/download/mac" class="uri">https://git-scm.com/download/mac</a> and execute it. Accept all the defaults.</li>
+<li><p><strong>Windows</strong>: Download <code>Git for windows</code> from <a href="https://git-scm.com/download/win" class="uri">https://git-scm.com/download/win</a> and execute it. Accept all the defaults.</p>
+<p>IMPORTANT (Windows only): During Git’s installation, you will be asked a few questions, it is <em>crucial</em> that:</p>
+<pre><code>- you tick the box &quot;Use Git and optional unix tools from the command line prompt&quot;. 
+- when proposed to select a text editor, you choose `nano` (instead of the default, `vim`) </code></pre>
+<p>For other options/questions the defaults are fine.</p>
+<p>(Note: if you are hesitant, check the graphical instructions provided at <a href="https://hackernoon.com/install-git-on-windows-9acf2a1944f0" class="uri">https://hackernoon.com/install-git-on-windows-9acf2a1944f0</a>)</p></li>
+</ul>
+<p>Now, whatever your operating system, MacOs, Linux or Windows, you need to configure git. Open a Terminal (*Git Bash under Windows) and type:</p>
+<pre><code> git config --global user.name &quot;your_first_and_last_names_here&quot; 
+ git config --global user.email your_email_here 
+ git config --global core.editor nano</code></pre>
+<h3 id="a-text-editor">A Text Editor</h3>
+<p>A text editor is a program that allows you to edit pure text files such as python scripts, mardown documents, …</p>
+<p>Unless you already use a text editor that you are happy with, we recommend that you download and install <em>Sublime Text</em> from <a href="https://www.sublimetext.com/" class="uri">https://www.sublimetext.com/</a>. Follow the instructions specific for your Operating System.</p>
+<p>If you prefer opensource software, try <a href="http://atom.io">Atom</a>, but be aware that it is slower and more buggy than sublime text.</p>
+<p>Finally, if you like small and simple things, you can instead use the lightweight editor <a href="https://micro-editor.github.io/">micro</a></p>
+<h3 id="r">R</h3>
+<p>R is a programming language specialized for data analyses.</p>
+<ul>
+<li><strong>Windows</strong> Download and install the latest version of R from <a href="https://cran.rstudio.com/bin/windows/base/" class="uri">https://cran.rstudio.com/bin/windows/base/</a></li>
+<li><strong>MacOS</strong>: Download and install the latest version of R from <a href="https://cran.rstudio.com/bin/macosx/" class="uri">https://cran.rstudio.com/bin/macosx/</a></li>
+<li><strong>Linux</strong>: Find the version relevant for your distribution at <a href="https://cran.rstudio.com/bin/linux/" class="uri">https://cran.rstudio.com/bin/linux/</a> and follow the instructions in the <code>README.html</code> file.</li>
+</ul>
+<h3 id="rstudio-desktop">Rstudio Desktop</h3>
+<p>Rstudio is an Integrated Developpement Environment for R which greatly simplifies the use of __RMarkdown_. You can download and install the latest version of __RStudio Desktop_ from <a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a>. Make sure to select the correct Operating System!</p>
+<hr />
+<h2 id="resources-to-learn-python">Resources to learn Python</h2>
+<ul>
+<li>MOOCs:
+<ul>
+<li><a href="https://www.udemy.com/python-programming-for-absolute-beginners/">Udemy’s Python programming for absolute beginners</a></li>
+<li><a href="https://www.codecademy.com/learn/learn-python">Code Academy’s <em>Learn Python</em> module</a></li>
+<li><a href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python">Openclassrooms’ Apprendre à programmer en Python</a></li>
+<li><a href="https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/">Python 3 : des fondamentaux aux concepts avancés du langage</a>.</li>
+</ul></li>
+<li>Books:
+<ul>
+<li><a href="https://automatetheboringstuff.com/"><em>Automate the boring stuff with Python</em></a> (highly recommended!)</li>
+<li><a href="https://inforef.be/swi/python.htm"><em>Apprendre à Programmer avec Python3</em></a></li>
+<li><a href="http://greenteapress.com/thinkpython2/"><em>Think Python</em></a>,</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="resources-to-learn-the-command-shell">Resources to learn the command shell</h2>
+<p>Why learn the command shell?</p>
+<blockquote>
+<p>“What is a command shell? To properly understand the role of a shell, it’s necessary to visualize what a computer does for you. Basically, a computer is a tool; in order to use that tool, you must tell it what to do—or give it “commands.” These commands take many forms, such as clicking with a mouse on certain parts of the screen. But that is only one form of command input.</p>
+</blockquote>
+<blockquote>
+<p>By far the most versatile way to express what you want the computer to do is by using an abbreviated language called script. In script, instead of telling the computer, “list my files, please”, one writes a standard abbreviated command word—‘ls’. Typing ‘ls’ in a command shell is a script way of telling the computer to list your files.1</p>
+</blockquote>
+<blockquote>
+<p>The real flexibility of this approach is apparent only when you realize that there are many, many different ways to list files. Perhaps you want them sorted by name, sorted by date, in reverse order, or grouped by type. Most graphical browsers have simple ways to express this. But what about showing only a few files, or only files that meet a certain criteria? In very complex and specific situations, the request becomes too difficult to express using a mouse or pointing device. It is just these kinds of requests that are easily solved using a command shell.</p>
+</blockquote>
+<blockquote>
+<p>For example, what if you want to list every Word file on your hard drive, larger than 100 kilobytes in size, and which hasn’t been looked at in over six months? That is a good candidate list for deletion, when you go to clean up your hard drive. But have you ever tried asking your computer for such a list? There is no way to do it! At least, not without using a command shell.</p>
+</blockquote>
+<blockquote>
+<p>The role of a command shell is to give you more control over what your computer does for you. Not everyone needs this amount of control, and it does come at a cost: Learning the necessary script commands to express what you want done. A complicated query, such as the example above, takes time to learn. But if you find yourself using your computer frequently enough, it is more than worthwhile in the long run. Any tool you use often deserves the time spent learning to master it.&quot;</p>
+</blockquote>
+<blockquote>
+<p>(Extract from Emacs’ eshell documentation)</p>
+</blockquote>
+<ul>
+<li><a href="http://linuxcommand.org/tlcl.php">The Linux Command Line</a> by Williams Shotts.</li>
+<li><a href="https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux">Openclassrooms MOOC</a></li>
+</ul>
+<p>Remarks; - Under Windows, after having installed Git, you have access to “git bash”, which provides a terminal with the bash shell and emulates many unix commands. - Under Windows 10, Microsoft has recently made available the “Windows Subsystem for Linux”, which provides a virtual Linux system running inside Windows. (See <a href="https://itsfoss.com/install-bash-on-windows/" class="uri">https://itsfoss.com/install-bash-on-windows/</a>, and <a href="https://itsfoss.com/windows-linux-kernel-wsl-2/" class="uri">https://itsfoss.com/windows-linux-kernel-wsl-2/</a>).</p>
+<ul>
+<li>Under MacOSX, when you open a terminal, you may be interacting with the bash shell or the zsh shell (to know which, type <code>echo $SHELL</code>).</li>
+</ul>
+<hr />
+<h2 id="resources-to-learn-git">Resources to learn Git</h2>
+<ul>
+<li>Openclassrooms’ MOOC <a href="https://openclassrooms.com/en/courses/3321726-manage-your-code-with-git-and-github?status=published">Manage your code with Git and Github</a></li>
+<li><a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners" class="uri">https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics" class="uri">https://git-scm.com/book/en/v2/Getting-Started-Git-Basics</a></li>
+<li>The <a href="https://git-scm.com/book/en/v2">Git Book</a></li>
+<li>My own <a href="http://www.pallier.org/version-control-at-your-fingertips-a-quick-start-with-git.html#version-control-at-your-fingertips-a-quick-start-with-git">git cheat page</a></li>
+</ul>
+<hr />
+<h2 id="stimulusexperiment-generation-modules">Stimulus/Experiment generation modules</h2>
+<ul>
+<li><a href="http://www.pygame.org" class="uri">http://www.pygame.org</a> (See <a href="https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/">PyGame Drawing Basics</a>)</li>
+<li><a href="http://www.lexique.org" class="uri">http://www.lexique.org</a></li>
+<li><a href="http://www.expyriment.org" class="uri">http://www.expyriment.org</a> (See <a href="https://docs.expyriment.org/Tutorial.html">Get started with Expyriment</a></li>
+<li><a href="http://psychopy.org" class="uri">http://psychopy.org</a> (See <a href="https://www.socsci.ru.nl/wilberth/nocms/psychopy/print.php">Programming with PsychoPy</a>)</li>
+<li><a href="http://psychtoolbox.org/" class="uri">http://psychtoolbox.org/</a> (See <a href="http://peterscarfe.com/ptbtutorials.html">Psychtoolbox demos</a>)</li>
+</ul>
+<hr />
+<h2 id="data-analyses-statistics">Data analyses, Statistics</h2>
+<ul>
+<li>Modules: numpy, scipy, pandas, seaborn, statsmodel, sklearn
+<ul>
+<li>Data manipulation:
+<ul>
+<li><a href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html" class="uri">http://pandas.pydata.org/pandas-docs/stable/tutorials.html</a></li>
+</ul></li>
+<li>Plotting:
+<ul>
+<li><a href="http://matplotlib.org/users/pyplot_tutorial.html" class="uri">http://matplotlib.org/users/pyplot_tutorial.html</a></li>
+<li><a href="https://seaborn.pydata.org/tutorial.html" class="uri">https://seaborn.pydata.org/tutorial.html</a></li>
+</ul></li>
+</ul></li>
+<li><em>Scipy Lecture Notes</em>: <a href="http://www.scipy-lectures.org/" class="uri">http://www.scipy-lectures.org/</a></li>
+<li><em>Think Stats</em> by Allen B. Downey: <a href="http://greenteapress.com/thinkstats2/" class="uri">http://greenteapress.com/thinkstats2/</a></li>
+<li><em>Python Data Science Handbook</em> by Jake VanderPlas: <a href="https://jakevdp.github.io/PythonDataScienceHandbook" class="uri">https://jakevdp.github.io/PythonDataScienceHandbook</a></li>
+</ul>
+<hr />
+<h2 id="simulations-1">Simulations</h2>
+<ul>
+<li><a href="http://greenteapress.com/wp/think-complexity-2e/"><em>Think Complexity</em></a> by Allen B. Downey</li>
+<li>The <a href="http://briansimulator.org/">Brian spiking neural network simulator</a></li>
+<li><a href="https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html">Deep Learning for Natural Language Processing with Pytorch</a></li>
+</ul>
+<hr />
+<h2 id="books-relevant-to-cognitive-and-brain-sciences-programming">Books relevant to Cognitive and Brain Sciences Programming</h2>
+<ul>
+<li><a href="https://www.programmingvisualillusionsforeveryone.online/"><em>Programming Visual Illusions for Everyone</em></a> by Marco Bertamini:</li>
+<li><em>Neural Data Science: A Primer with MATLAB and Python</em> by von Erik Lee Nylen and Pascal Wallisch</li>
+<li><em>Matlab for Brain and Cognitive Scientists</em> and <em>Analyzing neural time series data</em> by Mike X Cohen</li>
+<li><a href="https://www.frontiersin.org/research-topics/8/python-in-neuroscience"><em>Python in Neuroscience</em></a></li>
+<li><em>Modeling Psychophysical Data in R</em> by Kenneth Knoblauch &amp; Laurence T. Maloney</li>
+</ul>
+<hr />
+<h2 id="programming-skills">Programming skills</h2>
+<ul>
+<li>See my <a href="tips.md">Tips for writing clean code</a></li>
+<li><a href="https://software-carpentry.org/lessons/">Software Carpentry</a> provides lessons on writing software for science.</li>
+<li><a href="https://software-carpentry.org/lessons/">Software Carpentry</a> provides nice lessons about writing software for science.</li>
+</ul>
+<hr />
+<h2 id="coding-exercices">Coding exercices</h2>
+<ul>
+<li>See <a href="exercices.md" class="uri">exercices.md</a> and [solutions-to-exercices/]</li>
+</ul>
+</body>
+</html>

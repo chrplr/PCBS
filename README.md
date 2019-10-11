@@ -1,10 +1,17 @@
-
 # Programming for Cognitive and Brain Sciences #
 
-The latest version of this document  is at
-[https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
+% Time-stamp: <2019-10-11 11:19:55 christophe@pallier.org>
 
+**Main web page:**: [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS**.
 
+**Materials:** [https://github.com/chrplr/PCBS](https://github.com/chrplr/PCBS)
+
+(Note: to download the course materials (scripts, etc.) check out [Downloading the course materials](#downloading-the-course-materials))
+
+**Discussion board:**  <http://cogmaster-pcbs.slack.com>
+  (Click
+  [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ)
+  to join). This is the place to ask for support. Do not hesitate!
 
 # Objectives #
 
@@ -19,34 +26,35 @@ order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...).
 
-
 "_An expert is a man who has made all the mistakes which can be made, in a narrow field._" (attributed to Niels Bohr)
 
 
-# Resources #
+# First things first #
 
-- Before attending to the first lecture, make sure to install the software according to the  "[Instructions for software installation](#instructions-for-software-installation)". (You will need a laptop, and preferably an internet connection durong the course).
+- Before attending the first lecture, read the [Prerequisites](#prerequisites)
+  and make sure to install the software according to the "[Instructions for
+  software installation](#instructions-for-software-installation)". (You will
+  need a laptop, and preferably an internet connection durong the course).
 
-- All of the course materials (scripts, etc.) are available at
-[http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS). Check out [Downloading the course materials](#downloading-the-course-materials). 
+- Schoology (for Cogmaster students): The
+  [course]((https://app.schoology.com/course/2239019136/) code is
+  `KN88-5TR4-XQG29`.`
 
-- A slack discussion board had been setup at <http://cogmaster-pcbs.slack.com> (Click [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ) to join). This is the place to ask for support. Do not hesitate!
-
-- Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is `KN88-5TR4-XQG29`.`
-
-**Note*: Please, do not send me emails (my answer rate is dismal). Use slack (preferably the `#general` channel)  to get support, schoology for other matters.
+**Note*: Please, do not send me emails (my answer rate is dismal). Use slack
+(preferably the `#general` channel) to get support, schoology for other matters.
 
 
-**Companion documents**
+## Companion documents ##
+
+Must read!
 
 * [How to solve problems](how-to-solve-problems.md)
 * [Tips for writing clean code](tips.md)
 * [Tools for reproducible science](tools-for-reproducible-science.md)
 * Projects towards validation:
-    - [EXample of past year projects](projects.md)
+    - [Example of past years' projects](projects.md)
     - [Some ideas of potential projects](ideas-for-projects.md)
 
-* [Bunch of exercises](exercices.md)
 
 -------------------------------------------------------------------------------
 
@@ -54,6 +62,10 @@ of real-time experiments, simulations...).
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
+- [Programming for Cognitive and Brain Sciences](#programming-for-cognitive-and-brain-sciences)
+- [Objectives](#objectives)
+- [First things first](#first-things-first)
+    - [Companion documents](#companion-documents)
 - [Prerequisites](#prerequisites)
     - [Software Installation](#software-installation)
     - [Know how to open a Terminal](#know-how-to-open-a-terminal)
@@ -121,6 +133,7 @@ of real-time experiments, simulations...).
     - [Simulations](#simulations-1)
     - [Books relevant to Cognitive and Brain Sciences Programming](#books-relevant-to-cognitive-and-brain-sciences-programming)
     - [Programming skills](#programming-skills)
+    - [Coding exercices](#coding-exercices)
 
 <!-- markdown-toc end -->
 
@@ -137,7 +150,6 @@ of real-time experiments, simulations...).
 ## Software Installation ##
 
 You will need _Anaconda Python 3_, the _expyriment_ module,  _Git_ a text editor, _R_ and _R studio_. Detailed explanations are provided in the appendix "[Instructions for software installation](#instructions-for-software-installation)".
-
 
 ## Know how to open a Terminal ###
 
@@ -164,7 +176,7 @@ This will be sufficient for this lecture, but if you want to learn more about ho
 
 ## Downloading the course materials ##
 
-Once you have installed git on your computer, you can download the course materials. Open a terminal and type:
+Once you have installed Git on your computer, you can download the course materials: Open a terminal and type:
 
 ```
     git clone https://github.com/chrplr/PCBS.git
@@ -783,7 +795,7 @@ Follow those instruction to install:
 
 ### Anaconda Python3 ###
 
-Among various python distribution, we recommend the [Anaconda distribution](https://www.anaconda.com/distribution) because it comes with most of the packages needed for the lectures. 
+Among various python distributions, we recommend the [Anaconda distribution](https://www.anaconda.com/distribution) because it comes with most of the packages needed for the lectures. 
 
 1. Go to the [Anaconda Python distribution page](https://www.anaconda.com/distribution). Select your OS --- Windows, MacOS or Linux --- and download the _Python 3.7_ 64 bits installer.
 2. Go to your download folder and execute the Anaconda3 installer.
@@ -791,7 +803,7 @@ Among various python distribution, we recommend the [Anaconda distribution](http
    option:
    - verify that you Install for `Just Me (recommended)`, then click on `Next`
    - Accept the default Destination folder and click on `Next`
-   - Check "Add Anaconda to my PATH" and check "Register
+   - IMPORTANT: Check the boxes "Add Anaconda to my PATH" and  "Register
    Anaconda as my default Python" and click on `Install`
    - upon completion, click on 'Next', then `Finish`
 
@@ -810,7 +822,41 @@ We will need the Python library [Expyriment](http://www.expyriment.org/)
  
 2. Type:
 
+```
     pip install expyriment
+```
+
+
+3. Test that the installation went fine. In the terminal, type:
+
+```
+   ipython
+``` 
+
+This should display something like:
+
+```
+Python 3.7.4 (default, Aug  9 2019, 18:51:30) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
+```
+
+It means that you are interacting with the ipython programme. Now type:
+
+```
+   import expyriment
+```
+
+If all went well, you should see a message such as:
+
+```
+pygame 1.9.6
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Expyriment 0.9.0 (Python 3.7.4) 
+```
+
+Finally, press  'Ctrl-D' to exit ipython, and type `exit` to close the terminal.
+ 
 
 
 ### Git ###
@@ -818,27 +864,39 @@ We will need the Python library [Expyriment](http://www.expyriment.org/)
 Git is a version control tool for software development, an indispensable tool for reproducible science. 
 
 * **Ubuntu Linux** : Just execute `sudo apt install git` in a terminal.
-* **Windows**: Download `Git for windows` from
-  <https://git-scm.com/download/win> and execute it. Accept all the defaults.
 * **MacOS**: Download the `Git for Mac` installer from
   <https://git-scm.com/download/mac> and execute it. Accept all the defaults.
+* **Windows**: Download `Git for windows` from
+  <https://git-scm.com/download/win> and execute it. Accept all the defaults.
 
-To configure git, open a Terminal (or launch *Git Bash* under Windows) and type:
-
-    git config --global user.name "your_first_and_last_names_here" 
-    git config --global user.email your_email_here 
-    git config --global core.editor nano
+   IMPORTANT (Windows only): During Git's installation, you will be asked a few questions, it is _crucial_ that:
+  
+      - you tick the box "Use Git and optional unix tools from the command line prompt". 
+      - when proposed to select a text editor, you choose `nano` (instead of the default, `vim`) 
+  
+   For other options/questions the defaults are fine.
+  
+   (Note: if you are hesitant, check the graphical instructions provided at <https://hackernoon.com/install-git-on-windows-9acf2a1944f0>)
+  
+  
+Now, whatever your operating system, MacOs, Linux or Windows, you need to configure git. Open a Terminal (*Git Bash
+ under Windows) and type:
+ 
+     git config --global user.name "your_first_and_last_names_here" 
+     git config --global user.email your_email_here 
+     git config --global core.editor nano
+ 
 
 
 ### A Text Editor ###
 
-Unless you already master a text editor, we recommend that you download and
-install _Sublime Text_ from <https://www.sublimetext.com/>. Follow the
-instructions specific for your Operating System. 
-If you prefer opensource software, try [Atom](http://atom.io), but it is slower and more buggy than sublime text.
+A text editor is a program that allows you to edit pure text files such as python scripts, mardown documents, ...
 
-If you find sublime text or atom too complicated, you can instead use the lightweight editor
-[micro](https://micro-editor.github.io/) 
+Unless you already use a text editor that you are happy with, we recommend that you download and install _Sublime Text_ from <https://www.sublimetext.com/>. Follow the instructions specific for your Operating System. 
+
+If you prefer opensource software, try [Atom](http://atom.io), but be aware that it is slower and more buggy than sublime text.
+
+Finally, if you like small and simple things, you can instead use the lightweight editor [micro](https://micro-editor.github.io/) 
 
 
 ### R ###
@@ -1011,3 +1069,10 @@ Remarks;
    lessons on writing software for science.
 * [Software Carpentry](https://software-carpentry.org/lessons/) provides
    nice lessons about writing software for science.
+
+
+---------------------------------------------------------------------------------------
+
+## Coding exercices ##
+   
+* See [exercices.md](exercices.md) and [solutions-to-exercices/]
