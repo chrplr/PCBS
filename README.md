@@ -1,16 +1,40 @@
 
-% Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
-course)
+# Programming for Cognitive and Brain Sciences #
 
-% Time-stamp: <2019-10-11 10:15:45 christophe@pallier.org>
-
-The latest version of this document -- a work in progress -- is at
+The latest version of this document  is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
 
 
 
-Its source as well as the course materials (scripts, etc.) are available at
-[http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS). Check out 
+# Objectives #
+
+Students in Cognitive-(Neuro)-science need to learn programming:
+
+1. to understand how computers work, because they represent one model for the Mind.
+2. to automate the boring stuff (e.g. repetitive work on files, web scrapping,)
+3. to do reproducible science: designing experiments, running them, analysing them.
+
+The main purpose of these lectures is to allow students to write *clean programs* in
+order to solve the tasks that are typically encountered in cognitive or
+neurosciences (data manipulation and analysis, creation of stimuli, programming
+of real-time experiments, simulations...).
+
+
+"_An expert is a man who has made all the mistakes which can be made, in a narrow field._" (attributed to Niels Bohr)
+
+
+# Resources #
+
+- Before attending to the first lecture, make sure to install the software according to the  "[Instructions for software installation](#instructions-for-software-installation)". (You will need a laptop, and preferably an internet connection durong the course).
+
+- All of the course materials (scripts, etc.) are available at
+[http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS). Check out [Downloading the course materials](#downloading-the-course-materials). 
+
+- A slack discussion board had been setup at <http://cogmaster-pcbs.slack.com> (Click [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ) to join). This is the place to ask for support. Do not hesitate!
+
+- Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is `KN88-5TR4-XQG29`.`
+
+**Note*: Please, do not send me emails (my answer rate is dismal). Use slack (preferably the `#general` channel)  to get support, schoology for other matters.
 
 
 **Companion documents**
@@ -18,10 +42,11 @@ Its source as well as the course materials (scripts, etc.) are available at
 * [How to solve problems](how-to-solve-problems.md)
 * [Tips for writing clean code](tips.md)
 * [Tools for reproducible science](tools-for-reproducible-science.md)
-* [Additional exercises](exercices.md).
-* Programming projects towards validation:
-    - [A few suggestions for projects](ideas-for-projects.md)
-    - [Your projects](projects.md)
+* Projects towards validation:
+    - [EXample of past year projects](projects.md)
+    - [Some ideas of potential projects](ideas-for-projects.md)
+
+* [Bunch of exercises](exercices.md)
 
 -------------------------------------------------------------------------------
 
@@ -29,19 +54,19 @@ Its source as well as the course materials (scripts, etc.) are available at
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [Objectives](#objectives)
-- [Resources](#resources)
 - [Prerequisites](#prerequisites)
     - [Software Installation](#software-installation)
+    - [Know how to open a Terminal](#know-how-to-open-a-terminal)
+    - [Downloading the course materials](#downloading-the-course-materials)
     - [Basic programming concepts](#basic-programming-concepts)
     - [Basic skills](#basic-skills)
-        - [how to open a Terminal](#how-to-open-a-terminal)
         - [how to download a Python script from the Internet and execute it from a command line](#how-to-download-a-python-script-from-the-internet-and-execute-it-from-a-command-line)
         - [how to start [ipython](http://ipython.org)](#how-to-start-ipythonhttpipythonorg)
         - [create and/or modify scripts with a text editor](#create-andor-modify-scripts-with-a-text-editor)
         - [Use Git to keep  your project clean](#use-git-to-keep--your-project-clean)
-- [Lecture 0](#lecture-0)
-    - [Automata, Turing Machines and Computers](#automata-turing-machines-and-computers)
+- [Starting from Scratch #](#starting-from-scratch-)
+- [Automata, Turing Machines and Computers](#automata-turing-machines-and-computers)
+- [Python in a Nutshell](#python-in-a-nutshell)
 - [Creating static visual stimuli](#creating-static-visual-stimuli)
     - [Kanizsa illusory contours](#kanizsa-illusory-contours)
     - [Herman grid](#herman-grid)
@@ -103,32 +128,6 @@ Its source as well as the course materials (scripts, etc.) are available at
 
 
 
-# Objectives #
-
-Students in Cognitive-(Neuro)-science need to learn programming:
-
-1. to understand how computers work, because they represent one model for the Mind.
-2. to automate the boring stuff (e.g. repetitive work on files, web scrapping,)
-3. to do reproducible science: designing experiments, running them, analysing them.
-
-The main purpose of these lectures is to allow students to write *clean programs* in
-order to solve the tasks that are typically encountered in cognitive or
-neurosciences (data manipulation and analysis, creation of stimuli, programming
-of real-time experiments, simulations...).
-
-
-"_An expert is a man who has made all the mistakes which can be made, in a narrow field._" (attributed to Niels Bohr)
-
-
-# Resources #
-
-- Discussion board at <http://cogmaster-pcbs.slack.com> (Click [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ) t join.)
-
-
-- Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is KN88-5TR4-XQG29.
-
-**Note*: DO NOT send me emails! (my response rate is less than 10%). Use slack to get support, schoology for other matters.
-
 
 -------------------------------------------------------------------------------
 
@@ -137,9 +136,7 @@ of real-time experiments, simulations...).
 
 ## Software Installation ##
 
-You will need _Anaconda Python 3_, the _expyriment_ module,  _Git_ and a text editor (and, optionnaly, _R_ and _R studio_). 
-Detailed explanations are provided in the appendix [Instructions for software
-installation](#instructions-for-software-installation).
+You will need _Anaconda Python 3_, the _expyriment_ module,  _Git_ a text editor, _R_ and _R studio_. Detailed explanations are provided in the appendix "[Instructions for software installation](#instructions-for-software-installation)".
 
 
 ## Know how to open a Terminal ###
@@ -266,7 +263,6 @@ See [Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Compu
 - Read the Python scripts in the [games](games/) folder.
 
 - I **strongly recommend** the freely available book [_Automate the boring stuff with Python: Practical programming for total beginners._](https://automatetheboringstuff.com/) to total novices (as well as the other books by the author). For those who dislike reading, there are videos on the site. 
-
 
 - Check out [Resources to learn Python in the Appendix](#resources-to-learn-python)
 
