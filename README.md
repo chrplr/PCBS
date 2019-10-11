@@ -2,7 +2,7 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-10-10 13:59:13 christophe@pallier.org>
+% Time-stamp: <2019-10-11 09:33:12 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
@@ -138,9 +138,9 @@ of real-time experiments, simulations...).
 ## Software Installation ##
 
 You should have installed the following software on your computer: _Anaconda
-Python 3_, the _expyriment_ module, _Git_, a text editor (e.g. _Sublime Text_ or _Atom_),
-_R_ and _RStudio Desktop_ (see [Instructions for software
-installation](#instructions-for-software-installation))
+Python 3_, the _expyriment_ module, _Git_, a text editor
+_R_ and _RStudio Desktop_: To this end, follow the [Instructions for software
+installation](#instructions-for-software-installation)
 
 ## Basic programming concepts ##
 
@@ -778,7 +778,7 @@ Follow those instruction to install:
 
 ### Anaconda Python3 ###
 
-Among various python distribution, we recommend the [Anaconda distribution](https://www.anaconda.com/distribution) because it comes with most of the packages needed for the lectures. 
+Among various python distributions, we recommend the [Anaconda distribution](https://www.anaconda.com/distribution) because it comes with most of the packages needed for the lectures. 
 
 1. Go to the [Anaconda Python distribution page](https://www.anaconda.com/distribution). Select your OS --- Windows, MacOS or Linux --- and download the _Python 3.7_ 64 bits installer.
 2. Go to your download folder and execute the Anaconda3 installer.
@@ -798,42 +798,91 @@ We will need the Python library [Expyriment](http://www.expyriment.org/)
 
 * Under Linux, launch `Terminal` from your applications menu or use
   `Ctrl-Alt-T`.
-* under MacOS: type `terminal` in the Spotlight search field. Alternatively, you
-  can open a `Finder` window and select the `Application` folder, then the
+* under MacOS: type `terminal` in the Spotlight search field. Alternatively, you can open a `Finder` window and select the `Application` folder, then the
   `Utilities` folder, then double-click on the `Terminal` icon..
 * Under Windows, launch `Anaconda Prompt`
  
 2. Type:
 
+```
     pip install expyriment
+```
 
+3. Test that the install worked fine. In the terminal, type:
 
+```
+   ipython
+``` 
+
+This should display something like:
+
+```
+Python 3.7.4 (default, Aug  9 2019, 18:51:30) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
+```
+
+It means that you are interacting with the ipython programme. Now type:
+
+```
+   import expyriment
+```
+
+If all went well, you should see a message such as:
+
+```
+pygame 1.9.6
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Expyriment 0.9.0 (Python 3.7.4) 
+```
+
+Finally, press  'Ctrl-D' to exit ipython, and type `exit` to close the terminal.
+
+`
 ### Git ###
 
 Git is a version control tool for software development, an indispensable tool for reproducible science. 
 
 * **Ubuntu Linux** : Just execute `sudo apt install git` in a terminal.
-* **Windows**: Download `Git for windows` from
-  <https://git-scm.com/download/win> and execute it. Accept all the defaults.
 * **MacOS**: Download the `Git for Mac` installer from
   <https://git-scm.com/download/mac> and execute it. Accept all the defaults.
+* **Windows**: Download `Git for windows` from
+  <https://git-scm.com/download/win> and execute it. 
+  
+  IMPORTANT (Windows only): During Git's installation, you will be asked a few questions, it is _crucial_ that:
+  
+      - you tick the box "Use Git and optional unix tools from the command line prompt". 
+      - when proposed to select a text editor, you choose `nano` (instead of the default, `vim`) 
+  
+  For other options/questions the defaults are ok.
+  
+  (Note: if you are hesitant, check the graphical instructions provided at <https://hackernoon.com/install-git-on-windows-9acf2a1944f0>)
+  
+  
+Now, you need to configure git:
 
-To configure git, open a Terminal (or launch *Git Bash* under Windows) and type:
+Open a Terminal (under Windows, this means launching *Git Bash*) and type:
 
     git config --global user.name "your_first_and_last_names_here" 
     git config --global user.email your_email_here 
     git config --global core.editor nano
 
 
+You are ready to download the lecture's materials:
+
+
+
 ### A Text Editor ###
 
-Unless you already master a text editor, we recommend that you download and
-install _Sublime Text_ from <https://www.sublimetext.com/>. Follow the
-instructions specific for your Operating System. 
-If you prefer opensource software, try [Atom](http://atom.io), but it is slower and more buggy than sublime text.
+A text editor allows you to edit text files such as python scripts, mardown documents, ...
 
-If you find sublime text or atom too complicated, you can instead use the lightweight editor
-[micro](https://micro-editor.github.io/) 
+Unless you already use a text editor that you are happy with, we recommend that you download and install _Sublime Text_ from <https://www.sublimetext.com/>. Follow the instructions specific for your Operating System. 
+
+
+If you prefer opensource software, try [Atom](http://atom.io), but be aware that it is slower and more buggy than sublime text.
+
+Finally, if you like small and simple things, you can instead use the lightweight editor [micro](https://micro-editor.github.io/) 
+
 
 
 ### R ###
