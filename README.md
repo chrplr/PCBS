@@ -2,13 +2,15 @@
 % Programming for Cognitive and Brain Sciences (notes for the Cogmaster's PCBS
 course)
 
-% Time-stamp: <2019-10-11 09:33:12 christophe@pallier.org>
+% Time-stamp: <2019-10-11 10:15:45 christophe@pallier.org>
 
 The latest version of this document -- a work in progress -- is at
 [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS).
 
+
+
 Its source as well as the course materials (scripts, etc.) are available at
-[http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS).
+[http://www.github.com/chrplr/PCBS](http://www.github.com/chrplr/PCBS). Check out 
 
 
 **Companion documents**
@@ -120,46 +122,34 @@ of real-time experiments, simulations...).
 
 # Resources #
 
-- Discussion board at <http://cogmaster-pcbs.slack.com> (Click [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ) to join.)
+- Discussion board at <http://cogmaster-pcbs.slack.com> (Click [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ) t join.)
 
 
-- Schoology (for Cogmaster students): The [course](https://app.schoology.com/course/2239019136/)'s code is KN88-5TR4-XQG29.
-
-- [Automate the Boring Stuff](https://automatetheboringstuff.com)
+- Schoology (for Cogmaster students): The [course]((https://app.schoology.com/course/2239019136/) code is KN88-5TR4-XQG29.
 
 **Note*: DO NOT send me emails! (my response rate is less than 10%). Use slack to get support, schoology for other matters.
-
 
 
 -------------------------------------------------------------------------------
 
 # Prerequisites #
 
+
 ## Software Installation ##
 
-You should have installed the following software on your computer: _Anaconda
-Python 3_, the _expyriment_ module, _Git_, a text editor
-_R_ and _RStudio Desktop_: To this end, follow the [Instructions for software
-installation](#instructions-for-software-installation)
-
-## Basic programming concepts ##
-
-You should be acquainted with some basic programming concepts, such as instructions, variables, tests (if...then...else) and loops (while and for). See [Starting-from-scratch](01_Starting-from-Scratch/Starting-from-Scratch.md)
+You will need _Anaconda Python 3_, the _expyriment_ module,  _Git_ and a text editor (and, optionnaly, _R_ and _R studio_). 
+Detailed explanations are provided in the appendix [Instructions for software
+installation](#instructions-for-software-installation).
 
 
-## Basic skills ##
+## Know how to open a Terminal ###
 
-Here a few skills that you will need to rapidly master:
-
-### how to open a Terminal ###
-
-- **Linux**: Launch `Terminal` from your application menu  or use `Ctrl-Alt-T** (gnome, xfce), or
-Win+Enter (i3)).
+- **Linux**: Launch `Terminal` from your application menu  or use `Ctrl-Alt-T** (gnome, xfce), or Win+Enter (i3)).
 
 - **MacOS**: Type `terminal` in the Spotlight search field.  Alternatively, you can open a `Finder` window and select the `Application` folder, then the `Utilities` folder, then double-click on the `Terminal` icon..
 
-- **Windows**: Start `Git Bash` (This assumes that you have installed `Git for windows` from
-<https://git-scm.com/download/win ):
+- **Windows**: Start `Git Bash` (This assumes that you have installed `Git for windows` as described in [Instructions for software
+installation](#instructions-for-software-installation))
 
  1. Click the Windows or Start icon.
  2. In the Programs list, open the Git folder.
@@ -172,7 +162,38 @@ You need to know the following commands in order to navigate the filesystem.
    - _pwd_: path of current working directory
    - _cd_: change directory
    
-This will be enough for our course but if you want to learn more about how to use the Terminal/Shell and become a 'power-user', check out the section [Resources to learn the command shell](#resources-to-learn-the-command-shell).
+This will be sufficient for this lecture, but if you want to learn more about how to use the Terminal/Shell, check out the section [Resources to learn the command shell](#resources-to-learn-the-command-shell).
+
+
+## Downloading the course materials ##
+
+Once you have installed git on your computer, you can download the course materials. Open a terminal and type:
+
+```
+    git clone https://github.com/chrplr/PCBS.git
+```
+
+This should download the course materials in a folder named 'PCBS' (Remark: if a folder with that name already exists, git will stop and not download the content of the website. In that case, delete or move the existing PCBS folder before running the `git clone`  command above)
+
+I do often update the materials. To synchronize your local copy with the latest version, you just need to open a terminal and type: 
+
+```
+   cd PCBS
+   git pull
+```
+
+Remark: do not manually modify or create new files in the PCBS folder. If you do so, git will notice it and might prevent an automatic upgrade and ask us to 'resolve conflicts'. If you get such a message, the simplest course of action for  beginner, is to delete the PCBS  folder (or move it if you wnat to keep a copy of your modifications) and reuse the git clone command above to reload the full folder.
+
+
+
+## Basic programming concepts ##
+
+If you are a complete beginner, to get acquainted with some basic programming concepts (instructions, variables, tests (if...then...else) and loops (while and for)), I recommend that you learn to play with Scratch [Starting-from-scratch](01_Starting-from-Scratch/Starting-from-Scratch.md)
+
+
+## Basic skills ##
+
+Beyond knowing how to open a terminal (see above), there are few skills that you need to acquire:
 
    
 ###  how to download a Python script from the Internet and execute it from a command line ###
@@ -180,7 +201,7 @@ This will be enough for our course but if you want to learn more about how to us
   Try the following:
   
   1. Download the script, e.g. [games/matches.py](games/matches.py).  Make sure you know in which directory the file has been saved.  
-  2. Open a terminal and use the 'cd', 'pwd', and 'ls' commands to navigate to the directory containing the file that you have just downloaded; Then, type:
+  2. Open a terminal and use the `cd`, `pwd` , and `ls` commands to navigate to the directory containing the file that you have just downloaded; Then, type:
   
 ```
       python matches.py
@@ -204,52 +225,38 @@ Try it:
 ```
    
    
-If a Windows open with a graphical representation of the sine function, Congratulations! (you can press 'q' in the Window to close it)
+If a Window open with a graphical representation of the sine function, Congratulations! (you can press 'q' in the Window to close it)
      
 - Type `quit()` to quit ipython, then `exit` to quit the shell and close the terminal.
 
 
-  
 ### create and/or modify scripts with a text editor ###
-
 
 You can use a  text editor like [micro](https://micro-editor.github.io/), [Sublime Text](https://www.sublimetext.com/) or [Atom](http://atom.io), or an Integrated Development Environment like Spyder or PyCharm.
 
-To work you will basically need two windows side by side: one with a text editor displaying the code, and one with ipython to test it (add maybe a browser when you need to google for help about Python). See [running python](running-python.md)
+To work you will basically need two windows side by side: one with a text editor displaying the code, and one with ipython to test it (add maybe a browser when you need to google for help about Python). 
+
+See [running python](running-python.md)
 
 ### Use Git to keep  your project clean ###
 
+[Git](https://www.gitbook.com/) is a software that allow you to keep track of the modifications of your files, to test alternatives, to share the work. 
 
-[Git](https://www.gitbook.com/) is a software that allow you to keep track of the modifications of your files, to test alternatives, to share the work. Althought it is a complex tools, you will only need to know the commands:
-  commands `git clone, git pull, git init, git add, git status, git commit` 
-
-
-To download the all of the lectures materials, open a terminal (git bash under Windows) and type
-
-```
-       git clone https://github.com/chrplr/PCBS.git
-```
-
-Later, when you will need to update the materials to their latest versions:
-
-```
-      cd PCBS
-      git pull
-```
+Git is a quite complex tool, but for this lecture, you will only need to know very few commands (`git clone, git pull, git init, git add, git status, git commit and git push``)
 
 Check out [Resources to learn Git in the Appendix](#resources-to-learn-git)
 
 ---------------------------------
 
 
-# Automata, Turing Machines and Computers #
-
-See [Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Computers.md)
-
-
 # Starting from Scratch # 
 
 See [Starting-from-scratch](01_Starting-from-Scratch/Starting-from-Scratch.md)
+
+
+# Automata, Turing Machines and Computers #
+
+See [Automata, Turing Machines and Computers](Automata-Turing-Machines-and-Computers.md)
 
 
 # Python in a Nutshell #
@@ -316,7 +323,9 @@ stimulus](http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC).
    ![Ebbinghaus illusion](images/ebbinghaus-titchener.png)
 
 Hint: 
-  - a bit of [trigonometry](https://en.wikipedia.org/wiki/Unit_circle) can help: if you want to draw a circle at angle `alpha` from the horizontal line and at distance `R` from the origin, the coordinates of its center are `(R ** cos(alpha), R * sin(alpha))**
+  - a bit of [trigonometry](https://en.wikipedia.org/wiki/Unit_circle) can help: if you want to draw a circle at angle `alpha` from the horizontal line and at distance `R` from the origin, the coordinates of its center are `(R * cos(alpha), R * sin(alpha))`
+  
+  
 * Check out my solution [visual-illusions/ebbinghaus.py](visual-illusions/ebbinghaus.py)
 
 ## Honeycomb and Extinction illusions. ##
@@ -778,7 +787,7 @@ Follow those instruction to install:
 
 ### Anaconda Python3 ###
 
-Among various python distributions, we recommend the [Anaconda distribution](https://www.anaconda.com/distribution) because it comes with most of the packages needed for the lectures. 
+Among various python distribution, we recommend the [Anaconda distribution](https://www.anaconda.com/distribution) because it comes with most of the packages needed for the lectures. 
 
 1. Go to the [Anaconda Python distribution page](https://www.anaconda.com/distribution). Select your OS --- Windows, MacOS or Linux --- and download the _Python 3.7_ 64 bits installer.
 2. Go to your download folder and execute the Anaconda3 installer.
@@ -798,91 +807,42 @@ We will need the Python library [Expyriment](http://www.expyriment.org/)
 
 * Under Linux, launch `Terminal` from your applications menu or use
   `Ctrl-Alt-T`.
-* under MacOS: type `terminal` in the Spotlight search field. Alternatively, you can open a `Finder` window and select the `Application` folder, then the
+* under MacOS: type `terminal` in the Spotlight search field. Alternatively, you
+  can open a `Finder` window and select the `Application` folder, then the
   `Utilities` folder, then double-click on the `Terminal` icon..
 * Under Windows, launch `Anaconda Prompt`
  
 2. Type:
 
-```
     pip install expyriment
-```
 
-3. Test that the install worked fine. In the terminal, type:
 
-```
-   ipython
-``` 
-
-This should display something like:
-
-```
-Python 3.7.4 (default, Aug  9 2019, 18:51:30) 
-Type 'copyright', 'credits' or 'license' for more information
-IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
-```
-
-It means that you are interacting with the ipython programme. Now type:
-
-```
-   import expyriment
-```
-
-If all went well, you should see a message such as:
-
-```
-pygame 1.9.6
-Hello from the pygame community. https://www.pygame.org/contribute.html
-Expyriment 0.9.0 (Python 3.7.4) 
-```
-
-Finally, press  'Ctrl-D' to exit ipython, and type `exit` to close the terminal.
-
-`
 ### Git ###
 
 Git is a version control tool for software development, an indispensable tool for reproducible science. 
 
 * **Ubuntu Linux** : Just execute `sudo apt install git` in a terminal.
+* **Windows**: Download `Git for windows` from
+  <https://git-scm.com/download/win> and execute it. Accept all the defaults.
 * **MacOS**: Download the `Git for Mac` installer from
   <https://git-scm.com/download/mac> and execute it. Accept all the defaults.
-* **Windows**: Download `Git for windows` from
-  <https://git-scm.com/download/win> and execute it. 
-  
-  IMPORTANT (Windows only): During Git's installation, you will be asked a few questions, it is _crucial_ that:
-  
-      - you tick the box "Use Git and optional unix tools from the command line prompt". 
-      - when proposed to select a text editor, you choose `nano` (instead of the default, `vim`) 
-  
-  For other options/questions the defaults are ok.
-  
-  (Note: if you are hesitant, check the graphical instructions provided at <https://hackernoon.com/install-git-on-windows-9acf2a1944f0>)
-  
-  
-Now, you need to configure git:
 
-Open a Terminal (under Windows, this means launching *Git Bash*) and type:
+To configure git, open a Terminal (or launch *Git Bash* under Windows) and type:
 
     git config --global user.name "your_first_and_last_names_here" 
     git config --global user.email your_email_here 
     git config --global core.editor nano
 
 
-You are ready to download the lecture's materials:
-
-
-
 ### A Text Editor ###
 
-A text editor allows you to edit text files such as python scripts, mardown documents, ...
+Unless you already master a text editor, we recommend that you download and
+install _Sublime Text_ from <https://www.sublimetext.com/>. Follow the
+instructions specific for your Operating System. 
+If you prefer opensource software, try [Atom](http://atom.io), but it is slower and more buggy than sublime text.
 
-Unless you already use a text editor that you are happy with, we recommend that you download and install _Sublime Text_ from <https://www.sublimetext.com/>. Follow the instructions specific for your Operating System. 
-
-
-If you prefer opensource software, try [Atom](http://atom.io), but be aware that it is slower and more buggy than sublime text.
-
-Finally, if you like small and simple things, you can instead use the lightweight editor [micro](https://micro-editor.github.io/) 
-
+If you find sublime text or atom too complicated, you can instead use the lightweight editor
+[micro](https://micro-editor.github.io/) 
 
 
 ### R ###
