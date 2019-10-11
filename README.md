@@ -1,12 +1,10 @@
 # Programming for Cognitive and Brain Sciences #
 
-% Time-stamp: <2019-10-11 11:19:55 christophe@pallier.org>
+% Time-stamp: <2019-10-11 11:54:35 christophe@pallier.org>
 
-**Main web page:**: [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS**.
+**Main web page:**: [https://chrplr.github.io/PCBS](https://chrplr.github.io/PCBS)
 
 **Materials:** [https://github.com/chrplr/PCBS](https://github.com/chrplr/PCBS)
-
-(Note: to download the course materials (scripts, etc.) check out [Downloading the course materials](#downloading-the-course-materials))
 
 **Discussion board:**  <http://cogmaster-pcbs.slack.com>
   (Click
@@ -44,7 +42,7 @@ of real-time experiments, simulations...).
 (preferably the `#general` channel) to get support, schoology for other matters.
 
 
-## Companion documents ##
+# Companion documents #
 
 Must read!
 
@@ -65,7 +63,7 @@ Must read!
 - [Programming for Cognitive and Brain Sciences](#programming-for-cognitive-and-brain-sciences)
 - [Objectives](#objectives)
 - [First things first](#first-things-first)
-    - [Companion documents](#companion-documents)
+- [Companion documents](#companion-documents)
 - [Prerequisites](#prerequisites)
     - [Software Installation](#software-installation)
     - [Know how to open a Terminal](#know-how-to-open-a-terminal)
