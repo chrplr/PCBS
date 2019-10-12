@@ -1,5 +1,7 @@
 # Programming for Cognitive and Brain Sciences (PCBS) #
 
+*** WORK IN PROGRESS ***
+
 Students in Cognitive-(Neuro)-science need to learn programming:
 
 1. to understand how computers work, because of the importance of the
@@ -15,13 +17,9 @@ order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...). 
 
-Access portal
+Access portal: <https://pcbs.readthedocs.io/en/latest/>
 
-  https://pcbs.readthedocs.io/en/latest/
-
-Slack discussion forum
-
-   http://cogmaster-pcbs.slack.com (Join [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ)). Use the ``#general`` channel to ask questions. Do not hesitate!
+Slack discussion forum: <http://cogmaster-pcbs.slack.com> (Join [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ)). Use the ``#general`` channel to ask questions. Do not hesitate!
 
 --
 [Christophe Pallier](http://www.pallier.org)
