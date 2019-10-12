@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Running Python &#8212; Programming for Cognitive and Brain Sciences  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to solve problems" href="how-to-solve-problems.html" />
+    <link rel="prev" title="First things first" href="first-things-first.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="running-python">
+<h1><a class="toc-backref" href="#id4">Running Python</a><a class="headerlink" href="#running-python" title="Permalink to this headline">¶</a></h1>
+<p>They are several ways to work with Python, each of which is best adapted to a certain type of task:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>To quickly test short pieces of code in an interactive manner, or to access the documentation of some functions or mudles, open a terminal and run <code class="docutils literal notranslate"><span class="pre">ipython</span></code></p></li>
+<li><p>To write reusable python scripts, use a text editor or an Integrated Development Environment, save the script and run it from a command line in a Terminal.</p></li>
+<li><p>To write a data analysis report, or a lecture, use a jupyter notebook.</p></li>
+</ul>
+</div></blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#running-python" id="id4">Running Python</a></p>
+<ul>
+<li><p><a class="reference internal" href="#running-a-python-script-from-the-command-line" id="id5">Running a python script from the command line</a></p></li>
+<li><p><a class="reference internal" href="#testing-a-short-piece-of-python-code" id="id6">Testing a short piece of python code</a></p></li>
+<li><p><a class="reference internal" href="#write-code-inside-a-text-editor-edit-run-cycle" id="id7">Write code inside a text editor (Edit-run cycle)</a></p></li>
+<li><p><a class="reference internal" href="#using-an-integrated-development-environment-like-spyder" id="id8">Using an Integrated Development Environment like Spyder</a></p></li>
+<li><p><a class="reference internal" href="#perform-an-interactive-data-analysis-with-jupyter-notebook-or-jupyter-lab" id="id9">Perform an interactive data analysis with jupyter-notebook or jupyter-lab</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="running-a-python-script-from-the-command-line">
+<h2><a class="toc-backref" href="#id5">Running a python script from the command line</a><a class="headerlink" href="#running-a-python-script-from-the-command-line" title="Permalink to this headline">¶</a></h2>
+<p>To run a python script, that is, a text file containing python code, you need to:</p>
+<ol class="arabic simple">
+<li><p>Open a Terminal</p></li>
+</ol>
+<dl class="simple">
+<dt>MacOS</dt><dd><p>Type <code class="docutils literal notranslate"><span class="pre">terminal</span></code> in the Spotlight search field.</p>
+</dd>
+<dt>Windows</dt><dd><p>Start <code class="docutils literal notranslate"><span class="pre">Git</span> <span class="pre">Bash</span></code> (This assumes that you have installed
+<code class="docutils literal notranslate"><span class="pre">Git</span> <span class="pre">for</span> <span class="pre">windows</span></code> as described in <a class="reference external" href="#instructions-for-software-installation">Instructions for software
+installation</a>)</p>
+</dd>
+<dt>Linux</dt><dd><p>Launch <code class="docutils literal notranslate"><span class="pre">Terminal</span></code> from your application menu or use
+<code class="docutils literal notranslate"><span class="pre">Ctrl-Alt-T</span></code> (gnome, xfce), or <code class="docutils literal notranslate"><span class="pre">Win+Return</span></code> (i3)).</p>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>If the script is not located in the current working directory (the user’s home directory), use the <a class="reference external" href="http://linuxcommand.sourceforge.net/lc3_lts0020.php">cd command</a> to navigate to the relevant directory</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">python</span></code> followed by the script’s filename, then press <a href="#id1"><span class="problematic" id="id2">``</span></a>return’’.</p></li>
+</ol>
+<p>For example, let us suppose that you want to execute a script named <code class="docutils literal notranslate"><span class="pre">matches.py</span></code> located in a subdirectory <code class="docutils literal notranslate"><span class="pre">PCBS/games</span></code> of your home directory. Open a terminal and type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">PCBS</span><span class="o">/</span><span class="n">games</span>
+<span class="n">python</span> <span class="n">matches</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Remarks:</p>
+<blockquote>
+<div><ul>
+<li><p>When the script has run to completion, you will be back interacting with the shell (see <a class="reference external" href="http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php">http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php</a>).</p></li>
+<li><p>It you need to interrupt a running python script, you can press <code class="docutils literal notranslate"><span class="pre">Ctrl-C</span></code> in the Terminal.</p></li>
+<li><p>You can specify <a class="reference external" href="https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/">absolute or relative pathnames</a> to specify the location of the scripts:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">~/</span><span class="n">PCBS</span><span class="o">/</span><span class="n">games</span><span class="o">/</span><span class="n">matches</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</li>
+<li><p>A good practice is to always take a glance to the code <em>before</em> running it. Depending on your system, you might be able to do this with the commands <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">filename.py</span></code> or <code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">filename.py</span></code> or <code class="docutils literal notranslate"><span class="pre">micro</span> <span class="pre">filename.py</span></code>, …</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="testing-a-short-piece-of-python-code">
+<h2><a class="toc-backref" href="#id6">Testing a short piece of python code</a><a class="headerlink" href="#testing-a-short-piece-of-python-code" title="Permalink to this headline">¶</a></h2>
+<p>To quickly test some Python code, type <code class="docutils literal notranslate"><span class="pre">ipython</span></code> on a command line.</p>
+<div class="figure align-default">
+<img alt="_images/ipython_terminal1.png" src="_images/ipython_terminal1.png" />
+</div>
+<p>Then press ‘Return’; you should obtain a should display  like the following:</p>
+<div class="figure align-default">
+<img alt="_images/ipython_terminal2.png" src="_images/ipython_terminal2.png" />
+</div>
+<p>A blinking cursor after <code class="docutils literal notranslate"><span class="pre">[1]:</span></code> indicates that ipython is ready and waiting for you to enter a Python statement that it will execute as soon as you press the “Return” key. For example, try:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">**</span> <span class="mi">5</span>
+<span class="mi">2</span> <span class="o">**</span> <span class="mi">64</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">turtle</span><span class="p">;</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">heading</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">3001</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>A Window should open with a graphical representation of the sine function,
+You can press ‘q’ in this Window to close it.</p>
+<p>It is possible to  execute a python script from within ipython. While in ipython, try:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+<span class="n">cd</span> <span class="n">PCBS</span><span class="o">/</span><span class="n">games</span>
+<span class="o">%</span><span class="n">run</span> <span class="n">matches</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Finally, To quit ipython, type <code class="docutils literal notranslate"><span class="pre">quit()</span></code> or press <code class="docutils literal notranslate"><span class="pre">Ctrl-D</span></code> .</p>
+<p>This approach is fine if you need to quickly test an idea. But as soon as you quit <code class="docutils literal notranslate"><span class="pre">ipython</span></code>, you lose
+all what you have done (technically, this is not entirely true: ipython saves the history of commands that you have typed).</p>
+<p>To keep track of your work, you need to use a text editor and the
+<em>Edit-run</em> approach.</p>
+</div>
+<div class="section" id="write-code-inside-a-text-editor-edit-run-cycle">
+<h2><a class="toc-backref" href="#id7">Write code inside a text editor (Edit-run cycle)</a><a class="headerlink" href="#write-code-inside-a-text-editor-edit-run-cycle" title="Permalink to this headline">¶</a></h2>
+<p>A script is nothing but a pure text file, that is, a sequence of characters.</p>
+<p>A Python script is written with a <strong>text editor</strong>, saved on the disk, and then executed</p>
+<ol class="arabic simple">
+<li><p>Open a Text-Editor (e.g. Sublime Text) and a Terminal window side-by-side:</p></li>
+</ol>
+<div class="figure align-default">
+<img alt="Using Atom and a Terminal side by side" src="_images/editor-terminal.png" />
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">File</span></code> in the Editor and enter the following text:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Using ‘File/Save as’, save the this text under the filename
+<code class="docutils literal notranslate"><span class="pre">myscript.py</span></code> in your personal (home) directory</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>run</em> with a python interpreter, by typing <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myscript.py</span></code> on
+a command line of the Terminal. Try it now.</p></li>
+</ul>
+<p>Important: you must make sure that the <em>current working directory</em> of
+the terminal is the same directory where the file <code class="docutils literal notranslate"><span class="pre">myscript.py</span></code> has
+been saved. Otherwise, you will get an error message such as ‘No such
+file or directory’. To fix this problem, you must use the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command
+to navigate the directory structure.</p>
+<p>Remarks:</p>
+<ul class="simple">
+<li><p>You can learn more about Turtle graphics by reading the documentation
+at <a class="reference external" href="https://docs.python.org/2/library/turtle.html">https://docs.python.org/2/library/turtle.html</a></p></li>
+</ul>
+</div>
+<div class="section" id="using-an-integrated-development-environment-like-spyder">
+<h2><a class="toc-backref" href="#id8">Using an Integrated Development Environment like Spyder</a><a class="headerlink" href="#using-an-integrated-development-environment-like-spyder" title="Permalink to this headline">¶</a></h2>
+<p>Some people like to work within a single application and avoid going
+back and forth from the text editor to the terminal. A nice application
+for Python developement is <code class="docutils literal notranslate"><span class="pre">spyder</span></code>, which provides an environment
+somewhat similar to the MATLAB IDE.</p>
+<div class="figure align-default" id="id3">
+<img alt="The “spyder” Integrated Development Environment" src="_images/spyder.png" />
+<p class="caption"><span class="caption-text">The “spyder” Integrated Development Environment</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Spyder, PyCharm, … are very nice IDEs but you should not use them to run python scripts that open new graphics windows (e.g. scripts using <code class="docutils literal notranslate"><span class="pre">tkinter</span></code>, <code class="docutils literal notranslate"><span class="pre">pygame</span></code>, …) because, when such scripts crash, they can leave the IDE in an unstable state. It is always safer to run a script directly from the command line in a terminal windows.</p>
+<p>One commendable approach is to use an IDE to edit python code, but then  use the command line to run the scripts.</p>
+</div>
+<div class="section" id="perform-an-interactive-data-analysis-with-jupyter-notebook-or-jupyter-lab">
+<h2><a class="toc-backref" href="#id9">Perform an interactive data analysis with jupyter-notebook or jupyter-lab</a><a class="headerlink" href="#perform-an-interactive-data-analysis-with-jupyter-notebook-or-jupyter-lab" title="Permalink to this headline">¶</a></h2>
+<p>To perform a data analysis and produce a nicely formatter report, it is recommended to use  <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> or <code class="docutils literal notranslate"><span class="pre">jupyter-lab</span></code>  (see <a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a>).</p>
+<p>In practice, launch Jupyter Notebook from the Start Menu/Anaconda3 (in Windows) or
+type <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code> in a terminal (Linux, MacOS). The “Jupyter homepage” should then open in your browser:</p>
+<div class="figure align-default">
+<img alt="Jupyter homepage" src="_images/jupyter1.png" />
+</div>
+<p>Clicking <code class="docutils literal notranslate"><span class="pre">New</span></code> and selecting <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">[root]</span></code> will open a new tab containing a
+notebook where you can enter python code inside so-called ‘cells’. To execute
+the code in a cell, just move the cursor there and press <code class="docutils literal notranslate"><span class="pre">Ctrl+Enter</span></code></p>
+<div class="figure align-default">
+<img alt="Jupyter notebook" src="_images/jupyter2.png" />
+</div>
+<p>A nice feature of the Jupyter notebooks is persistence, i.e. they are
+saved automatically (in <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files) and you can go on working on
+the same notebook whn you reopen it. This is also very handy, for
+example, to send a data analysis report by email.</p>
+<p>Jupyter’s documentation is available at
+<a class="reference external" href="http://jupyter.readthedocs.io/en/latest/index.html">http://jupyter.readthedocs.io/en/latest/index.html</a></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Programming for Cognitive and Brain Sciences</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="first-things-first.html">First things first</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-a-python-script-from-the-command-line">Running a python script from the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-a-short-piece-of-python-code">Testing a short piece of python code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#write-code-inside-a-text-editor-edit-run-cycle">Write code inside a text editor (Edit-run cycle)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-an-integrated-development-environment-like-spyder">Using an Integrated Development Environment like Spyder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#perform-an-interactive-data-analysis-with-jupyter-notebook-or-jupyter-lab">Perform an interactive data analysis with jupyter-notebook or jupyter-lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-solve-problems.html">How to solve problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips-to-write-clean-code.html">Writing clean code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools-for-reproducible-science.html">Tools to do Reproducible Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Automata-Turing-Machines-and-Computers.html">Automata and Computers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Creating static visual stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#creating-and-playing-sounds">Creating and playing sounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#experiments">Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#data-analyses">Data Analyses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#lexical-statistics">Lexical Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#simulations">Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">External Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coding-exercices.html">Programming Exercices</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="first-things-first.html" title="previous chapter">First things first</a></li>
+      <li>Next: <a href="how-to-solve-problems.html" title="next chapter">How to solve problems</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Christophe Pallier.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/running-python.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

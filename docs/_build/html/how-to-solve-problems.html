@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>How to solve problems &#8212; Programming for Cognitive and Brain Sciences  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Writing clean code" href="tips-to-write-clean-code.html" />
+    <link rel="prev" title="Running Python" href="running-python.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="how-to-solve-problems">
+<h1>How to solve problems<a class="headerlink" href="#how-to-solve-problems" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>“An expert is a man who has made all the mistakes which can be made, in
+a narrow field.” – Niels Bohr</p>
+</div></blockquote>
+<div class="section" id="how-to-think-like-a-programmer-lessons-in-problem-solving">
+<h2>How to think like a programmer: lessons in problem solving<a class="headerlink" href="#how-to-think-like-a-programmer-lessons-in-problem-solving" title="Permalink to this headline">¶</a></h2>
+<p>The following sections are copied from
+<a class="reference external" href="https://medium.freecodecamp.org/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2">https://medium.freecodecamp.org/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2</a>
+by Richard Reis.</p>
+<p>So, what should you do when you encounter a new problem?</p>
+<p>Here are the steps:</p>
+<div class="section" id="understand">
+<h3>Understand<a class="headerlink" href="#understand" title="Permalink to this headline">¶</a></h3>
+<p>Know exactly what is being asked. Most hard problems are hard because
+you don’t understand them (hence why this is the first step).</p>
+<p>How to know when you understand a problem? When you can explain it in
+plain English.</p>
+<p>Do you remember being stuck on a problem, you start explaining it, and
+you instantly see holes in the logic you didn’t see before?</p>
+<p>Most programmers know this feeling.</p>
+<p>This is why you should write down your problem, doodle a diagram, or
+tell someone else about it (or thing… some people use a rubber duck).</p>
+<blockquote>
+<div><p>“If you can’t explain something in simple terms, you don’t understand
+it.” –Richard Feynman</p>
+</div></blockquote>
+</div>
+<div class="section" id="plan">
+<h3>Plan<a class="headerlink" href="#plan" title="Permalink to this headline">¶</a></h3>
+<p>Don’t dive right into solving without a plan (and somehow hope you can
+muddle your way through). Plan your solution!</p>
+<p>Nothing can help you if you can’t write down the exact steps.</p>
+<p>In programming, this means don’t start hacking straight away. Give your
+brain time to analyze the problem and process the information.</p>
+<p>To get a good plan, answer this question:</p>
+<p>“Given input X, what are the steps necessary to return output Y?”</p>
+<p>Sidenote: Programmers have a great tool to help them with this… Comments!</p>
+</div>
+<div class="section" id="divide">
+<h3>Divide<a class="headerlink" href="#divide" title="Permalink to this headline">¶</a></h3>
+<p>Pay attention. This is the most important step of all.</p>
+<p>Do not try to solve one big problem. You will cry.</p>
+<p>Instead, break it into sub-problems. These sub-problems are much easier
+to solve.</p>
+<p>Then, solve each sub-problem one by one. Begin with the simplest.
+Simplest means you know the answer (or are closer to that answer).</p>
+<p>After that, simplest means this sub-problem being solved doesn’t depend
+on others being solved.</p>
+<p>Once you solved every sub-problem, connect the dots.</p>
+<p>Connecting all your “sub-solutions” will give you the solution to the
+original problem. Congratulations!</p>
+<p>This technique is a cornerstone of problem-solving. Remember it (read
+this step again, if you must).</p>
+<blockquote>
+<div><p>“If I could teach every beginning programmer one problem-solving
+skill, it would be the ‘reduce the problem technique.’</p>
+</div></blockquote>
+<blockquote>
+<div><p>For example, suppose you’re a new programmer and you’re asked to
+write a program that reads ten numbers and figures out which number
+is the third highest. For a brand-new programmer, that can be a tough
+assignment, even though it only requires basic programming syntax.</p>
+<p>If you’re stuck, you should reduce the problem to something simpler.
+Instead of the third-highest number, what about finding the highest
+overall? Still too tough? What about finding the largest of just
+three numbers? Or the larger of two?</p>
+</div></blockquote>
+<blockquote>
+<div><p>Reduce the problem to the point where you know how to solve it and
+write the solution. Then expand the problem slightly and rewrite the
+solution to match, and keep going until you are back where you
+started.”</p>
+<p>–V. Anton Spraul</p>
+</div></blockquote>
+</div>
+<div class="section" id="stuck">
+<h3>Stuck?<a class="headerlink" href="#stuck" title="Permalink to this headline">¶</a></h3>
+<p>By now, you’re probably sitting there thinking “Hey Richard… That’s cool
+and all, but what if I’m stuck and can’t even solve a sub-problem??”</p>
+<p>First off, take a deep breath. Second, that’s fair.</p>
+<p>Don’t worry though, friend. This happens to everyone!</p>
+<p>The difference is the best programmers/problem-solvers are more curious
+about bugs/errors than irritated.</p>
+<p>In fact, here are three things to try when facing a whammy:</p>
+<p>Debug: Go step by step through your solution trying to find where you
+went wrong. Programmers call this debugging (in fact, this is all a
+debugger does).</p>
+<blockquote>
+<div><p>“The art of debugging is figuring out what you really told your
+program to do rather than what you thought you told it to do.””
+–Andrew Singer</p>
+</div></blockquote>
+<p>Reassess: Take a step back. Look at the problem from another
+perspective. Is there anything that can be abstracted to a more general
+approach?</p>
+<blockquote>
+<div><p>“Sometimes we get so lost in the details of a problem that we
+overlook general principles that would solve the problem at a more
+general level. […]</p>
+</div></blockquote>
+<blockquote>
+<div><p>The classic example of this, of course, is the summation of a long
+list of consecutive integers, 1 + 2 + 3 + … + n, which a very young
+Gauss quickly recognized was simply n(n+1)/2, thus avoiding the
+effort of having to do the addition.” –C. Jordan Ball</p>
+</div></blockquote>
+<p>Sidenote: Another way of reassessing is starting anew. Delete everything
+and begin again with fresh eyes. I’m serious. You’ll be dumbfounded at
+how effective this is.</p>
+<p>Research: Ahh, good ol’ Google. You read that right. No matter what
+problem you have, someone has probably solved it. Find that person/
+solution. In fact, do this even if you solved the problem! (You can
+learn a lot from other people’s solutions).</p>
+<p>Caveat: Don’t look for a solution to the big problem. Only look for
+solutions to sub-problems. Why? Because unless you struggle (even a
+little bit), you won’t learn anything. If you don’t learn anything, you
+wasted your time.</p>
+</div>
+<div class="section" id="practice">
+<h3>Practice<a class="headerlink" href="#practice" title="Permalink to this headline">¶</a></h3>
+<p>Don’t expect to be great after just one week. If you want to be a good
+problem-solver, solve a lot of problems!</p>
+<p>Practice. Practice. Practice. It’ll only be a matter of time before you
+recognize that “this problem could easily be solved with .”</p>
+<p>How to practice? There are options out the wazoo!</p>
+<p>Chess puzzles, math problems, Sudoku, Go, Monopoly, video-games,
+cryptokitties, bla… bla… bla….</p>
+<p>In fact, a common pattern amongst successful people is their habit of
+practicing “micro problem-solving.” For example, Peter Thiel plays
+chess, and Elon Musk plays video-games.</p>
+<p>Fast-forward to today. Elon [Musk], Reid [Hoffman], Mark Zuckerberg and
+many others say that games have been foundational to their success in
+building their companies.”–Mary Meeker (2017 internet trends report)</p>
+<p>Does this mean you should just play video-games? Not at all.</p>
+<p>But what are video-games all about? That’s right, problem-solving!</p>
+<p>So, what you should do is find an outlet to practice. Something that
+allows you to solve many micro-problems (ideally, something you enjoy).</p>
+<p>For example, I enjoy coding challenges. Every day, I try to solve at
+least one challenge (usually on Coderbyte).</p>
+<p>Like I said, all problems share similar patterns.</p>
+</div>
+<div class="section" id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<p>That’s all folks!</p>
+<p>Now, you know better what it means to “think like a programmer.”</p>
+<p>You also know that problem-solving is an incredible skill to cultivate
+(the meta-skill).</p>
+<p>As if that wasn’t enough, notice how you also know what to do to
+practice your problem-solving skills!</p>
+<p>Phew… Pretty cool right?</p>
+<p>Finally, I wish you encounter many problems.</p>
+<p>You read that right. At least now you know how to solve them! (also,
+you’ll learn that with every solution, you improve).</p>
+<blockquote>
+<div><p>“Just when you think you’ve successfully navigated one obstacle,
+another emerges. But that’s what keeps life interesting.[…]</p>
+</div></blockquote>
+<blockquote>
+<div><p>Life is a process of breaking through these impediments–a series of
+fortified lines that we must break through.</p>
+<p>Each time, you’ll learn something.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Each time, you’ll develop strength, wisdom, and perspective.</p>
+<p>Each time, a little more of the competition falls away. Until all
+that is left is you: the best version of you.”</p>
+</div></blockquote>
+<blockquote>
+<div><p>– Ryan Holiday (The Obstacle is the Way)</p>
+</div></blockquote>
+<p>Now, go solve some problems!</p>
+<p>And best of luck!</p>
+</div>
+</div>
+<div class="section" id="how-to-report-bugs-effectively">
+<h2>How to report bugs effectively<a class="headerlink" href="#how-to-report-bugs-effectively" title="Permalink to this headline">¶</a></h2>
+<p>A crucial skill is to be able to report problems so that other people can actually help you.
+Also by formulating a precise question, chances are that you will see the solution by yourself.</p>
+<p>On this topic, read  <a class="reference external" href="https://www.chiark.greenend.org.uk/~sgtatham/bugs.html">How to Report Bugs
+Effectively</a></p>
+</div>
+<div class="section" id="how-to-solve-it-by-polya">
+<h2><em>How to solve it</em> by Polya<a class="headerlink" href="#how-to-solve-it-by-polya" title="Permalink to this headline">¶</a></h2>
+<p>A classic book giving advice on how to solve problem: <a class="reference external" href="https://math.hawaii.edu/home/pdf/putnam/PolyaHowToSolveIt.pdf">How to solve it</a> by George
+Polya.</p>
+<p>You can get the gist of it at <a class="reference external" href="https://en.wikipedia.org/wiki/How_to_Solve_It">https://en.wikipedia.org/wiki/How_to_Solve_It</a></p>
+</div>
+<div class="section" id="computer-science-distilled">
+<h2>Computer Science Distilled<a class="headerlink" href="#computer-science-distilled" title="Permalink to this headline">¶</a></h2>
+<p>A relevant book:  <a class="reference external" href="https://www.amazon.com/dp/0997316020/ref=sspa_dk_detail_4?psc=1">Computer Science Distilled: Learn the Art of Solving Computational Problems</a></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Programming for Cognitive and Brain Sciences</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="first-things-first.html">First things first</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running-python.html">Running Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to solve problems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-think-like-a-programmer-lessons-in-problem-solving">How to think like a programmer: lessons in problem solving</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-report-bugs-effectively">How to report bugs effectively</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-solve-it-by-polya"><em>How to solve it</em> by Polya</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#computer-science-distilled">Computer Science Distilled</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tips-to-write-clean-code.html">Writing clean code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools-for-reproducible-science.html">Tools to do Reproducible Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Automata-Turing-Machines-and-Computers.html">Automata and Computers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Creating static visual stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#creating-and-playing-sounds">Creating and playing sounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#experiments">Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#data-analyses">Data Analyses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#lexical-statistics">Lexical Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#simulations">Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">External Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coding-exercices.html">Programming Exercices</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="running-python.html" title="previous chapter">Running Python</a></li>
+      <li>Next: <a href="tips-to-write-clean-code.html" title="next chapter">Writing clean code</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Christophe Pallier.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/how-to-solve-problems.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

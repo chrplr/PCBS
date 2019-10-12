@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Creating static visual stimuli &#8212; Programming for Cognitive and Brain Sciences  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="External Resources" href="resources.html" />
+    <link rel="prev" title="Automata and Computers" href="Automata-Turing-Machines-and-Computers.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="creating-static-visual-stimuli">
+<h1>Creating static visual stimuli<a class="headerlink" href="#creating-static-visual-stimuli" title="Permalink to this headline">¶</a></h1>
+<p>We are going to use <a class="reference external" href="http://www.pygame.org">pygame</a>.</p>
+<p>Please read this <a class="reference external" href="https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/">quick introduction on drawing with
+pygame</a>
+and run and study the scripts
+<a class="reference external" href="visual-illusions/square.py">square.py</a>,
+<a class="reference external" href="visual-illusions/circle.py">circle.py</a> and
+<a class="reference external" href="visual-illusions/triangle.py">triangle.py</a>.</p>
+<div class="section" id="kanizsa-illusory-contours">
+<h2>Kanizsa illusory contours<a class="headerlink" href="#kanizsa-illusory-contours" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic" start="0">
+<li><p>Starting from the <code class="docutils literal notranslate"><span class="pre">square.py</span></code> and <code class="docutils literal notranslate"><span class="pre">circle.py</span></code> scripts, create a
+new script to display the Kanizsa squares:</p>
+<div class="figure align-default" id="id3">
+<img alt="Kanizsa square" src="_images/Kanizsa-square.jpeg" />
+<p class="caption"><span class="caption-text">Kanizsa square</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id4">
+<img alt="Kanizsa triangle" src="_images/Kanizsa1.png" />
+<p class="caption"><span class="caption-text">Kanizsa triangle</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Check out my solution:
+<a class="reference external" href="visual-illusions/kanizsa-square.py">visual-illusions/kanizsa-square.py</a></p>
+<p>To find out more, google <code class="docutils literal notranslate"><span class="pre">illusory</span> <span class="pre">contours</span></code>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="herman-grid">
+<h2>Herman grid<a class="headerlink" href="#herman-grid" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Starting from <a class="reference external" href="visual-illusions/square.py">square.py</a>, write a
+program to display the <a class="reference external" href="https://en.wikipedia.org/wiki/Grid_illusion">Herman
+grid</a></p>
+<div class="figure align-default" id="id5">
+<img alt="Hermann Grid" src="_images/HermannGrid.png" />
+<p class="caption"><span class="caption-text">Hermann Grid</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Hints:</p>
+<ul class="simple">
+<li><p>use paper and pencil to draw the figure</p></li>
+<li><p>find out the formulas to compute the left top of the square in the
+ith row and jth column</p></li>
+<li><p>in your python scripts, use nested for loops over rows and columns
+to display each square one by one</p></li>
+</ul>
+</li>
+<li><p>Check out <a class="reference external" href="visual-illusions/grid.py">my solution</a></p></li>
+<li><p>Optional: Read
+<a class="reference external" href="https://stackabuse.com/command-line-arguments-in-python/">https://stackabuse.com/command-line-arguments-in-python/</a> and use the
+<code class="docutils literal notranslate"><span class="pre">sys.argv[]</span></code> array from the <code class="docutils literal notranslate"><span class="pre">sys</span></code> module (or use the <code class="docutils literal notranslate"><span class="pre">argparse</span></code>
+module) to get from the command lines the number of columns, rows,
+the size of square and the size of the margins. Play with those
+parameters to see if you can make the illusion come and go.</p></li>
+</ul>
+</div>
+<div class="section" id="ebbinghaus-titchener">
+<h2>Ebbinghaus-Titchener<a class="headerlink" href="#ebbinghaus-titchener" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Create the static <a class="reference external" href="http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC">Ebbinghaus–Titchener
+stimulus</a>.</p>
+<div class="figure align-default" id="id6">
+<img alt="Ebbinghaus illusion" src="_images/ebbinghaus-titchener.png" />
+<p class="caption"><span class="caption-text">Ebbinghaus illusion</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+</ul>
+<p>Hint: A bit of <a class="reference external" href="https://en.wikipedia.org/wiki/Unit_circle">trigonometry</a> can help:
+if you want to draw a circle at angle <code class="docutils literal notranslate"><span class="pre">alpha</span></code> from the horizontal line
+and at distance <code class="docutils literal notranslate"><span class="pre">R</span></code> from the origin, the coordinates of its center are
+<code class="docutils literal notranslate"><span class="pre">(R</span> <span class="pre">*</span> <span class="pre">cos(alpha),</span> <span class="pre">R</span> <span class="pre">*</span> <span class="pre">sin(alpha))</span></code></p>
+<ul class="simple">
+<li><p>Check out my solution
+<a class="reference external" href="visual-illusions/ebbinghaus.py">visual-illusions/ebbinghaus.py</a></p></li>
+</ul>
+</div>
+<div class="section" id="honeycomb-and-extinction-illusions">
+<h2>Honeycomb and Extinction illusions.<a class="headerlink" href="#honeycomb-and-extinction-illusions" title="Permalink to this headline">¶</a></h2>
+<p>The extinction illusion is a variant of the Herman grid:</p>
+<div class="figure align-default" id="id7">
+<img alt="Extinction illusion" src="_images/extinction.png" />
+<p class="caption"><span class="caption-text">Extinction illusion</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Program the stimulus (the lines can be horizontal and vertical rather
+than oblique)</p></li>
+<li><p>Check out <a class="reference external" href="visual-illusions/extinction.py">my solution</a></p></li>
+</ul>
+<p>Here is the Honeycom illusion:</p>
+<div class="figure align-default" id="id8">
+<img alt="Honeycomb illusion" src="_images/honeycomb.png" />
+<p class="caption"><span class="caption-text">Honeycomb illusion</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<ul>
+<li><p>Watch <a class="reference external" href="https://www.youtube.com/watch?v=fDBYSFDXsuE">this video</a></p></li>
+<li><p>Check out <a class="reference external" href="https://doi.org/10.1177/2041669516660727.%20https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5030753/pdf/10.1177_2041669516660727.pdf">Bertamini, Herzog, and Bruno (2016). “The Honeycomb
+Illusion: Uniform Textures Not Perceived as
+Such.”</a></p></li>
+<li><p>Optional: Try to program the honeycomb stimulus above. A <a class="reference external" href="visual-illusions/Honeycomb.py">solution
+using psychopy</a> is available on
+<a class="reference external" href="https://www.programmingvisualillusionsforeveryone.online/scripts.html">Bertamini’s web
+site</a>.
+To run it you might need to install “wxpython” (beware: it can be
+troublesome)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">wxPython</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">psychopy</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="random-dot-stereograms">
+<h2>Random-dot stereograms<a class="headerlink" href="#random-dot-stereograms" title="Permalink to this headline">¶</a></h2>
+<p>A random-dot stereogram is stereo pair of images of random dots which,
+when viewed with the eyes focused on a point in front of or behind the
+images, produces a sensation of depth. See
+<a class="reference external" href="https://en.wikipedia.org/wiki/Random_dot_stereogram">https://en.wikipedia.org/wiki/Random_dot_stereogram</a>.</p>
+<div class="figure align-default" id="id9">
+<img alt="stereogram" src="_images/stereogram.jpg" />
+<p class="caption"><span class="caption-text">stereogram</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Write a script that generate random-dot stereograms.</p></li>
+<li><p>Check out my solution:
+<a class="reference external" href="random-dot-stereograms/random_dot_stereogram.py">random_dot_stereogram.py</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="creating-dynamic-visual-stimuli">
+<h1>Creating dynamic visual stimuli<a class="headerlink" href="#creating-dynamic-visual-stimuli" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="wertheimer-line-motion-illusion">
+<h2>Wertheimer line-motion illusion.<a class="headerlink" href="#wertheimer-line-motion-illusion" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Check out <a class="reference external" href="http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf">Jancke et al (2004) Imaging cortical correlates of
+illusion in early visual
+cortex</a>.</p></li>
+<li><p>Program the stimulus.</p></li>
+<li><p>Check out my solution
+<a class="reference external" href="visual-illusions/line-motion.py">visual-illusions/line-motion.py</a></p></li>
+</ul>
+</div>
+<div class="section" id="flash-lag-illusion">
+<h2>Flash-lag illusion<a class="headerlink" href="#flash-lag-illusion" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Read about the <a class="reference external" href="https://en.wikipedia.org/wiki/Flash_lag_illusion">Flash-lag
+illusion</a>.</p></li>
+<li><p>Program the stimulus.</p></li>
+<li><p>Check out my solution
+<a class="reference external" href="visual-illusions/flash-lag.py">visual-illusions/flash-lag.py</a></p></li>
+</ul>
+</div>
+<div class="section" id="dynamic-version-of-the-ebbinghaus-titchener">
+<h2>Dynamic version of the Ebbinghaus-Titchener<a class="headerlink" href="#dynamic-version-of-the-ebbinghaus-titchener" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Watch <a class="reference external" href="https://www.youtube.com/watch?v=hRlWqfd5pn8">this video</a>.</p></li>
+<li><p>Program a version where the outer circles (inducers) grow and shrink
+in size.</p></li>
+<li><p>Check out my solution
+<a class="reference external" href="visual-illusions/ebbinghaus-dynamic.py">visual-illusions/ebbinghaus-dynamic.py</a></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="creating-and-playing-sounds">
+<h1>Creating and playing sounds<a class="headerlink" href="#creating-and-playing-sounds" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p>Install the <em>simpleaudio</em> module if it is not already installed on
+your computer (check with ipython: <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">simpleaudio</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">simpleaudio</span>
+</pre></div>
+</div>
+<p>Run the quick check with ipython:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">simpleaudio.functionchecks</span> <span class="k">as</span> <span class="nn">fc</span>
+<span class="n">fc</span><span class="o">.</span><span class="n">LeftRightCheck</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>Check out <a class="reference external" href="https://simpleaudio.readthedocs.io/en/latest/tutorial.html">simpleaudio tutorials</a></p></li>
+<li><p>Study <a class="reference external" href="sound/sound_synth.py">sound_synth.py</a></p></li>
+<li><p>Write a script that loads the wav file <code class="docutils literal notranslate"><span class="pre">cymbal.wav</span></code> and plays it 10
+times, at a rhythm of one per seconds.</p>
+<p>Hint:</p>
+<ul>
+<li><p>use the following functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.io.wavfile</span>  <span class="c1"># for scipy.io.wavfile.read</span>
+<span class="kn">import</span> <span class="nn">simpleaudio</span>  <span class="c1"># to play sound</span>
+
+
+<span class="k">def</span> <span class="nf">load_sound_as_array</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+   <span class="p">[</span><span class="n">sample_rate</span><span class="p">,</span> <span class="n">audio_data</span><span class="p">]</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">wavfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+   <span class="k">return</span> <span class="p">[</span><span class="n">sample_rate</span><span class="p">,</span> <span class="n">audio_data</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">play_mono</span><span class="p">(</span><span class="n">nparray</span><span class="p">,</span> <span class="n">sample_rate</span><span class="o">=</span><span class="mi">22050</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">audio</span> <span class="o">=</span> <span class="n">nparray</span><span class="p">[:]</span>
+    <span class="k">if</span> <span class="n">normalize</span><span class="p">:</span>  <span class="c1"># normalize to 16-bit range</span>
+       <span class="n">audio</span> <span class="o">*=</span> <span class="mi">32767</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">audio</span><span class="p">))</span>
+    <span class="c1"># convert to 16-bit data</span>
+    <span class="n">audio</span> <span class="o">=</span> <span class="n">audio</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">)</span>
+    <span class="n">play_obj</span> <span class="o">=</span> <span class="n">simpleaudio</span><span class="o">.</span><span class="n">play_buffer</span><span class="p">(</span><span class="n">audio</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">sample_rate</span><span class="p">)</span>
+    <span class="c1"># wait for playback to finish before exiting</span>
+    <span class="n">play_obj</span><span class="o">.</span><span class="n">wait_done</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="sound-localisation-from-binaural-dephasing">
+<h2>Sound localisation from binaural dephasing<a class="headerlink" href="#sound-localisation-from-binaural-dephasing" title="Permalink to this headline">¶</a></h2>
+<p>Take a mono sound and create a stereo sound by progressively dephasing
+the two channels.</p>
+<p>Hints: load the sound file into a one dimensional numpy array, make
+a copy of the array and shift it, assemble the two arrays in a
+bidimensional array (matrix) and save it as a stereo file</p>
+</div>
+<div class="section" id="pulsation-povel-essen-1985">
+<h2>Pulsation (Povel &amp; Essen, 1985)<a class="headerlink" href="#pulsation-povel-essen-1985" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Create rhythmic stimuli such as the ones described in <a href="#id1"><span class="problematic" id="id2">`</span></a>Povel and Essen (1985) Perception of Temporal</dt><dd><p>Patterns &lt;<a class="reference external" href="http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf">http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf</a>&gt;`__</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="experiments">
+<h1>Experiments<a class="headerlink" href="#experiments" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="simple-reaction-times">
+<h2>Simple reaction times<a class="headerlink" href="#simple-reaction-times" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Write a script that presents a series of trials in which a dot or a
+cross is presented at the center of the screen and the participant
+must click on the mouse as quickly as possible. The reaction times
+must be recorded in a file for further analyses.</p></li>
+<li><p>Here is a <a class="reference external" href="reaction-times/simple-detection-visual-pygame.py">solution using pygame</a>. Run it
+and check <code class="docutils literal notranslate"><span class="pre">reaction_times.csv</span></code>.</p></li>
+<li><p>Here is a <a class="reference external" href="reaction-times/simple-detection-visual-expyriment.py">solution using expyriment</a>.</p></li>
+</ol>
+<p>Run the previous script. Check the results file in the folder <code class="docutils literal notranslate"><span class="pre">data</span></code>.
+Launch ipython in the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder and type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+d = pd.read_csv(‘simple-detection.xpd’,comment=‘#’)
+d.RT.mean()
+d.RT.std()
+d.RT[1:].mean()
+
+import matplotlib.pyplot as plt plt.hist(d.RT)
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Read <a class="reference external" href="https://docs.expyriment.org/Tutorial.html">https://docs.expyriment.org/Tutorial.html</a> to understand the
+basic principles of expyriment. See `PCBS/expyriment_template.py``</p></li>
+<li><p>Modify <code class="docutils literal notranslate"><span class="pre">simple-detection-visual-expyriment.py</span></code> to play a short
+sound (<code class="docutils literal notranslate"><span class="pre">click.wav</span></code>) in lieu of displaying a cross. Thus you have
+created a simple detection audio experiment.</p></li>
+<li><p>Modify the script to have 3 blocks of trials: one in which the target
+is visual, one in which it is audio, and one in which it is randomly
+visual or auditory. Are we slowed down in the latter condition?</p></li>
+</ol>
+</div>
+<div class="section" id="posners-attentional-cueing-task">
+<h2>Posner’s attentional cueing task<a class="headerlink" href="#posners-attentional-cueing-task" title="Permalink to this headline">¶</a></h2>
+<p>Program the  <a class="reference external" href="https://en.wikipedia.org/wiki/Posner_cueing_task">Posner’s attentional cueing task</a></p>
+<p>See solution
+in <a class="reference external" href="Posner-attention/posner_task.py">Posner-attention/posner_task.py</a></p>
+</div>
+<div class="section" id="stroop-effect">
+<h2>Stroop Effect<a class="headerlink" href="#stroop-effect" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Stroop_effect">Stroop Effect</a>
+demonstrates the automaticity of reading. Write a python script to
+create 4x8 cards for the task, avoiding repetitions of colors.</p>
+<div class="figure align-default" id="id10">
+<img alt="Stroop card" src="_images/stroop.png" />
+<p class="caption"><span class="caption-text">Stroop card</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can read a tutorial on <a class="reference external" href="https://nerdparadise.com/programming/pygame/part5">how to display text with
+pygame</a></p>
+<ul class="simple">
+<li><p>After trying to program it yourself, you can compare with <a class="reference external" href="Stroop-effect/create_stroop_cards.py">my
+solution</a></p></li>
+<li><p>Run <a class="reference external" href="Stroop-effect/stroop_task.py">stroop_task.py</a> and check the
+naming times in <code class="docutils literal notranslate"><span class="pre">data</span></code>. Compute the average reading times as a
+function of the language (you can use R or Python).</p></li>
+</ul>
+</div>
+<div class="section" id="lexical-decision-task">
+<h2>Lexical Decision Task<a class="headerlink" href="#lexical-decision-task" title="Permalink to this headline">¶</a></h2>
+<p>In a lexical decision experiment, a string of characters is flashed at
+the center of the screen and the participant has to decide if it is real
+word or not, indicating his/her decision by pressing a left or right
+button. Reaction time is measured from the word onset, providing an
+estimate of the speed of word recognition.</p>
+<ul class="simple">
+<li><p>Visit the web site <a class="reference external" href="http://www.lexique.org">http://www.lexique.org</a></p></li>
+<li><p>To learn to use lexique with R, follow the document
+<a class="reference external" href="http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html">http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html</a></p></li>
+<li><p>Using [lexical-decision/select-words-from-lexique.py] as an example,
+select 20 high frequency nouns, 20 low frequency nouns, 20 high
+frequency verbs and 20 low frequency verbs, from Lexique382.txt —
+from <a class="reference external" href="http://www.lexique.org/public/Lexique382.zip">http://www.lexique.org/public/Lexique382.zip</a>. They must all have
+a length of 5 to 8 characters.</p></li>
+<li><p>Generate 50 pseudowords using either <a class="reference external" href="http://www.lexique.org/toolbox/toolbox.pub/">Lexique
+tools</a> or
+<a class="reference external" href="http://crr.ugent.be/programs-data/wuggy">Wuggy</a></p></li>
+<li><p>Program a lexical decision using expyriment.</p></li>
+<li><p>Run it and compute the average decision times using pandas</p></li>
+</ul>
+</div>
+<div class="section" id="a-general-audio-visual-stimulus-presentation-script">
+<h2>A general audio visual stimulus presentation script<a class="headerlink" href="#a-general-audio-visual-stimulus-presentation-script" title="Permalink to this headline">¶</a></h2>
+<p>In some experiments, we know in avdvance the precise timing of all
+stimuli (the program flow does not depends on external events). I wrote
+a script that reads the timing of audiovisual stimuli and present them
+at the expected times — Its code is available at
+<a class="reference external" href="https://www.github.com/chrplr/audiovis">https://www.github.com/chrplr/audiovis</a></p>
+</div>
+<div class="section" id="more-examples-using-expyriment-org">
+<h2>More examples using expyriment.org<a class="headerlink" href="#more-examples-using-expyriment-org" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>See <a class="reference external" href="http://docs.expyriment.org/old/0.9.0/Examples.html">http://docs.expyriment.org/old/0.9.0/Examples.html</a></p></li>
+<li><p>Fork <a class="reference external" href="https://github.com/expyriment/expyriment-stash">https://github.com/expyriment/expyriment-stash</a> and contribute by
+adding new scripts!</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="data-analyses">
+<h1>Data Analyses<a class="headerlink" href="#data-analyses" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-data-analysis-with-r">
+<h2>Basic Data Analysis with R<a class="headerlink" href="#basic-data-analysis-with-r" title="Permalink to this headline">¶</a></h2>
+<p>See
+<a class="reference external" href="http://www.pallier.org/examples-of-basic-data-analyses-with-r.html#examples-of-basic-data-analyses-with-r">http://www.pallier.org/examples-of-basic-data-analyses-with-r.html#examples-of-basic-data-analyses-with-r</a></p>
+</div>
+<div class="section" id="comparing-means-using-easy-anova-analysis-of-variance">
+<h2>Comparing means using Easy ANOVA (Analysis of Variance)<a class="headerlink" href="#comparing-means-using-easy-anova-analysis-of-variance" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="http://www.pallier.org/easy-anova-with-r.html#easy-anova-with-r">http://www.pallier.org/easy-anova-with-r.html#easy-anova-with-r</a></p>
+</div>
+<div class="section" id="permutation-tests">
+<h2>Permutation tests<a class="headerlink" href="#permutation-tests" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Read about the principle of <a class="reference external" href="https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests">permutation tests</a></p></li>
+<li><p>Implement a python script that uses a permutation test to compare two
+samples.</p></li>
+<li><p>Check out my solution:
+<a class="reference external" href="permutation_test/permutation_test.py">permutation_test/permutation_test.py</a></p></li>
+</ul>
+</div>
+<div class="section" id="bootstrap">
+<h2>Bootstrap<a class="headerlink" href="#bootstrap" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Implement the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)">bootstrap</a>
+to obtain confidence intervals on the means of a sample.</p></li>
+</ul>
+</div>
+<div class="section" id="frequency-analysis">
+<h2>Frequency Analysis<a class="headerlink" href="#frequency-analysis" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>See
+<a class="reference external" href="data/analysis/short-intro-fourier">data-analysis/short-intro-fourier</a>
+and the associated jupyter notebook <a class="reference external" href="data-analysis/short%20intro%20to%20frequency%20analysis%20(Fourier%20series).ipynb">data-analysis/short intro to
+frequency analysis (Fourier
+series).ipynb</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="lexical-statistics">
+<h1>Lexical Statistics<a class="headerlink" href="#lexical-statistics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="zipf-law">
+<h2>Zipf law<a class="headerlink" href="#zipf-law" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>The script (word-count.py])[Zipf/word-count.py] computes the
+distribution of frequencies of occurences in a list of words. Use it
+to compute the distribution of word frequencies in <a class="reference external" href="http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt">Alice in
+Wonderland</a>.</p>
+<p>Note: To remove the punctuation, you can use the following function:</p>
+<p>import string def remove_punctuation(text): punct =
+string.punctuation + chr(10) return
+text.translate(str.maketrans(punct, ” ” * len(punct)))</p>
+</li>
+<li><p>Zipf law states that the product rank X frequency is roughly
+constant. This ‘law’ was discovered by Estoup and popularized by
+Zipf. See <a class="reference external" href="http://en.wikipedia.org/wiki/Zipf%27s_law">http://en.wikipedia.org/wiki/Zipf%27s_law</a>. Create the Zipf
+plot for the text of <a class="reference external" href="Zipf/alice.txt">Alice in Wonderland</a>
+showing, on the y axis, the log of the frequency and on the x axis
+the word rank (sorting words from the most frequent to the least
+frequent).</p></li>
+<li><p>Display the relationship between word length and word frequencies
+from the data in
+<a class="reference external" href="lexical-decision/lexique382-reduced.txt">lexical-decision/lexique382-reduced.txt</a></p></li>
+<li><p>Generate random text (each letter from a-z being equiprobable, and
+the spacecharacter being 8 times more probable) of 1 million
+characters. Compute the frequencies of each ‘pseudowords’ and plot
+the rank/frequency diagram.</p></li>
+<li><p>To know more about lexical frequencies:</p>
+<ul class="simple">
+<li><p>Read Harald Baayen (2001) <em>Word Frequency Distributions</em> Kluwer
+Academic Publishers.</p></li>
+<li><p>Read Michel, Jean-Baptiste, Yuan Kui Shen, Aviva P. Aiden, Adrian
+Veres, Matthew K. Gray, The Google Books Team, Joseph P. Pickett,
+et al. 2010. “Quantitative Analysis of Culture Using Millions of
+Digitized Books.” Science, December.
+<a class="reference external" href="https://doi.org/10.1126/science.1199644">https://doi.org/10.1126/science.1199644</a>. (use scholar.google.com
+to find a pdf copy). Check out <strong>google ngrams</strong> at
+<a class="reference external" href="https://books.google.com/ngrams">https://books.google.com/ngrams</a>. (Note that at the bottom of the
+page, there is a message “Raw data is available for download
+here”).</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="benfords-law">
+<h2>Benford’s law.<a class="headerlink" href="#benfords-law" title="Permalink to this headline">¶</a></h2>
+<p>Learn about <a class="reference external" href="https://brilliant.org/wiki/benfords-law/">Benford’s
+law</a>. Write a Python script
+that displays the distribution of the most significant digit in a set of
+numbers. Apply it to the variables in
+<a class="reference external" href="Benford-law/countries.xlsx">Benford-law/countries.xlsx</a>.</p>
+<p>A solution: <a class="reference external" href="Benford-law/Benford.py">Benford-law/Benford.py</a></p>
+</div>
+</div>
+<div class="section" id="simulations">
+<h1>Simulations<a class="headerlink" href="#simulations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="monte-carlo-estimation">
+<h2>Monte Carlo Estimation<a class="headerlink" href="#monte-carlo-estimation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Read about <a class="reference external" href="https://academo.org/demos/estimating-pi-monte-carlo/">Monte Carlo estimation of
+PI</a></p></li>
+<li><p>Write a script that estimate pi using this method (then check my
+solution:
+<a class="reference external" href="simulations/estimate_PI_by_MonteCarlo.py">simulations/estimate_PI_by_MonteCarlo.py</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="fractals">
+<h2>Fractals<a class="headerlink" href="#fractals" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Fractal">Fractals</a> are figures that
+are self-similar at several scales.</p>
+<ul>
+<li><p>Write a script that displays the <a class="reference external" href="https://en.wikipedia.org/wiki/Koch_snowflake">Koch
+snowflake</a></p>
+<p>Hints:</p>
+<ul class="simple">
+<li><p>use the turtle module</p></li>
+<li><p>use recursion</p></li>
+</ul>
+<p>My solution: <a class="reference external" href="games/koch.py">games/koch.py</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="cellular-automata">
+<h2>Cellular Automata<a class="headerlink" href="#cellular-automata" title="Permalink to this headline">¶</a></h2>
+<p>Learn about Conway’s <a class="reference external" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Game of
+Life</a>. Watch
+<a class="reference external" href="https://www.youtube.com/watch?v=S-W0NX97DB0">this</a> and
+<a class="reference external" href="https://www.youtube.com/watch?v=C2vgICfQawE">that</a> videos.</p>
+<ul class="simple">
+<li><p>Implement an <a class="reference external" href="https://en.wikipedia.org/wiki/Elementary_cellular_automaton">Elementary cellular
+automaton</a>.
+The aim is to reproduce the graphics shown at the bottom on the
+previous page. you can take inspiration from the excellent <a class="reference external" href="http://greenteapress.com/wp/think-complexity-2e/">Think
+Complexity</a> by
+Allen B. Downey. My solution is at
+<a class="reference external" href="cellular-automata/1d-ca.py">cellular-automata/1d-ca.py</a>.</p></li>
+<li><p>Implement the Game of Life in 2D.</p></li>
+<li><p>Going futher: If you enjoy Cellular Automata, you can read Stephen
+Wolfram’s <a class="reference external" href="https://en.wikipedia.org/wiki/A_New_Kind_of_Science">A New Kind of
+Science</a>. A
+more general book about Complexity is Melanie Mitchell’s <em>Complexity:
+a guided tour</em>.</p></li>
+</ul>
+</div>
+<div class="section" id="artificial-neural-networks">
+<h2>Artificial Neural networks<a class="headerlink" href="#artificial-neural-networks" title="Permalink to this headline">¶</a></h2>
+<p>To understand the basics of artificial neural networks, I recommend that
+you first read <a class="reference external" href="https://victorzhou.com/blog/intro-to-neural-networks/">https://victorzhou.com/blog/intro-to-neural-networks/</a> and
+then watch the four excellent videos at
+<a class="reference external" href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi</a>
+. The last two of them focus on the backpropagation algorithm that allow
+to train network to learn mapping.</p>
+<p>Next, you can read and try to understand this
+<a class="reference external" href="https://visualstudiomagazine.com/articles/2017/06/01/back-propagation.aspx">implementation</a>
+of the backpropagation algorithm.</p>
+<p>Then, see a modern and efficient implementation of neural networks:
+<a class="reference external" href="https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html">https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html</a></p>
+<p>More readings:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural
+Networks</a>
+on Andrej Karpathy’s blog.</p></li>
+<li><p><a class="reference external" href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">understanding LSTM
+Networks</a></p></li>
+<li><p><a class="reference external" href="https://www.springer.com/fr/book/9780387310732">Pattern recognition and machine
+learning</a> by
+Christopher M. Bishop</p></li>
+</ul>
+</div>
+<div class="section" id="natural-language-parsing">
+<h2>Natural Language Parsing<a class="headerlink" href="#natural-language-parsing" title="Permalink to this headline">¶</a></h2>
+<p>Parsing refers to building the syntactic structure of a sentence from
+the linear sequence of words that compose it. Explore the <a class="reference external" href="http://www.nltk.org/book/ch08.html">various
+parsing algorithms</a>using the
+<a class="reference external" href="https://www.nltk.org/">Natural Language Toolkit</a>.</p>
+</div>
+<div class="section" id="neuroimaging">
+<h2>Neuroimaging<a class="headerlink" href="#neuroimaging" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Check out <a class="reference external" href="http://nilearn.github.io/">nilearn</a> and
+<a class="reference external" href="https://nistats.github.io/">nistats</a> and
+<a class="reference external" href="https://martinos.org/mne/stable/index.html">MNE-python</a></p></li>
+<li><p>See <a class="reference external" href="data-analysis/Example%20of%20a%20single%20subject-single%20run%20fMRI%20analysis%20with%20nistats.ipynb">data-analysis/Example of a single subject-single run fMRI
+analysis with
+nistats.ipynb</a></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Programming for Cognitive and Brain Sciences</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="first-things-first.html">First things first</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running-python.html">Running Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-solve-problems.html">How to solve problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips-to-write-clean-code.html">Writing clean code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools-for-reproducible-science.html">Tools to do Reproducible Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Automata-Turing-Machines-and-Computers.html">Automata and Computers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating static visual stimuli</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#kanizsa-illusory-contours">Kanizsa illusory contours</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#herman-grid">Herman grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ebbinghaus-titchener">Ebbinghaus-Titchener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#honeycomb-and-extinction-illusions">Honeycomb and Extinction illusions.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#random-dot-stereograms">Random-dot stereograms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wertheimer-line-motion-illusion">Wertheimer line-motion illusion.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flash-lag-illusion">Flash-lag illusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dynamic-version-of-the-ebbinghaus-titchener">Dynamic version of the Ebbinghaus-Titchener</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#creating-and-playing-sounds">Creating and playing sounds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sound-localisation-from-binaural-dephasing">Sound localisation from binaural dephasing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pulsation-povel-essen-1985">Pulsation (Povel &amp; Essen, 1985)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#experiments">Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#simple-reaction-times">Simple reaction times</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#posners-attentional-cueing-task">Posner’s attentional cueing task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stroop-effect">Stroop Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lexical-decision-task">Lexical Decision Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-general-audio-visual-stimulus-presentation-script">A general audio visual stimulus presentation script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#more-examples-using-expyriment-org">More examples using expyriment.org</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#data-analyses">Data Analyses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-data-analysis-with-r">Basic Data Analysis with R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparing-means-using-easy-anova-analysis-of-variance">Comparing means using Easy ANOVA (Analysis of Variance)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#permutation-tests">Permutation tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bootstrap">Bootstrap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#frequency-analysis">Frequency Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#lexical-statistics">Lexical Statistics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#zipf-law">Zipf law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#benfords-law">Benford’s law.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#simulations">Simulations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#monte-carlo-estimation">Monte Carlo Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fractals">Fractals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cellular-automata">Cellular Automata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#artificial-neural-networks">Artificial Neural networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#natural-language-parsing">Natural Language Parsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#neuroimaging">Neuroimaging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">External Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coding-exercices.html">Programming Exercices</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Automata-Turing-Machines-and-Computers.html" title="previous chapter">Automata and Computers</a></li>
+      <li>Next: <a href="resources.html" title="next chapter">External Resources</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Christophe Pallier.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/main.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

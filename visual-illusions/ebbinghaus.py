@@ -36,14 +36,15 @@ def Ebbinghaus(surface, n, d, r1, r2, col1, col2, x, y):
 
         """
 
+        border_size = 2
         # draw inner circle
-        pygame.draw.circle(surface, col1, (x, y), r1, 0)
+        pygame.draw.circle(surface, col1, (x, y), r1, border_size)
         # draw peripheral circles
         for i in range(n):
                 angle = (2 * 3.1415 * i) / n
                 x1 = x + int(d * np.cos(angle))
                 y1 = y + int(d * np.sin(angle))
-                pygame.draw.circle(surface, col2, (x1, y1), r2, 0)
+                pygame.draw.circle(surface, col2, (x1, y1), r2, border_size)
 
 
 def main():

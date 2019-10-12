@@ -1,0 +1,145 @@
+
+
+
+
+Know how to open a Terminal
+---------------------------
+
+-  **Linux**: Launch ``Terminal`` from your application menu or use
+   \`Ctrl-Alt-T*\* (gnome, xfce), or Win+Enter (i3)).
+
+-  **MacOS**: Type ``terminal`` in the Spotlight search field.
+   Alternatively, you can open a ``Finder`` window and select the
+   ``Application`` folder, then the ``Utilities`` folder, then
+   double-click on the ``Terminal`` icon..
+
+-  **Windows**: Start ``Git Bash`` (This assumes that you have installed
+   ``Git for windows`` as described in `Instructions for software
+   installation <#instructions-for-software-installation>`__)
+
+1. Click the Windows or Start icon.
+2. In the Programs list, open the Git folder.
+3. Click the option for Git Bash.
+
+Inside a terminal, you interact with a program that expects you to type
+commands. This program is called a *shell*. You need to know the
+following commands in order to navigate the filesystem.
+
+-  *ls*: list the content of the current working directory
+-  *pwd*: path of current working directory
+-  *cd*: change directory
+
+This will be sufficient for this lecture, but if you want to learn more
+about how to use the Terminal/Shell, check out the section `Resources to
+learn the command shell <#resources-to-learn-the-command-shell>`__.
+
+Downloading the course materials
+--------------------------------
+
+Once you have installed Git on your computer, you can download the
+course materials: Open a terminal and type:
+
+::
+
+       git clone https://github.com/chrplr/PCBS.git
+
+This should download the course materials in a folder named ‘PCBS’
+(Remark: if a folder with that name already exists, git will stop and
+not download the content of the website. In that case, delete or move
+the existing PCBS folder before running the ``git clone`` command above)
+
+I do often update the materials. To synchronize your local copy with the
+latest version, you just need to open a terminal and type:
+
+::
+
+      cd PCBS
+      git pull
+
+Remark: do not manually modify or create new files in the PCBS folder.
+If you do so, git will notice it and might prevent an automatic upgrade
+and ask us to ‘resolve conflicts’. If you get such a message, the
+simplest course of action for beginner, is to delete the PCBS folder (or
+move it if you wnat to keep a copy of your modifications) and reuse the
+git clone command above to reload the full folder.
+
+Basic programming concepts
+--------------------------
+
+If you are a complete beginner, to get acquainted with some basic
+programming concepts (instructions, variables, tests (if…then…else) and
+loops (while and for)), I recommend that you learn to play with Scratch
+`Starting-from-scratch <01_Starting-from-Scratch/Starting-from-Scratch.md>`__
+
+Basic skills
+------------
+
+Beyond knowing how to open a terminal (see above), there are few skills
+that you need to acquire:
+
+how to download a Python script from the Internet and execute it from a command line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Try the following:
+
+1. Download the script, e.g. `games/matches.py <games/matches.py>`__.
+   Make sure you know in which directory the file has been saved.
+2. Open a terminal and use the ``cd``, ``pwd`` , and ``ls`` commands to
+   navigate to the directory containing the file that you have just
+   downloaded; Then, type:
+
+::
+
+         python matches.py
+
+how to start `ipython <http://ipython.org>`__
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Try it:
+
+-  Open a Terminal, type ``ipython`` and press “Return”,
+-  After the prompt ``In [1]:``, type ``2**64`` and ‘Return’
+-  Then, type the following lines in the ipython shell:
+
+::
+
+        import matplotlib.pyplot as plt
+        import numpy as np
+        t = np.linspace(0, 30, num=3001)
+        plt.plot(t, np.sin(t))
+
+If a Window open with a graphical representation of the sine function,
+Congratulations! (you can press ‘q’ in the Window to close it)
+
+-  Type ``quit()`` to quit ipython, then ``exit`` to quit the shell and
+   close the terminal.
+
+create and/or modify scripts with a text editor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can use a text editor like
+`micro <https://micro-editor.github.io/>`__, `Sublime
+Text <https://www.sublimetext.com/>`__ or `Atom <http://atom.io>`__, or
+an Integrated Development Environment like Spyder or PyCharm.
+
+To work you will basically need two windows side by side: one with a
+text editor displaying the code, and one with ipython to test it (add
+maybe a browser when you need to google for help about Python).
+
+See `running python <running-python.md>`__
+
+Use Git to keep your project clean
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`Git <https://www.gitbook.com/>`__ is a software that allow you to keep
+track of the modifications of your files, to test alternatives, to share
+the work.
+
+Git is a quite complex tool, but for this lecture, you will only need to
+know very few commands (`git clone, git pull, git init, git add, git
+status, git commit and git push``)
+
+Check out `Resources to learn Git in the
+Appendix <#resources-to-learn-git>`__
+
+--------------
