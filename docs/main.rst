@@ -239,8 +239,7 @@ bidimensional array (matrix) and save it as a stereo file
 Pulsation (Povel & Essen, 1985)
 -------------------------------
 
-Create rhythmic stimuli such as the ones described in `Povel and Essen (1985) Perception of Temporal
-   Patterns <http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf>`__
+Create rhythmic stimuli such as the ones described in `Povel and Essen (1985) Perception of Temporal Patterns <http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf>`__
 
 
 Experiments

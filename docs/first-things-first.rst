@@ -4,13 +4,7 @@
 First things first
 ==================
 
-
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
+.. contents::
 
 
 Course description
@@ -44,6 +38,7 @@ Learning outcomes
 On successful completion of this course, students should be able to write
 readable, well- documented, Python programs, and use system such as git that
 promote reproducible science.
+
                     
 Pedagogy, class organization and homework
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,14 +51,15 @@ next lecture.
 Assessment
 ~~~~~~~~~~
 
-The project will be graded on a 20 points scale. The main criterion is *clarity*
-(see projects_).
-                    
+The projects will be graded on a 20 points scale. The main criterion is *clarity*
+(see :ref:`projects` for more details).
+
+
+
 Textbook and readings
 ~~~~~~~~~~~~~~~~~~~~~
 
-All the materials, and links to relevant documents, are available on the
-course’s web site (http://github.com/chrplr/PCBS).
+All the materials are available on the course’s web site at http://github.com/chrplr/PCBS.
                     
 
 Course policies
