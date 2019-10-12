@@ -396,7 +396,8 @@ You prefer meld, you can use
 
    git difftool -t meld
 
-Compare the working version of a file with the one in the last commit
+Compare the working version of a f
+ile with the one in the last commit
 ---------------------------------------------------------------------
 
 ::

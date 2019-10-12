@@ -9,8 +9,8 @@ Programming for Cognitive and Brain Sciences
 Author:
   `Christophe Pallier <http://www.pallier.org>`__
 
-Main web page:
-  https://chrplr.github.io/PCBS
+Main document web page:
+  https://pcbs.readthedocs.io/en/latest/
 
 Git repository on github
   https://github.com/chrplr/PCBS
@@ -40,6 +40,7 @@ Bring your own laptop
    Automata-Turing-Machines-and-Computers
    main
    resources
+   projects
    coding-exercices
 
 

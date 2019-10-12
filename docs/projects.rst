@@ -1,43 +1,56 @@
--  The aim is to improve your programming skills, and make well-written
-   and documented project, rather that a super-duper program to impress
-   me. Do not be over ambitious: I prefer short program(s) that do
-   things that are not too complicated and which are easy to understand.
-
--  You can use whichever language is suited to your project (Python, R,
-   Matlab, Javascript, …). The only rule is that the code must be
-   readable.
-
--  Work in binomes: it is important to have someone else check that the
-   documentation and code that you write is readable.
-
--  You must put your project on github, in a depository which name
-   starts with ``PCBS-`` followed by a label that gives an idea of what
-   the project is about.
-
--  An example of the kind of thing I am expecting from you is available
-   at http://chrplr.github.com/PCBS-LexicalDecision
-
--  Send me a link to your github project as soon as possible: I want to
-   be able to check your progress. Ideally, I should be able to clone
-   your repository and execute your code without modifying anything.
-   That means, for example, that you should avoid absolute pathnames.
-
--  The entry point to your report must be the ``README.md`` file from
-   the master branch. I will only read the documents on your github
-   repository linked from this file. (It is fine if README.md points to
-   reports in html generated fro example by Rmarkdown for example). No
-   pdfs, no Word documents! I will simply not read them. I recommend
-   that you use the ‘Pages’ system of github (see
-   https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages).
-
--  The deadline is Jan 25, 16h (the end of the last class). I will be
-   available at the ENS the 11th of Jan and 25th (I am abroad on the
-   18th). DO NOT WAIT UNTIL THE LAST MOMENT to ask for help: Use
-   slack/#général (no direct messages to me please: there are 40 of
-   you).
+.. _projects:
 
 Projects
 ========
+
+The aim is that you spend a few dozens hours programming a project
+related to cognitive or neurocognitive sciences (experimental tasks,
+simulations of models, data analyses,...), in order for you to learn new
+things and improve your coding skills.
+
+-  All documents (scripts, documentation, data files when not too large)
+   related to the project should be on a github.com repository with a  name
+   starts with ``PCBS-`` followed by a label that gives an idea of what
+   the project is about.
+
+- I should be able, from the explanations in README.md, to access all the
+   relevant files, understand what the project is about, how to run it, etc.
+   (It is fine if README.md points to
+   reports in html generated for example by Rmarkdown for example). No
+   pdfs, no Word documents! I will simply *not read* them. I recommend
+   that you use the ‘Pages’ system of github (see
+   https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages).
+
+
+- Send me a link to your github project as soon as possible: I want to be able
+   to check your progress. Ideally, I should be able to clone your repository
+   and execute your code without modifying anything. That means, for example,
+   that you should absolutely avoid absolute pathnames: your code must be
+   portable.
+
+- Readability of the code and adherence to good practices are of utmost
+   importance: Do not be overambitious: I prefer a readable code that does a
+   simple thing rather than an unreadble code that does complicated things.
+
+-  Work in binomes to read, check and criticize each other code
+   regularily. it is important to have someone else check that the
+   documentation and code that you write is readable.
+
+-  use the slack to ask questions
+
+-  You can use whichever language is suited to your project (Python, R, Processing
+   Javascript, Julia, ...). There are only two rules:
+
+   1. the code must be readable by a non specialist of the language.
+   2. Matlab is forbidden (although this is implied by rule 1, some may not realize it)
+
+
+-  An example of the kind of things that I expect is provided at http://chrplr.github.com/PCBS-LexicalDecision
+
+
+
+Examples of Students' Projects from previous sessions
+=====================================================
 
 1.  Camille Williams
     https://camzcamz.github.io/PCBS-Political-Ideologies-and-Visual-Deviance-Sensitivity/
@@ -70,3 +83,96 @@ Projects
 23. Ondine Simonot https://github.com/OndineS/Projet_PCBS
 
 24. Laurène Barbier https://github.com/laurenebarbier/PCBS-concordancier
+
+
+
+
+Some ideas
+----------
+
+-  How much time does it take for information to cross the two
+   hemispheres? Write a simple detection experiment where a visual
+   target can appear in the left or right hemifield and the response can
+   be given with the left or right hand. Can you detect a difference
+   between the reaction times when the hand and the target are on the
+   same side or not? (See Poffenberger, A. T. (1912). Reaction Time to
+   Retinal Stimulation. (R. S. Woodworth, Ed.). New York: The Science
+   Press and Marzi, Carlo A., P. Bisiacchi, and R. Nicoletti. 1991. “Is
+   Interhemispheric Transfer of Visuomotor Information Asymmetric?
+   Evidence from a Meta-Analysis.” Neuropsychologia 29 (12): 1163–1177.)
+
+-  The vertical midline splits the visual fields into two halves that
+   are represented in contralateral hemispheres. While space is
+   retinotopically encoded across most visual areas within each
+   hemisphere, the vertical division between hemifields necessarily
+   disrupts this topological organization. What are the functional
+   consequences of the vertical split. P. Mamassian investigated how
+   crossing the vertical midline impairs motion sensitivity (Mamassian,
+   P. (2010). Locating the functional vertical midline with a motion
+   probe [Abstract]. Journal of Vision, 10(7):1379, 1379a,
+   http://www.journalofvision.org/content/10/7/1379,
+   doi:10.1167/10.7.1379.). Implement his experiment in Python.
+
+-  What happens when a visual object that is physically present but that
+   disappears temporarily from consciousness really disappears? Create a
+   motion-induced blindness display, have the subject press and hold a
+   button when one of the targets disappears from consciousness, and
+   then, after a few seconds, have it really disappear from the screen.
+   What do you see? Does the target disappear ‘quietly’, or does
+   something else happen? What does this tell you about visual
+   consciousness? See Mitroff & Scholl (2005), Forming and updating
+   object representations without awareness: evidence from
+   motion-induced blindness. (project suggested by Mark Wexler)
+
+-  When asked to generate random sequences of digits, people usually
+   perform poorly (i.e., non-random; Wagenaar, 1972). A paradigm to
+   measure deviations from randomness is the Random Number Generation
+   (RNG; e.g., Ginsburg & Karpiuk, 1994) task. In this task,
+   participants are asked to produce sequences of digits (e.g., 1–10) in
+   a random fashion. Program the task (It is not trivial as you must use
+   automatic speech recognition to recognize the digits), and
+   investigate the various vatiables that have been proposed to account
+   for subjects’ behavior. See Peters et al. (2007). The random number
+   generation task: Psychometric properties and normative data of an
+   executive function task in a mixed sample. *Journal of the
+   International Neuropsychological Society* (Project suggested by
+   Jerome Sackur)
+
+-  Artificial Neural networks. You can program a simulation from scratch
+   of one of those simple neural networks:
+
+   -  Hopfield network
+   -  Kohonen network
+   -  a simple auto-encoder with one middle layer
+
+-  Create a pseudoword generator, that is a program that generates
+   strings of characters that look like possible words but do not exist
+   in the lexicon of a given language. There are many strategies to
+   generate pseudowords (e.g., random, following a probabilistic model,
+   using neural networks…). You can implement one or several of them.
+   The language can be French or English, or your generator could work
+   with any language for which you have a corpus.
+
+-  Build an automatic classifier that tries to identify the language
+   (e.g. English vs French) of a text from letter statistics; Test it on
+   words, sentences, full documents. You must use cross validation (the
+   test and training sets must be different). Plot the identifciation
+   performance as a function of the lenght of the text (in characters).
+
+-  `Mix and
+   Match <http://www.mrc-cbu.cam.ac.uk/people/maarten-van-casteren/mixandmatch/>`__
+   are tools to support experimental research. Mix will allow
+   experimental stimuli to be pseudo-randomised, according to
+   constraints supplied by the user in a simple script. Match can match
+   the conditions of factorial experiments. Write similar tools in
+   Python.
+
+-  Do you know the *Countdown game* (“Le compte est bon” en français)?
+   An interesting question is how do humans solve it. About this, read
+   Daniel Defays (2015) Numbo: A study in cognition and recognition. In
+   Douglas Hofstadter (editor), *Fluid concepts and creative analogies:
+   computer models of the fundamental mechanisms of thought*). Implement
+   one or several algorithms to solve this type of puzzles (after trying
+   to invent your own algorithm(s), you can learn about the ones
+   proposed by Jean-Marc Alliot (2015). “The (Final) Countdown.”
+   ArXiv:1502.05450 [Cs], February. http://arxiv.org/abs/1502.05450.)

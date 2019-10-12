@@ -26,8 +26,8 @@ Students in Cognitive-(Neuro)-science need to learn programming:
    Computational Theory of Mind in Cognitive Science.
 2. to automate the boring stuff (e.g. repetitive work on files, web
    scrapping,)
-3. to do reproducible science: designing experiments, running them,
-   analysing them.
+3. to do reproducible science: simulating models, designing experiments, running
+   them, analysing data, ...
 
 
 The purpose of the PCBS course is to make students able to write clean code in
@@ -36,8 +36,8 @@ neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...). The first half (6 weeks) of the
 course consists of lectures with hands-on exercises, then, during the last 6
 weeks, students have to realize a project publicly available on github
-(see examples at https://chrplr.github.io/PCBS/projects.html)
-                    
+(see examples in projects_)
+
 
 Learning outcomes
 ~~~~~~~~~~~~~~~~~
@@ -58,13 +58,13 @@ Assessment
 ~~~~~~~~~~
 
 The project will be graded on a 20 points scale. The main criterion is *clarity*
-(see https://chrplr.github.io/PCBS/projects.html).
+(see projects_).
                     
 Textbook and readings
 ~~~~~~~~~~~~~~~~~~~~~
 
 All the materials, and links to relevant documents, are available on the
-course’s web site (http://chrplr.github.io/PCBS).
+course’s web site (http://github.com/chrplr/PCBS).
                     
 
 Course policies
