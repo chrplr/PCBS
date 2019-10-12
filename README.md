@@ -1,4 +1,4 @@
-# Programming for Cognitive and Brain Sciences #
+# Programming for Cognitive and Brain Sciences (PCBS) #
 
 Students in Cognitive-(Neuro)-science need to learn programming:
 
@@ -15,11 +15,13 @@ order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...). 
 
-Lecture portal:
+Access portal
+
   https://pcbs.readthedocs.io/en/latest/
 
 Slack discussion forum
-   http://cogmaster-pcbs.slack.com ([Join here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ). Use the ``#general`` channel to ask questions. Do not hesitate!
+
+   http://cogmaster-pcbs.slack.com (Join [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ)). Use the ``#general`` channel to ask questions. Do not hesitate!
 
 --
 [Christophe Pallier](http://www.pallier.org)

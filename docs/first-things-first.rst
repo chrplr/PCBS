@@ -35,8 +35,7 @@ order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...). The first half (6 weeks) of the
 course consists of lectures with hands-on exercises, then, during the last 6
-weeks, students have to realize a project publicly available on github
-(see examples in projects_)
+weeks, students have to realize a project publicly available on github.
 
 
 Learning outcomes
