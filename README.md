@@ -17,9 +17,11 @@ order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...). 
 
-Access portal: <https://pcbs.readthedocs.io/en/latest/>
+**Main documentation**:  [pdf](https://media.readthedocs.org/pdf/pcbs/latest/pcbs.pdf) or [on-line html](https://pcbs.readthedocs.io/en/latest/)
 
-Slack discussion forum: <http://cogmaster-pcbs.slack.com> (Join [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ)). Use the ``#general`` channel to ask questions. Do not hesitate!
+**Web site**: http://github.com/chrplr/PCBS
+
+**Slack discussion forum**: <http://cogmaster-pcbs.slack.com> (Join [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ)). Use the ``#general`` channel to ask questions. Do not hesitate!
 
 --
 [Christophe Pallier](http://www.pallier.org)
