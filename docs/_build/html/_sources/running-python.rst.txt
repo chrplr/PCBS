@@ -35,7 +35,7 @@ Linux
 
 2. If the script is not located in the current working directory (the user's home directory), use the `cd command <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`__ to navigate to the relevant directory
 
-3. Type ``python`` followed by the script's filename, then press ``return''.
+3. Type ``python`` followed by the script's filename, then press the ``return`` key.
 
 For example, let us suppose that you want to execute a script named ``matches.py`` located in a subdirectory ``PCBS/games`` of your home directory. Open a terminal and type::
 

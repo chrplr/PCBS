@@ -76,32 +76,9 @@ beginners.
 Prerequisites
 -------------
 
-It is expected that the students are acquainted with basic programming concepts
-such as instructions, variables, tests (if..then..else), loops (while and for)
-and functions. They should also be able to navigate in the file system, know how
-to open a terminal and execute a python script downloaded from the internet, and
-edit such scripts with a text editor. They should have already installed all the
-software listed in the Software installation section. 
-                    
-It is highly recommended to complete beginners to follow, before the lecture,
-one of the many online introductory course on Python, or to read an introductory
-book on Python, for example:
+Students are expected to know how to open a terminal and `navigate in the file system <http://linuxcommand.org/lc3_lts0020.php>`__ and to know how to view and edit text files with a text editor such as `Sublime Text <https://www.sublimetext.com>`__.
 
-- Books:
-
-  * `Automate the boring stuff with Python: Practical Programming for Total Beginners <https://automatetheboringstuff.com/>`__ (highly recommended!)
-  * `Apprendre à Programmer avec Python3 <https://inforef.be/swi/python.htm>`__
-  * `Think Python <http://greenteapress.com/thinkpython2/>`__
-
-- On-line courses:
-                    
-  * Udemy `Python programming for absolute beginners <https://www.udemy.com/python-programming-for-absolute-beginners/>`__
-  * Code Academy `Learn Python <https://www.codecademy.com/learn/learn-python>`__
-  * Openclassrooms `Apprendre à programmer en Python <https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python>`__
-  * Fun-Mooc `Python 3 : des fondamentaux aux concepts avancés du langage <https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/>`__
-                                        
-Check out https://chrplr.github.io/PCBS/ for more resources. 
-
+They should  acquainted with basic programming concepts: instructions, variables, tests (if..then..else), loops (while and for). Check out  starting-from-scratch_ or the pointers listed in resources_:  
 
 
 Software Installation

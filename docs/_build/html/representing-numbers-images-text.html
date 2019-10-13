@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Representations of numbers, text, images &#8212; Programming for Cognitive and Brain Sciences  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Programming Exercices" href="coding-exercices.html" />
+    <link rel="prev" title="Projects" href="projects.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="representations-of-numbers-text-images">
+<h1>Representations of numbers, text, images<a class="headerlink" href="#representations-of-numbers-text-images" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="representation-of-integers">
+<h2>Representation of integers<a class="headerlink" href="#representation-of-integers" title="Permalink to this headline">¶</a></h2>
+<p><em>There are 10 kinds of people: those who count in binary and the
+others.</em></p>
+<p>Computers represent everything as series of 0 and 1, also known as
+<em>bits</em> (for “binary digits”).</p>
+<p>Just like a number can be written in base 10, it can be written in base
+2 (or in any other base):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="o">=</span> <span class="mi">10</span>  <span class="o">+</span> <span class="mi">2</span> <span class="o">=</span> <span class="mf">1.</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mf">2.</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">0</span><span class="p">)</span>
+<span class="mi">12</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">2</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="o">^</span><span class="mi">1</span> <span class="o">=&gt;</span> <span class="mi">1010</span>
+
+<span class="mi">33</span> <span class="o">=</span> <span class="mi">30</span>  <span class="o">+</span> <span class="mi">3</span> <span class="o">=</span> <span class="mf">3.</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mf">3.</span><span class="p">(</span><span class="mi">10</span><span class="o">^</span><span class="mi">0</span><span class="p">)</span>
+<span class="mi">33</span> <span class="o">=</span> <span class="mi">32</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">^</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span><span class="o">^</span><span class="mi">0</span> <span class="o">=&gt;</span> <span class="mi">100001</span>
+</pre></div>
+</div>
+<p>The binary representions of the first integers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="p">:</span>   <span class="mi">1</span>
+<span class="mi">2</span> <span class="p">:</span>  <span class="mi">10</span>
+<span class="mi">3</span> <span class="p">:</span>  <span class="mi">11</span>
+<span class="mi">4</span> <span class="p">:</span> <span class="mi">100</span>
+<span class="mi">5</span> <span class="p">:</span> <span class="mi">101</span>
+<span class="mi">6</span> <span class="p">:</span> <span class="mi">110</span>
+<span class="mi">7</span> <span class="p">:</span> <span class="mi">111</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Remember that a number represented by four digits “d3 d2 d1 d0” in a
+basis ‘b’, has a value of d3<em>b^3 + d2</em>b^2 + d1<em>b^1 + d0</em>b^0</p>
+<ul class="simple">
+<li><p>In binary, there are only two possibilities for the digits: {0,1}</p></li>
+<li><p>In decimal, 10 possible characters</p></li>
+<li><p>In hexadecimal, 16 possible characters 0-9, A, B, C, D, E, F (D8F1 =
+14<em>16^3 + 8</em>10^2 + 15<em>16^1 + 1</em>16^0)</p></li>
+</ul>
+<p>To learn more about how integer numbers are represented in binary
+format, you can check out <a class="reference external" href="http://csunplugged.org/binary-numbers">http://csunplugged.org/binary-numbers</a></p>
+<ol class="arabic simple">
+<li><p>Convert (manually) into decimal the following binary numbers:</p></li>
+</ol>
+<ul class="simple">
+<li><p>101</p></li>
+<li><p>1000</p></li>
+<li><p>1011</p></li>
+<li><p>11111111</p></li>
+</ul>
+<p>…</p>
+<p><em>Answer:</em> 5, 8, 11, 255</p>
+<div class="section" id="from-binary-to-decimal">
+<h3>From binary to decimal<a class="headerlink" href="#from-binary-to-decimal" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple" start="2">
+<li><p>Let us write a function that, given the binary representation of a
+number as a string of ‘0’ and ‘1’, returns its value as a integer.</p></li>
+</ol>
+<ol class="arabic simple">
+<li><p>Let us first suppose that we want to convert a string containing
+exactly 8 binary digits (e.g. ‘01011010’) into decimal. How would you
+do that?</p></li>
+</ol>
+<p>…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">todec8bits</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="mi">128</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="mi">64</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">*</span><span class="mi">32</span> <span class="o">+</span> \
+           <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">*</span><span class="mi">16</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="o">*</span><span class="mi">8</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="o">*</span><span class="mi">4</span> <span class="o">+</span> \
+           <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+
+<span class="n">todec8bits</span><span class="p">(</span><span class="s2">&quot;01010101&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>One issue with this code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">todec8bits</span><span class="p">(</span><span class="s2">&quot;0101010&quot;</span><span class="p">)</span>
+<span class="n">todec8bits</span><span class="p">(</span><span class="s2">&quot;010101010&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Remark: on your computers, integers are represented either as 32 or 64
+bits, depending on your processor/operating system.</p>
+<p>Why is this is relevant: suppose you perform an EEG recording with 256
+electrodes every milliseconds for one hour. How large is the data?</p>
+<p>Beware: your computer can make mistakes if you add too large numbers!!!</p>
+<p>Another solution demonstrating several new Pythonic constructions that
+we have not seen yet:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pow2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span> <span class="o">**</span> <span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">pow2</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">p</span>
+<span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>…</p>
+<p>We could modify it to adapt to the size of the string ‘s’.</p>
+<p>My favorite which has the advantage of working with strings of unlimited
+size:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">todec</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; convert a string of 0 and 1 representing a binary number into an integer &quot;&quot;&quot;</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">n</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;101&#39;</span><span class="p">,</span> <span class="s1">&#39;1000&#39;</span><span class="p">,</span> <span class="s1">&#39;1011&#39;</span><span class="p">,</span> <span class="s1">&#39;11111111&#39;</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">todec</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="from-decimal-to-binary">
+<h3>From decimal to binary<a class="headerlink" href="#from-decimal-to-binary" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple" start="3">
+<li><p>Now we will go in the other direction: Our aim is to write a program
+that, given a number (in decimal), computes its binary
+representation.</p></li>
+</ol>
+<p>If you have an idea how to program it, please proceed. If not, we
+propose that you follow the following steps:</p>
+<ol class="arabic simple" start="4">
+<li><p>Study the program below. Execute it with various values of the
+variable <em>num</em>. Do you understand the last line? Do you see a
+limitation of this program?</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">143</span>
+<span class="n">d3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">1000</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span> <span class="c1"># thousands</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">10</span> <span class="c1"># hundreds</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>   <span class="o">%</span> <span class="mi">10</span> <span class="c1"># dec</span>
+<span class="n">d0</span> <span class="o">=</span>  <span class="n">num</span> <span class="o">%</span> <span class="mi">10</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">d3</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d0</span><span class="p">))</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Adapt the above program to print the binary representation of num</p></li>
+</ol>
+<p>…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="n">b0</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="n">b2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="n">b3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">8</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="n">b4</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">16</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">2</span>
+<span class="n">b5</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">32</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">2</span>
+<span class="n">b6</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">64</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">2</span>
+<span class="n">b7</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">128</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="n">b8</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">256</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">b8</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b7</span><span class="p">)</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">b6</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b5</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b4</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b3</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>…</p>
+<ol class="arabic simple" start="6">
+<li><p>Modify the above program to print the binary representations of
+every number between 0 and 255.</p></li>
+</ol>
+<p>…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tobin</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">b7</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">128</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="n">b6</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">64</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">2</span>
+    <span class="n">b5</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">32</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">2</span>
+    <span class="n">b4</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">16</span><span class="p">)</span>  <span class="o">%</span> <span class="mi">2</span>
+    <span class="n">b3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">8</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="n">b2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="n">b1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="n">b0</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">b7</span><span class="p">)</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">b6</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b5</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b4</span><span class="p">)</span> <span class="o">+</span> \
+            <span class="nb">str</span><span class="p">(</span><span class="n">b3</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b0</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">tobin</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>…</p>
+<ol class="arabic simple" start="7">
+<li><p>(Advanced) Write an improved version that uses a loop and does not
+have a limitation in size.</p></li>
+</ol>
+<p>…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">binary</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;0&quot;</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">s</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">s</span>
+</pre></div>
+</div>
+<p>…</p>
+<ol class="arabic simple" start="8">
+<li><p>Study the following code. Do you understand why it works?</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">binary</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;0&quot;</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;1&quot;</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">binary</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span> <span class="o">/</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="n">binary</span><span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">binary</span><span class="p">(</span><span class="mi">1234</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>…</p>
+<p><em>Answer:</em> It is a recursive function which calls itself. See
+<a class="reference external" href="http://en.wikipedia.org/wiki/Recursion_%28computer_science%29">http://en.wikipedia.org/wiki/Recursion_%28computer_science%29</a></p>
+<p>…</p>
+<p>Remark: measures of memory size</p>
+<ul class="simple">
+<li><p>1 byte = 8 bits</p></li>
+<li><p>1 Kilobyte (KB) = 1024 bytes</p></li>
+<li><p>1 Megabyte (MB) = 1024 kbytes = 1048576 bytes</p></li>
+<li><p>1 Gigabytes (GB) = 1024 Mbytes</p></li>
+<li><p>Terabyte, Petabyte, Exabyte…</p></li>
+</ul>
+<p>Exercice (advanced): Write a function that return the hexadecimal
+representation (base 16) of a number.</p>
+<p>To go further:</p>
+<ul class="simple">
+<li><p>If you want to know how negative integer numbers are represented, see
+<a class="reference external" href="http://en.wikipedia.org/wiki/Two%27s_complement">http://en.wikipedia.org/wiki/Two%27s_complement</a></p></li>
+<li><p>To understand how real numbers are encoded, read <a class="reference external" href="http://floating-point-gui.de/">What Every
+Programmer Should Know About Floating-Point
+Arithmetic</a> and
+<a class="reference external" href="https://docs.python.org/2/tutorial/floatingpoint.html#tut-fp-issues">https://docs.python.org/2/tutorial/floatingpoint.html#tut-fp-issues</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="representation-of-text">
+<h2>Representation of text<a class="headerlink" href="#representation-of-text" title="Permalink to this headline">¶</a></h2>
+<p>A text file is nothing but a sequences of characters.</p>
+<p>For a long time, characters were encoded using ASCII code.</p>
+<div class="figure align-default" id="id1">
+<img alt="ascii table" src="_images/asciitable.jpg" />
+<p class="caption"><span class="caption-text">ascii table</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>In Python, you can know the code of a character with the function
+<code class="docutils literal notranslate"><span class="pre">ord</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The inverse of <code class="docutils literal notranslate"><span class="pre">ord</span></code> is <code class="docutils literal notranslate"><span class="pre">chr</span></code>.</p>
+<ol class="arabic simple" start="9">
+<li><p>lookup the ASCII representation of your first name in the table and
+use the <code class="docutils literal notranslate"><span class="pre">chr</span></code> function of Python to print it.</p></li>
+</ol>
+<p>…</p>
+<p>For example, if you name is ‘ZOE’, you would type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span><span class="o">+</span><span class="nb">chr</span><span class="p">(</span><span class="mi">79</span><span class="p">)</span><span class="o">+</span><span class="nb">chr</span><span class="p">(</span><span class="mi">69</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Remark: <strong>ASCII</strong> codes use one byte (=8bits) per character. This is
+fine for English, but cannot cover all the caracters of all alphabets.
+It cannot even encode french accented letters.</p>
+<p><strong>Unicode</strong> was invented that associate a unique 2 bytes number to each
+character of any human script. It is possible to write text files using
+these number, but more economic to encode the most common letters with
+one byte, and keep the compatibility with ASCII (UTF-8).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">unichr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20000</span><span class="p">,</span> <span class="mi">21000</span><span class="p">)]))</span>
+</pre></div>
+</div>
+<div class="section" id="strings">
+<h3>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h3>
+<p>In Python, text can be stored in objects called <em>strings</em>.</p>
+<p>String constants are enclosed between single quotes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Bonjour le monde!&#39;</span>
+</pre></div>
+</div>
+<p>Or double quotes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Bonjour le monde !&quot;</span>
+</pre></div>
+</div>
+<p>Or “triple” quotes for multilines strings</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Bonjour le monde!</span>
+
+<span class="sd">Longtemps je me suis levé de bonne heure,</span>
+<span class="sd">Les sanglots longs des violons,</span>
+<span class="sd">...</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>They have a type ‘str’.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;bonjour&#39;</span><span class="p">)</span>
+<span class="go">&lt;type &#39;str&#39;&gt;</span>
+</pre></div>
+</div>
+<p>To convert an object to a string representation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(((</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+<span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A string is nothing but a sequence of characters.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;bonjour&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;bonjour&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Operations on strings</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;bonjour&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">a</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p>A set of functions to manipulate strings is available in the module
+‘string’.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
+<span class="n">string</span><span class="o">.</span><span class="n">upper</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">string</span><span class="o">.</span><span class="n">lower</span><span class="p">(</span><span class="s1">&#39;ENS&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="search-replace-a-substring-within-a-string">
+<h3>search/replace a substring within a string<a class="headerlink" href="#search-replace-a-substring-within-a-string" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;alain marie jean marc&#39;</span>
+<span class="n">a</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;alain&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;marie&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ma&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;marc&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+
+<span class="n">a</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;marie&#39;</span><span class="p">,</span><span class="s1">&#39;claude&#39;</span><span class="p">)</span>
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="splitting-a-strings-at-delimiters">
+<h3>splitting a strings at delimiters<a class="headerlink" href="#splitting-a-strings-at-delimiters" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;alain marie jean marc&#39;</span>
+<span class="n">a</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Read (see
+<a class="reference external" href="https://docs.python.org/2/library/string.html%5D">https://docs.python.org/2/library/string.html</a>)
+to learn about more string functions.</p>
+<div class="section" id="interactive-input-from-the-command-line">
+<h4>Interactive input from the command line:<a class="headerlink" href="#interactive-input-from-the-command-line" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;Comment vous appelez-vous ? &#39;</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="s2">&quot;Bonjour &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reading-and-writing-to-text-files">
+<h4>Reading and writing to text files<a class="headerlink" href="#reading-and-writing-to-text-files" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>With Atom, create a text file containing a few lines of arbitrary
+content, an save it under the filename ‘test.txt’</p></li>
+<li><p>with ipython running in the same directory where you saved test.txt</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">file</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">o</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="counting-lines-and-words-in-a-text-file">
+<h4>Counting lines and words in a text file.<a class="headerlink" href="#counting-lines-and-words-in-a-text-file" title="Permalink to this headline">¶</a></h4>
+<p>Download <a class="reference external" href="http://www.pallier.org/cours/AIP2013/alice.txt">Alice in
+Wonderland</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">file</span><span class="p">(</span><span class="s1">&#39;alice.txt&#39;</span><span class="p">)</span>
+<span class="n">o</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">n&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>Write a program that counts the number of lines, and number of
+words in alice.txt (we suppose that words are separated by spaces).</p></li>
+</ol>
+<p>…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">file</span><span class="p">(</span><span class="s1">&#39;alice.txt&#39;</span><span class="p">)</span>
+<span class="n">o</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">nlines</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+<span class="n">nw</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+    <span class="n">nw</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">nlines</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">nw</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<ol class="arabic simple" start="11">
+<li><p>Write a program that detects if a text file contains the word ‘NSA’</p></li>
+</ol>
+<p>…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">spot_nsa</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">o</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;NSA&quot;</span> <span class="ow">in</span> <span class="n">l</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">):</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">found</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="representation-of-images">
+<h4>Representation of images<a class="headerlink" href="#representation-of-images" title="Permalink to this headline">¶</a></h4>
+<p>Images can be stored either:</p>
+<ul class="simple">
+<li><p>as bitmaps, that is a two dimensional arrays of dots (formats: bmp,
+png, gif, jpeg…)</p></li>
+<li><p>as vectorized formats, the image contain instruction for drawing
+objects (eps, pdf, svg, …).</p></li>
+</ul>
+<p>Here we are just going to manipulate bitmaps.</p>
+<p>Each dot (pixel) is either ‘0’ (black) or ‘1’ (white).</p>
+<p><img alt="image0" src="_images/bitmap.jpg" /></p>
+<ol class="arabic simple" start="12">
+<li><p>What is the size in kilobytes of a 1024x768pixels black and white
+image ?</p></li>
+</ol>
+<p>…</p>
+<p><em>Answer:</em> 1024*768/8/1024=96 KB</p>
+<ol class="arabic simple" start="13">
+<li><p>Execute the following code in ipython:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Numpy’s arrays are a new type of object. There are similar to lists, but
+optimised for mathematical computations. Notably, they can be
+multidimensional (i.e. you can use a[i,j] notation). You can learn more
+about arrays in the documents
+<a class="reference external" href="http://www.pallier.org/cours/AIP2013/python4science.pdf">http://www.pallier.org/cours/AIP2013/python4science.pdf</a> and
+<a class="reference external" href="http://wiki.scipy.org/Tentative_NumPy_Tutorial">http://wiki.scipy.org/Tentative_NumPy_Tutorial</a>.</p>
+<p>Here is another example:</p>
+<p>…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">):</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">200</span><span class="p">:</span><span class="mi">2</span><span class="p">,]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="grey-level-pictures">
+<h4>Grey level pictures<a class="headerlink" href="#grey-level-pictures" title="Permalink to this headline">¶</a></h4>
+<p>Each dot is now associated to an integer value, e.g. ranging from 0 to
+255 for 8-bits codes, coding for a grey level (smaller=darker). Each dot
+needs one byte.</p>
+<p>How large is the file for an image 1024x768 pixels with 256 grey levels?</p>
+<p>The following code displays an image:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.misc</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">lena</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">l</span><span class="p">,</span>  <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This code runs a low pass (averaging) filter on it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.ndimage</span>
+<span class="n">bl</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">ndimage</span><span class="o">.</span><span class="n">gaussian_filter</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bl</span><span class="p">,</span>  <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Edge detector</strong> It is easy to implement an edge detector with a neural
+network. See
+<a class="reference external" href="https://courses.cit.cornell.edu/bionb2220/UnderstandingLateralInhibition.html">https://courses.cit.cornell.edu/bionb2220/UnderstandingLateralInhibition.html</a>.</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">ndimage.convolve</span></code> function, apply the following filters to
+the image and diplay the results.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">kernel1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                   <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                   <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+
+<span class="n">bl</span><span class="o">=</span><span class="n">scipy</span><span class="o">.</span><span class="n">ndimage</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">kernel1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bl</span><span class="p">,</span>  <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">kernel2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                   <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                   <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                   <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                   <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">bl</span><span class="o">=</span><span class="n">scipy</span><span class="o">.</span><span class="n">ndimage</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">kernel2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bl</span><span class="p">,</span>  <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">gray</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>More manipulations are available at
+<a class="reference external" href="http://scipy-lectures.github.io/advanced/image_processing/">http://scipy-lectures.github.io/advanced/image_processing/</a>.</p>
+<div class="section" id="colored-bitmaps">
+<h5>Colored bitmaps<a class="headerlink" href="#colored-bitmaps" title="Permalink to this headline">¶</a></h5>
+<p>Each dot is now associated to three bytes, representing the Red, Gree
+and Blue intensities (see <a class="reference external" href="http://www.colorpicker.com/">http://www.colorpicker.com/</a>).</p>
+<p>How large is the file for a 1024x768 RGB image?</p>
+<p>Exercice: What are the RGB triplets for BLACK, WHITE, RED, YELLOW?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Programming for Cognitive and Brain Sciences</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="first-things-first.html">First things first</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running-python.html">Running Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-solve-problems.html">How to solve problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips-to-write-clean-code.html">Writing clean code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools-for-reproducible-science.html">Tools to do Reproducible Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automata-turing-machines-and-computers.html">Automata and Computers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automata-turing-machines-and-computers.html#practical-interaction-with-a-computer-in-a-nut-shell">Practical interaction with a computer (in a Nut <em>shell</em>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Creating static visual stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#creating-and-playing-sounds">Creating and playing sounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#experiments">Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#data-analyses">Data Analyses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#lexical-statistics">Lexical Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#simulations">Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html#examples-of-students-projects-from-previous-sessions">Examples of Students’ Projects from previous sessions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Representations of numbers, text, images</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#representation-of-integers">Representation of integers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#representation-of-text">Representation of text</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="coding-exercices.html">Programming Exercices</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="projects.html" title="previous chapter">Projects</a></li>
+      <li>Next: <a href="coding-exercices.html" title="next chapter">Programming Exercices</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Christophe Pallier.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/representing-numbers-images-text.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

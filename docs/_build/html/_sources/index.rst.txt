@@ -7,7 +7,7 @@ Programming for Cognitive and Brain Sciences
 ============================================
 
 Author:
-  `Christophe Pallier <http://www.pallier.org>`__
+  `Christophe Pallier <http://www.pallier.org>`__.
 
 Main document web page:
   https://pcbs.readthedocs.io/en/latest/
@@ -17,9 +17,6 @@ Git repository on github
 
 Slack discussion forum
    http://cogmaster-pcbs.slack.com (`Join here <https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ>`__). Use the ``#general`` channel to ask questions. Do not hesitate!
-
-Teachers emails
-   christophe@pallier.org & adrian.valente@ens.fr
 
 Schoology code
    ``KN88-5TR4-XQG29``
@@ -34,13 +31,15 @@ Bring your own laptop
 
    first-things-first
    running-python
+   resources
    how-to-solve-problems
    tips-to-write-clean-code
    tools-for-reproducible-science
-   Automata-Turing-Machines-and-Computers
+   automata-turing-machines-and-computers
    main
-   resources
    projects
+   scratch/Starting-from-Scratch.rst
+   representing-numbers-images-text
    coding-exercices
 
 

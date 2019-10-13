@@ -14,7 +14,7 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Resources" href="resources.html" />
+    <link rel="prev" title="Projects" href="projects.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -33,38 +33,55 @@
             
   <div class="section" id="programming-exercices">
 <h1>Programming Exercices<a class="headerlink" href="#programming-exercices" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="lists">
-<h2>lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Read about:</p>
-<ul>
-<li><p><a class="reference external" href="https://www.w3schools.com/python/python_lists.asp">Python
-Lists</a></p></li>
-<li><p><a class="reference external" href="https://www.pythonforbeginners.com/basics/list-comprehensions-in-python">List
-comprehensions</a></p></li>
-<li><p>if you have time, read
-<a class="reference external" href="https://automatetheboringstuff.com/chapter4/">https://automatetheboringstuff.com/chapter4/</a></p></li>
-</ul>
-</li>
-<li><p>Given a list of numbers, print their sum</p></li>
+<li><p>prints 1000 times the lines <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">work</span> <span class="pre">and</span> <span class="pre">no</span> <span class="pre">play</span> <span class="pre">makes</span> <span class="pre">Jack</span> <span class="pre">a</span> <span class="pre">dull</span> <span class="pre">boy.</span></code></p></li>
+<li><p>Given a list of numbers, print their product</p></li>
 <li><p>Given a list of numbers, print the sum of their square</p></li>
 <li><p>Given a list of numbers, print the largest one.</p></li>
 <li><p>Given a list of numbers, print the second largest one.</p></li>
 </ul>
+<p>References:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_lists.asp">Python Lists</a></p></li>
+<li><p><a class="reference external" href="https://www.pythonforbeginners.com/basics/list-comprehensions-in-python">List comprehensions</a></p></li>
+<li><p><a class="reference external" href="https://automatetheboringstuff.com/chapter4/">https://automatetheboringstuff.com/chapter4/</a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="convert-temperature-from-fahrenheit-to-celcius">
+<h2>Convert temperature from Fahrenheit to Celcius<a class="headerlink" href="#convert-temperature-from-fahrenheit-to-celcius" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Read <a class="reference external" href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a script that converts
+temperature from one scale to the other.</p></li>
+<li><p>Create a new repository  on github.com to house your conversion script, and write the
+documentation inside the README.md using Markdown format.</p></li>
+</ul>
 </div>
 <div class="section" id="multiplication-tables">
-<h2>multiplication tables<a class="headerlink" href="#multiplication-tables" title="Permalink to this headline">¶</a></h2>
+<h2>Multiplication tables<a class="headerlink" href="#multiplication-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Given a list of numbers, print them separated by a space (e.g.
-<code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">4]</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span></code>).</p></li>
-<li><p>Read <a class="reference external" href="https://pyformat.info/#number_padding">https://pyformat.info/#number_padding</a></p></li>
-<li><p>write a script that displays the tables of multiplication from 1 to 9
-in a nice format.</p></li>
+<li><p>Write a script that displays the tables of multiplication from 1 to 12.</p></li>
+<li><p>Read <a class="reference external" href="https://pyformat.info/#number_padding">https://pyformat.info/#number_padding</a> and improve the format of the
+multiplication tables.</p></li>
 </ul>
+</div>
+<div class="section" id="taxis">
+<h2>Taxis<a class="headerlink" href="#taxis" title="Permalink to this headline">¶</a></h2>
+<p>Two taxi companies propose differents pricing schemes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Company A charges 4.80€ plus 1.15€ by km travelled.</p></li>
+<li><p>Company B charges 3.20€ plus ##20€ by km travelled.</p></li>
+</ul>
+</div></blockquote>
+<p>Write a script that finds which company is the cheapest as a function of the distance to travel.</p>
 </div>
 <div class="section" id="pascal-triangle">
 <h2>Pascal triangle<a class="headerlink" href="#pascal-triangle" title="Permalink to this headline">¶</a></h2>
-<p>Write a program that prints the first rows of Pascal’s triangle (see
+<p>Write a program that prints the first N rows of Pascal’s triangle (see
 <a class="reference external" href="https://www.youtube.com/watch?v=XMriWTvPXHI">https://www.youtube.com/watch?v=XMriWTvPXHI</a>). For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
 %run triangle-de-Pascal.py
@@ -98,30 +115,15 @@ mind. The computer proposes a number and the user answers with ‘+’ (the
 number he has is mind is larger), ‘-’ (if it is smaller), ‘y’ (if the
 guess is correct)</p>
 </div>
-<div class="section" id="prime-numbers">
-<h2>prime numbers<a class="headerlink" href="#prime-numbers" title="Permalink to this headline">¶</a></h2>
-<p>Write a script that lists all prime numbers between 1 and 10000 (A prime
-number is a integer that has no divisors except 1 and itself). You may
-use the following function:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```
-def is_divisor(a, b):
-    &quot;&quot;&quot; Args: a, b integers;
-         Return True if b is a divisor of a, else False&quot;
-    return a % b == 0
-```
-</pre></div>
-</div>
-</div>
 <div class="section" id="unique">
 <h2>unique<a class="headerlink" href="#unique" title="Permalink to this headline">¶</a></h2>
-<p>Given a list of words, print how many different words are in that list
-(hint: use a dictionary or a set)</p>
+<p>Given a list of words, print how many different words are in that list (hint: use a dictionary or a set)</p>
 </div>
 <div class="section" id="word-count">
 <h2>word count<a class="headerlink" href="#word-count" title="Permalink to this headline">¶</a></h2>
 <p>Given a list of words, count the number of times each word appears in
 the list. Eg. <code class="docutils literal notranslate"><span class="pre">[Jim,</span> <span class="pre">Alan,</span> <span class="pre">Jim,</span> <span class="pre">Joe]</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Jim:2,</span> <span class="pre">Alan:1,</span> <span class="pre">Joe:1</span></code>
-(hint: use dictionary)</p>
+(hint: use a dictionary)</p>
 </div>
 <div class="section" id="head">
 <h2>head<a class="headerlink" href="#head" title="Permalink to this headline">¶</a></h2>
@@ -133,106 +135,25 @@ file is it is less than 10 lines long).</p>
 <p>Write a script that prints the last 10 lines of a file (or the whole
 file is it is less than 10 lines long).</p>
 </div>
-<div class="section" id="taxis">
-<h2>Taxis<a class="headerlink" href="#taxis" title="Permalink to this headline">¶</a></h2>
-<p>Two taxi companies propose differents pricing schemes:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Company A charges 4.80€ plus 1.15€ by km travelled.</p></li>
-<li><p>Company B charges 3.20€ plus ##20€ by km travelled.</p></li>
-</ul>
-</div></blockquote>
-<p>Write a script that finds which company is the cheapest as a function of the distance to travel.</p>
-</div>
 <div class="section" id="string-detector">
 <h2>string-detector<a class="headerlink" href="#string-detector" title="Permalink to this headline">¶</a></h2>
-<p>Lisez le chapitre 8 de <em>Automate the boring stuff</em>
-(<a class="reference external" href="http://automatetheboringstuff.com/chapter8/">http://automatetheboringstuff.com/chapter8/</a>). Ecrire un programme qui
-ouvre et lit un fichier texte, puis affiche toutes les lignes qui
-contiennent un mot donné, par exemple “Cogmaster”.</p>
+<p>Read  <a class="reference external" href="http://automatetheboringstuff.com/chapter8/">Chap. 8 of Automate the boring stuff</a>.</p>
+<p>Write a script that opens and read a text file, and print all the lignes that contain a given target word,  say, <code class="docutils literal notranslate"><span class="pre">cogmaster</span></code>.</p>
 </div>
-<div class="section" id="rodrego-simulator">
-<h2>Rodrego-simulator<a class="headerlink" href="#rodrego-simulator" title="Permalink to this headline">¶</a></h2>
-<p>(optionnel: seulement pour ceux qui se sentent capables et sont motivés)
-Ecrire un programme qui simule une machine RodRego à 10 registres
-(<a class="reference external" href="http://sites.tufts.edu/rodrego/">http://sites.tufts.edu/rodrego/</a>). Le programme est stocké dans un
-fichier texte qui est lu, puis executé. Votre programme doit contenir
-une fonction qui etant donnée les 10 valeurs initiales des registres, et
-le programme, renvoit les nouvelles valeurs des registres quand
-l’instruction END est atteinte.</p>
-<div class="section" id="detection-experiment">
-<h3>detection experiment<a class="headerlink" href="#detection-experiment" title="Permalink to this headline">¶</a></h3>
-<p>Computing descriptive statistics from a detection experiment</p>
-<p>In a signal detection experiment, a faint stimulus (e.g. a faint sound
-or a faint visual target) is presented or not at each trial and the
-participant must indicate whether he has perceived it or not. There are
-four possible outcomes for each trial:</p>
-<ol class="arabic simple">
-<li><p>A <em>hit</em> is when the participant correctly detects the target.</p></li>
-<li><p>A <em>miss</em> is when the target was there but the participant did not
-detect it.</p></li>
-<li><p>A <em>false alarm</em> is when the participant reports the presence of the
-target when it was not actually there.</p></li>
-<li><p>A <em>correct rejection</em> is when the participant correctly reports that
-the target was not present.</p></li>
-</ol>
-<p>One defines;</p>
-<ul class="simple">
-<li><p>The <em>hit rate</em> , equal to #hits / (#hits + #misses)</p></li>
-<li><p>The <em>False alarm rate</em>, equal to #false alarms / (#false alarms + #
-correct rejections)</p></li>
-</ul>
-<p>Let us first suppose that the data from a participant is represented as
-a string. This string represents a series of trials, each trial being
-represented by two characters indicating the trial type (1=target
-present, 0=target absent) and the participant’s response (Y=target
-perceived, N=No target perceived). For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;0Y,0N,1Y,1Y,0N,0N,0Y,1Y,1Y&quot;</span>
+<div class="section" id="prime-numbers">
+<h2>prime numbers<a class="headerlink" href="#prime-numbers" title="Permalink to this headline">¶</a></h2>
+<p>Write a script that lists all prime numbers between 1 and 10000 (A prime
+number is a integer that has no divisors except 1 and itself). You may
+use the following function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_divisor</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="s2">&quot;&quot;&quot; Args: a, b integers;</span>
+<span class="s2">         Return True if b is a divisor of a, else False&quot;</span>
+<span class="s2">    return a % b == 0</span>
 </pre></div>
 </div>
-<p>Write a function that, given such a string, returns the Hit rate and the
-False rate (hint: use the function <code class="docutils literal notranslate"><span class="pre">split()</span></code>)</p>
-<p>Now, the results from different participants are stored in different
-files <code class="docutils literal notranslate"><span class="pre">subj*.dat</span></code> (download the files from
-<a class="reference external" href="https://github.com/chrplr/PCBS/tree/master/exercices2/subjdat.zip">https://github.com/chrplr/PCBS/tree/master/exercices2/subjdat.zip</a>)</p>
-<p>Write a script that computes the hit rates and false alarms for each
-subject, andisplays the group averages and standard deviations.</p>
-<p>Use <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot</span></code> to display each participant as a dot on a
-graphics with False alarm rate on the X-axis and Hit Rate on the Y-axis.</p>
-<p>Read the section on reading comma separated value (<cite>.csv`</cite>) files from
-<a class="reference external" href="http://automatetheboringstuff.com/chapter14/">http://automatetheboringstuff.com/chapter14/</a></p>
-</div>
-</div>
-<div class="section" id="rpn-calculator">
-<h2>RPN Calculator<a class="headerlink" href="#rpn-calculator" title="Permalink to this headline">¶</a></h2>
-<p>Write a reverse Polish arithmetic expression evaluator (See
-<a class="reference external" href="https://en.wikipedia.org/wiki/Reverse_Polish_notation">https://en.wikipedia.org/wiki/Reverse_Polish_notation</a>).</p>
-<p>E.g. <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">5</span> <span class="pre">-</span></code> evaluate to <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p>
-</div>
-<div class="section" id="experimental-lists-1">
-<h2>Experimental lists 1<a class="headerlink" href="#experimental-lists-1" title="Permalink to this headline">¶</a></h2>
-<p>An experiment consists in a series of trials of two types: ‘TypeA’ and
-‘TypeB’.</p>
-<ul class="simple">
-<li><p>Write a function which takes <code class="docutils literal notranslate"><span class="pre">N</span></code>, the total number of trials, and
-returns a list of labels ‘TypeA’ and ‘typeB’, in a random order
-(hint: use <code class="docutils literal notranslate"><span class="pre">random.shuffle</span></code>).</p></li>
-<li><p>Create lists of trials for 20 participants. Each list must be saved
-in a text file with one column and one line per trial where each line
-contains a label corresponding the trial type).</p></li>
-</ul>
-</div>
-<div class="section" id="experimental-lists-2">
-<h2>Experimental lists 2<a class="headerlink" href="#experimental-lists-2" title="Permalink to this headline">¶</a></h2>
-<p>Experiment 2 consists in a series of trials where a written stimulus is
-presented: the stimulus can be a French word or pseudowords, or an
-English words or pseudowords (the task is a lexical decision, that is,
-the participants must decide as quickly as possible if the stimulus is
-an existing word or not). Create text files listing 100 trials in a
-random order.</p>
 </div>
 <div class="section" id="kaprekar-numbers">
-<h2>Kaprekar-numbers<a class="headerlink" href="#kaprekar-numbers" title="Permalink to this headline">¶</a></h2>
+<h2>Kaprekar numbers<a class="headerlink" href="#kaprekar-numbers" title="Permalink to this headline">¶</a></h2>
 <p>Un nombre de Kaprekar est un nombre dont la représentation décimale du
 carré peut être découpée en une partie gauche et une partie droite (non
 nulle) telles que la somme de ces deux parties redonne le nombre
@@ -245,19 +166,21 @@ initial. Par exemple:</p>
 </ul>
 <p>Ecrire un programme qui renvoit tous les nombres de Kaprekar entre 1 et N.</p>
 </div>
-<div class="section" id="posner-cuing-task">
-<h2>Posner cuing task<a class="headerlink" href="#posner-cuing-task" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p>modifier le script de détection simple (simple-detection-visual-expyriment) pour que la cible apparaisse aléatoirement soit à gauche, soit a droite du centre de l’ecran (qui reste indiqué par une croix).</p></li>
-<li><p>programmer la tache de détection avec indicage attentionnelle de Posner (<a class="reference external" href="https://en.wikipedia.org/wiki/Posner_cueing_task">https://en.wikipedia.org/wiki/Posner_cueing_task</a>). (indice endogène seulement).</p></li>
-</ol>
-</div></blockquote>
+<div class="section" id="rpn-calculator">
+<h2>RPN Calculator<a class="headerlink" href="#rpn-calculator" title="Permalink to this headline">¶</a></h2>
+<p>Write a reverse Polish arithmetic expression evaluator (See
+<a class="reference external" href="https://en.wikipedia.org/wiki/Reverse_Polish_notation">https://en.wikipedia.org/wiki/Reverse_Polish_notation</a>).</p>
+<p>E.g. <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">5</span> <span class="pre">-</span></code> evaluate to <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p>
 </div>
-<div class="section" id="zipf-law">
-<h2>Zipf law<a class="headerlink" href="#zipf-law" title="Permalink to this headline">¶</a></h2>
-<p>Utiliser le contenu du fichier <code class="docutils literal notranslate"><span class="pre">lexical-decision/lexique382-reduced.txt</span></code> pour afficher la relation
-entre longueur des mots français et leur fréquence d’occurence.</p>
+<div class="section" id="rodrego-simulator">
+<h2>Rodrego-simulator<a class="headerlink" href="#rodrego-simulator" title="Permalink to this headline">¶</a></h2>
+<p>(optionnel: seulement pour ceux qui se sentent capables et sont motivés)
+Ecrire un programme qui simule une machine RodRego à 10 registres
+(<a class="reference external" href="http://sites.tufts.edu/rodrego/">http://sites.tufts.edu/rodrego/</a>). Le programme est stocké dans une chaine de caractère ou dans
+fichier qui est lu, puis executé. Votre programme doit contenir
+une fonction qui etant donnée les 10 valeurs initiales des registres, et
+le programme, renvoit les nouvelles valeurs des registres quand
+l’instruction END est atteinte.</p>
 </div>
 </div>
 
@@ -282,11 +205,12 @@ entre longueur des mots français et leur fréquence d’occurence.</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="first-things-first.html">First things first</a></li>
 <li class="toctree-l1"><a class="reference internal" href="running-python.html">Running Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to-solve-problems.html">How to solve problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tips-to-write-clean-code.html">Writing clean code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools-for-reproducible-science.html">Tools to do Reproducible Science</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Automata-Turing-Machines-and-Computers.html">Automata and Computers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Automata-Turing-Machines-and-Computers.html#practical-interaction-with-a-computer-in-a-nut-shell">Practical interaction with a computer (in a Nut <em>shell</em>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automata-turing-machines-and-computers.html">Automata and Computers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automata-turing-machines-and-computers.html#practical-interaction-with-a-computer-in-a-nut-shell">Practical interaction with a computer (in a Nut <em>shell</em>)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main.html">Creating static visual stimuli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main.html#creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main.html#creating-and-playing-sounds">Creating and playing sounds</a></li>
@@ -294,26 +218,24 @@ entre longueur des mots français et leur fréquence d’occurence.</p>
 <li class="toctree-l1"><a class="reference internal" href="main.html#data-analyses">Data Analyses</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main.html#lexical-statistics">Lexical Statistics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main.html#simulations">Simulations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html#examples-of-students-projects-from-previous-sessions">Examples of Students’ Projects from previous sessions</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Programming Exercices</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lists">lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#multiplication-tables">multiplication tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basics">Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-temperature-from-fahrenheit-to-celcius">Convert temperature from Fahrenheit to Celcius</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multiplication-tables">Multiplication tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#taxis">Taxis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pascal-triangle">Pascal triangle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#computer-guess-a-number">computer-guess-a-number</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#prime-numbers">prime numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#unique">unique</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#word-count">word count</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#head">head</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tail">tail</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#taxis">Taxis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#string-detector">string-detector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rodrego-simulator">Rodrego-simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prime-numbers">prime numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kaprekar-numbers">Kaprekar numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rpn-calculator">RPN Calculator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#experimental-lists-1">Experimental lists 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#experimental-lists-2">Experimental lists 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#kaprekar-numbers">Kaprekar-numbers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#posner-cuing-task">Posner cuing task</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#zipf-law">Zipf law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rodrego-simulator">Rodrego-simulator</a></li>
 </ul>
 </li>
 </ul>
@@ -322,7 +244,7 @@ entre longueur des mots français et leur fréquence d’occurence.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="resources.html" title="previous chapter">Resources</a></li>
+      <li>Previous: <a href="projects.html" title="previous chapter">Projects</a></li>
   </ul></li>
 </ul>
 </div>

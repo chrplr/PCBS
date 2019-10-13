@@ -404,8 +404,8 @@ However, terminals can be *virtual*. A terminal is a program that let
 you run text programs. You interact by typing and displaying text. No
 graphical interface/no mouse.
 
-When you open a terminal, a program called a **shell** is started that
-displays a prompt, and waits for you to enter commands with the
+When you open a terminal, a program called a `shell <http://en.wikipedia.org/wiki/Shell_%28computing%29>`_ is started that
+displays a prompt, waiting for you to enter commands with the
 keyboard.
 
 .. figure:: images/terminal.png
@@ -422,13 +422,16 @@ Practical interaction with a computer (in a Nut *shell*)
 How to open a Terminal
 ----------------------
 
--  Ubuntu-Linux: Ctrl-Alt-T (see
+Linux
+   Ctrl-Alt-T (see
    https://help.ubuntu.com/community/UsingTheTerminal)
 
--  MacOSX: Open Finder/Applications/Utilities/Terminal (see
+MacOSX
+   Open Finder/Applications/Utilities/Terminal (see
    http://www.wikihow.com/Get-to-the-Command-Line-on-a-Mac)
 
--  Windows: Launch Git Bash, or Anaconda Prompt
+Windows
+   Launch Git Bash -assuming you have install git for windows), or Anaconda Prompt (assuming you have installed Anaconda Python)
 
 
 
@@ -438,8 +441,7 @@ The shell
 Inside the terminal, you are interacting with a program called a
 **Shell**.
 
-Various *Shells* exists: under Windows: cmd/powershell; under,
-Mac/linux: bash/tsch… they speak slighlty different languages.
+Various *Shells* exists:  under MacOSX or Linux: bash, zsh,... under Windows, cmd or powershell; they speak slighlty different languages.
 
 The shell displays a prompt and waits for you to type commands that it
 will execute. For example, if you type ipython, it will start the
@@ -456,12 +458,16 @@ linux::
 
    for f in 01 02 03 04 05 06 07 08 09 10; do mkdir -p subject_$f/data subject_$f/results; done
 
-To learn more, see Wikipedia’s article on *Shell_(Computing)*:
-http://en.wikipedia.org/wiki/Shell_%28computing%29
+To learn more:
 
-Good news: you will not need to learn a *shell* language, only a few
-commands (pwd/cd/ls/dir) to allow you to navigate the filesystem and run
-a program.
+-  `The Linux Command Line <http://linuxcommand.org/tlcl.php>`__ by
+   Williams Shotts.
+-  `Openclassrooms
+   MOOC <https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux>`__
+
+
+
+Good news: for our lecture, you will only need to know three shell commands:  ``pwd``  ``cd`` and ``ls``. About them, read http://linuxcommand.org/lc3_lts0020.php 
 
 
 
@@ -501,6 +507,8 @@ To locate a file, you must know:
 
 -  its location in the directory structure
 -  its basename
+
+See `absolute or relative pathnames <https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/>`__ 
 
 Remark: a given file can have several names in the same or various
 directories (remember: a filename is nothing but a link between a human
