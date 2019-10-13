@@ -1,20 +1,17 @@
+=====================
+Starting from Scratch
+=====================
+
+
+
 Programming = turning an algorithm into code
-============================================
+--------------------------------------------
 
 **Problem => Algorithm => Coding**
 
-Strictly speaking, to program is to explain to a computer how to carry
-out an algorithm (the second arrow), not to find an algorithm for a
-problem (first arrow).
 
-Although “AIP” means “Atelier d’introduction à la Programmation/Python”
-we will try to train you also on the first stage.
 
-. . .
-
-Examples of Problems:
-
-::
+Examples of Problems::
 
    - Cooking boiled eggs
    - Integer division of two numbers
@@ -22,31 +19,16 @@ Examples of Problems:
    - Play a game like chess
    - Recover 3D information from stereoscopic images
 
-Note: suggested readings David Marr (1982, *Vision*)’s three levels of
-description in cognitive science.
+Strictly speaking, "programming" or "coding" means to explain to a computer how to carry
+out an algorithm (the second arrow), not to find an algorithm for a
+problem (first arrow).
 
 |image0|
 
-Why Python
-==========
 
 Because computers are stupid (that is, they lack a *theory of mind* and
 cannot guess your desires and intentions), you must provide very
-detailed and exhaustive instructions. The choice of the programming
-language is relevant here.
-
-There exist many programming languages (and also different computer
-architectures, e.g. parallel vs. serial)
-
-In 2000, we decided to use Python for the Atelier d’Experimentation,
-because it is:
-
--  clean (the code can be relatively close to the algorithm)
--  general-purpose (vs. Matlab)
--  multiplatform
--  free software
-
-. . .
+detailed and exhaustive instructions.
 
 Learning to program takes time because it requires to master not only
 the semantic but also the syntax (=grammar) of the language.
@@ -59,10 +41,10 @@ them!!!).
 
 Yes you can! Let’s go!
 
-Starting from/with Scratch
-==========================
+Starting with Scratch
+----------------------
 
-We not use Python for this first lecture!
+We will not use Python for this first lecture!
 
 **Scratch** (http://scratch.mit.edu) was designed by the MIT media lab
 to teach kids how to program.
@@ -244,6 +226,7 @@ coordinates where to sprite is instructed to moved to.
 
 |image12|
 
+
 Second series of exercices
 ==========================
 
@@ -284,31 +267,6 @@ Second series of exercices
 
 . . .
 
-4. “Spirograph”.
-
-|image16|
-
-The aim of this exercice is to recreate the Spirograph patterns.
-
-First, check out the demo at
-http://www.mathplayground.com/Spiromath.html. With the help of the
-mathematical equations provided at
-http://www.mathematische-basteleien.de/spirographs.htm write a scratch
-program that draws these figures.
-
-. . .
-
-There are several examples on the scratch web site. You can study their
-code:
-
--  Kitty graphics https://scratch.mit.edu/projects/5542/
--  Spirograph https://scratch.mit.edu/projects/3240756/
--  Math-connection
-
-   -  https://scratch.mit.edu/studios/134/
-   -  https://scratch.mit.edu/projects/2984543/
-
-. . .
 
 .. |image0| image:: img/marr.jpg
 .. |image1| image:: img/scratch_001.png
