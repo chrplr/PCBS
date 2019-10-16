@@ -18,11 +18,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Programming for Cognitive and Brain Sciences'
-copyright = '2019, Christophe Pallier'
+copyright = 'CC-BY-SA 2019, Christophe Pallier'
 author = 'Christophe Pallier'
 
 
 # -- General configuration ---------------------------------------------------
+
+source_suffix = ['.rst', '.md']
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom

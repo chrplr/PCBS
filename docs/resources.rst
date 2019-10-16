@@ -23,7 +23,7 @@ Books relevant to Cognitive and Brain Sciences Programming
 Programming skills
 ------------------
 
-*  `Tips for writing clean code <tips.md>`__
+*  Tips for writing clean code: tips_
 *  `Software Carpentry <https://software-carpentry.org/lessons/>`__
    provides nice lessons about writing software for science.
 
@@ -39,9 +39,11 @@ Resources to learn Python
    reading, there are videos on the site.
 
 
--  See `Python in a Nutshell <02-Python_in_a_nutshell/Python_in_a_nutshell.md>`__
 
 -  Read the Python scripts in the `games <games/>`__ folder.
+
+
+-  See `Python in a Nutshell <02-Python_in_a_nutshell/Python_in_a_nutshell.md>`__ (LINK NOT WORKING)
 
 
 *  Books:
