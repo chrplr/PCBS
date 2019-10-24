@@ -8,9 +8,9 @@ We are going to use `pygame <http://www.pygame.org>`__.
 Please read this `quick introduction on drawing with
 pygame <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__
 and run and study the scripts
-`square.py <../visual-illusions/square.py>`__,
-`circle.py <../visual-illusions/circle.py>`__ and
-`triangle.py <../visual-illusions/triangle.py>`__.
+:download:`square.py <../visual-illusions/square.py>`,
+:download:`circle.py <../visual-illusions/circle.py>` and
+:download:`triangle.py <../visual-illusions/triangle.py>`.
 
 Kanizsa illusory contours
 -------------------------
@@ -29,14 +29,14 @@ Kanizsa illusory contours
       Kanizsa triangle
 
    Check out my solution:
-   `visual-illusions/kanizsa-square.py <../visual-illusions/kanizsa-square.py>`__
+   :download:`visual-illusions/kanizsa-square.py <../visual-illusions/kanizsa-square.py>`
 
    To find out more, google ``illusory contours``.
 
 Herman grid
 -----------
 
--  Starting from `square.py <../visual-illusions/square.py>`__, write a
+-  Starting from :download:`square.py <../visual-illusions/square.py>`, write a
    program to display the `Herman
    grid <https://en.wikipedia.org/wiki/Grid_illusion>`__
 
@@ -53,7 +53,7 @@ Herman grid
    -  in your python scripts, use nested for loops over rows and columns
       to display each square one by one
 
--  Check out `my solution <../visual-illusions/grid.py>`__
+-  Check out :download:`my solution <../visual-illusions/grid.py>`
 
 -  Optional: Read
    https://stackabuse.com/command-line-arguments-in-python/ and use the
@@ -79,7 +79,7 @@ and at distance ``R`` from the origin, the coordinates of its center are
 ``(R * cos(alpha), R * sin(alpha))``
 
 -  Check out my solution
-   `visual-illusions/ebbinghaus.py <../visual-illusions/ebbinghaus.py>`__
+   :download:`visual-illusions/ebbinghaus.py <../visual-illusions/ebbinghaus.py>`
 
 
 Honeycomb and Extinction illusions.
@@ -95,7 +95,7 @@ The extinction illusion is a variant of the Herman grid:
 -  Program the stimulus (the lines can be horizontal and vertical rather
    than oblique)
 
--  Check out `my solution <../visual-illusions/extinction.py>`__
+-  Check out :download:`my solution <../visual-illusions/extinction.py>`
 
 Here is the Honeycom illusion:
 
@@ -109,8 +109,8 @@ Here is the Honeycom illusion:
    Illusion: Uniform Textures Not Perceived as
    Such.” <https://doi.org/10.1177/2041669516660727.%20https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5030753/pdf/10.1177_2041669516660727.pdf>`__
 
--  Optional: Try to program the honeycomb stimulus above. A `solution
-   using psychopy <../visual-illusions/Honeycomb.py>`__ is available on
+-  Optional: Try to program the honeycomb stimulus above. A :download:`solution
+   using psychopy <../visual-illusions/Honeycomb.py>` is available on
    `Bertamini’s web
    site <https://www.programmingvisualillusionsforeveryone.online/scripts.html>`__.
    To run it you might need to install “wxpython” (beware: it can be
@@ -138,7 +138,7 @@ https://en.wikipedia.org/wiki/Random_dot_stereogram.
 -  Write a script that generate random-dot stereograms.
 
 -  Check out my solution:
-   `random_dot_stereogram.py <../random-dot-stereograms/random_dot_stereogram.py>`__
+   :download:`random_dot_stereogram.py <../random-dot-stereograms/random_dot_stereogram.py>`
 
 
 
@@ -156,7 +156,7 @@ Wertheimer line-motion illusion.
 -  Program the stimulus.
 
 -  Check out my solution
-   `visual-illusions/line-motion.py <../visual-illusions/line-motion.py>`__
+   :download:`visual-illusions/line-motion.py <../visual-illusions/line-motion.py>`
 
 Flash-lag illusion
 ------------------
@@ -167,7 +167,7 @@ Flash-lag illusion
 -  Program the stimulus.
 
 -  Check out my solution
-   `visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>`__
+   :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>`
 
 Dynamic version of the Ebbinghaus-Titchener
 -------------------------------------------
@@ -178,7 +178,7 @@ Dynamic version of the Ebbinghaus-Titchener
    in size.
 
 -  Check out my solution
-   `visual-illusions/ebbinghaus-dynamic.py <../visual-illusions/ebbinghaus-dynamic.py>`__
+   :download:`visual-illusions/ebbinghaus-dynamic.py <../visual-illusions/ebbinghaus-dynamic.py>`
 
 --------------
 
@@ -197,7 +197,7 @@ Creating and playing sounds
 
 -  Check out `simpleaudio tutorials <https://simpleaudio.readthedocs.io/en/latest/tutorial.html>`__
 
--  Study `sound_synth.py <../sound/sound_synth.py>`__
+-  Study :download:`sound_synth.py <../sound/sound_synth.py>`
 
 -  Write a script that loads the wav file ``cymbal.wav`` and plays it 10
    times, at a rhythm of one per seconds.
@@ -253,10 +253,10 @@ Simple reaction times
    must click on the mouse as quickly as possible. The reaction times
    must be recorded in a file for further analyses.
 
-2. Here is a `solution using pygame <../reaction-times/simple-detection-visual-pygame.py>`__. Run it
+2. Here is a :download:`solution using pygame <../reaction-times/simple-detection-visual-pygame.py>`. Run it
    and check ``reaction_times.csv``.
 
-3. Here is a `solution using expyriment <../reaction-times/simple-detection-visual-expyriment.py>`__.
+3. Here is a :download:`solution using expyriment <../reaction-times/simple-detection-visual-expyriment.py>`.
 
 Run the previous script. Check the results file in the folder ``data``.
 Launch ipython in the ``data`` folder and type::
@@ -287,7 +287,7 @@ Posner’s attentional cueing task
 Program the  `Posner’s attentional cueing task <https://en.wikipedia.org/wiki/Posner_cueing_task>`__
 
 See solution
-in `Posner-attention/posner_task.py <../Posner-attention/posner_task.py>`__
+in :download:`../Posner-attention/posner_task.py <../Posner-attention/posner_task.py>`
 
 
 Stroop Effect
@@ -305,10 +305,10 @@ create 4x8 cards for the task, avoiding repetitions of colors.
 You can read a tutorial on `how to display text with
 pygame <https://nerdparadise.com/programming/pygame/part5>`__
 
--  After trying to program it yourself, you can compare with `my
-   solution <Stroop-effect/create_stroop_cards.py>`__
+-  After trying to program it yourself, you can compare with :download:`my
+   solution <../Stroop-effect/create_stroop_cards.py>`
 
--  Run `stroop_task.py <Stroop-effect/stroop_task.py>`__ and check the
+-  Run :download:`stroop_task.py <../Stroop-effect/stroop_task.py>` and check the
    naming times in ``data``. Compute the average reading times as a
    function of the language (you can use R or Python).
 
