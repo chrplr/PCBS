@@ -1,6 +1,5 @@
 #! /usr/bin/env python
-# -*- coding:utf-8 -*-
-# Time-stamp: <2012-09-22 15:38 christophe@pallier.org>
+# Time-stamp: <2019-10-24 12:16:04 christophe@pallier.org>
 
 """A series of trials where a dot is presented and the user must click as quickly as possible on the mouse. Reaction times are measured and saved in a file."""
 
@@ -26,10 +25,10 @@ try:
         waiting_time = random.randint(1000, 2000)
         pygame.time.delay(waiting_time)
         pygame.event.clear()
-        t0 = pygame.time.get_ticks()
 
         pygame.draw.circle(screen, WHITE, (W // 2, H // 2), 4)
-        pygame.display.update()
+        pygame.display.flip()
+        t0 = pygame.time.get_ticks()
 
         buttonpressed = False
         while not(buttonpressed):
@@ -42,7 +41,7 @@ try:
         reaction_times.append(t1 - t0)
 
         screen.fill(BLACK)
-        pygame.display.update()
+        pygame.display.flip()
 
 except:
     pass

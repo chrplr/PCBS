@@ -15,8 +15,7 @@ and run and study the scripts
 Kanizsa illusory contours
 -------------------------
 
-0. Starting from the ``square.py`` and ``circle.py`` scripts, create a
-   new script to display the Kanizsa squares:
+0. Starting from :download:`square.py <../visual-illusions/square.py>` and   :download:`circle.py <../visual-illusions/circle.py>`, scripts, create a new script to display the following figures:
 
    .. figure:: images/Kanizsa-square.jpeg
       :alt: Kanizsa square
@@ -55,12 +54,7 @@ Herman grid
 
 -  Check out :download:`my solution <../visual-illusions/grid.py>`
 
--  Optional: Read
-   https://stackabuse.com/command-line-arguments-in-python/ and use the
-   ``sys.argv[]`` array from the ``sys`` module (or use the ``argparse``
-   module) to get from the command lines the number of columns, rows,
-   the size of square and the size of the margins. Play with those
-   parameters to see if you can make the illusion come and go.
+- Optional: Read https://stackabuse.com/command-line-arguments-in-python/ and use the ``sys.argv[]`` array from the ``sys`` module (or use the ``argparse`` module) to get from the command lines the number of columns, rows, the size of square and the size of the margins. Play with those parameters to see if you can make the illusion come and go.
 
 Ebbinghaus-Titchener
 --------------------
@@ -114,9 +108,7 @@ Here is the Honeycom illusion:
    `Bertamini’s web
    site <https://www.programmingvisualillusionsforeveryone.online/scripts.html>`__.
    To run it you might need to install “wxpython” (beware: it can be
-   troublesome)
-
-   ::
+   troublesome)::
 
         conda install wxPython
         pip install psychopy
@@ -258,23 +250,25 @@ Simple reaction times
 
 3. Here is a :download:`solution using expyriment <../reaction-times/simple-detection-visual-expyriment.py>`.
 
-Run the previous script. Check the results file in the folder `data`.
-Launch ipython in the `data` folder and type::
+Run the previous script. Check the results file in the folder ``data``.
+Launch ``ipython`` in the ``data`` folder and execute, line by line::
 
    import pandas as pd
-   d = pd.read_csv(‘simple-detection.xpd’,comment=‘#’)
-   d.RT.mean()
-   d.RT.std()
-   d.RT[1:].mean()
+   d = pd.read_csv('simple-detection.xpd',comment='#')
+   print(d.RT.mean())
+   print(d.RT.std())
+   print(d.RT[1:].mean())
+   import matplotlib.pyplot as plt
+   plt.stem(d.RT)
+   plt.show()
+   plt.close()
+   plt.hist(d.RT)
+   plt.show()
 
-   import matplotlib.pyplot as plt plt.hist(d.RT)
 
-4. Read https://docs.expyriment.org/Tutorial.html to understand the
-   basic principles of expyriment. See :download:`../expyriment/expyriment_minimal_template.py`
+4. Read https://docs.expyriment.org/Tutorial.html to understand the basic principles of expyriment. See :download:`/expyriment/expyriment_minimal_template.py <../expyriment/expyriment_minimal_template.py>`
 
-5. Modify `simple-detection-visual-expyriment.py` to play a short
-   sound (`click.wav`) in lieu of displaying a cross. Thus you have
-   created a simple detection audio experiment.
+5. Modify :download:`reaction-times/simple-detection-visual-expyriment.py <../reaction-times/simple-detection-visual-expyriment.py>` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have created a simple detection audio experiment.
 
 6. Modify the script to have 3 blocks of trials: one in which the target
    is visual, one in which it is audio, and one in which it is randomly
@@ -333,7 +327,7 @@ estimate of the speed of word recognition.
 -  Generate 50 pseudowords using either `Lexique
    tools <http://www.lexique.org/toolbox/toolbox.pub/>`__ or
    `Wuggy <http://crr.ugent.be/programs-data/wuggy>`__
--  Program a lexical decision using expyriment.
+-  Program a lexical decision using *expyriment*.
 -  Run it and compute the average decision times using pandas
 
 
@@ -353,7 +347,6 @@ More examples using expyriment.org
 -  See http://docs.expyriment.org/old/0.9.0/Examples.html
 -  Fork https://github.com/expyriment/expyriment-stash and contribute by
    adding new scripts!
-
 
 
 Data Analyses
@@ -381,7 +374,7 @@ Permutation tests
    samples.
 
 -  Check out my solution:
-   `permutation_test/permutation_test.py <permutation_test/permutation_test.py>`__
+   :download:`permutation_test/permutation_test.py <../permutation_test/permutation_test.py>`.
 
 Bootstrap
 ---------
@@ -395,10 +388,8 @@ Frequency Analysis
 ------------------
 
 -  See
-   `data-analysis/short-intro-fourier <data/analysis/short-intro-fourier>`__
-   and the associated jupyter notebook `data-analysis/short intro to
-   frequency analysis (Fourier
-   series).ipynb <data-analysis/short%20intro%20to%20frequency%20analysis%20(Fourier%20series).ipynb>`__
+   :download:`../data-analysis/short-intro-fourier <../data-analysis/short-intro-fourier>`
+   and the associated jupyter notebook :download:`../data-analysis/short intro to frequency analysis (Fourier series).ipynb <data-analysis/short%20intro%20to%20frequency%20analysis%20(Fourier%20series).ipynb>`
 
 
 
@@ -409,16 +400,16 @@ Lexical Statistics
 Zipf law
 --------
 
--  The script (word-count.py])[Zipf/word-count.py] computes the
+-  The script :download:`Zipf/word_count.py <../Zipf/word_count.py>` computes the
    distribution of frequencies of occurences in a list of words. Use it
    to compute the distribution of word frequencies in `Alice in
    Wonderland <http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt>`__.
 
-   Note: To remove the punctuation, you can use the following function:
+   Note: To remove the punctuation, you can use the following function::
 
-   import string def remove_punctuation(text): punct =
-   string.punctuation + chr(10) return
-   text.translate(str.maketrans(punct, " " \* len(punct)))
+    import string def remove_punctuation(text): punct =
+    string.punctuation + chr(10) return
+    text.translate(str.maketrans(punct, " " \* len(punct)))
 
 -  Zipf law states that the product rank X frequency is roughly
    constant. This ‘law’ was discovered by Estoup and popularized by
@@ -430,7 +421,7 @@ Zipf law
 
 -  Display the relationship between word length and word frequencies
    from the data in
-   `lexical-decision/lexique382-reduced.txt <lexical-decision/lexique382-reduced.txt>`__
+   :download:`lexical-decision/lexique382-reduced.txt <lexical-decision/lexique382-reduced.txt>`
 
 -  Generate random text (each letter from a-z being equiprobable, and
    the spacecharacter being 8 times more probable) of 1 million
@@ -461,7 +452,7 @@ that displays the distribution of the most significant digit in a set of
 numbers. Apply it to the variables in
 `Benford-law/countries.xlsx <Benford-law/countries.xlsx>`__.
 
-A solution: `Benford-law/Benford.py <Benford-law/Benford.py>`__
+A solution: :download:`Benford-law/Benford.py <../Benford-law/Benford.py>`
 
 
 
@@ -476,7 +467,7 @@ Monte Carlo Estimation
 
 -  Write a script that estimate pi using this method (then check my
    solution:
-   `simulations/estimate_PI_by_MonteCarlo.py <simulations/estimate_PI_by_MonteCarlo.py>`__)
+   :download:`simulations/estimate_PI_by_MonteCarlo.py <../simulations/estimate_PI_by_MonteCarlo.py>`)
 
 Fractals
 --------
@@ -492,7 +483,7 @@ are self-similar at several scales.
    -  use the turtle module
    -  use recursion
 
-   My solution: `games/koch.py <games/koch.py>`__
+   My solution: :download:`games/koch.py <../games/koch.py>`
 
 Cellular Automata
 -----------------

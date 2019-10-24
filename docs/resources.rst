@@ -23,7 +23,7 @@ Books relevant to Cognitive and Brain Sciences Programming
 Programming skills
 ------------------
 
-*  Tips for writing clean code: tips_
+*  Tips for writing clean code: tips__
 *  `Software Carpentry <https://software-carpentry.org/lessons/>`__
    provides nice lessons about writing software for science.
 
@@ -38,12 +38,7 @@ Resources to learn Python
    (as well as the other books by the author). For those who dislike
    reading, there are videos on the site.
 
-
-
--  Read the Python scripts in the `games <games/>`__ folder.
-
-
--  See `Python in a Nutshell <02-Python_in_a_nutshell/Python_in_a_nutshell.md>`__ (LINK NOT WORKING)
+-  See :download:`Python in a Nutshell <../02_Python_in_a_nutshell/Python_in_a_nutshell-doc.html>`
 
 
 *  Books:
@@ -196,6 +191,8 @@ https://itsfoss.com/windows-linux-kernel-wsl-2/).
 
 Resources to learn Git
 ----------------------
+
+To understand why you need to learn git, see :doc:`tools-for-reproducible-science`
 
 *  Openclassrooms’ MOOC `Manage your code with Git and Github <https://openclassrooms.com/en/courses/3321726-manage-your-code-with-git-and-github?status=published>`__
 *  https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners

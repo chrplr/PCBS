@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-10-09 13:24:55 cp983411>
+# Time-stamp: <2019-10-24 10:27:51 christophe@pallier.org>
 
 """Flash-lag illusion.
 
@@ -19,14 +19,14 @@ screen.fill(WHITE)
 # Create two rectangle https://www.pygame.org/docs/ref/rect.html
 
 left, top = (W-width)/2, (H-height)/2 # (0,0) is at the upper left hand corner of the screen.
-mysquare1 = pygame.Rect(left - 300, top - 3 * height, width, height)
+mysquare1 = pygame.Rect(left - 300, top - 1.2 * height, width, height)
 mysquare2 = pygame.Rect(left, top, width, height)
 
 
 # loops till the window is closed
 done = False
 while not done:
-    print(mysquare1.x)
+    #print(mysquare1.x)
     if mysquare1.x > int(0.8 * W):
         step = - 10
     if mysquare1.x < int(0.2 * W):
