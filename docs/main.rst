@@ -254,12 +254,12 @@ Simple reaction times
    must be recorded in a file for further analyses.
 
 2. Here is a :download:`solution using pygame <../reaction-times/simple-detection-visual-pygame.py>`. Run it
-   and check ``reaction_times.csv``.
+   and check `reaction_times.csv`.
 
 3. Here is a :download:`solution using expyriment <../reaction-times/simple-detection-visual-expyriment.py>`.
 
-Run the previous script. Check the results file in the folder ``data``.
-Launch ipython in the ``data`` folder and type::
+Run the previous script. Check the results file in the folder `data`.
+Launch ipython in the `data` folder and type::
 
    import pandas as pd
    d = pd.read_csv(‘simple-detection.xpd’,comment=‘#’)
@@ -270,10 +270,10 @@ Launch ipython in the ``data`` folder and type::
    import matplotlib.pyplot as plt plt.hist(d.RT)
 
 4. Read https://docs.expyriment.org/Tutorial.html to understand the
-   basic principles of expyriment. See \`PCBS/expyriment_template.py`\`
+   basic principles of expyriment. See :download:`../expyriment_template.py`
 
-5. Modify ``simple-detection-visual-expyriment.py`` to play a short
-   sound (``click.wav``) in lieu of displaying a cross. Thus you have
+5. Modify `simple-detection-visual-expyriment.py` to play a short
+   sound (`click.wav`) in lieu of displaying a cross. Thus you have
    created a simple detection audio experiment.
 
 6. Modify the script to have 3 blocks of trials: one in which the target
