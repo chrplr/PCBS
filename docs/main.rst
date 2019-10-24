@@ -270,7 +270,7 @@ Launch ipython in the `data` folder and type::
    import matplotlib.pyplot as plt plt.hist(d.RT)
 
 4. Read https://docs.expyriment.org/Tutorial.html to understand the
-   basic principles of expyriment. See :download:`../expyriment_template.py`
+   basic principles of expyriment. See :download:`../expyriment/expyriment_minimal_template.py`
 
 5. Modify `simple-detection-visual-expyriment.py` to play a short
    sound (`click.wav`) in lieu of displaying a cross. Thus you have
