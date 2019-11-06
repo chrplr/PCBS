@@ -48,6 +48,7 @@ except:
 
 finally:
     saveresults = open(OUTPUT_FILE, 'w')
+    saveresults.write('Trial,RT\n')
     for t, r in enumerate(reaction_times):
         saveresults.write(str(t) + ", " + str(r) + "\n")
     saveresults.close()
