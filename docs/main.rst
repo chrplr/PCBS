@@ -275,6 +275,16 @@ Launch ``ipython`` in the ``data`` folder and execute, line by line::
    visual or auditory. Are we slowed down in the latter condition?
 
 
+Sound-picture matching
+----------------------
+
+
+Download http://we.tl/t-NqsEe9bKwP 
+
+
+
+
+
 Posner’s attentional cueing task
 --------------------------------
 
