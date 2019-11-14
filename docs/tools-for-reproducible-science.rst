@@ -35,16 +35,16 @@ comments. For example:
 -  Rmarkdown:
 
    -  `comparing two treatments with
-      R <../data-analysis/comparing-two-means-dependent-groups.html>`__
-      (`source <../data-analysis/comparing-two-means-dependent-groups.Rmd>`__)
+      R <../data-analysis/comparing-two-means-dependent-groups.html>`
+      (`source <../data-analysis/comparing-two-means-dependent-groups.Rmd>`)
    -  see more at https://github.com/chrplr/statistics_with_R
 
 -  jupyter notebook:
 
    -  `tutorial on Fourier
-      analysis <../data-analysis/short-intro-fourier.html>`__
+      analysis <../data-analysis/short-intro-fourier.html>`
    -  `tutorial on fMRI data
-      analysis <../data-analysis/Example+of+a+single+subject-single+run+fMRI+analysis+with+nistats.html>`__
+      analysis <../data-analysis/Example+of+a+single+subject-single+run+fMRI+analysis+with+nistats.html>`
    -  see more at
       https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks
 
@@ -555,6 +555,7 @@ To understand the inner workings of git, the following documents are useful:
 * `Git from the bottom up <https://jwiegley.github.io/git-from-the-bottom-up/>`__
 
 Finally, the comprehensive documentation is the `Git Book <https://git-scm.com/book/en/v2>`__ 
+
 
 
 
