@@ -2,12 +2,12 @@
 title: "Interroger Lexique avec R"
 author: "Christophe Pallier"
 output:
-  pdf_document:
+  html_notebook:
     toc: yes
   html_document:
     df_print: paged
     toc: yes
-  html_notebook:
+  pdf_document:
     toc: yes
 ---
 
@@ -227,5 +227,10 @@ Par exemple, pour charger la table SUBTLEX-US:
     subtlexus <- readRDS(fetch_dataset('SUBTLEX-US', format='rds')$datatables[[1]])
     ```
 
+
+## Going further  
+
+Check the scripts at 
+<https://github.com/chrplr/openlexicon/tree/master/scripts>
 
 

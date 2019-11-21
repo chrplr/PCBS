@@ -1,7 +1,13 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-11-18 17:34:02 christophe@pallier.org>
+# Time-stamp: <2019-11-19 11:07:19 christophe@pallier.org>
 
-""" sentence picture matching task """
+""" Example of a sentence picture matching task.
+
+In a series of trials, a sound file is played, then a  picture is displayed. The participant must press one of two keys to indicate whether the picture matches the content of the sound file or not.
+
+The experiment is driven by the file `trials.csv`  with one row per trial and two columns: `Sound` and `Img`.
+
+"""
 
 from os.path import join
 from pandas import read_csv
