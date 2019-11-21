@@ -4,10 +4,10 @@ author: "Christophe Pallier"
 output:
   pdf_document:
     toc: yes
-  html_notebook:
-    toc: yes
   html_document:
     df_print: paged
+    toc: yes
+  html_notebook:
     toc: yes
 ---
 
@@ -26,9 +26,9 @@ Note: Il fait parti du cours [Programmation pour les Sciences Cognitives](https:
    
 2. Démarrer le programme **Rstudio** puis, dans l'onglet **Console** situé dans la fenêtre en bas à gauche, copier la ligne suivante puis appuyez sur 'Entrée'
 
-    ```{r warning=FALSE,  message=FALSE, results='hide'}
-    install.packages(c('rjson', 'tidyverse'))
-    ```
+```{r warning=FALSE,  message=FALSE, results='hide'}
+install.packages(c('rjson', 'tidyverse'))
+```
 
    Laissez RStudio se débrouiller (mais vous devrez peut-être sélectionner un serveur). 
 
@@ -50,15 +50,15 @@ Dans le menu `File`, ouvrez le projet *lexique* créé dans la section précéde
   
   Copiez les lignes suivantes à l'intérieur du bloc de code qui vient d'être créé. 
 
-    ```{r warning=FALSE,  message=FALSE, results='hide'}
-    require(tidyverse)
-    require(rjson)
-    source('https://raw.githubusercontent.com/chrplr/openlexicon/master/datasets-info/fetch_datasets.R')
-    lexique <- get_lexique382()
-    ```
+```{r warning=FALSE,  message=FALSE, results='hide'}
+require(tidyverse)
+require(rjson)
+source('https://raw.githubusercontent.com/chrplr/openlexicon/master/datasets-info/fetch_datasets.R')
+lexique <- get_lexique383()
+```
 
 
-La fenêtre `Rstudio` doit ressembler à la fiugure suivante :
+La fenêtre `Rstudio` doit ressembler à la figure 1.
 
 ![Téléchargment de Lexique](getlex.png)
 
@@ -215,6 +215,10 @@ head(selection4)
 Le projet [OpenLexicon](https://github.com/chrplr/openlexicon) comprend de nombreuses tables lexicales (voir <https://chrplr.github.io/openlexicon/datasets-info/>).
 
 Pour accéder à ces tables, vous pouvez utiliser la fonction `fetch_datatset` définie dans <https://raw.githubusercontent.com/chrplr/openlexicon/master/datasets-info/fetch_datasets.R>. 
+
+Elle télécharge automatiquement les bases de données définies dans les fichiers .json listés dans   <https://raw.githubusercontent.com/chrplr/openlexicon/master/datasets-info/_json>.
+
+
 
 Par exemple, pour charger la table SUBTLEX-US:
 

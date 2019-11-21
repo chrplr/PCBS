@@ -1,8 +1,11 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-09-21 12:13:56 cp983411>
+# Time-stamp: <2019-11-18 17:38:27 christophe@pallier.org>
 
 
-""" Basic example of an experiment using the expyriment module <https://www.expyriment.org/> """
+""" Sound (pure tone) detection.
+
+Basic example of an experiment using the expyriment module <https://www.expyriment.org/> """
+
 
 import random
 import expyriment
@@ -14,7 +17,7 @@ ITI = 2000  # inter trial interval
 exp = expyriment.design.Experiment(name="Simple Audio  Experiment")  # create an Experiment object
 
 ## Set develop mode. Comment for real experiment
-# expyriment.control.set_develop_mode(on=True)
+expyriment.control.set_develop_mode(on=True)
 
 expyriment.control.initialize(exp)
 
@@ -34,11 +37,10 @@ tone2.preload()
 fixcross = expyriment.stimuli.FixCross()
 fixcross.preload()
 
-
 # create a block (which will consists in a series of trials)
 block = expyriment.design.Block(name="First and only block") 
 
-# populate the blco with trials
+# populate the bloc with trials
 for _ in range(NTRIALS//2):
     trial = expyriment.design.Trial()
     trial.add_stimulus(tone1)
