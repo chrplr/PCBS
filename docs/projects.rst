@@ -36,17 +36,21 @@ things and improve your coding skills.
    regularily. it is important to have someone else check that the
    documentation and code that you write is readable.
 
--  use the slack to ask questions
+-  use the slack forum https://cogmaster-pcbs.slack.com/ to ask questions
 
 -  You can use whichever language is suited to your project (Python, R, Processing
    Javascript, Julia, ...). There are only two rules:
 
    1. the code must be readable by a non specialist of the language.
-   2. Matlab is forbidden (although this is implied by rule 1, some may not realize it)
+   2. Matlab is discouraged: if you use it, make sure that you avoid global variables, and factor your code in small functions. 
 
+
+- At the end of the README.md`  fill, you must include a section detailling:
+    - your previous coding experience
+    - what you have learned since then, by following the lecture, coding the project or working by yourself
+    - what you missed in this course.  
 
 -  An example of the kind of things that I expect is provided at http://chrplr.github.com/PCBS-LexicalDecision
-
 
 
 Examples of Students' Projects from previous sessions
@@ -124,28 +128,33 @@ Some ideas
    object representations without awareness: evidence from
    motion-induced blindness. (project suggested by Mark Wexler)
 
+- `Multiple Object Tracking
+   <http://www.scholarpedia.org/article/Multiple_object_tracking>`__, is an
+   experimental technique used to study how our visual system tracks multiple
+   moving objects. Program a such an experiment.
+
+- Read `Moving hand reveals dynamics of thought
+   <https://doi.org/10.1073/pnas.0504413102>`__. Program a word-picture matching
+   task recording the mouse trajectory (See Spivey, Michael J., Marc Grosjean,
+   and Günther Knoblich. 2005. “Continuous Attraction toward Phonological
+   Competitors.” Proceedings of the National Academy of Sciences of the United
+   States of America 102 (29): 10393–10398.)
+
 -  When asked to generate random sequences of digits, people usually
    perform poorly (i.e., non-random; Wagenaar, 1972). A paradigm to
    measure deviations from randomness is the Random Number Generation
    (RNG; e.g., Ginsburg & Karpiuk, 1994) task. In this task,
    participants are asked to produce sequences of digits (e.g., 1–10) in
-   a random fashion. Program the task (It is not trivial as you must use
-   automatic speech recognition to recognize the digits), and
-   investigate the various vatiables that have been proposed to account
+   a random fashion. Program the task, and
+   investigate the various variables that have been proposed to account
    for subjects’ behavior. See Peters et al. (2007). The random number
    generation task: Psychometric properties and normative data of an
    executive function task in a mixed sample. *Journal of the
    International Neuropsychological Society* (Project suggested by
    Jerome Sackur)
 
--  Artificial Neural networks. You can program a simulation from scratch
-   of one of those simple neural networks:
 
-   -  Hopfield network
-   -  Kohonen network
-   -  a simple auto-encoder with one middle layer
-
--  Create a pseudoword generator, that is a program that generates
+-  Create a pseudoword generator, that is, a program that generates
    strings of characters that look like possible words but do not exist
    in the lexicon of a given language. There are many strategies to
    generate pseudowords (e.g., random, following a probabilistic model,
@@ -156,8 +165,8 @@ Some ideas
 -  Build an automatic classifier that tries to identify the language
    (e.g. English vs French) of a text from letter statistics; Test it on
    words, sentences, full documents. You must use cross validation (the
-   test and training sets must be different). Plot the identifciation
-   performance as a function of the lenght of the text (in characters).
+   test and training sets must be different). Plot the identification
+   performance as a function of the length of the text (in characters).
 
 -  `Mix and
    Match <http://www.mrc-cbu.cam.ac.uk/people/maarten-van-casteren/mixandmatch/>`__
@@ -166,6 +175,15 @@ Some ideas
    constraints supplied by the user in a simple script. Match can match
    the conditions of factorial experiments. Write similar tools in
    Python.
+
+-  Artificial Neural networks. You can program a simulation from scratch
+   of one of those simple neural networks:
+
+   -  Hopfield network
+   -  Kohonen network
+   -  a simple auto-encoder with one middle layer
+
+
 
 -  Do you know the *Countdown game* (“Le compte est bon” en français)?
    An interesting question is how do humans solve it. About this, read

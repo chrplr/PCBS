@@ -346,7 +346,7 @@ See a solution at https://github.com/chrplr/PCBS-LexicalDecision
 A general audio visual stimulus presentation script
 ---------------------------------------------------
 
-In some experiments, we know in avdvance the precise timing of all
+In some experiments, we know in advance the precise timing of all
 stimuli (the program flow does not depends on external events). I wrote
 a script that reads the timing of audiovisual stimuli and presents them
 at the expected times — Its code is available at https://www.github.com/chrplr/audiovis
@@ -384,7 +384,7 @@ Permutation tests
 -  Implement a python script that uses a permutation test to compare two
    samples.
 
--  Check out my solution:
+-  Check out the solution I propose:
    :download:`permutation_test/permutation_test.py <../permutation_test/permutation_test.py>`.
 
 Bootstrap
