@@ -275,13 +275,16 @@ Launch ``ipython`` in the ``data`` folder and execute, line by line::
    visual or auditory. Are we slowed down in the latter condition?
 
 
+
 Sound-picture matching
 ----------------------
 
+:download:`../expyriment/sentence_picture_matching/sentence-picture-matching.py <../expyriment/sentence_picture_matching/sentence-picture-matching.py>`
+ presents a sound, followed by one picture and waits for the participant to press a button.
 
-Download http://we.tl/t-NqsEe9bKwP 
 
-
+Exercice: Modify the prvious script to present two pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from
+:download:`expyriment/touchscreen_test/touchscreen-test.py  <../expyriment/touchscreen_test/touchscreen-test.py>`
 
 
 
@@ -326,29 +329,27 @@ word or not, indicating his/her decision by pressing a left or right
 button. Reaction time is measured from the word onset, providing an
 estimate of the speed of word recognition.
 
--  Visit the web site http://www.lexique.org
--  To learn to use lexique with R, follow the document
+-  Visit the web sites http://www.lexique.org and https://chrplr.github.io/openlexicon/
+-  To learn to query Lexical databases from R, follow the instructions in
    http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html
--  Using [lexical-decision/select-words-from-lexique.py] as an example,
-   select 20 high frequency nouns, 20 low frequency nouns, 20 high
-   frequency verbs and 20 low frequency verbs, from Lexique382.txt —
-   from http://www.lexique.org/public/Lexique382.zip. They must all have
+-  Select 20 high frequency nouns, 20 low frequency nouns, 20 high
+   frequency verbs and 20 low frequency verbs. They must all have
    a length of 5 to 8 characters.
--  Generate 50 pseudowords using either `Lexique
-   tools <http://www.lexique.org/toolbox/toolbox.pub/>`__ or
+-  Generate 50 pseudowords using either https://github.com/chrplr/openlexicon/blob/master/scripts/generate-pseudowords1/generate-pseudowords.R or
    `Wuggy <http://crr.ugent.be/programs-data/wuggy>`__
--  Program a lexical decision using *expyriment*.
+-  Program a lexical decision using the `expyriment` module. 
 -  Run it and compute the average decision times using pandas
 
+
+See a solution at https://github.com/chrplr/PCBS-LexicalDecision
 
 A general audio visual stimulus presentation script
 ---------------------------------------------------
 
 In some experiments, we know in avdvance the precise timing of all
 stimuli (the program flow does not depends on external events). I wrote
-a script that reads the timing of audiovisual stimuli and present them
-at the expected times — Its code is available at
-https://www.github.com/chrplr/audiovis
+a script that reads the timing of audiovisual stimuli and presents them
+at the expected times — Its code is available at https://www.github.com/chrplr/audiovis
 
 
 More examples using expyriment.org
@@ -417,9 +418,10 @@ Zipf law
 
    Note: To remove the punctuation, you can use the following function::
 
-    import string def remove_punctuation(text): punct =
-    string.punctuation + chr(10) return
-    text.translate(str.maketrans(punct, " " \* len(punct)))
+    import string
+    def remove_punctuation(text):
+       punct = string.punctuation + chr(10)
+       return text.translate(str.maketrans(punct, " " \* len(punct)))
 
 -  Zipf law states that the product rank X frequency is roughly
    constant. This ‘law’ was discovered by Estoup and popularized by

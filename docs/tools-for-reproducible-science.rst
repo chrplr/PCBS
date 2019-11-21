@@ -34,23 +34,27 @@ comments. For example:
 
 -  Rmarkdown:
 
+
+
    -  `comparing two treatments with
-      R <../data-analysis/comparing-two-means-dependent-groups.html>`
-      (`source <../data-analysis/comparing-two-means-dependent-groups.Rmd>`)
+      R http:/chrplr.github.io/PCBS//data-analysis/comparing-two-means-dependent-groups.html
+      (source: https://github.com/chrplr/PCBS/blob/master/data-analysis/comparing-two-means-dependent-groups.Rmd)
    -  see more at https://github.com/chrplr/statistics_with_R
+
+   -  http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html
 
 -  jupyter notebook:
 
    -  `tutorial on Fourier
-      analysis <../data-analysis/short-intro-fourier.html>`
+      analysis http:/chrplr.github.io/PCBS//data-analysis/short-intro-fourier.html
    -  `tutorial on fMRI data
-      analysis <../data-analysis/Example+of+a+single+subject-single+run+fMRI+analysis+with+nistats.html>`
+      analysis http:/chrplr.github.io/PCBS//data-analysis/Example+of+a+single+subject-single+run+fMRI+analysis+with+nistats.html
    -  see more at
       https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks
 
 Remarks:
 
-1. There are problems with tools such as Excel, E-Prime, …
+1. There are problems with tools such as Excel, E-Prime, ...
 
    -  they are impossible to check thoroughly.
    -  the files are saved in binary format (not human readable)
@@ -61,8 +65,7 @@ Remarks:
    https://www.markdownguide.org/getting-started). It is good enough to
    produce scientific reports (LaTeX not needed!).
 
-**Version control systems** (e.g. ``git``, ``svn``, ``mercurial``, …)
-are useful for two reasons:
+**Version control systems** (e.g. ``git``, ``svn``, ``mercurial``,...) are useful for two reasons:
 
 1. They allow you keep track of the complete history of a project. While
    your scripts or documents improve, it keeps *cached copies* of the
