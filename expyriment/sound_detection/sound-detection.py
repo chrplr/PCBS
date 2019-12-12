@@ -1,10 +1,13 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-11-18 17:38:27 christophe@pallier.org>
-
 
 """ Sound (pure tone) detection.
 
-Basic example of an experiment using the expyriment module <https://www.expyriment.org/> """
+# Time-stamp: <2019-12-12 12:32:42 christophe@pallier.org>
+
+The experiment consists in a series of trials in which a tone is played and the participant must press on a response key as quickly as possible. The tone can be high or low (50% proba)
+
+This is basic example of a psychology experiment implemented with the expyriment module <https://www.expyriment.org/>
+"""
 
 
 import random
@@ -21,11 +24,10 @@ expyriment.control.set_develop_mode(on=True)
 
 expyriment.control.initialize(exp)
 
-
 ## Creating the stimuli and trials
 
 instructions = expyriment.stimuli.TextScreen("Instructions",
-                                             "You will hear a successions of tones; Press the 's' key as quickly as possible upon hearing a tone\n\nPress the SPACEBAR to start")
+                                             "You will hear a successions of tones; Press the 'J' key as quickly as possible upon hearing a tone\n\nPress the SPACEBAR to start")
 
 
 tone1 = expyriment.stimuli.Tone(100, 440, 22050, 16, 1)
@@ -76,7 +78,7 @@ for b in exp.blocks:
         waiting_time = 1000 + random.random() * 1000 
         exp.clock.wait(waiting_time)
         tone.present()
-        key, rt = kb.wait(keys='s', duration=2000)
+        key, rt = kb.wait(keys='j', duration=2000)
         exp.data.add([t.get_factor('tone'), waiting_time, key, rt])
 
 expyriment.control.end()
