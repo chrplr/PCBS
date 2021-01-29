@@ -15,7 +15,7 @@ Run this script with python to execute the tests.
 You will know that you have succeeded once all the tests pass.
 """
 
-from w_1_common import test_function_output_for_input_equals_expected
+from w_1_common import test_function_output_for_input_equals_expected, print_success
 
 def get_num_of_streaks(coin_flips, streak_length):
     pass
@@ -49,3 +49,5 @@ for input_args, output_expected in expected_input_output_pairs:
 get_num_of_streaks(coin_flips_2, 0)
 get_num_of_streaks([], -1)
 get_num_of_streaks(["H", "T"], -1)
+
+print_success()

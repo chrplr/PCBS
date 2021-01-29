@@ -16,7 +16,7 @@ Run this script with python to execute the tests.
 You will know that you have succeeded once all the tests pass.
 """
 
-from w_1_common import test_function_output_for_input_equals_expected
+from w_1_common import test_function_output_for_input_equals_expected, print_success
 
 def get_string_by_enumerating_items(items):
     pass
@@ -33,3 +33,4 @@ for input_value, output_expected in expected_input_output_pairs:
     test_function_output_for_input_equals_expected(
         get_string_by_enumerating_items, input_value, output_expected
     )
+print_success()

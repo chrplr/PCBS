@@ -9,3 +9,6 @@ def test_function_output_for_input_equals_expected(function, input, output_expec
         print("input", input)
         print("output", output_actual)
     assert output_actual == output_expected
+
+def print_success():
+    print("Exercise complete!")
