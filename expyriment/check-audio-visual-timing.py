@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# Time-stamp: <2019-02-09 09:52:16 christophe@pallier.org>
+# Time-stamp: <2020-02-21 18:19:33 christophe@pallier.org>
 
 ''' Display two white squares in alternance and play sounds simultanously, 
 to check timing with external equipment (oscilloscope, BlackBox ToolKit, ...) '''
@@ -8,18 +8,18 @@ to check timing with external equipment (oscilloscope, BlackBox ToolKit, ...) ''
 import expyriment
 
 TONE_DURATION = 100
-SQUARE_DURATION = 20 * (1000.0 / 60) - 2  # Twenty video refresh periods at 60Hz
-SOA = 1000  
+SQUARE_DURATION = 60 * (1000.0 / 60) - 2  # Twenty video refresh periods at 60Hz
+SOA = 3000
 
 
 exp = expyriment.design.Experiment(name="Cross-modal-timing-test")
-# expyriment.control.set_develop_mode(True)  # commented because we need fullscreen
+expyriment.control.set_develop_mode(True)  # commented because we need fullscreen
 
 expyriment.control.initialize(exp)
 
 ##
 
-square_top = expyriment.stimuli.Rectangle((200, 200), position=(0, 300))
+square_top = expyriment.stimuli.Rectangle((400, 400), position=(0, 300))
 tone = expyriment.stimuli.Tone(TONE_DURATION, 440)
 
 

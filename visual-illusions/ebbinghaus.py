@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-10-08 10:22:03 cp983411>
+# Time-stamp: <2019-10-24 14:48:52 christophe@pallier.org>
 
 """Draws the Ebbinghaus-Titchener illusion.
 
@@ -31,7 +31,8 @@ def Ebbinghaus(surface, n, d, r1, r2, col1, col2, x, y):
             col2: color of the outer circles
             x, y: coordinates of the center of the figure on the screen
         Returns:
-            None
+
+        None
             the stimulus is drawn on the surface
 
         """

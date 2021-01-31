@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-10-24 10:27:51 christophe@pallier.org>
+# Time-stamp: <2019-10-24 15:28:26 christophe@pallier.org>
 
 """Flash-lag illusion.
 
@@ -35,7 +35,7 @@ while not done:
 
     screen.fill(WHITE)
     pygame.draw.rect(screen, BLACK, mysquare1)
-    if abs(mysquare1.x - W//2) < 5:
+    if abs(mysquare1.x - (W-width)//2) < 5:
            pygame.draw.rect(screen, BLACK, mysquare2)
 
     pygame.display.flip()

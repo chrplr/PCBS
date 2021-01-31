@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>TD 17/10/2019 &#8212; Programming for Cognitive and Brain Sciences  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="td-17-10-2019">
+<h1>TD 17/10/2019<a class="headerlink" href="#td-17-10-2019" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="python-basics">
+<h2>1. Python basics<a class="headerlink" href="#python-basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="if-not-already-done">
+<h3>1.1 (if not already done)<a class="headerlink" href="#if-not-already-done" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>prints 1000 times the lines: <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">work</span> <span class="pre">and</span> <span class="pre">no</span> <span class="pre">play</span> <span class="pre">makes</span> <span class="pre">Jack</span> <span class="pre">a</span> <span class="pre">dull</span> <span class="pre">boy.</span></code></p></li>
+<li><p>Given a list of numbers, print their product</p></li>
+<li><p>Given a list of numbers, print the sum of their square</p></li>
+<li><p>Given a list of numbers, print the largest one.</p></li>
+<li><p>Given a list of numbers, print the second largest one.</p></li>
+</ul>
+<p>References:</p>
+<ul class="simple">
+<li><p>Python Lists <a class="reference external" href="https://www.w3schools.com/python/python_lists.asp">https://www.w3schools.com/python/python_lists.asp</a></p></li>
+<li><p>List comprehensions <a class="reference external" href="https://www.pythonforbeginners.com/basics/list-comprehensions-in-python">https://www.pythonforbeginners.com/basics/list-comprehensions-in-python</a></p></li>
+<li><p>https://automatetheboringstuff.com/chapter4/</p></li>
+</ul>
+</div>
+<div class="section" id="unique">
+<h3>1.2: Unique<a class="headerlink" href="#unique" title="Permalink to this headline">¶</a></h3>
+<p>Given a list of words, print how many different words are in that list (hint: use a dictionary or a set)</p>
+<p>References:</p>
+<ul class="simple">
+<li><p>Python sets: https://www.w3schools.com/python/python_sets.asp</p></li>
+</ul>
+</div>
+<div class="section" id="word-count">
+<h3>1.3: word count<a class="headerlink" href="#word-count" title="Permalink to this headline">¶</a></h3>
+<p>Given a list of words, count the number of times each word appears in
+the list. Eg. <code class="docutils literal notranslate"><span class="pre">[Jim,</span> <span class="pre">Alan,</span> <span class="pre">Jim,</span> <span class="pre">Joe]</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Jim:2,</span> <span class="pre">Alan:1,</span> <span class="pre">Joe:1</span></code>
+(hint: use a dictionary)</p>
+<p>Reference:</p>
+<ul class="simple">
+<li><p>Python dictionaries: https://www.w3schools.com/python/python_dictionaries.asp</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="file-reading">
+<h2>2. File reading<a class="headerlink" href="#file-reading" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="read-a-file">
+<h3>2.1 Read a file<a class="headerlink" href="#read-a-file" title="Permalink to this headline">¶</a></h3>
+<p>Try to run the following script to read a file:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># First, open a so-called &quot;file object&quot;</span>
+<span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text.txt&#39;</span><span class="p">)</span>
+<span class="c1"># The read() function by defaults returns all the content of the file</span>
+<span class="n">text</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="c1"># Don&#39;t forget to close the file!</span>
+<span class="nb">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Here is a more standard syntax, using the <code class="docutils literal notranslate"><span class="pre">with</span></code> keyword:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>With the <code class="docutils literal notranslate"><span class="pre">with</span></code> keyword, the file object is automatically disposed of (ie. closed) at the end of the block.</p>
+</div>
+<div class="section" id="head">
+<h3>2.2: head<a class="headerlink" href="#head" title="Permalink to this headline">¶</a></h3>
+<p>Read the documentation of the functions <code class="docutils literal notranslate"><span class="pre">readline()</span></code> and <code class="docutils literal notranslate"><span class="pre">readlines()</span></code>. Use them to write a program that prints the first 10 lines a file (or the whole file if it is less than 10 lines long)</p>
+<p>Bonus for this and all scripts in this section: your program should take the input file as a command line argument.</p>
+</div>
+<div class="section" id="tail">
+<h3>2.3: tail<a class="headerlink" href="#tail" title="Permalink to this headline">¶</a></h3>
+<p>Write a script that prints the last 10 lines of a file (or the whole
+file is it is less than 10 lines long).</p>
+</div>
+<div class="section" id="number-parsing">
+<h3>2.4: number parsing<a class="headerlink" href="#number-parsing" title="Permalink to this headline">¶</a></h3>
+<p>The file <code class="docutils literal notranslate"><span class="pre">numbers.txt</span></code> contains one number on each line. Write a program that prints the sum of all those numbers.</p>
+<p>Tip: A hacky way to go through all the lines in a file is to use the iterable behavior embedded in the file object. One can simply iterate through the lines of a file with:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="c1"># Do something with line</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="line-numbers">
+<h3>2.5: line numbers<a class="headerlink" href="#line-numbers" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that opens a file and prints the content of the file with lines numbered starting at 1, and line numbers separated from the actual line by a space. For example if you feed it the file containing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Un</span> <span class="n">vieil</span> <span class="n">étang</span>
+<span class="n">Une</span> <span class="n">grenouille</span> <span class="n">saute</span>
+<span class="n">Le</span> <span class="n">bruit</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;eau</span>
+
+<span class="n">Basho</span>
+</pre></div>
+</div>
+<p>You should print:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="n">Un</span> <span class="n">vieil</span> <span class="n">étang</span>
+<span class="mi">2</span> <span class="n">Une</span> <span class="n">grenouille</span> <span class="n">saute</span>
+<span class="mi">3</span> <span class="n">Le</span> <span class="n">bruit</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;eau</span>
+<span class="mi">4</span> 
+<span class="mi">5</span> <span class="n">Basho</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>2.6: word count<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Write a program that counts the number of words in a file.</p>
+<p>Reference: look at the documentation of the <code class="docutils literal notranslate"><span class="pre">split()</span></code> function https://docs.python.org/3.7/library/stdtypes.html#str.split</p>
+</div>
+<div class="section" id="string-finder">
+<h3>2.7: string finder<a class="headerlink" href="#string-finder" title="Permalink to this headline">¶</a></h3>
+<p>Write a script that opens and read a text file, and print all the lignes that contain a given target word,  say, <code class="docutils literal notranslate"><span class="pre">cogmaster</span></code>.</p>
+<p>Reference: http://automatetheboringstuff.com/chapter8/</p>
+</div>
+</div>
+<div class="section" id="file-writing">
+<h2>3. File writing<a class="headerlink" href="#file-writing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tuto">
+<h3>3.1 Tuto<a class="headerlink" href="#tuto" title="Permalink to this headline">¶</a></h3>
+<p>To write to a file, one has to first open the file in write mode, by providing a second argument to the <code class="docutils literal notranslate"><span class="pre">open</span></code> function, and then use the function <code class="docutils literal notranslate"><span class="pre">write</span></code>:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="nb">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="opening-modes">
+<h3>3.2 Opening modes<a class="headerlink" href="#opening-modes" title="Permalink to this headline">¶</a></h3>
+<p>Read the documentation of the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function and learn about the different modes. Try to read in a file in write mode. What happens? Write a program that every time it is called appends one line containing</p>
+</div>
+<div class="section" id="id2">
+<h3>3.3<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Modify the Pascal triangle code so that it writes its output to a file <code class="docutils literal notranslate"><span class="pre">pascal.txt</span></code>.</p>
+<p>Hacky solution: the terminal has a process that can redirect the output of any program to a file, using the symbol  <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pascal.py &gt; pascal.txt
+</pre></div>
+</div>
+<p>Similarly an input can be fed to a program from a file. This system is called pipes and is very useful. You can learn more about them <a class="reference external" href="https://ryanstutorials.net/linuxtutorial/piping.php">here</a></p>
+</div>
+</div>
+<div class="section" id="git-github-setting-up-a-first-repository">
+<h2>4. git/github: setting up a first repository<a class="headerlink" href="#git-github-setting-up-a-first-repository" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-you-should-know">
+<h3>What you should know<a class="headerlink" href="#what-you-should-know" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">git</span></code> is a software that manages so-called <em>repositories</em>. These repositories are special directories with additional functionalities:</p>
+<ul class="simple">
+<li><p>They contain a full history of the modifications made. One can for example go back in time to an earlier version of the project.</p></li>
+<li><p>They offer synchronization services between different computers/different members of a team.</p></li>
+</ul>
+<p>This synchronization capacity needs to go via a webservice. The website github.com provides such a service for the <code class="docutils literal notranslate"><span class="pre">git</span></code> program.</p>
+<p>Note that although related, git and github.com are 2 separated entities: git is an open-source software that can be downloaded at https://git-scm.com/. github is a for-profit website, that offers every user the possibility to host for free public repositories (that everyone can see). Lots of alternatives to github exist, like gitlab.com.</p>
+<p>Also note that if you are a student you can apply for the github education pack that gives you the possibility to host private repositories (only invited members can see them), look <a class="reference external" href="https://education.github.com/pack">here</a></p>
+</div>
+<div class="section" id="creating-a-first-repo-on-github">
+<h3>Creating a first repo on github<a class="headerlink" href="#creating-a-first-repo-on-github" title="Permalink to this headline">¶</a></h3>
+<p>Follow the tutorial on https://pages.github.com/. You should create a repository, clone it, and be able to commit and push</p>
+</div>
+<div class="section" id="add-code-to-your-repo">
+<h3>Add code to your repo<a class="headerlink" href="#add-code-to-your-repo" title="Permalink to this headline">¶</a></h3>
+<p>Read https://en.wikipedia.org/wiki/Fahrenheit and write a script that converts
+temperature from one scale to the other. Add it to your new repository</p>
+</div>
+</div>
+<div class="section" id="advanced-exercises-for-the-bored">
+<h2>5. Advanced exercises (for the bored)<a class="headerlink" href="#advanced-exercises-for-the-bored" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="taxis">
+<h3>5.1 Taxis<a class="headerlink" href="#taxis" title="Permalink to this headline">¶</a></h3>
+<p>Two taxi companies propose differents pricing schemes:</p>
+<ul class="simple">
+<li><p>Company A charges 4.80€ plus 1.15€ by km travelled.</p></li>
+<li><p>Company B charges 3.20€ plus ##20€ by km travelled.</p></li>
+</ul>
+<p>Write a script that finds which company is the cheapest as a function of the distance to travel.</p>
+</div>
+<div class="section" id="kaprekar-numbers">
+<h3>5.2 Kaprekar numbers<a class="headerlink" href="#kaprekar-numbers" title="Permalink to this headline">¶</a></h3>
+<p>A Kaprekar number is a number whose decimal representation of the square can be decomposed in a left and a right part (both nonzero) such that the sum of the two parts equals the initial number. For example:</p>
+<ul class="simple">
+<li><p>703 is a Kaprekar number in base 10 because 703² = 494 209 and 494 + 209 = 703</p></li>
+<li><p>4879 is a Kaprekar number in base 10 because 4879² = 23 804 641 and 238 + 04641 = 4879</p></li>
+</ul>
+<p>Write a program that returns all Kaprekar numbers between 1 and N.</p>
+</div>
+<div class="section" id="rpn-calculator">
+<h3>5.3 RPN calculator<a class="headerlink" href="#rpn-calculator" title="Permalink to this headline">¶</a></h3>
+<p>Write a reverse Polish arithmetic expression evaluator (See
+https://en.wikipedia.org/wiki/Reverse_Polish_notation).</p>
+<p>E.g. <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">5</span> <span class="pre">-</span></code> evaluate to <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p>
+</div>
+<div class="section" id="rodrego-simulator">
+<h3>5.4 RodRego simulator<a class="headerlink" href="#rodrego-simulator" title="Permalink to this headline">¶</a></h3>
+<p>(only for very motivated people)
+Write a program that simulates a RodRego machine with 10 registers (http://sites.tufts.edu/rodrego/). The program is stored in a string or in a file that is read, then executed. The program must contain a function that, given the 10 initial values of the registers and the program returns the new register values after the END instruction is reached.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Programming for Cognitive and Brain Sciences</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="first-things-first.html">First things first</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running-python.html">Running Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-solve-problems.html">How to solve problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips-to-write-clean-code.html">Writing clean code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools-for-reproducible-science.html">Tools to do Reproducible Science</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automata-turing-machines-and-computers.html">Automata and Computers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automata-turing-machines-and-computers.html#practical-interaction-with-a-computer-in-a-nut-shell">Practical interaction with a computer (in a Nut <em>shell</em>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Creating static visual stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#creating-dynamic-visual-stimuli">Creating dynamic visual stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#creating-and-playing-sounds">Creating and playing sounds</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#experiments">Experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#data-analyses">Data Analyses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#lexical-statistics">Lexical Statistics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#simulations">Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html#examples-of-students-projects-from-previous-sessions">Examples of Students’ Projects from previous sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scratch/Starting-from-Scratch.html">Starting from Scratch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="representing-numbers-images-text.html">Representations of numbers, text, images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coding-exercices.html">Programming Exercices</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;CC-BY-SA 2019, Christophe Pallier.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/TD20191017.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

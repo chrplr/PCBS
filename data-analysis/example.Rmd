@@ -1,0 +1,15 @@
+---
+title: "test"
+author: "chris"
+date: "11/21/2019"
+output: html_document
+---
+
+
+Let's throw a coin 100 times.
+
+```{r}
+hist(replicate(1000, mean(sample(c(1,0), 100, replace=T))), xlim=c(0,1))
+```
+
+

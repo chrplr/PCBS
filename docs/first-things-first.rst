@@ -111,19 +111,19 @@ Among various python distributions, we recommend the `Anaconda
 distribution <https://www.anaconda.com/distribution>`__ because it comes
 with most of the packages needed for the lectures.
 
-1. Go to the https://www.anaconda.com/distribution> ; select your OS —
-   Windows, MacOS or Linux — and download the 64 bits
-   installer for the latest version of Python (3.7 at the time of writing this).
-2. Go to your download folder and execute the Anaconda3 installer.
+1. Go to <https://www.anaconda.com/> and among the "Products", search for the "Individual Edition";
+   Select your OS — Windows, MacOS or Linux — and download the 64 bits
+   installer for the latest version of Python (3.8 at the time of writing this).
+2. Execute the Anaconda3 installer.
 3. In the Anaconda Setup Wizard, pay attention to the following
    options:
 
    -  verify that you Install for ``Just Me (recommended)``, then click
       on ``Next``
    -  Accept the default Destination folder and click on ``Next``
-   -  VERY IMPORTANT: Check the boxes in front “Add Anaconda to my PATH” and “Register
-      Anaconda as my default Python” and click on ``Install``
-   -  upon completion, click on ‘Next’, then ``Finish``
+   -  VERY IMPORTANT: Check the boxes in front ``Add Anaconda to my PATH`` (ignore the warning that this is not recommended) and ``Register
+      Anaconda as my default Python`` and click on ``Install``
+   -  upon completion, click on ``Next``, then ``Finish``
 
 
 Expyriment
@@ -133,17 +133,18 @@ We will make use of Python library `Expyriment <http://www.expyriment.org>`__
 
 1. Open a Terminal, following the instructions specific to your operating system:
 
-Linux
-   launch ``Terminal`` from your applications menu (or use ``Ctrl-Alt-T``).
+Windows
+    Launch ``Anaconda Prompt`` (use the "Search box")
 
 MacOS
    Type ``terminal`` in the Spotlight search field (Or, open a ``Finder`` window, select the
    ``Application`` folder, then the ``Utilities`` folder, then double-click on the ``Terminal`` icon)
 
-Windows
-    Start ``Anaconda Prompt``
+Linux
+   launch ``Terminal`` from your applications menu (or use ``Ctrl-Alt-T``).
 
-2. Type::
+
+2. Inside the terminal, type the following command::
 
        pip install expyriment
 
@@ -167,7 +168,7 @@ If all went well, you should see a message such as::
    Hello from the pygame community. https://www.pygame.org/contribute.html
    Expyriment 0.9.0 (Python 3.7.4) 
 
-Finally, press ‘Ctrl-D’ to exit ipython, and type ``exit`` to close the
+Finally, press ‘Ctrl-D’ to exit ipython, then ``y`` for 'yes', and type ``exit`` to close the
 terminal.
 
 
@@ -185,24 +186,27 @@ MacOSX
    defaults.
 
 Windows
-   Download ``Git for windows`` from https://git-scm.com/download/win and
-   start it. ATTENTION: do not accept the defaults options. It is *crucial*
-   that:
+   Download the 64 bit version of ``Git for windows`` from https://git-scm.com/download/win and
+   launch it.
+   1. When the GNU Licence is displayed, press ``Next``;
+   2. Accept the default installation folder and press ``Next``;
+   3. Accept all the Components selected by default and press ``Next``
+   4. Accept the creation of a start menu folder named 'Git': press ``Next``;
+   5. VERY IMPORTANT: When proposed a default editor, select 'Use the nano editor' (unless you want to learn Vim) 
+   6. VERY IMPORTANT: When proposed to adjust your Path environnement,  tick the box "Use Git and optional unix tools from the command line prompt". 
 
-      - you tick the box "Use Git and optional unix tools from the command line prompt". 
-      - when proposed to select a text editor, you choose `nano` (instead of the default, `vim`) 
-
-   For other options/questions the defaults are fine. (Note: if you are
-   hesitant, check the graphical instructions provided at
+   Then accept all other defaults.  (Note: if you are hesitant, check the graphical instructions provided at
    https://hackernoon.com/install-git-on-windows-9acf2a1944f0)
 
 
-Regardless of your operating system, you need (*Git Bash* under Windows) and type::
+Now, open *Git Bash* if you are under Windows, or a standard terminal if you are under MacOS or Linux, and type::
 
     git config --global user.name "your_first_and_last_names_here" 
     git config --global user.email your_email_here 
     git config --global core.editor nano
 
+
+You can exit the terminal by typing `Ctrl-D`, or `exit`.
 
 A Text file Editor
 ~~~~~~~~~~~~~~~~~~
@@ -223,6 +227,8 @@ lightweight editor `micro <https://micro-editor.github.io/>`__
 
 If you can afford to spend a few weeks of your life to learn a text editor,
 learn Emacs (see https://realpython.com/emacs-the-best-python-editor/).
+
+An alternative is to install Visual Studio Code from https://code.visualstudio.com
 
 
 The R statistical software
@@ -322,3 +328,4 @@ move it if you wnat to keep a copy of your modifications) and reissue the
 ``git clone`` command above to reload the full folder.
 
 
+ 

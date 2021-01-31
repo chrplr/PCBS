@@ -79,6 +79,7 @@ Stimulus/Experiment generation modules
    PsychoPy <https://www.socsci.ru.nl/wilberth/nocms/psychopy/print.php>`__)
 -  http://psychtoolbox.org/ (See `Psychtoolbox
    demos <http://peterscarfe.com/ptbtutorials.html>`__)
+-  https://www.jspsych.org/ (See intro at https://blog.s-m.ac/using-jspsych/)
 
 
 
@@ -101,6 +102,7 @@ Data analyses, Statistics in Python
    http://greenteapress.com/thinkstats2/
 -  *Python Data Science Handbook* by Jake VanderPlas:
    https://jakevdp.github.io/PythonDataScienceHandbook
+-  *Introduction to Data Science in Python*: notebook from a 2 day workshop organized by the Paris-Saclay Center for Data Science: https://github.com/paris-saclay-cds/data-science-workshop-2019
 
 
 Simulations
@@ -113,9 +115,6 @@ Simulations
    simulator <http://briansimulator.org/>`__
 -  `Deep Learning for Natural Language Processing with
    Pytorch <https://pytorch.org/tutorials/beginner/deep_learning_nlp_tutorial.html>`__
-
-
-
 
 
 Resources to learn the command shell
