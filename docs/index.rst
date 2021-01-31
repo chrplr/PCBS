@@ -15,18 +15,25 @@ Main document web page:
 Git repository on github
   https://github.com/chrplr/PCBS
 
-Slack discussion forum
-   http://cogmaster-pcbs.slack.com (`Join here <https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ>`__). Use the ``#general`` channel to ask questions. Do not hesitate!
-
-Schoology code
-   ``RHT4-8X8H-PQDS3``
 
 Instructors
    christophe@pallier.org 
    cedric.foucault@gmail.com
 
+Schoology code
+   ``RHT4-8X8H-PQDS3``
 
-.. list-table:: Timetable
+Zoom link
+   Get it from the Schoology main page or request it by email to an instructor
+   
+Slack discussion forum
+   http://cogmaster-pcbs.slack.com (Click `here <https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ>`__ to join). Use the ``#general`` channel to ask questions.
+
+**Before attending the first lecture, make sure to install all of the required software (see below)**
+
+
+
+.. list-table:: Timetable (in progress)
    :widths: 10 35 35 20
    :header-rows: 1
 
@@ -35,27 +42,27 @@ Instructors
      - Resources
      - Exercices
    * -  Feb  1
-     -  Presentation/Executing and Editing Python Code
-     - 
+     -  Presentation of the lecture. Executing and editing Python code
+     -  
      -  `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__
    * -  Feb  8
-     -  How to solve problems
+     -  How to solve problems (algorithmic).
      -  
      -  `week_2.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_2.zip>`__
    * -  Feb 15
-     -  Writing clean code
+     -  Writing clean code. 
      -
      -
    * -  Feb 22
+     -  Programming visual stimuli with pygame. 
      -  
      -
-     -
    * -  Mar  1
-     -
+     -  1. Regular expressions. 2. Reaction experiments with expyriment. 
      -
      -
    * -  Mar 15
-     -
+     -  1. Using git and github. 2. Writing documentation with Markdown 3. Python notebooks.  
      -
      -
    * -  Mar 22
@@ -96,8 +103,7 @@ Instructors
 
 
 
-Bring your own laptop
-   You will need to bring your own laptop (preferably with a full battery...). **Before attending the first lecture, make sure to install all of the required software (see below)**
+
 
 
 .. toctree::
