@@ -12,7 +12,7 @@ would return {"Jim": 2, "Apple": 1, "apple": 1, "Joe": 1}.
 The function should be able to work with any list value passed to it.
 Test cases have been provided for you.
 Run this script with python to execute the tests.
-You will know that you have succeeded once all the tests pass.
+You can be confident that you have succeeded once all the tests pass.
 """
 
 from w_1_common import test_function_output_for_input_equals_expected, print_success
