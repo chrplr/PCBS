@@ -22,10 +22,10 @@ def get_word_counts(words):
 
 
 expected_input_output_pairs = [
-    ([], {}),
     (["20-hour-long"], {"20-hour-long": 1}),
     (["Jim", "Apple", "Jim", "apple", "Joe"],
-     {"Jim": 2, "Apple": 1, "apple": 1, "Joe": 1})
+     {"Jim": 2, "Apple": 1, "apple": 1, "Joe": 1}),
+    ([], {})
 ]
 words = """no man is an island entire of itself
     every man is a piece of the continent a part of the main""".split()
