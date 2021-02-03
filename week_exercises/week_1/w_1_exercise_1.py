@@ -12,7 +12,7 @@ would return {"Jim": 2, "Apple": 1, "apple": 1, "Joe": 1}.
 The function should be able to work with any list value passed to it.
 Test cases have been provided for you.
 Run this script with python to execute the tests.
-You will know that you have succeeded once all the tests pass.
+You can be confident that you have succeeded once all the tests pass.
 """
 
 from w_1_common import test_function_output_for_input_equals_expected, print_success
@@ -22,10 +22,10 @@ def get_word_counts(words):
 
 
 expected_input_output_pairs = [
-    ([], {}),
     (["20-hour-long"], {"20-hour-long": 1}),
     (["Jim", "Apple", "Jim", "apple", "Joe"],
-     {"Jim": 2, "Apple": 1, "apple": 1, "Joe": 1})
+     {"Jim": 2, "Apple": 1, "apple": 1, "Joe": 1}),
+    ([], {})
 ]
 words = """no man is an island entire of itself
     every man is a piece of the continent a part of the main""".split()
