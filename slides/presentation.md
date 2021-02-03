@@ -23,55 +23,28 @@ Cognitive Scientists need to:
 
 ---
 
-# Why PCBS?
-
-Cognitive Scientists need to:
-
-- generate stimuli and run experiments
-- analyze experimental data (and do reproducible science)
-- analyze corpora
-- simulate cognitive processes (e.g. with neural nets)
-
-They also need to:
+# Also need to 
 
 - automate boring tasks ("either you are the slave of your computer or the computer is your slave")
+
+Highly recommended book for beginners (and others too):
+
+![](automate_boring.png)
+
+https://automatetheboringstuff.com/
 
 ---
 
-# Why PCBS?
+# And finally
 
-Cognitive Scientists need to:
+- need to **understand how computers works** and why they are considered a model of the mind (*Computational Theory of Mind, David Marr's levels of description*, ...).
 
-- generate stimuli and run experiments
-- analyze experimental data (and do reproducible science)
-- analyze corpora
-- simulate cognitive processes (e.g. with neural nets)
+![](marr_levels_sm.png)
 
-They also need to:
-
-- automate boring tasks ("either you are the slave of your computer or the computer is your slave")
-
-- **understand how computers works** and why they are considered a model of the mind (*Computational Theory of Mind, David Marr's levels of description*, ...).
-
+Recommended reading: 
+- Daniel Dennett. The Seven Secrets of Computer Power Revealed. in *Intuition Pumps and Other Tools for Thinking*
 
 ---
-
-# Why PCBS?
-
-Cognitive Scientists need to:
-
-- generate stimuli and run experiments
-- analyze experimental data (and do reproducible science)
-- analyze corpora
-- simulate cognitive processes (e.g. with neural nets)
-
-They also need to:
-
-- automate boring tasks ("either you are the slave of your computer or the computer is your slave")
-
-
-- **understand how computers works** and why they are considered a model of the mind (*Computational Theory of Mind, David Marr's levels of description*, ...).
-
 
 => *Basic Programming skills are a necessity* (not convinced? tell us)
 
@@ -83,27 +56,30 @@ They also need to:
 1. Taking into account the vast differences in prior knowledge among students
 
     - to help those with limited (or no) programming experience bootstrap their own education in programming (our past experiences have shown that this is entirely feasible).
-    - to give those who already know to code, some opportunities to acquire new skills (e.g. mastering real-time programming, literate programming, ...) 
+    - to give those who already know how to code, some opportunities to acquire new skills (e.g. mastering real-time programming, literate programming, ...) 
 
 
 ---
 
 # Our Aims
 
-1. Taking into account the vast differences in prior knowledge among students
+Try to distill in everyone the importance of **writing clean code**
 
-    - to help those with limited (or no) programming experience bootstrap their own education in programming (our past experiences have shown that this is entirely feasible).
-    - to give those who already know to code, some opportunities to acquire new skills (e.g. mastering real-time programming, literate programming, ...) 
-
+   *Writing programs "that work"" is far from sufficient!**
 
 
-2. Try to distill in everyone the importance of **writing clean code**
+![](clean_sm.jpg)
 
-    *Writing programs "that work"" is not sufficient!**
+On the importance of distinguishing two conceptual tasks:
+
+    1. inventing an algorithm (recipies)
+    2. coding in a particular language 
 
 ---
 
 # The programming language choice
+
+![](python-logo.png)
 
 **Python** is a good compromise.
 
@@ -146,37 +122,39 @@ In a real classroom, we would come to help you individually and check on your pr
 
 4. **Debriefing** 
 
+---
 
 # Basic skills to work with Python
 
 
 - Download python scripts from internet, e.g. <https://github.com/chrplr/PCBS/raw/master/games.zip> (unzip it)
 
-- Open a Terminal (see https://pcbs.readthedocs.io/en/latest/first-things-first.html#learn-how-to-open-a-terminal)
-
-```
-$ cd Downloads  # or whatever folder where you downloaded games.zip
-$ cd games
-$ ls
-computer-guess-a-number.py  hammurabi.py  human-guess-a-number.py  koch.py  matches.py
-$ python koch.py
-$ python matches.py
-```
+- Open a Terminal (see <https://pcbs.readthedocs.io/en/latest/first-things-first.html#learn-how-to-open-a-terminal>)
 
 
-- Using Python interactively in the terminal
+        $ cd Downloads  # or whatever folder where you downloaded games.zip
+        $ cd games
+        $ ls
+        computer-guess-a-number.py  hammurabi.py  human-guess-a-number.py  koch.py  matches.py
+        $ python koch.py
+        $ python matches.py
+
+
+---
+
+# Using Python interactively
 
 ```
 $ ipython
 ```
 
-```
-2**64
-import random
-?random
-```
+    2**64
+    import random
+    ?random
 
-- Open a programming editor, e.g. Sublime Text
+---
+
+# Open a programming editor, e.g. Sublime Text
 
 ```
 $ subl hello.py
@@ -195,4 +173,4 @@ $ python hello.py
 ```
 
 
-
+See <https://pcbs.readthedocs.io/en/latest/running-python.html>
