@@ -115,15 +115,14 @@ with most of the packages needed for the lectures.
    Select your OS — Windows, MacOS or Linux — and download the 64 bits
    installer for the latest version of Python (3.8 at the time of writing this).
 2. Execute the Anaconda3 installer.
-3. In the Anaconda Setup Wizard, pay attention to the following
-   options:
+3. In the Anaconda Setup Wizard.
+    * If you are on a Mac, accept all the default option.
+    * If you are under Windows, pay attention to the following options:
 
-   -  verify that you Install for ``Just Me (recommended)``, then click
-      on ``Next``
-   -  Accept the default Destination folder and click on ``Next``
-   -  VERY IMPORTANT: Check the boxes in front ``Add Anaconda to my PATH`` (ignore the warning that this is not recommended) and ``Register
-      Anaconda as my default Python`` and click on ``Install``
-   -  upon completion, click on ``Next``, then ``Finish``
+       -  verify that you Install for ``Just Me (recommended)``, then click on ``Next``
+       -  Accept the default Destination folder and click on ``Next``
+       -  VERY IMPORTANT: Check the boxes in front ``Add Anaconda to my PATH`` (ignore the warning that this is not recommended) and ``Register Anaconda as my default Python`` and click on ``Install``
+       -  upon completion, click on ``Next``, then ``Finish``
 
 
 Expyriment
