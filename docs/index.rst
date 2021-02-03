@@ -42,8 +42,8 @@ Slack discussion forum
      - Resources
      - Exercices
    * -  Feb  1
-     -  Presentation of the lecture. Executing and editing Python code
-     -  `Software install < https://pcbs.readthedocs.io/en/latest/first-things-first.html#software-installation>`__,  `Running Python <https://pcbs.readthedocs.io/en/latest/running-python.html#running-a-python-script-from-the-command-line>`__
+     -  Presentation of the lecture. Downloading, executing and editing Python code
+     -  `Software install <https://pcbs.readthedocs.io/en/latest/first-things-first.html#software-installation>`__  `Running Python <https://pcbs.readthedocs.io/en/latest/running-python.html#running-a-python-script-from-the-command-line>`__
      -  `games.zip <https://github.com/chrplr/PCBS/raw/master/games.zip>`__ `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__ 
    * -  Feb  8
      -  How to solve problems (algorithmic).

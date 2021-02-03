@@ -147,8 +147,52 @@ In a real classroom, we would come to help you individually and check on your pr
 4. **Debriefing** 
 
 
+# Basic skills to work with Python
 
 
+- Download python scripts from internet, e.g. <https://github.com/chrplr/PCBS/raw/master/games.zip> (unzip it)
+
+- Open a Terminal (see https://pcbs.readthedocs.io/en/latest/first-things-first.html#learn-how-to-open-a-terminal)
+
+```
+$ cd Downloads  # or whatever folder where you downloaded games.zip
+$ cd games
+$ ls
+computer-guess-a-number.py  hammurabi.py  human-guess-a-number.py  koch.py  matches.py
+$ python koch.py
+$ python matches.py
+```
+
+
+- Using Python interactively in the terminal
+
+```
+$ ipython
+```
+
+```
+2**64
+import random
+?random
+```
+
+- Open a programming editor, e.g. Sublime Text
+
+```
+$ subl hello.py
+```
+
+Enter the line 
+
+```
+print("Hello PCBS")
+```
+
+Save the file, and run
+
+```
+$ python hello.py
+```
 
 
 

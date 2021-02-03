@@ -34,6 +34,6 @@ Koch(1, 400)
 
 Koch(2, 400)
 
-koch(3, 400)
+Koch(3, 400)
 
 exitonclick()
