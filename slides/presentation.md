@@ -39,7 +39,13 @@ https://automatetheboringstuff.com/
 
 - need to **understand how computers works** and why they are considered a model of the mind (*Computational Theory of Mind, David Marr's levels of description*, ...).
 
+![](marr_3_sm.png)
+
+
+---
+
 ![](marr_levels_sm.png)
+
 
 Recommended reading: 
 - Daniel Dennett. The Seven Secrets of Computer Power Revealed. in *Intuition Pumps and Other Tools for Thinking*
@@ -154,7 +160,11 @@ $ ipython
 
 ---
 
-# Open a programming editor, e.g. Sublime Text
+# Open a programming editor
+
+
+
+E.g. Sublime Text (but could be any text editor or python IDE)
 
 ```
 $ subl hello.py
