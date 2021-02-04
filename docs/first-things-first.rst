@@ -181,8 +181,7 @@ Linux
    execute the command ``sudo apt install git``
 
 MacOSX
-   Download the ``Git for Mac`` installer from https://git-scm.com/download/mac and execute it. Accept all the
-   defaults.
+   Download and install [Xcode](https://developer.apple.com/xcode/), which provides ``git``, either from the App store, or by using the command line ``xcode-select --install``.
 
 Windows
    Download the 64 bit version of ``Git for windows`` from https://git-scm.com/download/win and
