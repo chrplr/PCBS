@@ -1,0 +1,42 @@
+Correlated regressors in multiple regression
+===========================================
+
+It is often asserted that one two (or more) independent variables are correlated, this creates a problem in multiple regression. What problem? And when is it serious?
+
+In multiple regression, the coefficients estimated for each regressor represents the influence of the associated variable *when the others are kept constant*.
+It  is the "unique" contribution of this variable.
+
+
+
+```{r}
+require(mvtnorm)
+require(car)
+
+n <- 100
+a1 <- 0.2
+a2 <- 0.3
+nsim <- 100
+
+for (cor in c(0, .2, .4, .6, .8))
+  {
+  d <- rmvnorm(n, sigma=matrix(c(1, cor, cor, 1), nrow=2))
+  x1 <- d[,1]
+  x2 <- d[,2]
+  print(cor.test(x1, x2))
+  print("VIF:")
+  print(vif(lm(rnorm(n)~x1 + x2)))
+
+  stats <- matrix(NA, nrow=nsim, ncol=4)
+  for (i in 1:nsim)
+    {
+    y <- a1 * x1 + a2 * x2 + rnorm(n)
+    lmmod <-lm(y ~ x1 + x2)
+    slm <- summary(lmmod)
+
+    stats[i,] <- as.numeric(slm$coefficients[2:3, 1:2])
+    }
+  boxplot(stats, main=cor, ylim=c(-0.2,0.6))
+  print(apply(stats, 2, summary))
+}
+```
+

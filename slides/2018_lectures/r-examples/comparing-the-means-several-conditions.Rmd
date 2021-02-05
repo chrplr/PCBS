@@ -1,0 +1,72 @@
+Comparing several means, iwhtin subject
+===========================================
+
+christophe@pallier.org
+
+
+
+```{r}
+rm(list=ls())
+require(ez)
+require(gplots)
+require(lme4)
+```
+
+## Creation of simulated data
+
+```{r simulation}
+nsub <- 20 # number of subjects (statistical units)
+nconds <- 5 # number of conditions 
+effects <- c(110, 110, 120, 140, 100)
+sd_between_sub <- 10
+sd_within_sub <- 4
+
+ot <- data.frame(sub = factor(rep(paste('s',1:nsub,sep=''), each=nconds)),
+                 cond = factor(rep(paste('cond',1:nconds,sep=''), nsub)),
+                 y = effects + rep(rnorm(nsub, sd=sd_between_sub), each=nconds) + rnorm(nsub * nconds, sd=sd_within_sub))
+```
+
+### Exploration plots
+
+
+```{r exploration_plots}
+with(ot, interaction.plot(cond, sub, y, main='Cond * Subject plot', legend=FALSE))
+
+ot$ycorr <- ot$y + mean(ot$y) - tapply(ot$y, ot$sub, mean)[ot$sub]
+with(ot, interaction.plot(cond, sub, ycorr, main='Cond * Sub after removing Sub main effect', legend=FALSE))
+```
+
+### Classical analysis of variance model:
+
+```{r anova}
+require(ez)
+#summary(aov_model <- aov(y ~ cond + Error(sub/cond), data=ot))
+
+ez_model <- ezANOVA(data=ot,
+                    dv=y,
+                    wid=sub,
+                    within = cond)
+print(ez_model)
+
+ezPlot(data=ot,
+       dv=y,
+       wid=sub,
+       within = cond,
+       x = cond)  
+  
+```
+
+```{r lmer}
+require(lme4)
+summary(lmer_model <- lmer(y ~ cond + (1 | sub), data=ot))
+anova(lmer_model)
+require(car)
+Anova(lmer_model)
+```
+
+```{r}
+# plotmeans(y ~ cond, data=ot, gap=0.1)
+plotmeans(ycorr ~ cond, data=ot, gap=0.1)
+```
+
+

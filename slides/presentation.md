@@ -1,11 +1,11 @@
 # Programming for Cognitive and Brain Sciences
 
 
-![](chris.jpg)
+![](images/chris.jpg)
 
 * Christophe Pallier, researcher (neurolinguist) @ Neurospin
 
-![](cedric.png)
+![](images/cedric.png)
 
 * Cédric Foucault, PhD student in Computational Neuroscience @ Neurospin
 
@@ -29,7 +29,7 @@ Cognitive Scientists need to:
 
 Highly recommended book for beginners (and others too):
 
-![](automate_boring.png)
+![](images/automate_boring.png)
 
 https://automatetheboringstuff.com/
 
@@ -39,12 +39,12 @@ https://automatetheboringstuff.com/
 
 - need to **understand how computers works** and why they are considered a model of the mind (*Computational Theory of Mind, David Marr's levels of description*, ...).
 
-![](marr_3_sm.png)
+![](images/marr_3_sm.png)
 
 
 ---
 
-![](marr_levels_sm.png)
+![](images/marr_levels_sm.png)
 
 
 Recommended reading: 
@@ -74,7 +74,7 @@ Try to distill in everyone the importance of **writing clean code**
    *Writing programs "that work"" is far from sufficient!**
 
 
-![](clean_sm.jpg)
+![](images/clean_sm.jpg)
 
 On the importance of distinguishing two conceptual tasks:
 
@@ -85,7 +85,7 @@ On the importance of distinguishing two conceptual tasks:
 
 # The programming language choice
 
-![](python-logo.png)
+![](images/python-logo.png)
 
 **Python** is a good compromise.
 
