@@ -46,7 +46,7 @@ Slack discussion forum
      -  `slides <https://github.com/chrplr/PCBS/raw/master/slides/presentation.md>`__
      -  `games.zip <https://github.com/chrplr/PCBS/raw/master/games.zip>`__ `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__
    * -  Feb  8
-     -  How to solve problems (algorithmic).
+     -  How to solve problems (algorithmics).
      -  
      -  `week_2.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_2.zip>`__
    * -  Feb 15
