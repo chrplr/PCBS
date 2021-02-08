@@ -10,7 +10,6 @@ Read about  `loops in Python <https://wiki.python.org/moin/ForLoop>`__.
 
 - Write code that prints 1000 times the line ``All work and no play makes Jack a dull boy.``
 
-
 If you do not know Lists in Python, read:
 
    -  `Python Lists <https://www.w3schools.com/python/python_lists.asp>`__
@@ -29,7 +28,7 @@ Then, try to solve the following exercices:
 - Given a list of numbers, print the second largest one.
 
 
-After you have tried to solve these problems, you can check  :download:`my proposed answers <../solutions-to-exercices/basic-examples.py>`.
+After you have tried to solve these problems, you can check  :download:`basic-exercices.py <../solutions-to-exercices/basic-exercices.py>`
 
 
 Convert temperature from Fahrenheit to Celcius
@@ -39,7 +38,7 @@ Convert temperature from Fahrenheit to Celcius
 
 - Add code that reads temperatures from the standard input and print the converted numbers. 
 
-Here is :download:`my version <../solutions-to-exercices/Fahrenheit_celsius.py>`.
+A solution is available here: :download:`Fahrenheit_celsius.py <../solutions-to-exercices/Fahrenheit_celsius.py>`.
 
 
 Multiplication tables
@@ -105,6 +104,10 @@ de la ligne courante dans une liste Python, et d’écrire une fonction qui
 dans une nouvelle liste.
 
 
+Proposed solutions: `Pascal-triangle_v1.py <../solutions-to-exercices/Pascal-triangle_v2.py>` and
+`Pascal-triangle_v2.py <../solutions-to-exercices/Pascal-triangle_v2.py>`
+
+
 Anagrams
 --------
 
@@ -114,6 +117,7 @@ Two words are anagrams if they contain the same letters in different orders, e.g
 
 - Given a list of words, print all items that have anagrams (in this list) 
 
+Check my solution at `anagrams.py <../solutions-to-exercices/anagrams.py>`
 
 
 Pseudowords
@@ -128,7 +132,7 @@ Pseudowords
 - If you know about file input/output (see https://automatetheboringstuff.com/2e/chapter9/), you can read a dictionary (e.g. http://www.pallier.org/extra/liste.de.mots.francais.frgut.txt) and use it to filter out any actual words.
 
 
-Compputer-guess-a-number
+Computer-guess-a-number
 -----------------------
 
 Read `chapter 3 of Invent your own games with
@@ -142,11 +146,18 @@ mind. The computer proposes a number and the user answers with ‘+’ (the
 number he has is mind is larger), ‘-’ (if it is smaller), ‘y’ (if the
 guess is correct)
 
+Check my solution at `computer-guess-a-number.py <../solutions-to-exercices/computer-guess-a-number.py>`
+
 
 unique
 ------
 
 Given a list of words, print how many different words are in that list (hint: use a dictionary or a set)
+
+.. code-block:: python
+
+   liste = ['bonjour', 'chat', 'chien', 'bonjour']
+   print(len(set(liste)))
 
 
 word count
@@ -156,22 +167,45 @@ Given a list of words, count the number of times each word appears in
 the list. Eg. ``[Jim, Alan, Jim, Joe]`` -> ``Jim:2, Alan:1, Joe:1``
 (hint: use a dictionary)
 
+.. code-block:: python
+
+   liste = ['Jim', 'Alan', 'Jim', 'Joe']
+   counts = dict()
+   for w in liste:
+       if w in counts.keys():
+            counts[w] += 1
+       else:
+            counts[w] = 1
+   print(counts)
 
 
 
 head
 ----
 
-Read the chapter about files at https://automatetheboringstuff.com/2e/chapter9/
+Read the chapter about files reading and writing at https://automatetheboringstuff.com/2e/chapter9/
 
-Write a script that prints the first 10 lines of a file (or the whole
-file is it is less than 10 lines long).
+Write a script that prints the first 10 lines of a file (or the whole file is it is less than 10 lines long).
+
+.. code-block:: python
+
+    with open('aga.txt', 'r', encoding='utf-8') as f:
+       for l in f.readlines()[:10]:
+           print(l, end='')
+
 
 tail
 ----
 
 Write a script that prints the last 10 lines of a file (or the whole
 file is it is less than 10 lines long).
+
+.. code-block:: python
+
+   with open('aga.txt', 'r', encoding='utf-8') as f:
+       all_lines = f.readlines()
+       for l in all_lines[-10:]:
+           print(l, end='')
 
 
 string-detector
@@ -195,7 +229,9 @@ use the following function:
        """ Args: a, b integers;
             Return True if b is a divisor of a, else False"
        return a % b == 0
-   
+
+Check a solution at `prime-numbers.py <../solutions-to-exercices/prime-numbers.py>`
+
 
 Kaprekar numbers
 ----------------
@@ -236,7 +272,7 @@ une fonction qui, étant donnée les 10 valeurs initiales des registres, et
 le programme, renvoit les nouvelles valeurs des registres quand
 l’instruction END est atteinte.
 
-Solution: :download:`rodrego.py <../solutions-to-exercices/rodrego.py.py>`
+Solution: :download:`rodrego.py <../solutions-to-exercices/rodrego.py>`
 
 
 
