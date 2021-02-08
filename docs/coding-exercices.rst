@@ -6,7 +6,19 @@ Programming Exercices
 Basics
 ------
 
-- prints 1000 times the lines ``All work and no play makes Jack a dull boy.``
+Read about  `loops in Python <https://wiki.python.org/moin/ForLoop>`__.
+
+- Write code that prints 1000 times the line ``All work and no play makes Jack a dull boy.``
+
+
+If you do not know Lists in Python, read:
+
+   -  `Python Lists <https://www.w3schools.com/python/python_lists.asp>`__
+   -  `List comprehensions <https://www.pythonforbeginners.com/basics/list-comprehensions-in-python>`__
+   -   https://automatetheboringstuff.com/2e/chapter4/
+
+
+Then, try to solve the following exercices:
 
 - Given a list of numbers, print their product
 
@@ -17,30 +29,41 @@ Basics
 - Given a list of numbers, print the second largest one.
 
 
-References:
-
-   -  `Python Lists <https://www.w3schools.com/python/python_lists.asp>`__
-   -  `List comprehensions <https://www.pythonforbeginners.com/basics/list-comprehensions-in-python>`__
-   -   https://automatetheboringstuff.com/chapter4/
+After you have tried to solve these problems, you can check  :download:`my proposed answers <../solutions-to-exercices/basic-examples.py>`.
 
 
 Convert temperature from Fahrenheit to Celcius
 ----------------------------------------------
 
-- Read https://en.wikipedia.org/wiki/Fahrenheit and write a script that converts
-  temperature from one scale to the other.
+- Read https://en.wikipedia.org/wiki/Fahrenheit and write a function that converts a temperature from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit (if necessary, read about Python's functions: https://automatetheboringstuff.com/2e/chapter3/).
 
-- Create a new repository  on github.com to house your conversion script, and write the
-  documentation inside the README.md using Markdown format.
+- Add code that reads temperatures from the standard input and print the converted numbers. 
+
+Here is :download:`my version <../solutions-to-exercices/Fahrenheit_celsius.py>`.
 
 
 Multiplication tables
 ---------------------
 
-- Write a script that displays the tables of multiplication from 1 to 12.
+- Write a script that displays the tables of multiplication from 1 to 10, e.g.:
+::
 
-- Read https://pyformat.info/#number_padding and improve the format of the
-  multiplication tables.
+       1:  2:  3:  4:  5:  6:  7:  8:  9: 10:
+  1:   1   2   3   4   5   6   7   8   9  10 
+  2:   2   4   6   8  10  12  14  16  18  20 
+  3:   3   6   9  12  15  18  21  24  27  30 
+  4:   4   8  12  16  20  24  28  32  36  40 
+  5:   5  10  15  20  25  30  35  40  45  50 
+  6:   6  12  18  24  30  36  42  48  54  60 
+  7:   7  14  21  28  35  42  49  56  63  70 
+  8:   8  16  24  32  40  48  56  64  72  80 
+  9:   9  18  27  36  45  54  63  72  81  90 
+ 10:  10  20  30  40  50  60  70  80  90 100 
+
+
+- Note: you may need to read https://pyformat.info/#number_padding to format the numbers)
+
+Check out  :download:`multiplication_table.py  <../solutions-to-exercices/multiplication-table.py>`
 
 
 Taxis
@@ -50,9 +73,9 @@ Two taxi companies propose differents pricing schemes:
 
  * Company A charges 4.80€ plus 1.15€ by km travelled.
 
- * Company B charges 3.20€ plus ##20€ by km travelled.
+ * Company B charges 3.20€ plus 1.20€ by km travelled.
 
-Write a script that finds which company is the cheapest as a function of the distance to travel.
+Write some code to find which company is the cheapest as a function of the distance to travel. Compare it to :download:`taxis.py  <../solutions-to-exercices/taxis.py>`
 
 
 
@@ -82,11 +105,30 @@ de la ligne courante dans une liste Python, et d’écrire une fonction qui
 dans une nouvelle liste.
 
 
+Anagrams
+--------
+
+Two words are anagrams if they contain the same letters in different orders, e.g., *binary* and *brainy*.
+
+- write a function that take two strings as arguments and returns True if they are anagrams.
+
+- Given a list of words, print all items that have anagrams (in this list) 
 
 
 
+Pseudowords
+-----------
 
-computer-guess-a-number
+- Search the internet to find out how to generate a random integer number in a interval in Python
+
+- Read about strings in Python at https://realpython.com/python-strings/
+
+- Write functions that generate pseudowords from words. The first function will delete a character in a random position from a string passed as argument. The second will insert a random character at a random position. The third will swap two characters at random location.
+
+- If you know about file input/output (see https://automatetheboringstuff.com/2e/chapter9/), you can read a dictionary (e.g. http://www.pallier.org/extra/liste.de.mots.francais.frgut.txt) and use it to filter out any actual words.
+
+
+Compputer-guess-a-number
 -----------------------
 
 Read `chapter 3 of Invent your own games with
@@ -116,8 +158,11 @@ the list. Eg. ``[Jim, Alan, Jim, Joe]`` -> ``Jim:2, Alan:1, Joe:1``
 
 
 
+
 head
 ----
+
+Read the chapter about files at https://automatetheboringstuff.com/2e/chapter9/
 
 Write a script that prints the first 10 lines of a file (or the whole
 file is it is less than 10 lines long).
@@ -135,6 +180,7 @@ string-detector
 Read  `Chap. 8 of Automate the boring stuff <http://automatetheboringstuff.com/chapter8/>`__.
 
 Write a script that opens and read a text file, and print all the lignes that contain a given target word,  say, ``cogmaster``.
+
 
 prime numbers
 -------------
@@ -166,6 +212,8 @@ initial. Par exemple:
 
 Ecrire un programme qui renvoit tous les nombres de Kaprekar entre 1 et N.
 
+Solution: :download:`Kaprekar-numbers.py <../solutions-to-exercices/Kaprekar-numbers.py>`
+
 
 RPN Calculator
 --------------
@@ -175,17 +223,20 @@ https://en.wikipedia.org/wiki/Reverse_Polish_notation).
 
 E.g. ``3 4 * 5 -`` evaluate to ``7``.
 
+Solution: :download:`rpn-calculator.py <../solutions-to-exercices/rpn-calculator.py>`
+
 
 Rodrego-simulator
 -----------------
 
-(optionnel: seulement pour ceux qui se sentent capables et sont motivés)
 Ecrire un programme qui simule une machine RodRego à 10 registres
 (http://sites.tufts.edu/rodrego/). Le programme est stocké dans une chaine de caractère ou dans 
 fichier qui est lu, puis executé. Votre programme doit contenir
-une fonction qui etant donnée les 10 valeurs initiales des registres, et
+une fonction qui, étant donnée les 10 valeurs initiales des registres, et
 le programme, renvoit les nouvelles valeurs des registres quand
 l’instruction END est atteinte.
+
+Solution: :download:`rodrego.py <../solutions-to-exercices/rodrego.py.py>`
 
 
 

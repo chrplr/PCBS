@@ -62,7 +62,7 @@ def help():
     print('Usage: %s', sys.argv[0])
     print('Convert a list of temperatures from Celsius to Farenheit or vice-versa.')
     print('Each line on the standard input should contain one temperature of the form xxx{F|C} ')
-
+    print('Entering an empty line stops the program')
 
 
 
@@ -72,6 +72,8 @@ if __name__ == '__main__':
         sys.exit()
 
     for line in sys.stdin:
+        if line.strip() == "":
+            break
         value, unit = str2temp(line)
         if unit == 'C':
             print("%.1f°C = %.1f°F" % (value, C_to_F(value)))
@@ -81,14 +83,3 @@ if __name__ == '__main__':
             print("Unknown unit : %s (should be 'C' or 'F')" % unit)
 
 
-
-
-
-
-
-if sys.argv[1]=="F":
-    temp = (int(sys.argv[2]) - 32)*5/9
-    print(temp, " °C")
-if sys.argv[1] == "C":
-    temp = int(sys.argv[2]) *9/5 + 32
-    print(temp, " °F")
