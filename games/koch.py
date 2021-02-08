@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-03-09 13:21:08 christophe@pallier.org>
+# Time-stamp: <2021-02-08 12:34:06 christophe@pallier.org>
 
 """ Displays a fractal: the [Koch snowflake](https://en.wikipedia.org/wiki/Koch_snowflake).
 
@@ -15,19 +15,19 @@ def Koch(n, l):
         turtle.forward(l)
     else:
         Koch(n - 1, l / 3)
-        
+
         turtle.left(60)
         Koch(n - 1, l / 3)
-        
+
         turtle.right(120)
         Koch(n - 1, l / 3)
-        
+
         turtle.left(60)
         Koch(n - 1, l / 3)
 
 
 turtle.penup()
-turtle.backward(400)
+turtle.backward(600)
 turtle.pendown()
 
 Koch(1, 400)
@@ -36,4 +36,4 @@ Koch(2, 400)
 
 Koch(3, 400)
 
-exitonclick()
+turtle.exitonclick()
