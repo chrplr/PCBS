@@ -2,15 +2,14 @@
  Programming Exercices
 =======================
 
-
-Basics
-======
+(Note: Solutions are available in https://github.com/chrplr/PCBS/tree/master/solutions-to-exercices)
 
 
-Loops
------
+Flow control
+------------
 
-Read about  `loops in Python <https://wiki.python.org/moin/ForLoop>`__.
+You can read about  `loops in Python <https://wiki.python.org/moin/ForLoop>`__, and more generally about `flow control <https://automatetheboringstuff.com/chapter2/>`__. 
+
 
 Shining
 ~~~~~~~
@@ -19,8 +18,27 @@ Write code that prints 1000 times the line ``All work and no play makes Jack a d
 (a solution is at :download:`shining.py  <../solutions-to-exercices/shining.py>`
 
 
+prime numbers
+~~~~~~~~~~~~~
 
-- Multiplication tables. Write a script that displays the tables of multiplication from 1 to 10, e.g.:
+Write a script that lists all prime numbers between 1 and 10000 (A prime
+number is a integer that has no divisors except 1 and itself). You may
+use the following function:
+
+.. code:: python
+
+   def is_divisor(a, b):
+       """ Args: a, b integers;
+            Return True if b is a divisor of a, else False"
+       return a % b == 0
+
+Check a solution at :download:`prime-numbers.py <../solutions-to-exercices/prime-numbers.py>`
+
+
+Multiplication tables
+~~~~~~~~~~~~~~~~~~~~~
+
+Write a script that displays the tables of multiplication from 1 to 10, e.g.:
 , either individually, or in a table like that::
 
        1:  2:  3:  4:  5:  6:  7:  8:  9: 10:
@@ -55,7 +73,7 @@ mind. The computer proposes a number and the user answers with ‘+’ (the
 number he has is mind is larger), ‘-’ (if it is smaller), ‘y’ (if the
 guess is correct)
 
-Check my solution at `computer-guess-a-number.py <../solutions-to-exercices/computer-guess-a-number.py>`
+Check a solution at :download:`computer-guess-a-number.py <../solutions-to-exercices/computer-guess-a-number.py>`
 
 
 Lists
@@ -70,16 +88,18 @@ These exercises require list manipulations. If you do not know Lists in Python, 
 
 Try to solve the following exercices:
 
+- Given a list of numbers, print their sum
+
 - Given a list of numbers, print their product
 
-- Given a list of numbers, print the sum of their square
+- Given a list of numbers, print the sum of their squares
 
 - Given a list of numbers, print the largest one.
 
 - Given a list of numbers, print the second largest one.
 
 
-After you have tried to solve these problems, you can check  :download:`lists1.py <../solutions-to-exercices/balists1.py>`
+After you have tried to solve these problems, you can check  :download:`lists.py <../solutions-to-exercices/lists.py>`
 
 
 Pascal triangle
@@ -107,25 +127,10 @@ of the current line in a Python list, and write a function that
 given a list as an argument, calculates and returns the following line
 in a new list.
 
-Proposed solutions: `Pascal-triangle_v1.py <../solutions-to-exercices/Pascal-triangle_v2.py>` and
-`Pascal-triangle_v2.py <../solutions-to-exercices/Pascal-triangle_v2.py>`
+Proposed solutions: :download:`Pascal-triangle_v1.py <../solutions-to-exercices/Pascal-triangle_v2.py>` and
+:download:`Pascal-triangle_v2.py <../solutions-to-exercices/Pascal-triangle_v2.py>`
 
 
-prime numbers
-~~~~~~~~~~~~~
-
-Write a script that lists all prime numbers between 1 and 10000 (A prime
-number is a integer that has no divisors except 1 and itself). You may
-use the following function:
-
-.. code:: python
-
-   def is_divisor(a, b):
-       """ Args: a, b integers;
-            Return True if b is a divisor of a, else False"
-       return a % b == 0
-
-Check a solution at `prime-numbers.py <../solutions-to-exercices/prime-numbers.py>`
 
 
 Functions
@@ -223,9 +228,9 @@ Two words are anagrams if they contain the same letters in different orders, e.g
 
 - write a function that take two strings as arguments and returns True if they are anagrams.
 
-- Given a list of words, print all items that have anagrams (in this list) 
+- Given a list of words, print all subsets that form anagrams. You use the file :download:`liste.de.mots.francais.frgut.txt <../solutions-to-exercices/liste.de.mots.francais.frgut.txt>`__ 
 
-Check my solution at `anagrams.py <../solutions-to-exercices/anagrams.py>`
+Check my solution at :download:`anagrams.py <../solutions-to-exercices/anagrams.py>`
 
 
 File reading and writing
@@ -315,4 +320,7 @@ Solution: :download:`rodrego.py <../solutions-to-exercices/rodrego.py>`
 Cellular automata
 ~~~~~~~~~~~~~~~~~
 
+Implement a 1-dimension `elementay cellular automata <https://en.wikipedia.org/wiki/Elementary_cellular_automaton>`__. (Further reading: https://en.wikipedia.org/wiki/A_New_Kind_of_Science)
+
+Solution: :download:`1d-ca.py <../cellular-automata/1d-ca.py>`
 

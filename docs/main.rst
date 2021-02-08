@@ -433,7 +433,7 @@ Zipf law
 
 -  Display the relationship between word length and word frequencies
    from the data in
-   :download:`lexical-decision/lexique382-reduced.txt <lexical-decision/lexique382-reduced.txt>`
+   :download:`lexical-decision/lexique382-reduced.txt <../lexical-decision/lexique382-reduced.txt>`
 
 -  Generate random text (each letter from a-z being equiprobable, and
    the spacecharacter being 8 times more probable) of 1 million

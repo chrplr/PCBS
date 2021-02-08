@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-08 12:34:06 christophe@pallier.org>
+# Time-stamp: <2021-02-08 12:40:05 christophe@pallier.org>
 
 """ Displays a fractal: the [Koch snowflake](https://en.wikipedia.org/wiki/Koch_snowflake).
 
