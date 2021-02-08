@@ -43,11 +43,11 @@ Slack discussion forum
      - Exercices
    * -  Feb  1
      -  Presentation of the lecture. Downloading, executing and editing Python code
-     -  `slides <https://github.com/chrplr/PCBS/raw/master/slides/presentation.md>`__
+     -  `slides <https://rawgit.com/chrplr/PCBS/master/slides/presentation.html>`__
      -  `games.zip <https://github.com/chrplr/PCBS/raw/master/games.zip>`__ `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__
    * -  Feb  8
      -  Intro to Python 
-     -  `Video <https://www.youtube.com/watch?v=2yhcWvBt7ZE>`__ https://automatetheboringstuff.com/
+     -  `Running Python (video)  <https://www.youtube.com/watch?v=2yhcWvBt7ZE>`__ https://automatetheboringstuff.com/
      -  `Python exercises <https://pcbs.readthedocs.io/en/latest/coding-exercices.html>`__
    * -  Feb 15
      -  How to solve problems (algorithmics) & Writing clean code. 

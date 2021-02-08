@@ -325,3 +325,34 @@ Implement a 1-dimension `elementay cellular automata <https://en.wikipedia.org/w
 
 Solution: :download:`1d-ca.py <../cellular-automata/1d-ca.py>`
 
+
+Analysis of a Signal Detection Experiment 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In a signal detection experiment, a faint stimulus (e.g. a faint sound or a faint visual target) is presented or not at each trial and the participant must indicate whether he has perceived it or not. There are four possible outcomes for each trial:
+
+  - A *hit* occurs when the participant correctly detects the target.
+  - A *miss* occurs when the target was there but the participant did not detect it.
+  - A *false alarm* occurs when the participant reports the presence of the target when it was not actually there.
+  -  A *correct rejection* occurs when the participant correctly reports that the target was not present.
+
+One defines;
+
+  -  The *hit rate*, equal to #hits / (#hits + #misses)
+  -  The *false alarm rate*, equal to #false alarms / (#false alarms + # correct rejections)
+
+Let us first suppose that the data from a participant is represented as a string. This string represents a series of trials, each trial being represented by two characters indicating the trial type (1=target present, 0=target absent) and the participant's response (Y=target perceived, N=No target perceived). For example:
+
+.. code-block:: python
+
+  data = "0Y,0N,1Y,1Y,0N,0N,0Y,1Y,1Y"
+
+Exercise:
+
+ - Write a function which, given such a string, returns the Hit rate and the False rate.
+ - Now, the results from different participants are stored in different files subj*.dat (download the files from https://github.com/chrplr/PCBS/tree/master/exercices2/subjdat.zip`) Write a script that computes the hit rates and false alarms for each subject, and displays the group averages and standard deviations. 
+
+Solution :download:`sdt.py <sdt.py <../solutions-to-exercices/sdt.py>`
+
+
+
