@@ -15,31 +15,13 @@ Shining
 ~~~~~~~
 
 Write code that prints 1000 times the line ``All work and no play makes Jack a dull boy.``
-(a solution is at :download:`shining.py  <../solutions-to-exercices/shining.py>`
-
-
-prime numbers
-~~~~~~~~~~~~~
-
-Write a script that lists all prime numbers between 1 and 10000 (A prime
-number is a integer that has no divisors except 1 and itself). You may
-use the following function:
-
-.. code:: python
-
-   def is_divisor(a, b):
-       """ Args: a, b integers;
-            Return True if b is a divisor of a, else False"
-       return a % b == 0
-
-Check a solution at :download:`prime-numbers.py <../solutions-to-exercices/prime-numbers.py>`
+(a solution is at :download:`shining.py  <../solutions-to-exercices/shining.py>`)
 
 
 Multiplication tables
 ~~~~~~~~~~~~~~~~~~~~~
 
-Write a script that displays the tables of multiplication from 1 to 10, e.g.:
-, either individually, or in a table like that::
+Write a script that displays the tables of multiplication from 1 to 10, either individually, or in a table like that::
 
        1:  2:  3:  4:  5:  6:  7:  8:  9: 10:
   1:   1   2   3   4   5   6   7   8   9  10 
@@ -102,6 +84,24 @@ Try to solve the following exercices:
 After you have tried to solve these problems, you can check  :download:`lists.py <../solutions-to-exercices/lists.py>`
 
 
+Prime numbers
+~~~~~~~~~~~~~
+
+Write a script that lists all prime numbers between 1 and 10000 (A prime
+number is a integer that has no divisors except 1 and itself). You can
+use the following function:
+
+.. code:: python
+
+   def is_divisor(a, b):
+       """ Args: a, b integers;
+            Return True if b is a divisor of a, else False"
+       return a % b == 0
+
+Check a solution at :download:`prime-numbers.py <../solutions-to-exercices/prime-numbers.py>`
+
+
+
 Pascal triangle
 ~~~~~~~~~~~~~~~
 
@@ -129,6 +129,7 @@ in a new list.
 
 Proposed solutions: :download:`Pascal-triangle_v1.py <../solutions-to-exercices/Pascal-triangle_v2.py>` and
 :download:`Pascal-triangle_v2.py <../solutions-to-exercices/Pascal-triangle_v2.py>`
+
 
 
 
@@ -272,7 +273,7 @@ Read  `Chap. 8 of Automate the boring stuff <http://automatetheboringstuff.com/c
 
 Write a script that opens and read a text file, and print all the lines that contain a given target word,  say, ``cogmaster``.
 
-
+Check out :download:`search-file.py <../solutions-to-exercices/search-file.py>`
 
 
 Kaprekar numbers
