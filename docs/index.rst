@@ -46,13 +46,13 @@ Slack discussion forum
      -  `slides <https://github.com/chrplr/PCBS/raw/master/slides/presentation.md>`__
      -  `games.zip <https://github.com/chrplr/PCBS/raw/master/games.zip>`__ `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__
    * -  Feb  8
-     -  How to solve problems (algorithmics).
-     -  
-     -  `week_2.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_2.zip>`__
+     -  Intro to Python 
+     -  `Video <https://www.youtube.com/watch?v=2yhcWvBt7ZE>`__ https://automatetheboringstuff.com/
+     -  `Python exercises <https://pcbs.readthedocs.io/en/latest/coding-exercices.html>`__
    * -  Feb 15
-     -  Writing clean code. 
+     -  How to solve problems (algorithmics) & Writing clean code. 
      -
-     -
+     -  
    * -  Feb 22
      -  Programming visual stimuli with pygame. 
      -  
