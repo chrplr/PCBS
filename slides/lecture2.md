@@ -9,6 +9,8 @@
     OR
 
     - Self-training on *Regular expressions* (a very useful tool)
+    
+    (+ extra on register machines)
 
 3. At noon, debriefing (Q & A session)
 
@@ -17,17 +19,17 @@ Remark: You can always use http://cogmaster-pcbs.slack.com/ to ask questions.
 
 ---
 
-# Self-training
-
-- Hands-on exercises on *Regular Expressions*
+# Self-training *Regular Expressions*
 
 It is common to have to search for strings of characters that conform to certain patterns.
 
 For example, in a french dictionary, all nouns that end in 'er'.
 
+If you are interested in the phonotactics of a language, all possible consonant clusters.
+
 Regular expressions are the tools of choice for this type of task.
 
-See the 
+See <https://pcbs.readthedocs.io/en/latest/regular_expressions.html>
 
 ---
 
@@ -35,13 +37,13 @@ See the
 
 A register machine is a universal computational model (as a Turing machine). 
 
-We propose that you study Rodrego, described in [The seven secrets of computer power revealed](../documents/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf)
+Skim through [The seven secrets of computer power revealed](../documents/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf)
 
-- Skimmed through the chapter, trying the code with the simulator at <http://proto.atech.tufts.edu/RodRego/>
+- try the simulator at <http://proto.atech.tufts.edu/RodRego/>
 
-- (for the most daring) Implement a Rodrego interpreter in Python, that is, a script that will take as input a Rodrego source code, 10 integer values representing the initial state of registers, and will execute the program step by step, following the logic of the langage.
+- (if you dare) Implement a Rodrego interpreter in Python, that is, a script that will take as input a Rodrego source code, 10 integer values representing the initial state of registers, and will execute the program step by step, following the logic of the langage.
 
-
+- Compare with my solution at <https://raw.githubusercontent.com/chrplr/PCBS/master/solutions-to-exercices/rodrego.py>
 
 ---
 
