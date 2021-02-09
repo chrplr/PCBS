@@ -34,72 +34,64 @@ Slack discussion forum
 
 
 .. list-table:: Timetable (in progress)
-   :widths: 10 35 35 20
+   :widths: 10 35 35
    :header-rows: 1
 
    * - Date
      - Theme
-     - Resources
-     - Exercices
+     - Resources & Exercices
    * -  Feb  1
      -  Presentation of the lecture. Downloading, executing and editing Python code
-     -  `slides <https://rawgit.com/chrplr/PCBS/master/slides/presentation.html>`__
-     -  `games.zip <https://github.com/chrplr/PCBS/raw/master/games.zip>`__ `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__
+     -  * `slides <https://rawgit.com/chrplr/PCBS/master/slides/presentation.html>`__
+        * `games.zip <https://github.com/chrplr/PCBS/raw/master/games.zip>`__
+        * `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__
    * -  Feb  8
-     -  Intro to Python 
-     -  `Running Python (video)  <https://www.youtube.com/watch?v=2yhcWvBt7ZE>`__ https://automatetheboringstuff.com/
-     -  `Python exercises <https://pcbs.readthedocs.io/en/latest/coding-exercices.html>`__
+     -  Quiz for needs assessment.
+
+        Group distribution.
+        
+        Group A: Foundations
+
+        Group B: Regular expressions
+     -  Group A: Slides (TBD)
+
+        Group B: `Regular expressions tutorial <./regular_expressions.html>`_
    * -  Feb 15
-     -  How to solve problems (algorithmics) & Writing clean code. 
-     -
      -  
+     -
    * -  Feb 22
-     -  Programming visual stimuli with pygame. 
+     - 
      -  
-     -
    * -  Mar  1
-     -  1. Regular expressions. 2. Reaction experiments with expyriment. 
-     -
+     -  
      -
    * -  Mar 15
-     -  1. Using git and github. 2. Writing documentation with Markdown 3. Python notebooks.  
-     -
+     -  
      -
    * -  Mar 22
-     -
      -
      -
    * -  Mar 29
      -
      -
-     -
    * -  Apr  5
-     -
      -
      -
    * -  Apr 12
      -
      -
-     -
    * -  Apr 26
-     -
      -
      -
    * -  May  3
      -
      -
-     -
    * -  May 10
-     -
      -
      -
    * -  May 17
      -
      -
-     -
-
-
-
 
 
 
