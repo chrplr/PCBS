@@ -1,0 +1,7 @@
+# compute the sum of r2 and r3 in r4
+1 deb 4 1 2
+2 deb 2 3 4
+3 inc 4 2
+4 deb 3 5 6
+5 inc 4 4
+6 end

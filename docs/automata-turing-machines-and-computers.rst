@@ -170,8 +170,7 @@ Another computing model which is closer to actual computers, is the
 Register machines
 -----------------
 
-Read `The seven secrets of computer power
-revealed <documents/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf>`__\ \_
+Read `The seven secrets of computer power revealed <documents/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf>`__
 (Chapter 24 from Daniel Dennett’s *Intuition Pumps and other tools for
 thinking*)
 
@@ -259,6 +258,21 @@ Program 4 (NON DESTRUCTIVE ADD[1,2,3]):
 Note that *conditional branching* is the key instruction that gives the
 power to the machine. Depending on the content of memory, the machine
 can do either (a) or (b).
+
+
+
+
+Exercice: implementation of a Register machine
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a Python script that simulates a RodRego machine with 10 registers
+(http://sites.tufts.edu/rodrego/). The program is stored in a string or in 
+file that is read and then executed. Your program must contain
+a function which, given the 10 initial values of the registers, and
+the program, returns the new register values when
+the END command is reached.
+
+Check :download:`rodrego.py <../solutions-to-exercices/rodrego.py>` for a potential solution.
 
 
 The Seven secrets of computers revealed

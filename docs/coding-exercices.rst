@@ -308,16 +308,6 @@ Solution: :download:`rpn-calculator.py <../solutions-to-exercices/rpn-calculator
 Rodrego-simulator
 ~~~~~~~~~~~~~~~~~
 
-Write a program that simulates a RodRego machine with 10 registers
-(http://sites.tufts.edu/rodrego/). The program is stored in a string or in 
-file that is read and then executed. Your program must contain
-a function which, given the 10 initial values of the registers, and
-the program, returns the new register values when
-the END command is reached.
-
-Solution: :download:`rodrego.py <../solutions-to-exercices/rodrego.py>`
-
-
 Cellular automata
 ~~~~~~~~~~~~~~~~~
 
