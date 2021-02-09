@@ -47,12 +47,11 @@ Slack discussion forum
         * `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__
    * -  Feb  8
      -  Quiz for needs assessment.
-
         Group distribution.
-        
-        Group A: Foundations
 
-        Group B: Regular expressions
+        Group A: Foundations.
+        
+        Group B: Regular expressions.
      -  Group A: Slides (TBD)
 
         Group B: `Regular expressions tutorial <./regular_expressions.html>`_
