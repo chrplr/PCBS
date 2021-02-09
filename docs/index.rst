@@ -117,6 +117,7 @@ Slack discussion forum
    tips-to-write-clean-code
    tools-for-reproducible-science
    automata-turing-machines-and-computers
+   regular_expressions
    main
    projects
    scratch/Starting-from-Scratch.rst
