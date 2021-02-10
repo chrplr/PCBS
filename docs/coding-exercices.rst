@@ -342,7 +342,7 @@ Exercise:
  - Write a function which, given such a string, returns the Hit rate and the False rate.
  - Now, the results from different participants are stored in different files subj*.dat (download the files from https://github.com/chrplr/PCBS/tree/master/exercices2/subjdat.zip`) Write a script that computes the hit rates and false alarms for each subject, and displays the group averages and standard deviations. 
 
-Solution :download:`sdt.py <sdt.py <../solutions-to-exercices/sdt.py>`
+Solution :download:`sdt.py <../solutions-to-exercices/sdt.py>`
 
 
 

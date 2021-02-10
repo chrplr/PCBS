@@ -42,19 +42,12 @@ Slack discussion forum
      - Resources & Exercices
    * -  Feb  1
      -  Presentation of the lecture. Downloading, executing and editing Python code
-     -  * `slides <https://rawgit.com/chrplr/PCBS/master/slides/presentation.html>`__
+     -  * `slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture1.html>`__
         * `games.zip <https://github.com/chrplr/PCBS/raw/master/games.zip>`__
         * `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__
    * -  Feb  8
-     -  Quiz for needs assessment.
-        Group distribution.
-
-        Group A: Foundations.
-        
-        Group B: Regular expressions.
-     -  Group A: Slides (TBD)
-
-        Group B: `Regular expressions tutorial <./regular_expressions.html>`_
+     -  * `slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture2.html>`__
+     -   Group B: `Regular expressions tutorial <./regular_expressions.html>`_
    * -  Feb 15
      -  
      -
