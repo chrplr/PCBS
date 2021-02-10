@@ -40,14 +40,15 @@ Slack discussion forum
    * - Date
      - Theme
      - Resources & Exercices
-   * -  Feb  1
-     -  Presentation of the lecture. Downloading, executing and editing Python code
-     -  * `slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture1.html>`__
+   * -  Feb  1 
+     -   Presentation of the lecture. Downloading, executing and editing Python code
+     -  * `lecture1 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture1.html>`__
         * `games.zip <https://github.com/chrplr/PCBS/raw/master/games.zip>`__
         * `week_1.zip <https://github.com/chrplr/PCBS/raw/master/week_exercises/week_1.zip>`__
    * -  Feb  8
-     -  * `slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture2.html>`__
-     -   Group B: `Regular expressions tutorial <./regular_expressions.html>`_
+     -  Quizz. Python fundamentals or self training on Regular Expressions
+     - *  `lecture2 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture2.html>`__
+       * Group B: `Regular expressions tutorial <./regular_expressions.html>`_
    * -  Feb 15
      -  
      -
