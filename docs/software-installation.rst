@@ -9,9 +9,7 @@ Software Installation
 
 These instructions explain how to install  *Anaconda Python 3*, *Expyriment*, *Git*, a text editor, *R* and *R Studio*.
 
-
 Warnings:
-~~~~~~~~~
 
 -  You will need to download about 1GB of software from the Internet.
    Therefore, make sure to have a decent connection.
@@ -26,24 +24,23 @@ Warnings:
    simple identifier.
 
 
-A Code Editor
-~~~~~~~~~~~~~
+SublimeText code editor
+-----------------------
 
 A code editor is a program that allows you to edit pure text files such
-as Python scripts, Markdown documents,...
+as Python programs, `Markdown <https://daringfireball.net/projects/markdown/>`__  or `LaTeX <https://www.latex-project.org/>`__ documents, ...
 
 Unless you already use an editor that you are happy with, we
 recommend that you download and install `Sublime Text <https://www.sublimetext.com/>`__. Follow the instructions specific to your Operating System.
 
 If you prefer opensource software, you can try `Atom <http://atom.io>`__, but be
-aware that it is slower and more buggy than sublime text.
+aware that it is slower and more buggy than Sublime Text.
 
 
-Anaconda Python3
-~~~~~~~~~~~~~~~~
+Anaconda Python3 distribution
+-----------------------------
 
-There exists various Python distributions. Among them, we recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`__ as it brings along
-most of the packages needed for the lectures.
+There exists various Python distributions. Among them, we recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`__ as it already contains most of the packages needed for the lectures.
 
 1. Go to  <https://www.anaconda.com/products/individual> and  click on ``Download``. Then, select the 64-bit installer for your operating system (Windows, MacOS or Linux).
 2. Execute the Anaconda3 installer. During the installation. 
@@ -58,7 +55,7 @@ most of the packages needed for the lectures.
 
 
 The Git version control system
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 Git is a version control tool for software development, an indispensable
 tool to do reproducible science.
@@ -106,10 +103,10 @@ You can exit the Terminal by typing `Ctrl-D`, or `exit`, or just closing its win
 
 
 
-Expyriment
-~~~~~~~~~~
+The Expyriment python module
+----------------------------
 
-You will need the Python library `Expyriment <http://www.expyriment.org>`__ for some of the scripts.
+We will rely on the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments.
 
 0. If you have a Mac, you first need to install `XQuartz <https://www.xquartz.org/>`__
 
@@ -143,7 +140,7 @@ terminal.
 
 
 The R statistical software
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 R is a programming language specialized for statistical data analyses.
 
@@ -162,12 +159,11 @@ Linux
 
 
 Rstudio Desktop
-~~~~~~~~~~~~~~~
+---------------
 
-Rstudio is an Integrated Developpement Environment for R which greatly
-simplifies the use of \__RMarkdown_. You can download and install the
-latest version of \__RStudio Desktop\_ from
-https://www.rstudio.com/products/rstudio/download/. Make sure to select
+Rstudio is an *Integrated Developpement Environment* for R which greatly
+simplifies the use of RMarkdown. You can download and install the
+latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/. Make sure to select
 the correct Operating System!
 
 

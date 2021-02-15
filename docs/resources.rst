@@ -4,28 +4,14 @@
 Resources
 =========
 
-Books relevant to Cognitive and Brain Sciences Programming
-----------------------------------------------------------
-
-*  `Programming Visual Illusions for
-   Everyone <https://www.programmingvisualillusionsforeveryone.online/>`__
-   by Marco Bertamini:
-*  *Neural Data Science: A Primer with MATLAB and Python* by von Erik
-   Lee Nylen and Pascal Wallisch
-*  *Matlab for Brain and Cognitive Scientists* and *Analyzing neural
-   time series data* by Mike X Cohen
-*  `Python in Neuroscience <https://www.frontiersin.org/research-topics/8/python-in-neuroscience>`__
-*  *Modeling Psychophysical Data in R* by Kenneth Knoblauch & Laurence
-   T. Maloney
-
 
 
 Programming skills
 ------------------
 
-*  Tips for writing clean code: tips__
 *  `Software Carpentry <https://software-carpentry.org/lessons/>`__
    provides nice lessons about writing software for science.
+*  :doc:`tips-to-write-clean-code`
 
 
 
@@ -64,6 +50,19 @@ Resources to learn Python
 
 
 
+Books relevant to Cognitive and Brain Sciences Programming
+----------------------------------------------------------
+
+*  `Programming Visual Illusions for
+   Everyone <https://www.programmingvisualillusionsforeveryone.online/>`__
+   by Marco Bertamini:
+*  *Neural Data Science: A Primer with MATLAB and Python* by von Erik
+   Lee Nylen and Pascal Wallisch
+*  *Matlab for Brain and Cognitive Scientists* and *Analyzing neural
+   time series data* by Mike X Cohen
+*  `Python in Neuroscience <https://www.frontiersin.org/research-topics/8/python-in-neuroscience>`__
+*  *Modeling Psychophysical Data in R* by Kenneth Knoblauch & Laurence
+   T. Maloney
 
 
 
@@ -174,17 +173,13 @@ Why learn the command shell?
 -  `Openclassrooms
    MOOC <https://openclassrooms.com/courses/reprenez-le-controle-a-l-aide-de-linux>`__
 
-Remarks; - Under Windows, after having installed Git, you have access to
-“git bash”, which provides a terminal with the bash shell and emulates
-many unix commands. - Under Windows 10, Microsoft has recently made
-available the “Windows Subsystem for Linux”, which provides a virtual
-Linux system running inside Windows. (See
-https://itsfoss.com/install-bash-on-windows/, and
-https://itsfoss.com/windows-linux-kernel-wsl-2/).
+Remarks:
 
--  Under MacOSX, when you open a terminal, you may be interacting with
-   the bash shell or the zsh shell (to know which, type
-   ``echo $SHELL``).
+- Under Windows, after having installed Git, you have access to ``git bash``, which provides a terminal with the bash shell and emulates many unix commands.
+
+- Under Windows 10, Microsoft has recently made available the “Windows Subsystem for Linux”, which provides a virtual Linux system running inside Windows. (See https://itsfoss.com/install-bash-on-windows/, and https://itsfoss.com/windows-linux-kernel-wsl-2/).
+
+-  Under MacOSX, when you open a terminal, you may be interacting withthe bash shell or the zsh shell (to know which, type ``echo $SHELL``).
 
 
 

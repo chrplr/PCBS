@@ -544,8 +544,7 @@ the linear sequence of words that compose it.
 
 * Read Chapter 12 (Constituency Grammars)  and 13 (Constituency Parsing)  of Dan Jurafsky and James H. Martin's `Speech and Language Processing <https://web.stanford.edu/~jurafsky/slp3/>`__
  
-* Explore the `various parsing algorithms <http://www.nltk.org/book/ch08.html>`__\ using the
-`Natural Language Toolkit <https://www.nltk.org/>`__.
+* Explore the `various parsing algorithms <http://www.nltk.org/book/ch08.html>`__\ using the `Natural Language Toolkit <https://www.nltk.org/>`__.
 
 
 Cellular Automata
