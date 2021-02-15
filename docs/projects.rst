@@ -128,13 +128,11 @@ Some ideas
    object representations without awareness: evidence from
    motion-induced blindness. (project suggested by Mark Wexler)
 
-- `Multiple Object Tracking
-   <http://www.scholarpedia.org/article/Multiple_object_tracking>`__, is an
+- `Multiple Object Tracking <http://www.scholarpedia.org/article/Multiple_object_tracking>`__, is an
    experimental technique used to study how our visual system tracks multiple
    moving objects. Program a such an experiment.
 
-- Read `Moving hand reveals dynamics of thought
-   <https://doi.org/10.1073/pnas.0504413102>`__. Program a word-picture matching
+- Read `Moving hand reveals dynamics of thought <https://doi.org/10.1073/pnas.0504413102>`__. Program a word-picture matching
    task recording the mouse trajectory (See Spivey, Michael J., Marc Grosjean,
    and Günther Knoblich. 2005. “Continuous Attraction toward Phonological
    Competitors.” Proceedings of the National Academy of Sciences of the United

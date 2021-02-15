@@ -229,7 +229,7 @@ Two words are anagrams if they contain the same letters in different orders, e.g
 
 - write a function that take two strings as arguments and returns True if they are anagrams.
 
-- Given a list of words, print all subsets that form anagrams. You use the file :download:`liste.de.mots.francais.frgut.txt <../solutions-to-exercices/liste.de.mots.francais.frgut.txt>`__ 
+- Given a list of words, print all subsets that form anagrams. You use the file :download:`liste.de.mots.francais.frgut.txt <../solutions-to-exercices/liste.de.mots.francais.frgut.txt>`
 
 Check my solution at :download:`anagrams.py <../solutions-to-exercices/anagrams.py>`
 

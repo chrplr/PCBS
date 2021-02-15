@@ -1,6 +1,6 @@
-=====
+===================
 Regular Expressions
-=====
+===================
 
 Tutorial
 --------
@@ -32,9 +32,9 @@ To practice putting regular expressions to use in real-world problems.
 Example in Cognitive Science research
 -------------------------------------
 
-Regular expressions have many applications, especially in cognitive science.
+Regular expressions have many applications, especially in natural language processing. Check out, for example, the chapter `Regular Expressions, Text Normalization, Edit Distance <https://web.stanford.edu/~jurafsky/slp3/2.pdf>`__ from Dan Jurasfky and Alex Martin's book `Speech and Language Processing <https://web.stanford.edu/~jurafsky/slp3/>`__ .
 
-For example, Christophe Pallier (1999) used regular expressions to find syllable boundaries in words from their phonetic representation. To know more, see : `Pallier (1999). Syllabation des représentations phonétiques de brulex et de lexique. <https://www.pallier.org/papers/syllabation.pdf>`_
+Regular expressions were used to locate syllable boundaries in the phonetic representation of words by `Pallier (1999). Syllabation des représentations phonétiques de brulex et de lexique. <https://www.pallier.org/papers/syllabation.pdf>`__ (see https://github.com/chrplr/openlexicon/tree/master/scripts/french-syllabation for scripts and more). 
 
 
 More on the Theory
