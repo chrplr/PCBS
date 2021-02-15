@@ -78,5 +78,5 @@ Prerequisites
 
 Students are expected to know how to open a terminal and `navigate in the file system <http://linuxcommand.org/lc3_lts0020.php>`__ and to know how to view and edit text files with a text editor such as `Sublime Text <https://www.sublimetext.com>`__.
 
-They should  acquainted with basic programming concepts: instructions, variables, tests (if..then..else), loops (while and for). Check out  starting-from-scratch_ or the pointers listed in resources_:  
+They should  acquainted with basic programming concepts: instructions, variables, tests (if..then..else), loops (while and for). Check out :doc:`scratch/Starting-from-Scratch` or the pointers listed in :doc:`resources`
 

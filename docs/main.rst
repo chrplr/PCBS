@@ -399,8 +399,7 @@ Frequency Analysis
 ------------------
 
 -  See
-   :download:`../data-analysis/short-intro-fourier <../data-analysis/short-intro-fourier>`
-   and the associated jupyter notebook :download:`../data-analysis/short intro to frequency analysis (Fourier series).ipynb <data-analysis/short%20intro%20to%20frequency%20analysis%20(Fourier%20series).ipynb>`
+   :download:`short-intro-fourier <../data-analysis/short+intro+to+frequency+analysis+%28Fourier+series%29.pdf>`
 
 
 
