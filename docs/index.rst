@@ -44,6 +44,7 @@ Slack discussion forum
    automata-turing-machines-and-computers
    representing-numbers-images-text
    regular_expressions
+   building_abstractions_with_functions
    stimulus-creation
    running-experiments
    data-analyses

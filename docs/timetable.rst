@@ -23,7 +23,7 @@ PCBS Time table 2020/2021 2nd semester
        * Group B: `Regular expressions tutorial <https://pcbs.readthedocs.io/en/latest/regular_expressions.html>`_
    * -  Feb 17
      -  Functions, Functions, Functions!
-     -
+     -  Group B: :doc:`Building abstractions with recursive functions and higher-order functions <../building_abstractions_with_functions>` 
    * -  Feb 24
      -  Creating Visual Stimuli
      -  

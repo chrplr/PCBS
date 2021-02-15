@@ -236,6 +236,8 @@ Adapt the above program to print the binary representation of ``num``
 
 . . .
 
+.. _codebinaryrepresentation:
+
 (8) Study the following code. Do you understand why it works?
 
 ::
