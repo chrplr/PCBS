@@ -29,7 +29,7 @@ source_suffix = ['.rst', '.md']
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark', 'sphinx.ext.intersphinx', 'rst2pdf.pdfbuilder']
+extensions = ['recommonmark', 'sphinx.ext.intersphinx']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -53,5 +53,3 @@ html_theme = 'alabaster'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-# --- pdf ---
-pdf_documents = [('index', u'rst2pdf', u'Sample rst2pdf doc', u'Christophe Pallier')]
