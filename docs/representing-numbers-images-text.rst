@@ -2,6 +2,9 @@
 Representations of numbers, text, images
 ========================================
 
+.. contents::
+
+
 Representation of integers
 ++++++++++++++++++++++++++
 
@@ -11,21 +14,30 @@ others.*
 Computers represent everything as series of 0 and 1, also known as
 *bits* (for “binary digits”).
 
+
+A number represented in basis ‘b’ by four digits 'd\ :sub:`3`\ d\ :sub:`2`\ d\ :sub:`1`\ d\ :sub:`0`', has a value of: d\ :sub:`3`\ .b\ :sup:`3`\  + d\ :sub:`2`\ .b\ :sup:`2`\  + d\ :sub:`1`\ .b\ :sup:`1`\  + d\ :sub:`0`\ .b\ :sup:`0`
+
+-  In binary, there are only two possibilities for the digits: {``0``, ``1``}
+-  In decimal, there are 10 possible characters
+-  In hexadecimal, 16 possible characters 0-9, A, B, C, D, E, F::
+   ``D8F1 = 14*16^3 + 8*10^2 + 15*16^1 + 1*16^0``
+
 Just like a number can be written in base 10, it can be written in base
 2 (or in any other base):
 
 ::
 
-   12 = 10  + 2 = 1.(10^1) + 2.(10^0) 
-   12 = 8 + 4 = 2^3 + 2^1 => 1010
+   12 = 10  + 2 = 1.(10^1) + 2.(10^0) => '12' in base 10 
+   12 = 8 + 4 = 2^3 + 2^1 => '1010' in base 2
 
-   33 = 30  + 3 = 3.(10^1) + 3.(10^0)
-   33 = 32 + 1 = 2^5 + 2^0 => 100001
+   33 = 30  + 3 = 3.(10^1) + 3.(10^0) => '33' in base 10
+   33 = 32 + 1 = 2^5 + 2^0 => '100001' in base 2
 
-The binary representions of the first integers:
+Here are the binary representions of the first integers:
 
 ::
 
+   0 :   0
    1 :   1
    2 :  10
    3 :  11
@@ -35,18 +47,11 @@ The binary representions of the first integers:
    7 : 111
    ...
 
-Remember that a number represented by four digits “d3 d2 d1 d0” in a
-basis ‘b’, has a value of d3\ *b^3 + d2*\ b^2 + d1\ *b^1 + d0*\ b^0
-
--  In binary, there are only two possibilities for the digits: {0,1}
--  In decimal, 10 possible characters
--  In hexadecimal, 16 possible characters 0-9, A, B, C, D, E, F (D8F1 =
-   14\ *16^3 + 8*\ 10^2 + 15\ *16^1 + 1*\ 16^0)
 
 To learn more about how integer numbers are represented in binary
 format, you can check out http://csunplugged.org/binary-numbers
 
-(1) Convert (manually) into decimal the following binary numbers:
+*Exercise 1*: Convert (manually) into decimal the following binary numbers:
 
 -  101
 -  1000
@@ -55,13 +60,13 @@ format, you can check out http://csunplugged.org/binary-numbers
 
 . . .
 
-*Answer:* 5, 8, 11, 255
+*Answers:* 5, 8, 11, 255
 
 From binary to decimal
 ----------------------
 
-(2) Let us write a function that, given the binary representation of a
-    number as a string of ‘0’ and ‘1’, returns its value as a integer.
+*Exercise 2*: Let us write a function that, given the binary representation of a
+    number as a string of ``0`` and ``1``, returns its value as a integer.
 
 1. Let us first suppose that we want to convert a string containing
    exactly 8 binary digits (e.g. ‘01011010’) into decimal. How would you
@@ -72,44 +77,60 @@ From binary to decimal
 .. code:: python
 
    def todec8bits(s):
+       """ converts a 8 bits string (binary representation)into a integer """
        return int(s[0])*128 + int(s[1])*64 + int(s[2])*32 + \
               int(s[3])*16 + int(s[4])*8 + int(s[5])*4 + \
               int(s[6])*2 + int(s[7])
 
+   todec8bits("00001010")
    todec8bits("01010101")
 
-One issue with this code:
+One issue with this code is that it handles only 8 bits strings
 
 .. code:: python
 
    todec8bits("0101010")
    todec8bits("010101010")
 
-Remark: on your computers, integers are represented either as 32 or 64
-bits, depending on your processor/operating system.
-
-Why is this is relevant: suppose you perform an EEG recording with 256
-electrodes every milliseconds for one hour. How large is the data?
-
-Beware: your computer can make mistakes if you add too large numbers!!!
-
-Another solution demonstrating several new Pythonic constructions that
-we have not seen yet:
+A better version of the fonction would be:
 
 .. code:: python
 
-   pow2 = [2 ** n for n in range(7, -1, -1)]
-   n = 0
-   for b, p in zip(s, pow2):
-       n += int(b) * p
-   print(n)
+
+   def todec8bits(s):
+       """ converts a 8 bits string (binary representation)into a integer """
+       assert len(s) == 8  # 's' should be exactly 8 bits long 
+       return int(s[0])*128 + int(s[1])*64 + int(s[2])*32 + \
+              int(s[3])*16 + int(s[4])*8 + int(s[5])*4 + \
+              int(s[6])*2 + int(s[7])
+
+
+Remark: On your computers, integers are represented either as 32 or 64
+bits, depending on your processor/operating system.
+
+Why is this is relevant? Suppose you perform an EEG recording with 256
+electrodes every milliseconds for one hour. How large is the data?
+
+Beware: in some programming languages, the computer can make mistakes if you add too large numbers!
+
+Here is another solution demonstrating several python features (list comprehensions, zip constructions, increment operator, ...):
+
+.. code:: python
+
+   def todec(s):
+       """ converts a 8 bit strings into an integer """
+       assert len(s) == 8  # 's' should be exactly 8 bits long 
+       pow2 = [2 ** n for n in range(7, -1, -1)]
+       n = 0
+       for b, p in zip(s, pow2):
+           n += int(b) * p
+       return n
 
 . . .
 
-We could modify it to adapt to the size of the string ‘s’.
+Exercise: modify the function above to handle strings of any size as input.
 
-My favorite which has the advantage of working with strings of unlimited
-size:
+Here is a code that works with strings of unlimited size:
 
 .. code:: python
 
@@ -123,32 +144,34 @@ size:
    for i in ['101', '1000', '1011', '11111111']:
        print(todec(i))
 
---------------
+Can you understand how/why it works ?
+
+
 
 From decimal to binary
 ----------------------
 
-(3) Now we will go in the other direction: Our aim is to write a program
-    that, given a number (in decimal), computes its binary
-    representation.
+Now we will go in the other direction: Our aim is to write a program
+that, given a number (in decimal), computes its binary representation.
 
-If you have an idea how to program it, please proceed. If not, we
+*Exercise*: If you have an idea how to program it, please proceed. Else, I
 propose that you follow the following steps:
 
-(4) Study the program below. Execute it with various values of the
-    variable *num*. Do you understand the last line? Do you see a
-    limitation of this program?
+Examine the script below and execute it for various values of the variable `num`.
+Note that the sign ``%`` stands for the *modulo division operation* which produces the remainder of an integer division.  If ``x`` and ``y`` are integers, then the expression ``x % y`` yields the remainder when ``x`` is divided by ``y``.
+
+Do you understand the last line? Do you see a limitation of this program?
 
 .. code:: python
 
    num = 143
-   d3 = int(num/1000) % 10 # thousands
-   d2 = int(num/100)  % 10 # hundreds
-   d1 = int(num/10)   % 10 # dec
+   d3 = int(num/1000) % 10  # thousands
+   d2 = int(num/100)  % 10  # hundreds
+   d1 = int(num/10)   % 10  # dec
    d0 =  num % 10
    print(str(d3) + str(d2) + str(d1) + str(d0))
 
-(5) Adapt the above program to print the binary representation of num
+Adapt the above program to print the binary representation of ``num``
 
 . . .
 
@@ -169,13 +192,14 @@ propose that you follow the following steps:
 . . .
 
 (6) Modify the above program to print the binary representations of
-    every number between 0 and 255.
+    all the integers between 0 and 255.
 
 . . .
 
 .. code:: python
 
    def tobin(num):
+       """ Returns the binary represention (strings of bits) of a 0 <= num <= 255 """
        b7 = int(num/128) % 2
        b6 = int(num/64)  % 2
        b5 = int(num/32)  % 2
@@ -188,7 +212,7 @@ propose that you follow the following steps:
                str(b3) + str(b2) + str(b1) + str(b0))
 
    for n in range(256):
-       print(n, tobin(n))
+       print(n, ':', tobin(n))
 
 . . .
 
@@ -200,13 +224,14 @@ propose that you follow the following steps:
 .. code:: python
 
    def binary(n):
-       if n==0:
-           return "0"
-       s = ""
+       """ returns the binary representation of ``n`` """
+       if n == 0:
+           return '0'
+       s = ''
        while n > 0:
            b = str(n % 2)
            s = b + s
-           n = n / 2
+           n = n // 2
        return s
 
 . . .
@@ -216,10 +241,11 @@ propose that you follow the following steps:
 ::
 
    def binary(num):
+       """ returns the binary representation of ``num`` """
        if num == 0:
-           return "0"
+           return '0'
        if num == 1:
-           return "1"
+           return '1'
        return(binary(int(num /2)) + binary(num % 2))
 
    print(binary(1234))
@@ -239,7 +265,7 @@ Remark: measures of memory size
 -  1 Gigabytes (GB) = 1024 Mbytes
 -  Terabyte, Petabyte, Exabyte…
 
-Exercice (advanced): Write a function that return the hexadecimal
+Exercise (advanced): Write a function that return the hexadecimal
 representation (base 16) of a number.
 
 To go further:
@@ -297,7 +323,7 @@ one byte, and keep the compatibility with ASCII (UTF-8).
 
 ::
 
-   print("".join([unichr(c) for c in range(20000, 21000)]))
+   print("".join([chr(c) for c in range(20000, 21000)]))
 
 
 Strings
@@ -329,12 +355,12 @@ Or “triple” quotes for multilines strings
    ...
    """
 
-They have a type ‘str’.
+They have a type ``str``.
 
 ::
 
    >>> type('bonjour')
-   <type 'str'>
+   <class 'str'>
 
 To convert an object to a string representation:
 
@@ -372,9 +398,8 @@ A set of functions to manipulate strings is available in the module
 
 ::
 
-   import string
-   string.upper(a)
-   string.lower('ENS')
+   str.upper(a)
+   str.lower('ENS')
 
 search/replace a substring within a string
 ------------------------------------------
@@ -382,14 +407,14 @@ search/replace a substring within a string
 ::
 
    a = 'alain marie jean marc'
-   a.find('alain')
-   a.find('marie')
-   a.find('ma')
-   a.find('marc')
-   a.find('o')
+   print(a.find('alain'))
+   print(a.find('marie'))
+   print(a.find('ma'))
+   print(a.find('marc'))
+   print(a.find('o'))
 
    a.replace('marie','claude')
-   a
+   print(a)
 
 splitting a strings at delimiters
 ---------------------------------
@@ -408,9 +433,9 @@ Interactive input from the command line:
 
 .. code:: python
 
-   name = raw_input('Comment vous appelez-vous ? ')
+   name = input('Comment vous appelez-vous ? ')
+   print("Bonjour " + name + '!')
 
-   print "Bonjour " + name + '!'
 
 Reading and writing to text files
 =================================
@@ -421,11 +446,11 @@ Reading and writing to text files
 
 .. code:: python
 
-   f = file('test.txt')
-   o = f.read()
-   print(o)
-   lines = o.split("\n")
-   print(lines)
+   with open('test.txt', 'r') as f:
+       o = f.read()
+       print(o)
+       lines = o.split("\n")
+       print(lines)
 
 Counting lines and words in a text file.
 ========================================
@@ -435,32 +460,32 @@ Wonderland <http://www.pallier.org/cours/AIP2013/alice.txt>`__
 
 .. code:: python
 
-   f = file('alice.txt')
-   o = f.read()
-   print(o)
-   lines = o.split("\\n")
-   print(lines)
+   with open('alice.txt') as f:
+       o = f.read()
+       print(o)
+       lines = o.split("\\n")
+       print(lines)
 
-(10) Write a program that counts the number of lines, and number of
+Exercise: Write a program that counts the number of lines, and number of
      words in alice.txt (we suppose that words are separated by spaces).
 
 . . .
 
 .. code:: python
 
-   f = file('alice.txt')
-   o = f.read()
-   print(o)
-   lines = o.split("\n")
+   with open('alice.txt') as f:
+          o = f.read()
+          print(o)
+          lines = o.split("\n")
 
-   nlines = len(lines)
+          nlines = len(lines)
 
-   nw = 0
-   for l in lines:
-       nw += len(l.split(" "))
+          nw = 0
+          for l in lines:
+             nw += len(l.split(" "))
 
-   print(nlines)
-   print(nw)
+          print(nlines)
+          print(nw)
 
 --------------
 
@@ -471,18 +496,20 @@ Wonderland <http://www.pallier.org/cours/AIP2013/alice.txt>`__
 .. code:: python
 
    def spot_nsa(filename):
-       f = file(filename)
-       o = f.read()
-       lines = o.split("\n")
-       found = False
-       for l in lines:
-           if "NSA" in l.split(" "):
-               found = True
-               break
+       """ detects if the text file pointed to by filename contains 'NSA' """
+       with open(filename) as f:
+           o = f.read()
+           lines = o.split("\n")
+           found = False
+           for l in lines:
+               if "NSA" in l.split(" "):
+                   found = True
+                   break
        return found
 
+
 Representation of images
-========================
+++++++++++++++++++++++++
 
 Images can be stored either:
 
@@ -504,7 +531,7 @@ Each dot (pixel) is either ‘0’ (black) or ‘1’ (white).
 
 *Answer:* 1024*768/8/1024=96 KB
 
-(13) Execute the following code in ipython:
+(13) Execute the following code in ``ipython``:
 
 .. code:: python
 
@@ -557,9 +584,12 @@ The following code displays an image:
 
 .. code:: python
 
-   import scipy.misc
-   l = scipy.misc.lena()
-   plt.imshow(l,  cmap=plt.cm.gray)
+   from skimage import data
+   from skimage.color import rgb2gray
+
+   original = data.astronaut()
+   grayscale = rgb2gray(original)
+   plt.imshow(grayscale,  cmap=plt.cm.gray)
    plt.show()
 
 This code runs a low pass (averaging) filter on it:
@@ -567,7 +597,7 @@ This code runs a low pass (averaging) filter on it:
 .. code:: python
 
    import scipy.ndimage
-   bl = scipy.ndimage.gaussian_filter(l, 3)
+   bl = scipy.ndimage.gaussian_filter(grayscale, 3)
    plt.imshow(bl,  cmap=plt.cm.gray)
    plt.show()
 
@@ -580,21 +610,27 @@ the image and diplay the results.
 
 .. code:: python
 
-   kernel1 = np.array([[-1, -1, -1],
-                      [-1,  8, -1],
-                      [-1, -1, -1]])
 
-   bl=scipy.ndimage.convolve(l,kernel1)
+   from skimage import data
+   from skimage.color import rgb2gray
+
+   original = data.astronaut()
+   grayscale = rgb2gray(original)
+
+   kernel1 = np.array([[-1, -1, -1],
+                       [-1,  8, -1],
+                       [-1, -1, -1]])
+
+   bl = scipy.ndimage.convolve(grayscale, kernel1)
    plt.imshow(bl,  cmap=plt.cm.gray)
    plt.show()
 
-
    kernel2 = np.array([[-1, -1, -1, -1, -1],
-                      [-1,  1,  2,  1, -1],
-                      [-1,  2,  4,  2, -1],
-                      [-1,  1,  2,  1, -1],
-                      [-1, -1, -1, -1, -1]])
-   bl=scipy.ndimage.convolve(l,kernel2)
+                       [-1,  1,  2,  1, -1],
+                       [-1,  2,  4,  2, -1],
+                       [-1,  1,  2,  1, -1],
+                       [-1, -1, -1, -1, -1]])
+   bl=scipy.ndimage.convolve(grayscale, kernel2)
    plt.imshow(bl,  cmap=plt.cm.gray)
    plt.show()
 
@@ -613,3 +649,9 @@ Exercice: What are the RGB triplets for BLACK, WHITE, RED, YELLOW?
 
 .. |image0| image:: images/bitmap.jpg
 
+
+.. code:: python
+
+   from skimage import data
+   plt.imshow(data.astronaut())
+   plt.show()

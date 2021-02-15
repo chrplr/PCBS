@@ -5,6 +5,9 @@ How to solve problems
   “An expert is a man who has made all the mistakes which can be made, in
   a narrow field.” -- Niels Bohr
 
+.. contents::
+
+
 
 How to think like a programmer: lessons in problem solving
 ----------------------------------------------------------

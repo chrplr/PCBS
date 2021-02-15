@@ -98,6 +98,7 @@ Slack discussion forum
    first-things-first
    software-installation
    running-python
+   practical-interaction
    how-to-solve-problems
    tips-to-write-clean-code
    automata-turing-machines-and-computers

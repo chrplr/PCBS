@@ -1,18 +1,19 @@
-
-
-
+===========
 Simulations
 ===========
+
+.. contents::
+
+
 
 Monte Carlo Estimation
 ----------------------
 
--  Read about `Monte Carlo estimation of
-   PI <https://academo.org/demos/estimating-pi-monte-carlo/>`__
+-  Read about `Monte Carlo estimation of PI <https://academo.org/demos/estimating-pi-monte-carlo/>`__
 
--  Write a script that estimate pi using this method (then check my
-   solution:
-   :download:`simulations/estimate_PI_by_MonteCarlo.py <../simulations/estimate_PI_by_MonteCarlo.py>`)
+-  Write a script that estimates the number 'pi' using this method.
+
+- Compare it to my solution: :download:`simulations/estimate_PI_by_MonteCarlo.py <../simulations/estimate_PI_by_MonteCarlo.py>`)
 
 Fractals
 --------
@@ -20,8 +21,7 @@ Fractals
 `Fractals <https://en.wikipedia.org/wiki/Fractal>`__ are figures that
 are self-similar at several scales.
 
--  Write a script that displays the `Koch
-   snowflake <https://en.wikipedia.org/wiki/Koch_snowflake>`__
+-  Write a script that displays the `Koch snowflake <https://en.wikipedia.org/wiki/Koch_snowflake>`__
 
    Hints:
 
@@ -47,7 +47,7 @@ The book is filled with puzzles, including Hofstadter’s famous **MU puzzle**. 
 A starting string, ``MI``, is given. Four rules for changing the string of characters into a new one are provided (see below). A each step, the current string can be transformed into a new string by the application of one of the four rules. Note that rules are one-way!  In case there are several applicable rules, there is nothing that will dictate which rule you should use, it’s up to you! Here are the rules:
 
 
-1. If you possess a string whose last letter is ``I``, you can add on a ``U`` at the end. For example ``MIUI`` can be rewritten ``MIUII``. This rule can be written ``xI ⟶ xIU`` where ``x`` represents any string
+1. If you possess a string whose last letter is ``I``, you can add on a ``U`` at the end. For example ``MIUI`` can be rewritten ``MIUII``. This rule can be written ``xI -> xIU`` where ``x`` represents any string
    
 2. Suppose you have ``Mx``. Then you may rewrite it ``Mxx``. For example, from ``MIU``, you may get ``MIUIU`` (x = ``IU`` therefore; ``Mxx = MIUIU``; From ``MUM``, you may get ``MUMUM``, From ``MU``, you may get ``MUU``, ...
 
@@ -130,14 +130,7 @@ More readings:
    Networks <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>`__
    on Andrej Karpathy’s blog.
 
--  `understanding LSTM
-   Networks <http://colah.github.io/posts/2015-08-Understanding-LSTMs/>`__
+-  `understanding LSTM Networks <http://colah.github.io/posts/2015-08-Understanding-LSTMs/>`__
 
--  `Pattern recognition and machine
-   learning <https://www.springer.com/fr/book/9780387310732>`__ by
+-  `Pattern recognition and machine learning <https://www.springer.com/fr/book/9780387310732>`__ by
    Christopher M. Bishop
-
-
-
-
-

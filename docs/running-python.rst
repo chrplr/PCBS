@@ -2,6 +2,9 @@
 Running Python
 ==============
 
+.. contents::
+
+
 They are several ways to work with Python, each of which is best adapted to a certain type of task:
 
   * To quickly test short pieces of code in an interactive manner, or to access the documentation of some functions or mudles, open a terminal and run ``ipython``
@@ -10,8 +13,6 @@ They are several ways to work with Python, each of which is best adapted to a ce
 
   * To write a data analysis report, or a lecture, use a jupyter notebook.
 
-
-.. contents::
 
 
 Running a python script from the command line

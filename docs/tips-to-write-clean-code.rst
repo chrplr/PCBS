@@ -4,6 +4,9 @@
 Writing clean code
 ==================
 
+.. contents::
+
+
 Most of these recommendations are copied verbatim from the book  `Clean Code <https://www.goodreads.com/book/show/3735293-clean-code>`__  by Robert C. Martin.
 
 

@@ -1,6 +1,10 @@
-=======================
+======================
  Programming Exercices
-=======================
+======================
+
+
+.. contents::
+
 
 (Note: Solutions are available in https://github.com/chrplr/PCBS/tree/master/solutions-to-exercices)
 

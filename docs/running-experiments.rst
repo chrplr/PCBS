@@ -1,6 +1,9 @@
 Experiments
 ===========
 
+.. contents::
+
+
 Simple reaction times
 ---------------------
 
