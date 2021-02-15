@@ -96,7 +96,7 @@ Slack discussion forum
    :caption: Contents:
 
    first-things-first
-   software_installation
+   software-installation
    running-python
    resources
    how-to-solve-problems
