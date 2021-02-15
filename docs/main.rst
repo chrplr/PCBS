@@ -497,30 +497,6 @@ are self-similar at several scales.
 
    My solution: :download:`games/koch.py <../games/koch.py>`
 
-Cellular Automata
------------------
-
-Learn about Conway’s `Game of
-Life <https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>`__. Watch
-`this <https://www.youtube.com/watch?v=S-W0NX97DB0>`__ and
-`that <https://www.youtube.com/watch?v=C2vgICfQawE>`__ videos.
-
--  Implement an `Elementary cellular
-   automaton <https://en.wikipedia.org/wiki/Elementary_cellular_automaton>`__.
-   The aim is to reproduce the graphics shown at the bottom on the
-   previous page. you can take inspiration from the excellent `Think
-   Complexity <http://greenteapress.com/wp/think-complexity-2e/>`__ by
-   Allen B. Downey. My solution is at
-   `cellular-automata/1d-ca.py <cellular-automata/1d-ca.py>`__.
-
--  Implement the Game of Life in 2D.
-
--  Going futher: If you enjoy Cellular Automata, you can read Stephen
-   Wolfram’s `A New Kind of
-   Science <https://en.wikipedia.org/wiki/A_New_Kind_of_Science>`__. A
-   more general book about Complexity is Melanie Mitchell’s *Complexity:
-   a guided tour*.
-
 
 Formal systems
 --------------
@@ -560,6 +536,44 @@ Then you may read :
 - Ernest Nagel and James Newman's book `Gödel's Theorem <http://calculemus.org/cafe-aleph/raclog-arch/nagel-newman.pdf>`__ (translated into French : `Le théorème de Gödel <https://www.eyrolles.com/Sciences/Livre/le-theoreme-de-godel-9782020327787/>`__)
 
 
+Natural Language Parsing
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parsing refers to building the syntactic structure of a sentence from
+the linear sequence of words that compose it.
+
+* Read Chapter 12 (Constituency Grammars)  and 13 (Constituency Parsing)  of Dan Jurafsky and James H. Martin's `Speech and Language Processing <https://web.stanford.edu/~jurafsky/slp3/>`__
+ 
+* Explore the `various parsing algorithms <http://www.nltk.org/book/ch08.html>`__\ using the
+`Natural Language Toolkit <https://www.nltk.org/>`__.
+
+
+Cellular Automata
+~~~~~~~~~~~~~~~~~
+
+Learn about Conway’s `Game of
+Life <https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>`__. Watch
+`this <https://www.youtube.com/watch?v=S-W0NX97DB0>`__ and
+`that <https://www.youtube.com/watch?v=C2vgICfQawE>`__ videos.
+
+-  Implement an `Elementary cellular
+   automaton <https://en.wikipedia.org/wiki/Elementary_cellular_automaton>`__.
+   The aim is to reproduce the graphics shown at the bottom on the
+   previous page. you can take inspiration from the excellent `Think
+   Complexity <http://greenteapress.com/wp/think-complexity-2e/>`__ by
+   Allen B. Downey. My solution is at
+   `cellular-automata/1d-ca.py <cellular-automata/1d-ca.py>`__.
+
+-  Implement the Game of Life in 2D.
+
+-  Going futher: If you enjoy Cellular Automata, you can read Stephen
+   Wolfram’s `A New Kind of
+   Science <https://en.wikipedia.org/wiki/A_New_Kind_of_Science>`__. A
+   more general book about Complexity is Melanie Mitchell’s *Complexity:
+   a guided tour*.
+
+
+
 
 Artificial Neural networks
 --------------------------
@@ -591,13 +605,6 @@ More readings:
    learning <https://www.springer.com/fr/book/9780387310732>`__ by
    Christopher M. Bishop
 
-Natural Language Parsing
-------------------------
-
-Parsing refers to building the syntactic structure of a sentence from
-the linear sequence of words that compose it. Explore the `various
-parsing algorithms <http://www.nltk.org/book/ch08.html>`__\ using the
-`Natural Language Toolkit <https://www.nltk.org/>`__.
 
 Neuroimaging
 ------------
