@@ -98,19 +98,17 @@ Slack discussion forum
    first-things-first
    software-installation
    running-python
-   resources
    how-to-solve-problems
    tips-to-write-clean-code
-   tools-for-reproducible-science
    automata-turing-machines-and-computers
+   representing-numbers-images-text
    regular_expressions
    stimulus-creation
    running-experiments
    data-analyses
    simulations          
+   tools-for-reproducible-science
    projects
-   scratch/Starting-from-Scratch
-   representing-numbers-images-text
    coding-exercices
 
 

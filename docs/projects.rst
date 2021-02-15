@@ -54,7 +54,7 @@ things and improve your coding skills.
 
 
 Examples of Students' Projects from previous sessions
-=====================================================
+-----------------------------------------------------
 
 1.  Camille Williams
     https://camzcamz.github.io/PCBS-Political-Ideologies-and-Visual-Deviance-Sensitivity/
