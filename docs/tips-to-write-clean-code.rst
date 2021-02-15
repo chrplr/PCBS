@@ -27,9 +27,7 @@ Comments
    write a comment, take the time to make sure it is the best comment
    you can write. Choose your words carefully. Use correct grammar and
    punctuation. Don’t ramble. Don’t state the obvious. Be brief.
--  Learn about `docstrings in
-   Python <https://www.datacamp.com/community/tutorials/docstrings-python>`__.
-
+-  Learn about `docstrings in Python <https://www.datacamp.com/community/tutorials/docstrings-python>`__.
    Then learn about `markdown <https://www.markdowntutorial.com/>`__.
 
    Finally, learn  about`Sphinx <http://www.sphinx-doc.org>`__ and `Sphinx gallery <https://sphinx-gallery.github.io/>`__ to automatically generate documentation from code. 
@@ -40,9 +38,7 @@ Names
 -----
 
 -  A function name should describes what the function does. Don’t be
-   afraid to
-
--  Make a name long. A long descriptive name is better than a short
+   afraid to make a name long. A long descriptive name is better than a short
    enigmatic name. A long descriptive name is better than a long
    descriptive comment.
 
@@ -130,6 +126,5 @@ Testing
 It is an excellent idea to write tests that check your that your modules and function
 keep working as they should. It can be as simple as having scripts that
 just run your code on some examples and check that it does not crash after an
-upgrade, or following a unit testing methodology (see `Getting Started With
-Testing in Python <https://realpython.com/python-testing/>`__)
+upgrade, or following a unit testing methodology (see `Getting Started With Testing in Python <https://realpython.com/python-testing/>`__)
 

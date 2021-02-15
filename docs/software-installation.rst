@@ -212,7 +212,7 @@ course materials. To this end, open a terminal and type::
 
        git clone https://github.com/chrplr/PCBS.git
 
-This should download, the course materials at from http://githb.com/chrplr/PCBS
+This should download, the course materials at from http://github.com/chrplr/PCBS
 inside a subfolder named ``PCBS``.
 
 Be aware that if a folder with that name already

@@ -18,8 +18,7 @@ things and improve your coding skills.
    (It is fine if README.md points to
    reports in html generated for example by Rmarkdown for example). No
    pdfs, no Word documents! I will simply *not read* them. I recommend
-   that you use the ‘Pages’ system of github (see
-   https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages).
+   that you use the ‘Pages’ system of github (see https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site ).
 
 
 - Send me a link to your github project as soon as possible: I want to be able
@@ -166,8 +165,7 @@ Some ideas
    test and training sets must be different). Plot the identification
    performance as a function of the length of the text (in characters).
 
--  `Mix and
-   Match <http://www.mrc-cbu.cam.ac.uk/people/maarten-van-casteren/mixandmatch/>`__
+-  `Mix and Match <http://www.mrc-cbu.cam.ac.uk/people/maarten-van-casteren/mixandmatch/>`__
    are tools to support experimental research. Mix will allow
    experimental stimuli to be pseudo-randomised, according to
    constraints supplied by the user in a simple script. Match can match

@@ -424,9 +424,7 @@ splitting a strings at delimiters
    a = 'alain marie jean marc'
    a.split(" ")
 
-Read (see
-`https://docs.python.org/2/library/string.html <https://docs.python.org/2/library/string.html%5D>`__)
-to learn about more string functions.
+Read  https://docs.python.org/3/library/stdtypes.html#string-methods to learn about more string functions.
 
 Interactive input from the command line:
 ========================================
@@ -455,8 +453,7 @@ Reading and writing to text files
 Counting lines and words in a text file.
 ========================================
 
-Download `Alice in
-Wonderland <http://www.pallier.org/cours/AIP2013/alice.txt>`__
+Download `Alice in Wonderland <http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt>`__
 
 .. code:: python
 
@@ -551,8 +548,7 @@ Each dot (pixel) is either ‘0’ (black) or ‘1’ (white).
 Numpy’s arrays are a new type of object. There are similar to lists, but
 optimised for mathematical computations. Notably, they can be
 multidimensional (i.e. you can use a[i,j] notation). You can learn more
-about arrays in the documents
-http://www.pallier.org/cours/AIP2013/python4science.pdf and
+about arrays in the documents https://scipy-lectures.org/ and
 http://wiki.scipy.org/Tentative_NumPy_Tutorial.
 
 Here is another example:

@@ -125,10 +125,7 @@ What is a Computer?
 
 A computer is basically an automaton augmented with a *memory store*.
 
-This is particularly clear in the case of the *Turing machine*, a
-mathematical model of computation (Turing offered the Turing machine as
-an analysis of the activity of an (idealised) human mathematician
-engaged in computing).
+This is particularly clear in the case of the *Turing machine*, a mathematical model of computation (Turing offered the Turing machine as an analysis of the activity of an (idealised) human mathematician engaged in computing).
 
 .. figure:: images/Turing-Machine0.jpg
    :alt: A Turing machine = FSA + memory store
@@ -138,11 +135,9 @@ engaged in computing).
 A Turing machine is a finite state machine augmented with a tape and a
 mechanism to read/write on it.
 
-Read `Roger Penrose’s chapter’s on Turing
-machines <documents/Penrose_Turing-machines.pdf>`__ and
+Read `Roger Penrose’s chapter’s on Turing machines <../documents/Penrose_Turing-machines.pdf>`__ and
 https://en.wikipedia.org/wiki/Turing_machine. You may laos read the
-`Alan Turing’s seminal
-paper <https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/plms/s2-42.1.230>`__.
+`Alan Turing’s seminal paper <https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/plms/s2-42.1.230>`__.
 
 .. figure:: images/turing.png
    :alt: A table describing a Turing machine: try to simulate it.
@@ -153,25 +148,17 @@ paper <https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/plms/s2-42.1.
 
 Other computing machines have been invented, yet:
 
-"All attempts to give an exact analysis of the intuitive notion of an
-effectively calculable function have turned out to be equivalent, in the
-sense that each analysis offered has been proved to pick out the same
-class of functions, namely those that are computable by Turing machine.
+"All attempts to give an exact analysis of the intuitive notion of an effectively calculable function have turned out to be equivalent, in the sense that each analysis offered has been proved to pick out the same class of functions, namely those that are computable by Turing machine.
 
-The concept of effective calculability has turned out to be
-formalism-independent, in that all these different formalisms pick out
-exactly the same class of functions." (B. Jack Copeland “The
-Church-Turing thesis” in *Stanford Encyclopedia of Philosophy Archive*)
+The concept of effective calculability has turned out to be formalism-independent, in that all these different formalisms pick out exactly the same class of functions." (B. Jack Copeland “The Church-Turing thesis” in *Stanford Encyclopedia of Philosophy Archive*)
 
-Another computing model which is closer to actual computers, is the
-*register machine*.
+Another computing model which is closer to actual computers, is the *register machine*.
 
 
 Register machines
 -----------------
 
-Read `The seven secrets of computer power revealed <documents/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf>`__
-(Chapter 24 from Daniel Dennett’s *Intuition Pumps and other tools for
+Read `The seven secrets of computer power revealed <../documents/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf>`__ (Chapter 24 from Daniel Dennett’s *Intuition Pumps and other tools for
 thinking*)
 
 The RogRego computer possesses:

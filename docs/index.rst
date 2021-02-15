@@ -48,7 +48,7 @@ Slack discussion forum
    * -  Feb  8
      -  Quizz. Python fundamentals or self training on Regular Expressions
      - *  `lecture2 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture2.html>`__
-       * Group B: `Regular expressions tutorial <./regular_expressions.html>`_
+       * Group B: `Regular expressions tutorial <https://pcbs.readthedocs.io/en/latest/regular_expressions.html>`_
    * -  Feb 15
      -  
      -
