@@ -36,3 +36,27 @@ Regular expressions have many applications, especially in cognitive science.
 
 For example, Christophe Pallier (1999) used regular expressions to find syllable boundaries in words from their phonetic representation. To know more, see : `Pallier (1999). Syllabation des représentations phonétiques de brulex et de lexique. <https://www.pallier.org/papers/syllabation.pdf>`_
 
+
+More on the Theory
+------------------
+
+A regular regression describes a *formal language*. A formal language is a set of strings over a finite alphabet. For example, the set L = { a\ :sup:`n`\ b\ :sup:`n` | n > 0} is a formal language.
+
+A formal language is often defined by means of a *formal grammar*: a start symbol and a set of *production rules* that, when applied, generate all the strings of the language but no more. For example, the grammar with start symbol 'S' and production rules S -> aSb, S -> ab generates L.
+
+The problem of *matching* or *recognizing* a language is to decide whether a given strings belongs to the language (as when deciding whether a string matches a regular expression). Depending on the language, this can be more or less difficult to solve. For example, L cannot be recognized by a finite-state automaton, but can be recognized by a type of automaton equipped with a stack (known as a pushdown automaton). One such automaton would push onto its stack each 'a' encountered starting from the beginning of the string, then pop one 'a' from the stack for each 'b' encountered, and would decide that the string matches iff the stack is empty when reaching the end of the string.
+
+**Chomsky's hierarchy** establishes a direct correspondance between certain classes of languages or grammars and certain types of machines/automata that can recognize them. See `the wikipedia article <https://en.wikipedia.org/wiki/Chomsky_hierarchy#The_hierarchy>`_
+
+.. figure:: images/chomsky_hierarchy_table.png
+
+  Chomsky's hierarchy (copied from wikipedia)
+
+**Regular expressions are a class of languages that can be recognized very efficiently** while still being expressive enough for many applications, which is why they are such a practical tool for everyday practice. (Note: The "regular expressions" provided in modern computer software are a bit more expressive than the narrower "regular language" class as defined in theory, because they include additional mechanisms such as lookahead).
+
+To learn more about theory, check out this reference book (chapter 3 for regular expressions and automata):
+
+	Alfred V. Aho, Ravi Sethi & Jeffrey D. Ullman. "Compilers: principles, techniques, & Tools". Addison-Wesley, 1986.
+
+
+
