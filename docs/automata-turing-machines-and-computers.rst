@@ -445,7 +445,7 @@ MacOSX
    http://www.wikihow.com/Get-to-the-Command-Line-on-a-Mac)
 
 Windows
-   Launch Git Bash -assuming you have install git for windows), or Anaconda Prompt (assuming you have installed Anaconda Python)
+   Launch ``Git Bash`` (This assumes that you have installed Git for windows)
 
 
 

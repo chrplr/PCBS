@@ -104,9 +104,12 @@ Slack discussion forum
    tools-for-reproducible-science
    automata-turing-machines-and-computers
    regular_expressions
-   main
+   stimulus-creation
+   running-experiments
+   data-analyses
+   simulations          
    projects
-   scratch/Starting-from-Scratch.rst
+   scratch/Starting-from-Scratch
    representing-numbers-images-text
    coding-exercices
 
