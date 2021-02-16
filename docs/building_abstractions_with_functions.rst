@@ -61,6 +61,10 @@ A solution: `link to code <https://github.com/chrplr/PCBS/blob/9a9ebc54b5a03c4e5
 
 .. A solution: TBD
 
+**Exercise 6.** Produce strings from the MIU formal grammar and investigate the MU puzzle. See :ref:`detailed explanations on the MU Puzzle <mupuzzle>`
+
+.. A solution: TBD
+
 
 Higher-order functions
 ----------------------

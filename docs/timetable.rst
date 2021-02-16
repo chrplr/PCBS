@@ -20,7 +20,7 @@ PCBS Time table 2020/2021 2nd semester
    * -  Feb  10
      -  Quizz. Python fundamentals or self training on Regular Expressions
      - *  `lecture2 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture2.html>`__
-       * Group B: `Regular expressions tutorial <https://pcbs.readthedocs.io/en/latest/regular_expressions.html>`_
+       * Group B: :doc:`Regular expressions tutorial <regular_expressions>`
    * -  Feb 17
      -  Functions, Functions, Functions!
      -  Group B: :doc:`Building abstractions with recursive functions and higher-order functions <../building_abstractions_with_functions>` 

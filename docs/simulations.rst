@@ -34,6 +34,8 @@ are self-similar at several scales.
 Formal systems
 --------------
 
+.. _mupuzzle:
+
 MU Puzzle
 ~~~~~~~~~
 
