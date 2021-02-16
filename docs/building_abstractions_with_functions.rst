@@ -39,36 +39,36 @@ You can skip them if you want, but visualization is a powerful way to learn abou
 
 You can move to the next section whenever you feel ready to learn more, but make sure to do at least two exercises (like any other programming concepts/techniques, recursive functions cannot be understood without practice).
 
-**Exercise 1.** Write a recursive function to reverse a list (tip: to join two lists, use the '+' operator)
+
+**Exercise 1.** (Duration: 1/3). Write a recursive function to reverse a list. (Hint: to concatenate two lists, use the '+' operator).
 
 .. A solution: TBD
 
-**Exercise 2.** Write a recursive function to generate all permutations of a list of values. (This could be useful, e.g., to do a permutation test for statistical analyses.)
+**Exercise 2.** (Duration: 1/3). Write a recursive function to reverse a list.
 
 .. A solution: TBD
 
-**Exercise 3.** Write a recursive function that, given an integer, returns its binary representation as a string.
-
-A solution: :ref:`link to code <codebinaryrepresentation>`
-
-**Exercise 4.** Write a script that displays the Koch snowflake (`see on wikipedia <https://en.wikipedia.org/wiki/Koch_snowflake>`__) using a recursive function.
+**Exercise 3.** (Duration: 2/3). Write a script that displays the Koch snowflake (`see on wikipedia <https://en.wikipedia.org/wiki/Koch_snowflake>`__) using a recursive function.
 You can use the ``turtle`` graphics module to draw on screen
 (as shown in `section 16.5 of thinkcspy <https://runestone.academy/runestone/books/published/thinkcspy/IntroRecursion/intro-VisualizingRecursion.html>`__).
 
 A solution: `link to code <https://github.com/chrplr/PCBS/blob/9a9ebc54b5a03c4e58311cb0d0bd20ea12d0ec02/games/koch.py>`__.
 
-**Exercise 5.** Write a recursive function to evaluate an arithmetic expression given in Polish notation (i.e. prefix notation, `see on wikipedia <https://en.wikipedia.org/wiki/Polish_notation>`__)
+**Exercise 4.** (Duration: 2/3). Write a script that returns the pathnames of all the files ending in ``.txt`` contained inside a directory (at any depth of the hierarchy). You will need to use ``os.listdir()`` and ``os.path.isdir()``.
+
+**Exercise 5.** (Duration: 2/3). Write a recursive function to generate all permutations of a list of values. (This could be useful, e.g., to do a permutation test for statistical analyses.)
+
+**Exercise 6.** (Duration: 3/3). Write a recursive function to evaluate an arithmetic expression given in Polish notation (i.e. prefix notation, `see on wikipedia <https://en.wikipedia.org/wiki/Polish_notation>`__)
 
 .. A solution: TBD
 
-**Exercise 6.** Produce strings from the MIU formal grammar and investigate the MU puzzle. See :ref:`detailed explanations on the MU Puzzle <mupuzzle>`.
+**Exercise 7.** (Duration: 3/3). Produce strings from the MIU formal grammar and investigate the MU puzzle. See :ref:`detailed explanations on the MU Puzzle <mupuzzle>`.
 
 .. A solution: TBD
 
 
 Higher-order functions
 ----------------------
-
 
 
 **1. Watch the introduction video.**
@@ -109,7 +109,7 @@ The returned value, ``x``, should be such that ``abs(f(x) - x) < error_margin``.
 for the function y -> 1/2 (y + x/y).
 Make sure to test your square root function.
 
-**Exercise 4**
+**Exercise 4.**
 Write a function to numerically compute any statistic of an arbitrary random variable.
 The statistic and the random variable should both be functions which are given as argument.
 
@@ -122,5 +122,5 @@ Reference
 This module was inspired by:
 Abelson, Harold, and Gerald Jay Sussman. *Structure and interpretation of computer programs*. The MIT Press, 1996.
 
-It is an excellent computer science textbook. If you are curious, go check it out, it is freely available online `as pdf <https://web.mit.edu/alexmv/6.037/sicp.pdf>`_ and `as a web document <https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html>`__.
+It is an excellent computer science textbook. If you are curious, go check it out, it is freely available online `as pdf <https://web.mit.edu/alexmv/6.037/sicp.pdf>`__ and `as a web document <https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html>`__.
 

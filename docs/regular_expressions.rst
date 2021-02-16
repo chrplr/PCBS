@@ -19,9 +19,9 @@ Use of regular expressions to extract and transform information from text.
 
 This will show you how regular expressions can be used in Python.
 
-The book is `available on Schoology <https://app.schoology.com/course/4637783206/materials/gp/4653909275>`_
+The book is `available on Schoology <https://app.schoology.com/course/4637783206/materials/gp/4653909275>`__
 
-**3. Do all the lessons of the interactive tutorial at** `regexone.com <https://regexone.com/>`_
+**3. Do all the lessons of the interactive tutorial at** `regexone.com <https://regexone.com/>`__
 
 This will teach you, through practice, the syntax of regular expressions.
 
