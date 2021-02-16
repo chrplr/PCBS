@@ -69,6 +69,10 @@ A solution: `link to code <https://github.com/chrplr/PCBS/blob/9a9ebc54b5a03c4e5
 .. A solution: TBD
 
 
+Side remark: in some cases, recursive functions can take a prohibitive amount of time and/or memory. This happens when the same computations are performed many times. This issue can be addressed using *memoization*. If you are curious, you can read the article `Memoization in Python <https://towardsdatascience.com/memoization-in-python-57c0a738179a>`__
+
+
+
 Higher-order functions
 ----------------------
 

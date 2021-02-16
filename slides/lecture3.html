@@ -25,7 +25,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Menu of the day</title>
+    <title>Functions</title>
     <!-- Styles -->
     
     <style type="text/css" media="print">
@@ -1296,33 +1296,34 @@ aside {
     </div>
     <div class="slides">
       
-      <!-- slide source: lecture2.md -->
+      <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-1">
+        <div class="slide has_code slide-1">
           <div class="inner">
             
-            <header><h1>Menu of the day</h1></header>
+            <header><h1>Functions</h1></header>
             
             
-            <section><ol>
-<li>
-<p>Short <strong>Quizz</strong> about Python on Schoology </p>
-</li>
-<li>
-<p>Depending on the outcome:</p>
-<ul>
-<li><strong>Lecture</strong> on Python fundamentals: objects, control flow (tests, loops), functions</li>
-</ul>
-<p>OR</p>
-<ul>
-<li><strong>Self-training</strong>* on Regular expressions (+ extra on register machines)</li>
-</ul>
-</li>
-<li>
-<p>At noon, <strong>debriefing</strong> on zoom (Q &amp; A session)</p>
-</li>
-</ol>
-<p>Remark: You can always use http://cogmaster-pcbs.slack.com/ to ask questions. </p></section>
+            <section><p>A <em>function</em> is a block of code that is given a name. </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">one_two</span><span class="p">():</span>  <span class="c1">#  definition of a functoin names &#39;one_two&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
+
+<span class="n">one_two</span><span class="p">()</span>  <span class="c1"># function call</span>
+<span class="n">one_two</span><span class="p">()</span>
+<span class="n">one_two</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+<p>Run this code in a terminal in python, </p>
+<p>then in http://pythontutor.com/</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1334,407 +1335,36 @@ aside {
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
+              Source: <a href="lecture3.md">lecture3.md</a>
             </aside>
             
             <aside class="page_number">
-              1/18
+              1/16
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture2.md -->
+      <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
         <div class="slide slide-2">
           <div class="inner">
             
-            <header><h1>Self-training <em>Regular Expressions</em></h1></header>
-            
-            
-            <section><p>It is common to have to search for strings of characters that conform to certain patterns. For example:</p>
-<ul>
-<li>All French verbs that end in '-er'.</li>
-<li>all possible consonant clusters (strings of consonants) in a given language (French, Japanese, English) to study the phonotactics of the language.</li>
-</ul>
-<p>Regular expressions are the tools of choice for this type of task.</p>
-<p>The activity is at <a href="https://pcbs.readthedocs.io/en/latest/regular_expressions.html">https://pcbs.readthedocs.io/en/latest/regular_expressions.html</a></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              2/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-3">
-          <div class="inner">
-            
-            <header><h1>Extra bonus on Register Machines</h1></header>
-            
-            
-            <section><p>A register machine is a universal computational model (as a Turing machine). </p>
-<ul>
-<li>
-<p>Check out <a href="../documents/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf">The seven secrets of computer power revealed</a></p>
-</li>
-<li>
-<p>try the simulator at <a href="http://proto.atech.tufts.edu/RodRego/">http://proto.atech.tufts.edu/RodRego/</a></p>
-</li>
-<li>
-<p>(if you dare) Implement a Rodrego interpreter in Python: a script that will take as input a Rodrego source code, 10 integer values representing the initial state of registers, and will execute the program step by step.</p>
-</li>
-<li>
-<p>Compare with a solution at <a href="https://raw.githubusercontent.com/chrplr/PCBS/master/solutions-to-exercices/rodrego.py">https://raw.githubusercontent.com/chrplr/PCBS/master/solutions-to-exercices/rodrego.py</a></p>
-</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              3/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-4">
-          <div class="inner">
-            
-            <header><h1>Python fundamentals</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              4/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-5">
-          <div class="inner">
-            
-            <header><h1>Editing and running Python code</h1></header>
-            
-            
-            <section><p>Using a text editor (e.g., SublimeText) and a Terminal (e.g., Git Bash) side by side. (Check out <a href="https://www.youtube.com/watch?v=2yhcWvBt7ZE">https://www.youtube.com/watch?v=2yhcWvBt7ZE</a>)</p>
-<p>If you still have issues,  you can use an on-line python interpreter <a href="https://repl.it/languages/python3">https://repl.it/languages/python3</a></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              5/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-6">
-          <div class="inner">
-            
-            <header><h1>A question:</h1></header>
-            
-            
-            <section><p>what happens when one types:</p>
-<pre><code>  python mycode.py
-</code></pre>
-<p>on a line in a Terminal?</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              6/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-7">
-          <div class="inner">
-            
-            
-            <section><p>Answer:</p>
-<p>A program, called "python", is started that reads <code>mycode.py</code>'s lines ("instructions") and executes them one by one, from top to bottom (pipeline).</p>
-<pre><code># compute the area of a circle
-pi = 3.1415
-radius = .4
-area = pi * (radius ** 2) 
-print("radius=", radius, " area=", area)
-
-print("The solution is", 42)  # reference to The Hitchiker's Guide to the Galaxy
-
-# give greetings
-print("hello")
-var = input("your name?")
-print("Hello " + var + "!")
-</code></pre>
-<p>Instructions typically:</p>
-<ul>
-<li>perform computations and may save them in the memory (variables)</li>
-<li>perform input/ouput operations</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              7/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-8">
-          <div class="inner">
-            
-            <header><h1>Python basic objects</h1></header>
-            
-            
-            <section><pre><code># integer
--6
-2**64
-
-# float
-3.1415
-float('inf')
-
-# Boolean
-True
-False
-1 == 2
-
-# strings
-
-'hello'
-"hello"
-
-"""hello.
-Did you
-sleep well?
-"""
-
-None  # a special object
-</code></pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              8/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-9">
-          <div class="inner">
-            
-            <header><h1>Complex objects</h1></header>
-            
-            
-            <section><pre><code> # tuples
-
- red = (255, 0 , 0)
- print(red[0])
-
- # lists
-
- simple = [5, 7, 8, 0]
- complex = ['abc', 5, (4, 5), ['hello', 6]]
- print(complex[3][1])
-
- # dictionaries
- d= {'alpha':1, 'beta':2}
- print(d['alpha'])
-</code></pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              9/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-10">
-          <div class="inner">
-            
-            <header><h1>Control flow: loops</h1></header>
-            
-            
-            <section><p>To repeat the same line several times</p>
-<pre><code>for _ in range(5):
-    print("boring!")
-
-
-
-for _ in range(20):
-    print("boring!")
-</code></pre>
-<p>Note the <strong>indentation</strong> !!!</p>
-<pre><code>for _ in range(10):
-    print('a', end='')
-    print('b', end='')
-
-print('c')
-</code></pre>
-<p>Notice the notion of <strong>block of instructions</strong></p>
-<h1>Doing something with the loop index</h1>
-<pre><code>for i in range(10):
-    print(2 * i)
-
-
-
-for name in ['Jim', 'John', 'Donald']:
-    print('Hello ' + name)
-</code></pre>
-<p>Nested loops</p>
-<pre><code>for i in range(1, 6):
-    for j in range(1, 6):
-        print(i, "*", j, "=", i * j)
-</code></pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              10/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-11">
-          <div class="inner">
-            
-            <header><h1>Exercises</h1></header>
+            <header><h1>Remarks</h1></header>
             
             
             <section><ul>
 <li>
-<p>Write codes that print 20 times the string <code>All work no play makes Jack a dull boy</code></p>
+<p>calling a function is like substituting the function call by <em>its body</em>, that is, the block of lines within the definition.</p>
 </li>
 <li>
-<p>Write code that prints the squares of numbers between 1 and 100.</p>
+<p>Using functions avoids duplicating code which is good as it facilitate the modification and correction of a program. </p>
+</li>
+<li>
+<p>Using functions typically serves to make the code more readable (and maybe shorter). </p>
+</li>
+<li>
+<p>if you do not call the function, it will never be executed.</p>
 </li>
 </ul></section>
             
@@ -1748,36 +1378,41 @@ for name in ['Jim', 'John', 'Donald']:
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
+              Source: <a href="lecture3.md">lecture3.md</a>
             </aside>
             
             <aside class="page_number">
-              11/18
+              2/16
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture2.md -->
+      <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-12">
+        <div class="slide has_code slide-3">
           <div class="inner">
             
-            <header><h1>'While' loops</h1></header>
+            <header><h1>functions must be defined before called</h1></header>
             
             
-            <section><pre><code>while condition:
-   code
-</code></pre>
-<p>'condition' is an expression that evaluate to <code>True</code> or <code>False</code> (a Boolean)</p>
-<p>As long as it evaluates to <code>True</code>, code is executed </p>
-<pre><code>x = 1
-while x * x &lt; 132:
-    x = x + 1
+            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">one_two</span><span class="p">()</span>  <span class="c1"># function call</span>
+<span class="n">one_two</span><span class="p">()</span>
+<span class="n">one_two</span><span class="p">()</span>
 
-print(x, x ** 2 )
-print(x + 1, (x + 1) ** 2)
-</code></pre></section>
+<span class="k">def</span> <span class="nf">one_two</span><span class="p">():</span>  <span class="c1"># function definition</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></section>
             
           </div>
           <div class="presenter_notes">
@@ -1789,38 +1424,466 @@ print(x + 1, (x + 1) ** 2)
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
+              Source: <a href="lecture3.md">lecture3.md</a>
             </aside>
             
             <aside class="page_number">
-              12/18
+              3/16
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture2.md -->
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-4">
+          <div class="inner">
+            
+            <header><h1>Functions can call other functions</h1></header>
+            
+            
+            <section><p>One can define several functions and they can call each other:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func1</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">func2</span><span class="p">():</span>
+    <span class="n">func1</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">func1</span><span class="p">()</span>
+
+<span class="n">func2</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-5">
+          <div class="inner">
+            
+            <header><h1>Arguments</h1></header>
+            
+            
+            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">)</span>
+<span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+<p>During the call <code>hello('Alice')</code>, the argument <code>Alice</code> is stored in the variable <code>name</code>.</p>
+<p>See http://pythontutor.com/</p>
+<p>Note: the variable <code>name</code> is created only during the execution of the function <code>hello()</code> (it is <em>local</em> to hello())</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-6">
+          <div class="inner">
+            
+            <header><h1>Multiple arguments</h1></header>
+            
+            
+            <section><pre><code>! python
+def check_divisible(a, b):
+    if a % b == 0:
+        print(a, ' is a divisible by ', b)
+
+check_divisible(10, 5)
+check_divisible(11, 5)
+</code></pre>
+<p>Exercise: using the above function, write code that writes all the divisors of 840, 747, 833, 997.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-7">
+          <div class="inner">
+            
+            <header><h1>Return values</h1></header>
+            
+            
+            <section><p>The functions we have seen so far executed actions. </p>
+<p>A function can also return the result(s) of a computation</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">y</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mf">1.0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mf">2.5</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-8">
+          <div class="inner">
+            
+            <header><h1>Boolean Functions</h1></header>
+            
+            
+            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">isDivisible</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">isDivisible</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+<p>Other examples: <code>os.path.isdir</code>, <code>os.path.isfile</code></p>
+<p>Question: how could one "simplify" (shorten) the function <code>isDivisible</code> ?</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-9">
+          <div class="inner">
+            
+            <header><h1>Returning "complex" objets</h1></header>
+            
+            
+            <section><p>A function can return a t-uple, a list, a dictionary, ...</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
+    <span class="n">y1</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> 
+    <span class="n">y2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span> 
+    <span class="n">y3</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> 
+    <span class="k">return</span> <span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">)</span>
+
+<span class="n">f</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-10">
+          <div class="inner">
+            
+            <header><h1>Use of position or keyword</h1></header>
+            
+            
+            <section><p>In a function call, parameters are assigned to arguments based either on the position or on their names: </p>
+<p>!python
+   def f(a, b):
+       print('a=', a)
+       print('b=', b)</p>
+<p>f(1 ,2)
+   f(2, 1)
+   f(b=2, a=1)</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-11">
+          <div class="inner">
+            
+            <header><h1>Default values for arguments</h1></header>
+            
+            
+            <section><p>It is possible to provide defaults values for arguments.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">message</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="s1">&#39;Hello&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+
+<span class="n">message</span><span class="p">(</span><span class="s2">&quot;Anna&quot;</span><span class="p">)</span>
+<span class="n">message</span><span class="p">(</span><span class="s2">&quot;Anna&quot;</span><span class="p">,</span> <span class="s2">&quot;Gooodbye&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+<h1>Scope of variables</h1>
+<p>Try the following code in http://pythontutor.com/</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;chris&#39;</span>
+
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">)</span>
+<span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-12">
+          <div class="inner">
+            
+            <header><h1>scope of variables</h1></header>
+            
+            
+            <section><p><strong>local variables</strong></p>
+<p>Arguments or variables defined inside the body of a function only exist while the function is executed. They are destroyed ant the associated memory is freed.</p>
+<p><strong>non-local variables</strong>*</p>
+<ul>
+<li>variables that have been created in the environment where the variable was called. functions can access them (if they are not shadowed)</li>
+</ul>
+<p>Yet, this is <em>bad practice</em> and must be avoided except in a few cases. </p>
+<p>Why ? Because one should be able to understand what a function is going to do only based on its call. </p>
+<p>Read section ""Local and Global Scope"" in Automate the Boring stuff (from p. 67)</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
         <div class="slide slide-13">
+          <div class="inner">
+            
+            <header><h1>Call stack</h1></header>
+            
+            
+            <section><p>function calls can be nested.</p>
+<p>see p. 63 of <em>Automate the boring stuff</em></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-14">
           <div class="inner">
             
             <header><h1>Exercises:</h1></header>
             
             
-            <section><ul>
-<li>
-<p>Given a list of numbers, print their sum</p>
-</li>
-<li>
-<p>Given a list of numbers, print their product</p>
-</li>
-<li>
-<p>Given a list of numbers, print the sum of their squares</p>
-</li>
-<li>
-<p>Given a list of numbers, print the largest one.</p>
-</li>
-</ul></section>
+            <section><p>(1) Define a function which takes 2 arguments: a string <code>msg</code> and a number <code>nrepetitions</code>, and print <code>msg</code>, <code>nrepetition</code> times.</p>
+<p>(2) Read <a href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit</p>
+<p>(3) Define a function <code>isPrime(x)</code> which return <code>True</code> if <code>x</code> is a prime number, else <code>False</code> </p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1832,85 +1895,23 @@ print(x + 1, (x + 1) ** 2)
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
+              Source: <a href="lecture3.md">lecture3.md</a>
             </aside>
             
             <aside class="page_number">
-              13/18
+              14/16
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-14">
-          <div class="inner">
-            
-            <header><h1>conditional (branching)</h1></header>
-            
-            
-            <section><pre><code>if condition:
-    code1
-else:
-    code2
-
-
-
-a = 4
-if a % 2 == 0:   # '%' is the 'modulo' operator
-    print(a, " is even")
-else:
-    print(a, " is odd")
-</code></pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              14/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
+      <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
         <div class="slide slide-15">
           <div class="inner">
             
-            <header><h1>Breaking a loop</h1></header>
+            <header><h1>More exercices</h1></header>
             
-            
-            <section><pre><code>N = 72239
-for i in range(2, 300):
-    if N % i == 0:
-        print(i)
-        # break  # uncomment and see the result
-
-
-
-passwd = 'sesame'
-
-while True:
-    code = input('Password? ')
-    if code == passwd:
-        break
-    else:
-        print('invalide password')
-
-print("You are in!")
-</code></pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -1922,25 +1923,43 @@ print("You are in!")
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
+              Source: <a href="lecture3.md">lecture3.md</a>
             </aside>
             
             <aside class="page_number">
-              15/18
+              15/16
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture2.md -->
+      <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-16">
+        <div class="slide has_code slide-16">
           <div class="inner">
             
-            <header><h1>Exercise</h1></header>
+            <header><h1>Modules</h1></header>
             
             
-            <section><p>Write code that prints all the numbers between 1 and 1000 that are multiples of 7</p></section>
+            <section><p>Functions defined in a file "myfunc.py" in the current folder can be called from another python script.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">### file &quot;mymodule.py&quot;</span>
+<span class="k">def</span>  <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello &quot;</span><span class="p">,</span> <span class="n">name</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+
+<span class="c1">### file &quot;myscript.py&quot;</span>
+<span class="kn">import</span> <span class="nn">mymodule</span>
+
+<span class="n">mymodule</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s2">&quot;Chris&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+<p>See Chapter 3 of <em>Automate the boring stuff</em>, p.57</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1952,104 +1971,11 @@ print("You are in!")
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
+              Source: <a href="lecture3.md">lecture3.md</a>
             </aside>
             
             <aside class="page_number">
-              16/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-17">
-          <div class="inner">
-            
-            <header><h1>Case study: "Guess the number"</h1></header>
-            
-            
-            <section><p>Visualize the following code at <a href="http://pythontutor.com/visualize.html#mode=display">http://pythontutor.com/visualize.html#mode=display</a></p>
-<pre><code>import random
-
-guessesTaken = 0
-
-print('Hello! What is your name?')
-myName = input()
-
-number = random.randint(1, 20)
-print('Well, ' + myName + ', I am thinking of a number between 1 and 20.')
-
-for guessesTaken in range(6):
-    print('Take a guess.') # Four spaces in front of "print"
-    guess = input()
-    guess = int(guess)
-
-    if guess &lt; number:
-        print('Your guess is too low.') # Eight spaces in front of "print"
-
-    if guess &gt; number:
-        print('Your guess is too high.')
-
-    if guess == number:
-        break
-
-if guess == number:
-    guessesTaken = str(guessesTaken + 1)
-    print('Good job, ' + myName + '! You guessed my number in ' +
-      guessesTaken + ' guesses!')
-
-if guess != number:
-    number = str(number)
-    print('Nope. The number I was thinking of was ' + number + '.')
-</code></pre>
-<p>(taken from https://inventwithpython.com/invent4thed/chapter3.html)</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              17/18
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture2.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-18">
-          <div class="inner">
-            
-            
-            <section><p>Recommended reading (for later)</p>
-<p>Check out Chapter 2 of <em>Automate the boring stuff</em> "Flow control" from page 21 to 47</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture2.md">lecture2.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              18/18
+              16/16
             </aside>
           </footer>
         </div>
@@ -2064,110 +1990,98 @@ if guess != number:
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">Menu of the day</a></th>
+        <th><a href="#slide1">Functions</a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide2">Self-training <em>Regular Expressions</em></a></th>
+        <th><a href="#slide2">Remarks</a></th>
         <td><a href="#slide2">2</a></td>
       </tr>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Extra bonus on Register Machines</a></th>
+        <th><a href="#slide3">functions must be defined before called</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Python fundamentals</a></th>
+        <th><a href="#slide4">Functions can call other functions</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Editing and running Python code</a></th>
+        <th><a href="#slide5">Arguments</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">A question:</a></th>
+        <th><a href="#slide6">Multiple arguments</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">-</a></th>
+        <th><a href="#slide7">Return values</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Python basic objects</a></th>
+        <th><a href="#slide8">Boolean Functions</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">Complex objects</a></th>
+        <th><a href="#slide9">Returning "complex" objets</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Control flow: loops</a></th>
+        <th><a href="#slide10">Use of position or keyword</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">Exercises</a></th>
+        <th><a href="#slide11">Default values for arguments</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">'While' loops</a></th>
+        <th><a href="#slide12">scope of variables</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">Exercises:</a></th>
+        <th><a href="#slide13">Call stack</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">conditional (branching)</a></th>
+        <th><a href="#slide14">Exercises:</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">Breaking a loop</a></th>
+        <th><a href="#slide15">More exercices</a></th>
         <td><a href="#slide15">15</a></td>
       </tr>
       
       
       <tr id="toc-row-16">
-        <th><a href="#slide16">Exercise</a></th>
+        <th><a href="#slide16">Modules</a></th>
         <td><a href="#slide16">16</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-17">
-        <th><a href="#slide17">Case study: "Guess the number"</a></th>
-        <td><a href="#slide17">17</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-18">
-        <th><a href="#slide18">-</a></th>
-        <td><a href="#slide18">18</a></td>
       </tr>
       
       

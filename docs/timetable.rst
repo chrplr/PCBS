@@ -26,7 +26,6 @@ PCBS Time table 2020/2021 2nd semester
      -
         * Group A: `lecture3 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture3.html>`__ 
         * Group B: :doc:`Building abstractions with recursive functions and higher-order functions <../building_abstractions_with_functions>`
-        * :doc:`tips-to-write-clean-code`
    * -  Feb 24
      -  Creating Visual Stimuli
      -  :doc:`stimulus-creation`
