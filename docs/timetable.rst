@@ -23,19 +23,23 @@ PCBS Time table 2020/2021 2nd semester
        * Group B: :doc:`Regular expressions tutorial <regular_expressions>`
    * -  Feb 17
      -  Functions, Functions, Functions!
-     -  Group B: :doc:`Building abstractions with recursive functions and higher-order functions <../building_abstractions_with_functions>` 
+     -
+        * Group A: `lecture3 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture3.html>`__ 
+        * Group B: :doc:`Building abstractions with recursive functions and higher-order functions <../building_abstractions_with_functions>`
+        * :doc:`tips-to-write-clean-code`
    * -  Feb 24
      -  Creating Visual Stimuli
-     -  
+     -  :doc:`stimulus-creation`
    * -  Mar  3
      -  How to Solve Problems
-     -
+     -  :doc:`how-to-solve-problems`
    * -  Mar 17
-     -  Simulations
-     -
+     -  Experiments. Simulations. 
+     -  * :doc:`running-experiments`
+        * :doc:`simulations`
    * -  Mar 24
      -  Git and Github.  Start of the Project
-     -
+     -  :doc:`git-and-github`
    * -  Mar 31
      -
      -

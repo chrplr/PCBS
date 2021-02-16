@@ -39,7 +39,7 @@ You can skip them if you want, but visualization is a powerful way to learn abou
 
 You can move to the next section whenever you feel ready to learn more, but make sure to do at least two exercises (like any other programming concepts/techniques, recursive functions cannot be understood without practice).
 
-**Exercise 1.** Write a recursive function to reverse a list.
+**Exercise 1.** Write a recursive function to reverse a list (tip: to join two lists, use the '+' operator)
 
 .. A solution: TBD
 
@@ -51,13 +51,13 @@ You can move to the next section whenever you feel ready to learn more, but make
 
 A solution: :ref:`link to code <codebinaryrepresentation>`
 
-**Exercise 4.** Write a script that displays the Koch snowflake (`see on wikipedia <https://en.wikipedia.org/wiki/Koch_snowflake>`_) using a recursive function.
+**Exercise 4.** Write a script that displays the Koch snowflake (`see on wikipedia <https://en.wikipedia.org/wiki/Koch_snowflake>`__) using a recursive function.
 You can use the ``turtle`` graphics module to draw on screen
-(as shown in `section 16.5 of thinkcspy <https://runestone.academy/runestone/books/published/thinkcspy/IntroRecursion/intro-VisualizingRecursion.html>`_).
+(as shown in `section 16.5 of thinkcspy <https://runestone.academy/runestone/books/published/thinkcspy/IntroRecursion/intro-VisualizingRecursion.html>`__).
 
-A solution: `link to code <https://github.com/chrplr/PCBS/blob/9a9ebc54b5a03c4e58311cb0d0bd20ea12d0ec02/games/koch.py>`_.
+A solution: `link to code <https://github.com/chrplr/PCBS/blob/9a9ebc54b5a03c4e58311cb0d0bd20ea12d0ec02/games/koch.py>`__.
 
-**Exercise 5.** Write a recursive function to evaluate an arithmetic expression given in Polish notation (i.e. prefix notation, `see on wikipedia <https://en.wikipedia.org/wiki/Polish_notation>`_)
+**Exercise 5.** Write a recursive function to evaluate an arithmetic expression given in Polish notation (i.e. prefix notation, `see on wikipedia <https://en.wikipedia.org/wiki/Polish_notation>`__)
 
 .. A solution: TBD
 
@@ -90,7 +90,7 @@ This textbook is an adaptation for Python of the textbook cited at the bottom of
 **Exercise 1.**
 Write a ``product`` function to compute the product of the values of a function at points over a given range (the function should be an argument of ``product``).
 Then, define a function to compute the factorial in terms of ``product``.
-Finally, use ``product`` to compute an approximation to pi using the Wallis product formula (`see on wikipedia <https://en.wikipedia.org/wiki/Wallis_product>`_).
+Finally, use ``product`` to compute an approximation to pi using the Wallis product formula (`see on wikipedia <https://en.wikipedia.org/wiki/Wallis_product>`__).
 
 **Exercise 2.**
 Show that the ``summation`` function (from the textbook section you read)
@@ -102,7 +102,7 @@ and ``neutral_element`` (which specifies what base value should be used when the
 
 **Exercise 3.**
 Write a function that finds a fixed point of a function
-(`see on wikipedia <https://en.wikipedia.org/wiki/Fixed_point_(mathematics)>`_)
+(`see on wikipedia <https://en.wikipedia.org/wiki/Fixed_point_(mathematics)>`__)
 starting from an initial guess value, which could be defined as:
 ``find_fixed_point(f, initial_value, error_margin)``.
 The returned value, ``x``, should be such that ``abs(f(x) - x) < error_margin``. Then, define a function to calculate the square root of a positive number, using the property that the square root of x is a fixed point
@@ -122,5 +122,5 @@ Reference
 This module was inspired by:
 Abelson, Harold, and Gerald Jay Sussman. *Structure and interpretation of computer programs*. The MIT Press, 1996.
 
-It is an excellent computer science textbook. If you are curious, go check it out, it is freely available online `as pdf <https://web.mit.edu/alexmv/6.037/sicp.pdf>`_ and `as a web document <https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html>`_.
+It is an excellent computer science textbook. If you are curious, go check it out, it is freely available online `as pdf <https://web.mit.edu/alexmv/6.037/sicp.pdf>`_ and `as a web document <https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html>`__.
 
