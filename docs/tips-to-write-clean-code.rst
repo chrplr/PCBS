@@ -15,25 +15,6 @@ Most of these recommendations are copied verbatim from the book  `Clean Code <ht
    :caption: Contents:
 
 
-
-Comments
---------
-
--  Comments are, at best, a necessary evil. If our programming languages
-   were expressive enough, we would not need comments very much—perhaps
-   not at all.
--  Comments should say things that the code cannot say for itself.
--  A comment worth writing is worth writing well. If you are going to
-   write a comment, take the time to make sure it is the best comment
-   you can write. Choose your words carefully. Use correct grammar and
-   punctuation. Don’t ramble. Don’t state the obvious. Be brief.
--  Learn about `docstrings in Python <https://www.datacamp.com/community/tutorials/docstrings-python>`__.
-   Then learn about `markdown <https://www.markdowntutorial.com/>`__.
-
-   Finally, learn  about`Sphinx <http://www.sphinx-doc.org>`__ and `Sphinx gallery <https://sphinx-gallery.github.io/>`__ to automatically generate documentation from code. 
-   
-
-
 Names
 -----
 
@@ -118,6 +99,22 @@ General
    omission. Structured programming and Object-oriented programming were
    invented in part as strategies to avoid duplication.
 
+Comments
+--------
+
+-  Comments are, at best, a necessary evil. If our programming languages
+   were expressive enough, we would not need comments very much—perhaps
+   not at all.
+-  Comments should say things that the code cannot say for itself.
+-  A comment worth writing is worth writing well. If you are going to
+   write a comment, take the time to make sure it is the best comment
+   you can write. Choose your words carefully. Use correct grammar and
+   punctuation. Don’t ramble. Don’t state the obvious. Be brief.
+-  Learn about `docstrings in Python <https://www.datacamp.com/community/tutorials/docstrings-python>`__.
+   Then learn about `markdown <https://www.markdowntutorial.com/>`__.
+
+   Finally, learn  about`Sphinx <http://www.sphinx-doc.org>`__ and `Sphinx gallery <https://sphinx-gallery.github.io/>`__ to automatically generate documentation from code. 
+
 
 
 Testing
@@ -127,4 +124,5 @@ It is an excellent idea to write tests that check your that your modules and fun
 keep working as they should. It can be as simple as having scripts that
 just run your code on some examples and check that it does not crash after an
 upgrade, or following a unit testing methodology (see `Getting Started With Testing in Python <https://realpython.com/python-testing/>`__)
+
 
