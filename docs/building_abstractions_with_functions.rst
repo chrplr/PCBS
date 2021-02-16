@@ -39,30 +39,32 @@ You can skip them if you want, but visualization is a powerful way to learn abou
 
 You can move to the next section whenever you feel ready to learn more, but make sure to do at least two exercises (like any other programming concepts/techniques, recursive functions cannot be understood without practice).
 
+**Time to complete.** [\*]: short, [\*\*]: medium, [\*\*\*]: long.
 
-**Exercise 1.** (Duration: 1/3). Write a recursive function to reverse a list. (Hint: to concatenate two lists, use the '+' operator).
 
-.. A solution: TBD
-
-**Exercise 2.** (Duration: 1/3). Write a recursive function to reverse a list.
+**Exercise 1.** [\*] Write a recursive function to reverse a list. (Hint: to concatenate two lists, use the '+' operator).
 
 .. A solution: TBD
 
-**Exercise 3.** (Duration: 2/3). Write a script that displays the Koch snowflake (`see on wikipedia <https://en.wikipedia.org/wiki/Koch_snowflake>`__) using a recursive function.
+**Exercise 2.** [\*] Write a recursive function to reverse a list.
+
+.. A solution: TBD
+
+**Exercise 3.** [\*\*] Write a script that displays the Koch snowflake (`see on wikipedia <https://en.wikipedia.org/wiki/Koch_snowflake>`__) using a recursive function.
 You can use the ``turtle`` graphics module to draw on screen
 (as shown in `section 16.5 of thinkcspy <https://runestone.academy/runestone/books/published/thinkcspy/IntroRecursion/intro-VisualizingRecursion.html>`__).
 
 A solution: `link to code <https://github.com/chrplr/PCBS/blob/9a9ebc54b5a03c4e58311cb0d0bd20ea12d0ec02/games/koch.py>`__.
 
-**Exercise 4.** (Duration: 2/3). Write a script that returns the pathnames of all the files ending in ``.txt`` contained inside a directory (at any depth of the hierarchy). You will need to use ``os.listdir()`` and ``os.path.isdir()``.
+**Exercise 4.** [\*\*] Write a script that returns the pathnames of all the files ending in ``.txt`` contained inside a directory (at any depth of the hierarchy). You will need to use ``os.listdir()`` and ``os.path.isdir()``.
 
-**Exercise 5.** (Duration: 2/3). Write a recursive function to generate all permutations of a list of values. (This could be useful, e.g., to do a permutation test for statistical analyses.)
+**Exercise 5.** [\*\*] Write a recursive function to generate all permutations of a list of values. (This could be useful, e.g., to do a permutation test for statistical analyses.)
 
-**Exercise 6.** (Duration: 3/3). Write a recursive function to evaluate an arithmetic expression given in Polish notation (i.e. prefix notation, `see on wikipedia <https://en.wikipedia.org/wiki/Polish_notation>`__)
+**Exercise 6.** [\*\*\*] Write a recursive function to evaluate an arithmetic expression given in Polish notation (i.e. prefix notation, `see on wikipedia <https://en.wikipedia.org/wiki/Polish_notation>`__)
 
 .. A solution: TBD
 
-**Exercise 7.** (Duration: 3/3). Produce strings from the MIU formal grammar and investigate the MU puzzle. See :ref:`detailed explanations on the MU Puzzle <mupuzzle>`.
+**Exercise 7.** [\*\*\*] Produce strings from the MIU formal grammar and investigate the MU puzzle. See :ref:`detailed explanations on the MU Puzzle <mupuzzle>`.
 
 .. A solution: TBD
 
@@ -87,20 +89,24 @@ This textbook is an adaptation for Python of the textbook cited at the bottom of
 
 **3. Do some of the following practice exercises.**
 
-**Exercise 1.**
+**Time to complete.** [\*]: short, [\*\*]: medium, [\*\*\*]: long.
+
+**Exercise 1.** [\*]
 Write a ``product`` function to compute the product of the values of a function at points over a given range (the function should be an argument of ``product``).
 Then, define a function to compute the factorial in terms of ``product``.
 Finally, use ``product`` to compute an approximation to pi using the Wallis product formula (`see on wikipedia <https://en.wikipedia.org/wiki/Wallis_product>`__).
 
-**Exercise 2.**
-Show that the ``summation`` function (from the textbook section you read)
+**Exercise 2.** [\*\*]
+The ``summation`` function (from the textbook section you read)
 and the ``product`` function (defined above)
 can be defined as special cases of an even more general ``reduce`` function
 which has two more arguments:
 ``binary_operator`` (which specifies what operation should be applied to reduce all the values to a single one)
 and ``neutral_element`` (which specifies what base value should be used when the range is empty).
+Write such a ``reduce`` function, and then define ``summation`` and ``product`` functions in terms of ``reduce``.
+Make sure to test your functions. 
 
-**Exercise 3.**
+**Exercise 3.** [\*\*]
 Write a function that finds a fixed point of a function
 (`see on wikipedia <https://en.wikipedia.org/wiki/Fixed_point_(mathematics)>`__)
 starting from an initial guess value, which could be defined as:
@@ -109,7 +115,7 @@ The returned value, ``x``, should be such that ``abs(f(x) - x) < error_margin``.
 for the function y -> 1/2 (y + x/y).
 Make sure to test your square root function.
 
-**Exercise 4.**
+**Exercise 4.** [\*\*\*]
 Write a function to numerically compute any statistic of an arbitrary random variable.
 The statistic and the random variable should both be functions which are given as argument.
 
