@@ -47,13 +47,13 @@ You can move to the next section whenever you feel ready to learn more, but make
 
 .. A solution: TBD
 
-**Exercise 3.** Write a recursive function that, given an integer, returns its binary representation as a string
+**Exercise 3.** Write a recursive function that, given an integer, returns its binary representation as a string.
 
 A solution: :ref:`link to code <codebinaryrepresentation>`
 
 **Exercise 4.** Write a script that displays the Koch snowflake (`see on wikipedia <https://en.wikipedia.org/wiki/Koch_snowflake>`_) using a recursive function.
 You can use the ``turtle`` graphics module to draw on screen
-(as shown in `section 16.5 of thinkcspy <https://runestone.academy/runestone/books/published/thinkcspy/IntroRecursion/intro-VisualizingRecursion.html>`_)
+(as shown in `section 16.5 of thinkcspy <https://runestone.academy/runestone/books/published/thinkcspy/IntroRecursion/intro-VisualizingRecursion.html>`_).
 
 A solution: `link to code <https://github.com/chrplr/PCBS/blob/9a9ebc54b5a03c4e58311cb0d0bd20ea12d0ec02/games/koch.py>`_.
 
@@ -61,7 +61,7 @@ A solution: `link to code <https://github.com/chrplr/PCBS/blob/9a9ebc54b5a03c4e5
 
 .. A solution: TBD
 
-**Exercise 6.** Produce strings from the MIU formal grammar and investigate the MU puzzle. See :ref:`detailed explanations on the MU Puzzle <mupuzzle>`
+**Exercise 6.** Produce strings from the MIU formal grammar and investigate the MU puzzle. See :ref:`detailed explanations on the MU Puzzle <mupuzzle>`.
 
 .. A solution: TBD
 
