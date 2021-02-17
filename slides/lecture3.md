@@ -31,7 +31,7 @@ If you do not call the function, it will never be executed.
 
 1. Using functions avoids to duplicate code (i.e. by cutting and pasting).
 
-   -> This facilitates the modification and correction of a program (errors are at a single place!)
+   This facilitates the modification and correction of a program (errors are at a single place!)
 
 2. Using functions typically serves to make the code more readable (and maybe shorter). 
 
