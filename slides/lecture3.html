@@ -1345,7 +1345,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              1/16
+              1/18
             </aside>
           </footer>
         </div>
@@ -1360,11 +1360,12 @@ aside {
             
             
             <section><ol>
-<li>Using functions avoids to duplicate code (i.e. by cutting and pasting).</li>
-</ol>
-<p>This facilitates the modification and correction of a program (errors are at a single place!)</p>
-<ol>
-<li>Using functions typically serves to make the code more readable (and maybe shorter). </li>
+<li>
+<p>Using functions avoids to duplicate code (i.e. by cutting and pasting). This facilitates the modification and correction of a program (errors are at a single place!)</p>
+</li>
+<li>
+<p>Using functions typically serves to make the code more readable (and maybe shorter). </p>
+</li>
 </ol></section>
             
           </div>
@@ -1381,7 +1382,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              2/16
+              2/18
             </aside>
           </footer>
         </div>
@@ -1438,7 +1439,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              3/16
+              3/18
             </aside>
           </footer>
         </div>
@@ -1481,7 +1482,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              4/16
+              4/18
             </aside>
           </footer>
         </div>
@@ -1508,7 +1509,7 @@ aside {
 <span class="n">check_divisible</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
-<p>-&gt; <strong>Exercise:</strong> using the above function, find the divisors of <code>`840, 747, 833, 997</code>.</p></section>
+<p>-&gt; <strong>Exercise:</strong> using the above function, find the divisors of <code>840, 747, 833, 997</code>.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1524,7 +1525,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              5/16
+              5/18
             </aside>
           </footer>
         </div>
@@ -1586,7 +1587,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              6/16
+              6/18
             </aside>
           </footer>
         </div>
@@ -1637,7 +1638,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              7/16
+              7/18
             </aside>
           </footer>
         </div>
@@ -1682,7 +1683,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              8/16
+              8/18
             </aside>
           </footer>
         </div>
@@ -1727,7 +1728,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              9/16
+              9/18
             </aside>
           </footer>
         </div>
@@ -1768,7 +1769,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              10/16
+              10/18
             </aside>
           </footer>
         </div>
@@ -1817,7 +1818,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              11/16
+              11/18
             </aside>
           </footer>
         </div>
@@ -1855,7 +1856,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              12/16
+              12/18
             </aside>
           </footer>
         </div>
@@ -1905,7 +1906,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              13/16
+              13/18
             </aside>
           </footer>
         </div>
@@ -1947,7 +1948,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              14/16
+              14/18
             </aside>
           </footer>
         </div>
@@ -1980,66 +1981,9 @@ aside {
 </pre></div>
 </td></tr></table>
 <ul>
-<li>
-<p>modules (aka libraries) allow to reuse functions.</p>
-</li>
-<li>
-<p>Python comes with many modules, e.g. <code>random</code>, <code>math</code>, <code>os</code>.</p>
-</li>
-<li>
-<p>Anaconda adds scientific libraries<code>numpy</code>, <code>scipy</code></p>
-</li>
-</ul>
-<p>To know more about modules, read <em>Automate the boring stuff</em>, chap.3, p.57</p>
-<h1>if <strong>name</strong> == '<strong>main</strong>':</h1>
-<p>Many scripts will contain a series of functions and then the line</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</pre></div>
-</td></tr></table>
-<p>The condition is true only if the script is executed as a python script. </p>
-<p>The functions in it can be reused with <code>import script</code></p>
-<h1>Exercises:</h1>
-<p>(1) Define a function with two arguments --- a string <code>msg</code> and a number <code>nrepetitions</code> --- that prints <code>msg</code>, <code>nrepetition</code> times.</p>
-<p>(2) Read <a href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit</p>
-<p>(3) Define a function <code>isPrime(x)</code> which return <code>True</code> if <code>x</code> is a prime number, else <code>False</code> </p>
-<p>(4) Two taxi companies propose differents pricing schemes:</p>
-<pre><code>    Company A charges 4.80€ plus 1.15€ by km travelled.
-    Company B charges 3.20€ plus 1.20€ by km travelled.
-</code></pre>
-<p>Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.</p>
-<p>(5) Write a function <code>areAnagram(word1, word2)</code> that tests if two words are anagrams, that is contain the same letters in different orders.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              15/16
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-16">
-          <div class="inner">
-            
-            <header><h1>More exercices</h1></header>
-            
-            
-            <section><ul>
-<li>https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html</li>
-<li>https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html</li>
+<li>modules (aka libraries) allow to reuse functions.</li>
+<li>Python comes with many modules, e.g. <code>random</code>, <code>math</code>, <code>os</code>.</li>
+<li>Anaconda adds scientific libraries<code>numpy</code>, <code>scipy</code></li>
 </ul></section>
             
           </div>
@@ -2056,7 +2000,126 @@ aside {
             </aside>
             
             <aside class="page_number">
-              16/16
+              15/18
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-16">
+          <div class="inner">
+            
+            <header><h1>if <strong>name</strong> == '<strong>main</strong>':</h1></header>
+            
+            
+            <section><p>Many scripts will contain a series of functions and then the line</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</pre></div>
+</td></tr></table>
+<p>The condition is true only if the script is executed as a python script. </p>
+<p>The functions in it can be reused with <code>import script</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/18
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-17">
+          <div class="inner">
+            
+            <header><h1>Exercises:</h1></header>
+            
+            
+            <section><ol>
+<li>
+<p>Define a function with two arguments --- a string <code>msg</code> and a number <code>nrepetitions</code> --- that prints <code>msg</code>, <code>nrepetition</code> times.</p>
+</li>
+<li>
+<p>Read <a href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit</p>
+</li>
+<li>
+<p>Define a function <code>isPrime(x)</code> which return <code>True</code> if <code>x</code> is a prime number, else <code>False</code> </p>
+</li>
+</ol></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/18
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-18">
+          <div class="inner">
+            
+            <header><h1>More exercices</h1></header>
+            
+            
+            <section><ol>
+<li>Two taxi companies propose differents pricing schemes:<pre><code>Company A charges 4.80€ plus 1.15€ by km travelled.
+Company B charges 3.20€ plus 1.20€ by km travelled.
+</code></pre>
+</li>
+</ol>
+<p>Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.</p>
+<ol>
+<li>Write a function <code>areAnagram(word1, word2)</code> that tests if two words are anagrams, that is contain the same letters in different orders.</li>
+</ol>
+<p>For more exercises, check out:</p>
+<ul>
+<li><a href="https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html">https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html</a></li>
+<li><a href="https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html">https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/18
             </aside>
           </footer>
         </div>
@@ -2161,8 +2224,20 @@ aside {
       
       
       <tr id="toc-row-16">
-        <th><a href="#slide16">More exercices</a></th>
+        <th><a href="#slide16">if <strong>name</strong> == '<strong>main</strong>':</a></th>
         <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">Exercises:</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">More exercices</a></th>
+        <td><a href="#slide18">18</a></td>
       </tr>
       
       

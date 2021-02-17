@@ -29,9 +29,7 @@ If you do not call the function, it will never be executed.
 # Usefulness of functions
 
 
-1. Using functions avoids to duplicate code (i.e. by cutting and pasting).
-
-   This facilitates the modification and correction of a program (errors are at a single place!)
+1. Using functions avoids to duplicate code (i.e. by cutting and pasting). This facilitates the modification and correction of a program (errors are at a single place!)
 
 2. Using functions typically serves to make the code more readable (and maybe shorter). 
 
@@ -94,7 +92,7 @@ Note: the variable `name` is created only during the execution of the function `
     check_divisible(11, 5)
 
 
--> **Exercise:** using the above function, find the divisors of ``840, 747, 833, 997`.
+-> **Exercise:** using the above function, find the divisors of `840, 747, 833, 997`.
 
 ---
 
@@ -282,13 +280,10 @@ Functions defined in a file `myfunc.py` in the current folder can be called from
 
 
 - modules (aka libraries) allow to reuse functions.
-
 - Python comes with many modules, e.g. `random`, `math`, `os`.
-
 - Anaconda adds scientific libraries`numpy`, `scipy`
 
-To know more about modules, read *Automate the boring stuff*, chap.3, p.57
-
+---
 
 #     if __name__ == '__main__':
 
@@ -302,31 +297,35 @@ The condition is true only if the script is executed as a python script.
 
 The functions in it can be reused with `import script`
 
+---
 
 # Exercises:
 
 
-(1) Define a function with two arguments --- a string `msg` and a number `nrepetitions` --- that prints `msg`, `nrepetition` times.
+1. Define a function with two arguments --- a string `msg` and a number `nrepetitions` --- that prints `msg`, `nrepetition` times.
 
-(2) Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit
+2. Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit
 
-(3) Define a function `isPrime(x)` which return `True` if `x` is a prime number, else `False` 
 
-(4) Two taxi companies propose differents pricing schemes:
+3. Define a function `isPrime(x)` which return `True` if `x` is a prime number, else `False` 
+
+--- 
+
+# More exercices
+
+
+1. Two taxi companies propose differents pricing schemes:
 
         Company A charges 4.80€ plus 1.15€ by km travelled.
         Company B charges 3.20€ plus 1.20€ by km travelled.
 
-Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
+   Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
 
-(5) Write a function `areAnagram(word1, word2)` that tests if two words are anagrams, that is contain the same letters in different orders.
+2. Write a function `areAnagram(word1, word2)` that tests if two words are anagrams, that is contain the same letters in different orders.
 
 
+For more exercises, check out:
 
----
-
-# More exercices
-
-- https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html
-- https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html
+- <https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html>
+- <https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html>
 
