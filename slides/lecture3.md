@@ -16,11 +16,11 @@ A *function* is a block of instructions that is given a name.
     one_two()
 
 
-Run this code inside a terminal with `python`, then in http://pythontutor.com/
+Calling a function is like substituting the function call by *its body*.
 
-- Calling a function is like substituting the function call by *its body*.
+If you do not call the function, it will never be executed.
 
-- If you do not call the function, it will never be executed.
+-> Run this code inside a terminal with `python` (or in <https://repl.it/languages/python3>), then in http://pythontutor.com/
 
 *What, in your opinion, is the interest of functions?* 
 
@@ -29,7 +29,9 @@ Run this code inside a terminal with `python`, then in http://pythontutor.com/
 # Usefulness of functions
 
 
-1. Using functions avoids duplicating code which is good as it facilitate the modification and correction of a program (the error is at a single place)
+1. Using functions avoids to duplicate code (i.e. by cutting and pasting).
+
+   -> This facilitates the modification and correction of a program (errors are at a single place!)
 
 2. Using functions typically serves to make the code more readable (and maybe shorter). 
 
@@ -39,7 +41,7 @@ Run this code inside a terminal with `python`, then in http://pythontutor.com/
 # definitions first!
 
 
-functions must be defined before called
+functions must be defined before they are called
 
     !python
     one_two()  # function call
@@ -51,28 +53,14 @@ functions must be defined before called
         print(2)
         print('...')
 
-Run this code in python.
+-> Run this code in python.
 
----
+Remarks:
 
-# Several Functions can call other functions
+- A given script can contain several function definitions.
 
-A given script can contain several function definitions.
+- As a convention, all functions definitions must be at the beginning of the script.
 
-As a convention, all functions definitions must be at the beginning of the script.
-
-Note that functions can call each other.
-
-    !python
-    def func1():
-        print(1)
-    
-    def func2():
-        func1()
-        print(2)
-        func1()
-    
-    func2()
 
 ---
 
@@ -89,7 +77,7 @@ Note that functions can call each other.
 
 During the call `hello('Alice')`, the argument `Alice` is stored in the variable `name`.
 
-See http://pythontutor.com/
+-> run it in http://pythontutor.com/
 
 Note: the variable `name` is created only during the execution of the function `hello()` (it is *local* to hello())
 
@@ -97,7 +85,7 @@ Note: the variable `name` is created only during the execution of the function `
 
 # Multiple arguments
 
-    ! python
+    !python
     def check_divisible(a, b):
         if a % b == 0:
             print(a, ' is a divisible by ', b)
@@ -106,7 +94,7 @@ Note: the variable `name` is created only during the execution of the function `
     check_divisible(11, 5)
 
 
-Exercise: using the above function, write code that writes all the divisors of 840, 747, 833, 997.
+-> **Exercise:** using the above function, find the divisors of ``840, 747, 833, 997`.
 
 ---
 
@@ -125,12 +113,20 @@ A function can also return the result(s) of a computation
     print(func(1.0))
     print(func(2.5))
 
-
+    xs = range(-10, 10)
+    values = [func(x) for x in xs] 
+    print(values)
+    
+    import matplotlib.pyplot as plt
+    plt.plot(xs, values)
+    plt.show()
 
 
 ---
 
 # Boolean Functions
+
+Boolean functions return `True` or `False`
 
     !python
     def isDivisible(x, y):
@@ -146,7 +142,7 @@ A function can also return the result(s) of a computation
 
 Other examples: `os.path.isdir`, `os.path.isfile`
 
-Question: how could one "simplify" (shorten) the function `isDivisible` ?
+-> Question: how could one "simplify" (shorten) the function `isDivisible` ?
 
 ---
 
@@ -171,14 +167,14 @@ A function can return a t-uple, a list, a dictionary, ...
 
 In a function call, parameters are assigned to arguments based either on the position or on their names: 
 
-   !python
-   def f(a, b):
-       print('a=', a)
-       print('b=', b)
+    !python
+    def f(a, b):
+        print('a=', a)
+        print('b=', b)
    
-   f(1 ,2)
-   f(2, 1)
-   f(b=2, a=1)
+    f(1 ,2)
+    f(2, 1)
+    f(b=2, a=1)
  
 ---
 
@@ -198,7 +194,7 @@ It is possible to provide defaults values for arguments.
 
 # Scope of variables
  
-Try the following code in http://pythontutor.com/
+-> Try the following code in http://pythontutor.com/
 
 
     !python
@@ -234,6 +230,24 @@ Read section ""Local and Global Scope"" in Automate the Boring stuff (from p. 67
 
 ---
 
+# functions can call other functions
+
+Note that functions can call each other.
+
+    !python
+    def func1():
+        print(1)
+    
+    def func2():
+        func1()
+        print(2)
+        func1()
+    
+    func2()
+
+-> Predict the output of this script.
+
+---
 
 # Recursive functions
 
@@ -247,36 +261,6 @@ For example:
             return 1
         else:
             return n * fact(n - 1)
-
-See 
-
----
-
-# Exercises:
-
-
-(1) Define a function with two arguments --- a string `msg` and a number `nrepetitions` --- that prints `msg`, `nrepetition` times.
-
-(2) Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit
-
-(3) Define a function `isPrime(x)` which return `True` if `x` is a prime number, else `False` 
-
-(4) Two taxi companies propose differents pricing schemes:
-
-        Company A charges 4.80€ plus 1.15€ by km travelled.
-        Company B charges 3.20€ plus 1.20€ by km travelled.
-
-Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
-
-(5) Write a function `areAnagram(word1, word2)` that tests if two words are anagrams, that is contain the same letters in different orders.
-
-`
-
----
-
-# More exercices
-
-
 
 ---
 
@@ -317,3 +301,32 @@ Many scripts will contain a series of functions and then the line
 The condition is true only if the script is executed as a python script. 
 
 The functions in it can be reused with `import script`
+
+
+# Exercises:
+
+
+(1) Define a function with two arguments --- a string `msg` and a number `nrepetitions` --- that prints `msg`, `nrepetition` times.
+
+(2) Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit
+
+(3) Define a function `isPrime(x)` which return `True` if `x` is a prime number, else `False` 
+
+(4) Two taxi companies propose differents pricing schemes:
+
+        Company A charges 4.80€ plus 1.15€ by km travelled.
+        Company B charges 3.20€ plus 1.20€ by km travelled.
+
+Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
+
+(5) Write a function `areAnagram(word1, word2)` that tests if two words are anagrams, that is contain the same letters in different orders.
+
+
+
+---
+
+# More exercices
+
+- https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html
+- https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html
+

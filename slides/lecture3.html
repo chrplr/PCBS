@@ -1326,15 +1326,9 @@ aside {
 <span class="n">one_two</span><span class="p">()</span>
 </pre></div>
 </td></tr></table>
-<p>Run this code inside a terminal with <code>python</code>, then in http://pythontutor.com/</p>
-<ul>
-<li>
 <p>Calling a function is like substituting the function call by <em>its body</em>.</p>
-</li>
-<li>
 <p>If you do not call the function, it will never be executed.</p>
-</li>
-</ul>
+<p>-&gt; Run this code inside a terminal with <code>python</code> (or in <a href="https://repl.it/languages/python3">https://repl.it/languages/python3</a>), then in http://pythontutor.com/</p>
 <p><em>What, in your opinion, is the interest of functions?</em> </p></section>
             
           </div>
@@ -1351,7 +1345,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              1/17
+              1/16
             </aside>
           </footer>
         </div>
@@ -1366,12 +1360,11 @@ aside {
             
             
             <section><ol>
-<li>
-<p>Using functions avoids duplicating code which is good as it facilitate the modification and correction of a program (the error is at a single place)</p>
-</li>
-<li>
-<p>Using functions typically serves to make the code more readable (and maybe shorter). </p>
-</li>
+<li>Using functions avoids to duplicate code (i.e. by cutting and pasting).</li>
+</ol>
+<p>-&gt; This facilitates the modification and correction of a program (errors are at a single place!)</p>
+<ol>
+<li>Using functions typically serves to make the code more readable (and maybe shorter). </li>
 </ol></section>
             
           </div>
@@ -1388,7 +1381,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              2/17
+              2/16
             </aside>
           </footer>
         </div>
@@ -1402,7 +1395,7 @@ aside {
             <header><h1>definitions first!</h1></header>
             
             
-            <section><p>functions must be defined before called</p>
+            <section><p>functions must be defined before they are called</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1420,7 +1413,16 @@ aside {
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
-<p>Run this code in python.</p></section>
+<p>-&gt; Run this code in python.</p>
+<p>Remarks:</p>
+<ul>
+<li>
+<p>A given script can contain several function definitions.</p>
+</li>
+<li>
+<p>As a convention, all functions definitions must be at the beginning of the script.</p>
+</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -1436,7 +1438,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              3/17
+              3/16
             </aside>
           </footer>
         </div>
@@ -1445,57 +1447,6 @@ aside {
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
         <div class="slide has_code slide-4">
-          <div class="inner">
-            
-            <header><h1>Several Functions can call other functions</h1></header>
-            
-            
-            <section><p>A given script can contain several function definitions.</p>
-<p>As a convention, all functions definitions must be at the beginning of the script.</p>
-<p>Note that functions can call each other.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func1</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">func2</span><span class="p">():</span>
-    <span class="n">func1</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">func1</span><span class="p">()</span>
-
-<span class="n">func2</span><span class="p">()</span>
-</pre></div>
-</td></tr></table></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              4/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-5">
           <div class="inner">
             
             <header><h1>Arguments</h1></header>
@@ -1513,7 +1464,7 @@ aside {
 </pre></div>
 </td></tr></table>
 <p>During the call <code>hello('Alice')</code>, the argument <code>Alice</code> is stored in the variable <code>name</code>.</p>
-<p>See http://pythontutor.com/</p>
+<p>-&gt; run it in http://pythontutor.com/</p>
 <p>Note: the variable <code>name</code> is created only during the execution of the function <code>hello()</code> (it is <em>local</em> to hello())</p></section>
             
           </div>
@@ -1530,7 +1481,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              5/17
+              4/16
             </aside>
           </footer>
         </div>
@@ -1538,21 +1489,26 @@ aside {
       
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-6">
+        <div class="slide has_code slide-5">
           <div class="inner">
             
             <header><h1>Multiple arguments</h1></header>
             
             
-            <section><pre><code>! python
-def check_divisible(a, b):
-    if a % b == 0:
-        print(a, ' is a divisible by ', b)
+            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">check_divisible</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s1">&#39; is a divisible by &#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 
-check_divisible(10, 5)
-check_divisible(11, 5)
-</code></pre>
-<p>Exercise: using the above function, write code that writes all the divisors of 840, 747, 833, 997.</p></section>
+<span class="n">check_divisible</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">check_divisible</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+<p>-&gt; <strong>Exercise:</strong> using the above function, find the divisors of <code>`840, 747, 833, 997</code>.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1568,7 +1524,7 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              6/17
+              5/16
             </aside>
           </footer>
         </div>
@@ -1576,7 +1532,7 @@ check_divisible(11, 5)
       
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-7">
+        <div class="slide has_code slide-6">
           <div class="inner">
             
             <header><h1>Return values</h1></header>
@@ -1584,19 +1540,35 @@ check_divisible(11, 5)
             
             <section><p>The functions we have seen so far executed actions. </p>
 <p>A function can also return the result(s) of a computation</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">y</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mf">1.0</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mf">2.5</span><span class="p">))</span>
+
+<span class="n">xs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </td></tr></table></section>
             
@@ -1614,7 +1586,7 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              7/17
+              6/16
             </aside>
           </footer>
         </div>
@@ -1622,13 +1594,14 @@ check_divisible(11, 5)
       
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-8">
+        <div class="slide has_code slide-7">
           <div class="inner">
             
             <header><h1>Boolean Functions</h1></header>
             
             
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+            <section><p>Boolean functions return <code>True</code> or <code>False</code></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
@@ -1648,7 +1621,7 @@ check_divisible(11, 5)
 </pre></div>
 </td></tr></table>
 <p>Other examples: <code>os.path.isdir</code>, <code>os.path.isfile</code></p>
-<p>Question: how could one "simplify" (shorten) the function <code>isDivisible</code> ?</p></section>
+<p>-&gt; Question: how could one "simplify" (shorten) the function <code>isDivisible</code> ?</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1664,7 +1637,7 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              8/17
+              7/16
             </aside>
           </footer>
         </div>
@@ -1672,7 +1645,7 @@ check_divisible(11, 5)
       
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-9">
+        <div class="slide has_code slide-8">
           <div class="inner">
             
             <header><h1>Returning "complex" objets</h1></header>
@@ -1709,7 +1682,7 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              9/17
+              8/16
             </aside>
           </footer>
         </div>
@@ -1717,20 +1690,28 @@ check_divisible(11, 5)
       
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-10">
+        <div class="slide has_code slide-9">
           <div class="inner">
             
             <header><h1>Use of position or keyword</h1></header>
             
             
             <section><p>In a function call, parameters are assigned to arguments based either on the position or on their names: </p>
-<p>!python
-   def f(a, b):
-       print('a=', a)
-       print('b=', b)</p>
-<p>f(1 ,2)
-   f(2, 1)
-   f(b=2, a=1)</p></section>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a=&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b=&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="n">f</span><span class="p">(</span><span class="mi">1</span> <span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></section>
             
           </div>
           <div class="presenter_notes">
@@ -1746,7 +1727,7 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              10/17
+              9/16
             </aside>
           </footer>
         </div>
@@ -1754,7 +1735,7 @@ check_divisible(11, 5)
       
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-11">
+        <div class="slide has_code slide-10">
           <div class="inner">
             
             <header><h1>Default values for arguments</h1></header>
@@ -1787,7 +1768,7 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              11/17
+              10/16
             </aside>
           </footer>
         </div>
@@ -1795,13 +1776,13 @@ check_divisible(11, 5)
       
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-12">
+        <div class="slide has_code slide-11">
           <div class="inner">
             
             <header><h1>Scope of variables</h1></header>
             
             
-            <section><p>Try the following code in http://pythontutor.com/</p>
+            <section><p>-&gt; Try the following code in http://pythontutor.com/</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -1836,7 +1817,7 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              12/17
+              11/16
             </aside>
           </footer>
         </div>
@@ -1844,7 +1825,7 @@ check_divisible(11, 5)
       
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-13">
+        <div class="slide slide-12">
           <div class="inner">
             
             <header><h1>scope of variables</h1></header>
@@ -1874,7 +1855,57 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              13/17
+              12/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-13">
+          <div class="inner">
+            
+            <header><h1>functions can call other functions</h1></header>
+            
+            
+            <section><p>Note that functions can call each other.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func1</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">func2</span><span class="p">():</span>
+    <span class="n">func1</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">func1</span><span class="p">()</span>
+
+<span class="n">func2</span><span class="p">()</span>
+</pre></div>
+</td></tr></table>
+<p>-&gt; Predict the output of this script.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/16
             </aside>
           </footer>
         </div>
@@ -1900,8 +1931,7 @@ check_divisible(11, 5)
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
-</td></tr></table>
-<p>See </p></section>
+</td></tr></table></section>
             
           </div>
           <div class="presenter_notes">
@@ -1917,7 +1947,7 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              14/17
+              14/16
             </aside>
           </footer>
         </div>
@@ -1925,74 +1955,7 @@ check_divisible(11, 5)
       
       <!-- slide source: lecture3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-15">
-          <div class="inner">
-            
-            <header><h1>Exercises:</h1></header>
-            
-            
-            <section><p>(1) Define a function with two arguments --- a string <code>msg</code> and a number <code>nrepetitions</code> --- that prints <code>msg</code>, <code>nrepetition</code> times.</p>
-<p>(2) Read <a href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit</p>
-<p>(3) Define a function <code>isPrime(x)</code> which return <code>True</code> if <code>x</code> is a prime number, else <code>False</code> </p>
-<p>(4) Two taxi companies propose differents pricing schemes:</p>
-<pre><code>    Company A charges 4.80€ plus 1.15€ by km travelled.
-    Company B charges 3.20€ plus 1.20€ by km travelled.
-</code></pre>
-<p>Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.</p>
-<p>(5) Write a function <code>areAnagram(word1, word2)</code> that tests if two words are anagrams, that is contain the same letters in different orders.</p>
-<p>`</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              15/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-16">
-          <div class="inner">
-            
-            <header><h1>More exercices</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              16/17
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-17">
+        <div class="slide has_code slide-15">
           <div class="inner">
             
             <header><h1>Modules</h1></header>
@@ -2034,7 +1997,17 @@ check_divisible(11, 5)
 </pre></div>
 </td></tr></table>
 <p>The condition is true only if the script is executed as a python script. </p>
-<p>The functions in it can be reused with <code>import script</code></p></section>
+<p>The functions in it can be reused with <code>import script</code></p>
+<h1>Exercises:</h1>
+<p>(1) Define a function with two arguments --- a string <code>msg</code> and a number <code>nrepetitions</code> --- that prints <code>msg</code>, <code>nrepetition</code> times.</p>
+<p>(2) Read <a href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit</p>
+<p>(3) Define a function <code>isPrime(x)</code> which return <code>True</code> if <code>x</code> is a prime number, else <code>False</code> </p>
+<p>(4) Two taxi companies propose differents pricing schemes:</p>
+<pre><code>    Company A charges 4.80€ plus 1.15€ by km travelled.
+    Company B charges 3.20€ plus 1.20€ by km travelled.
+</code></pre>
+<p>Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.</p>
+<p>(5) Write a function <code>areAnagram(word1, word2)</code> that tests if two words are anagrams, that is contain the same letters in different orders.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -2050,7 +2023,40 @@ check_divisible(11, 5)
             </aside>
             
             <aside class="page_number">
-              17/17
+              15/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: lecture3.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-16">
+          <div class="inner">
+            
+            <header><h1>More exercices</h1></header>
+            
+            
+            <section><ul>
+<li>https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html</li>
+<li>https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="lecture3.md">lecture3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/16
             </aside>
           </footer>
         </div>
@@ -2083,61 +2089,61 @@ check_divisible(11, 5)
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Several Functions can call other functions</a></th>
+        <th><a href="#slide4">Arguments</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Arguments</a></th>
+        <th><a href="#slide5">Multiple arguments</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Multiple arguments</a></th>
+        <th><a href="#slide6">Return values</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Return values</a></th>
+        <th><a href="#slide7">Boolean Functions</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Boolean Functions</a></th>
+        <th><a href="#slide8">Returning "complex" objets</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">Returning "complex" objets</a></th>
+        <th><a href="#slide9">Use of position or keyword</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Use of position or keyword</a></th>
+        <th><a href="#slide10">Default values for arguments</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">Default values for arguments</a></th>
+        <th><a href="#slide11">Scope of variables</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">Scope of variables</a></th>
+        <th><a href="#slide12">scope of variables</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">scope of variables</a></th>
+        <th><a href="#slide13">functions can call other functions</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
@@ -2149,7 +2155,7 @@ check_divisible(11, 5)
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">Exercises:</a></th>
+        <th><a href="#slide15">Modules</a></th>
         <td><a href="#slide15">15</a></td>
       </tr>
       
@@ -2157,12 +2163,6 @@ check_divisible(11, 5)
       <tr id="toc-row-16">
         <th><a href="#slide16">More exercices</a></th>
         <td><a href="#slide16">16</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-17">
-        <th><a href="#slide17">Modules</a></th>
-        <td><a href="#slide17">17</a></td>
       </tr>
       
       
