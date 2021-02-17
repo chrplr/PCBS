@@ -119,7 +119,7 @@ The returned value, ``x``, should be such that ``abs(f(x) - x) < error_margin``.
 for the function y -> 1/2 (y + x/y).
 Make sure to test your square root function.
 
-**Exercise 4.** [\*\*\*]
+**Exercise 4.** [\*\*]
 Write a function to numerically compute any statistic of an arbitrary random variable.
 The statistic and the random variable should both be functions which are given as argument.
 
