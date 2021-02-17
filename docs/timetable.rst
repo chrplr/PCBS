@@ -3,7 +3,7 @@ Timetable and resources for PCBS 2020/2021 2nd semester
 =======================================================
 
 Instructors
-    - Christophe Pallier<christophe@pallier.org>
+    - `Christophe Pallier <http://www.pallier.org>`__ <christophe@pallier.org>
     - Cédric Foucault <cedric.foucault@gmail.com>
 
 

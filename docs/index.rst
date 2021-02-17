@@ -6,14 +6,11 @@
 Programming for Cognitive and Brain Sciences
 ============================================
 
-Instructors
-   `Christophe Pallier <http://www.pallier.org>`__. <christophe@pallier.org>
-
-   Cédric Foucault <cedric.foucault@gmail.com>
+PDF version of this document
+  https://media.readthedocs.org/pdf/pcbs/latest/pcbs.pdf
 
 Git repository on github (contains solutions to exercices, ...)
   https://github.com/chrplr/PCBS
-
 
 
 .. toctree::
