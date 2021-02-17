@@ -1,40 +1,45 @@
 # Functions
 
 
-A *function* is a block of code that is given a name. 
+A *function* is a block of instructions that is given a name.
 
     !python
-    def one_two():  #  definition of a functoin names 'one_two'
+    #  definition of a function named 'one_two'
+    def one_two():
         print(1)
         print(2)
         print('...')
 
-    one_two()  # function call
+    # function calls
     one_two()
     one_two()
+    one_two()
 
 
-Run this code in a terminal in python, 
+Run this code inside a terminal with `python`, then in http://pythontutor.com/
 
-then in http://pythontutor.com/
+- Calling a function is like substituting the function call by *its body*.
+
+- If you do not call the function, it will never be executed.
+
+*What, in your opinion, is the interest of functions?* 
 
 ---
 
-# Remarks 
+# Usefulness of functions
 
 
-- calling a function is like substituting the function call by *its body*, that is, the block of lines within the definition.
+1. Using functions avoids duplicating code which is good as it facilitate the modification and correction of a program (the error is at a single place)
 
-- Using functions avoids duplicating code which is good as it facilitate the modification and correction of a program. 
-
-- Using functions typically serves to make the code more readable (and maybe shorter). 
-
-- if you do not call the function, it will never be executed.
+2. Using functions typically serves to make the code more readable (and maybe shorter). 
 
 
 ---
 
-# functions must be defined before called
+# definitions first!
+
+
+functions must be defined before called
 
     !python
     one_two()  # function call
@@ -46,12 +51,17 @@ then in http://pythontutor.com/
         print(2)
         print('...')
 
+Run this code in python.
 
 ---
 
-# Functions can call other functions
+# Several Functions can call other functions
 
-One can define several functions and they can call each other:
+A given script can contain several function definitions.
+
+As a convention, all functions definitions must be at the beginning of the script.
+
+Note that functions can call each other.
 
     !python
     def func1():
@@ -67,6 +77,7 @@ One can define several functions and they can call each other:
 ---
 
 # Arguments
+
 
     !python
     def hello(name):
@@ -182,7 +193,7 @@ It is possible to provide defaults values for arguments.
     message("Anna")
     message("Anna", "Gooodbye")    
 
-
+---
 
 
 # Scope of variables
@@ -221,33 +232,50 @@ Why ? Because one should be able to understand what a function is going to do on
 
 Read section ""Local and Global Scope"" in Automate the Boring stuff (from p. 67)
 
-
-
 ---
 
 
-# Call stack
+# Recursive functions
 
-function calls can be nested.
+Recursive functions are function that contains calls to themselves:
 
-see p. 63 of *Automate the boring stuff*
+For example:
 
+    !python
+    def fact(n):
+        if n == 0:
+            return 1
+        else:
+            return n * fact(n - 1)
+
+See 
 
 ---
 
 # Exercises:
 
 
-(1) Define a function which takes 2 arguments: a string `msg` and a number `nrepetitions`, and print `msg`, `nrepetition` times.
+(1) Define a function with two arguments --- a string `msg` and a number `nrepetitions` --- that prints `msg`, `nrepetition` times.
 
 (2) Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit
 
 (3) Define a function `isPrime(x)` which return `True` if `x` is a prime number, else `False` 
 
+(4) Two taxi companies propose differents pricing schemes:
+
+        Company A charges 4.80€ plus 1.15€ by km travelled.
+        Company B charges 3.20€ plus 1.20€ by km travelled.
+
+Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
+
+(5) Write a function `areAnagram(word1, word2)` that tests if two words are anagrams, that is contain the same letters in different orders.
+
+`
 
 ---
 
 # More exercices
+
 
 
 ---
@@ -255,7 +283,7 @@ see p. 63 of *Automate the boring stuff*
 
 # Modules
 
-Functions defined in a file "myfunc.py" in the current folder can be called from another python script.
+Functions defined in a file `myfunc.py` in the current folder can be called from another python script.
 
 
     !python
@@ -269,5 +297,23 @@ Functions defined in a file "myfunc.py" in the current folder can be called from
     mymodule.hello("Chris")
 
 
-See Chapter 3 of *Automate the boring stuff*, p.57
+- modules (aka libraries) allow to reuse functions.
 
+- Python comes with many modules, e.g. `random`, `math`, `os`.
+
+- Anaconda adds scientific libraries`numpy`, `scipy`
+
+To know more about modules, read *Automate the boring stuff*, chap.3, p.57
+
+
+#     if __name__ == '__main__':
+
+Many scripts will contain a series of functions and then the line
+
+    !python
+    if __name__ == '__main__':
+         
+    
+The condition is true only if the script is executed as a python script. 
+
+The functions in it can be reused with `import script`
