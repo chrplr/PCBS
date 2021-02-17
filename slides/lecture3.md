@@ -307,24 +307,19 @@ The functions in it can be reused with `import script`
 2. Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit
 
 
-3. Define a function `isPrime(x)` which return `True` if `x` is a prime number, else `False` 
+3. Define a function `isPrime(x)` which returns `True` if `x` is a prime number, else `False`. Use it to list all prime numbers below 1000.
 
 --- 
 
 # More exercices
 
 
-1. Two taxi companies propose differents pricing schemes:
-
-        Company A charges 4.80€ plus 1.15€ by km travelled.
-        Company B charges 3.20€ plus 1.20€ by km travelled.
-
-   Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
+1. Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
 
 2. Write a function `areAnagram(word1, word2)` that tests if two words are anagrams, that is contain the same letters in different orders.
 
 
-For more exercises, check out:
+For even more exercises, check out:
 
 - <https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html>
 - <https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html>
