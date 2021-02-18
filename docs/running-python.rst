@@ -7,12 +7,11 @@ Running Python
 
 They are several ways to work with Python, each of which is best adapted to a certain type of task:
 
+  * To write reusable python scripts, use a code editor (e.g. `subl`` (Sublime Text)), or an Integrated Development Environment (e.g. ``spyder``), save the script and run it from a shell command line inside a Terminal.
+
   * To quickly test short pieces of code in an interactive manner, or to access the documentation of some functions or mudles, open a terminal and run ``ipython``
 
-  * To write reusable python scripts, use a text editor or an Integrated Development Environment, save the script and run it from a command line in a Terminal.
-
-  * To write a data analysis report, or a lecture, use a jupyter notebook.
-
+  * To write a data analysis report use ``jupyter notebook``
 
 
 Running a python script from the command line
@@ -165,6 +164,13 @@ Remarks:
 
 -  You can learn more about Turtle graphics by reading the documentation
    at https://docs.python.org/2/library/turtle.html
+
+
+-  WINDOWS Only: To be able to start 'Sublime Text' from the command line by just typing ``subl``, copy the following command:
+
+           export PATH="/c/Program Files/SublimeText 3/":"$PATH"
+
+  in the file ``$HOME/.bash_profile`` (create it if necessary)
 
 
 Using an Integrated Development Environment like Spyder

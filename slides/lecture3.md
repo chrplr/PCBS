@@ -1,3 +1,4 @@
+
 # Functions
 
 
@@ -84,15 +85,16 @@ Note: the variable `name` is created only during the execution of the function `
 # Multiple arguments
 
     !python
-    def check_divisible(a, b):
-        if a % b == 0:
-            print(a, ' is a divisible by ', b)
+    def print_if__divisible(n, div):
+        if (n % div == 0):
+            print(n, ' is a divisible by ', div)
 
-    check_divisible(10, 5)
-    check_divisible(11, 5)
+    print_if_divisible(10, 5)
+    print_if_divisible(11, 5)
 
 
--> **Exercise:** using the above function, find the divisors of `840, 747, 833, 997`.
+-> **Exercise:** using the above function, find the divisors of `10, 15, 27, 33, 64, 100`` `
+
 
 ---
 
@@ -104,17 +106,20 @@ A function can also return the result(s) of a computation
 
     !python
     def func(x):
-        y = x * x + x + 1
+        y = 2 * x + 1
         return y
     
     print(func(0.0))
     print(func(1.0))
     print(func(2.5))
 
-    xs = range(-10, 10)
-    values = [func(x) for x in xs] 
-    print(values)
+    # compute the values of func for x in [-10, _9, -8, ..., 8, 9, 10] 
+    xs = range(-10, 11)
+    values = []
+    for x in xs:
+        values.append(func(x)
     
+    # diplay them on a graphics
     import matplotlib.pyplot as plt
     plt.plot(xs, values)
     plt.show()
@@ -127,20 +132,18 @@ A function can also return the result(s) of a computation
 Boolean functions return `True` or `False`
 
     !python
-    def isDivisible(x, y):
-        if x % y == 0:
+    def is_divisible(x, y):
+        if (x % y == 0):
             result = True
         else:
             result = False
 
         return result
 
-    print(isDivisible(10, 5))
+    print(is_divisible(10, 5))
 
 
-Other examples: `os.path.isdir`, `os.path.isfile`
-
--> Question: how could one "simplify" (shorten) the function `isDivisible` ?
+-> Question: how could one "simplify" (shorten) the function `is_divisible` ?
 
 ---
 
@@ -159,22 +162,6 @@ A function can return a t-uple, a list, a dictionary, ...
         
     f(2.0)
 
----
-
-# Use of position or keyword 
-
-In a function call, parameters are assigned to arguments based either on the position or on their names: 
-
-    !python
-    def f(a, b):
-        print('a=', a)
-        print('b=', b)
-   
-    f(1 ,2)
-    f(2, 1)
-    f(b=2, a=1)
- 
----
 
 # Default values for arguments
 
@@ -185,10 +172,27 @@ It is possible to provide defaults values for arguments.
         print(msg + ' ' + name + '!')
         
     message("Anna")
-    message("Anna", "Gooodbye")    
+    message("Anna", "Gooodbye")
 
 ---
 
+# Use of position or keyword 
+
+In a function call, parameters are typically assigned to arguments based either on the position or on their names.
+
+    !python
+    def f(a, b):
+        print('a=', a)
+        print('b=', b)
+   
+    f(1 ,2)
+    f(2, 1)
+    f(b=2, a=1)   # but one can also use the names of arguments
+ 
+---
+
+
+---
 
 # Scope of variables
  
@@ -304,22 +308,112 @@ The functions in it can be reused with `import script`
 
 1. Define a function with two arguments --- a string `msg` and a number `nrepetitions` --- that prints `msg`, `nrepetition` times.
 
-2. Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that converts from Fahenheit to Celsius, and another one that converts from Celsius to Fahrentheit
+2. Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that converts from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit
 
 
-3. Define a function `isPrime(x)` which returns `True` if `x` is a prime number, else `False`. Use it to list all prime numbers below 1000.
+3. Define a function `is_prime(x)` which returns `True` if `x` is a prime number, else `False`. Use it to list all prime numbers below 1000.
+
+---
+
+# Exercice 1
+
+
+Define a function with two arguments --- a string `msg` and a number `nrepetitions` --- that prints `msg`, `nrepetition` times.
+
+---
+
+    !python
+    def print_n_times(msg, n):
+        for _ in range(n):
+            print(msg)
+
+    print_n_times("test0", 0)
+    print_n_times("test1", 1)
+    print_n_times("test4", 4)
+
+---
+
+# Exercice 2
+
+
+Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that converts from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit
+
+---
+
+    !python
+    def Fahrenheit2Celsius(t):
+        return (f - 32) * 5.0/9.0
+    
+    def Celsius2Fahrenheit(t):
+        return (t * 9.0/5.0) + 32
 
 --- 
 
-# More exercices
+# Exercice 3
 
 
-1. Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
+Define a function `is_prime(x)` which returns `True` if `x` is a prime number, else `False`. Use it to list all prime numbers below 1000.
 
-2. Write a function `areAnagram(word1, word2)` that tests if two words are anagrams, that is contain the same letters in different orders.
+---
+
+    !python
+    def is_prime(n):
+        if n < 3:
+            return True
+        for i in range(2, n):
+            if (n % i) == 0:
+                return False
+        return True
+    
+    print([x for x in range(1, 1000) if is_prime(x)])
+
+--- 
+
+# Exercice 4
 
 
-For even more exercises, check out:
+Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
+
+--- 
+
+    !python
+    def costs(distance):
+        price_A = 4.8 + 1.15 * distance
+        price_B = 3.2 + 1.20 * distance
+        return (price_A, price_B)
+    
+    def cheapest_company(distance):
+        a, b = costs(distance)
+        if a < b:
+            return 'Company A'
+        else:
+            return 'Company B'
+
+    for d in range(1, 50):
+        print(f"{d} km -> " + cheapest(d))
+
+---
+
+# Exercice 5_
+
+Write a function `are_anagrams(word1, word2)` that tests if two words are anagrams, that is contain the same letters in different orders.
+
+
+---
+
+    !python
+    def are_anagrams(w1, w2):
+        return sorted(w1) == sorted(w2)
+    
+    print(are_anagrams('listen', 'silent'))
+    print(are_anagrams('listen', 'speak'))
+    
+
+---
+
+# Even more exercises
+
+See
 
 - <https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html>
 - <https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html>

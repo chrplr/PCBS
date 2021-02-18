@@ -25,7 +25,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Functions</title>
+    <title>Exercice 1</title>
     <!-- Styles -->
     
     <style type="text/css" media="print">
@@ -1296,827 +1296,16 @@ aside {
     </div>
     <div class="slides">
       
-      <!-- slide source: lecture3.md -->
+      <!-- slide source: solutions_ex3.md -->
       <div class="slide-wrapper">
         <div class="slide has_code slide-1">
-          <div class="inner">
-            
-            <header><h1>Functions</h1></header>
-            
-            
-            <section><p>A <em>function</em> is a block of instructions that is given a name.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#  definition of a function named &#39;one_two&#39;</span>
-<span class="k">def</span> <span class="nf">one_two</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
-
-<span class="c1"># function calls</span>
-<span class="n">one_two</span><span class="p">()</span>
-<span class="n">one_two</span><span class="p">()</span>
-<span class="n">one_two</span><span class="p">()</span>
-</pre></div>
-</td></tr></table>
-<p>Calling a function is like substituting the function call by <em>its body</em>.</p>
-<p>If you do not call the function, it will never be executed.</p>
-<p>-&gt; Run this code inside a terminal with <code>python</code> (or in <a href="https://repl.it/languages/python3">https://repl.it/languages/python3</a>), then in http://pythontutor.com/</p>
-<p><em>What, in your opinion, is the interest of functions?</em> </p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              1/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-2">
-          <div class="inner">
-            
-            <header><h1>Usefulness of functions</h1></header>
-            
-            
-            <section><ol>
-<li>
-<p>Using functions avoids to duplicate code (i.e. by cutting and pasting). This facilitates the modification and correction of a program (errors are at a single place!)</p>
-</li>
-<li>
-<p>Using functions typically serves to make the code more readable (and maybe shorter). </p>
-</li>
-</ol></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              2/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-3">
-          <div class="inner">
-            
-            <header><h1>definitions first!</h1></header>
-            
-            
-            <section><p>functions must be defined before they are called</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">one_two</span><span class="p">()</span>  <span class="c1"># function call</span>
-<span class="n">one_two</span><span class="p">()</span>
-<span class="n">one_two</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">one_two</span><span class="p">():</span>  <span class="c1"># function definition</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-<p>-&gt; Run this code in python.</p>
-<p>Remarks:</p>
-<ul>
-<li>
-<p>A given script can contain several function definitions.</p>
-</li>
-<li>
-<p>As a convention, all functions definitions must be at the beginning of the script.</p>
-</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              3/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-4">
-          <div class="inner">
-            
-            <header><h1>Arguments</h1></header>
-            
-            
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
-
-<span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">)</span>
-<span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-<p>During the call <code>hello('Alice')</code>, the argument <code>Alice</code> is stored in the variable <code>name</code>.</p>
-<p>-&gt; run it in http://pythontutor.com/</p>
-<p>Note: the variable <code>name</code> is created only during the execution of the function <code>hello()</code> (it is <em>local</em> to hello())</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              4/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-5">
-          <div class="inner">
-            
-            <header><h1>Multiple arguments</h1></header>
-            
-            
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_if__divisible</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">div</span><span class="p">):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">div</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s1">&#39; is a divisible by &#39;</span><span class="p">,</span> <span class="n">div</span><span class="p">)</span>
-
-<span class="n">print_if_divisible</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">print_if_divisible</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-<p>-&gt; <strong>Exercise:</strong> using the above function, find the divisors of <code>10, 15, 27, 33, 64, 100``</code></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              5/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-6">
-          <div class="inner">
-            
-            <header><h1>Return values</h1></header>
-            
-            
-            <section><p>The functions we have seen so far executed actions. </p>
-<p>A function can also return the result(s) of a computation</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">y</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mf">1.0</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mf">2.5</span><span class="p">))</span>
-
-<span class="c1"># compute the values of func for x in [-10, _9, -8, ..., 8, 9, 10] </span>
-<span class="n">xs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
-<span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">xs</span><span class="p">:</span>
-    <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="c1"># diplay them on a graphics</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</td></tr></table></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              6/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-7">
-          <div class="inner">
-            
-            <header><h1>Boolean Functions</h1></header>
-            
-            
-            <section><p>Boolean functions return <code>True</code> or <code>False</code></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_divisible</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="kc">False</span>
-
-    <span class="k">return</span> <span class="n">result</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">is_divisible</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</pre></div>
-</td></tr></table>
-<p>-&gt; Question: how could one "simplify" (shorten) the function <code>is_divisible</code> ?</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              7/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-8">
-          <div class="inner">
-            
-            <header><h1>Returning "complex" objets</h1></header>
-            
-            
-            <section><p>A function can return a t-uple, a list, a dictionary, ...</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> 
-    <span class="n">y1</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> 
-    <span class="n">y2</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span> 
-    <span class="n">y3</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> 
-    <span class="k">return</span> <span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">y3</span><span class="p">)</span>
-
-<span class="n">f</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-<h1>Default values for arguments</h1>
-<p>It is possible to provide defaults values for arguments.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">message</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="s1">&#39;Hello&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
-
-<span class="n">message</span><span class="p">(</span><span class="s2">&quot;Anna&quot;</span><span class="p">)</span>
-<span class="n">message</span><span class="p">(</span><span class="s2">&quot;Anna&quot;</span><span class="p">,</span> <span class="s2">&quot;Gooodbye&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              8/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-9">
-          <div class="inner">
-            
-            <header><h1>Use of position or keyword</h1></header>
-            
-            
-            <section><p>In a function call, parameters are typically assigned to arguments based either on the position or on their names.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a=&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b=&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="n">f</span><span class="p">(</span><span class="mi">1</span> <span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># but one can also use the names of arguments</span>
-</pre></div>
-</td></tr></table></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              9/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source:  -->
-      <div class="slide-wrapper">
-        <div class="slide slide-">
-          <div class="inner">
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="page_number">
-              /27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-10">
-          <div class="inner">
-            
-            <header><h1>Scope of variables</h1></header>
-            
-            
-            <section><p>-&gt; Try the following code in http://pythontutor.com/</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;chris&#39;</span>
-
-<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">)</span>
-<span class="n">hello</span><span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-</pre></div>
-</td></tr></table></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              10/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-11">
-          <div class="inner">
-            
-            <header><h1>scope of variables</h1></header>
-            
-            
-            <section><p><strong>local variables</strong></p>
-<p>Arguments or variables defined inside the body of a function only exist while the function is executed. They are destroyed ant the associated memory is freed.</p>
-<p><strong>non-local variables</strong>*</p>
-<ul>
-<li>variables that have been created in the environment where the variable was called. functions can access them (if they are not shadowed)</li>
-</ul>
-<p>Yet, this is <em>bad practice</em> and must be avoided except in a few cases. </p>
-<p>Why ? Because one should be able to understand what a function is going to do only based on its call. </p>
-<p>Read section ""Local and Global Scope"" in Automate the Boring stuff (from p. 67)</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              11/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-12">
-          <div class="inner">
-            
-            <header><h1>functions can call other functions</h1></header>
-            
-            
-            <section><p>Note that functions can call each other.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func1</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">func2</span><span class="p">():</span>
-    <span class="n">func1</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">func1</span><span class="p">()</span>
-
-<span class="n">func2</span><span class="p">()</span>
-</pre></div>
-</td></tr></table>
-<p>-&gt; Predict the output of this script.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              12/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-13">
-          <div class="inner">
-            
-            <header><h1>Recursive functions</h1></header>
-            
-            
-            <section><p>Recursive functions are function that contains calls to themselves:</p>
-<p>For example:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fact</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</td></tr></table></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              13/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-14">
-          <div class="inner">
-            
-            <header><h1>Modules</h1></header>
-            
-            
-            <section><p>Functions defined in a file <code>myfunc.py</code> in the current folder can be called from another python script.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">### file &quot;mymodule.py&quot;</span>
-<span class="k">def</span>  <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello &quot;</span><span class="p">,</span> <span class="n">name</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
-
-<span class="c1">### file &quot;myscript.py&quot;</span>
-<span class="kn">import</span> <span class="nn">mymodule</span>
-
-<span class="n">mymodule</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="s2">&quot;Chris&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-<ul>
-<li>modules (aka libraries) allow to reuse functions.</li>
-<li>Python comes with many modules, e.g. <code>random</code>, <code>math</code>, <code>os</code>.</li>
-<li>Anaconda adds scientific libraries<code>numpy</code>, <code>scipy</code></li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              14/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-15">
-          <div class="inner">
-            
-            <header><h1>if <strong>name</strong> == '<strong>main</strong>':</h1></header>
-            
-            
-            <section><p>Many scripts will contain a series of functions and then the line</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</pre></div>
-</td></tr></table>
-<p>The condition is true only if the script is executed as a python script. </p>
-<p>The functions in it can be reused with <code>import script</code></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              15/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-16">
-          <div class="inner">
-            
-            <header><h1>Exercises:</h1></header>
-            
-            
-            <section><ol>
-<li>
-<p>Define a function with two arguments --- a string <code>msg</code> and a number <code>nrepetitions</code> --- that prints <code>msg</code>, <code>nrepetition</code> times.</p>
-</li>
-<li>
-<p>Read <a href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit</p>
-</li>
-<li>
-<p>Define a function <code>is_prime(x)</code> which returns <code>True</code> if <code>x</code> is a prime number, else <code>False</code>. Use it to list all prime numbers below 1000.</p>
-</li>
-</ol></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              16/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-17">
           <div class="inner">
             
             <header><h1>Exercice 1</h1></header>
             
             
-            <section><p>Define a function with two arguments --- a string <code>msg</code> and a number <code>nrepetitions</code> --- that prints <code>msg</code>, <code>nrepetition</code> times.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              17/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-18">
-          <div class="inner">
-            
-            
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+            <section><p>Define a function with two arguments --- a string <code>msg</code> and a number <code>nrepetitions</code> --- that prints <code>msg</code>, <code>nrepetition</code> times.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
@@ -2142,53 +1331,26 @@ aside {
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
+              Source: <a href="solutions_ex3.md">solutions_ex3.md</a>
             </aside>
             
             <aside class="page_number">
-              18/27
+              1/5
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture3.md -->
+      <!-- slide source: solutions_ex3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-19">
+        <div class="slide has_code slide-2">
           <div class="inner">
             
             <header><h1>Exercice 2</h1></header>
             
             
-            <section><p>Read <a href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              19/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-20">
-          <div class="inner">
-            
-            
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+            <section><p>Read <a href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
@@ -2210,53 +1372,26 @@ aside {
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
+              Source: <a href="solutions_ex3.md">solutions_ex3.md</a>
             </aside>
             
             <aside class="page_number">
-              20/27
+              2/5
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture3.md -->
+      <!-- slide source: solutions_ex3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-21">
+        <div class="slide has_code slide-3">
           <div class="inner">
             
             <header><h1>Exercice 3</h1></header>
             
             
-            <section><p>Define a function <code>is_prime(x)</code> which returns <code>True</code> if <code>x</code> is a prime number, else <code>False</code>. Use it to list all prime numbers below 1000.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              21/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-22">
-          <div class="inner">
-            
-            
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+            <section><p>Define a function <code>is_prime(x)</code> which returns <code>True</code> if <code>x</code> is a prime number, else <code>False</code>. Use it to list all prime numbers below 1000.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
@@ -2286,53 +1421,26 @@ aside {
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
+              Source: <a href="solutions_ex3.md">solutions_ex3.md</a>
             </aside>
             
             <aside class="page_number">
-              22/27
+              3/5
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture3.md -->
+      <!-- slide source: solutions_ex3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-23">
+        <div class="slide has_code slide-4">
           <div class="inner">
             
             <header><h1>Exercice 4</h1></header>
             
             
-            <section><p>Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              23/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-24">
-          <div class="inner">
-            
-            
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+            <section><p>Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -2372,53 +1480,26 @@ aside {
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
+              Source: <a href="solutions_ex3.md">solutions_ex3.md</a>
             </aside>
             
             <aside class="page_number">
-              24/27
+              4/5
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: lecture3.md -->
+      <!-- slide source: solutions_ex3.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-25">
+        <div class="slide has_code slide-5">
           <div class="inner">
             
             <header><h1>Exercice 5_</h1></header>
             
             
-            <section><p>Write a function <code>are_anagrams(word1, word2)</code> that tests if two words are anagrams, that is contain the same letters in different orders.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              25/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code slide-26">
-          <div class="inner">
-            
-            
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+            <section><p>Write a function <code>are_anagrams(word1, word2)</code> that tests if two words are anagrams, that is contain the same letters in different orders.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
@@ -2440,45 +1521,11 @@ aside {
           <footer>
             
             <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
+              Source: <a href="solutions_ex3.md">solutions_ex3.md</a>
             </aside>
             
             <aside class="page_number">
-              26/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture3.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-27">
-          <div class="inner">
-            
-            <header><h1>Even more exercises</h1></header>
-            
-            
-            <section><p>See</p>
-<ul>
-<li><a href="https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html">https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html</a></li>
-<li><a href="https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html">https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html</a></li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture3.md">lecture3.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              27/27
+              5/5
             </aside>
           </footer>
         </div>
@@ -2493,164 +1540,32 @@ aside {
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">Functions</a></th>
+        <th><a href="#slide1">Exercice 1</a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide2">Usefulness of functions</a></th>
+        <th><a href="#slide2">Exercice 2</a></th>
         <td><a href="#slide2">2</a></td>
       </tr>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">definitions first!</a></th>
+        <th><a href="#slide3">Exercice 3</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Arguments</a></th>
+        <th><a href="#slide4">Exercice 4</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Multiple arguments</a></th>
+        <th><a href="#slide5">Exercice 5_</a></th>
         <td><a href="#slide5">5</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-6">
-        <th><a href="#slide6">Return values</a></th>
-        <td><a href="#slide6">6</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-7">
-        <th><a href="#slide7">Boolean Functions</a></th>
-        <td><a href="#slide7">7</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-8">
-        <th><a href="#slide8">Returning "complex" objets</a></th>
-        <td><a href="#slide8">8</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-9">
-        <th><a href="#slide9">Use of position or keyword</a></th>
-        <td><a href="#slide9">9</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-10">
-        <th><a href="#slide10">Scope of variables</a></th>
-        <td><a href="#slide10">10</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-11">
-        <th><a href="#slide11">scope of variables</a></th>
-        <td><a href="#slide11">11</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-12">
-        <th><a href="#slide12">functions can call other functions</a></th>
-        <td><a href="#slide12">12</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-13">
-        <th><a href="#slide13">Recursive functions</a></th>
-        <td><a href="#slide13">13</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-14">
-        <th><a href="#slide14">Modules</a></th>
-        <td><a href="#slide14">14</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-15">
-        <th><a href="#slide15">if <strong>name</strong> == '<strong>main</strong>':</a></th>
-        <td><a href="#slide15">15</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-16">
-        <th><a href="#slide16">Exercises:</a></th>
-        <td><a href="#slide16">16</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-17">
-        <th><a href="#slide17">Exercice 1</a></th>
-        <td><a href="#slide17">17</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-18">
-        <th><a href="#slide18">-</a></th>
-        <td><a href="#slide18">18</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-19">
-        <th><a href="#slide19">Exercice 2</a></th>
-        <td><a href="#slide19">19</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-20">
-        <th><a href="#slide20">-</a></th>
-        <td><a href="#slide20">20</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-21">
-        <th><a href="#slide21">Exercice 3</a></th>
-        <td><a href="#slide21">21</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-22">
-        <th><a href="#slide22">-</a></th>
-        <td><a href="#slide22">22</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-23">
-        <th><a href="#slide23">Exercice 4</a></th>
-        <td><a href="#slide23">23</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-24">
-        <th><a href="#slide24">-</a></th>
-        <td><a href="#slide24">24</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-25">
-        <th><a href="#slide25">Exercice 5_</a></th>
-        <td><a href="#slide25">25</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-26">
-        <th><a href="#slide26">-</a></th>
-        <td><a href="#slide26">26</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-27">
-        <th><a href="#slide27">Even more exercises</a></th>
-        <td><a href="#slide27">27</a></td>
       </tr>
       
       
