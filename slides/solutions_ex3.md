@@ -24,10 +24,10 @@ Read <https://en.wikipedia.org/wiki/Fahrenheit> and write a function that conver
 
 
     !python
-    def Fahrenheit2Celsius(t):
+    def Fahrenheit_to_Celsius(t):
         return (f - 32) * 5.0/9.0
     
-    def Celsius2Fahrenheit(t):
+    def Celsius_to_Fahrenheit(t):
         return (t * 9.0/5.0) + 32
 
 --- 

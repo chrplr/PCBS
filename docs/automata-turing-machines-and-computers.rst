@@ -259,7 +259,9 @@ a function which, given the 10 initial values of the registers, and
 the program, returns the new register values when
 the END command is reached.
 
-Check :download:`rodrego.py <../solutions-to-exercices/rodrego.py>` for a potential solution.
+Check two possible solutions: :download:`rodrego_maxime_caute.py <../solutions-to-exercices/rodrego.py>` and :download:`rodrego_christophe_pallier.py <../solutions-to-exercices/rodrego.py>`
+
+---
 
 
 The Seven secrets of computers revealed
