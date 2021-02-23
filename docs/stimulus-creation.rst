@@ -75,66 +75,81 @@ Exercice (*): modify the script :download:`circle.py <../visual-illusions/circle
 Kanizsa illusory contours
 -------------------------
 
-Exercice (**): Using :download:`square.py <../visual-illusions/square.py>` and   :download:`circle.py <../visual-illusions/circle.py>` create a new script to display the (right) Kanisza square.
+   .. figure:: images/Kanizsa1.png
+      :alt: Kanizsa triangle
+
+      Kanizsa triangle
+
+
+Created by Italian psychologist Gaetano Kanizsa in 1955, the Kanizsa Triangle is a classic example of illusory contours. In the image above, a white equilateral triangle can be clearly perceived even though there are no explicit lines or enclosed spaces to indicate such a triangle. (To find out more about this illusion, do a google search with the keywords `illusory contours`.)
+
+There are many variants:
 
    .. figure:: images/Kanizsa-square.jpeg
       :alt: Kanizsa square
 
       Kanizsa square
 
-   .. figure:: images/Kanizsa1.png
-      :alt: Kanizsa triangle
 
-      Kanizsa triangle
+Exercice (**): Inspiring yourself from the code in :download:`square.py <../visual-illusions/square.py>` and   :download:`circle.py <../visual-illusions/circle.py>`, create a script which displays the (top right) Kanisza square.
 
-   You can then check out :download:`kanizsa-square.py <../visual-illusions/kanizsa-square.py>`
 
-   To find out more about this illusion, do a google search with the keywords `illusory contours`.
+  A possible solution can be checked out in :download:`kanizsa-square.py <../visual-illusions/kanizsa-square.py>`
+
 
 Herman grid
 -----------
-
--  Starting from :download:`square.py <../visual-illusions/square.py>`, write a
-   program to display the `Herman grid <https://en.wikipedia.org/wiki/Grid_illusion>`__
 
    .. figure:: images/HermannGrid.png
       :alt: Hermann Grid
 
       Hermann Grid
 
+
+Read about the `Herman grid <https://en.wikipedia.org/wiki/Grid_illusion>`__
+
+
+Exercise (**) Using :download:`square.py <../visual-illusions/square.py>` as a starting point, write a
+   program to display the grid.
+
+
    Hints:
 
    -  use paper and pencil to draw the figure
    -  find out the formulas to compute the left top of the square in the
       ith row and jth column
-   -  in your python scripts, use nested for loops over rows and columns
+   -  in your python script, use nested for loops over rows and columns
       to display each square one by one
 
--  Check out :download:`grid.py <../visual-illusions/grid.py>`
+   Check out :download:`grid.py <../visual-illusions/grid.py>`
 
 - Optional: Read https://stackabuse.com/command-line-arguments-in-python/ and
   use the ``sys.argv[]`` list from the ``sys`` module (or use the ``argparse``
   module) to get from the command lines the number of columns, rows, the size of
   square and the size of the margins. Play with those parameters to see if you
-  can make the illusion come and go.
+  can make the illusion come and go. (see :download:`grid-args.py <../visual-illusions/grid-args.py>`
 
 Ebbinghaus-Titchener
 --------------------
-
--  Create the static `Ebbinghaus–Titchener stimulus <http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC>`__.
 
    .. figure:: images/ebbinghaus-titchener.png
       :alt: Ebbinghaus illusion
 
       Ebbinghaus illusion
 
-Hint: A bit of `trigonometry <https://en.wikipedia.org/wiki/Unit_circle>`__ can help:
-if you want to draw a circle at angle ``alpha`` from the horizontal line
-and at distance ``R`` from the origin, the coordinates of its center are
-``(R * cos(alpha), R * sin(alpha))``
 
--  Check out my solution
-   :download:`ebbinghaus.py <../visual-illusions/ebbinghaus.py>`
+Read about the `Ebbinghaus–Titchener stimulus <http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC>`__.
+
+
+Exercise (**): Using :download:`circle.py <../visual-illusions/circle.py>` as a starting point, write a
+   program to display a static stimulus (one central circle surrounded by a number of circles). 
+
+
+   Hint: A bit of `trigonometry <https://en.wikipedia.org/wiki/Unit_circle>`__ helps:
+   The center of a circle at angle ``alpha`` from the horizontal line
+   and at distance ``R`` from the origin, have coordinates `x = R * cos(alpha), y = R * sin(alpha)`
+
+Check out :download:`ebbinghaus.py <../visual-illusions/ebbinghaus.py>`
 
 
 Honeycomb and Extinction illusions.
@@ -151,6 +166,7 @@ The extinction illusion is a variant of the Herman grid:
    than oblique)
 
 -  Check out :download:`exctinction.py <../visual-illusions/extinction.py>`
+
 
 Here is the Honeycom illusion:
 
@@ -196,34 +212,29 @@ Dynamic visual stimuli
 Illusory line-motion illusion.
 --------------------------------
 
--  Check out `Jancke et al (2004) Imaging cortical correlates of illusion in early visual cortex <http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf>`__.
+Check out `Jancke et al (2004) Imaging cortical correlates of illusion in early visual cortex <http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf>`__.
 
--  Program the stimulus.
+Exercise (*):  Program the stimulus.
 
--  Check out my solution
-   :download:`visual-illusions/line-motion.py <../visual-illusions/line-motion.py>`
+-  Check out :download:`visual-illusions/line-motion.py <../visual-illusions/line-motion.py>`
 
 Flash-lag illusion
 ------------------
 
--  Read about the `Flash-lag
-   illusion <https://en.wikipedia.org/wiki/Flash_lag_illusion>`__.
+-  Read about the `Flash-lag illusion <https://en.wikipedia.org/wiki/Flash_lag_illusion>`__.
 
 -  Program the stimulus.
 
--  Check out my solution
-   :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>`
+-  Check out :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>`
 
 Dynamic version of the Ebbinghaus-Titchener
 -------------------------------------------
 
 -  Watch `this video <https://www.youtube.com/watch?v=hRlWqfd5pn8>`__.
 
--  Program a version where the outer circles (inducers) grow and shrink
-   in size.
+-  Program a version where the outer circles (inducers) grow and shrink in size.
 
--  Check out my solution
-   :download:`visual-illusions/ebbinghaus-dynamic.py <../visual-illusions/ebbinghaus-dynamic.py>`
+-  Check out :download:`visual-illusions/ebbinghaus-dynamic.py <../visual-illusions/ebbinghaus-dynamic.py>`
 
 
 Creating and playing sounds
