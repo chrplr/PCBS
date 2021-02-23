@@ -1,11 +1,12 @@
+**********************
 Automata and Computers
-======================
+**********************
 
 .. contents::
 
 
 The Computational Theory of Mind
---------------------------------
+================================
 
 Cognitive science founding disciplines :
 
@@ -43,7 +44,7 @@ More readings:
 
 
 What is computation anyway ?
-----------------------------
+============================
 
 One common answer is:
 
@@ -53,7 +54,7 @@ But what is a Turing machine?
 
 
 The ancestors of the computer: the automata
--------------------------------------------
+===========================================
 
 An **automaton** is a device designed to automatically follow a
 predetermined sequence of operations.
@@ -68,7 +69,7 @@ Newcastle <http://www.ac-grenoble.fr/PhiloSophie/logphil/oeuvres/descarte/newcas
 
 
 Formal description of an automaton
-----------------------------------
+==================================
 
 At a abstract level, an automaton can be formally described by:
 
@@ -82,7 +83,7 @@ At a abstract level, an automaton can be formally described by:
    Diagram and Tabular representation of a finite state automaton
 
 Examples of transition diagrams
--------------------------------
+===============================
 
 .. figure:: images/coin-counter.png
    :alt: The change counter of a vending machine
@@ -121,7 +122,7 @@ Examples:
 
 
 What is a Computer?
--------------------
+===================
 
 A computer is basically an automaton augmented with a *memory store*.
 
@@ -156,7 +157,7 @@ Another computing model which is closer to actual computers, is the *register ma
 
 
 Register machines
------------------
+=================
 
 Read `The seven secrets of computer power revealed <../documents/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf>`__ (Chapter 24 from Daniel Dennett’s *Intuition Pumps and other tools for
 thinking*)
@@ -252,20 +253,19 @@ can do either (a) or (b).
 Exercice: implementation of a Register machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a Python script that simulates a RodRego machine with 10 registers
-(http://sites.tufts.edu/rodrego/). The program is stored in a string or in 
+Write a Python script that simulates a `RodRego machine <http://sites.tufts.edu/rodrego/>__ with 10 registers. The program is stored in a string or in 
 file that is read and then executed. Your program must contain
 a function which, given the 10 initial values of the registers, and
 the program, returns the new register values when
 the END command is reached.
 
-Check two possible solutions: :download:`rodrego_maxime_caute.py <../solutions-to-exercices/rodrego.py>` and :download:`rodrego_christophe_pallier.py <../solutions-to-exercices/rodrego.py>`
+Check two possible solutions: :download:`rodrego_maxime_caute.py <../solutions-to-exercices/rodrego_maxime_caute.py>` and :download:`rodrego_christophe_pallier.py <../solutions-to-exercices/rodrego_christophe_pallier.py>`
 
 ---
 
 
 The Seven secrets of computers revealed
----------------------------------------
+=======================================
 
 1. Competence without comprehension. A machine can do perfect arithmetic
    without having to comprehend what it is doing.
@@ -287,7 +287,7 @@ The Seven secrets of computers revealed
 
 
 Programmable computers
-----------------------
+======================
 
 -  The first computers were not programmable. They were hardwired!
 
@@ -301,13 +301,13 @@ Programmable computers
 
 
 Compilation and interpretation
-------------------------------
+==============================
 
-Programs written in higher-level languages (rather than Machine
+Programs written in higher=level languages (rather than Machine
 language) can be either:
 
--  **compiled**, or
--  **interpreted**
+=  **compiled**, or
+=  **interpreted**
 
 In both cases, you write the program as text files called **source
 files**.
@@ -320,33 +320,33 @@ An **interpreter** reads the file and execute the commands one by one.
 It is slower, but easier to interact with. Disatvantage: you need the
 interpreter to exectute it.
 
-.. figure:: images/interpret-compile.png
+.. figure:: images/interpret=compile.png
    :alt: Interpretation and compilation
 
    Interpretation and compilation
 
 
 Operating systems
------------------
+=================
 
 In the first computers, there was only **one** program running. One
 would load the program into memory, then run it until it halted. Several
 Programs were ran in *batch mode*, in a sequence.
 
-Then, it was realized that computers could *time-share* between
+Then, it was realized that computers could *time=share* between
 programs, allowing several users (or programs) to share the computer.
 
 This requires an **operating systems** (O.S.). The O.S. is the first
 program that loads into the computer during the boot. When running:
 
--  The OS controls the hardware (screen/printer/disk/keybord/mouse,…)
+=  The OS controls the hardware (screen/printer/disk/keybord/mouse,…)
    (drivers)
 
--  The OS manages all the other programs (processes/tasks/applications).
+=  The OS manages all the other programs (processes/tasks/applications).
 
-   -  sharing memory
-   -  allocating processors and cores
-   -  allocating time
+   =  sharing memory
+   =  allocating processors and cores
+   =  allocating time
 
    Check out *Task Manager* (Windows)/*System Monitor* (Linux)/
    *Activity Monitor* (Mac)
@@ -362,16 +362,16 @@ to work on one OS (bad!). Prefer multiplatform software (like Python).
 
 Several OS can be installed in a given machine:
 
--  choice at boot (multiboot)
--  an OS can run inside a **virtual machine**, that is a program running
+=  choice at boot (multiboot)
+=  an OS can run inside a **virtual machine**, that is a program running
    in another (or the same) OS, and emulating a full computer.
 
 
---------------
+
 
 
 What is a Terminal?
--------------------
+===================
 
 .. figure:: images/terminals.png
    :alt: Terminals
@@ -391,7 +391,7 @@ Before keyboards and screens, there were punchcards and printers:
    Early computers had no keyboard, no screen. The input was done
    through punched cards and output would be printed out
 
-Histoically, terminals used to be a dumb screen/keyboard connected to a
+Historically, terminals used to be a dumb screen/keyboard connected to a
 central computer.
 
 .. figure:: images/terminals.jpeg
@@ -400,7 +400,7 @@ central computer.
    In the mainframe era, many terminals were connected to a single,
    powerful, computer. Everybody was sharing the same computer
 
--  With the advent of *Personal Computers*, the terminal and the
+  With the advent of *Personal Computers*, the terminal and the
    computer became a single apparatus.
 
 However, terminals can be *virtual*. A terminal is a program that let

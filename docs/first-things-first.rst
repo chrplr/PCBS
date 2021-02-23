@@ -1,18 +1,19 @@
 .. _first:
 
-==================
+
+******************
 First things first
-==================
+******************
 
 .. contents::
 
 
 Course description
-------------------
+==================
 
 
 Objectives
-~~~~~~~~~~
+----------
 
 Students in Cognitive-(Neuro)-science need to learn programming:
 
@@ -29,11 +30,11 @@ order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...). The first half (6 weeks) of the
 course consists of lectures with hands-on exercises, then, during the last 6
-weeks, students have to realize a project publicly available on github.
+weeks, students have to realize a project publicly available on http:/github.com
 
 
 Learning outcomes
-~~~~~~~~~~~~~~~~~
+-----------------
                     
 On successful completion of this course, students should be able to write
 readable, well- documented, Python programs, and use system such as git that
@@ -41,15 +42,15 @@ promote reproducible science.
 
                     
 Pedagogy, class organization and homework
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
-The first classes are CM with hands-on exercices. The remaining classes, I and
-the teaching assistant are present for individual support to help the students
-accomplish their project. I also give weekly assignments to be done *before* the
-next lecture.
+The first classes are lectures with hands-on exercices. The remaining classes, I
+and the teaching assistant are present for individual support to help the
+students accomplish their project. I also give weekly assignments to be done
+*before* the next lecture.
                     
 Assessment
-~~~~~~~~~~
+----------
 
 The projects will be graded on a 20 points scale. The main criterion is *clarity*
 (see :ref:`projects` for more details).
@@ -57,13 +58,13 @@ The projects will be graded on a 20 points scale. The main criterion is *clarity
 
 
 Textbook and readings
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 All the materials are available on the course’s web site at http://github.com/chrplr/PCBS.
                     
 
 Course policies
-~~~~~~~~~~~~~~~
+---------------
                     
 Laptops: Students must bring there own laptop (preferably fully charged!) with
 the specified software preinstalled.
@@ -74,7 +75,7 @@ beginners.
 
 
 Prerequisites
--------------
+=============
 
 They should  acquainted with basic programming concepts: instructions, variables, tests (if..then..else), loops (while and for). 
 
@@ -82,16 +83,18 @@ Students are expected to know how to open a terminal and `navigate in the file s
 
 
 Resources
----------
+=========
 
 Basic programming concepts
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
-A fun way to get acquainted to learn the bases of programming is to play with the MIT language **Scratch**. Check out my document :doc:`scratch/Starting-from-Scratch`
+A fun way to get acquainted to learn the bases of programming is to play with
+`Scratch <scratch.mit.edu>`__. Check out my document
+:doc:`scratch/Starting-from-Scratch`
 
 
 Programming skills
-~~~~~~~~~~~~~~~~~~
+------------------
 
 *  `Software Carpentry <https://software-carpentry.org/lessons/>`__
    provides nice lessons about writing software for science.
@@ -100,7 +103,7 @@ Programming skills
 
 
 Resources to learn Python
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 -  I **strongly recommend** the freely available book `Automate the
    boring stuff with Python: Practical programming for total
@@ -135,7 +138,7 @@ Resources to learn Python
 
 
 Books relevant to Cognitive and Brain Sciences Programming
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------------------
 
 *  `Programming Visual Illusions for
    Everyone <https://www.programmingvisualillusionsforeveryone.online/>`__
@@ -151,7 +154,7 @@ Books relevant to Cognitive and Brain Sciences Programming
 
 
 Stimulus/Experiment generation modules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------
 
 -  http://www.pygame.org (See `PyGame Drawing
    Basics <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__)
@@ -167,7 +170,7 @@ Stimulus/Experiment generation modules
 
 
 Data analyses, Statistics in Python
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 -  Modules: numpy, scipy, pandas, seaborn, statsmodel, sklearn
 
@@ -189,7 +192,7 @@ Data analyses, Statistics in Python
 
 
 Simulations
-~~~~~~~~~~~
+-----------
 
 -  `Think
    Complexity <http://greenteapress.com/wp/think-complexity-2e/>`__ by
@@ -201,7 +204,7 @@ Simulations
 
 
 Resources to learn the command shell
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 Why learn the command shell?
 
@@ -268,7 +271,7 @@ Remarks:
 
 
 Resources to learn Git
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 To understand why you need to learn git, see :doc:`tools-for-reproducible-science`
 
