@@ -103,18 +103,25 @@ You can exit the Terminal by typing `Ctrl-D`, or `exit`, or just closing its win
 
 
 
-The Expyriment python module
-----------------------------
+The Pygame and Expyriment python modules
+----------------------------------------
 
-We will rely on the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments.
+We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli and the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments.
 
-0. If you have a Mac, you first need to install `XQuartz <https://www.xquartz.org/>`__
+**1.0.macOS** If you are on **macOS**, you first need to install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
 
-1. Open a Terminal (git bash under windows), and type the following command::
+**1.** Open a Terminal (git bash under windows), and type the following command::
 
        pip install expyriment[all]
 
-2. Test that the installation went fine. In the terminal, type::
+**1.2.macOS** If you are on **macOS**, you then need to upgrade pygame using the following command::
+
+      pip install -U pygame
+
+You must do this *after* installing expyriment because recent versions of macOS
+require pygame 2, but installing expyriment installs pygame 1.9. (As of 2021-02-23.)
+
+**2.** Test that the installation went fine. In the terminal, type::
 
       ipython
 
