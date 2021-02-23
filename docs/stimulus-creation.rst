@@ -218,6 +218,14 @@ Exercise (*):  Program the stimulus.
 
 -  Check out :download:`visual-illusions/line-motion.py <../visual-illusions/line-motion.py>`
 
+Pong
+----
+
+Exercise: Create a "movie" of a square moving horizontally, back and forth. The principle is simple: you just need to create an animation loop where you display a square at coordinates `x, y` ,wait a few milliseconds, then clear the screen, and increment or decrement the `x` coordinate by a fixed amount.
+
+Check out :download:`moving_square.py <../visual-illusions/moving_square.py>`
+
+
 Flash-lag illusion
 ------------------
 
@@ -272,5 +280,5 @@ bidimensional array (matrix) and save it as a stereo file
 Pulsation (Povel & Essen, 1985)
 -------------------------------
 
-Exercise (***) Create rhythmic stimuli such as the ones described in `Povel and Essen (1985) Perception of Temporal Patterns <http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf>`__
+Exercise (\*\*\*) Create rhythmic stimuli such as the ones described in `Povel and Essen (1985) Perception of Temporal Patterns <http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf>`__
 

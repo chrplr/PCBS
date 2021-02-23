@@ -30,7 +30,7 @@ order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...). The first half (6 weeks) of the
 course consists of lectures with hands-on exercises, then, during the last 6
-weeks, students have to realize a project publicly available on http:/github.com
+weeks, students have to realize a project publicly available on http://github.com
 
 
 Learning outcomes
@@ -89,7 +89,7 @@ Basic programming concepts
 --------------------------
 
 A fun way to get acquainted to learn the bases of programming is to play with
-`Scratch <scratch.mit.edu>`__. Check out my document
+`Scratch <http://scratch.mit.edu>`__. Check out my document
 :doc:`scratch/Starting-from-Scratch`
 
 

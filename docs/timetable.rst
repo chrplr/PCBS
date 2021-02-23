@@ -46,8 +46,10 @@ Git repository on github (contains solutions to exercices and more)
         * Group A: `lecture3 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture3.html>`__ 
         * Group B: :doc:`Building abstractions with recursive functions and higher-order functions <../building_abstractions_with_functions>`
    * -  Feb 24
-     -  Creating Visual Stimuli
-     -  :doc:`stimulus-creation`
+     -  Generating stimuli
+     -
+        * `lecture4 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture4.html>`__ 
+        *  :doc:`stimulus-creation`
    * -  Mar  3
      -  How to Solve Problems
      -  :doc:`how-to-solve-problems`

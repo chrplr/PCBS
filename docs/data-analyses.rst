@@ -66,7 +66,7 @@ Zipf law
 -  Zipf law states that the product rank X frequency is roughly
    constant. This ‘law’ was discovered by Estoup and popularized by
    Zipf. See http://en.wikipedia.org/wiki/Zipf%27s_law. Create the Zipf
-   plot for the text of `Alice in Wonderland <Zipf/alice.txt>`__
+   plot for the text of `Alice in Wonderland <../Zipf/alice.txt>`__
    showing, on the y axis, the log of the frequency and on the x axis
    the word rank (sorting words from the most frequent to the least
    frequent).
@@ -99,7 +99,7 @@ Benford’s law
 -------------
 
 Learn about `Benford’s law <https://brilliant.org/wiki/benfords-law/>`__. Write a Python script that displays the distribution of the most significant digit in a set of
-numbers. Apply it to the variables in `Benford-law/countries.xlsx <Benford-law/countries.xlsx>`__.
+numbers. Apply it to the variables in `Benford-law/countries.xlsx <../Benford-law/countries.xlsx>`__.
 
 A solution: :download:`Benford-law/Benford.py <../Benford-law/Benford.py>`
 
@@ -109,4 +109,4 @@ Neuroimaging
 
 -  Check out `nilearn <http://nilearn.github.io/>`__ and `nistats <https://nistats.github.io/>`__ and `MNE-python <https://martinos.org/mne/stable/index.html>`__
 
--  See `data-analysis/Example of a single subject-single run fMRI analysis with nistats.ipynb <data-analysis/Example%20of%20a%20single%20subject-single%20run%20fMRI%20analysis%20with%20nistats.ipynb>`__
+-  See `data-analysis/Example of a single subject-single run fMRI analysis with nistats.ipynb <../data-analysis/Example%20of%20a%20single%20subject-single%20run%20fMRI%20analysis%20with%20nistats.ipynb>`__
