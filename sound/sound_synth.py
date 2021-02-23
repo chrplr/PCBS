@@ -30,7 +30,7 @@ def play_stereo(nparray, sample_rate=22050, normalize=True):
 
 
 def tone(freq, phase, duration, amplitude=0.1, sample_rate=22050):
-    t = np.linspace(0, duration, num = duration * sample_rate)
+    t = np.linspace(0, duration, num = int(duration * sample_rate))
     return amplitude * np.sin(2 * np.pi * freq * t - phase)
 
 
