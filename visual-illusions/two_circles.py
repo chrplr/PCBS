@@ -1,7 +1,7 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-23 19:14:26 christophe@pallier.org>
+# Time-stamp: <2021-02-23 19:57:58 christophe@pallier.org>
 
-""" Display a square.
+""" Display two circles side by side.
 
     See https://sites.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/
 """
@@ -25,15 +25,14 @@ screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
 
 screen.fill(WHITE)  #  fill it with white
 
-# Draw a rectangle
 width, height = 200, 200
-left, top = (W - width) // 2, (H-height) // 2
-pygame.draw.rect(screen, BLUE, (left, top, width, height))
+pygame.draw.circle(screen, RED, (W // 2 - 120, H // 2), 100, 0)
+pygame.draw.circle(screen, BLUE, (W // 2 + 120, H // 2), 100, 0)
 
 pygame.display.flip()  # display the backbuffer
 
 # save the image into a file
-pygame.image.save(screen, "square-blue.png")
+pygame.image.save(screen, "two-circles.png")
 
 # wait until the window is closed
 done = False

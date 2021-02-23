@@ -1,5 +1,7 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-10-09 10:31:51 cp983411>
+# Time-stamp: <2021-02-23 20:48:57 christophe@pallier.org>
+
+""" simple sounds generation """
 
 import numpy as np
 import scipy.io.wavfile  # for scipy.io.wavfile.read
@@ -70,7 +72,7 @@ def load_sound_as_array(filename):
     return [sample_rate, audio_data]
 
 def write_array_as_sound(nparray, sample_rate, filename):
-     scipy.io.wavfile.write(filename, sample_rate, np_array)
+     scipy.io.wavfile.write(filename, sample_rate, nparray)
 
 def mix_sound(target, mix, position, sample_rate=22050, replace=True):
     samples = range(int(sample_rate * position), int(sample_rate * position) + len(mix))

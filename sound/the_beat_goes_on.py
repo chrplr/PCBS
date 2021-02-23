@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-10-09 10:31:51 cp983411>
+# Time-stamp: <2021-02-23 20:39:01 christophe@pallier.org>
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -31,7 +31,7 @@ def play_stereo(nparray, sample_rate=22050, normalize=True):
 
 
 def tone(freq, phase, duration, amplitude=0.1, sample_rate=22050):
-    t = np.linspace(0, duration, num = duration * sample_rate)
+    t = np.linspace(0, duration, num = int(duration * sample_rate))
     return amplitude * np.sin(2 * np.pi * freq * t - phase)
 
 

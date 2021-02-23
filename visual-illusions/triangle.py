@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-03-09 09:54:21 christophe@pallier.org>
+# Time-stamp: <2021-02-23 19:58:39 christophe@pallier.org>
 
 """ Draw a triangle using pygame (see <http://www.pygame.org>). """
 
@@ -31,6 +31,7 @@ pygame.image.save(screen, "triangle-black.png")
 # wait till the window is closed
 done = False
 while not done:
+        pygame.time.wait(10)
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                         done = True

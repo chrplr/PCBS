@@ -253,7 +253,8 @@ can do either (a) or (b).
 Exercice: implementation of a Register machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a Python script that simulates a `RodRego machine <http://sites.tufts.edu/rodrego/>__ with 10 registers. The program is stored in a string or in 
+Write a Python script that simulates a `RodRego machine <http://sites.tufts.edu/rodrego/>`__ with 10 registers.
+The program is stored in a string or in
 file that is read and then executed. Your program must contain
 a function which, given the 10 initial values of the registers, and
 the program, returns the new register values when
@@ -320,7 +321,7 @@ An **interpreter** reads the file and execute the commands one by one.
 It is slower, but easier to interact with. Disatvantage: you need the
 interpreter to exectute it.
 
-.. figure:: images/interpret=compile.png
+.. figure:: images/interpret-compile.png
    :alt: Interpretation and compilation
 
    Interpretation and compilation
@@ -333,20 +334,20 @@ In the first computers, there was only **one** program running. One
 would load the program into memory, then run it until it halted. Several
 Programs were ran in *batch mode*, in a sequence.
 
-Then, it was realized that computers could *time=share* between
+Then, it was realized that computers could *time-share* between
 programs, allowing several users (or programs) to share the computer.
 
 This requires an **operating systems** (O.S.). The O.S. is the first
 program that loads into the computer during the boot. When running:
 
-=  The OS controls the hardware (screen/printer/disk/keybord/mouse,…)
+-  The OS controls the hardware (screen/printer/disk/keybord/mouse,…)
    (drivers)
 
-=  The OS manages all the other programs (processes/tasks/applications).
+-  The OS manages all the other programs (processes/tasks/applications).
 
-   =  sharing memory
-   =  allocating processors and cores
-   =  allocating time
+   -  sharing memory
+   -  allocating processors and cores
+   -  allocating time
 
    Check out *Task Manager* (Windows)/*System Monitor* (Linux)/
    *Activity Monitor* (Mac)
@@ -362,10 +363,9 @@ to work on one OS (bad!). Prefer multiplatform software (like Python).
 
 Several OS can be installed in a given machine:
 
-=  choice at boot (multiboot)
-=  an OS can run inside a **virtual machine**, that is a program running
+-  choice at boot (multiboot)
+-  an OS can run inside a **virtual machine**, that is a program running
    in another (or the same) OS, and emulating a full computer.
-
 
 
 
@@ -397,11 +397,11 @@ central computer.
 .. figure:: images/terminals.jpeg
    :alt: Several terminals connected to a single, shared, computer. 
 
-   In the mainframe era, many terminals were connected to a single,
-   powerful, computer. Everybody was sharing the same computer
+In the mainframe era, many terminals were connected to a single, powerful,
+computer. Everybody was sharing the same computer
 
-  With the advent of *Personal Computers*, the terminal and the
-   computer became a single apparatus.
+With the advent of *Personal Computers*, the terminal and the computer became a
+single apparatus.
 
 However, terminals can be *virtual*. A terminal is a program that let
 you run text programs. You interact by typing and displaying text. No
