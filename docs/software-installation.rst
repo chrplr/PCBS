@@ -121,6 +121,12 @@ We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli
 You must do this *after* installing expyriment because recent versions of macOS
 require pygame 2, but installing expyriment installs pygame 1.9. (As of 2021-02-23.)
 
+Please run this command in the terminal to test your installation of pygame::
+
+      python -m pygame.examples.aliens
+
+You should see a window with moving spaceships.
+
 **2.** Test that the installation went fine. In the terminal, type::
 
       ipython
