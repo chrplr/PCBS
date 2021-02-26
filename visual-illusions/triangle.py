@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-23 19:58:39 christophe@pallier.org>
+# Time-stamp: <2021-02-24 10:53:36 christophe@pallier.org>
 
 """ Draw a triangle using pygame (see <http://www.pygame.org>). """
 
@@ -35,3 +35,5 @@ while not done:
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                         done = True
+
+pygame.quit()

@@ -1,39 +1,47 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-03-10 10:25:57 christophe@pallier.org>
+# Time-stamp: <2021-02-25 18:59:42 christophe@pallier.org>
+
+""" Extinction illusion """
 
 import pygame  # see www.pygame.org
+
+# parameters
+side = 200  # square side length
+gap = 20  # space between squares
+radius = int(gap / 1.414)  #
+n = 7  # number of columns and rows
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
 
-l = 50  # square side length
-e = 8  # space between squares
-n = 20  # number of columns and rows
-
-W, H = n * (l + e) + e, n * (l + e) + e  # graphic window size
+# graphic window size
+W = n * (side + gap) + gap
+H = W
 
 pygame.init()
 screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
 screen.fill(GRAY)
 
-# Create a rectangle https://www.pygame.org/docs/ref/rect.html
-
+# draw the squares
 for row in range(n):
     for col in range(n):
-        left, top = e + col * (l + e), e + row * (l + e)
-        myrect = pygame.Rect(left, top, l, l)
-        pygame.draw.rect(screen, BLACK, myrect)
-        pygame.draw.circle(screen, WHITE, (left - e//2, top - e//2), e//2)
+        left = gap + col * (side + gap)
+        top = gap + row * (side + gap)
+        pygame.draw.rect(screen, BLACK, (left, top, side, side))
+
+# draw the circles
+for row in range(1, n):
+    for col in range(1, n):
+        left = gap + col * (side + gap)
+        top = gap + row * (side + gap)
+        pygame.draw.circle(screen, WHITE, (left - gap//2, top - gap//2), radius)
 
 # display the backbuffer
 pygame.display.flip()
 
 # save the image into a file
-pygame.image.save(screen, "extinction-grid.png")
+pygame.image.save(screen, f"extinction-grid-{n}-{side}-{gap}.png")
 
 # wait till the window is closed
 done = False
@@ -42,3 +50,4 @@ while not done:
                 if event.type == pygame.QUIT:
                         done = True
 
+pygame.quit()

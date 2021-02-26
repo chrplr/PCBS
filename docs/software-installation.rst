@@ -70,6 +70,7 @@ MacOSX
 Windows
    Download the 64 bit version of `Git for Windows <https://git-scm.com/download/win>`__ and
    launch it.
+
    1. When the GNU Licence is displayed, press ``Next``;
    2. Accept the default installation folder and press ``Next``;
    3. Accept all the Components selected by default and press ``Next``
@@ -103,53 +104,49 @@ You can exit the Terminal by typing `Ctrl-D`, or `exit`, or just closing its win
 
 
 
-
 The Pygame and Expyriment python modules
 ----------------------------------------
 
 We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli and the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments.
 
-**1.0.macOS** If you are on **macOS**, you first need to install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
+First you need to install the modules [#f1]_:
 
-**1.** Open a Terminal (git bash under windows), and type the following command::
+Linux
+    Open a Terminal (``Ctrl-Alt-T``) and type ``pip install expyriment[all]``
 
-       pip install expyriment[all]
+Windows
+    Starts **Git bash**. This opens a terminal, where you can type ``pip install expyriment[all]``
 
-**1.2.macOS** If you are on **macOS**, you then need to upgrade pygame using the following command::
+MacOS
+    1. Install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
 
-      pip install -U pygame
+    2. Open a Terminal and type ``pip install expyriment[all]``
 
-You must do this *after* installing expyriment because recent versions of macOS
-require pygame 2, but installing expyriment installs pygame 1.9. (As of 2021-02-23.)
+    3. In the same Terminal, type ``pip install -U pygame``
 
-Please run this command in the terminal to test your installation of pygame::
+       This upgrade the version of pygame (1.9) installed along expyriment to pygame (2.0), which is required by recent versions of macOS. (As of 2021-02-23.)
+
+
+Whetever your operating systems, you now need to test your installation:
+
+1. run this command in a terminal to test ``pygame``::
 
       python -m pygame.examples.aliens
 
-You should see a window with moving spaceships.
+   You should see a window with moving spaceships.
 
-**2.** Test that the installation went fine. In the terminal, type::
+2. To test ``expyriment``, type the following in the terminal::
 
-      ipython
+          python
 
-This should display something like::
+     Then, at the the prompt ``>>>``, type the following lines::
 
-   Python 3.7.4 (default, Aug  9 2019, 18:51:30) 
-   Type 'copyright', 'credits' or 'license' for more information
-   IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
+         import expyriment
+         expyriment.control.run_test_suite()
 
-It means that you are interacting with the ipython programme. Now type::
+       You should see a screen with ``Test suite``. There are various tests that you can run. Pressing ``Esc`` will stop the program.
 
-      import expyriment
-
-If all went well, you should see a message such as::
-
-   pygame 1.9.6
-   Hello from the pygame community. https://www.pygame.org/contribute.html
-   Expyriment 0.9.0 (Python 3.7.4) 
-
-Finally, press ‘Ctrl-D’ to exit ipython, then ``y`` for 'yes', and type ``exit`` to close the
-terminal.
+Finally, in the terminal running ``python``, at the ``>>>`` prompt, press ``Ctrl-D``  then ``y``. You are out of python and you can type ``exit`` to close the terminal.
 
 
 
@@ -217,25 +214,29 @@ to know three commands in order to navigate in the filesystem:
 
 Read http://linuxcommand.sourceforge.net/lc3_lts0020.php to learn about them.
 
+Other resources to learn more about how to control your computer from a terminal:
 
-Download the course materials
-------------------------------
+     - Learning the Shell  http://linuxcommand.org/lc3_learning_the_shell.php
+     - OpenClassRoom : https://openclassrooms.com/en/courses/43538-reprenez-le-controle-a-laide-de-linux/37813-la-console-ca-se-mange
+
+     
+
+Download course materials
+-------------------------
+
+This document is available in pdf format at https://pcbs.readthedocs.io/_/downloads/en/latest/pdf/
 
 Once Git is installed  on your computer, you can download the
-course materials. To this end, open a terminal and type::
+course materials (python scripts, data files, ...) from http://github.com/chrplr/PCBS) with the command::
 
        git clone https://github.com/chrplr/PCBS.git
 
-This should download, the course materials at from http://github.com/chrplr/PCBS
-inside a subfolder named ``PCBS``.
+Everything will be downloaded in a subfolder  ``PCBS`` inside the current working directory .
 
-Be aware that if a folder with that name already
-exists, git will stop and not download the content of the website. In that case,
-delete or move the existing PCBS folder before running the ``git clone`` command
-above.
+Be aware that if a folder with that name already exists, git will stop and not download the content of the website. In that case, delete or move the existing PCBS folder before running the ``git clone`` command above.
 
 I do often update the materials. To synchronize your local copy with the
-latest version, you just need to open a terminal and type::
+latest version at http://github.com/chrplr/PCBS), you just need to open a terminal and type::
 
       cd PCBS
       git pull
@@ -250,3 +251,11 @@ move it if you wnat to keep a copy of your modifications) and reissue the
 
 
  
+.. [#f1] (advanced students only). To avoid potential clashes betwen modules, it is a good idea to create a conda environment before installing the modules: 
+
+          .. code::
+
+                  conda create --name pcbs
+                  conda activate pcbs
+   
+          But then, you must not forget to activate the environment (``conda activate pcbs``) before working on the materials presented here.

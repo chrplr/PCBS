@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-23 19:58:10 christophe@pallier.org>
+# Time-stamp: <2021-02-24 10:53:16 christophe@pallier.org>
 
 """ Display a circle.
 
@@ -41,3 +41,5 @@ while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
+
+pygame.quit()

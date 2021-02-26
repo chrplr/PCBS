@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-23 19:14:26 christophe@pallier.org>
+# Time-stamp: <2021-02-24 10:53:02 christophe@pallier.org>
 
 """ Display a square.
 
@@ -35,10 +35,14 @@ pygame.display.flip()  # display the backbuffer
 # save the image into a file
 pygame.image.save(screen, "square-blue.png")
 
-# wait until the window is closed
+
+
+#wait until the window is closed
 done = False
 while not done:
-    pygame.time.wait(10)
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            done = True
+     pygame.time.wait(10)
+     for event in pygame.event.get():
+         if event.type == pygame.QUIT:
+             done = True
+
+pygame.quit()

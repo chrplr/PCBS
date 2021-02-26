@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-03-09 09:28:25 christophe@pallier.org>
+# Time-stamp: <2021-02-24 10:54:02 christophe@pallier.org>
 
 """ Display Kanisza illusory square (see )https://openi.nlm.nih.gov/detailedresult?img=PMC4211395_fnhum-08-00854-g0001&req=4) """
 
@@ -47,3 +47,4 @@ while not done:
         for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                         done = True
+pygame.quit()

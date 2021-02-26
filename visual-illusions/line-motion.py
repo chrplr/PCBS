@@ -1,46 +1,59 @@
 #! /usr/bin/env python
-# Time-stamp: <>
+# Time-stamp: <2021-02-25 21:43:23 christophe@pallier.org>
 
-"""Line-motion illusion.
-
+""" Illusory Line-motion demo.
 """
 
 import pygame
 
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-W, H = 500, 500
-width, height = 20, 20
+
+W, H = 800, 500  # window size
 
 pygame.init()
-screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
-screen.fill(WHITE)
+screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
+screen.fill(BLACK)
 
-# Create two rectangle https://www.pygame.org/docs/ref/rect.html
+def ilm(direction):
+    assert direction in ['left', 'right']
 
-left, top = (W-width)/2, (H-height)/2 # (0,0) is at the upper left hand corner of the screen.
-mysquare = pygame.Rect(left, top, width, height)
-myrect = pygame.Rect(left, top, width, height * 3)
+    width, height = 40, 40  # size of the square
+    top = H // 2 - 100      
+    left = W // 2 - width * 2  # position of (left side of) the rectangle
 
-# loops till the window is closed
-done = False
-while not done:
-    screen.fill(WHITE)
+    rectangle = pygame.Rect(left, top, width * 4, height)
+
+    if direction == 'right':
+        square = pygame.Rect(left, top, width, height)
+    else:
+        square = pygame.Rect(left + 3 * width, top, width, height)
+
+    # preparation phase
+    screen.fill(BLACK)
+    pygame.draw.circle(screen, WHITE, (W // 2, H // 2), 5) # display a fixation point
+    pygame.display.flip()
+    pygame.time.wait(1500)
+
+    # cue
+    pygame.draw.circle(screen, WHITE, (W // 2, H // 2), 5)
+    pygame.draw.rect(screen, WHITE, square)
+    pygame.display.flip()
+    pygame.time.wait(20)
+
+    # rectangle
+    pygame.draw.circle(screen, WHITE, (W // 2, H // 2), 5)
+    pygame.draw.rect(screen, WHITE, rectangle)
     pygame.display.flip()
     pygame.time.wait(1000)
-    pygame.draw.rect(screen, BLACK, mysquare)
-    pygame.display.flip()
-    pygame.time.wait(200)
 
-    pygame.draw.rect(screen, BLACK, myrect)
-    pygame.display.flip()
-    pygame.time.wait(500)
-
-    screen.fill(WHITE)
+    # clear the screen
+    screen.fill(BLACK)
     pygame.display.flip()
 
-    for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                        done = True
+
+for dir in ['left', 'left', 'left', 'right', 'right', 'right']:
+    ilm(dir)
+
 
 pygame.quit()

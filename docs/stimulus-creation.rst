@@ -9,9 +9,10 @@ Static visual stimuli
 =====================
 
 
-We are going to use module `pygame <http://www.pygame.org>`__ to generate visual displays
+We are going to use module Pygame_ to generate visual displays
 
-Here is a python script (:download:`square.py <../visual-illusions/square.py>`) using pygame that opens a window and displays a square. Run it.  
+
+Here is a Python script (:download:`square.py <../visual-illusions/square.py>`) that opens a window and displays a square. Run it.  
 
 .. code:: python
 
@@ -57,33 +58,62 @@ Here is a python script (:download:`square.py <../visual-illusions/square.py>`) 
               if event.type == pygame.QUIT:
                    done = True
 
+     pygame.quit()
 
-The `quick introduction on drawing with pygame <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__ provides some help.
+
 
 Exercise (*): modify the script to
    - change the color of the rectangle to RED
    - change the size of the rectangle to 100 x 300
 
+   You can consult the `Quick introduction on drawing with pygame <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__ for help.
+
+   Pygame's reference manual is available at https://www.pygame.org/docs/
 
 
-It is possible to draw other shapes. Check out the two scripts :download:`circle.py <../visual-illusions/circle.py>` and
+It is of course possible to draw other shapes. Check out for example the two scripts :download:`circle.py <../visual-illusions/circle.py>` and
 and :download:`triangle.py <../visual-illusions/triangle.py>`.
 
-Exercice (*): modify the script :download:`circle.py <../visual-illusions/circle.py>` to draw two circles, one red and on blue, side-by-side  (check out the solution :download:`two_circles.py <../visual-illusions/two_circles.py>`)
+Exercice (*): modify the script :download:`circle.py <../visual-illusions/circle.py>` to draw two circles, one red and on blue, side-by-side
+
+   .. figure:: images/two-circles.png
+      :alt: Two Circles
+
+      Two Circles
+
+  (check out :download:`two_circles.py <../visual-illusions/two_circles.py>`)
+
+
+Toxler effect
+-------------
+
+Fixate your gaze at the center of the picture below for 30 seconds
+
+    .. figure:: images/troxler.png
+       :alt: Troxler Figure
+
+       Troxler effect
+
+
+What happened after a few seconds? This is the *fill-in phenomenon* (See https://en.wikipedia.org/wiki/Filling-in).
+
+Exercise (*): Program the Troxler stimulus (hint: use  https://www.google.com/search?q=color+picker to find the RGB values for the disks)
+
+For a solution, check out :download:`troxler.py <../visual-illusions/troxler.py>`
 
 
 Kanizsa illusory contours
 -------------------------
+
+Created by Italian psychologist Gaetano Kanizsa in 1955, the Kanizsa Triangle is a classic example of illusory contours. In the image below, a white equilateral triangle can be clearly perceived even though there are no explicit lines or enclosed spaces to indicate such a triangle. (To find out more about this illusion, do a google search with the keywords `illusory contours`.)
+
 
    .. figure:: images/Kanizsa1.png
       :alt: Kanizsa triangle
 
       Kanizsa triangle
 
-
-Created by Italian psychologist Gaetano Kanizsa in 1955, the Kanizsa Triangle is a classic example of illusory contours. In the image above, a white equilateral triangle can be clearly perceived even though there are no explicit lines or enclosed spaces to indicate such a triangle. (To find out more about this illusion, do a google search with the keywords `illusory contours`.)
-
-There are many variants:
+There exists many variants, e.g. the Kanizsa squares:
 
    .. figure:: images/Kanizsa-square.jpeg
       :alt: Kanizsa square
@@ -91,10 +121,9 @@ There are many variants:
       Kanizsa square
 
 
-Exercice (**): Inspiring yourself from the code in :download:`square.py <../visual-illusions/square.py>` and   :download:`circle.py <../visual-illusions/circle.py>`, create a script which displays the (top right) Kanisza square.
+Exercice (**): Inspiring yourself from the code in :download:`square.py <../visual-illusions/square.py>` and   :download:`circle.py <../visual-illusions/circle.py>`, create a script which displays the (right) Kanisza square .
 
-
-  A possible solution can be checked out in :download:`kanizsa-square.py <../visual-illusions/kanizsa-square.py>`
+  A possible solution is proposed in :download:`kanizsa-square.py <../visual-illusions/kanizsa-square.py>`
 
 
 Herman grid
@@ -123,11 +152,44 @@ Exercise (**) Using :download:`square.py <../visual-illusions/square.py>` as a s
 
    Check out :download:`grid.py <../visual-illusions/grid.py>`
 
-- Optional: Read https://stackabuse.com/command-line-arguments-in-python/ and
-  use the ``sys.argv[]`` list from the ``sys`` module (or use the ``argparse``
-  module) to get from the command lines the number of columns, rows, the size of
-  square and the size of the margins. Play with those parameters to see if you
-  can make the illusion come and go. (see :download:`grid-args.py <../visual-illusions/grid-args.py>`
+
+
+Optional exercises:
+
+  - Play with the parameters 'size of the squares' and 'space between the
+    squares' to see how they affect the illusion.
+  - Read https://stackabuse.com/command-line-arguments-in-python/ and use the
+    ``sys.argv[]`` list from the ``sys`` module (or use the ``argparse`` module)
+    to get from the command lines the number of columns, rows, the size of
+    square and the size of the margins. Play with those parameters to see if you
+    can make the illusion come and go. (see :download:`grid-args.py <../visual-illusions/grid-args.py>`
+
+
+Extinction illusion
+-------------------
+
+.. figure:: images/extinct.jpg
+   :alt: McAnany-Levine Extinction illusion
+
+   McAnany-Levine extinction illusion (see McAnany, J. J. and Levine, M. W. (2004) The blanking phenomenon: a novel form of visual disappearance. *Vision Research*, 44, 993-1001.)
+
+Exercise: Program the McAnany-Levine extinction stimulus, that is, a grid of black squares with white circles at the intersection.
+
+Check out :download:`extinction.py <../visual-illusions/extinction.py>`
+
+
+Remark: There exists variants of the extinction illusion:
+
+-  Niño's Extinction illusion
+
+.. figure:: images/extinction_nino.jpg
+   :alt: Niño's Extinction illusion
+
+   Niño's Extinction illusion
+
+
+- The `Honeycomb illusion <https://www.youtube.com/watch?v=fDBYSFDXsuE>`__. You can read about it in `Bertamini, Herzog, and Bruno (2016) <https://www.bertamini.org/lab/Publications/BertaminiHerzogBruno2016.pdf>`__. A Python script to generate the stimulus is available on `Bertamini’s web site <https://www.programmingvisualillusionsforeveryone.online/scripts.html>`__  but it requires installing the module `PsychoPy <http://www.psychopy.org>`__ which can be challenging.
+
 
 Ebbinghaus-Titchener
 --------------------
@@ -145,95 +207,127 @@ Exercise (**): Using :download:`circle.py <../visual-illusions/circle.py>` as a 
    program to display a static stimulus (one central circle surrounded by a number of circles). 
 
 
-   Hint: A bit of `trigonometry <https://en.wikipedia.org/wiki/Unit_circle>`__ helps:
-   The center of a circle at angle ``alpha`` from the horizontal line
-   and at distance ``R`` from the origin, have coordinates `x = R * cos(alpha), y = R * sin(alpha)`
+   Hint: A littel bit of `trigonometry <https://en.wikipedia.org/wiki/Unit_circle>`__ helps:
+
+   The coordinates of a location at and at distance ``R`` from the origin and an angle ``alpha`` from the left-right line
+    are::
+
+     x = R * cos(alpha)
+     y = R * sin(alpha)
+
+   Consult https://www.mathsisfun.com/polar-cartesian-coordinates.html if you need to convince yourself about that.
+
 
 Check out :download:`ebbinghaus.py <../visual-illusions/ebbinghaus.py>`
 
 
-Honeycomb and Extinction illusions.
------------------------------------
+Hering illusion
+---------------
 
-The extinction illusion is a variant of the Herman grid:
+.. figure:: images/hering.png
+   :alt: Hering illusion
 
-.. figure:: images/extinction.png
-   :alt: Extinction illusion
+   Hering illusion
 
-   Extinction illusion
-
--  Program the stimulus (the lines can be horizontal and vertical rather
-   than oblique)
-
--  Check out :download:`exctinction.py <../visual-illusions/extinction.py>`
-
-
-Here is the Honeycom illusion:
-
-.. figure:: images/honeycomb.png
-   :alt: Honeycomb illusion
-
-   Honeycomb illusion
-
--  Watch `this video <https://www.youtube.com/watch?v=fDBYSFDXsuE>`__
--  Check out `Bertamini, Herzog, and Bruno (2016). “The Honeycomb Illusion: Uniform Textures Not Perceived as Such.” <https://doi.org/10.1177/2041669516660727.%20https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5030753/pdf/10.1177_2041669516660727.pdf>`__
-
--  Optional: Try to run :download:`Honeycomb.py <../visual-illusions/Honeycomb.py>`, available from `Bertamini’s web site <https://www.programmingvisualillusionsforeveryone.online/scripts.html>`__ .  The challenge is to install the mopdule `psychopy` and all its dependencies (notably `wxPython`).
-
+Exercise: Program the stimulus and check my solution `hering.py <../visual-illusions/hering.py>`__ 
 
 
 Random-dot stereograms
 ----------------------
 
-A random-dot stereogram is a pair of images of random dots which,
-when viewed with the eyes focused on a point in front of or behind the
-images, produces a sensation of depth. See
-https://en.wikipedia.org/wiki/Random_dot_stereogram.
-
 .. figure:: images/stereogram.jpg
-   :alt: stereogram
+   :alt: random dot stereogram
 
-   stereogram
+A random dot stereogram is a pair of images of random dots which,
+when viewed with the eyes focused on a point in front of or behind the
+images, produces a sensation of depth  To see how they can be generated, read the wikipedia entry on
+`random dot stereograms`_, to understand the phenomenon in details, read the one about Stereopsis_.
 
--  Write a script that generate random-dot stereograms.
+Write a script that generates random-dot stereograms (warning: this requires a bit of knowledge of Numpy_ to represent the images as 2d arrays, and of slicing_)
 
--  Check out :download:`random_dot_stereogram.py <../random-dot-stereograms/random_dot_stereogram.py>`
+Check out :download:`random_dot_stereogram.py <../random-dot-stereograms/random_dot_stereogram.py>`
+
+.. _Stereopsis: https://en.wikipedia.org/wiki/Stereopsis
+.. _random dot stereograms: https://en.wikipedia.org/wiki/Random_dot_stereogram
+.. _slicing: https://www.w3schools.com/python/numpy_array_slicing.asp
 
 
-More illusions
---------------
+Kitaoka visual illusions
+------------------------
 
-Check out `Akiyoshi KITAOKA's illusion pages <http://www.ritsumei.ac.jp/~akitaoka/index-e.html>`. Try to program some of his stimuli, e.g. the first one at <http://www.psy.ritsumei.ac.jp/~akitaoka/o1saishe.html>
+Professor Akiyoshi Kitaoka  has produced many fascinating `visual illusions <http://www.ritsumei.ac.jp/~akitaoka/index-e.html>`. Notably:
+
+
+.. figure:: images/bulge.png
+   :alt: a bulge
+
+   The *Bulge* 
+
+.. figure:: images/donguri.png
+   :alt: the dongururin
+
+   The *Dongururin*
+
+Other notable stimuli are: the *Rotary extinction illusion*, *Unstable square*, *Rotating snakes*, *Rotating rays*, *Primrose's field*, *Rollers*, *Slippage*, *Gaku ga gakugaku*, *Spa*, *Expanding cushions*, *Convection*, *The music*, *Seaweed*, *Joro-gumo*, *Packed cherries*, *Earthquake*, *Wedding in Japan*, *Sausages*, *Raspberries*, *A curtain*, *Pyramids of donguri*, *Dongurakokko (The donguri wave)*, *Brownian motion*, *Waterways*, *A flow of the ecological flooring*, *Computer worms*.
+ 
+They are available on the following pages:
+
+http://www.ritsumei.ac.jp/~akitaoka/index-e.html
+http://www.psy.ritsumei.ac.jp/~akitaoka/o1saishe.html
+http://www.psy.ritsumei.ac.jp/~akitaoka/kieru2e.html
+http://www.psy.ritsumei.ac.jp/~akitaoka/saishin2e.html
+http://www.psy.ritsumei.ac.jp/~akitaoka/saishin3e.html
+http://www.psy.ritsumei.ac.jp/~akitaoka/saishin4e.html
+
 
 
 Dynamic visual stimuli
 ======================
 
-Illusory line-motion illusion.
---------------------------------
+Illusory line-motion
+--------------------
 
-Check out `Jancke et al (2004) Imaging cortical correlates of illusion in early visual cortex <http://www.cnbc.cmu.edu/cns/papers/nature02396.pdf>`__.
+
+Illusory line motion (ILM) refers to a situation in which flashing a light at one end of a bar prior to the bar's instantaneous presentation results in the percept of motion. 
+
+.. figure:: images/ilm.jpg
+   
+   Illusory line-motion
 
 Exercise (*):  Program the stimulus.
 
--  Check out :download:`visual-illusions/line-motion.py <../visual-illusions/line-motion.py>`
+  Check out :download:`visual-illusions/line-motion.py <../visual-illusions/line-motion.py>`
 
-Pong
-----
 
-Exercise: Create a "movie" of a square moving horizontally, back and forth. The principle is simple: you just need to create an animation loop where you display a square at coordinates `x, y` ,wait a few milliseconds, then clear the screen, and increment or decrement the `x` coordinate by a fixed amount.
-
-Check out :download:`moving_square.py <../visual-illusions/moving_square.py>`
 
 
 Flash-lag illusion
 ------------------
 
--  Read about the `Flash-lag illusion <https://en.wikipedia.org/wiki/Flash_lag_illusion>`__.
+Read about the `Flash-lag illusion <https://en.wikipedia.org/wiki/Flash_lag_illusion>`__.
 
--  Program the stimulus.
+Exercise:
 
--  Check out :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>`
+1. Create a "movie" of a square moving horizontally, back and forth. The
+   principle is simple: you just need to create an animation loop where you
+   display a square at coordinates `x, y` ,wait a few milliseconds, then clear
+   the screen, and increment or decrement the `x` coordinate by a fixed amount.
+   Check out :download:`moving_square.py <../visual-illusions/moving_square.py>`
+
+2. Add the presentation of square then the moving square passes the middle line.
+
+Check out :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>`
+
+
+Licac Chaser
+------------
+
+The `Lilac Chaser`_ is a dynamic version of the Troxler fill-in illusion.  
+
+.. _Lilac Chaser: https://en.wikipedia.org/wiki/Lilac_chaser
+
+Exercise: Program the Lilac Chaser.
+
 
 Dynamic version of the Ebbinghaus-Titchener
 -------------------------------------------
@@ -259,17 +353,17 @@ Then run the quick check with ipython::
 
 Check out `simpleaudio's tutorials <https://simpleaudio.readthedocs.io/en/latest/tutorial.html>`__
 
-Study :download:`sound_synth.py <../sound/sound_synth.py>`
+The module :download:`sound_synth.py <../sound/sound_synth.py>` provides several functions to load, create, and play sounds. 
 
-Exercise (**) Using functions from the sound_synth` module, write a script that loads the wav file ``cymbal.wav`` and plays it 10 times, at a rhythm of one per second. (Warning: a basic knowledge of numpy arrays is necessary).
+Exercise (\*\*) Using functions from the `sound_synth` module, write a script that loads the file ``cymbal.wav`` and plays it 10 times, at a rhythm of one per second. (Warning: a basic knowledge of numpy arrays is necessary to concatenate the samples).
 
-Then, check :download:`cycle.py <../sound/cycle.py>`
+Check a solution at :download:`cycle.py <../sound/cycle.py>`
 
 
 Sound localisation from binaural dephasing
 ------------------------------------------
 
-Exercise (**) Take a mono sound and create a stereo sound by progressively dephasing
+Exercise (\*\*) Take a mono sound and create a stereo sound by progressively dephasing
 the two channels.
 
 Hints: load the sound file into a one dimensional numpy array, make
@@ -282,3 +376,15 @@ Pulsation (Povel & Essen, 1985)
 
 Exercise (\*\*\*) Create rhythmic stimuli such as the ones described in `Povel and Essen (1985) Perception of Temporal Patterns <http://www.cogsci.ucsd.edu/~creel/COGS160/COGS160_files/PovelEssens85.pdf>`__
 
+
+
+More illusions
+==============
+
+
+You can train your Python skills by programming some of the illusions at https://www.illusionsindex.org/
+
+
+
+.. _numpy: https://numpy.org/
+.. _Pygame: http://www.pygame.org
