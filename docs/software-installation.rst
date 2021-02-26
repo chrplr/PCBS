@@ -129,25 +129,29 @@ MacOS
 
 Whetever your operating systems, you now need to test your installation:
 
-1. run this command in a terminal to test ``pygame``::
+1. To test ``pygame``, run the following command in a Terminal::
 
       python -m pygame.examples.aliens
 
    You should see a window with moving spaceships.
 
-2. To test ``expyriment``, type the following in the terminal::
+2. To test ``expyriment``, open a Terminal and type ``python``.
 
-          python
-
-     Then, at the the prompt ``>>>``, type the following lines::
+   Then, after the prompt ``>>>``, type the following lines::
 
          import expyriment
          expyriment.control.run_test_suite()
 
-       You should see a screen with ``Test suite``. There are various tests that you can run. Pressing ``Esc`` will stop the program.
+   You should see a screen with ``Test suite``. There are various tests that you can run. Pressing ``Esc`` will stop the program.
 
-Finally, in the terminal running ``python``, at the ``>>>`` prompt, press ``Ctrl-D``  then ``y``. You are out of python and you can type ``exit`` to close the terminal.
+   Finally, in the terminal running ``python``, at the ``>>>`` prompt, press ``Ctrl-D``  then ``y``. You are out of python and you can type ``exit`` to close the terminal.
 
+
+Potential issues:
+
+    - ``python: command not found``: the folder containing anaconda3's python is missing (or shadowed) from the PATH environment variable that lists all the folders where commands can be located. It is very likely that you did not follow exactly the above installation instructions for either Anaconda3 or Git Bash (Windows only), that is, you did not check the correct options. If you know how to do it, modify the PATH environment variable, else reinstall.  
+
+    - ``expyriment or pygame : module not found``. There are many potential causes for that one. Check that you followed the instructions precisely and contat us on the #general channel of the Slask forum.
 
 
 The R statistical software
