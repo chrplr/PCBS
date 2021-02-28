@@ -473,19 +473,19 @@ Example from a past student
 
 ---
 
-# Recap: Cheat sheet
+# Recap: Clean Code Principles
 
----
+The goal is to make code **easy to understand** and **easy to change**.
 
-**1. Use meaningful names**.
+**CC1 Use meaningful names**.
 Reveal purpose. Replace magic numbers.
 Say what functions do. Describe side-effects. Remove ambiguity.
 Use different words for different concepts.
 Use the appropriate level of abstraction
 
-**2. Create functions that do one thing**. Build abstractions.
+**CC2 Create functions that do one thing**. Build abstractions.
 
-**3. DRY: Don't Repeat Yourself**. Avoid code duplication.
+**CC3 DRY: Don't Repeat Yourself**. Avoid code duplication.
 
-**4. Explain yourself in code, not comments**. Comments do not make up for bad code.
+**CC4 Explain yourself in code, not comments**. Comments do not make up for bad code.
 
