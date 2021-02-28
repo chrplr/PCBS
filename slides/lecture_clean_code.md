@@ -1,92 +1,137 @@
 
-# The goal of *clean code* is to make your code **easy to understand** and **easy to change**.
+
+# Clean Code
+
 
 ---
 
-<!-- 
-
-
-# The goal of *clean code* is to make your code **easy to understand** and **easy to change**.
-
-Analogy:
-iclr2020.ics as text file
-ICLR2020 in google calendar
-
-
-![](images/iclr2020_ics_screenshot_small.png)
-
-* hard to understand
-* hard to change
-
-![](images/iclr2020_calendar_google_screenshot_small.png)
-
-* easy to understand. (interactions, what affects what)
-* easy to change  
-
--->
+# The goal of "clean code" is to make your code **easy to understand** and **easy to change**.
 
 ---
 
-    !python
-    w = x2 - x1
+
+<!-- The goal of "clean code" is to make your code
+**easy to understand** and **easy to change**. -->
+
+Analogy between writing code and writing a schedule:
+
+* using [iclr2020.ics as a text file](images/iclr2020_ics_screenshot.png)
+
+    * hard to understand
+
+    * hard to change
+
+
+* using [ICLR2020 as a google calendar](images/iclr2020_calendar_google_screenshot.png)
+
+    * easy to understand
+    (the "things" we care about are immediately visible; unimportant details are abstracted away; easy to see the interactions between different parts;
+    easy to navigate between different levels of abstraction)
+
+    * easy to change
+
+
+<!-- ![](images/iclr2020_ics_screenshot_small.png) -->
+
+<!-- ![](images/iclr2020_calendar_google_screenshot_small.png) -->
 
 ---
 
-    !python
-    w = x2 - x1
+*Let's illustrate the principles of clean code [CC] by example.*
+
+---
+
+```
+w = x2 - x1
+```
+
+---
+
+```
+w = x2 - x1
+```
 
 
-* what are 'w' and 'x'?
+* What are `w`, `x1` and `x2`?
+    * What do they represent?
+    * What are they used for?
+    <!-- * what type of data do they hold (e.g. scalar, vector…)? -->
+* Does "w" stand for "weight", "window", "word", or is it just a symbol for a generic computation?
+
+---
+
+```
+w = x2 - x1
+```
+
+* What are `w`, `x1` and `x2`?
     * what do they represent?
     * what are they used for?
-* does 'w' stand for 'weight', 'window', 'word', or is it just an arbitrary name for a generic computation?
-* what type of data do they hold (e.g. scalar, vector…)?
+    <!-- * what type of data do they hold (e.g. scalar, vector…)? -->
+
+* Does "w" stand for "weight", "window", "word", or is it just a symbol for a generic computation?
+
+
+```
+width = x_right - x_left
+```
+
+
+* This answers all of the previous questions!
 
 ---
 
-
-    !python
-    width = x_right - x_left
+# **CC1. Use meaningful names**
 
 ---
 
-# **1. Use meaningful names**
+```
+width = x_right - x_left
+```
+
+- **[CC1]** Give names that **reveal the purpose** of things.
 
 ---
 
-    !python
-    width = x_right - x_left
+Next:
 
-- **[CC1]** give names that **reveal the purpose** of things
-
----
-
-    !python
-    width = x_right - x_left + 10
+```
+width = x_right - x_left + 10
+```
 
 
 ---
 
-    !python
-    width = x_right - x_left + 10
+```
+width = x_right - x_left + 10
+```
 
-- where does '10' come from?
-- what does it represent?
-- can I change it?
+- Where does '10' come from?
+- What does it represent?
+- Can I change it?
 
 ---
 
-    !python
-    width = x_right - x_left + 2 * padding_x
+```
+width = x_right - x_left + 10
+```
 
-- **[CC1]** replace **magic numbers** with **named constants** or **named parameters**
+- Where does '10' come from?
+- What does it represent?
+- Can I change it?
+
+```
+width = x_right - x_left + 2 * padding_x
+```
+
+- **[CC1]** Replace **magic numbers** with **named constants** or **named parameters**
 
 ---
 
     !python
     width = (21 - 2 * 1.5) * 0.3937007874
 
-- **[CC1]** replace **magic numbers** with named constants or named parameters
+- **[CC1]** Replace **magic numbers** with named constants or named parameters
 
 ---
 
@@ -95,7 +140,7 @@ ICLR2020 in google calendar
     # ...
     width = (21 - 2 * 1.5) * INCHES_PER_CENTIMETER
 
-- **[CC1]** replace magic numbers with **named constants** or named parameters
+- **[CC1]** Replace magic numbers with **named constants** or named parameters
 
 ---
 
@@ -111,74 +156,82 @@ ICLR2020 in google calendar
 
 ---
 
-    !python
+```
     check_divisible(a, b)
+```
 
-What do you expect this will do?
+- What do you expect this will do?
 
 
 ---
 
-    !python
+```
     check_divisible(a, b)
+```
 
-What do you expect this will do?
+- What do you expect this will do?
 
-- **[CC1] function names should say what they do**
+- **[CC1] Function names should say what they do**
 
 
 ---
+
+The implementation:
 
     !python
     def check_divisible(n, divisor):
         if (n % divisor == 0):
             print(n, ' is divisible by ', divisor)
 
-**misleading**: I don't expect "something that checks" to print anything
+**Misleading name**: I don't expect "something that checks" to print anything
 
 
 ---
 
-a more accurate name:
+A more accurate name:
 
     !python
     def print_if_divisible(n, divisor):
         if (n % divisor == 0):
             print(n, ' is divisible by ', divisor)
 
-**[CC1] function names should describe side-effects** (such as printing to the console)
+- **[CC1] Function names should say what they do**
+
+- **[CC1] Function names should describe side-effects** (such as printing to the console)
 
 ---
 
     !python
-    remove(list, i)
+    remove(l, i)
 
 ---
 
     !python
-    remove(list, i)
+    remove(l, i)
 
-**ambiguous**:
+**Ambiguous name**:
 
-* are we removing the element(s) in `list` whose value is equal to `i`?
-* or are we removing the element at index `i`?
-
----
-
-    !python
-    remove_list_element_at_index(list, i)
-
-- **[CC1] choose unambiguous names**
+* Are we removing the element in `l` whose value is equal to `i`?
+* Or are we removing the element at index `i`?
 
 ---
 
-    !python
-    remove_list_element_at_index(list, i)
+An unambiguous name:
 
-* **[CC1] choose unambiguous names**
-* **clarity at the point of use** is more important than brevity
-* include all the words needed to avoid ambiguity from the perspective of the one calling the function
-* a general naming template: **`verb_keywords`** (the verb indicates what the function does, the keywords what parameters are expected)
+    !python
+    remove_list_element_at_index(l, i)
+
+---
+
+An unambiguous name:
+
+    !python
+    remove_list_element_at_index(l, i)
+
+* **[CC1] Choose unambiguous names**
+* **Clarity at the point of use** is more important than brevity
+* Include all the words needed to avoid ambiguity from the perspective of someone calling the function
+* A general naming template: **`verb_keywords`** (the verb indicates what the function does, the keywords what parameters are expected)
 
 ---
 
@@ -186,9 +239,11 @@ a more accurate name:
     add_number(a , b)
     add_list(c, d)
 
-What do you expect these will do?
+- What do you expect these will do?
 
 ---
+
+The implementation:
 
     !python
     def add_number(a , b):
@@ -197,13 +252,26 @@ What do you expect these will do?
     def add_list(l, e):
         l.append(e)
 
-**confusing**:
+---
+
+The implementation:
+
+    !python
+    def add_number(a , b):
+        return a + b
+
+    def add_list(l, e):
+        l.append(e)
+
+**Confusing** to use the same word "add" for the two functions:
 
 * in the first case, `add` calculates the addition
 * in the second case, `add` inserts an element
 * in the first case, `add` has no side effects, in the second, it does!
 
 ---
+
+A way to remove the confusion:
 
     !python
     def add_numbers(a , b):
@@ -212,49 +280,83 @@ What do you expect these will do?
     def append_element_to_list(e, l):
         l.append(e)
 
-- **[CC1] use different words for different concepts**
+---
+
+A way to remove the confusion:
+
+    !python
+    def add_numbers(a , b):
+        return a + b
+
+    def append_element_to_list(e, l):
+        l.append(e)
+
+- **[CC1] Use different words for different concepts**
 
 ---
 
     !python
     distance(couple_1, couple_2)
 
----
-
-    !python
-    distance(couple_1, couple_2)
-
-**unclear**:
-
-* what kind of distance is this? distance in what space?
-* what do the couples represent?
-* a couple could stand for many things: a 2D point, an interval, a rational number, a complex number...
+- What is this?
 
 ---
 
     !python
     distance(couple_1, couple_2)
 
-* **problem:** we are **mixing two levels of abstraction**
-    * level 1: the space of objects in which a distance can be measured
-    * level 2: the implementation of these objects as couples
+- What is this? **Unclear**:
+
+    * What kind of distance? Distance in what space?
+
+    * What do `couple_1` and `couple_2` represent?
+
+    * A "couple" could stand for many things: a point in 2D geometry, an interval, a rational number, a complex number...
+
+---
+
+    !python
+    distance(couple_1, couple_2)
+
+* **Problem:** we are **mixing two levels of abstraction**
+    * Level 1: the distance between some abstract objects
+    * Level 2: the low-level implementation of these objects as couples
 
 
 ---
+
+A solution:
 
     !python
     distance(point_1, point_2)
 
-- **[CC1] use the appropriate level of abstraction**
+- **[CC1] Use the appropriate level of abstraction**
 
 ---
+
+A solution:
 
     !python
     distance_between_points(point_1, point_2)
     distance_between_intervals(interval_1, interval_2)
 
-- **[CC1] use the appropriate level of abstraction**
-- if several kinds of distance can be used, it is necessary to disambiguate in the function name which kind of distance is computed.
+- **[CC1] Use the appropriate level of abstraction**
+- If several kinds of distance can be used in your program, you need to disambiguate which kind of distance is computed in the function name.
+
+---
+
+Let's revisit an earlier example:
+
+    !python
+    def print_if_divisible(n, divisor):
+        if (n % divisor == 0):
+            print(n, ' is divisible by ', divisor)
+
+* This function does two things:
+
+    1. Calculating whether an integer is divisible by another
+
+    2. Printing conditionally on the result
 
 ---
 
@@ -263,69 +365,54 @@ What do you expect these will do?
         if (n % divisor == 0):
             print(n, ' is divisible by ', divisor)
 
----
+* This function does two things:
 
-    !python
-    def print_if_divisible(n, divisor):
-        if (n % divisor == 0):
-            print(n, ' is divisible by ', divisor)
+    1. Calculating whether an integer is divisible by another
 
-* this function does two things:
-    * calculating whether an integer is divisible by another
-    * printing conditionally on the result
+    2. Printing conditionally on the result
+
+* These are **two conceptually distinct operations**. There is no good reason for them to be done in the same function.
 
 ---
 
-    !python
-    def print_if_divisible(n, divisor):
-        if (n % divisor == 0):
-            print(n, ' is divisible by ', divisor)
-
-* this function does two things:
-    * calculating whether an integer is divisible by another
-    * printing conditionally on the result
-* these are two conceptually distinct things. there is no good reason for them to be in the same function.
-
----
+A solution:
 
     !python
     def is_divisible(n, divisor):
         return (n % divisor == 0)
 
-- **functions should do one thing**
+- **Functions should do one thing**
 
 ---
 
-# **2. Create functions that do one thing**
+# **CC2. Create functions that do one thing**
 
 ---
 
-Example from a past student
+[Example code from a past student](images/functions_do_one_thing_shortened_bad.png)
+
+- What does `display_dots_sparsity_cong` do?
+- Do you find it easy to understand?
+- How would you make it easier to understand?
+
+<!-- ![](images/functions_do_one_thing_shortened_bad_sm.png) -->
 
 ---
 
-![](images/functions_do_one_thing_shortened_bad_sm.png)
+[Potential rewrite](images/functions_do_one_thing_shortened_good.png)
 
----
-
-- what does `display_dots_sparsity_cong` do?
-- do you find it easy to understand?
-- how would you make it easier to understand?
-
----
+- Do you find it easier to understand?
 
 ![](images/functions_do_one_thing_shortened_good_sm.png)
 
 ---
 
-- do you find it easier to understand?
+**CC2. Create functions that do one thing**
 
----
-
-- a lot of programming is about **building abstractions**
-- abstractions help you reason about your program and control its intellectual complexity
-- top-down: break the function down into simpler ones
-- bottom-up: chunk a combination of operations in one function (which you manipulate as one conceptual unit)
+- A lot of programming is about **building abstractions**
+- Abstractions help you reason about your program and control its intellectual complexity
+- Top-down approach: Break the function down into simpler ones
+- Bottom-up approach: Chunk a combination of operations in one function (which you manipulate as one conceptual unit)
 
 ---
 
@@ -333,9 +420,9 @@ Example from a past student
 
 ---
 
-Example from a past student
+[Example code from a past student](images/DRY_example_student_bad.png)
 
----
+- What's wrong?
 
 ![](images/DRY_example_student_bad_sm.png)
 
@@ -343,50 +430,41 @@ Example from a past student
 
 ---
 
-What's wrong?
+![](images/DRY_example_student_bad_annotated_sm.png)
 
 ---
+
+- What's wrong? **Code duplication**.
+
+- Why is it wrong? It makes code **hard to change**.
+
+---
+
+# **CC3. DRY: Don't Repeat Yourself**
+
+---
+
+- How would you solve this?
 
 ![](images/DRY_example_student_bad_annotated_sm.png)
 
 ---
 
-What's wrong?
-
-**Code duplication**
-
-Why is it wrong?
-
-**Hard to change**
-
----
-
-# **3. DRY: Don't Repeat Yourself**
-
----
-
-![](images/DRY_example_student_bad_annotated_sm.png)
-
----
-
-How would you solve this?
-
----
+- A solution:
 
 ![](images/DRY_example_student_good_annotated_sm.png)
 
 ---
 
+Last principle of clean code…
 
 ---
 
-# **4. Explain yourself in code, not comments**
+# **CC4. Explain yourself in code, not comments**
 
 ---
 
-Example from a past student
-
----
+Example from a past student:
 
     !python
     if shuffledtarg_dist[i][1] == 1: ### IF TARGET ###
@@ -396,17 +474,21 @@ Example from a past student
 
 ---
 
+Example from a past student:
+
     !python
     if shuffledtarg_dist[i][1] == 1: ### IF TARGET ###
         # [some code ...]
     elif shuffledtarg_dist[i][1] == 0: ### IF DISTRACTOR ###
         # [some other code ...]
 
-- why do we need such comments next to `if` and `elif`?
-- good intentions, but bad approach
-- **[CC4] comments do not make up for bad code**
+- Why do we need such comments next to `if` and `elif`?
+- Good intentions, but bad approach
+- **[CC4] Comments do not make up for bad code**
 
 ---
+
+A first solution:
 
     !python
     if stimulus_type == STIMULUS_TYPE_TARGET:
@@ -414,12 +496,13 @@ Example from a past student
     elif stimulus_type == STIMULUS_TYPE_DISTRACTOR:
         # [some other code ...]
 
-- **clear and expressive code** with few comments is superior to
+- **[CC4] Clear and expressive code** with few comments is superior to
 obscure code with lots of comments
-- can we do even better?
+- Can we do even better?
 
 ---
 
+An even better solution:
 
     !python
     if is_target(stimulus):
@@ -427,15 +510,13 @@ obscure code with lots of comments
     elif is_distractor(stimulus):
         # [some other code ...]
 
-- **clear and expressive code** with few comments is superior to
+- **[CC4] Clear and expressive code** with few comments is superior to
 obscure code with lots of comments
-- does this need any comments?
+- Does this need any comments?
 
 ---
 
-Example from a past student
-
----
+Example from a past student:
 
     !python
     def distance_points(couple1,couple2):
@@ -444,6 +525,8 @@ Example from a past student
         return math.sqrt((couple1[0]-couple2[0])**2+(couple1[1]-couple2[1])**2)
 
 ---
+
+Example from a past student:
 
     !python
     def distance_points(couple1,couple2):
@@ -455,6 +538,8 @@ Example from a past student
 
 ---
 
+An alternative:
+
     !python
     def distance_between_points(point_1, point_2)
 
@@ -462,14 +547,19 @@ Example from a past student
 
 ---
 
-Example from a past student
-
----
+Example from a past student:
 
     !python
     exp = design.Experiment("Task") #create and name new exp object
 
-- Redundant comment. This is just noise.
+---
+
+Example from a past student:
+
+    !python
+    exp = design.Experiment("Task") #create and name new exp object
+
+- Redundant comment. This is just noise. Remove it.
 
 ---
 
@@ -477,15 +567,15 @@ Example from a past student
 
 The goal is to make code **easy to understand** and **easy to change**.
 
-**CC1 Use meaningful names**.
+* **CC1 Use meaningful names**.
 Reveal purpose. Replace magic numbers.
 Say what functions do. Describe side-effects. Remove ambiguity.
 Use different words for different concepts.
 Use the appropriate level of abstraction
 
-**CC2 Create functions that do one thing**. Build abstractions.
+* **CC2 Create functions that do one thing**. Build abstractions.
 
-**CC3 DRY: Don't Repeat Yourself**. Avoid code duplication.
+* **CC3 DRY: Don't Repeat Yourself**. Avoid code duplication.
 
-**CC4 Explain yourself in code, not comments**. Comments do not make up for bad code.
+* **CC4 Explain yourself in code, not comments**. Comments do not make up for bad code.
 

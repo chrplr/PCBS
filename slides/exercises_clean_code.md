@@ -3,17 +3,17 @@
 
 The goal is to make code **easy to understand** and **easy to change**.
 
-**CC1 Use meaningful names**.
+* **CC1 Use meaningful names**.
 Reveal purpose. Replace magic numbers.
 Say what functions do. Describe side-effects. Remove ambiguity.
 Use different words for different concepts.
 Use the appropriate level of abstraction
 
-**CC2 Create functions that do one thing**. Build abstractions.
+* **CC2 Create functions that do one thing**. Build abstractions.
 
-**CC3 DRY: Don't Repeat Yourself**. Avoid code duplication.
+* **CC3 DRY: Don't Repeat Yourself**. Avoid code duplication.
 
-**CC4 Explain yourself in code, not comments**. Comments do not make up for bad code.
+* **CC4 Explain yourself in code, not comments**. Comments do not make up for bad code.
 
 ---
 
@@ -43,6 +43,14 @@ and write them down as comments on commie.io.
 
 3. When time is up, gather with the rest of the class to discuss the issues
 we've found. You may be asked to share your commented code copy.
+
+---
+
+# Exercises
+
+Example review:
+
+![example review](images/commie_review_example.png)
 
 ---
 
