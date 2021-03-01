@@ -51,15 +51,15 @@ Git repository on github (contains solutions to exercices and more)
         * `lecture4 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture4.html>`__ 
         *  :doc:`stimulus-creation`
    * -  Mar  3
-     -  How to Solve Problems
-     -  :doc:`how-to-solve-problems`
+     -  * How to program the Hermann Grid.
+        * Generating Stimuli
+     -  *  :doc:`stimulus-creation`
    * -  Mar 17
-     -  Experiments. Simulations. 
-     -  * :doc:`running-experiments`
-        * :doc:`simulations`
+     -  Clean Code
+     - 
    * -  Mar 24
-     -  Git and Github.  Start of the Project
-     -  :doc:`git-and-github`
+     -  Expyriment. Git and Github.  Start of the Project
+     -   * :doc:`running-experiments` :doc:`git-and-github`
    * -  Mar 31
      -
      -
