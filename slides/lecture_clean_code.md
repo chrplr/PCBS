@@ -411,7 +411,7 @@ A solution:
 
 - A lot of programming is about **building abstractions**
 - Abstractions help you reason about your program and control its intellectual complexity
-- Top-down approach: Break the function down into simpler ones
+- Top-down approach: Break the function down into more elementary ones
 - Bottom-up approach: Chunk a combination of operations in one function (which you manipulate as one conceptual unit)
 
 ---
