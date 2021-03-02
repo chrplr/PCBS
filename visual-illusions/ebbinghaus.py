@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-10-24 14:48:52 christophe@pallier.org>
+# Time-stamp: <2021-03-02 12:27:09 christophe@pallier.org>
 
 """Draws the Ebbinghaus-Titchener illusion.
 
@@ -8,18 +8,15 @@ See https://en.wikipedia.org/wiki/Ebbinghaus_illusion
 """
 
 import pygame  # see www.pygame.org
-import numpy as np
+from math import sin, cos, pi
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
 
 
 def Ebbinghaus(surface, n, d, r1, r2, col1, col2, x, y):
-        """ Draws a circle surrounded by outer ones.
+    """ Draws a circle surrounded by outer ones.
 
         Args:
             surface: pygame surface to display the stimulus on
@@ -35,39 +32,36 @@ def Ebbinghaus(surface, n, d, r1, r2, col1, col2, x, y):
         None
             the stimulus is drawn on the surface
 
-        """
+    """
 
-        border_size = 2
-        # draw inner circle
-        pygame.draw.circle(surface, col1, (x, y), r1, border_size)
-        # draw peripheral circles
-        for i in range(n):
-                angle = (2 * 3.1415 * i) / n
-                x1 = x + int(d * np.cos(angle))
-                y1 = y + int(d * np.sin(angle))
-                pygame.draw.circle(surface, col2, (x1, y1), r2, border_size)
-
-
-def main():
-        W, H = 700, 500  # graphic window size
-
-        pygame.init()
-        screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
-        screen.fill(WHITE)
-
-        Ebbinghaus(screen, 8, 100, 25, 35, BLACK, BLACK, W//2 + 150, H//2)
-        Ebbinghaus(screen, 12, 80, 25, 15, BLACK, BLACK, W//2 - 150, H//2)
-        pygame.display.flip()
-        pygame.image.save(screen, "ebbinghaus.png")
-
-        # wait till the window is closed
-        done = False
-        while not done:
-                pygame.time.wait(10)
-                for event in pygame.event.get():
-                        if event.type == pygame.QUIT:
-                                done = True
+    border_size = 2
+    # draw inner circle
+    pygame.draw.circle(surface, col1, (x, y), r1, border_size)
+    # draw peripheral circles
+    for i_circle in range(n):
+        angle = (2 * pi * i_circle) / n
+        x1 = x + int(d * cos(angle))
+        y1 = y + int(d * sin(angle))
+        pygame.draw.circle(surface, col2, (x1, y1), r2, border_size)
 
 
-if __name__ == '__main__':
-        main()
+W, H = 700, 500  # graphic window size
+
+pygame.init()
+screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
+pygame.display.set_caption('Ebbinghaus illusion')
+screen.fill(WHITE)
+
+Ebbinghaus(screen, 8, 100, 25, 35, BLACK, BLACK, W//2 + 150, H//2)
+Ebbinghaus(screen, 12, 80, 25, 15, BLACK, BLACK, W//2 - 150, H//2)
+
+pygame.display.flip()
+pygame.image.save(screen, "ebbinghaus.png")
+
+# wait till the window is closed
+done = False
+while not done:
+    pygame.time.wait(10)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True

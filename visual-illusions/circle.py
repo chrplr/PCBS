@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-24 10:53:16 christophe@pallier.org>
+# Time-stamp: <2021-03-02 12:28:06 christophe@pallier.org>
 
 """ Display a circle.
 
@@ -8,7 +8,8 @@
 
 import pygame
 
-# Colors are triplets containint RGB values (see <https://www.rapidtables.com/web/color/RGB_Color.html>
+# Colors are triplets containint RGB values
+# see <https://www.rapidtables.com/web/color/RGB_Color.html>
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
@@ -22,8 +23,9 @@ W, H = 500, 500  # Size of the graphic window size
 #  create the window
 pygame.init()
 screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
+pygame.display.set_caption('circle')
 
-screen.fill(WHITE)  #  fill it with white
+screen.fill(WHITE)  # fill it with white
 
 # Draw a rectangle
 width, height = 200, 200

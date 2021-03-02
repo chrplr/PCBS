@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-03-09 13:41:19 christophe@pallier.org>
+# Time-stamp: <2021-03-02 12:02:11 christophe@pallier.org>
 
 """ Display [Herman grid](https://en.wikipedia.org/wiki/Grid_illusion) """
 
@@ -21,28 +21,28 @@ else:
     size = int(sys.argv[2])
     margin = int(sys.argv[3])
 
-nrows, ncols = n, n  # number of sqaures per row and column
+n_rows, n_cols = n, n  # number of sqaures per row and column
 
 # graphic window size
-W = ncols * (size + margin) + margin
-H = nrows * (size + margin) + margin
+W = n_cols * (size + margin) + margin
+H = n_rows * (size + margin) + margin
 
 pygame.init()
 screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
 screen.fill(WHITE)
 
 # construct the grid
-for row in range(nrows):
-    for col in range(ncols):
-        left, top = margin + col * (size + margin), margin + row * (size + margin)
-        myrect = pygame.Rect(left, top, size, size) # https://www.pygame.org/docs/ref/rect.html
-        pygame.draw.rect(screen, BLACK, myrect)
+for row in range(n_rows):
+    for col in range(n_cols):
+        left = margin + col * (size + margin)
+        top = margin + row * (size + margin)
+        pygame.draw.rect(screen, BLACK, (left, top, size, size))
 
 # display the backbuffer
 pygame.display.flip()
 
 # save the image into a file
-pygame.image.save(screen, "grid.png")
+pygame.image.save(screen, f"grid-{n}-{size}-{margin}.png")
 
 # wait till the window is closed
 done = False

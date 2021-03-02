@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-# Time-stamp: <2019-03-10 10:26:08 christophe@pallier.org>
+# Time-stamp: <2021-03-02 12:12:53 christophe@pallier.org>
 
 import pygame  # see www.pygame.org
 
@@ -10,26 +10,33 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
-l = 50  # square side length
-e = 8  # space between squares
-n = 20  # number of columns and rows
+side = 200  # square side length
+gap = 20  # space between squares
+radius = int(gap / 1.414)  # radius of the circles
+n = 7  # number of columns and rows of squares
 
-W, H = n * (l + e) + e, n * (l + e) + e  # graphic window size
+# graphic window size
+W = n * (side + gap) + gap
+H = W
 
 pygame.init()
 screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
 
-
-canvas = pygame.Surface((2 * H, 2 * W)) # we use a larger area to draw because of the rotation
+# construction of an horizontal grid on a surface ('canvas')
+# we need a area to draw on, because of the rotation
+canvas = pygame.Surface((2 * H, 2 * W))
 canvas.fill(GRAY)
 
 for row in range(2 * n):
     for col in range(2 * n):
-        left, top = e + col * (l + e), e + row * (l + e)
-        myrect = pygame.Rect(left, top, l, l)
-        pygame.draw.rect(canvas, BLACK, myrect)
-        pygame.draw.circle(canvas, WHITE, (left - e//2, top - e//2), e//2)
+        left = gap + col * (side + gap)
+        top = gap + row * (side + gap)
+        pygame.draw.rect(canvas, BLACK, (left, top, side, side))
+        pygame.draw.circle(canvas, WHITE,
+                           (left - gap//2, top - gap//2),
+                           gap//1.414)
 
+# Rotation of the canvas at an angle of 45°
 rot_image = pygame.transform.rotate(canvas, 45)
 screen.fill(WHITE)
 screen.blit(rot_image, (-W, -H))
@@ -43,7 +50,6 @@ pygame.image.save(screen, "extinction-grid-rotated.png")
 # wait till the window is closed
 done = False
 while not done:
-        for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                        done = True
-
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True

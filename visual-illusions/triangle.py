@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-24 10:53:36 christophe@pallier.org>
+# Time-stamp: <2021-03-02 12:28:24 christophe@pallier.org>
 
 """ Draw a triangle using pygame (see <http://www.pygame.org>). """
 
@@ -13,6 +13,7 @@ W, H = 500, 500  # graphic window size
 
 pygame.init()
 screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
+pygame.display.set_caption('triangle')
 screen.fill(WHITE)
 
 # https://www.pygame.org/docs/ref/draw.html#pygame.draw.lines
@@ -31,9 +32,9 @@ pygame.image.save(screen, "triangle-black.png")
 # wait till the window is closed
 done = False
 while not done:
-        pygame.time.wait(10)
-        for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                        done = True
+    pygame.time.wait(10)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
 
 pygame.quit()

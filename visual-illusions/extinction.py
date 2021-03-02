@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-25 18:59:42 christophe@pallier.org>
+# Time-stamp: <2021-03-02 12:13:29 christophe@pallier.org>
 
 """ Extinction illusion """
 
@@ -8,9 +8,10 @@ import pygame  # see www.pygame.org
 # parameters
 side = 200  # square side length
 gap = 20  # space between squares
-radius = int(gap / 1.414)  #
-n = 7  # number of columns and rows
+radius = int(gap / 1.414)  # radius of the circles
+n = 7  # number of columns and rows of squares
 
+# colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
@@ -46,8 +47,8 @@ pygame.image.save(screen, f"extinction-grid-{n}-{side}-{gap}.png")
 # wait till the window is closed
 done = False
 while not done:
-        for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                        done = True
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
 
 pygame.quit()

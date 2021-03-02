@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-26 12:34:21 christophe@pallier.org>
+# Time-stamp: <2021-03-02 12:29:18 christophe@pallier.org>
 
 """ Display a the Troxler figure.
 
@@ -8,7 +8,8 @@
 
 import pygame
 
-# Colors are triplets containint RGB values (see <https://www.rapidtables.com/web/color/RGB_Color.html>
+# Colors are triplets containint RGB values
+# see <https://www.rapidtables.com/web/color/RGB_Color.html>
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
@@ -21,23 +22,27 @@ ROSE = (250, 217, 248)
 W, H = 800, 800  # Size of the graphic window size
 # Note that (0,0) is at the *upper* left hand corner of the screen.
 
+center_x = W // 2
+center_y = H // 2
+
 #  create the window
 pygame.init()
 screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
+pygame.display.set_caption('Troxler illusion')
 screen.fill(WHITE)
 
 # fixation point:
-pygame.draw.circle(screen, BLACK, (W // 2, H // 2), 5)
+pygame.draw.circle(screen, BLACK, (center_x, center_y), 5)
 
 radius = 40
 coord = 300
 
-x1 = W // 2 - coord 
-x2 = W // 2
-x3 = W // 2 + coord
-y1 = H // 2 - coord
-y2 = H // 2
-y3 = H // 2 + coord
+x1 = center_x - coord
+x2 = center_x
+x3 = center_x + coord
+y1 = center_y - coord
+y2 = center_y
+y3 = center_y + coord
 
 pygame.draw.circle(screen, BLUE,   (x1, y1), radius)
 pygame.draw.circle(screen, ROSE,   (x2, y1), radius)

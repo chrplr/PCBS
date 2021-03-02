@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-25 22:18:41 christophe@pallier.org>
+# Time-stamp: <2021-03-02 12:34:13 christophe@pallier.org>
 
 """ Hering illusion demo.
 
@@ -12,13 +12,13 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 
-W, H = 1000, 700  # Size of the graphic window 
+W, H = 1000, 700  # Size of the graphic window
 
 pygame.init()
 screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
+pygame.display.set_caption('Hering illusion')
 
-screen.fill(WHITE)  #  fill the window with white
-
+screen.fill(WHITE)  # fill the window with white
 
 # two vertical lines
 pygame.draw.line(screen, RED, (W // 2 - 60, 0), (W // 2 - 60, H), 3)
@@ -31,8 +31,8 @@ pygame.time.wait(2000)
 pygame.draw.line(screen, RED, (W // 2 - 60, 0), (W // 2 - 60, H), 3)
 pygame.draw.line(screen, RED, (W // 2 + 60, 0), (W // 2 + 60, H), 3)
 # background black lines
-for x in range(-W // 3, 4 * W // 3 , 30):
-     pygame.draw.line(screen, BLACK, (x, 0), (W - x, H), 1)
+for x in range(-W // 3, 4 * W // 3, 30):
+    pygame.draw.line(screen, BLACK, (x, 0), (W - x, H), 1)
 
 pygame.display.flip()  # display the backbuffer
 
@@ -40,12 +40,12 @@ pygame.display.flip()  # display the backbuffer
 pygame.image.save(screen, "hering.png")
 
 
-#wait until the window is closed
+# wait until the window is closed
 done = False
 while not done:
-     pygame.time.wait(10)
-     for event in pygame.event.get():
-         if event.type == pygame.QUIT:
-             done = True
+    pygame.time.wait(10)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
 
 pygame.quit()

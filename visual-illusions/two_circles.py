@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-24 10:53:50 christophe@pallier.org>
+# Time-stamp: <2021-03-02 12:18:20 christophe@pallier.org>
 
 """ Display two circles side by side.
 
@@ -8,7 +8,8 @@
 
 import pygame
 
-# Colors are triplets containint RGB values (see <https://www.rapidtables.com/web/color/RGB_Color.html>
+# Colors are triplets containint RGB values
+# see <https://www.rapidtables.com/web/color/RGB_Color.html>
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
@@ -16,18 +17,23 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
-W, H = 500, 500  # Size of the graphic window size
-# Note that (0,0) is at the *upper* left hand corner of the screen.
 
 #  create the window
+W, H = 500, 500  # Size of the graphic window size
+# Note that (0,0) is at the *upper* left hand corner of the screen.
+center_x = W // 2
+center_y = H // 2
+
 pygame.init()
 screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
 
-screen.fill(WHITE)  #  fill it with white
+screen.fill(WHITE)  # fill it with white
 
-width, height = 200, 200
-pygame.draw.circle(screen, RED, (W // 2 - 120, H // 2), 100, 0)
-pygame.draw.circle(screen, BLUE, (W // 2 + 120, H // 2), 100, 0)
+# draw circles
+radius = 100
+horiz_shift = 120  # x position relative to center
+pygame.draw.circle(screen, RED, (center_x - horiz_shift, center_y), 100, 0)
+pygame.draw.circle(screen, BLUE, (center_y + horiz_shift, center_y), 100, 0)
 
 pygame.display.flip()  # display the backbuffer
 
