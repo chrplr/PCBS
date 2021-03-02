@@ -203,14 +203,12 @@ Ebbinghaus-Titchener
 Read about the `Ebbinghaus–Titchener stimulus <http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC>`__.
 
 
-Exercise (**): Using :download:`circle.py <../visual-illusions/circle.py>` as a starting point, write a
-   program to display a static stimulus (one central circle surrounded by a number of circles). 
+Exercise (**): Using :download:`circle.py <../visual-illusions/circle.py>` as a starting point, write a program to display a static stimulus (one central circle surrounded by a number of circles). 
 
 
    Hint: A littel bit of `trigonometry <https://en.wikipedia.org/wiki/Unit_circle>`__ helps:
 
-   The coordinates of a location at and at distance ``R`` from the origin and an angle ``alpha`` from the left-right line
-    are::
+   The coordinates of a location at and at distance ``R`` from the origin and an angle ``alpha`` from the left-right line are::
 
      x = R * cos(alpha)
      y = R * sin(alpha)
@@ -229,7 +227,7 @@ Hering illusion
 
    Hering illusion
 
-Exercise: Program the stimulus and check my solution `hering.py <../visual-illusions/hering.py>`__ 
+Exercise: Program the stimulus (hint: use the function `pygame.draw.line()`. Then, check a solution :download:`hering.py <../visual-illusions/hering.py>`
 
 
 Random-dot stereograms
@@ -243,7 +241,7 @@ when viewed with the eyes focused on a point in front of or behind the
 images, produces a sensation of depth  To see how they can be generated, read the wikipedia entry on
 `random dot stereograms`_, to understand the phenomenon in details, read the one about Stereopsis_.
 
-Write a script that generates random-dot stereograms (warning: this requires a bit of knowledge of Numpy_ to represent the images as 2d arrays, and of slicing_)
+Exercise (\*\*\*) Write a script that generates random-dot stereograms (warning: this requires a bit of knowledge of Numpy_ to represent the images as 2d arrays, and of slicing_)
 
 Check out :download:`random_dot_stereogram.py <../random-dot-stereograms/random_dot_stereogram.py>`
 
@@ -279,6 +277,7 @@ http://www.psy.ritsumei.ac.jp/~akitaoka/saishin2e.html
 http://www.psy.ritsumei.ac.jp/~akitaoka/saishin3e.html
 http://www.psy.ritsumei.ac.jp/~akitaoka/saishin4e.html
 
+Note: there are no exercise in this section. But, if you want to code some of the stimuli, feel free to do it, and please, share your code with us!
 
 
 Dynamic visual stimuli
@@ -287,46 +286,37 @@ Dynamic visual stimuli
 Illusory line-motion
 --------------------
 
-
 Illusory line motion (ILM) refers to a situation in which flashing a light at one end of a bar prior to the bar's instantaneous presentation results in the percept of motion. 
 
 .. figure:: images/ilm.jpg
    
    Illusory line-motion
 
-Exercise (*):  Program the stimulus.
+Exercise (*):  Program the stimulus, that is, first draw a square, wait for a few milliseconds using the function `pygame.time.wait()`, then draw a rectangle overlapping with the initial square.   
 
   Check out :download:`visual-illusions/line-motion.py <../visual-illusions/line-motion.py>`
-
-
 
 
 Flash-lag illusion
 ------------------
 
-Read about the `Flash-lag illusion <https://en.wikipedia.org/wiki/Flash_lag_illusion>`__.
+* Download  :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>` and run it. Do not look at the code yet. 
+
+* If you want to read about the `Flash-lag illusion <https://en.wikipedia.org/wiki/Flash_lag_illusion>`__.
 
 Exercise:
 
 1. Create a "movie" of a square moving horizontally, back and forth. The
-   principle is simple: you just need to create an animation loop where you
+   principle is simple: you just need to create a loop where you
    display a square at coordinates `x, y` ,wait a few milliseconds, then clear
    the screen, and increment or decrement the `x` coordinate by a fixed amount.
-   Check out :download:`moving_square.py <../visual-illusions/moving_square.py>`
+   This strategy is explained in details at http://programarcadegames.com/index.php?lang=en&chapter=introduction_to_animation
 
-2. Add the presentation of square then the moving square passes the middle line.
+   Check out out version :download:`visual-illusions/moving_square.py <../visual-illusions/moving_square.py>`
 
-Check out :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>`
+2. Add the presentation of a flashing square then the moving square passes the middle line, to generate the flash-lag illusion.
 
-
-Licac Chaser
-------------
-
-The `Lilac Chaser`_ is a dynamic version of the Troxler fill-in illusion.  
-
-.. _Lilac Chaser: https://en.wikipedia.org/wiki/Lilac_chaser
-
-Exercise: Program the Lilac Chaser.
+Now, you can look at the code in :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>`
 
 
 Dynamic version of the Ebbinghaus-Titchener
@@ -337,6 +327,20 @@ Dynamic version of the Ebbinghaus-Titchener
 -  Program a version where the outer circles (inducers) grow and shrink in size.
 
 -  Check out :download:`visual-illusions/ebbinghaus-dynamic.py <../visual-illusions/ebbinghaus-dynamic.py>`
+
+
+Lilac Chaser
+------------
+
+The `Lilac Chaser`_ is a dynamic version of the Troxler fill-in illusion.  
+
+.. _Lilac Chaser: https://en.wikipedia.org/wiki/Lilac_chaser
+
+Exercise: Program the Lilac Chaser stimulus, with 12 rose disks (you can use rose disk without any blurring).
+
+For a possible solution, check out :download:`visual-illusions/lilac_chaser.py <../visual-illusions/lilac_chaser.py>`
+
+(Optional exercise for advanced students: add blurring to the disks to make a stimulus similar to that of the wikipedia page `Lilac Chaser`_)
 
 
 Creating and playing sounds
@@ -363,13 +367,13 @@ Check a solution at :download:`cycle.py <../sound/cycle.py>`
 Sound localisation from binaural dephasing
 ------------------------------------------
 
-Exercise (\*\*) Take a mono sound and create a stereo sound by progressively dephasing
-the two channels.
+Exercise (\*\*) Take the channel of a mono sound (e.g. :download:`https://www.signalogic.com/melp/EngSamples/Orig/male.wav` and create a stereo sound. Then dephase the two channels by various delays, and listen to the result.
 
 Hints: load the sound file into a one dimensional numpy array, make
 a copy of the array and shift it, assemble the two arrays in a
 bidimensional array (matrix) and save it as a stereo file
 
+If you know nothing about Numpy_, you may find useful tutorials about it on the web, e.g. at https://github.com/paris-saclay-cds/data-science-workshop-2019/blob/b370d46044719281932337ca4154e1b0b443ad97/Day_1_Scientific_Python/numpys/numpy_intro.ipynb
 
 Pulsation (Povel & Essen, 1985)
 -------------------------------
@@ -381,9 +385,7 @@ Exercise (\*\*\*) Create rhythmic stimuli such as the ones described in `Povel a
 More illusions
 ==============
 
-
 You can train your Python skills by programming some of the illusions at https://www.illusionsindex.org/
-
 
 
 .. _numpy: https://numpy.org/

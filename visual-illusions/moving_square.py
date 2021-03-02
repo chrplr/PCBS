@@ -1,35 +1,29 @@
 #!/usr/bin/env python
-# Time-stamp: <2021-02-23 22:00:37 christophe@pallier.org>
-
+# Time-stamp: <2021-03-02 22:06:31 christophe@pallier.org>
 
 """ Moving square using pygame """
 
 import pygame
 
-# Colors are triplets containint RGB values (see <https://www.rapidtables.com/web/color/RGB_Color.html>
-BLACK = (0, 0, 0)
+# Colors are triplets containint RGB values
+# see <https://www.rapidtables.com/web/color/RGB_Color.html>
 WHITE = (255, 255, 255)
-GRAY = (127, 127, 127)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
-W, H = 800, 800  # Size of the graphic window size
-# Note that (0,0) is at the *upper* left hand corner of the screen.
-
-#  create the window
+#  create the graphic window
 pygame.init()
+W, H = 800, 800  # Size of the graphic window 
 screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
-
-screen.fill(WHITE)  #  fill it with white
+pygame.display.set_caption('moving square') 
+screen.fill(WHITE)  # fill it with white
 
 # Draw a rectangle
 width, height = 20, 20
 y = (H - height) // 2
 
+wait_time = 20  # number of ms between each step
 step = 10  # number of pixels to move
-wait_time = 20  # nnumber of ms between each step
-x = 50  # starting abscisse
+x = 50  # starting abscissa
 
 done = False
 while not done:
