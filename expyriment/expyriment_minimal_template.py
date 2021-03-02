@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# Time-stamp: <2021-03-02 18:12:01 christophe@pallier.org>
 """
-Minimal skeleton for an experyment script  
-(see <https://docs.expyriment.org/Tutorial.html>)
+Minimal skeleton for an expyriment script  
 
-Created on Sat Sep 21 11:36:41 2019
+See <https://docs.expyriment.org/Tutorial.html>
 
-@author: christophe@pallier.org
 """
 
 import expyriment
 
-exp = expyriment.design.Experiment(name="First Experiment")
+exp = expyriment.design.Experiment(name="Experiment")
 
 ## Set develop mode. Comment for real experiment
 expyriment.control.set_develop_mode(on=True)

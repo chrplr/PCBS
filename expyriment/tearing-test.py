@@ -1,24 +1,23 @@
 #! /usr/bin/env python
-# Time-stamp: <2019-09-19 17:08:26 cp983411>
-
+# Time-stamp: <2021-03-02 18:24:19 christophe@pallier.org>
 
 """ Displays a vertical moving bar """
 
-
+from numpy import diff, histogram
 import expyriment
 
 ## Initialisation
 exp = expyriment.design.Experiment(name="First Experiment")  # create an Experiment object
 
 ## Set develop mode. Comment for real experiment
-expyriment.control.set_develop_mode(on=True)
+# expyriment.control.set_develop_mode(on=True)
 
 expyriment.control.initialize(exp)
 
 ## Creating the stimulus
 
 W, H = exp.screen.size
-print(W, H)
+
 rect = expyriment.stimuli.Rectangle((5, H), colour=(255, 255, 255))
 rect.preload()
 
@@ -36,4 +35,12 @@ for skip in [2, 4, 8, 16]:
         xpos += skip
 
 expyriment.control.end()
-print(timings)
+
+print('histogram of time differences between displays')
+n, val = histogram(diff(timings))
+for i in n:
+    print(f'{i:>5}', end='')
+print()
+for v in val:
+    print(f'{v:>5}', end='')
+print()
