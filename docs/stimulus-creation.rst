@@ -285,7 +285,7 @@ Dynamic visual stimuli
 
 Animated movies are just a succession of still pictures. If the rate of presentation is fast enough, the brain creates an illusion of continuity. 
 
-With pygame, programming an animation will follow the following temporal logic:
+With pygame, programming an animation will follow the following temporal logic::
 
 
     #draw picture1 in the backbuffer
@@ -304,7 +304,7 @@ With pygame, programming an animation will follow the following temporal logic:
 
 
 
-We take advantage of the double buffering mode (set by the option ``DOUBLEBUF`` in the call to ``pygame.display.set_mode()``) to draw the next image in memory while the current one is displayed on the screen. It is only when we call ``pygame.display.flip()`` that the pre-prepared image is displayed, replacing the current one.
+We take advantage of the double buffering mode (set by the option ``DOUBLEBUF`` in the call to ``pygame.display.set_mode()``) to draw the next image in memory while the current one is displayed on the screen. It is only when we call ``pygame.display.flip()`` that the image in memory is displayed, replacing the current one on the screen.
 
 
 Illusory line-motion
