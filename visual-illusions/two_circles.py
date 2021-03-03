@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-02 12:18:20 christophe@pallier.org>
+# Time-stamp: <2021-03-03 10:42:32 christophe@pallier.org>
 
 """ Display two circles side by side.
 
@@ -12,11 +12,8 @@ import pygame
 # see <https://www.rapidtables.com/web/color/RGB_Color.html>
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-GRAY = (127, 127, 127)
 RED = (255, 0, 0)
-GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
-
 
 #  create the window
 W, H = 500, 500  # Size of the graphic window size

@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-02 12:28:59 christophe@pallier.org>
+# Time-stamp: <2021-03-03 10:51:25 christophe@pallier.org>
 
 """ Display Kanisza illusory square
 
@@ -12,9 +12,6 @@ import pygame  # see www.pygame.org
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
 
 # create graphic window
 W, H = 500, 500  # size (width and height) of the graphic window
@@ -24,7 +21,7 @@ center_y = H // 2
 
 pygame.init()
 screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
-pygame.display.set_caption('Kanisza illusory contours')
+pygame.display.set_caption('Kanisza square')
 
 screen.fill(GRAY)
 
@@ -38,16 +35,17 @@ right = center_x + width // 2
 top = center_y - height // 2
 bottom = center_y + height // 2
 
+# draw circles
 radius = 50
 pygame.draw.circle(screen, BLACK, (left, top), radius, 0)
 pygame.draw.circle(screen, BLACK, (right, top), radius, 0)
 pygame.draw.circle(screen, WHITE, (left, bottom), radius, 0)
 pygame.draw.circle(screen, WHITE, (right, bottom), radius, 0)
 
-myrect = pygame.Rect(left, top, width, height)
-pygame.draw.rect(screen, GRAY, myrect)
+# draw the rectangle
+pygame.draw.rect(screen, GRAY, (left, top, width, height))
 
-# switch the backbuffer
+# switch the backbuffer to display the figure
 pygame.display.flip()
 
 # save the image into a file

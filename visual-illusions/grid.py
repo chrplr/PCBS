@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-03 10:22:01 christophe@pallier.org>
+# Time-stamp: <2021-03-03 10:39:36 christophe@pallier.org>
 
 """ Display [Herman grid](https://en.wikipedia.org/wiki/Grid_illusion) """
 
@@ -30,7 +30,9 @@ for i_row in range(n_rows):
     for i_col in range(n_cols):
         x_left = margin + i_col * (cell_side_length + space_between_cells)
         y_top = margin + i_row * (cell_side_length + space_between_cells)
-        pygame.draw.rect(screen, BLACK, (x_left, y_top, cell_side_length, cell_side_length))
+        pygame.draw.rect(screen,
+                         BLACK,
+                         (x_left, y_top, cell_side_length, cell_side_length))
 
 # display the backbuffer
 pygame.display.flip()

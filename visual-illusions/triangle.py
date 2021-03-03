@@ -1,6 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-02 12:28:24 christophe@pallier.org>
-
+# Time-stamp: <2021-03-03 10:46:23 christophe@pallier.org>
 """ Draw a triangle using pygame (see <http://www.pygame.org>). """
 
 import pygame
@@ -10,6 +9,8 @@ WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
 
 W, H = 500, 500  # graphic window size
+center_x = W // 2
+center_y = H // 2
 
 pygame.init()
 screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
@@ -18,9 +19,9 @@ screen.fill(WHITE)
 
 # https://www.pygame.org/docs/ref/draw.html#pygame.draw.lines
 size = 60
-point1 = W//2 - size, H//2 + size
-point2 = W//2 + size, H//2 + size
-point3 = W//2, H//2 - size
+point1 = (center_x - size, center_y + size)
+point2 = (center_x + size, center_y + size)
+point3 = (center_x, center_y - size)
 pygame.draw.lines(screen, BLACK, True, (point1, point2, point3), 5)
 
 # display the backbuffer

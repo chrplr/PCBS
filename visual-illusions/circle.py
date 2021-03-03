@@ -1,6 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-02 12:28:06 christophe@pallier.org>
-
+# Time-stamp: <2021-03-03 10:44:00 christophe@pallier.org>
 """ Display a circle.
 
     See https://sites.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/

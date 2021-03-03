@@ -1,6 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-02 12:27:46 christophe@pallier.org>
-
+# Time-stamp: <2021-03-03 10:57:55 christophe@pallier.org>
 """ Display a square.
 
     See https://sites.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/
@@ -18,7 +17,7 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
 #  create the window
-W, H = 500, 500  # Size of the graphic window size
+W, H = 500, 500  # Size of the graphic window 
 # Note that (0,0) is at the *upper* left hand corner of the screen.
 center_x = W // 2
 center_y = H // 2
@@ -29,13 +28,13 @@ pygame.display.set_caption('square')
 
 screen.fill(WHITE)  # fill it with white
 
-# Draw a rectangle
+# Draw a rectangle (in the backbuffer)
 width, height = 200, 200  # dimensions of the rectangle in pixels
 left = center_x - width // 2  # x coordinates of topleft corner
 top = center_y - height // 2  # y coordinate of topleft corner
 pygame.draw.rect(screen, BLUE, (left, top, width, height))
 
-pygame.display.flip()  # display the backbuffer
+pygame.display.flip()  # display the backbuffer on the screen
 
 # save the image into a file
 pygame.image.save(screen, "square-blue.png")
