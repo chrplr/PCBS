@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-02 12:32:17 christophe@pallier.org>
+# Time-stamp: <2021-03-03 10:22:01 christophe@pallier.org>
 
 """ Display [Herman grid](https://en.wikipedia.org/wiki/Grid_illusion) """
 
@@ -7,29 +7,30 @@ import pygame  # see www.pygame.org
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-GRAY = (127, 127, 127)
 
-n_rows, n_cols = 10, 10  # number of squares per row and column
-size = 50  # square size (length of)side in pixels)
-margin = 10  # space between squares
+# parameters of the grid
+n_rows, n_cols = 10, 10
+cell_side_length = 50
+space_between_cells = 10
+margin = 30  # borders size
 
-# graphic window size
-W = n_cols * (size + margin) + margin
-H = n_rows * (size + margin) + margin
+# graphic window cell_side_length
+W = n_cols * cell_side_length + (n_cols - 1) * space_between_cells + 2 * margin
+H = n_rows * cell_side_length + (n_rows - 1) * space_between_cells + 2 * margin
 
 # creation of the graphics window
 pygame.init()
-screen = pygame.display.set_mode((H, W), pygame.DOUBLEBUF)
+screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
 pygame.display.set_caption('Herman Grid')
 
 screen.fill(WHITE)
 
 # construction of the grid
-for row in range(n_rows):
-    for col in range(n_cols):
-        left = margin + col * (size + margin)
-        top = margin + row * (size + margin)
-        pygame.draw.rect(screen, BLACK, (left, top, size, size))
+for i_row in range(n_rows):
+    for i_col in range(n_cols):
+        x_left = margin + i_col * (cell_side_length + space_between_cells)
+        y_top = margin + i_row * (cell_side_length + space_between_cells)
+        pygame.draw.rect(screen, BLACK, (x_left, y_top, cell_side_length, cell_side_length))
 
 # display the backbuffer
 pygame.display.flip()
