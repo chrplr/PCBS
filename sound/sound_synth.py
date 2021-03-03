@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-02-23 20:48:57 christophe@pallier.org>
+# Time-stamp: <2021-03-03 08:08:31 christophe@pallier.org>
 
 """ simple sounds generation """
 
@@ -11,7 +11,7 @@ import simpleaudio  # to play sound
 def play_mono(nparray, sample_rate=22050, normalize=True):
     audio = nparray[:]
     if normalize:  # normalize to 16-bit range
-        audio *= 32767 / np.max(np.abs(audio))
+        audio = np.multiply(audio, 32767 / np.max(np.abs(audio)))
 
     # convert to 16-bit data
     audio = audio.astype(np.int16)
@@ -23,7 +23,8 @@ def play_mono(nparray, sample_rate=22050, normalize=True):
 def play_stereo(nparray, sample_rate=22050, normalize=True):
     audio = nparray[:]
     if normalize:  # normalize to 16-bit range
-        audio *= 32767 / np.max(np.abs(audio))
+        audio = np.multiply(audio, 32767 / np.max(np.abs(audio)))
+
     # convert to 16-bit data
     audio = nparray.astype(np.int16)
     play_obj = simpleaudio.play_buffer(audio, 2, 2, sample_rate)
