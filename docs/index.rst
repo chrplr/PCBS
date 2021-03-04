@@ -19,22 +19,23 @@ Git repository on github (contains solutions to exercices, ...)
 
    timetable
    first-things-first
+   scratch/Starting-from-Scratch
    software-installation
-   running-python
    practical-interaction
-   how-to-solve-problems
-   tips-to-write-clean-code
+   running-python
    automata-turing-machines-and-computers
    representing-numbers-images-text
-   regular_expressions
-   building_abstractions_with_functions
    stimulus-creation
    running-experiments
    data-analyses
    simulations          
    tools-for-reproducible-science
+   how-to-solve-problems
+   tips-to-write-clean-code
    projects
    coding-exercices
+   regular_expressions
+   building_abstractions_with_functions
    git-and-github
    
 
