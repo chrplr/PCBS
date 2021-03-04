@@ -412,7 +412,7 @@ Exercise (\*\*): Program the Lilac Chaser stimulus, with 12 rose disks (you can 
 
 For a possible solution, check out :download:`visual-illusions/lilac_chaser.py <../visual-illusions/lilac_chaser.py>`
 
-(Optional exercise for advanced students: add blurring to the disks to make a stimulus similar to that of the wikipedia page `Lilac Chaser`_. Then, for a solution, check out :download:`visual-illusions/lilac_chaser_blurred.py <../visual-illusions/lilac_chaser_blurred.py>`__)
+(Optional exercise for advanced students: add blurring to the disks to make a stimulus similar to that of the wikipedia page `Lilac Chaser`_. Then, for a solution, check out :download:`visual-illusions/lilac_chaser_blurred.py <../visual-illusions/lilac_chaser_blurred.py>`)
 
 
 Creating and playing sounds

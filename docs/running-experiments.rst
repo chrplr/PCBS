@@ -10,7 +10,7 @@ Simple reaction times
 Pygame version
 ~~~~~~~~~~~~~~
 
-Download :download:`simple-detection-visual-pygame.py <reaction-times/simple-detection-visual-pygame.py>`. Run it with::
+Download :download:`simple-detection-visual-pygame.py <../reaction-times/simple-detection-visual-pygame.py>`. Run it with::
 
      python reaction-times/simple-detection-visual-pygame.py
 
@@ -22,16 +22,16 @@ The task is simply to press a key as quickly as possible when a cross appears at
 
 Here are my results:
 
-   .. figure:: simple_rts.png
+   .. figure:: images/simple_rts.png
 
       Simple Reaction Times as a function of trial
 
-   .. figure:: waittime_rts.png
+   .. figure:: images/waittime_rts.png
 
       Relationship between wait time and reaction time
 
 
-Browse the code of :download:`simple-detection-visual-pygame.py <reaction-times/simple-detection-visual-pygame.py>`
+Browse the code of :download:`simple-detection-visual-pygame.py <../reaction-times/simple-detection-visual-pygame.py>`
 
 Expyriment version
 ~~~~~~~~~~~~~~~~~~
@@ -103,10 +103,11 @@ Stroop Effect
 In the previous chapter, we created Stroop cards with Pygame. 
 
 
-.. figure:: images/stroop.png
-   :alt: Stroop card
+    .. figure:: images/stroop.png
+       :alt: Stroop Card
 
-   Stroop card
+
+    Stroop card
 
 
   (see  :download:`create_stroop_cards.py <../stroop/create_stroop_cards.py>`)

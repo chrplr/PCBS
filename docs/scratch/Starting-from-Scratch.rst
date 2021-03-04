@@ -31,15 +31,15 @@ It is important to realize the different nature of the two tasks:
 Things to be aware of
 ---------------------
 
-  - Because computers are stupid, that is, lack a *theory of mind* and
-cannot guess your desires and intentions, you must provide very
-detailed and exhaustive instructions.
+- Because computers are stupid, that is, lack a *theory of mind* and
+  cannot guess your desires and intentions, you must provide very
+  detailed and exhaustive instructions.
 
-  - Learning to code takes time because it requires to master not only
-the semantic but also the syntax (=grammar) of the language.
+- Learning to code takes time because it requires to master not only
+  the semantic but also the syntax (=grammar) of the language.
 
-  - Just as learning to play an instrument, or speak a second language,
-programming is a skill that can only be acquire with lots of practice.
+- Just as learning to play an instrument, or speak a second language,
+  programming is a skill that can only be acquire with lots of practice.
 
 . . .
 
@@ -54,14 +54,13 @@ A great advantage of Scratch_ is that programs are created using a graphical int
 preventing *syntactic errors*. Thus, you can learn the language without having to 
 learn its grammar!
 
-One can either work online at
-https://scratch.mit.edu/projects/editor/?tip_bar=home or offline, by
-downloading Scratch at
+One can either work online at https://scratch.mit.edu/projects/editor/?tip_bar=home or offline, by
+downloading Scratch_ at
 
 -  https://scratch.mit.edu/scratch_1.4/ (version 1)
 -  https://scratch.mit.edu/scratch2download/ (version 2)
 
-It is a good idea to run the tutorial “Getting Started with Scratch” on the
+It may be a good idea to run the tutorial “Getting Started with Scratch” on the
 `website <https://scratch.mit.edu/projects/editor/?tip_bar=home>`__
 
 
@@ -71,23 +70,23 @@ First steps
 Program 001
 ~~~~~~~~~~~
 
-In the ‘motion’ group, take the instruction ``turn 15 degrees`` and drag
-it onto the ‘Scripts’ panel.
+In the ``motion`` group, take the instruction ``turn 15 degrees`` and drag
+it onto the ``Scripts`` panel.
 
 |image1|
 
 Double-Click repeatedly on the block ``turn 15 degrees``, you should see
-the cat (‘sprite 1’) rotate.
+the cat (``sprite 1``) rotate.
 
-In Scratch, when one double-clicks an instruction in the ‘Scripts’
+In Scratch, when one double-clicks an instruction in the ``Scripts``
 panel, the computer **executes** it.
 
 Program 002
 ~~~~~~~~~~~
 
-Drag the instruction ‘move 10 steps’ from the motion group, and add it
-to the bottom of the instruction ‘turn 15 degrees’. Change the value
-‘10’ into ‘50’.
+Drag the instruction ``move 10 steps`` from the motion group, and add it
+to the bottom of the instruction ``turn 15 degrees``. Change the value
+``10`` into ``50``.
 
 |image2|
 
@@ -97,14 +96,14 @@ You have just created a **block** of instructions, that is, your first
 -  Double-Click on the block and see the sprite moving.
 -  Note that inside a block, instructions are exectuted *sequentially*,
    one after the other. **Can you prove it**?
--  Experiment with changing the **argument** of the instruction ‘move’
-   (Tip: to clear the drawing area, move the instruction ‘pen/clear’ to
+-  Experiment with changing the **argument** of the instruction ``move``
+   (Tip: to clear the drawing area, move the instruction ``pen/clear`` to
    the script window and execute it)
 
 Program 003
 ~~~~~~~~~~~
 
-Click on the ‘pen’ group, and add ‘pen down’ at the top of the block.
+Click on the ``pen`` group, and add ``pen down`` at the top of the block.
 
 |image3|
 
@@ -122,13 +121,13 @@ Concepts learned so far
 =======================
 
 -  Instruction
--  Argument of an instruction (change ‘10’ in ‘move 10 steps’)
+-  Argument of an instruction (change ``10`` in ``move 10 steps``)
 -  Block of instructions and sequential execution
 
 Loops
 =====
 
-repeat (‘for’ loop)
+repeat (``for`` loop)
 ===================
 
 Computers are good at doing tasks repeatedly (as they do not get tired).
@@ -137,12 +136,12 @@ Click on the “Control” group, and try to construct the following script:
 
 |image5|
 
--  Clicking on the ‘green’ flag will execute the block of instructions
--  The ‘Repeat’ instruction executes the inner block of instruction a
+-  Clicking on the ``green`` flag will execute the block of instructions
+-  The ``Repeat`` instruction executes the inner block of instruction a
    number of times specified as an argument. This is called a **loop**
 -  Adjust the parameter of the Repeat instruction so that the sprite
    draws a full circle when you click once on the green flag.
--  Replace the repeat instruction by ‘forever’.
+-  Replace the repeat instruction by ``forever``.
 
 Repeat until
 ~~~~~~~~~~~~
@@ -151,7 +150,7 @@ Modify the script as follows:
 
 |image6|
 
-Tip: the condition ‘key space pressed?’ is in the ‘Sensing’ group.
+Tip: the condition ``key space pressed?`` is in the ``Sensing`` group.
 
 This illustrates a **repeat…until loop**: the inner block is executed
 until the **condition** is satisfied.
@@ -198,8 +197,8 @@ First series of exercices
 -  Add a second ball that follows the first.
 
 4. Create a script that asks for your name and then displays “Hello !”.
-   Tip: use the instructions ‘sensing/ask’, ‘looks/say’ and
-   ‘operator/join’ and the variable ‘sensing/answer’.
+   Tip: use the instructions ``sensing/ask``, ``looks/say`` and
+   ``operator/join`` and the variable ``sensing/answer``.
 
 . . .
 
@@ -210,7 +209,7 @@ First series of exercices
 Variables
 =========
 
-Using the group ‘variable’, we are going to create a **variable** ‘a’
+Using the group ``variable``, we are going to create a **variable** ``a``
 and make it display continuously the x-coordinate of the ball.
 
 |image10|
@@ -232,7 +231,7 @@ coordinates where to sprite is instructed to moved to.
 Second series of exercices
 ==========================
 
-1. ‘Multiply by adding’. Write a program that reads in two integer
+1. ``Multiply by adding``. Write a program that reads in two integer
    numbers and displays their sum.
 
 . . .
@@ -243,7 +242,7 @@ Second series of exercices
 
 2. “Guess a number”. Make Scratch pick up a random number in the
    interval [1,100], and loop asking you for a guess and reply either
-   ‘too low’, ‘too high’, or ‘you win!’ depending on your answer.
+   ``too low``, ``too high``, or ``you win!`` depending on your answer.
 
 . . .
 
