@@ -46,16 +46,16 @@ def draw_square_on_screen_at_cell_index(screen, cell_index,
             (cell_side_length + space_between_cells) * i_col
     y_top = space_between_cells + \
             (cell_side_length + space_between_cells) * i_row
-    draw_square(screen, x_left, y_top, cell_side_length, color)
+    draw_square_on_screen_at_coordinates(screen, x_left, y_top, cell_side_length, color)
 
-def draw_square(screen, x_left, y_top, side_length, color):
+def draw_square_on_screen_at_coordinates(screen, x_left, y_top, side_length, color):
     pygame.draw.rect(screen, color,
         (x_left, y_top, side_length, side_length))
 
 def display_screen_in_window():
     pygame.display.flip()
 
-def save_screen_to_image_path(image_path):
+def save_screen_to_image_path(screen, image_path):
     pygame.image.save(screen, image_path)
 
 def wait_until_user_closes_window():
@@ -91,7 +91,7 @@ draw_grid_cells_on_screen(screen, n_rows, n_columns,
     cell_side_length, space_between_cells, color_cell)
 
 display_screen_in_window()
-save_screen_to_image_path(image_path)
+save_screen_to_image_path(screen, image_path)
 
 wait_until_user_closes_window()
 
