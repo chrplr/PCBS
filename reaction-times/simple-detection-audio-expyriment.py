@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-05-12 13:01:11 cp983411>
+# Time-stamp: <2021-03-04 16:44:55 christophe@pallier.org>
 
 """A series of trials where a cross is presented at the center of the screen and the participant must press a key as fast as possible. The statistics of reactions times are displayed at the end of the experiment.
 
@@ -13,7 +13,7 @@ exp = expyriment.design.Experiment(name="Visual Detection")
 # expyriment.control.set_develop_mode()
 expyriment.control.initialize(exp)
 
-NTRIALS = 10
+NTRIALS = 50
 MAXDURATION = 2000
 target = Audio('click.wav')
 blankscreen = BlankScreen()

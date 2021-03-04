@@ -1,15 +1,16 @@
-=====================
+*********************
 Starting from Scratch
-=====================
+*********************
 
 
-
-Programming = turning an algorithm into code
---------------------------------------------
-
-**Problem => Algorithm => Coding**
+What is programming?
+====================
 
 
+Programming = solving a problem with code
+-----------------------------------------
+
+**Problem => Algorithm => Code**
 
 Examples of Problems::
 
@@ -19,49 +20,50 @@ Examples of Problems::
    - Play a game like chess
    - Recover 3D information from stereoscopic images
 
-Strictly speaking, "programming" or "coding" means to explain to a computer how to carry
-out an algorithm (the second arrow), not to find an algorithm for a
-problem (first arrow).
+It is important to realize the different nature of the two tasks:
 
-|image0|
+  1. finding an algorithm to solve a problem
+  2. translating an algorithm into a code (*coding*)
 
-
-Because computers are stupid (that is, they lack a *theory of mind* and
-cannot guess your desires and intentions), you must provide very
-detailed and exhaustive instructions.
-
-Learning to program takes time because it requires to master not only
-the semantic but also the syntax (=grammar) of the language.
 
 . . .
 
-Like learning to play an instrument, programming is a skill that you can
-only acquire by trying (and making *lots of* mistakes and correcting
-them!!!).
+Things to be aware of
+---------------------
 
-Yes you can! Let’s go!
+  - Because computers are stupid, that is, lack a *theory of mind* and
+cannot guess your desires and intentions, you must provide very
+detailed and exhaustive instructions.
+
+  - Learning to code takes time because it requires to master not only
+the semantic but also the syntax (=grammar) of the language.
+
+  - Just as learning to play an instrument, or speak a second language,
+programming is a skill that can only be acquire with lots of practice.
+
+. . .
 
 Starting with Scratch
 ----------------------
 
-We will not use Python for this first lecture!
+To begin our journey into programming, we will use Scratch_, a system developed the MIT media lab to teach how to program to kids.
 
-**Scratch** (http://scratch.mit.edu) was designed by the MIT media lab
-to teach kids how to program.
+.. _Scratch: http://scratch.mit.edu
 
-Its main interest: programs are created using a graphical interface,
-preventing *syntactic errors* (thus, you can learn the language without
-learning the grammar!)
+A great advantage of Scratch_ is that programs are created using a graphical interface,
+preventing *syntactic errors*. Thus, you can learn the language without having to 
+learn its grammar!
 
 One can either work online at
-https://scratch.mit.edu/projects/editor/?tip_bar=home or offline by
+https://scratch.mit.edu/projects/editor/?tip_bar=home or offline, by
 downloading Scratch at
 
 -  https://scratch.mit.edu/scratch_1.4/ (version 1)
 -  https://scratch.mit.edu/scratch2download/ (version 2)
 
-You may want to run the tutorial “Getting Started with Scratch” on the
-website.
+It is a good idea to run the tutorial “Getting Started with Scratch” on the
+`website <https://scratch.mit.edu/projects/editor/?tip_bar=home>`__
+
 
 First steps
 ===========
@@ -69,12 +71,12 @@ First steps
 Program 001
 ~~~~~~~~~~~
 
-In the ‘motion’ group, take the instruction ‘turn 15 degrees’ and drag
+In the ‘motion’ group, take the instruction ``turn 15 degrees`` and drag
 it onto the ‘Scripts’ panel.
 
 |image1|
 
-Double-Click repeatedly on the block ‘turn 15 degrees’, you should see
+Double-Click repeatedly on the block ``turn 15 degrees``, you should see
 the cat (‘sprite 1’) rotate.
 
 In Scratch, when one double-clicks an instruction in the ‘Scripts’

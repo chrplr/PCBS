@@ -7,37 +7,74 @@ Experiments
 Simple reaction times
 ---------------------
 
-1. Write a script that presents a series of trials in which a dot or a
-   cross is presented at the center of the screen and the participant
-   must click on the mouse as quickly as possible. The reaction times
-   must be recorded in a file for further analyses.
+Pygame version
+~~~~~~~~~~~~~~
 
-2. Here is a :download:`solution using pygame <../reaction-times/simple-detection-visual-pygame.py>`. Run it and check `reaction_times.csv`.
+Download :download:`simple-detection-visual-pygame.py <reaction-times/simple-detection-visual-pygame.py>`. Run it with::
 
-3. Here is a :download:`solution using expyriment <../reaction-times/simple-detection-visual-expyriment.py>`.
+     python reaction-times/simple-detection-visual-pygame.py
 
-Run the previous script. Check the results file in the folder ``data``.
-Launch ``ipython`` in the ``data`` folder and execute, line by line::
+The task is simply to press a key as quickly as possible when a cross appears at the center of the screen. The results are save in ``reaction_times.csv``. Open ``R`` and type::
 
-   import pandas as pd
-   d = pd.read_csv('simple-detection.xpd',comment='#')
-   print(d.RT.mean())
-   print(d.RT.std())
-   print(d.RT[1:].mean())
+   data = read.csv('reaction_times.csv')
+   with(data, plot(RT))
+   with(data, plot(RT ~ Wait))
+
+Here are my results:
+
+   .. figure:: simple_rts.png
+
+      Simple Reaction Times as a function of trial
+
+   .. figure:: waittime_rts.png
+
+      Relationship between wait time and reaction time
+
+
+Browse the code of :download:`simple-detection-visual-pygame.py <reaction-times/simple-detection-visual-pygame.py>`
+
+Expyriment version
+~~~~~~~~~~~~~~~~~~
+
+Download :download:`solution using expyriment <../reaction-times/simple-detection-visual-expyriment.py>` and run it with::
+
+    python simple-detection-visual-expyriment.py
+
+Type::
+
+   cd data
+   ls
+
+There should be a file with a name starting with  ``simple-detection...`` and the extension ``.xpd``. This is a text file containing the result. Where are going to quickly examine them using the Pandas_ library.
+
+.. _Pandas: https://pandas.pydata.org/
+
+On the command line, with the ``data`` folder as working directory, launch ``ipython`` and execute::
+
+   %matplotlib
    import matplotlib.pyplot as plt
+   import pandas as pd
+
+   # you may have to use a different filename than 'simple-detection.xpd'
+   d = pd.read_csv('simple-detection.xpd', comment='#')
+
+   d.head()
+   d.RT.mean()
+   d.RT.std()
+   d.RT[5:].mean()
+
    plt.stem(d.RT)
-   plt.show()
    plt.close()
    plt.hist(d.RT)
-   plt.show()
 
 
-4. Read https://docs.expyriment.org/Tutorial.html to understand the basic principles of expyriment. See :download:`/expyriment/expyriment_minimal_template.py <../expyriment/expyriment_minimal_template.py>`
+Read https://docs.expyriment.org/Tutorial.html to understand the basic principles of the ``expyriment`` module.
 
-5. Modify :download:`reaction-times/simple-detection-visual-expyriment.py <../reaction-times/simple-detection-visual-expyriment.py>` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have created a simple detection audio experiment.
+Check out :download:`/expyriment/expyriment_minimal_template.py <../expyriment/expyriment_minimal_template.py>`
 
-6. Modify the script to have 3 blocks of trials: one in which the target
-   is visual, one in which it is audio, and one in which it is randomly
+Modify :download:`reaction-times/simple-detection-visual-expyriment.py <../reaction-times/simple-detection-visual-expyriment.py>` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have created a simple audio detection experiment.
+
+Modify the script to have 3 blocks of trials: one in which the target is visual, one in which it is audio, and one in which it is randomly
    visual or auditory. Are we slowed down in the latter condition?
 
 
@@ -45,45 +82,41 @@ Launch ``ipython`` in the ``data`` folder and execute, line by line::
 Sound-picture matching
 ----------------------
 
-:download:`../expyriment/sentence_picture_matching/sentence-picture-matching.py <../expyriment/sentence_picture_matching/sentence-picture-matching.py>`
- presents a sound, followed by one picture and waits for the participant to press a button.
+The :download:`../expyriment/sentence_picture_matching/sentence-picture-matching.py <../expyriment/sentence_picture_matching/sentence-picture-matching.py>` scripts presents a sound, followed by a picture and waits for the participant to press a button.
 
 
-Exercice: Modify the previous script to present two pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from
-:download:`expyriment/touchscreen_test/touchscreen-test.py  <../expyriment/touchscreen_test/touchscreen-test.py>`
-
+Exercise: Modify the previous script to present *two* pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from :download:`expyriment/touchscreen_test/touchscreen-test.py  <../expyriment/touchscreen_test/touchscreen-test.py>`
 
 
 Posner’s attentional cueing task
 --------------------------------
 
-Program the  `Posner’s attentional cueing task <https://en.wikipedia.org/wiki/Posner_cueing_task>`__
 
-See solution
-in :download:`../Posner-attention/posner_task.py <../Posner-attention/posner_task.py>`
+Execise (\*\*\*): Read about `Posner’s attentional cueing task <https://en.wikipedia.org/wiki/Posner_cueing_task>`__ and program the experiùent. 
+
+See a solution in :download:`../Posner-attention/posner_task.py <../Posner-attention/posner_task.py>`
 
 
 Stroop Effect
 -------------
 
-The `Stroop Effect <https://en.wikipedia.org/wiki/Stroop_effect>`__
-demonstrates the automaticity of reading. Write a python script to
-create 4x8 cards for the task, avoiding repetitions of colors.
+In the previous chapter, we created Stroop cards with Pygame. 
+
 
 .. figure:: images/stroop.png
    :alt: Stroop card
 
    Stroop card
 
-You can read a tutorial on `how to display text with
-pygame <https://nerdparadise.com/programming/pygame/part5>`__
 
--  After trying to program it yourself, you can compare with :download:`my
-   solution <../Stroop-effect/create_stroop_cards.py>`
+  (see  :download:`create_stroop_cards.py <../stroop/create_stroop_cards.py>`)
 
--  Run :download:`stroop_task.py <../Stroop-effect/stroop_task.py>` and check the
-   naming times in ``data``. Compute the average reading times as a
-   function of the language (you can use R or Python).
+Download :download:`stroop.zip <../stroop.zip>`. Extract the files and run::
+
+   python stroop_task.py
+
+The naming times are in the subfolder ``data``. Compute the average reading times as a
+   function of the language (using ``R`` or ``python``).
 
 
 Lexical Decision Task
@@ -120,5 +153,5 @@ at the expected times is available at https://www.github.com/chrplr/audiovis
 More examples using expyriment.org
 ----------------------------------
 
--  Check out https://github.com/expyriment/expyriment-stash
+- Check out https://github.com/expyriment/expyriment-stash
 - Fork it and contribute by adding new scripts!

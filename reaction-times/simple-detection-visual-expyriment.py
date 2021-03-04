@@ -1,7 +1,10 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-05-12 13:01:11 cp983411>
+# Time-stamp: <2021-03-04 16:54:58 christophe@pallier.org>
 
-"""A series of trials where a cross is presented at the center of the screen and the participant must press a key as fast as possible. The statistics of reactions times are displayed at the end of the experiment.
+""" This is a simple reaction time experiment.
+
+At each trial, a cross is presented at the center of the screen and the participant must press a key as fast as possible.
+
 """
 
 import random
@@ -13,8 +16,9 @@ exp = expyriment.design.Experiment(name="Visual Detection")
 #expyriment.control.set_develop_mode()
 expyriment.control.initialize(exp)
 
-NTRIALS = 10
-MAXDURATION = 2000
+N_TRIALS = 50
+MAX_RESPONSE_DELAY = 2000
+
 target = FixCross(size=(25, 25), line_width=4)
 blankscreen = BlankScreen()
 
@@ -23,20 +27,18 @@ expyriment.control.start(skip_ready_screen = True)
 
 expyriment.stimuli.TextScreen(
     "Your task is to detect a cross appearing at the center of screen",
-    "Press a key as quickly as possible when you see the cross. There will be %d trials " % NTRIALS).present()
+    "Press a key as quickly as possible when you see the cross. There will be %d trials " % N_TRIALS).present()
 exp.keyboard.wait()
 blankscreen.present()
 
 clock = expyriment.misc.Clock()
-reactiontimes = []
-for i in range(NTRIALS):
-    waitingtime = 2000 + int(1000 * random.expovariate(1))
-    exp.clock.wait(waitingtime)
-    time = clock.time
-    target.present()
-    key, rt = exp.keyboard.wait(duration=MAXDURATION)
-    exp.data.add([time, i, waitingtime, key, rt])
-    reactiontimes.append(rt)
+
+for i_trial in range(N_TRIALS):
     blankscreen.present()
+    waiting_time = 1000 + random.randint(0, 1000)
+    exp.clock.wait(waiting_time)
+    target.present()
+    key, rt = exp.keyboard.wait(duration=MAX_RESPONSE_DELAY)
+    exp.data.add([i_trial, waiting_time, key, rt])
 
 expyriment.control.end()

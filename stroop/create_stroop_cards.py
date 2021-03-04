@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2007-06-28 10:23:32 pallier>
+# Time-stamp: <2021-03-04 18:02:14 christophe@pallier.org>
 # Author: Christophe Pallier (see http://www.pallier.org)
 
 import random
@@ -19,7 +19,7 @@ def create_stroop_card(items):
     colors = list(items.values())
 
     ncol = 4
-    nrow = 8
+    nrow = 4
     W, H = 800, 600
     font = 'Inconsolata.ttf'
     font_size = 44

@@ -1,9 +1,8 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-10-04 10:02:46 cp983411>
+# Time-stamp: <2021-03-04 18:00:41 christophe@pallier.org>
 
 import glob
 import expyriment
-
 
 INSTRUCTIONS1 = """
 Vous allez voir des mots écrits avec des couleurs de caractères différentes.
@@ -34,18 +33,16 @@ disant la mauvaise couleur ou en lisant le mot. Quand cela arrive,
 re-dite la bonne couleur avant de passez au mot suivant.
 
 Au début de chaque essai apparait une croix. 
-Il faut cliquer sur un bouton de la souris pour démarrer l'essai.
-Dès que vous avez terminé de dire les couleurs de tous les mots
-affichés à l'écran, cliquez sur la souris pour arrêter le chronomêtre
+Il faut appuyer sur la barre espace pour démarrer l'essai.
+Dès que vous avez terminé de nommer les couleurs de tous les mots
+affichés à l'écran, appuyez sur la barre espace pour arrêter le chronomêtre
 et effacer l'écran.
 
-La durée précise de l'expérience dépends de la vitesse à laquelle vous nommez
+La durée précise de l'expérience dépend de la vitesse à laquelle vous nommez
 les couleurs, mais typiquement, elle dure une dizaine de minutes.
 
-Appuyez sur la barre espace pour continuer
+Appuyez sur la barre espace pour continuer.
 """
-
-###
 
 exp = expyriment.design.Experiment(name="Stroop Experiment")
 expyriment.control.initialize(exp)
@@ -81,10 +78,14 @@ fs = expyriment.stimuli.FixCross(size=(25, 25), line_width=3, colour=(127, 127, 
 # present instructions
 
 instructions1 = expyriment.stimuli.TextScreen("Instructions",
-                                              text=INSTRUCTIONS1)
+                                              heading_size=60,
+                                              text=INSTRUCTIONS1,
+                                              text_size=40)
 
 instructions2 = expyriment.stimuli.TextScreen("Instructions",
-                                              text=INSTRUCTIONS2)
+                                              heading_size=60,
+                                              text=INSTRUCTIONS2,
+                                              text_size=40)
 
 instructions1.preload()
 instructions1.present()
@@ -94,14 +95,14 @@ kb.wait_char(' ')
 instructions2.present()
 kb.wait_char(' ')
 
-### start main part of the experiment
-
 expyriment.control.start()
 
 for trial in block.trials:
     bs.present()  # clear screen
     exp.clock.wait(1000)
-    trial.stimuli[0].present()  # display the card
+    fs.present(update=True)
+    kb.wait_char(' ')  # wait for a press on the spacebar
+    trial.stimuli[0].present(update=True, clear=True)  # display the current card
     key, rt = kb.wait_char(' ')  # wait for a press on the spacebar
     exp.data.add([trial.get_factor('lang'), rt])
 

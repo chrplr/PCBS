@@ -312,6 +312,24 @@ http://www.psy.ritsumei.ac.jp/~akitaoka/saishin4e.html
 Note: there are no exercise in this section. But, if you want to code some of the stimuli, feel free to do it, and please, share your code with us!
 
 
+Stroop Effect
+-------------
+
+In the Stroop Task, participants are presented with a cards on which words are written in various colors. The task is to name as quickly as possible the colors of the printed words. 
+
+.. figure:: images/stroop.png
+   :alt: Stroop card
+
+   Stroop card
+
+It is difficult to name the color of a color word if they do not match. This phenomenon, known as the  `Stroop Effect <https://en.wikipedia.org/wiki/Stroop_effect>`__, demonstrates the automaticity of reading. Write a python script to create 4x8 cards for the task, as image files, avoiding repetitions of colors in neighboring cells.
+
+You will need to read about how to generate images containing text, for example, in the tutorial `How to display text with
+pygame <https://nerdparadise.com/programming/pygame/part5>`__
+
+Then, check  a solution at :download:`create_stroop_cards.py <../stroop/create_stroop_cards.py>`
+
+
 Dynamic visual stimuli
 ======================
 
