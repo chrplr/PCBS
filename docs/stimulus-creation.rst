@@ -168,7 +168,7 @@ starting point, write a program to display the grid.
    -  in your python script, use nested ``for`` loops over rows and columns
       to display each square one by one.
 
-   Check out :download:`grid.py <../visual-illusions/grid.py>`
+   Check out :download:`grid.py <../visual-illusions/grid.py>`.
 
 
 Optional exercises:
