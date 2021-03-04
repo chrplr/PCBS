@@ -17,7 +17,7 @@ def grid_side_length(n_segments):
     return space_between_cells + \
                 (cell_side_length + space_between_cells) * n_segments
 
-def grid_size():
+def grid_size(n_rows, n_columns):
     grid_width = grid_side_length(n_columns)
     grid_height = grid_side_length(n_rows)
     return grid_width, grid_height
@@ -84,7 +84,7 @@ image_path = f"hermann_grid_cedric_space-{space_between_cells}.png"
 
 pygame.init()
 
-size = grid_size()
+size = grid_size(n_rows, n_columns)
 screen = create_screen_with_size(size)
 draw_grid_background_on_screen(screen, color_space)
 draw_grid_cells_on_screen(screen, n_rows, n_columns,
