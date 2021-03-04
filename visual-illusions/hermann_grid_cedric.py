@@ -13,7 +13,7 @@ import pygame
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
-def grid_side_length(n_segments):
+def grid_side_length(n_segments, cell_side_length, space_between_cells):
     return space_between_cells + \
                 (cell_side_length + space_between_cells) * n_segments
 
