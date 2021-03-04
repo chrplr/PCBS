@@ -1,47 +1,78 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-03 08:08:31 christophe@pallier.org>
+# Time-stamp: <2021-03-04 13:36:14 christophe@pallier.org>
 
-""" simple sounds generation """
+""" sound playback and generation. """
 
 import numpy as np
-import scipy.io.wavfile  # for scipy.io.wavfile.read
-import simpleaudio  # to play sound
+from scipy.io import wavfile
+import simpleaudio as sa # to play sound with play_buffer
 
 
-def play_mono(nparray, sample_rate=22050, normalize=True):
-    audio = nparray[:]
+DEFAULT_SAMPLE_RATE = 22050
+
+
+def time_to_sample(t, sr=DEFAULT_SAMPLE_RATE):
+    return int(t * sr)
+
+
+def sample_to_time(s, sr=DEFAULT_SAMPLE_RATE):
+    return float(s) / sr
+
+
+def load_sound_as_array(wavfile_name):
+    """ Read a wav file and returns (sample_rate, audio_data). """
+    return wavfile.read(wavfile_name)
+
+
+def write_array_as_sound(wavfile_name, audio_data, sr=DEFAULT_SAMPLE_RATE):
+    """ save audiodata in a wav file """
+    wavfile.write(wavfile_name, sr, audio_data)
+
+
+def play_mono(audio_data, sr=DEFAULT_SAMPLE_RATE, normalize=True):
+    audio = audio_data[:]
     if normalize:  # normalize to 16-bit range
-        audio = np.multiply(audio, 32767 / np.max(np.abs(audio)))
+        factor = 32767 / np.max(np.abs(audio))
+        audio = np.multiply(audio, factor)
 
     # convert to 16-bit data
     audio = audio.astype(np.int16)
-    play_obj = simpleaudio.play_buffer(audio, 1, 2, sample_rate)
+
+    play_obj = sa.play_buffer(audio, 1, 2, sr)
     # wait for playback to finish before exiting
     play_obj.wait_done()
 
 
-def play_stereo(nparray, sample_rate=22050, normalize=True):
-    audio = nparray[:]
+def play_stereo(audio_data, sr=DEFAULT_SAMPLE_RATE, normalize=True):
+    audio = audio_data[:]
     if normalize:  # normalize to 16-bit range
-        audio = np.multiply(audio, 32767 / np.max(np.abs(audio)))
+        factor = 32767 / np.max(np.abs(audio))
+        audio = np.multiply(audio, factor)
 
     # convert to 16-bit data
-    audio = nparray.astype(np.int16)
-    play_obj = simpleaudio.play_buffer(audio, 2, 2, sample_rate)
+    audio = audio.astype(np.int16)
+
+    play_obj = sa.play_buffer(audio, 2, 2, sr)
     # wait for playback to finish before exiting
     play_obj.wait_done()
 
 
-def tone(freq, phase, duration, amplitude=0.1, sample_rate=22050):
-    t = np.linspace(0, duration, num = int(duration * sample_rate))
+def silence(duration, sr=DEFAULT_SAMPLE_RATE):
+    return np.zeros(time_to_sample(duration, sr), dtype=np.int16)
+
+
+def tone(freq, phase, duration, amplitude=1.0, sr=DEFAULT_SAMPLE_RATE):
+    t = np.linspace(0, float(duration), num = time_to_sample(duration, sr))
     return amplitude * np.sin(2 * np.pi * freq * t - phase)
 
 
-def whitenoise(duration, amplitude=0.1, sample_rate=22050):
-    return amplitude * np.random.randn(duration * sample_rate)
+def whitenoise(duration, amplitude=.1, sr=DEFAULT_SAMPLE_RATE):
+    return amplitude * np.random.randn(duration * sr)
+
 
 def pinknoise(nrows, ncols=16):
-    """Generates pink noise using the Voss-McCartney algorithm (orrowed from https://www.dsprelated.com/showarticle/908.php).
+    """Generates pink noise using the Voss-McCartney algorithm
+      (borrowed from https://www.dsprelated.com/showarticle/908.php).
 
     nrows: number of values to generate
     rcols: number of random sources to add
@@ -67,39 +98,29 @@ def pinknoise(nrows, ncols=16):
 
     return total.values
 
-
-def load_sound_as_array(filename):
-    [sample_rate, audio_data] = scipy.io.wavfile.read(filename)
-    return [sample_rate, audio_data]
-
-def write_array_as_sound(nparray, sample_rate, filename):
-     scipy.io.wavfile.write(filename, sample_rate, nparray)
-
-def mix_sound(target, mix, position, sample_rate=22050, replace=True):
-    samples = range(int(sample_rate * position), int(sample_rate * position) + len(mix))
+def mix_sound(target, mix, position, sr=DEFAULT_SAMPLE_RATE, replace=True):
+    """ Adds 'mix' into 'target' at 'position'.  """
+    samples = range(int(sr * position), int(sr * position) + len(mix))
     if (replace):
         target[samples] = mix
     else:
         target[samples] = target[samples] + mix
 
 
-def multi_mix(target, mix, positions, sample_rate=22050, replace=True):
+def multi_mix(target, mix, positions, sr=DEFAULT_SAMPLE_RATE, replace=True):
+    """ Adds 'mix' into 'target' at 'positions' (a list of timepoints).  """
     for pos in positions:
-        mix_sound(target, mix, pos, sample_rate, replace)
+        mix_sound(target, mix, pos, sr, replace)
 
 
 
 if __name__ == '__main__':
-    sample_rate = 22050
-
-    # preparation of stimuli
     pitch = 440  # Hz
-    duration = 2.0  # sec
-    tone1 = tone(pitch, 0 , duration, amplitude = .5, sample_rate=sample_rate)
-    tone2 = tone(pitch + 20, 0 , duration, amplitude = .25, sample_rate=sample_rate)
-    tone3 = tone(pitch - 100 , 0 , duration, amplitude = .1, sample_rate=sample_rate)
+    duration = 1.0  # sec
+    tone1 = tone(pitch, 0 , duration, amplitude = .5)
+    tone2 = tone(pitch + 20, 0 , duration, amplitude = .25)
+    tone3 = tone(pitch - 100 , 0 , duration, amplitude = .1)
+    sil = silence(duration)
 
-    play_mono(tone1)
-    play_mono(tone2)
-    play_mono(tone3)
-    play_mono(tone1+tone2)
+    play_mono(np.concatenate([tone1, sil, tone2, sil, tone3]))
+    play_mono(tone1 + tone2)

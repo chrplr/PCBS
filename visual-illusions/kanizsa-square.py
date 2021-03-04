@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-03 10:51:25 christophe@pallier.org>
+# Time-stamp: <2021-03-04 11:51:30 christophe@pallier.org>
 
 """ Display Kanisza illusory square
 
@@ -51,11 +51,12 @@ pygame.display.flip()
 # save the image into a file
 pygame.image.save(screen, "kanizsa-square.png")
 
-# wait till the window is closed
-done = False
-while not done:
+# Wait until the window is closed
+quit_button_pressed = False
+while not quit_button_pressed:
+    pygame.time.wait(10)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            done = True
+            quit_button_pressed = True
 
 pygame.quit()

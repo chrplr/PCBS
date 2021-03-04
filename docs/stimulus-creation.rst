@@ -8,22 +8,31 @@ Creating stimuli
 Static visual stimuli
 =====================
 
+To generate visual stimuli, we are going to rely on the Pygame_ module. You can check if it is installed on your system by typing ``python`` on a command line and, at the ``>>>`` prompt, ``import pygame``. If all is well, you should get the following message::
 
-We are going to use module Pygame_ to generate visual displays
+    >>> import pygame
+    pygame 2.0.1 (SDL 2.0.14, Python 3.8.5)
+    Hello from the pygame community. https://www.pygame.org/contribute.html
 
+If, instead, you obtain a message ending in::
 
-Here is a Python script (:download:`square.py <../visual-illusions/square.py>`) that opens a window and displays a square. Run it.  
+    ModuleNotFoundError: No module named 'pygame'
+
+you should check the instructions in :doc:`software-installation`.
+
+Here is a Python script that opens a window and displays a square:
 
 .. code:: python
 
     """ Display a square.
 
-          See https://sites.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/
+        See https://sites.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/
     """
 
     import pygame
 
-    # Colors are triplets containint RGB values (see <https://www.rapidtables.com/web/color/RGB_Color.html>
+    # Colors are triplets containint RGB values
+    # (see <https://www.rapidtables.com/web/color/RGB_Color.html>
     BLACK = (0, 0, 0)
     WHITE = (255, 255, 255)
     GRAY = (127, 127, 127)
@@ -31,48 +40,57 @@ Here is a Python script (:download:`square.py <../visual-illusions/square.py>`) 
     GREEN = (0, 255, 0)
     BLUE = (0, 0, 255)
 
-    W, H = 500, 500  # Size of the graphic window size
+    # Parameters of the Graphics Window 
+    W, H = 500, 500  # Size of the graphic window 
     # Note that (0,0) is at the *upper* left hand corner of the screen.
+    center_x = W // 2
+    center_y = H // 2
 
-    #  create the window
     pygame.init()
+
+    # Create the Graphic Window (designated by a variable `screen`) 
     screen = pygame.display.set_mode((W, H), pygame.DOUBLEBUF)
+    pygame.display.set_caption('square')
 
-    screen.fill(WHITE)  #  fill it with white
-
-    # Draw a rectangle
-    width, height = 200, 200
-    left, top = (W - width) // 2, (H-height) // 2
-    pygame.draw.rect(screen, BLUE, (left, top, width, height))
-
-    pygame.display.flip()  # display the backbuffer
-
-    # save the image into a file
-    pygame.image.save(screen, "square-blue.png")
+    screen.fill(WHITE)  # fill the window with white
     
-    # wait until the window is closed
-    done = False
-    while not done:
+    # Draw a rectangle at the center of the window (in the backbuffer)
+    width, height = 200, 200  # dimensions of the rectangle in pixels
+    left_x = center_x - width // 2  # x coordinates of topleft corner
+    top_y = center_y - height // 2  # y coordinate of topleft corner
+    pygame.draw.rect(screen, BLUE, (left_x, top_y, width, height))
+
+    pygame.display.flip()  # display the backbuffer on the screen
+
+    # Save the image into a file
+    pygame.image.save(screen, "square-blue.png")
+
+    # Wait until the window is closed
+    quit_button_pressed = False
+    while not quit_button_pressed:
           pygame.time.wait(10)
           for event in pygame.event.get():
               if event.type == pygame.QUIT:
-                   done = True
+                   quit_button_pressed = True
 
-     pygame.quit()
+    pygame.quit()
 
 
+Download (:download:`square.py <../visual-illusions/square.py>`) and run it by typing::
 
-Exercise (*): modify the script to
+    python square.py
+
+Exercise (*): make a copy of the script and modify the copy to
    - change the color of the rectangle to RED
    - change the size of the rectangle to 100 x 300
 
-   You can consult the `Quick introduction on drawing with pygame <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__ for help.
 
-   Pygame's reference manual is available at https://www.pygame.org/docs/
+Remark: you can get some help from:
+   - `Pygame drawing basics <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__
+   - `Pygame's online documentation <https://www.pygame.org/docs/>`
 
 
-It is of course possible to draw other shapes. Check out for example the two scripts :download:`circle.py <../visual-illusions/circle.py>` and
-and :download:`triangle.py <../visual-illusions/triangle.py>`.
+It is of course possible to draw other shapes. Check out for example the two scripts :download:`circle.py <../visual-illusions/circle.py>` and :download:`triangle.py <../visual-illusions/triangle.py>`.
 
 Exercice (*): modify the script :download:`circle.py <../visual-illusions/circle.py>` to draw two circles, one red and on blue, side-by-side
 
@@ -83,9 +101,11 @@ Exercice (*): modify the script :download:`circle.py <../visual-illusions/circle
 
   (check out :download:`two_circles.py <../visual-illusions/two_circles.py>`)
 
+Note that the circles are filled with the color (actually, they are disks). Browse pygame's documentation to find out how to color the circumference of the circle and keep its inner part white.
 
-Toxler effect
--------------
+
+Troxler effect
+--------------
 
 Fixate your gaze at the center of the picture below for 30 seconds
 
@@ -105,7 +125,7 @@ For a solution, check out :download:`troxler.py <../visual-illusions/troxler.py>
 Kanizsa illusory contours
 -------------------------
 
-Created by Italian psychologist Gaetano Kanizsa in 1955, the Kanizsa Triangle is a classic example of illusory contours. In the image below, a white equilateral triangle can be clearly perceived even though there are no explicit lines or enclosed spaces to indicate such a triangle. (To find out more about this illusion, do a google search with the keywords `illusory contours`.)
+Created by Italian psychologist Gaetano Kanizsa in 1955, the *Kanizsa Triangle* is a classic example of illusory contours. In the image below, a white equilateral triangle can be clearly perceived even though there are no explicit lines or enclosed spaces to indicate such a triangle. (To find out more about this illusion, perform a Google search with the keywords `illusory contours`.)
 
 
    .. figure:: images/Kanizsa1.png
@@ -121,7 +141,7 @@ There exists many variants, e.g. the Kanizsa squares:
       Kanizsa square
 
 
-Exercice (**): Inspiring yourself from the code in :download:`square.py <../visual-illusions/square.py>` and   :download:`circle.py <../visual-illusions/circle.py>`, create a script which displays the (right) Kanisza square .
+Exercice (**): Inspiring yourself from the code in :download:`square.py <../visual-illusions/square.py>` and  :download:`circle.py <../visual-illusions/circle.py>`, create a script that displays the (right) Kanisza square .
 
   A possible solution is proposed in :download:`kanizsa-square.py <../visual-illusions/kanizsa-square.py>`
 
@@ -135,34 +155,32 @@ Herman grid
       Hermann Grid
 
 
-Read about the `Herman grid <https://en.wikipedia.org/wiki/Grid_illusion>`__
+Read about the `Herman grid illusion <https://en.wikipedia.org/wiki/Grid_illusion>`__
 
-
-Exercise (**) Using :download:`square.py <../visual-illusions/square.py>` as a starting point, write a
-   program to display the grid.
-
+Exercise (**) Using :download:`square.py <../visual-illusions/square.py>` as a
+starting point, write a program to display the grid.
 
    Hints:
 
    -  use paper and pencil to draw the figure
    -  find out the formulas to compute the left top of the square in the
       ith row and jth column
-   -  in your python script, use nested for loops over rows and columns
-      to display each square one by one
+   -  in your python script, use nested ``for`` loops over rows and columns
+      to display each square one by one.
 
    Check out :download:`grid.py <../visual-illusions/grid.py>`
-
 
 
 Optional exercises:
 
   - Play with the parameters 'size of the squares' and 'space between the
     squares' to see how they affect the illusion.
-  - Read https://stackabuse.com/command-line-arguments-in-python/ and use the
-    ``sys.argv[]`` list from the ``sys`` module (or use the ``argparse`` module)
-    to get from the command lines the number of columns, rows, the size of
-    square and the size of the margins. Play with those parameters to see if you
-    can make the illusion come and go. (see :download:`grid-args.py <../visual-illusions/grid-args.py>`
+  - Read https://stackabuse.com/command-line-arguments-in-python/ to learn how to read arguments on the command line use the ``sys.argv[]`` list from the ``sys`` module.  Create a version of the grid script that can get the number of columns, rows, the size of sides of squares, and the size of the space between squares. Play with those parameters to see if you    can make the illusion come and go. (see :download:`grid-args.py <../visual-illusions/grid-args.py>`)
+
+    Remark: there exists two powerful modules to help parse arguments on the command line: argparse_ or docopt_ 
+
+.. _argparse: https://docs.python.org/3/howto/argparse.html
+.. _docopt: http://docopt.org/
 
 
 Extinction illusion
@@ -219,6 +237,20 @@ Exercise (**): Using :download:`circle.py <../visual-illusions/circle.py>` as a 
 Check out :download:`ebbinghaus.py <../visual-illusions/ebbinghaus.py>`
 
 
+Fixation cross
+--------------
+
+Many visual experiments require participants to fixate a central fixation cross (in order to avoid eye movements).
+
+   .. figure:: images/fixation-cross.png
+      :alt: fixation cross
+
+      Fixation cross
+
+Exercise (*): Using the function ``pygame.draw.line()``, write a script that displays a cross at the center the screen. (Solution at :download:`fixation-cross.py <../visual-illusions/fixation_cross.py>`)
+
+
+
 Hering illusion
 ---------------
 
@@ -227,7 +259,7 @@ Hering illusion
 
    Hering illusion
 
-Exercise: Program the stimulus (hint: use the function `pygame.draw.line()`. Then, check a solution :download:`hering.py <../visual-illusions/hering.py>`
+Exercise (\*\*): Program the stimulus . Then, check a solution at :download:`hering.py <../visual-illusions/hering.py>`
 
 
 Random-dot stereograms
@@ -302,8 +334,6 @@ With pygame, programming an animation will follow the following temporal logic::
     ...
 
 
-
-
 We take advantage of the double buffering mode (set by the option ``DOUBLEBUF`` in the call to ``pygame.display.set_mode()``) to draw the next image in memory while the current one is displayed on the screen. It is only when we call ``pygame.display.flip()`` that the image in memory is displayed, replacing the current one on the screen.
 
 
@@ -326,11 +356,11 @@ Flash-lag illusion
 
 * Download  :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>` and run it. Do not look at the code yet. 
 
-* If you want to read about the `Flash-lag illusion <https://en.wikipedia.org/wiki/Flash_lag_illusion>`__.
+* Do you feel that the moving square's x position coincides with the flashing square or not? If you want to read about the `Flash-lag illusion <https://en.wikipedia.org/wiki/Flash_lag_illusion>`__.
 
 Exercise:
 
-1. Create a "movie" of a square moving horizontally, back and forth. The
+1. Create a movie of a square moving horizontally, back and forth. The
    principle is simple: you just need to create a loop where you
    display a square at coordinates `x, y` ,wait a few milliseconds, then clear
    the screen, and increment or decrement the `x` coordinate by a fixed amount.
@@ -360,11 +390,11 @@ The `Lilac Chaser`_ is a dynamic version of the Troxler fill-in illusion.
 
 .. _Lilac Chaser: https://en.wikipedia.org/wiki/Lilac_chaser
 
-Exercise: Program the Lilac Chaser stimulus, with 12 rose disks (you can use rose disk without any blurring).
+Exercise (\*\*): Program the Lilac Chaser stimulus, with 12 rose disks (you can use full disks without any blurring). Try different colors.
 
 For a possible solution, check out :download:`visual-illusions/lilac_chaser.py <../visual-illusions/lilac_chaser.py>`
 
-(Optional exercise for advanced students: add blurring to the disks to make a stimulus similar to that of the wikipedia page `Lilac Chaser`_)
+(Optional exercise for advanced students: add blurring to the disks to make a stimulus similar to that of the wikipedia page `Lilac Chaser`_. Then, for a solution, check out :download:`visual-illusions/lilac_chaser_blurred.py <../visual-illusions/lilac_chaser_blurred.py>`__)
 
 
 Creating and playing sounds
@@ -388,16 +418,24 @@ Exercise (\*\*) Using functions from the `sound_synth` module, write a script th
 Check a solution at :download:`cycle.py <../sound/cycle.py>`
 
 
+Shepard tone
+------------
+
+Watch `this video <https://www.youtube.com/watch?v=LVWTQcZbLgY
+>`__ about *Shepard tones*.
+
+Exercise (\*\*\*): Program a Shepard tone.
+
+
 Sound localisation from binaural dephasing
 ------------------------------------------
 
-Exercise (\*\*) Take the channel of a mono sound (e.g. :download:`https://www.signalogic.com/melp/EngSamples/Orig/male.wav` and create a stereo sound. Then dephase the two channels by various delays, and listen to the result.
+Exercise (\*\*) Take the channel of a mono sound and create a stereo sound. Then dephase the two channels by various delays, and listen to the results.
 
-Hints: load the sound file into a one dimensional numpy array, make
-a copy of the array and shift it, assemble the two arrays in a
-bidimensional array (matrix) and save it as a stereo file
+Hints: load the sound file into a one dimensional numpy array, make a copy of the array and shift it, assemble the two arrays in a bidimensional array (matrix) and save it as a stereo file
 
-If you know nothing about Numpy_, you may find useful tutorials about it on the web, e.g. at https://github.com/paris-saclay-cds/data-science-workshop-2019/blob/b370d46044719281932337ca4154e1b0b443ad97/Day_1_Scientific_Python/numpys/numpy_intro.ipynb
+If you know nothing about Numpy_, you may find useful tutorials on the web, e.g. at https://github.com/paris-saclay-cds/data-science-workshop-2019/blob/b370d46044719281932337ca4154e1b0b443ad97/Day_1_Scientific_Python/numpys/numpy_intro.ipynb
+
 
 Pulsation (Povel & Essen, 1985)
 -------------------------------

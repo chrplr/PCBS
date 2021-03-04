@@ -1,8 +1,11 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-03 10:57:55 christophe@pallier.org>
+# Time-stamp: <2021-03-04 12:14:30 christophe@pallier.org>
 """ Display a square.
 
-    See https://sites.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/
+   See:
+   - `Pygame drawing basics <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__
+   - `Pygame's online documentation <https://www.pygame.org/docs/>`
+
 """
 
 import pygame
@@ -17,7 +20,7 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
 #  create the window
-W, H = 500, 500  # Size of the graphic window 
+W, H = 500, 500  # Size of the graphic window
 # Note that (0,0) is at the *upper* left hand corner of the screen.
 center_x = W // 2
 center_y = H // 2
@@ -28,23 +31,24 @@ pygame.display.set_caption('square')
 
 screen.fill(WHITE)  # fill it with white
 
-# Draw a rectangle (in the backbuffer)
+# Draw a rectangle at the center of the screen (in the backbuffer)
 width, height = 200, 200  # dimensions of the rectangle in pixels
-left = center_x - width // 2  # x coordinates of topleft corner
-top = center_y - height // 2  # y coordinate of topleft corner
-pygame.draw.rect(screen, BLUE, (left, top, width, height))
+left_x = center_x - width // 2  # x coordinate of topleft corner
+top_y = center_y - height // 2  # y coordinate of topleft corner
+pygame.draw.rect(screen, BLUE, (left_x, top_y, width, height))
 
 pygame.display.flip()  # display the backbuffer on the screen
 
 # save the image into a file
 pygame.image.save(screen, "square-blue.png")
 
-# wait until the window is closed
-done = False
-while not done:
+
+# Wait until the window is closed
+quit_button_pressed = False
+while not quit_button_pressed:
     pygame.time.wait(10)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            done = True
+            quit_button_pressed = True
 
 pygame.quit()

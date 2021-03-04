@@ -12,8 +12,7 @@ Simple reaction times
    must click on the mouse as quickly as possible. The reaction times
    must be recorded in a file for further analyses.
 
-2. Here is a :download:`solution using pygame <../reaction-times/simple-detection-visual-pygame.py>`. Run it
-   and check `reaction_times.csv`.
+2. Here is a :download:`solution using pygame <../reaction-times/simple-detection-visual-pygame.py>`. Run it and check `reaction_times.csv`.
 
 3. Here is a :download:`solution using expyriment <../reaction-times/simple-detection-visual-expyriment.py>`.
 
@@ -50,7 +49,7 @@ Sound-picture matching
  presents a sound, followed by one picture and waits for the participant to press a button.
 
 
-Exercice: Modify the prvious script to present two pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from
+Exercice: Modify the previous script to present two pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from
 :download:`expyriment/touchscreen_test/touchscreen-test.py  <../expyriment/touchscreen_test/touchscreen-test.py>`
 
 
@@ -114,14 +113,12 @@ A general audio visual stimulus presentation script
 ---------------------------------------------------
 
 In some experiments, we know in advance the precise timing of all
-stimuli (the program flow does not depends on external events). I wrote
-a script that reads the timing of audiovisual stimuli and presents them
-at the expected times — Its code is available at https://www.github.com/chrplr/audiovis
+stimuli (the program flow does not depend on external events). A script that reads the timing of audiovisual stimuli in a csv file and presents them
+at the expected times is available at https://www.github.com/chrplr/audiovis
 
 
 More examples using expyriment.org
 ----------------------------------
 
--  See http://docs.expyriment.org/old/0.9.0/Examples.html
--  Fork https://github.com/expyriment/expyriment-stash and contribute by
-   adding new scripts!
+-  Check out https://github.com/expyriment/expyriment-stash
+- Fork it and contribute by adding new scripts!
