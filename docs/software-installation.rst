@@ -65,7 +65,7 @@ Linux
    execute the command ``sudo apt install git``
 
 MacOSX
-   Download and install `Xcode <https://developer.apple.com/xcode/>`__, which provides ``git``, either from the App store, or by using the command line ``xcode-select --install``.
+   Download and install `Xcode <https://developer.apple.com/xcode/>`__, either from the App store, or by using the command line ``xcode-select --install``. This will provide git.
 
 Windows
    Download the 64 bit version of `Git for Windows <https://git-scm.com/download/win>`__ and
@@ -100,7 +100,7 @@ Then, type the following command lines, making sure to replace ``your_first_and_
     git config --global core.editor nano
 
 
-You can exit the Terminal by typing `Ctrl-D`, or `exit`, or just closing its window.
+You can close the Terminal by typing the command `exit` or, faster, by pressing `Ctrl-D`, or by just closing its window.
 
 
 
@@ -109,13 +109,13 @@ The Pygame and Expyriment python modules
 
 We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli and the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments.
 
-First you need to install the modules [#f1]_:
+You first need to install the modules [#f1]_:
 
 Linux
     Open a Terminal (``Ctrl-Alt-T``) and type ``pip install expyriment[all]``
 
 Windows
-    Starts **Git bash**. This opens a terminal, where you can type ``pip install expyriment[all]``
+    Start **Git bash**. This opens a terminal, where you can type ``pip install expyriment[all]``
 
 MacOS
     1. Install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
@@ -127,7 +127,7 @@ MacOS
        This upgrade the version of pygame (1.9) installed along expyriment to pygame (2.0), which is required by recent versions of macOS. (As of 2021-02-23.)
 
 
-Whetever your operating systems, you now need to test your installation:
+Whatever your operating systems, you now need to test your installation:
 
 1. To test ``pygame``, run the following command in a Terminal::
 
@@ -256,7 +256,7 @@ move it if you wnat to keep a copy of your modifications) and reissue the
 
 
  
-.. [#f1] (advanced students only). To avoid potential clashes betwen modules, it is a good idea to create a conda environment before installing the modules: 
+.. [#f1] (advanced students only). To avoid potential clashes betwen modules, it may be a good idea to create a conda environment before installing the modules: 
 
           .. code::
 

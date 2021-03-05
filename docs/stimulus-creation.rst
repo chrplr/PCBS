@@ -157,7 +157,7 @@ Herman grid
 
 Read about the `Herman grid illusion <https://en.wikipedia.org/wiki/Grid_illusion>`__
 
-Exercise (**) Using :download:`square.py <../visual-illusions/square.py>` as a
+Exercise (\*\*) Using :download:`square.py <../visual-illusions/square.py>` as a
 starting point, write a program to display the grid.
 
    Hints:
