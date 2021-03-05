@@ -27,6 +27,7 @@ Git repository on github (contains solutions to exercices, ...)
    representing-numbers-images-text
    stimulus-creation
    running-experiments
+   triggers
    data-analyses
    simulations          
    tools-for-reproducible-science

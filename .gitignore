@@ -7,3 +7,5 @@ cellular-automata/*.png
 .Rproj.user
 __pycache__/
 **/_build/
+auto/
+.#*
