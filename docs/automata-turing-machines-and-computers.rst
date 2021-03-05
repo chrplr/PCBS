@@ -136,7 +136,7 @@ This is particularly clear in the case of the *Turing machine*, a mathematical m
 A Turing machine is a finite state machine augmented with a tape and a
 mechanism to read/write on it.
 
-Read `Roger Penrose’s chapter’s on Turing machines <../documents/Penrose_Turing-machines.pdf>`__ and
+Read `Roger Penrose’s chapter’s on Turing machines <../pdfs/Penrose_Turing-machines.pdf>`__ and
 https://en.wikipedia.org/wiki/Turing_machine. You may laos read the
 `Alan Turing’s seminal paper <https://londmathsoc.onlinelibrary.wiley.com/doi/pdf/10.1112/plms/s2-42.1.230>`__.
 
@@ -159,8 +159,8 @@ Another computing model which is closer to actual computers, is the *register ma
 Register machines
 =================
 
-Read `The seven secrets of computer power revealed <../documents/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf>`__ (Chapter 24 from Daniel Dennett’s *Intuition Pumps and other tools for
-thinking*)
+Read `The seven secrets of computer power revealed <../pdfs/Dan_Dennett-The_seven_secrets_of_computers_revealed.pdf>`__ (Chapter 24
+from Daniel Dennett’s *Intuition Pumps and other tools for thinking*)
 
 The RogRego computer possesses:
 
@@ -260,7 +260,7 @@ a function which, given the 10 initial values of the registers, and
 the program, returns the new register values when
 the END command is reached.
 
-Check two possible solutions: :download:`rodrego_maxime_caute.py <../solutions-to-exercices/rodrego_maxime_caute.py>` and :download:`rodrego_christophe_pallier.py <../solutions-to-exercices/rodrego_christophe_pallier.py>`
+Check two possible solutions: :download:`rodrego_maxime_caute.py <../coding-exercises/rodrego_maxime_caute.py>` and :download:`rodrego_christophe_pallier.py <../coding-exercises/rodrego_christophe_pallier.py>`
 
 ---
 

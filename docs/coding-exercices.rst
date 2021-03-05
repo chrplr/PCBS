@@ -6,7 +6,7 @@
 .. contents::
 
 
-(Note: Solutions are available in https://github.com/chrplr/PCBS/tree/master/solutions-to-exercices)
+(Note: Solutions are available in https://github.com/chrplr/PCBS/tree/master/coding-exercises)
 
 
 Flow control
@@ -19,7 +19,7 @@ Shining
 ~~~~~~~
 
 Write code that prints 1000 times the line ``All work and no play makes Jack a dull boy.``
-(a solution is at :download:`shining.py  <../solutions-to-exercices/shining.py>`)
+(a solution is at :download:`shining.py  <../coding-exercises/shining.py>`)
 
 
 Multiplication tables
@@ -42,7 +42,7 @@ Write a script that displays the tables of multiplication from 1 to 10, either i
 
 - Note: it can be useful read https://pyformat.info/#number_padding to pretty-print the numbers.
 
-Check out  :download:`multiplication_table.py  <../solutions-to-exercices/multiplication-table.py>`
+Check out  :download:`multiplication_table.py  <../coding-exercises/multiplication-table.py>`
 
 
 Computer-guess-a-number
@@ -59,7 +59,7 @@ mind. The computer proposes a number and the user answers with ‘+’ (the
 number he has is mind is larger), ‘-’ (if it is smaller), ‘y’ (if the
 guess is correct)
 
-Check a solution at :download:`computer-guess-a-number.py <../solutions-to-exercices/computer-guess-a-number.py>`
+Check a solution at :download:`computer-guess-a-number.py <../coding-exercises/computer-guess-a-number.py>`
 
 
 Lists
@@ -85,7 +85,7 @@ Try to solve the following exercices:
 - Given a list of numbers, print the second largest one.
 
 
-After you have tried to solve these problems, you can check  :download:`lists.py <../solutions-to-exercices/lists.py>`
+After you have tried to solve these problems, you can check  :download:`lists.py <../coding-exercises/lists.py>`
 
 
 Prime numbers
@@ -102,7 +102,7 @@ use the following function:
             Return True if b is a divisor of a, else False"
        return a % b == 0
 
-Check a solution at :download:`prime-numbers.py <../solutions-to-exercices/prime-numbers.py>`
+Check a solution at :download:`prime-numbers.py <../coding-exercises/prime-numbers.py>`
 
 
 
@@ -131,8 +131,8 @@ of the current line in a Python list, and write a function that
 given a list as an argument, calculates and returns the following line
 in a new list.
 
-Proposed solutions: :download:`Pascal-triangle_v1.py <../solutions-to-exercices/Pascal-triangle_v2.py>` and
-:download:`Pascal-triangle_v2.py <../solutions-to-exercices/Pascal-triangle_v2.py>`
+Proposed solutions: :download:`Pascal-triangle_v1.py <../coding-exercises/Pascal-triangle_v2.py>` and
+:download:`Pascal-triangle_v2.py <../coding-exercises/Pascal-triangle_v2.py>`
 
 
 
@@ -150,7 +150,7 @@ Read https://en.wikipedia.org/wiki/Fahrenheit and write a function that converts
 
 - Add code that reads temperatures from the standard input and print the converted numbers. 
 
-A solution is available here: :download:`Fahrenheit_celsius.py <../solutions-to-exercices/Fahrenheit_celsius.py>`.
+A solution is available here: :download:`Fahrenheit_celsius.py <../coding-exercises/Fahrenheit_celsius.py>`.
 
 
 Taxis
@@ -162,7 +162,7 @@ Two taxi companies propose differents pricing schemes:
 
  * Company B charges 3.20€ plus 1.20€ by km travelled.
 
-Write some code to find which company is the cheapest as a function of the distance to travel. Compare it to :download:`taxis.py  <../solutions-to-exercices/taxis.py>`
+Write some code to find which company is the cheapest as a function of the distance to travel. Compare it to :download:`taxis.py  <../coding-exercises/taxis.py>`
 
 
 Strings
@@ -233,9 +233,9 @@ Two words are anagrams if they contain the same letters in different orders, e.g
 
 - write a function that take two strings as arguments and returns True if they are anagrams.
 
-- Given a list of words, print all subsets that form anagrams. You use the file :download:`liste.de.mots.francais.frgut.txt <../solutions-to-exercices/liste.de.mots.francais.frgut.txt>`
+- Given a list of words, print all subsets that form anagrams. You use the file :download:`liste.de.mots.francais.frgut.txt <../coding-exercises/liste.de.mots.francais.frgut.txt>`
 
-Check my solution at :download:`anagrams.py <../solutions-to-exercices/anagrams.py>`
+Check my solution at :download:`anagrams.py <../coding-exercises/anagrams.py>`
 
 
 File reading and writing
@@ -277,7 +277,7 @@ Read  `Chap. 8 of Automate the boring stuff <http://automatetheboringstuff.com/c
 
 Write a script that opens and read a text file, and print all the lines that contain a given target word,  say, ``cogmaster``.
 
-Check out :download:`search-file.py <../solutions-to-exercices/search-file.py>`
+Check out :download:`search-file.py <../coding-exercises/search-file.py>`
 
 
 Kaprekar numbers
@@ -295,7 +295,7 @@ initial. For example:
 
 Write a program that returns all Kaprekar numbers between 1 and N.
 
-Solution: :download:`Kaprekar-numbers.py <../solutions-to-exercices/Kaprekar-numbers.py>`
+Solution: :download:`Kaprekar-numbers.py <../coding-exercises/Kaprekar-numbers.py>`
 
 
 RPN Calculator
@@ -306,7 +306,7 @@ https://en.wikipedia.org/wiki/Reverse_Polish_notation).
 
 E.g. ``3 4 * 5 -`` evaluate to ``7``.
 
-Solution: :download:`rpn-calculator.py <../solutions-to-exercices/rpn-calculator.py>`
+Solution: :download:`rpn-calculator.py <../coding-exercises/rpn-calculator.py>`
 
 
 Rodrego-simulator
@@ -317,7 +317,7 @@ Cellular automata
 
 Implement a 1-dimension `elementay cellular automata <https://en.wikipedia.org/wiki/Elementary_cellular_automaton>`__. (Further reading: https://en.wikipedia.org/wiki/A_New_Kind_of_Science)
 
-Solution: :download:`1d-ca.py <../cellular-automata/1d-ca.py>`
+Solution: :download:`1d-ca.py <../simulations/cellular-automata/1d-ca.py>`
 
 
 Analysis of a Signal Detection Experiment 
@@ -344,9 +344,9 @@ Let us first suppose that the data from a participant is represented as a string
 Exercise:
 
  - Write a function which, given such a string, returns the Hit rate and the False rate.
- - Now, the results from different participants are stored in different files ``subj*.dat`` (download the files from https://github.com/chrplr/PCBS/tree/master/solutions-to-exercices/subjdat.zip`) Write a script that computes the hit rates and false alarms for each subject, and displays the group averages and standard deviations. 
+ - Now, the results from different participants are stored in different files ``subj*.dat`` (download the files from https://github.com/chrplr/PCBS/tree/master/coding-exercises/subjdat.zip`) Write a script that computes the hit rates and false alarms for each subject, and displays the group averages and standard deviations. 
 
-Solution :download:`sdt.py <../solutions-to-exercices/sdt.py>`
+Solution :download:`sdt.py <../coding-exercises/sdt.py>`
 
 
 

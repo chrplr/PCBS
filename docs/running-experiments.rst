@@ -10,7 +10,7 @@ Simple reaction times
 Pygame version
 ~~~~~~~~~~~~~~
 
-Download :download:`simple-detection-visual-pygame.py <../reaction-times/simple-detection-visual-pygame.py>`. Run it with::
+Download :download:`simple-detection-visual-pygame.py <../experiments/reaction-times/simple-detection-visual-pygame.py>`. Run it with::
 
      python reaction-times/simple-detection-visual-pygame.py
 
@@ -31,12 +31,12 @@ Here are my results:
       Relationship between wait time and reaction time
 
 
-Browse the code of :download:`simple-detection-visual-pygame.py <../reaction-times/simple-detection-visual-pygame.py>`
+Browse the code of :download:`simple-detection-visual-pygame.py <../experiments/reaction-times/simple-detection-visual-pygame.py>`
 
 Expyriment version
 ~~~~~~~~~~~~~~~~~~
 
-Download :download:`solution using expyriment <../reaction-times/simple-detection-visual-expyriment.py>` and run it with::
+Download :download:`solution using expyriment <../experiments/reaction-times/simple-detection-visual-expyriment.py>` and run it with::
 
     python simple-detection-visual-expyriment.py
 
@@ -70,9 +70,9 @@ On the command line, with the ``data`` folder as working directory, launch ``ipy
 
 Read https://docs.expyriment.org/Tutorial.html to understand the basic principles of the ``expyriment`` module.
 
-Check out :download:`/expyriment/expyriment_minimal_template.py <../expyriment/expyriment_minimal_template.py>`
+Check out :download:`/expyriment/expyriment_minimal_template.py <../experiments/expyriment/expyriment_minimal_template.py>`
 
-Modify :download:`reaction-times/simple-detection-visual-expyriment.py <../reaction-times/simple-detection-visual-expyriment.py>` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have created a simple audio detection experiment.
+Modify :download:`reaction-times/simple-detection-visual-expyriment.py <../experiments/reaction-times/simple-detection-visual-expyriment.py>` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have created a simple audio detection experiment.
 
 Modify the script to have 3 blocks of trials: one in which the target is visual, one in which it is audio, and one in which it is randomly
    visual or auditory. Are we slowed down in the latter condition?
@@ -82,10 +82,10 @@ Modify the script to have 3 blocks of trials: one in which the target is visual,
 Sound-picture matching
 ----------------------
 
-The :download:`../expyriment/sentence_picture_matching/sentence-picture-matching.py <../expyriment/sentence_picture_matching/sentence-picture-matching.py>` scripts presents a sound, followed by a picture and waits for the participant to press a button.
+The :download:`../experiments/expyriment/sentence_picture_matching/sentence-picture-matching.py <../experiments/expyriment/sentence_picture_matching/sentence-picture-matching.py>` scripts presents a sound, followed by a picture and waits for the participant to press a button.
 
 
-Exercise: Modify the previous script to present *two* pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from :download:`expyriment/touchscreen_test/touchscreen-test.py  <../expyriment/touchscreen_test/touchscreen-test.py>`
+Exercise: Modify the previous script to present *two* pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from :download:`expyriment/touchscreen_test/touchscreen-test.py  <../experiments/expyriment/touchscreen_test/touchscreen-test.py>`
 
 
 Posner’s attentional cueing task
@@ -94,7 +94,7 @@ Posner’s attentional cueing task
 
 Execise (\*\*\*): Read about `Posner’s attentional cueing task <https://en.wikipedia.org/wiki/Posner_cueing_task>`__ and program the experiùent. 
 
-See a solution in :download:`../Posner-attention/posner_task.py <../Posner-attention/posner_task.py>`
+See a solution in :download:`Posner-attention/posner_task.py <../experiments/Posner-attention/posner_task.py>`
 
 
 Stroop Effect
@@ -110,9 +110,9 @@ In the previous chapter, we created Stroop cards with Pygame.
     Stroop card
 
 
-  (see  :download:`create_stroop_cards.py <../stroop/create_stroop_cards.py>`)
+  (see  :download:`create_stroop_cards.py <../experiments/stroop/create_stroop_cards.py>`)
 
-Download :download:`stroop.zip <../stroop.zip>`. Extract the files and run::
+Download :download:`stroop.zip <../experiments/stroop.zip>`. Extract the files and run::
 
    python stroop_task.py
 

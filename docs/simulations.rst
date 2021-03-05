@@ -96,13 +96,12 @@ Life <https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>`__. Watch
    previous page. you can take inspiration from the excellent `Think
    Complexity <http://greenteapress.com/wp/think-complexity-2e/>`__ by
    Allen B. Downey. My solution is at
-   `cellular-automata/1d-ca.py <cellular-automata/1d-ca.py>`__.
+   `cellular-automata/1d-ca.py <../simulations/cellular-automata/1d-ca.py>`__.
 
 -  Implement the Game of Life in 2D.
 
 -  Going futher: If you enjoy Cellular Automata, you can read Stephen
-   Wolfram’s `A New Kind of
-   Science <https://en.wikipedia.org/wiki/A_New_Kind_of_Science>`__. A
+   Wolfram’s `A New Kind of Science <https://en.wikipedia.org/wiki/A_New_Kind_of_Science>`__. A
    more general book about Complexity is Melanie Mitchell’s *Complexity:
    a guided tour*.
 

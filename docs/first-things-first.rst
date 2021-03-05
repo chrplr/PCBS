@@ -111,7 +111,7 @@ Resources to learn Python
    (as well as the other books by the author). For those who dislike
    reading, there are videos on the site.
 
--  See :download:`Python in a Nutshell <../02_Python_in_a_nutshell/Python_in_a_nutshell-doc.html>`
+-  See :download:`Python in a Nutshell <../slides/02_Python_in_a_nutshell/Python_in_a_nutshell-doc.html>`
 
 
 *  Books:

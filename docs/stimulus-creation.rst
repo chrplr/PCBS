@@ -76,7 +76,7 @@ Here is a Python script that opens a window and displays a square:
     pygame.quit()
 
 
-Download (:download:`square.py <../visual-illusions/square.py>`) and run it by typing::
+Download (:download:`square.py <../stimuli/visual-illusions/square.py>`) and run it by typing::
 
     python square.py
 
@@ -90,16 +90,16 @@ Remark: you can get some help from:
    - `Pygame's online documentation <https://www.pygame.org/docs/>`
 
 
-It is of course possible to draw other shapes. Check out for example the two scripts :download:`circle.py <../visual-illusions/circle.py>` and :download:`triangle.py <../visual-illusions/triangle.py>`.
+It is of course possible to draw other shapes. Check out for example the two scripts :download:`circle.py <../stimuli/visual-illusions/circle.py>` and :download:`triangle.py <../stimuli/visual-illusions/triangle.py>`.
 
-Exercice (*): modify the script :download:`circle.py <../visual-illusions/circle.py>` to draw two circles, one red and on blue, side-by-side
+Exercice (*): modify the script :download:`circle.py <../stimuli/visual-illusions/circle.py>` to draw two circles, one red and on blue, side-by-side
 
    .. figure:: images/two-circles.png
       :alt: Two Circles
 
       Two Circles
 
-  (check out :download:`two_circles.py <../visual-illusions/two_circles.py>`)
+  (check out :download:`two_circles.py <../stimuli/visual-illusions/two_circles.py>`)
 
 Note that the circles are filled with the color (actually, they are disks). Browse pygame's documentation to find out how to color the circumference of the circle and keep its inner part white.
 
@@ -119,7 +119,7 @@ What happened after a few seconds? This is the *fill-in phenomenon* (See https:/
 
 Exercise (*): Program the Troxler stimulus (hint: use  https://www.google.com/search?q=color+picker to find the RGB values for the disks)
 
-For a solution, check out :download:`troxler.py <../visual-illusions/troxler.py>`
+For a solution, check out :download:`troxler.py <../stimuli/visual-illusions/troxler.py>`
 
 
 Kanizsa illusory contours
@@ -141,9 +141,9 @@ There exists many variants, e.g. the Kanizsa squares:
       Kanizsa square
 
 
-Exercice (**): Inspiring yourself from the code in :download:`square.py <../visual-illusions/square.py>` and  :download:`circle.py <../visual-illusions/circle.py>`, create a script that displays the (right) Kanisza square .
+Exercice (**): Inspiring yourself from the code in :download:`square.py <../stimuli/visual-illusions/square.py>` and  :download:`circle.py <../stimuli/visual-illusions/circle.py>`, create a script that displays the (right) Kanisza square .
 
-  A possible solution is proposed in :download:`kanizsa-square.py <../visual-illusions/kanizsa-square.py>`
+  A possible solution is proposed in :download:`kanizsa-square.py <../stimuli/visual-illusions/kanizsa-square.py>`
 
 
 Herman grid
@@ -157,7 +157,7 @@ Herman grid
 
 Read about the `Herman grid illusion <https://en.wikipedia.org/wiki/Grid_illusion>`__
 
-Exercise (\*\*) Using :download:`square.py <../visual-illusions/square.py>` as a
+Exercise (\*\*) Using :download:`square.py <../stimuli/visual-illusions/square.py>` as a
 starting point, write a program to display the grid.
 
    Hints:
@@ -168,14 +168,14 @@ starting point, write a program to display the grid.
    -  in your python script, use nested ``for`` loops over rows and columns
       to display each square one by one.
 
-   Check out :download:`grid.py <../visual-illusions/grid.py>`.
+   Check out :download:`grid.py <../stimuli/visual-illusions/grid.py>`.
 
 
 Optional exercises:
 
   - Play with the parameters 'size of the squares' and 'space between the
     squares' to see how they affect the illusion.
-  - Read https://stackabuse.com/command-line-arguments-in-python/ to learn how to read arguments on the command line use the ``sys.argv[]`` list from the ``sys`` module.  Create a version of the grid script that can get the number of columns, rows, the size of sides of squares, and the size of the space between squares. Play with those parameters to see if you    can make the illusion come and go. (see :download:`grid-args.py <../visual-illusions/grid-args.py>`)
+  - Read https://stackabuse.com/command-line-arguments-in-python/ to learn how to read arguments on the command line use the ``sys.argv[]`` list from the ``sys`` module.  Create a version of the grid script that can get the number of columns, rows, the size of sides of squares, and the size of the space between squares. Play with those parameters to see if you    can make the illusion come and go. (see :download:`grid-args.py <../stimuli/visual-illusions/grid-args.py>`)
 
     Remark: there exists two powerful modules to help parse arguments on the command line: argparse_ or docopt_ 
 
@@ -193,7 +193,7 @@ Extinction illusion
 
 Exercise: Program the McAnany-Levine extinction stimulus, that is, a grid of black squares with white circles at the intersection.
 
-Check out :download:`extinction.py <../visual-illusions/extinction.py>`
+Check out :download:`extinction.py <../stimuli/visual-illusions/extinction.py>`
 
 
 Remark: There exists variants of the extinction illusion:
@@ -221,7 +221,7 @@ Ebbinghaus-Titchener
 Read about the `Ebbinghaus–Titchener stimulus <http://www.abc-people.com/illusion/illusion-3.htm#axzz5SqeF15yC>`__.
 
 
-Exercise (**): Using :download:`circle.py <../visual-illusions/circle.py>` as a starting point, write a program to display a static stimulus (one central circle surrounded by a number of circles). 
+Exercise (**): Using :download:`circle.py <../stimuli/visual-illusions/circle.py>` as a starting point, write a program to display a static stimulus (one central circle surrounded by a number of circles). 
 
 
    Hint: A littel bit of `trigonometry <https://en.wikipedia.org/wiki/Unit_circle>`__ helps:
@@ -234,7 +234,7 @@ Exercise (**): Using :download:`circle.py <../visual-illusions/circle.py>` as a 
    Consult https://www.mathsisfun.com/polar-cartesian-coordinates.html if you need to convince yourself about that.
 
 
-Check out :download:`ebbinghaus.py <../visual-illusions/ebbinghaus.py>`
+Check out :download:`ebbinghaus.py <../stimuli/visual-illusions/ebbinghaus.py>`
 
 
 Fixation cross
@@ -247,7 +247,7 @@ Many visual experiments require participants to fixate a central fixation cross 
 
       Fixation cross
 
-Exercise (*): Using the function ``pygame.draw.line()``, write a script that displays a cross at the center the screen. (Solution at :download:`fixation-cross.py <../visual-illusions/fixation_cross.py>`)
+Exercise (*): Using the function ``pygame.draw.line()``, write a script that displays a cross at the center the screen. (Solution at :download:`fixation-cross.py <../stimuli/visual-illusions/fixation_cross.py>`)
 
 
 
@@ -259,7 +259,7 @@ Hering illusion
 
    Hering illusion
 
-Exercise (\*\*): Program the stimulus . Then, check a solution at :download:`hering.py <../visual-illusions/hering.py>`
+Exercise (\*\*): Program the stimulus . Then, check a solution at :download:`hering.py <../stimuli/visual-illusions/hering.py>`
 
 
 Random-dot stereograms
@@ -275,7 +275,7 @@ images, produces a sensation of depth  To see how they can be generated, read th
 
 Exercise (\*\*\*) Write a script that generates random-dot stereograms (warning: this requires a bit of knowledge of Numpy_ to represent the images as 2d arrays, and of slicing_)
 
-Check out :download:`random_dot_stereogram.py <../random-dot-stereograms/random_dot_stereogram.py>`
+Check out :download:`random_dot_stereogram.py <../stimuli/random-dot-stereograms/random_dot_stereogram.py>`
 
 .. _Stereopsis: https://en.wikipedia.org/wiki/Stereopsis
 .. _random dot stereograms: https://en.wikipedia.org/wiki/Random_dot_stereogram
@@ -327,7 +327,7 @@ It is difficult to name the color of a color word if they do not match. This phe
 You will need to read about how to generate images containing text, for example, in the tutorial `How to display text with
 pygame <https://nerdparadise.com/programming/pygame/part5>`__
 
-Then, check  a solution at :download:`create_stroop_cards.py <../stroop/create_stroop_cards.py>`
+Then, check  a solution at :download:`create_stroop_cards.py <../experiments/stroop/create_stroop_cards.py>`
 
 
 Dynamic visual stimuli
@@ -366,13 +366,13 @@ Illusory line motion (ILM) refers to a situation in which flashing a light at on
 
 Exercise (*):  Program the stimulus, that is, first draw a square, wait for a few milliseconds using the function `pygame.time.wait()`, then draw a rectangle overlapping with the initial square.   
 
-  Check out :download:`visual-illusions/line-motion.py <../visual-illusions/line-motion.py>`
+  Check out :download:`visual-illusions/line-motion.py <../stimuli/visual-illusions/line-motion.py>`
 
 
 Flash-lag illusion
 ------------------
 
-* Download  :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>` and run it. Do not look at the code yet. 
+* Download  :download:`visual-illusions/flash-lag.py <../stimuli/visual-illusions/flash-lag.py>` and run it. Do not look at the code yet. 
 
 * Do you feel that the moving square's x position coincides with the flashing square or not? If you want to read about the `Flash-lag illusion <https://en.wikipedia.org/wiki/Flash_lag_illusion>`__.
 
@@ -384,11 +384,11 @@ Exercise:
    the screen, and increment or decrement the `x` coordinate by a fixed amount.
    This strategy is explained in details at http://programarcadegames.com/index.php?lang=en&chapter=introduction_to_animation
 
-   Check out out version :download:`visual-illusions/moving_square.py <../visual-illusions/moving_square.py>`
+   Check out out version :download:`visual-illusions/moving_square.py <../stimuli/visual-illusions/moving_square.py>`
 
 2. Add the presentation of a flashing square then the moving square passes the middle line, to generate the flash-lag illusion.
 
-Now, you can look at the code in :download:`visual-illusions/flash-lag.py <../visual-illusions/flash-lag.py>`
+Now, you can look at the code in :download:`visual-illusions/flash-lag.py <../stimuli/visual-illusions/flash-lag.py>`
 
 
 Dynamic version of the Ebbinghaus-Titchener
@@ -398,7 +398,7 @@ Dynamic version of the Ebbinghaus-Titchener
 
 -  Program a version where the outer circles (inducers) grow and shrink in size.
 
--  Check out :download:`visual-illusions/ebbinghaus-dynamic.py <../visual-illusions/ebbinghaus-dynamic.py>`
+-  Check out :download:`visual-illusions/ebbinghaus-dynamic.py <../stimuli/visual-illusions/ebbinghaus-dynamic.py>`
 
 
 Lilac Chaser
@@ -410,9 +410,9 @@ The `Lilac Chaser`_ is a dynamic version of the Troxler fill-in illusion.
 
 Exercise (\*\*): Program the Lilac Chaser stimulus, with 12 rose disks (you can use full disks without any blurring). Try different colors.
 
-For a possible solution, check out :download:`visual-illusions/lilac_chaser.py <../visual-illusions/lilac_chaser.py>`
+For a possible solution, check out :download:`visual-illusions/lilac_chaser.py <../stimuli/visual-illusions/lilac_chaser.py>`
 
-(Optional exercise for advanced students: add blurring to the disks to make a stimulus similar to that of the wikipedia page `Lilac Chaser`_. Then, for a solution, check out :download:`visual-illusions/lilac_chaser_blurred.py <../visual-illusions/lilac_chaser_blurred.py>`)
+(Optional exercise for advanced students: add blurring to the disks to make a stimulus similar to that of the wikipedia page `Lilac Chaser`_. Then, for a solution, check out :download:`visual-illusions/lilac_chaser_blurred.py <../stimuli/visual-illusions/lilac_chaser_blurred.py>`)
 
 
 Creating and playing sounds
@@ -429,11 +429,11 @@ Then run the quick check with ipython::
 
 Check out `simpleaudio's tutorials <https://simpleaudio.readthedocs.io/en/latest/tutorial.html>`__
 
-The module :download:`sound_synth.py <../sound/sound_synth.py>` provides several functions to load, create, and play sounds. 
+The module :download:`sound_synth.py <../stimuli/sound/sound_synth.py>` provides several functions to load, create, and play sounds. 
 
 Exercise (\*\*) Using functions from the `sound_synth` module, write a script that loads the file ``cymbal.wav`` and plays it 10 times, at a rhythm of one per second. (Warning: a basic knowledge of numpy arrays is necessary to concatenate the samples).
 
-Check a solution at :download:`cycle.py <../sound/cycle.py>`
+Check a solution at :download:`cycle.py <../stimuli/sound/cycle.py>`
 
 
 Shepard tone
