@@ -260,7 +260,9 @@ a function which, given the 10 initial values of the registers, and
 the program, returns the new register values when
 the END command is reached.
 
-Check two possible solutions: :download:`rodrego_maxime_caute.py <../coding-exercises/rodrego_maxime_caute.py>` and :download:`rodrego_christophe_pallier.py <../coding-exercises/rodrego_christophe_pallier.py>`
+Check two possible solutions:
+- :download:`rodrego_maxime_caute.py <../coding-exercises/rodrego/rodrego_maxime_caute.py>`
+- :download:`rodrego_christophe_pallier.py <../coding-exercises/rodrego/rodrego_christophe_pallier.py>`
 
 ---
 

@@ -312,6 +312,19 @@ Solution: :download:`rpn-calculator.py <../coding-exercises/rpn-calculator.py>`
 Rodrego-simulator
 ~~~~~~~~~~~~~~~~~
 
+
+Write a Python script that simulates a `RodRego machine <http://sites.tufts.edu/rodrego/>`__ with 10 registers.
+The program is stored in a string or in
+file that is read and then executed. Your program must contain
+a function which, given the 10 initial values of the registers, and
+the program, returns the new register values when
+the END command is reached.
+
+Check two possible solutions:
+- :download:`rodrego_maxime_caute.py <../coding-exercises/rodrego/rodrego_maxime_caute.py>`
+- :download:`rodrego_christophe_pallier.py <../coding-exercises/rodrego/rodrego_christophe_pallier.py>`
+
+
 Cellular automata
 ~~~~~~~~~~~~~~~~~
 
