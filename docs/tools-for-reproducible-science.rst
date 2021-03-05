@@ -41,7 +41,7 @@ comments. For example:
       (source: https://github.com/chrplr/PCBS/blob/master/data-analysis/comparing-two-means-dependent-groups.Rmd)
    -  see more at https://github.com/chrplr/statistics_with_R
 
-   -  http://chrplr.github.io/PCBS/lexique/interroger-lexique-avec-R.nb.html
+   -  http://chrplr.github.io/PCBS/databases/lexique/interroger-lexique-avec-R.nb.html
 
 -  jupyter notebook:
 

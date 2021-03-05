@@ -99,7 +99,7 @@ Benford’s law
 -------------
 
 Learn about `Benford’s law <https://brilliant.org/wiki/benfords-law/>`__. Write a Python script that displays the distribution of the most significant digit in a set of
-numbers. Apply it to the variables in `Benford-law/countries.xlsx <../Benford-law/countries.xlsx>`__.
+numbers. Apply it to the variables in `Benford-law/countries.xlsx <../stats-and-datra-analyses/Benford-law/countries.xlsx>`__.
 
 A solution: :download:`Benford-law/Benford.py <../stats-and-data-analyses/Benford-law/Benford.py>`
 
