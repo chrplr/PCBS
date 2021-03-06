@@ -1,12 +1,12 @@
-========================================
+****************************************
 Representations of numbers, text, images
-========================================
+****************************************
 
 .. contents::
 
 
 Representation of integers
-++++++++++++++++++++++++++
+==========================
 
 *There are 10 kinds of people: those who count in binary and the
 others.*
@@ -23,9 +23,7 @@ A number represented in basis ‘b’ by four digits 'd\ :sub:`3`\ d\ :sub:`2`\ 
    ``D8F1 = 14*16^3 + 8*10^2 + 15*16^1 + 1*16^0``
 
 Just like a number can be written in base 10, it can be written in base
-2 (or in any other base):
-
-::
+2 (or in any other base)::
 
    12 = 10  + 2 = 1.(10^1) + 2.(10^0) => '12' in base 10 
    12 = 8 + 4 = 2^3 + 2^1 => '1010' in base 2
@@ -33,9 +31,7 @@ Just like a number can be written in base 10, it can be written in base
    33 = 30  + 3 = 3.(10^1) + 3.(10^0) => '33' in base 10
    33 = 32 + 1 = 2^5 + 2^0 => '100001' in base 2
 
-Here are the binary representions of the first integers:
-
-::
+Here are the binary representions of the first integers::
 
    0 :   0
    1 :   1
@@ -282,7 +278,7 @@ To go further:
 
 
 Representation of text
-++++++++++++++++++++++
+======================
 
 A text file is nothing but a sequences of characters.
 
@@ -333,21 +329,15 @@ Strings
 
 In Python, text can be stored in objects called *strings*.
 
-String constants are enclosed between single quotes
-
-::
+String constants are enclosed between single quotes::
 
    'Bonjour le monde!'
 
-Or double quotes
-
-::
+Or double quotes::
 
    "Bonjour le monde !"
 
-Or “triple” quotes for multilines strings
-
-::
+Or “triple” quotes for multilines strings::
 
    """
    Bonjour le monde!
@@ -357,24 +347,18 @@ Or “triple” quotes for multilines strings
    ...
    """
 
-They have a type ``str``.
+They have a type ``str``::
 
-::
-
-   >>> type('bonjour')
+   type('bonjour')
    <class 'str'>
 
-To convert an object to a string representation:
-
-::
+To convert an object to a string representation::
 
    str(10)
    a = dict((("a",1), ("b",2)))
    str(a)
 
-A string is nothing but a sequence of characters.
-
-::
+A string is nothing but a sequence of characters::
 
    a = 'bonjour'
    print(a[0])
@@ -386,9 +370,7 @@ A string is nothing but a sequence of characters.
    for c in 'bonjour':
        print(c)
 
-Operations on strings
-
-::
+Operations on strings::
 
    a = 'bonjour'
    b = 'hello'
@@ -396,9 +378,7 @@ Operations on strings
    a + ' ' + b
 
 A set of functions to manipulate strings is available in the module
-‘string’.
-
-::
+‘string’::
 
    str.upper(a)
    str.lower('ENS')
@@ -428,8 +408,9 @@ splitting a strings at delimiters
 
 Read  https://docs.python.org/3/library/stdtypes.html#string-methods to learn about more string functions.
 
-Interactive input from the command line:
-========================================
+
+Interactive input from the command line
+---------------------------------------
 
 .. code:: python
 
@@ -438,7 +419,7 @@ Interactive input from the command line:
 
 
 Reading and writing to text files
-=================================
+---------------------------------
 
 #. With Atom, create a text file containing a few lines of arbitrary
    content, an save it under the filename ‘test.txt’
@@ -452,8 +433,8 @@ Reading and writing to text files
        lines = o.split("\n")
        print(lines)
 
-Counting lines and words in a text file.
-========================================
+Counting lines and words in a text file
+---------------------------------------
 
 Download `Alice in Wonderland <http://www.umich.edu/~umfandsf/other/ebooks/alice30.txt>`__
 
@@ -508,7 +489,7 @@ Exercise: Write a program that counts the number of lines, and number of
 
 
 Representation of images
-++++++++++++++++++++++++
+========================
 
 Images can be stored either:
 
@@ -570,7 +551,7 @@ Here is another example:
    plt.show()
 
 Grey level pictures
-===================
+-------------------
 
 Each dot is now associated to an integer value, e.g. ranging from 0 to
 255 for 8-bits codes, coding for a grey level (smaller=darker). Each dot
@@ -636,7 +617,7 @@ More manipulations are available at
 http://scipy-lectures.github.io/advanced/image_processing/.
 
 Colored bitmaps
-~~~~~~~~~~~~~~~
+---------------
 
 Each dot is now associated to three bytes, representing the Red, Gree
 and Blue intensities (see http://www.colorpicker.com/).
