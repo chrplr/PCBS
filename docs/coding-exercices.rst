@@ -2,11 +2,10 @@
  Programming Exercices
 ======================
 
-
 .. contents::
 
 
-(Note: Solutions are available in https://github.com/chrplr/PCBS/tree/master/coding-exercises)
+(Note: Solutions to most exercises are available in https://github.com/chrplr/PCBS/tree/master/coding-exercises)
 
 
 Flow control
@@ -18,8 +17,30 @@ You can read about  `loops in Python <https://wiki.python.org/moin/ForLoop>`__, 
 Shining
 ~~~~~~~
 
-Write code that prints 1000 times the line ``All work and no play makes Jack a dull boy.``
-(a solution is at :download:`shining.py  <../coding-exercises/shining.py>`)
+Write a python script that prints 1000 times the line ``All work and no play makes Jack a dull boy.``
+
+Check a solution at :download:`shining.py  <../coding-exercises/shining.py>`
+
+Taxis
+~~~~~
+
+Two taxi companies propose differents pricing schemes:
+
+ - Company A charges 4.80€ plus 1.00€/km
+ - Company B charges 3.20€ plus 1.20€/km
+
+Write code to find which company is the cheapest as a function of the distance to travel.
+
+Compare it to :download:`taxis.py  <../coding-exercises/taxis.py>`
+
+Estimation of PI by a Monte Carlo method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Read https://academo.org/demos/estimating-pi-monte-carlo/
+
+Implement the proposed algorithm to estimate the value of PI. 
+
+Check out  :download:`estimate_PI_by_MonteCarlo_v1.py  <../coding-exercises/estimate_PI_by_MonteCarlo_v1.py>`
 
 
 Multiplication tables
@@ -40,7 +61,9 @@ Write a script that displays the tables of multiplication from 1 to 10, either i
  10:  10  20  30  40  50  60  70  80  90 100 
 
 
-- Note: it can be useful read https://pyformat.info/#number_padding to pretty-print the numbers.
+Notes:
+- you could use `for` loops, and the `range` function.
+- to properly align the numbers, you can read about format strings. https://pyformat.info/#number_padding
 
 Check out  :download:`multiplication_table.py  <../coding-exercises/multiplication-table.py>`
 
@@ -97,10 +120,9 @@ use the following function:
 
 .. code:: python
 
-   def is_divisor(a, b):
-       """ Args: a, b integers;
-            Return True if b is a divisor of a, else False"
-       return a % b == 0
+    def is_factor(d, n):
+        """ True if `d` is a divisor of `n` """
+        return n % d == 0
 
 Check a solution at :download:`prime-numbers.py <../coding-exercises/prime-numbers.py>`
 
@@ -131,38 +153,65 @@ of the current line in a Python list, and write a function that
 given a list as an argument, calculates and returns the following line
 in a new list.
 
-Proposed solutions: :download:`Pascal-triangle_v1.py <../coding-exercises/Pascal-triangle_v2.py>` and
-:download:`Pascal-triangle_v2.py <../coding-exercises/Pascal-triangle_v2.py>`
-
-
-
+Proposed solutions:
+- :download:`Pascal-triangle_v1.py <../coding-exercises/Pascal-triangle_v1.py>` - :download:`Pascal-triangle_v2.py <../coding-exercises/Pascal-triangle_v2.py>` (advanced)
 
 
 Functions
 ---------
 
-Read about Python's functions: https://automatetheboringstuff.com/2e/chapter3/).
+Read about *functions* in Python:
+- https://www.w3schools.com/python/python_functions.asp
+- https://automatetheboringstuff.com/2e/chapter3/).
+
 
 Convert temperatures from Fahrenheit to Celcius and vice-versa.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Read https://en.wikipedia.org/wiki/Fahrenheit and write a function that converts a temperature from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit
+- Read https://en.wikipedia.org/wiki/Fahrenheit and write a function that converts a temperature from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit
 
-- Add code that reads temperatures from the standard input and print the converted numbers. 
+- Add code that reads temperatures from the standard input and print the
+  converted numbers.
 
 A solution is available here: :download:`Fahrenheit_celsius.py <../coding-exercises/Fahrenheit_celsius.py>`.
 
 
-Taxis
-~~~~~
+Permutations
+~~~~~~~~~~~~
 
-Two taxi companies propose differents pricing schemes:
+Generate all the permutations of a set, e.g. (1..n).
 
- * Company A charges 4.80€ plus 1.15€ by km travelled.
+Note: This is an advanced exercise, which requires mastery of recursive functions (functions that call themselves)
 
- * Company B charges 3.20€ plus 1.20€ by km travelled.
+A solution is proposed at :download:`generate_all_permutations.py <../coding-exercises/generate_all_permutations.py>`.
 
-Write some code to find which company is the cheapest as a function of the distance to travel. Compare it to :download:`taxis.py  <../coding-exercises/taxis.py>`
+To run it::
+
+   python generate_all_permutations.py 4
+
+
+Eight queens puzzle
+~~~~~~~~~~~~~~~~~~~
+
+The eight queens puzzle is the problem of placing eight chess queens on an 8×8
+chessboard so that no two queens threaten each other; thus, a solution requires
+that no two queens share the same row, column, or diagonal. See
+https://en.wikipedia.org/wiki/Eight_queens_puzzle
+
+As there can be only one queen per column and per row, a winning solution can
+be represented by a set of 8 numbers, one per line, which represent the column
+in which there is a queen. Because the columns must be different, the solutions
+are a subset of the permutations of 8 numbers. We just have to check that no
+two queens are in the same diagonal.
+
+In Python, you can get all the permutations of a set, with the ``permutations`` function from the ``itertools`` module ::
+
+    from itertools import permutations
+    list(permutations(range(3))
+
+For a solution to the eight queens problem, check out https://code.activestate.com/recipes/576647-eight-queens-six-lines/
+
+The code is available at :download:`eight_queens.py <../coding-exercises/eight-queens.py>`.
 
 
 Strings
@@ -233,9 +282,16 @@ Two words are anagrams if they contain the same letters in different orders, e.g
 
 - write a function that take two strings as arguments and returns True if they are anagrams.
 
-- Given a list of words, print all subsets that form anagrams. You use the file :download:`liste.de.mots.francais.frgut.txt <../coding-exercises/liste.de.mots.francais.frgut.txt>`
+- Given a list of words, print all subsets that form anagrams.
 
-Check my solution at :download:`anagrams.py <../coding-exercises/anagrams.py>`
+Check my solution at :download:`anagrams.py <../coding-exercises/anagrams.py>`. Running::
+
+   python anagrams.py < liste.de.mots.francais.frgut.txt 
+
+will list *all* anagrams in French! (:download:`liste.de.mots.francais.frgut.txt <../coding-exercises/liste.de.mots.francais.frgut.txt>` contains a list of French words)
+
+
+
 
 
 File reading and writing

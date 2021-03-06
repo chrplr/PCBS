@@ -20,6 +20,10 @@ If, instead, you obtain a message ending in::
 
 you should check the instructions in :doc:`software-installation`.
 
+
+Displaying geometric shapes
+---------------------------
+
 Here is a Python script that opens a window and displays a square:
 
 .. code:: python
@@ -87,21 +91,24 @@ Exercise (*): make a copy of the script and modify the copy to
 
 Remark: you can get some help from:
    - `Pygame drawing basics <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__
-   - `Pygame's online documentation <https://www.pygame.org/docs/>`
+   - `Pygame online documentation <https://www.pygame.org/docs/>`__
 
 
-It is of course possible to draw other shapes. Check out for example the two scripts :download:`circle.py <../stimuli/visual-illusions/circle.py>` and :download:`triangle.py <../stimuli/visual-illusions/triangle.py>`.
+It is of course possible to draw other shapes. Check out for example the two scripts:
+- :download:`circle.py <../stimuli/visual-illusions/circle.py>` and
+- :download:`triangle.py <../stimuli/visual-illusions/triangle.py>`
 
-Exercice (*): modify the script :download:`circle.py <../stimuli/visual-illusions/circle.py>` to draw two circles, one red and on blue, side-by-side
+Exercice (*): modify :download:`circle.py <../stimuli/visual-illusions/circle.py>` to draw *two* circles, one red and on blue, side-by-side
 
    .. figure:: images/two-circles.png
       :alt: Two Circles
 
       Two Circles
 
-  (check out :download:`two_circles.py <../stimuli/visual-illusions/two_circles.py>`)
+  (solution in :download:`two_circles.py <../stimuli/visual-illusions/two_circles.py>`)
 
-Note that the circles are filled with the color (actually, they are disks). Browse pygame's documentation to find out how to color the circumference of the circle and keep its inner part white.
+
+Exercise (*): Note that the circles above are filled with the color (actually, they are disks). Browse `Pygame online documentation <https://www.pygame.org/docs/>`__ to find how to color the circumference of the circle and keep its inner part white.
 
 
 Troxler effect
@@ -141,7 +148,7 @@ There exists many variants, e.g. the Kanizsa squares:
       Kanizsa square
 
 
-Exercice (**): Inspiring yourself from the code in :download:`square.py <../stimuli/visual-illusions/square.py>` and  :download:`circle.py <../stimuli/visual-illusions/circle.py>`, create a script that displays the (right) Kanisza square .
+Exercice (\*\*): Inspiring yourself from the code in :download:`square.py <../stimuli/visual-illusions/square.py>` and  :download:`circle.py <../stimuli/visual-illusions/circle.py>`, create a script that displays the (right) Kanisza square .
 
   A possible solution is proposed in :download:`kanizsa-square.py <../stimuli/visual-illusions/kanizsa-square.py>`
 

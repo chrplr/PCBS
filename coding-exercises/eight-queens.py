@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
-# Time-stamp: <2021-03-05 15:34:39 christophe@pallier.org>
+# Time-stamp: <2021-03-06 10:14:43 christophe@pallier.org>
 
 
 """Solver for the eight queens puzzle.
+
+From http://code.activestate.com/recipes/576647-eight-queens-six-lines/
+
 
 The eight queens puzzle is the problem of placing eight chess queens on an 8×8
 chessboard so that no two queens threaten each other; thus, a solution requires
@@ -26,9 +29,6 @@ removed).
 
 Any permutation with non-overlapping diagonals is a solution. So, we print it
 and continue checking other permutations.
-
-The code here is inspired from
-http://code.activestate.com/recipes/576647-eight-queens-six-lines/
 
 """
 
