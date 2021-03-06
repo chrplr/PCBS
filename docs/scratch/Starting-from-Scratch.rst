@@ -2,10 +2,11 @@
 Starting from Scratch
 *********************
 
+.. contents::
+
 
 What is programming?
 ====================
-
 
 Programming = solving a problem with code
 -----------------------------------------
@@ -44,7 +45,7 @@ Things to be aware of
 . . .
 
 Starting with Scratch
-----------------------
+---------------------
 
 To begin our journey into programming, we will use Scratch_, a system developed the MIT media lab to teach how to program to kids.
 
@@ -68,7 +69,7 @@ First steps
 ===========
 
 Program 001
-~~~~~~~~~~~
+-----------
 
 In the ``motion`` group, take the instruction ``turn 15 degrees`` and drag
 it onto the ``Scripts`` panel.
@@ -82,7 +83,7 @@ In Scratch, when one double-clicks an instruction in the ``Scripts``
 panel, the computer **executes** it.
 
 Program 002
-~~~~~~~~~~~
+-----------
 
 Drag the instruction ``move 10 steps`` from the motion group, and add it
 to the bottom of the instruction ``turn 15 degrees``. Change the value
@@ -101,7 +102,7 @@ You have just created a **block** of instructions, that is, your first
    the script window and execute it)
 
 Program 003
-~~~~~~~~~~~
+-----------
 
 Click on the ``pen`` group, and add ``pen down`` at the top of the block.
 
@@ -110,7 +111,7 @@ Click on the ``pen`` group, and add ``pen down`` at the top of the block.
 Run it.
 
 Program 004
-~~~~~~~~~~~
+-----------
 
 Construct the following scripts and play with them until you are sure to
 understand the behavior of the computer..
@@ -128,7 +129,7 @@ Loops
 =====
 
 repeat (``for`` loop)
-===================
+---------------------
 
 Computers are good at doing tasks repeatedly (as they do not get tired).
 
@@ -144,7 +145,7 @@ Click on the “Control” group, and try to construct the following script:
 -  Replace the repeat instruction by ``forever``.
 
 Repeat until
-~~~~~~~~~~~~
+------------
 
 Modify the script as follows:
 
@@ -231,8 +232,11 @@ coordinates where to sprite is instructed to moved to.
 Second series of exercices
 ==========================
 
-1. ``Multiply by adding``. Write a program that reads in two integer
-   numbers and displays their sum.
+Multiplication
+--------------
+
+“Multiply by adding”: Write a program that reads in two integer numbers and
+displays their sum.
 
 . . .
 
@@ -240,15 +244,21 @@ Second series of exercices
 
 . . .
 
-2. “Guess a number”. Make Scratch pick up a random number in the
-   interval [1,100], and loop asking you for a guess and reply either
-   ``too low``, ``too high``, or ``you win!`` depending on your answer.
+Guess a number
+--------------
+
+“Guess a number”. Make Scratch pick up a random number in the interval [1,100],
+and loop asking you for a guess and reply either ``too low``, ``too high``, or
+``you win!`` depending on your answer.
 
 . . .
 
 |image14|
 
 . . .
+
+Estimate PI
+-----------
 
 3. We are going to estimate the number PI by a Monte Carlo method.:
 

@@ -34,10 +34,7 @@ comments. For example:
 
 -  Rmarkdown:
 
-
-
-   -  `comparing two treatments with
-      R http:/chrplr.github.io/PCBS//data-analysis/comparing-two-means-dependent-groups.html
+   -  `comparing two treatments with R <http:/chrplr.github.io/PCBS//data-analysis/comparing-two-means-dependent-groups.html>`__
       (source: https://github.com/chrplr/PCBS/blob/master/data-analysis/comparing-two-means-dependent-groups.Rmd)
    -  see more at https://github.com/chrplr/statistics_with_R
 
@@ -45,12 +42,9 @@ comments. For example:
 
 -  jupyter notebook:
 
-   -  `tutorial on Fourier
-      analysis http:/chrplr.github.io/PCBS//data-analysis/short-intro-fourier.html
-   -  `tutorial on fMRI data
-      analysis http:/chrplr.github.io/PCBS//data-analysis/Example+of+a+single+subject-single+run+fMRI+analysis+with+nistats.html
-   -  see more at
-      https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks
+   -  `tutorial on Fourier analysis <http:/chrplr.github.io/PCBS//data-analysis/short-intro-fourier.html>`__
+   -  `tutorial on fMRI data analysis <http:/chrplr.github.io/PCBS//data-analysis/Example+of+a+single+subject-single+run+fMRI+analysis+with+nistats.html>`__
+   -  see more at https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks
 
 Remarks:
 
@@ -82,16 +76,13 @@ Remarks:
 
 To go further;
 
--  \``Software Carpentry’’ : a site dedicated to teaching basic
-   computing skills to researchers.
-   https://software-carpentry.org/lessons
+-  “Software Carpentry” : a site dedicated to teaching basic
+   computing skills to researchers. See https://software-carpentry.org/lessons
 
--  INRIA’s MOOC \``Recherche reproductible: principes méthodologiques
-   pour une science transparente’’
-   https://learninglab.inria.fr/mooc-recherche-reproductible-principes-methodologiques-pour-une-science-transparente/
+-  INRIA’s MOOC: `“Recherche reproductible: principes méthodologiques
+   pour une science transparente” <https://learninglab.inria.fr/mooc-recherche-reproductible-principes-methodologiques-pour-une-science-transparente/>`__
 
--  Simon Tatham \``How to Report Bugs Effectively’’
-   https://www.chiark.greenend.org.uk/~sgtatham/bugs.html
+-  Simon Tatham's  `“How to Report Bugs Effectively” <https://www.chiark.greenend.org.uk/~sgtatham/bugs.html>`__
 
 --------------
 
@@ -103,16 +94,12 @@ already have such a function built in — for example, in Emacs, it is
 accessible through the command ``ediff`` or the menu *Tools/Compare*).
 
 You can also compare two files on the command-line with the command
-``diff``:
-
-::
+``diff``::
 
    diff file1 file2
 
 But I recommend another command, ``meld``, as it has a more
-user-friendly output:
-
-::
+user-friendly output::
 
    meld file1 file2
 
@@ -121,9 +108,7 @@ user-friendly output:
 http://meldmerge.org)
 
 These tools also work on directories. To quickly check if there is any
-difference between two directories:
-
-::
+difference between two directories::
 
    diff -r -q dir1 dir2
 

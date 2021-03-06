@@ -1,11 +1,11 @@
-======================
- Programming Exercices
-======================
+****************
+Coding Exercises
+****************
 
 .. contents::
 
 
-(Note: Solutions to most exercises are available in https://github.com/chrplr/PCBS/tree/master/coding-exercises)
+(Note: Solutions to most exercises are available in https://github.com/chrplr/PCBS/tree/master/coding-exercises )
 
 
 Flow control
@@ -21,6 +21,26 @@ Write a python script that prints 1000 times the line ``All work and no play mak
 
 Check a solution at :download:`shining.py  <../coding-exercises/shining.py>`
 
+Multiplication tables
+~~~~~~~~~~~~~~~~~~~~~
+
+Write a script that displays the tables of multiplication from 1 to 10 as a table::
+
+    1   2   3   4   5   6   7   8   9  10 
+    2   4   6   8  10  12  14  16  18  20 
+    3   6   9  12  15  18  21  24  27  30 
+    4   8  12  16  20  24  28  32  36  40 
+    5  10  15  20  25  30  35  40  45  50 
+    6  12  18  24  30  36  42  48  54  60 
+    7  14  21  28  35  42  49  56  63  70 
+    8  16  24  32  40  48  56  64  72  80 
+    9  18  27  36  45  54  63  72  81  90 
+   10  20  30  40  50  60  70  80  90 100 
+
+
+Check out  :download:`multiplication_table.py  <../coding-exercises/multiplication-table.py>` for a solution.
+
+
 Taxis
 ~~~~~
 
@@ -31,41 +51,17 @@ Two taxi companies propose differents pricing schemes:
 
 Write code to find which company is the cheapest as a function of the distance to travel.
 
-Compare it to :download:`taxis.py  <../coding-exercises/taxis.py>`
-
-
-Multiplication tables
-~~~~~~~~~~~~~~~~~~~~~
-
-Write a script that displays the tables of multiplication from 1 to 10 as a table::::
-
-   1   2   3   4   5   6   7   8   9  10 
-   2   4   6   8  10  12  14  16  18  20 
-   3   6   9  12  15  18  21  24  27  30 
-   4   8  12  16  20  24  28  32  36  40 
-   5  10  15  20  25  30  35  40  45  50 
-   6  12  18  24  30  36  42  48  54  60 
-   7  14  21  28  35  42  49  56  63  70 
-   8  16  24  32  40  48  56  64  72  80 
-   9  18  27  36  45  54  63  72  81  90 
-  10  20  30  40  50  60  70  80  90 100 
-
-
-Notes:
-- you could use `for` loops, and the `range` function.
-- to properly align the numbers, you can read about format strings. https://pyformat.info/#number_padding
-
-Check out  :download:`multiplication_table.py  <../coding-exercises/multiplication-table.py>`
+Check out :download:`taxis.py  <../coding-exercises/taxis.py>`
 
 
 Estimation of PI by a Monte-Carlo method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Read https://academo.org/demos/estimating-pi-monte-carlo/
+One way to estimate the value of the π is to generate a large number of *random points* in the unit square and see how many fall within the unit circle; their proportion is an estimate of the area of the circle. See https://academo.org/demos/estimating-pi-monte-carlo/
 
-Implement the proposed algorithm to estimate the value of PI. 
+Implement the proposed algorithm to estimate the value of π.
 
-Check out  :download:`pi_monte_carlo.py  <../coding-exercises/pi_monte_carlo.py>`
+Check out  :download:`pi_monte_carlo.py  <_static/pi_monte_carlo.py>`
 
 
 Computer-guess-a-number
@@ -134,8 +130,6 @@ Pascal triangle
 Write a program that prints the first N rows of Pascal’s triangle (see
 https://www.youtube.com/watch?v=XMriWTvPXHI). For example::
 
-   ```
-   %run triangle-de-Pascal.py
    1 
    1   1 
    1   2   1 
@@ -146,7 +140,7 @@ https://www.youtube.com/watch?v=XMriWTvPXHI). For example::
    1   7  21  35  35  21   7   1 
    1   8  28  56  70  56  28   8   1 
    1   9  36  84 126 126  84  36   9   1 
-   ```
+
 
 To solve this problem, one solution is to store the values
 of the current line in a Python list, and write a function that
@@ -154,7 +148,9 @@ given a list as an argument, calculates and returns the following line
 in a new list.
 
 Proposed solutions:
-- :download:`Pascal-triangle_v1.py <../coding-exercises/Pascal-triangle_v1.py>` - :download:`Pascal-triangle_v2.py <../coding-exercises/Pascal-triangle_v2.py>` (advanced)
+
+  - :download:`Pascal-triangle_v1.py <../coding-exercises/Pascal-triangle_v1.py>` 
+  - :download:`Pascal-triangle_v2.py <../coding-exercises/Pascal-triangle_v2.py>` 
 
 
 Functions

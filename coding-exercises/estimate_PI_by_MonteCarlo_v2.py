@@ -1,19 +1,15 @@
 #! /usr/bin/env python3
-# Time-stamp: <2019-03-11 09:43:06 christophe@pallier.org>
+# Time-stamp: <2021-03-06 12:20:14 christophe@pallier.org>
 
 """ Implements a [Monte Carlo estimation of PI](https://academo.org/demos/estimating-pi-monte-carlo/) """
 
-from numpy.random import ranf
+import numpy as np
+from numpy.random import default_rng
 
+N = 10000000
 
-def estimate_pi_over_4(ndraws):
-    return sum([(x**2 + y**2) < 1 for (x, y) in zip(ranf(ndraws), ranf(ndraws))]) / ndraws
+rng = default_rng()
+x = rng.uniform(low=0.0, high=1.0, size=N)
+y = rng.uniform(low=0.0, high=1.0, size=N)
 
-if __name__ == '__main__':
-    for n in [100, 1000, 10000, 100000, 1000000]:
-        print(f'\nsample size {n:7d} :', end='  ')
-        estimates = [4 * estimate_pi_over_4(n) for _ in range(10)]
-        for e in estimates:
-            print(f"{e:.5f}", end=' ')
-
-
+print("est =", 4 * np.mean(x**2 + y**2 < 1))

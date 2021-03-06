@@ -14,7 +14,7 @@ Git repository on github (contains solutions to exercices, ...)
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    timetable
