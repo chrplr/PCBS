@@ -4,16 +4,17 @@
 The goal is to make code **easy to understand** and **easy to change**.
 
 * **CC1 Use meaningful names**.
-Reveal purpose. Replace magic numbers.
-Say what functions do. Describe side-effects. Remove ambiguity.
-Use different words for different concepts.
-Use the appropriate level of abstraction
 
-* **CC2 Create functions that do one thing**. Build abstractions.
+    Reveal purpose. Replace magic numbers.
+    Say what functions do. Describe side-effects. Remove ambiguity.
+    Use different words for different concepts.
+    Use the appropriate level of description
 
-* **CC3 DRY: Don't Repeat Yourself**. Avoid code duplication.
+* **CC2 Create functions that do one thing**.
 
-* **CC4 Explain yourself in code, not comments**. Comments do not make up for bad code.
+* **CC3 DRY: Don't Repeat Yourself**.
+
+* **CC4 Explain yourself in code, not comments**.
 
 ---
 

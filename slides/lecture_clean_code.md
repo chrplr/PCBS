@@ -318,9 +318,9 @@ A way to remove the confusion:
     !python
     distance(couple_1, couple_2)
 
-* **Problem:** we are **mixing two levels of abstraction**
+* **Problem:** we are **mixing two levels of description** <!-- or abstraction -->
     * Level 1: the distance between some abstract objects
-    * Level 2: the low-level implementation of these objects as couples
+    * Level 2: the implementation of these objects as couples
 
 
 ---
@@ -330,7 +330,7 @@ A solution:
     !python
     distance(point_1, point_2)
 
-- **[CC1] Use the appropriate level of abstraction**
+- **[CC1] Use the appropriate level of description** <!-- or abstraction -->
 
 ---
 
@@ -340,7 +340,7 @@ A solution:
     distance_between_points(point_1, point_2)
     distance_between_intervals(interval_1, interval_2)
 
-- **[CC1] Use the appropriate level of abstraction**
+- **[CC1] Use the appropriate level of description** <!-- or abstraction -->
 - If several kinds of distance can be used in your program, you need to disambiguate which kind of distance is computed in the function name.
 
 ---
@@ -409,10 +409,9 @@ A solution:
 
 **CC2. Create functions that do one thing**
 
-- A lot of programming is about **building abstractions**
-- Abstractions help you reason about your program and control its intellectual complexity
-- Top-down approach: Break the function down into more elementary ones
-- Bottom-up approach: Chunk a combination of operations in one function (which you manipulate as one conceptual unit)
+- A lot of programming is about **chunking** <!-- **building abstractions** -->
+- Chunking means grouping elements together in a meaningful named *chunk* (e.g. with a function) that you can manipulate as one conceptual unit
+- These chunks help you reason about your program and control its intellectual complexity
 
 ---
 
@@ -568,14 +567,15 @@ Example from a past student:
 The goal is to make code **easy to understand** and **easy to change**.
 
 * **CC1 Use meaningful names**.
-Reveal purpose. Replace magic numbers.
-Say what functions do. Describe side-effects. Remove ambiguity.
-Use different words for different concepts.
-Use the appropriate level of abstraction
 
-* **CC2 Create functions that do one thing**. Build abstractions.
+    Reveal purpose. Replace magic numbers.
+    Say what functions do. Describe side-effects. Remove ambiguity.
+    Use different words for different concepts.
+    Use the appropriate level of description
 
-* **CC3 DRY: Don't Repeat Yourself**. Avoid code duplication.
+* **CC2 Create functions that do one thing**.
 
-* **CC4 Explain yourself in code, not comments**. Comments do not make up for bad code.
+* **CC3 DRY: Don't Repeat Yourself**.
+
+* **CC4 Explain yourself in code, not comments**.
 
