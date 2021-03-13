@@ -449,7 +449,7 @@ A solution:
 
 ---
 
-- A solution:
+- [A solution](images/DRY_example_student_good_annotated_sm.png):
 
 ![](images/DRY_example_student_good_annotated_sm.png)
 
