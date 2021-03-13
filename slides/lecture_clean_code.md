@@ -1,5 +1,3 @@
-
-
 # Clean Code
 
 
@@ -58,17 +56,19 @@ w = x2 - x1
     <!-- * what type of data do they hold (e.g. scalar, vector…)? -->
 * Does "w" stand for "weight", "window", "word", or is it just a symbol for a generic computation?
 
+
+
 ---
 
 ```
 w = x2 - x1
 ```
 
-* What are `w`, `x1` and `x2`?
-    * what do they represent?
-    * what are they used for?
-    <!-- * what type of data do they hold (e.g. scalar, vector…)? -->
 
+* What are `w`, `x1` and `x2`?
+    * What do they represent?
+    * What are they used for?
+    <!-- * what type of data do they hold (e.g. scalar, vector…)? -->
 * Does "w" stand for "weight", "window", "word", or is it just a symbol for a generic computation?
 
 
@@ -121,12 +121,46 @@ width = x_right - x_left + 10
 - Can I change it?
 
 ```
-width = x_right - x_left + 2 * padding_x
+width = x_right - x_left + 2 * horizontal_margin
 ```
 
-- **[CC1]** Replace **magic numbers** with **named constants** or **named parameters**
+- **[CC1]** Replace **magic numbers** with **named variables, parameters, or constants**
 
 ---
+
+**[CC1]** Replace **magic numbers**
+
+    !python
+    def width_with_margins(x_right, x_left):
+        return x_right - x_left + 10
+
+with **named parameters**
+
+    !python
+    def width_with_margins(x_right, x_left, horizontal_margin=5):
+        return x_right - x_left + 2 * horizontal_margin
+
+
+**[CC1]** Replace **magic numbers**
+
+    !python
+    width = width * 0.3937007874
+
+with **named constants**
+
+    !python
+    width_inches = width_cm * INCHES_PER_CENTIMETER
+
+---
+
+Note: *magic numbers* are not necessarily numbers!
+
+```PURPLE_HEX = "#6A0DAD"```
+
+
+---
+
+<!-- ---
 
     !python
     width = (21 - 2 * 1.5) * 0.3937007874
@@ -154,7 +188,7 @@ width = x_right - x_left + 2 * padding_x
 
 - **[CC1]** replace magic numbers with named constants or **named parameters**
 
----
+--- -->
 
 ```
     check_divisible(a, b)
@@ -578,4 +612,14 @@ The goal is to make code **easy to understand** and **easy to change**.
 * **CC3 DRY: Don't Repeat Yourself**.
 
 * **CC4 Explain yourself in code, not comments**.
+
+
+<!-- Remove transition animation between slides -->
+<style>
+div.slide {
+  -webkit-transition: margin 0s ease-in-out;
+  -moz-transition: margin 0s ease-in-out;
+  -o-transition: margin 0s ease-in-out;
+}
+</style>
 

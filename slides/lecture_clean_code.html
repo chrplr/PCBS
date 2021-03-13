@@ -1318,7 +1318,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              1/59
+              1/58
             </aside>
           </footer>
         </div>
@@ -1346,7 +1346,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              2/59
+              2/58
             </aside>
           </footer>
         </div>
@@ -1406,7 +1406,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              3/59
+              3/58
             </aside>
           </footer>
         </div>
@@ -1434,7 +1434,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              4/59
+              4/58
             </aside>
           </footer>
         </div>
@@ -1462,7 +1462,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              5/59
+              5/58
             </aside>
           </footer>
         </div>
@@ -1499,7 +1499,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              6/59
+              6/58
             </aside>
           </footer>
         </div>
@@ -1513,17 +1513,13 @@ easy to navigate between different levels of abstraction)</p>
             
             <section><p><code>w = x2 - x1</code></p>
 <ul>
-<li>
-<p>What are <code>w</code>, <code>x1</code> and <code>x2</code>?</p>
-<ul>
-<li>what do they represent?</li>
-<li>what are they used for?
+<li>What are <code>w</code>, <code>x1</code> and <code>x2</code>?<ul>
+<li>What do they represent?</li>
+<li>What are they used for?
 <!-- * what type of data do they hold (e.g. scalar, vector…)? --></li>
 </ul>
 </li>
-<li>
-<p>Does "w" stand for "weight", "window", "word", or is it just a symbol for a generic computation?</p>
-</li>
+<li>Does "w" stand for "weight", "window", "word", or is it just a symbol for a generic computation?</li>
 </ul>
 <p><code>width = x_right - x_left</code></p>
 <ul>
@@ -1544,7 +1540,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              7/59
+              7/58
             </aside>
           </footer>
         </div>
@@ -1572,7 +1568,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              8/59
+              8/58
             </aside>
           </footer>
         </div>
@@ -1603,7 +1599,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              9/59
+              9/58
             </aside>
           </footer>
         </div>
@@ -1632,7 +1628,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              10/59
+              10/58
             </aside>
           </footer>
         </div>
@@ -1665,7 +1661,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              11/59
+              11/58
             </aside>
           </footer>
         </div>
@@ -1683,9 +1679,9 @@ easy to navigate between different levels of abstraction)</p>
 <li>What does it represent?</li>
 <li>Can I change it?</li>
 </ul>
-<p><code>width = x_right - x_left + 2 * padding_x</code></p>
+<p><code>width = x_right - x_left + 2 * horizontal_margin</code></p>
 <ul>
-<li><strong>[CC1]</strong> Replace <strong>magic numbers</strong> with <strong>named constants</strong> or <strong>named parameters</strong></li>
+<li><strong>[CC1]</strong> Replace <strong>magic numbers</strong> with <strong>named variables, parameters, or constants</strong></li>
 </ul></section>
             
           </div>
@@ -1702,7 +1698,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              12/59
+              12/58
             </aside>
           </footer>
         </div>
@@ -1714,12 +1710,26 @@ easy to navigate between different levels of abstraction)</p>
           <div class="inner">
             
             
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="p">(</span><span class="mi">21</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">1.5</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.3937007874</span>
+            <section><p><strong>[CC1]</strong> Replace <strong>magic numbers</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">width_with_margins</span><span class="p">(</span><span class="n">x_right</span><span class="p">,</span> <span class="n">x_left</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x_right</span> <span class="o">-</span> <span class="n">x_left</span> <span class="o">+</span> <span class="mi">10</span>
 </pre></div>
 </td></tr></table>
-<ul>
-<li><strong>[CC1]</strong> Replace <strong>magic numbers</strong> with named constants or named parameters</li>
-</ul></section>
+<p>with <strong>named parameters</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">width_with_margins</span><span class="p">(</span><span class="n">x_right</span><span class="p">,</span> <span class="n">x_left</span><span class="p">,</span> <span class="n">horizontal_margin</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x_right</span> <span class="o">-</span> <span class="n">x_left</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">horizontal_margin</span>
+</pre></div>
+</td></tr></table>
+<p><strong>[CC1]</strong> Replace <strong>magic numbers</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="n">width</span> <span class="o">*</span> <span class="mf">0.3937007874</span>
+</pre></div>
+</td></tr></table>
+<p>with <strong>named constants</strong></p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">width_inches</span> <span class="o">=</span> <span class="n">width_cm</span> <span class="o">*</span> <span class="n">INCHES_PER_CENTIMETER</span>
+</pre></div>
+</td></tr></table></section>
             
           </div>
           <div class="presenter_notes">
@@ -1735,7 +1745,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              13/59
+              13/58
             </aside>
           </footer>
         </div>
@@ -1743,20 +1753,12 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-14">
+        <div class="slide slide-14">
           <div class="inner">
             
             
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">INCHES_PER_CENTIMETER</span> <span class="o">=</span> <span class="mf">0.3937007874</span>
-<span class="c1"># ...</span>
-<span class="n">width</span> <span class="o">=</span> <span class="p">(</span><span class="mi">21</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">1.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">INCHES_PER_CENTIMETER</span>
-</pre></div>
-</td></tr></table>
-<ul>
-<li><strong>[CC1]</strong> Replace magic numbers with <strong>named constants</strong> or named parameters</li>
-</ul></section>
+            <section><p>Note: <em>magic numbers</em> are not necessarily numbers!</p>
+<p><code>PURPLE_HEX = "#6A0DAD"</code></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1772,7 +1774,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              14/59
+              14/58
             </aside>
           </footer>
         </div>
@@ -1780,54 +1782,41 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-15">
+        <div class="slide slide-15">
           <div class="inner">
             
             
-            <section><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">INCHES_PER_CENTIMETER</span> <span class="o">=</span> <span class="mf">0.3937007874</span>
-<span class="c1"># ...</span>
-<span class="k">def</span> <span class="nf">get_content_width</span><span class="p">(</span><span class="n">page_width_cm</span><span class="o">=</span><span class="mf">21.0</span><span class="p">,</span> <span class="n">page_margin_cm</span><span class="o">=</span><span class="mf">1.5</span><span class="p">):</span>
-    <span class="n">content_width_cm</span> <span class="o">=</span> <span class="p">(</span><span class="n">page_width_cm</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">page_margin_cm</span><span class="p">)</span>
-    <span class="n">content_width_inches</span> <span class="o">=</span> <span class="n">content_width_cm</span> <span class="o">*</span> <span class="n">INCHES_PER_CENTIMETER</span>
-    <span class="k">return</span> <span class="n">content_width_inches</span>
-</pre></div>
-</td></tr></table>
-<ul>
-<li><strong>[CC1]</strong> replace magic numbers with named constants or <strong>named parameters</strong></li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="lecture_clean_code.md">lecture_clean_code.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              15/59
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: lecture_clean_code.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-16">
-          <div class="inner">
-            
-            
-            <section><p><code>check_divisible(a, b)</code></p>
+            <section><!-- ---
+
+    !python
+    width = (21 - 2 * 1.5) * 0.3937007874
+
+- **[CC1]** Replace **magic numbers** with named constants or named parameters
+
+---
+
+    !python
+    INCHES_PER_CENTIMETER = 0.3937007874
+    # ...
+    width = (21 - 2 * 1.5) * INCHES_PER_CENTIMETER
+
+- **[CC1]** Replace magic numbers with **named constants** or named parameters
+
+---
+
+    !python
+    INCHES_PER_CENTIMETER = 0.3937007874
+    # ...
+    def get_content_width(page_width_cm=21.0, page_margin_cm=1.5):
+        content_width_cm = (page_width_cm - 2 * page_margin_cm)
+        content_width_inches = content_width_cm * INCHES_PER_CENTIMETER
+        return content_width_inches
+
+- **[CC1]** replace magic numbers with named constants or **named parameters**
+
+--- -->
+
+<p><code>check_divisible(a, b)</code></p>
 <ul>
 <li>What do you expect this will do?</li>
 </ul></section>
@@ -1846,7 +1835,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              16/59
+              15/58
             </aside>
           </footer>
         </div>
@@ -1854,7 +1843,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-17">
+        <div class="slide slide-16">
           <div class="inner">
             
             
@@ -1882,7 +1871,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              17/59
+              16/58
             </aside>
           </footer>
         </div>
@@ -1890,7 +1879,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-18">
+        <div class="slide has_code slide-17">
           <div class="inner">
             
             
@@ -1918,7 +1907,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              18/59
+              17/58
             </aside>
           </footer>
         </div>
@@ -1926,7 +1915,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-19">
+        <div class="slide has_code slide-18">
           <div class="inner">
             
             
@@ -1961,7 +1950,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              19/59
+              18/58
             </aside>
           </footer>
         </div>
@@ -1969,7 +1958,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-20">
+        <div class="slide has_code slide-19">
           <div class="inner">
             
             
@@ -1991,7 +1980,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              20/59
+              19/58
             </aside>
           </footer>
         </div>
@@ -1999,7 +1988,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-21">
+        <div class="slide has_code slide-20">
           <div class="inner">
             
             
@@ -2026,7 +2015,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              21/59
+              20/58
             </aside>
           </footer>
         </div>
@@ -2034,7 +2023,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-22">
+        <div class="slide has_code slide-21">
           <div class="inner">
             
             
@@ -2057,7 +2046,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              22/59
+              21/58
             </aside>
           </footer>
         </div>
@@ -2065,7 +2054,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-23">
+        <div class="slide has_code slide-22">
           <div class="inner">
             
             
@@ -2094,7 +2083,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              23/59
+              22/58
             </aside>
           </footer>
         </div>
@@ -2102,7 +2091,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-24">
+        <div class="slide has_code slide-23">
           <div class="inner">
             
             
@@ -2129,7 +2118,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              24/59
+              23/58
             </aside>
           </footer>
         </div>
@@ -2137,7 +2126,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-25">
+        <div class="slide has_code slide-24">
           <div class="inner">
             
             
@@ -2168,7 +2157,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              25/59
+              24/58
             </aside>
           </footer>
         </div>
@@ -2176,7 +2165,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-26">
+        <div class="slide has_code slide-25">
           <div class="inner">
             
             
@@ -2213,7 +2202,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              26/59
+              25/58
             </aside>
           </footer>
         </div>
@@ -2221,7 +2210,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-27">
+        <div class="slide has_code slide-26">
           <div class="inner">
             
             
@@ -2252,7 +2241,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              27/59
+              26/58
             </aside>
           </footer>
         </div>
@@ -2260,7 +2249,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-28">
+        <div class="slide has_code slide-27">
           <div class="inner">
             
             
@@ -2294,7 +2283,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              28/59
+              27/58
             </aside>
           </footer>
         </div>
@@ -2302,7 +2291,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-29">
+        <div class="slide has_code slide-28">
           <div class="inner">
             
             
@@ -2327,7 +2316,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              29/59
+              28/58
             </aside>
           </footer>
         </div>
@@ -2335,7 +2324,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-30">
+        <div class="slide has_code slide-29">
           <div class="inner">
             
             
@@ -2373,7 +2362,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              30/59
+              29/58
             </aside>
           </footer>
         </div>
@@ -2381,7 +2370,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-31">
+        <div class="slide has_code slide-30">
           <div class="inner">
             
             
@@ -2410,7 +2399,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              31/59
+              30/58
             </aside>
           </footer>
         </div>
@@ -2418,7 +2407,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-32">
+        <div class="slide has_code slide-31">
           <div class="inner">
             
             
@@ -2444,7 +2433,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              32/59
+              31/58
             </aside>
           </footer>
         </div>
@@ -2452,7 +2441,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-33">
+        <div class="slide has_code slide-32">
           <div class="inner">
             
             
@@ -2481,7 +2470,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              33/59
+              32/58
             </aside>
           </footer>
         </div>
@@ -2489,7 +2478,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-34">
+        <div class="slide has_code slide-33">
           <div class="inner">
             
             
@@ -2529,7 +2518,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              34/59
+              33/58
             </aside>
           </footer>
         </div>
@@ -2537,7 +2526,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-35">
+        <div class="slide has_code slide-34">
           <div class="inner">
             
             
@@ -2579,7 +2568,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              35/59
+              34/58
             </aside>
           </footer>
         </div>
@@ -2587,7 +2576,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-36">
+        <div class="slide has_code slide-35">
           <div class="inner">
             
             
@@ -2615,7 +2604,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              36/59
+              35/58
             </aside>
           </footer>
         </div>
@@ -2623,7 +2612,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-37">
+        <div class="slide slide-36">
           <div class="inner">
             
             <header><h1><strong>CC2. Create functions that do one thing</strong></h1></header>
@@ -2643,7 +2632,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              37/59
+              36/58
             </aside>
           </footer>
         </div>
@@ -2651,7 +2640,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-38">
+        <div class="slide slide-37">
           <div class="inner">
             
             
@@ -2677,7 +2666,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              38/59
+              37/58
             </aside>
           </footer>
         </div>
@@ -2685,7 +2674,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-39">
+        <div class="slide slide-38">
           <div class="inner">
             
             
@@ -2709,7 +2698,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              39/59
+              38/58
             </aside>
           </footer>
         </div>
@@ -2717,7 +2706,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-40">
+        <div class="slide slide-39">
           <div class="inner">
             
             
@@ -2742,7 +2731,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              40/59
+              39/58
             </aside>
           </footer>
         </div>
@@ -2750,7 +2739,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-41">
+        <div class="slide slide-40">
           <div class="inner">
             
             <header><h1><strong>3.</strong> [Wait for it]</h1></header>
@@ -2770,7 +2759,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              41/59
+              40/58
             </aside>
           </footer>
         </div>
@@ -2778,7 +2767,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-42">
+        <div class="slide slide-41">
           <div class="inner">
             
             
@@ -2803,7 +2792,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              42/59
+              41/58
             </aside>
           </footer>
         </div>
@@ -2811,7 +2800,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-43">
+        <div class="slide slide-42">
           <div class="inner">
             
             
@@ -2831,7 +2820,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              43/59
+              42/58
             </aside>
           </footer>
         </div>
@@ -2839,7 +2828,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-44">
+        <div class="slide slide-43">
           <div class="inner">
             
             
@@ -2866,7 +2855,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              44/59
+              43/58
             </aside>
           </footer>
         </div>
@@ -2874,7 +2863,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-45">
+        <div class="slide slide-44">
           <div class="inner">
             
             <header><h1><strong>CC3. DRY: Don't Repeat Yourself</strong></h1></header>
@@ -2894,7 +2883,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              45/59
+              44/58
             </aside>
           </footer>
         </div>
@@ -2902,7 +2891,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-46">
+        <div class="slide slide-45">
           <div class="inner">
             
             
@@ -2925,7 +2914,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              46/59
+              45/58
             </aside>
           </footer>
         </div>
@@ -2933,7 +2922,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-47">
+        <div class="slide slide-46">
           <div class="inner">
             
             
@@ -2956,7 +2945,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              47/59
+              46/58
             </aside>
           </footer>
         </div>
@@ -2964,7 +2953,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-48">
+        <div class="slide slide-47">
           <div class="inner">
             
             
@@ -2984,7 +2973,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              48/59
+              47/58
             </aside>
           </footer>
         </div>
@@ -2992,7 +2981,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-49">
+        <div class="slide slide-48">
           <div class="inner">
             
             <header><h1><strong>CC4. Explain yourself in code, not comments</strong></h1></header>
@@ -3012,7 +3001,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              49/59
+              48/58
             </aside>
           </footer>
         </div>
@@ -3020,7 +3009,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-50">
+        <div class="slide has_code slide-49">
           <div class="inner">
             
             
@@ -3049,7 +3038,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              50/59
+              49/58
             </aside>
           </footer>
         </div>
@@ -3057,7 +3046,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-51">
+        <div class="slide has_code slide-50">
           <div class="inner">
             
             
@@ -3091,7 +3080,7 @@ easy to navigate between different levels of abstraction)</p>
             </aside>
             
             <aside class="page_number">
-              51/59
+              50/58
             </aside>
           </footer>
         </div>
@@ -3099,7 +3088,7 @@ easy to navigate between different levels of abstraction)</p>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-52">
+        <div class="slide has_code slide-51">
           <div class="inner">
             
             
@@ -3133,7 +3122,7 @@ obscure code with lots of comments</li>
             </aside>
             
             <aside class="page_number">
-              52/59
+              51/58
             </aside>
           </footer>
         </div>
@@ -3141,7 +3130,7 @@ obscure code with lots of comments</li>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-53">
+        <div class="slide has_code slide-52">
           <div class="inner">
             
             
@@ -3175,7 +3164,7 @@ obscure code with lots of comments</li>
             </aside>
             
             <aside class="page_number">
-              53/59
+              52/58
             </aside>
           </footer>
         </div>
@@ -3183,7 +3172,7 @@ obscure code with lots of comments</li>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-54">
+        <div class="slide has_code slide-53">
           <div class="inner">
             
             
@@ -3212,7 +3201,7 @@ obscure code with lots of comments</li>
             </aside>
             
             <aside class="page_number">
-              54/59
+              53/58
             </aside>
           </footer>
         </div>
@@ -3220,7 +3209,7 @@ obscure code with lots of comments</li>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-55">
+        <div class="slide has_code slide-54">
           <div class="inner">
             
             
@@ -3252,7 +3241,7 @@ obscure code with lots of comments</li>
             </aside>
             
             <aside class="page_number">
-              55/59
+              54/58
             </aside>
           </footer>
         </div>
@@ -3260,7 +3249,7 @@ obscure code with lots of comments</li>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-56">
+        <div class="slide has_code slide-55">
           <div class="inner">
             
             
@@ -3286,7 +3275,7 @@ obscure code with lots of comments</li>
             </aside>
             
             <aside class="page_number">
-              56/59
+              55/58
             </aside>
           </footer>
         </div>
@@ -3294,7 +3283,7 @@ obscure code with lots of comments</li>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-57">
+        <div class="slide has_code slide-56">
           <div class="inner">
             
             
@@ -3317,7 +3306,7 @@ obscure code with lots of comments</li>
             </aside>
             
             <aside class="page_number">
-              57/59
+              56/58
             </aside>
           </footer>
         </div>
@@ -3325,7 +3314,7 @@ obscure code with lots of comments</li>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-58">
+        <div class="slide has_code slide-57">
           <div class="inner">
             
             
@@ -3351,7 +3340,7 @@ obscure code with lots of comments</li>
             </aside>
             
             <aside class="page_number">
-              58/59
+              57/58
             </aside>
           </footer>
         </div>
@@ -3359,7 +3348,7 @@ obscure code with lots of comments</li>
       
       <!-- slide source: lecture_clean_code.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-59">
+        <div class="slide slide-58">
           <div class="inner">
             
             <header><h1>Recap: Clean Code Principles</h1></header>
@@ -3383,7 +3372,16 @@ Use the appropriate level of description</p>
 <li>
 <p><strong>CC4 Explain yourself in code, not comments</strong>.</p>
 </li>
-</ul></section>
+</ul>
+<!-- Remove transition animation between slides -->
+
+<style>
+div.slide {
+  -webkit-transition: margin 0s ease-in-out;
+  -moz-transition: margin 0s ease-in-out;
+  -o-transition: margin 0s ease-in-out;
+}
+</style></section>
             
           </div>
           <div class="presenter_notes">
@@ -3399,7 +3397,7 @@ Use the appropriate level of description</p>
             </aside>
             
             <aside class="page_number">
-              59/59
+              58/58
             </aside>
           </footer>
         </div>
@@ -3624,13 +3622,13 @@ Use the appropriate level of description</p>
       
       
       <tr id="toc-row-36">
-        <th><a href="#slide36">-</a></th>
+        <th><a href="#slide36"><strong>CC2. Create functions that do one thing</strong></a></th>
         <td><a href="#slide36">36</a></td>
       </tr>
       
       
       <tr id="toc-row-37">
-        <th><a href="#slide37"><strong>CC2. Create functions that do one thing</strong></a></th>
+        <th><a href="#slide37">-</a></th>
         <td><a href="#slide37">37</a></td>
       </tr>
       
@@ -3648,13 +3646,13 @@ Use the appropriate level of description</p>
       
       
       <tr id="toc-row-40">
-        <th><a href="#slide40">-</a></th>
+        <th><a href="#slide40"><strong>3.</strong> [Wait for it]</a></th>
         <td><a href="#slide40">40</a></td>
       </tr>
       
       
       <tr id="toc-row-41">
-        <th><a href="#slide41"><strong>3.</strong> [Wait for it]</a></th>
+        <th><a href="#slide41">-</a></th>
         <td><a href="#slide41">41</a></td>
       </tr>
       
@@ -3672,13 +3670,13 @@ Use the appropriate level of description</p>
       
       
       <tr id="toc-row-44">
-        <th><a href="#slide44">-</a></th>
+        <th><a href="#slide44"><strong>CC3. DRY: Don't Repeat Yourself</strong></a></th>
         <td><a href="#slide44">44</a></td>
       </tr>
       
       
       <tr id="toc-row-45">
-        <th><a href="#slide45"><strong>CC3. DRY: Don't Repeat Yourself</strong></a></th>
+        <th><a href="#slide45">-</a></th>
         <td><a href="#slide45">45</a></td>
       </tr>
       
@@ -3696,13 +3694,13 @@ Use the appropriate level of description</p>
       
       
       <tr id="toc-row-48">
-        <th><a href="#slide48">-</a></th>
+        <th><a href="#slide48"><strong>CC4. Explain yourself in code, not comments</strong></a></th>
         <td><a href="#slide48">48</a></td>
       </tr>
       
       
       <tr id="toc-row-49">
-        <th><a href="#slide49"><strong>CC4. Explain yourself in code, not comments</strong></a></th>
+        <th><a href="#slide49">-</a></th>
         <td><a href="#slide49">49</a></td>
       </tr>
       
@@ -3756,14 +3754,8 @@ Use the appropriate level of description</p>
       
       
       <tr id="toc-row-58">
-        <th><a href="#slide58">-</a></th>
+        <th><a href="#slide58">Recap: Clean Code Principles</a></th>
         <td><a href="#slide58">58</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-59">
-        <th><a href="#slide59">Recap: Clean Code Principles</a></th>
-        <td><a href="#slide59">59</a></td>
       </tr>
       
       
