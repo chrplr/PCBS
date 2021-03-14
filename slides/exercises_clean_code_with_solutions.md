@@ -89,14 +89,11 @@ in which case you will paste your code in commie.io and send us the link.
 
 Review and rewrite: <https://commie.io/#TiA3pEdi>
 
+Cedric's review:
+<https://commie.io/#LV4qePMk>
 
-<!-- bad:
-bad:
-https://commie.io/#TiA3pEdi
-review:
-https://commie.io/#LV4qePMk
-rewrite:
-https://commie.io/#AhgMnvpG -->
+Cedric's rewrite:
+<https://commie.io/#AhgMnvpG>
 
 
 ---
@@ -105,12 +102,11 @@ https://commie.io/#AhgMnvpG -->
 
 Review and rewrite: <https://commie.io/#hTtKALYa>
 
-<!-- bad:
-https://commie.io/#hTtKALYa
-review:
-https://commie.io/#nuFfJsYK
-good:
-https://commie.io/#sGSCItBe -->
+Cedric's review:
+<https://commie.io/#nuFfJsYK>
+
+Cedric's rewrite:
+<https://commie.io/#sGSCItBe>
 
 
 ---
@@ -119,12 +115,11 @@ https://commie.io/#sGSCItBe -->
 
 Review and rewrite: <https://commie.io/#78WDnM28>
 
-<!-- bad:
-https://commie.io/#78WDnM28
-review:
-https://commie.io/#MZApD1ij
-good:
-https://commie.io/#9EmQy6uF -->
+Cedric's review:
+<https://commie.io/#MZApD1ij>
+
+Cedric's rewrite:
+<https://commie.io/#9EmQy6uF>
 
 
 ---
@@ -133,10 +128,7 @@ https://commie.io/#9EmQy6uF -->
 
 Review only: <https://commie.io/#gdaXeLFT>
 
-<!-- bad:
-https://commie.io/#gdaXeLFT
-review:
-https://commie.io/#l0QRPfXR -->
+Cedric's review: <https://commie.io/#l0QRPfXR>
 
 
 
@@ -146,12 +138,11 @@ https://commie.io/#l0QRPfXR -->
 
 Review and rewrite: <https://commie.io/#eQQbuNnx>
 
-<!-- bad:
-https://commie.io/#eQQbuNnx
-review:
-https://commie.io/#i2ZBT6Ts
-[rewrite (paper draft)](images/clean_code_dots_functions.png)
-rewrite (code): <https://commie.io/#kVQXRazr> -->
+Cedric's review: <https://commie.io/#i2ZBT6Ts>
+
+Cedric's rewrite: [paper draft](images/clean_code_dots_functions.png)
+
+Cedric's rewrite: code: <https://commie.io/#kVQXRazr>
 
 
 

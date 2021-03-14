@@ -605,7 +605,7 @@ The goal is to make code **easy to understand** and **easy to change**.
     Reveal purpose. Replace magic numbers.
     Say what functions do. Describe side-effects. Remove ambiguity.
     Use different words for different concepts.
-    Use the appropriate level of description
+    Use the appropriate level of description.
 
 * **CC2 Create functions that do one thing**.
 
