@@ -24,7 +24,7 @@ Analogy between writing code and writing a schedule:
 
     * easy to understand
     (the "things" we care about are immediately visible; unimportant details are abstracted away; easy to see the interactions between different parts;
-    easy to navigate between different levels of abstraction)
+    easy to navigate between different levels of description)
 
     * easy to change
 
@@ -376,6 +376,14 @@ A solution:
 
 - **[CC1] Use the appropriate level of description** <!-- or abstraction -->
 - If several kinds of distance can be used in your program, you need to disambiguate which kind of distance is computed in the function name.
+
+---
+
+Example levels of description
+
+![](images/levels_of_description_sm.png)
+
+(see Abelson & Sussman's [Structure and Interpretation of Computer Programs](https://web.mit.edu/alexmv/6.037/sicp.pdf))
 
 ---
 
