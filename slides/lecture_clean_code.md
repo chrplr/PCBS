@@ -383,7 +383,15 @@ Example levels of description
 
 ![](images/levels_of_description_sm.png)
 
-(see Abelson & Sussman's [Structure and Interpretation of Computer Programs](https://web.mit.edu/alexmv/6.037/sicp.pdf))
+(see Abelson & Sussman's "Structure and Interpretation of Computer Programs")
+
+---
+
+Example levels of description
+
+![](images/levels_of_description_2_sm.png)
+
+(see Abelson & Sussman's "Structure and Interpretation of Computer Programs")
 
 ---
 
