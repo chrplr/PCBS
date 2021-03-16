@@ -56,7 +56,10 @@ Git repository on github (contains solutions to exercices and more)
      -  *  :doc:`stimulus-creation`
    * -  Mar 17
      -  Clean Code
-     - 
+     -
+        * `lecture5 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture5.html>`__ 
+        * `lecture5 exercises <https://rawgit.com/chrplr/PCBS/master/slides/lecture5_exercises.html>`__ 
+
    * -  Mar 24
      -  Expyriment. Git and Github.  Start of the Project
      -   * :doc:`running-experiments` :doc:`git-and-github`
