@@ -173,24 +173,26 @@ Remarks:
   in the file ``$HOME/.bash_profile`` (create it if necessary)
 
 
-Using an Integrated Development Environment like Spyder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Using an Integrated Development Environment (IDE)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Some people like to work within a single application and avoid going
-back and forth from the text editor to the terminal. A nice application
-for Python developement is ``spyder``, which provides an environment
-somewhat similar to the MATLAB IDE.
+back and forth from the text editor to the terminal. The Anaconda Python distribution comes with and integrated development environment (IDE), Spyder_, which provides an environment somewhat similar to the MATLAB IDE. PyCharm_ and `Microsoft Visual Code`_ are two other popular (and more powerful) IDEs. 
+
+
+.. _Spyder: https://www.spyder-ide.org/
+.. _PyCharm: https://www.jetbrains.com/pycharm/
+.. _Microsoft Visual Code: https://code.visualstudio.com/
 
 .. figure:: figures/spyder.png
    :alt: The “spyder” Integrated Development Environment
 
-   The “spyder” Integrated Development Environment
+   The “Spyder” Integrated Development Environment
 
 
-Spyder, PyCharm, ... are very nice IDEs but you should not use them to run python scripts that open new graphics windows (e.g. scripts using ``tkinter``, ``pygame``, ...) because, when such scripts crash, they can leave the IDE in an unstable state. It is always safer to run a script directly from the command line in a terminal windows.
+Visual Code, PyCharm, Spyder... are very nice IDEs but you should not use them to run python scripts that open new graphics windows (e.g. scripts using ``tkinter``, ``pygame``, ...) because, when such scripts crash, they can leave the IDE in an unstable state. It is always safer to run a script directly from the command line in a terminal windows.
 
 One commendable approach is to use an IDE to edit python code, but then  use the command line to run the scripts.
-
 
 
 Perform an interactive data analysis with jupyter-notebook or jupyter-lab
@@ -199,7 +201,7 @@ Perform an interactive data analysis with jupyter-notebook or jupyter-lab
 To perform a data analysis and produce a nicely formatter report, it is recommended to use  ``jupyter-notebook`` or ``jupyter-lab``  (see https://jupyter.org/).
 
 In practice, launch Jupyter Notebook from the Start Menu/Anaconda3 (in Windows) or
-type ``jupyter-notebook`` in a terminal (Linux, MacOS). The "Jupyter homepage" should then open in your browser:
+type ``jupyter notebook`` in a terminal (Linux, MacOS). The "Jupyter homepage" should then open in your browser:
 
 .. figure:: figures/jupyter1.png
    :alt: Jupyter homepage
@@ -220,3 +222,67 @@ example, to send a data analysis report by email.
 Jupyter’s documentation is available at
 http://jupyter.readthedocs.io/en/latest/index.html
 
+
+Developping in Python with Emacs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. list-table:: 
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Action
+     - Shortcut
+     - Function
+
+   * - Comment or Uncomment cleverly
+     - ``M-;``
+     - comment-dwim
+
+   * - Indent
+     - ``C->`` 
+     - python-indent-shift-right
+     
+   * - Unindent 
+     - ``C-<``
+     - python-indent-shift-left
+     
+   * - Navigate the function definitions
+     - ``C-c C-j``
+     - imenu
+     
+   * - Move backward to block
+     - ``M-a`` 
+     - python-nav-backward-block
+     
+   * - Move forward to block
+     - ``M-e``
+     - python-nav-forward-block
+     
+
+   * - Checking for errors, etc.
+     -
+     - flymake
+     
+   * - Checking for errors, etc.
+     -
+     - flycheck
+   
+   * - Reformat code to best practices
+     -
+     - yapify
+     
+   * - Launch the Python Debugger (Pdb_)
+     -
+     - pdb
+     
+
+.. Note::
+   I am actually using Spacemacs_ with the `python layer`_
+
+   See also https://realpython.com/emacs-the-best-python-editor/
+
+
+.. _Pdb: https://realpython.com/python-debugging-pdb/#essential-pdb-commands
+.. _Spacemacs: https://www.spacemacs.org/
+.. _`python layer`: https://develop.spacemacs.org/layers/+lang/python/README.html

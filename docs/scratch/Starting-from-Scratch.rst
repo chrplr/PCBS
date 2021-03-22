@@ -294,6 +294,6 @@ Estimate PI
 .. |image12| image:: img/xy-function.png
 .. |image13| image:: img/multiply.png
 .. |image14| image:: img/guess-a-number.png
-.. |image15| image:: img/estimation-of-pi.png
+.. |image15| image:: img/pi_by_montecarlo.png
 .. |image16| image:: img/Spirograph.jpg
 
