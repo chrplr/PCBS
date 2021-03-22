@@ -235,6 +235,11 @@ your code in commie.io and send us the link.
 
 ![](images/example_rewrite_sm.png)
 
+---
+
+# Solutions to exercises
+
+[link to solutions](./lecture5_exercises_with_solutions.html)
 
 
 <!-- Remove transition animation between slides -->
