@@ -497,6 +497,14 @@ Example levels of description
 
 ![](images/levels_of_description_integers.png)
 
+---
+
+Example levels of description
+
+![](images/levels_of_description_integers.png)
+
+
+see "Structure and Interpretation of Computer Programs" by Abelson & Sussman (specifically the notion of "abstraction barriers")
 
 ---
 
