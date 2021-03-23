@@ -1,43 +1,38 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-05-12 13:01:11 cp983411>
+# Time-stamp: <2021-03-23 19:14:01 christophe@pallier.org>
+""" This is a simple reaction-time experiment.
 
-"""A series of trials where a cross is presented at the center of the screen and the participant must press a key as fast as possible. The statistics of reactions times are displayed at the end of the experiment.
-
+At each trial, a brief sound is played and
+the participant must press a key as quickly as possible.
 """
 
 import random
-import expyriment
-from expyriment.stimuli import Audio, BlankScreen
+from expyriment import design, control, stimuli
 
-exp = expyriment.design.Experiment(name="Visual Detection")
-# expyriment.control.set_develop_mode()
-expyriment.control.initialize(exp)
+N_TRIALS = 50
+MAX_RESPONSE_DELAY = 2000
 
-NTRIALS = 10
-MAXDURATION = 2000
-target = Audio('click.wav')
-blankscreen = BlankScreen()
+exp = design.Experiment(name="Visual Detection", text_size=40)
+control.initialize(exp)
 
-exp.add_data_variable_names(['clock', 'trial', 'wait', 'respkey', 'RT'])
+target = stimuli.Audio('click.wav')
+blankscreen = stimuli.BlankScreen()
+instructions = .TextScreen("Instructions",
+    "Your task is to detect a sound",
+    "Press a key as quickly as possible when you hear any sound. There will be {N_TRIALS} trials ")
 
-expyriment.control.start(skip_ready_screen = True)
+exp.add_data_variable_names(['trial', 'wait', 'respkey', 'RT'])
 
-expyriment.stimuli.TextScreen(
-    "Your task is to detect sound",
-    "Press a key as quickly as possible when you hear the sound. There will be %d trials " % NTRIALS).present()
+control.start(skip_ready_screen=True)
+instructions.present()
 exp.keyboard.wait()
-blankscreen.present()
 
-clock = expyriment.misc.Clock()
-reactiontimes = []
-for i in range(NTRIALS):
-    waitingtime = 2000 + int(1000 * random.expovariate(1))
-    exp.clock.wait(waitingtime)
-    time = clock.time
-    target.present()
-    key, rt = exp.keyboard.wait(duration=MAXDURATION)
-    exp.data.add([time, i, waitingtime, key, rt])
-    reactiontimes.append(rt)
+for i_trial in range(N_TRIALS):
     blankscreen.present()
+    waiting_time = random.randint(MIN_WAIT_TIME, MAX_WAIT_TIME)
+    exp.clock.wait(waiting_time)
+    target.present()
+    key, rt = exp.keyboard.wait(duration=MAX_RESPONSE_DELAY)
+    exp.data.add([i_trial, waiting_time, key, rt])
 
-expyriment.control.end()
+control.end()

@@ -7,18 +7,25 @@ Experiments
 Simple reaction times
 ---------------------
 
-Pygame version
-~~~~~~~~~~~~~~
+Many psychology experiments measure *reaction-times* or *decision-times*.
 
-Download :download:`simple-detection-visual-pygame.py <../experiments/reaction-times/simple-detection-visual-pygame.py>`. Run it with::
+The script :download:`simple-detection-visual-pygame.py <../experiments/reaction-times/simple-detection-visual-pygame.py>` is a simple detection experiment programmed with pygame. The task is simple: the participant must press a key as quickly as possible when a cross appears at the center of the screen. 
 
-     python reaction-times/simple-detection-visual-pygame.py
+Download it and run it with::
 
-The task is simply to press a key as quickly as possible when a cross appears at the center of the screen. The results are save in ``reaction_times.csv``. Open ``R`` and type::
+     python simple-detection-visual-pygame.py
+
+The task is simply to press a key as quickly as possible when a cross appears at the center of the screen. The results are saved in ``reaction_times.csv`` which you can inspect with any text editor.
+
+
+If you are an R afficionado, you can open it and type::
 
    data = read.csv('reaction_times.csv')
-   with(data, plot(RT))
-   with(data, plot(RT ~ Wait))
+   summary(data)
+   attach(data)
+   plot(RT)
+   dev.new()
+   plot(RT ~ Wait)
 
 Here are my results:
 
@@ -33,68 +40,68 @@ Here are my results:
 
 Browse the code of :download:`simple-detection-visual-pygame.py <../experiments/reaction-times/simple-detection-visual-pygame.py>`
 
-Expyriment version
-~~~~~~~~~~~~~~~~~~
+It is pretty technical! This is because Pygame_ is meant to program simple video games, not psychology experiments.
 
-Download :download:`solution using expyriment <../experiments/reaction-times/simple-detection-visual-expyriment.py>` and run it with::
+A more adequate library for this task is Expyriment_ (another one is Psychopy_).
+
+.. _Pygame: http://www.pygame.org
+.. _Expyriment: http://www.expyriment.org
+.. _Psychopy: http://www.psychopy.org
+
+Make sure you have installed expyriment. Then, download :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple-reaction-times/simple-detection-visual-expyriment.py>` and run it with::
 
     python simple-detection-visual-expyriment.py
 
-Type::
+Then, in the subfolder ``data``, locate a file with a name starting with  ``simple-detection...`` and the extension ``.xpd``. This is a text file containing the reactions times. To analyse them, download :download:`analyse_rt.py <../experiments/expyriment/simple-reaction-times/analyse_rt.py>`__ and run::
 
-   cd data
-   ls
+    python analyse_rt.py data/simple-detection-visual-expyriment_*.xpd 
 
-There should be a file with a name starting with  ``simple-detection...`` and the extension ``.xpd``. This is a text file containing the result. Where are going to quickly examine them using the Pandas_ library.
-
-.. _Pandas: https://pandas.pydata.org/
-
-On the command line, with the ``data`` folder as working directory, launch ``ipython`` and execute::
-
-   %matplotlib
-   import matplotlib.pyplot as plt
-   import pandas as pd
-
-   # you may have to use a different filename than 'simple-detection.xpd'
-   d = pd.read_csv('simple-detection.xpd', comment='#')
-
-   d.head()
-   d.RT.mean()
-   d.RT.std()
-   d.RT[5:].mean()
-
-   plt.stem(d.RT)
-   plt.close()
-   plt.hist(d.RT)
+ 
 
 
-Read https://docs.expyriment.org/Tutorial.html to understand the basic principles of the ``expyriment`` module.
+Note: The basic principles of the ``expyriment`` module are introduced in https://docs.expyriment.org/Tutorial.html. A minimal template is provided at :download:`/expyriment/expyriment_minimal_template.py <../experiments/expyriment/expyriment_minimal_template.py>`
 
-Check out :download:`/expyriment/expyriment_minimal_template.py <../experiments/expyriment/expyriment_minimal_template.py>`
+Exercise: Modify :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple-reaction-times/simple-detection-visual-expyriment.py>` to play a short sound (:download:`click.wav <../experiments/expyriment/simple-reaction-times/clock.wav>`__) in lieu of displaying a cross (hint: use ``stimuli.Audio()``). Thus, you have created a simple audio detection experiment.
 
-Modify :download:`reaction-times/simple-detection-visual-expyriment.py <../experiments/reaction-times/simple-detection-visual-expyriment.py>` to play a short sound (`click.wav`) in lieu of displaying a cross. Thus you have created a simple audio detection experiment.
 
-Modify the script to have 3 blocks of trials: one in which the target is visual, one in which it is audio, and one in which it is randomly
-   visual or auditory. Are we slowed down in the latter condition?
+Exercise: Read the script :download:`simple-detection-audiovisual.py <../experiments/expyriment/simple-reaction-times/simple-detection-audiovisual.py>`_ and try to understand it.
+
+Then run it::
+
+     python simple-detection-audiovisual.py
+
+There are three blocks of trials: a first one in which the target is always visual, a second one in which it is always a sound, and a third one in which the stimulus is, randomly, visual or auditory. Are we slowed down in the latter condition? Use :download:`analyse_audiovisual_rt.py <../experiments/expyriment/simple-reaction-times/analyse_audiovisual_rt.py>`__ to analyse the reaction times.
 
 
 
-Sound-picture matching
-----------------------
 
-The :download:`../experiments/expyriment/sentence_picture_matching/sentence-picture-matching.py <../experiments/expyriment/sentence_picture_matching/sentence-picture-matching.py>` scripts presents a sound, followed by a picture and waits for the participant to press a button.
+Decision times
+--------------
+
+In the previous example, the user just had to react to a stimulus. This involved a very simple type of decision ("is a target present or not?")
+
+Other tasks involves taking a decision about some property of the stimulus.
+
+Exercise: Modify :download:`simple-detection-visual-expyriment.py <../experiments/reaction-times/simple-detection-visual-expyriment.py>` to display, rather than a cross, a random integer between 0 and 9 (hint: Use ``stimuli.Text()``). Now, the task is to decide if the figure is odd or even, by pressing one of two keys.
 
 
-Exercise: Modify the previous script to present *two* pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from :download:`expyriment/touchscreen_test/touchscreen-test.py  <../experiments/expyriment/touchscreen_test/touchscreen-test.py>`
+
+Compare the average decision time to the time to react to a simple cross: this is (roughly) an estimation of the time to decide about the parity of a figure.
+
+Exercise: Modify the script to present, at each trial, a random number between 1 and 99, and ask the subject to decide wether the presented number is smaller or larger than ``55``. Plot the reactions times as a function of the number. 
+Do you repliacte the distnance effect reported by Dehaene, S., Dupoux, E., & Mehler, J. (1990) in "Is numerical comparison digital? Analogical and symbolic effects in two-digit number comparison." *Journal of
+Experimental Psychology: Human Perception and Performance*, 16, 626–641.?
 
 
 Posner’s attentional cueing task
 --------------------------------
 
 
-Execise (\*\*\*): Read about `Posner’s attentional cueing task <https://en.wikipedia.org/wiki/Posner_cueing_task>`__ and program the experiùent. 
+Exercise (\*\*\*): Read about `Posner’s attentional cueing task <https://en.wikipedia.org/wiki/Posner_cueing_task>`__ and program the experiùent. 
 
 See a solution in :download:`Posner-attention/posner_task.py <../experiments/Posner-attention/posner_task.py>`
+
+
 
 
 Stroop Effect
@@ -143,12 +150,24 @@ estimate of the speed of word recognition.
 
 See a solution at https://github.com/chrplr/PCBS-LexicalDecision
 
+
 A general audio visual stimulus presentation script
 ---------------------------------------------------
 
 In some experiments, we know in advance the precise timing of all
 stimuli (the program flow does not depend on external events). A script that reads the timing of audiovisual stimuli in a csv file and presents them
 at the expected times is available at https://www.github.com/chrplr/audiovis
+
+
+Sound-picture matching using a touchscreen
+------------------------------------------
+
+The :download:`sentence-picture-matching.py <../experiments/expyriment/sentence_picture_matching/sentence-picture-matching.py>` script presents a sound, followed by a picture and waits for the participant to press a button.
+
+
+Exercise: Modify the previous script to present *two* pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from :download:`expyriment/touchscreen_test/touchscreen-test.py  <../experiments/expyriment/touchscreen_test/touchscreen-test.py>`
+
+
 
 
 More examples using expyriment.org

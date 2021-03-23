@@ -1,26 +1,23 @@
-#!/usr/bin/env python3
-# Time-stamp: <2021-03-02 18:12:01 christophe@pallier.org>
+#!/usr/bin/env python
 """
-Minimal skeleton for an expyriment script  
+Minimal skeleton for an expyriment script
 
 See <https://docs.expyriment.org/Tutorial.html>
 
 """
 
-import expyriment
+from expyriment import design, control, stimuli
 
-exp = expyriment.design.Experiment(name="Experiment")
+exp = design.Experiment(name="Experiment")
+control.set_develop_mode(on=True)  ## Set develop mode. Comment out for actual experiment
 
-## Set develop mode. Comment for real experiment
-expyriment.control.set_develop_mode(on=True)
-
-expyriment.control.initialize(exp)
+control.initialize(exp)
 
 ### insert here some code to generate the stimuli
 
-expyriment.control.start()
+control.start()
 
 ### insert here some code to present the stimuli and record responses
 
-expyriment.control.end()
+control.end()
 

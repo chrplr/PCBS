@@ -1,42 +1,45 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-05-12 13:01:11 cp983411>
+# Time-stamp: <2021-03-23 19:13:19 christophe@pallier.org>
+""" This is a simple reaction-time experiment.
 
-"""A series of trials where a cross is presented at the center of the screen and the participant must press a key as fast as possible. The statistics of reactions times are displayed at the end of the experiment.
+At each trial, a cross is presented at the center of the screen and
+the participant must press a key as quickly as possible.
 """
 
 import random
-import numpy as np
-import expyriment
-from  expyriment.stimuli import FixCross, BlankScreen
+from expyriment import design, control, stimuli
 
-exp = expyriment.design.Experiment(name="Visual Detection")
-#expyriment.control.set_develop_mode()
-expyriment.control.initialize(exp)
+N_TRIALS = 50
+MIN_WAIT_TIME = 1000
+MAX_WAIT_TIME = 2000
+MAX_RESPONSE_DELAY = 2000
 
-NTRIALS = 10
-MAXDURATION = 2000
-target = FixCross(size=(25, 25), line_width=4)
-blankscreen = BlankScreen()
+exp = design.Experiment(name="Visual Detection", text_size=40)
+control.initialize(exp)
 
-exp.add_data_variable_names(['clock', 'trial', 'wait', 'respkey', 'RT'])
-expyriment.control.start(skip_ready_screen = True)
+target = stimuli.FixCross(size=(50, 50), line_width=4)
+blankscreen = stimuli.BlankScreen()
+instructions = stimuli.TextScreen("Instructions",
+    f"""From time to time, a cross will appear at the center of screen.
 
-expyriment.stimuli.TextScreen(
-    "Your task is to detect a cross appearing at the center of screen",
-    "Press a key as quickly as possible when you see the cross. There will be %d trials " % NTRIALS).present()
+    Your task is to press a key as quickly as possible when you see it (We measure your reaction-time).
+
+    There will be {N_TRIALS} trials in total.
+
+    Press the space bar to start.""")
+
+exp.add_data_variable_names(['trial', 'wait', 'respkey', 'RT'])
+
+control.start(skip_ready_screen=True)
+instructions.present()
 exp.keyboard.wait()
-blankscreen.present()
 
-clock = expyriment.misc.Clock()
-reactiontimes = []
-for i in range(NTRIALS):
-    waitingtime = 2000 + int(1000 * random.expovariate(1))
-    exp.clock.wait(waitingtime)
-    time = clock.time
-    target.present()
-    key, rt = exp.keyboard.wait(duration=MAXDURATION)
-    exp.data.add([time, i, waitingtime, key, rt])
-    reactiontimes.append(rt)
+for i_trial in range(N_TRIALS):
     blankscreen.present()
+    waiting_time = random.randint(MIN_WAIT_TIME, MAX_WAIT_TIME)
+    exp.clock.wait(waiting_time)
+    target.present()
+    key, rt = exp.keyboard.wait(duration=MAX_RESPONSE_DELAY)
+    exp.data.add([i_trial, waiting_time, key, rt])
 
-expyriment.control.end()
+control.end()

@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-04 16:51:04 christophe@pallier.org>
+# Time-stamp: <2021-03-23 18:16:26 christophe@pallier.org>
 """ This is a simple reaction time experiment.
 
 At each trial, a cross is displayed after some random time interval.
@@ -12,24 +12,48 @@ Reaction times are measured and saved in a file for further analyses.
 import random
 import pygame
 
-N_TRIALS = 55  # total number of trials
+N_TRIALS = 20  # total number of trials
+MIN_WAIT_TIME = 1000
+MAX_WAIT_TIME = 2000
 MAX_RESPONSE_DELAY = 2000
 RESULT_FILE = 'reaction_times.csv'
 
 
 def create_window():
-    screen = pygame.display.set_mode((1200, 800), pygame.DOUBLEBUF)
+    screen = pygame.display.set_mode((1280, 960))
+    # screen = pygame.display.set_mode((0, 0),
+    #                                  pygame.DOUBLEBUF | pygame.FULLSCREEN)
     pygame.mouse.set_visible(False)
     return screen
 
 
-def present_stimulus(x, y, size, color):
-    waiting_time = random.randint(1000, 2000)
-    pygame.time.delay(waiting_time)
+def clear_screen(screen):
+    screen.fill(pygame.Color('black'))
+    pygame.display.flip()
+
+
+def display_instruction(screen, x, y):
+    pygame.font.init()
+    myfont = pygame.font.SysFont(pygame.font.get_default_font(), 40)
+    line1 = myfont.render("Your task: when you see a cross, press the space bar as quickly as possible.", 1, pygame.Color('white'))
+    line2 = myfont.render("Press it now to start!", 1, pygame.Color('white'))
+    screen.blit(line1, (x, y))
+    screen.blit(line2, (x, y + 60))
+    pygame.display.flip()
+
+
+def present_cross(x, y, size, color):
     pygame.draw.line(screen, color, (x, y - size), (x, y + size), 4)
     pygame.draw.line(screen, color, (x - size, y), (x + size, y), 4)
     pygame.display.flip()
-    return waiting_time
+
+
+def wait_for_keypress():
+    key_pressed = False
+    while not key_pressed:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                key_pressed = True
 
 
 def measure_reaction_time(max_response_delay=2000):
@@ -60,6 +84,12 @@ def measure_reaction_time(max_response_delay=2000):
     else:
         return reaction_time
 
+def save_data(waiting_times, reaction_times, filename=RESULT_FILE):
+    with open(filename, 'wt') as f:
+        f.write('Wait,RT\n')
+        for wt, rt in zip(waiting_times[5:], reaction_times[5:]):
+            f.write(f"{wt},{rt}\n")
+
 
 ##### main
 
@@ -72,12 +102,21 @@ center_y = H // 2
 
 waiting_times = []
 reaction_times = []
-for i_trial in range(N_TRIALS):
-    screen.fill(pygame.Color('black'))
-    pygame.display.flip()
 
-    waiting_time = present_stimulus(center_x, center_y, 20,
-                                    pygame.Color('white'))
+display_instruction(screen, 20, center_y)
+wait_for_keypress()
+clear_screen(screen)
+
+pygame.time.delay(1000)
+
+for i_trial in range(N_TRIALS):
+    clear_screen(screen)
+
+    waiting_time = random.randint(MIN_WAIT_TIME, MAX_WAIT_TIME)
+    pygame.time.delay(waiting_time)
+
+    present_cross(center_x, center_y, 20, pygame.Color('white'))
+
     reaction_time = measure_reaction_time()
     if reaction_time is None:  # escape pressed
         break
@@ -86,10 +125,5 @@ for i_trial in range(N_TRIALS):
     reaction_times.append(reaction_time)
     print(i_trial, waiting_time, reaction_time)
 
-# save the reaction times (except the first five, considered as training)
-with open(RESULT_FILE, 'w') as f:
-    f.write('Wait,RT\n')
-    for wt, rt in zip(waiting_times[5:], reaction_times[5:]):
-        f.write(f"{wt},{rt}\n")
-
+save_data(waiting_times, reaction_times)
 pygame.quit()
