@@ -48,29 +48,27 @@ A more adequate library for this task is Expyriment_ (another one is Psychopy_).
 .. _Expyriment: http://www.expyriment.org
 .. _Psychopy: http://www.psychopy.org
 
-Make sure you have installed expyriment. Then, download :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple-reaction-times/simple-detection-visual-expyriment.py>` and run it with::
+Make sure you have installed expyriment. Then, download :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` and run it with::
 
     python simple-detection-visual-expyriment.py
 
-Then, in the subfolder ``data``, locate a file with a name starting with  ``simple-detection...`` and the extension ``.xpd``. This is a text file containing the reactions times. To analyse them, download :download:`analyse_rt.py <../experiments/expyriment/simple-reaction-times/analyse_rt.py>`__ and run::
+Then, in the subfolder ``data``, locate a file with a name starting with  ``simple-detection...`` and the extension ``.xpd``. This is a text file containing the reactions times. To analyse them, download :download:`analyse_rt.py <../experiments/expyriment/simple_reaction_times/analyse_rt.py>` and run::
 
     python analyse_rt.py data/simple-detection-visual-expyriment_*.xpd 
 
  
-
-
 Note: The basic principles of the ``expyriment`` module are introduced in https://docs.expyriment.org/Tutorial.html. A minimal template is provided at :download:`/expyriment/expyriment_minimal_template.py <../experiments/expyriment/expyriment_minimal_template.py>`
 
-Exercise: Modify :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple-reaction-times/simple-detection-visual-expyriment.py>` to play a short sound (:download:`click.wav <../experiments/expyriment/simple-reaction-times/clock.wav>`__) in lieu of displaying a cross (hint: use ``stimuli.Audio()``). Thus, you have created a simple audio detection experiment.
+Exercise: Modify :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` to play a short sound (:download:`click.wav <../experiments/expyriment/simple_reaction_times/click.wav>`) in lieu of displaying a cross (hint: use ``stimuli.Audio()``). Thus, you have created a simple audio detection experiment.
 
 
-Exercise: Read the script :download:`simple-detection-audiovisual.py <../experiments/expyriment/simple-reaction-times/simple-detection-audiovisual.py>`_ and try to understand it.
+Exercise: Read the script :download:`simple-detection-audiovisual.py <../experiments/expyriment/simple_reaction_times/simple-detection-audiovisual.py>` and try to understand it.
 
 Then run it::
 
      python simple-detection-audiovisual.py
 
-There are three blocks of trials: a first one in which the target is always visual, a second one in which it is always a sound, and a third one in which the stimulus is, randomly, visual or auditory. Are we slowed down in the latter condition? Use :download:`analyse_audiovisual_rt.py <../experiments/expyriment/simple-reaction-times/analyse_audiovisual_rt.py>`__ to analyse the reaction times.
+There are three blocks of trials: a first one in which the target is always visual, a second one in which it is always a sound, and a third one in which the stimulus is, randomly, visual or auditory. Are we slowed down in the latter condition? Use :download:`analyse_audiovisual_rt.py <../experiments/expyriment/simple_reaction_times/analyse_audiovisual_rt.py>` to analyse the reaction times.
 
 
 
