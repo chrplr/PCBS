@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-23 19:14:01 christophe@pallier.org>
+# Time-stamp: <2021-03-24 10:59:19 christophe@pallier.org>
 """ This is a simple reaction-time experiment.
 
 At each trial, a brief sound is played and
@@ -10,6 +10,8 @@ import random
 from expyriment import design, control, stimuli
 
 N_TRIALS = 50
+MIN_WAIT_TIME = 1000
+MAX_WAIT_TIME = 2000
 MAX_RESPONSE_DELAY = 2000
 
 exp = design.Experiment(name="Visual Detection", text_size=40)
@@ -17,9 +19,10 @@ control.initialize(exp)
 
 target = stimuli.Audio('click.wav')
 blankscreen = stimuli.BlankScreen()
-instructions = .TextScreen("Instructions",
-    "Your task is to detect a sound",
-    "Press a key as quickly as possible when you hear any sound. There will be {N_TRIALS} trials ")
+instructions = stimuli.TextScreen("Instructions",
+    f"""Your task is to detect a sound
+
+    Press a key as quickly as possible when you hear any sound. There will be {N_TRIALS} trials """)
 
 exp.add_data_variable_names(['trial', 'wait', 'respkey', 'RT'])
 
