@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-23 18:16:26 christophe@pallier.org>
+# Time-stamp: <2021-03-25 13:26:23 christophe@pallier.org>
 """ This is a simple reaction time experiment.
 
 At each trial, a cross is displayed after some random time interval.
@@ -21,7 +21,7 @@ RESULT_FILE = 'reaction_times.csv'
 
 def create_window():
     screen = pygame.display.set_mode((1280, 960))
-    # screen = pygame.display.set_mode((0, 0),
+    #screen = pygame.display.set_mode((0, 0),
     #                                  pygame.DOUBLEBUF | pygame.FULLSCREEN)
     pygame.mouse.set_visible(False)
     return screen
@@ -33,9 +33,8 @@ def clear_screen(screen):
 
 
 def display_instruction(screen, x, y):
-    pygame.font.init()
-    myfont = pygame.font.SysFont(pygame.font.get_default_font(), 40)
-    line1 = myfont.render("Your task: when you see a cross, press the space bar as quickly as possible.", 1, pygame.Color('white'))
+    myfont = pygame.font.SysFont(pygame.font.get_fonts()[0], 32)
+    line1 = myfont.render("When you see a cross, press the SPACE BAR as quickly as possible.", 1, pygame.Color('white'))
     line2 = myfont.render("Press it now to start!", 1, pygame.Color('white'))
     screen.blit(line1, (x, y))
     screen.blit(line2, (x, y + 60))
@@ -87,7 +86,7 @@ def measure_reaction_time(max_response_delay=2000):
 def save_data(waiting_times, reaction_times, filename=RESULT_FILE):
     with open(filename, 'wt') as f:
         f.write('Wait,RT\n')
-        for wt, rt in zip(waiting_times[5:], reaction_times[5:]):
+        for wt, rt in zip(waiting_times, reaction_times):
             f.write(f"{wt},{rt}\n")
 
 
