@@ -34,7 +34,9 @@ using the clean code principles.
 1) In each exercise, you will **review** a piece of code and identify issues in the code
 using the clean code principles.
 
-* Open the link and **click "Save new Paste"** to work on your own copy.
+* Open the link and **copy** the code
+* Open <https://commie.io/> and **paste** the code in the text field 
+* **Click "Save new Paste"** to make a review on your own copy of the code.
 
 ![](images/example_review_no_comments_sm.png)
 
@@ -79,7 +81,7 @@ your code in commie.io and send us the link.
 
 # Exercise 1
 
-Review and rewrite: <https://commie.io/#TiA3pEdi>
+Review and rewrite: <https://gist.github.com/cedricfoucault/c9e38bc1c86520dcf96cd329e679e4b1>
 
 Cedric's review:
 <https://commie.io/#LV4qePMk>
@@ -92,7 +94,7 @@ Cedric's rewrite:
 
 # Exercise 2
 
-Review and rewrite: <https://commie.io/#hTtKALYa>
+Review and rewrite: <https://gist.github.com/cedricfoucault/c07392e0697bda5d5f1e35b7c83b1d68>
 
 Cedric's review:
 <https://commie.io/#nuFfJsYK>
@@ -105,7 +107,7 @@ Cedric's rewrite:
 
 # Exercise 3
 
-Review and rewrite: <https://commie.io/#78WDnM28>
+Review and rewrite: <https://gist.github.com/cedricfoucault/542daeae1ad5cd85e16e23f94d3a17cc>
 
 Cedric's review:
 <https://commie.io/#MZApD1ij>
@@ -118,7 +120,7 @@ Cedric's rewrite:
 
 # Exercise 4
 
-Review only: <https://commie.io/#gdaXeLFT>
+Review only: <https://gist.github.com/cedricfoucault/1a388fd9ae6cffdbc934b311bb051e62>
 
 Cedric's review: <https://commie.io/#l0QRPfXR>
 
@@ -128,7 +130,7 @@ Cedric's review: <https://commie.io/#l0QRPfXR>
 
 # Exercise 5
 
-Review and rewrite: <https://commie.io/#eQQbuNnx>
+Review and rewrite: <https://gist.github.com/cedricfoucault/d54eca9fc82653e718d44d398c0de483>
 
 Cedric's review: <https://commie.io/#i2ZBT6Ts>
 
