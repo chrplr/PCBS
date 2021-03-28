@@ -41,7 +41,9 @@ using the clean code principles.
 1) In each exercise, you will **review** a piece of code and identify issues in the code
 using the clean code principles.
 
-* Open the link and **click "Save new Paste"** to work on your own copy.
+* Open the link and **copy** the code
+* Open <https://commie.io/> and **paste** the code in the text field 
+* **Click "Save new Paste"** to make a review on your own copy of the code.
 
 ![](images/example_review_no_comments_sm.png)
 
@@ -112,7 +114,8 @@ in which case you will send us the commie.io link of your individual review.
 # Exercise 1
 
 <!-- Review and rewrite: -->
-<https://commie.io/#TiA3pEdi>
+<!-- <https://commie.io/#TiA3pEdi> -->
+<https://gist.github.com/cedricfoucault/c9e38bc1c86520dcf96cd329e679e4b1>
 
 
 <!-- bad:
@@ -129,7 +132,8 @@ https://commie.io/#AhgMnvpG -->
 # Exercise 2
 
 <!-- Review and rewrite: -->
-<https://commie.io/#hTtKALYa>
+<!-- <https://commie.io/#hTtKALYa> -->
+<https://gist.github.com/cedricfoucault/c07392e0697bda5d5f1e35b7c83b1d68>
 
 <!-- bad:
 https://commie.io/#hTtKALYa
@@ -144,7 +148,8 @@ https://commie.io/#sGSCItBe -->
 # Exercise 3
 
 <!-- Review and rewrite: -->
-<https://commie.io/#78WDnM28>
+<!-- <https://commie.io/#78WDnM28> -->
+<https://gist.github.com/cedricfoucault/542daeae1ad5cd85e16e23f94d3a17cc>
 
 <!-- bad:
 https://commie.io/#78WDnM28
@@ -159,7 +164,8 @@ https://commie.io/#9EmQy6uF -->
 # Exercise 4
 
 <!-- Review only: -->
-<https://commie.io/#gdaXeLFT>
+<!-- <https://commie.io/#gdaXeLFT> -->
+<https://gist.github.com/cedricfoucault/1a388fd9ae6cffdbc934b311bb051e62>
 
 <!-- bad:
 https://commie.io/#gdaXeLFT
@@ -173,7 +179,8 @@ https://commie.io/#l0QRPfXR -->
 # Exercise 5 (Homework)
 
 <!-- Review and rewrite: -->
-<https://commie.io/#eQQbuNnx>
+<!-- <https://commie.io/#eQQbuNnx> -->
+<https://gist.github.com/cedricfoucault/d54eca9fc82653e718d44d398c0de483>
 
 <!-- bad:
 https://commie.io/#eQQbuNnx
