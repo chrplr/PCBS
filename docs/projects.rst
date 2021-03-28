@@ -3,95 +3,48 @@
 Projects
 ========
 
-The aim is that you spend a few dozens hours programming a project
-related to cognitive or neurocognitive sciences (experimental tasks,
-simulations of models, data analyses,...), in order for you to learn new
-things and improve your coding skills.
-
--  All documents (scripts, documentation, data files when not too large)
-   related to the project should be on a github.com repository with a  name
-   starts with ``PCBS-`` followed by a label that gives an idea of what
-   the project is about.
-
-- I should be able, from the explanations in README.md, to access all the
-   relevant files, understand what the project is about, how to run it, etc.
-   (It is fine if README.md points to
-   reports in html generated for example by Rmarkdown for example). No
-   pdfs, no Word documents! I will simply *not read* them. I recommend
-   that you use the ‘Pages’ system of github (see https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site ).
+The project should try to replicate an experiment or some simulations related to cognitive (neuro-) science.
 
 
-- Send me a link to your github project as soon as possible: I want to be able
-   to check your progress. Ideally, I should be able to clone your repository
-   and execute your code without modifying anything. That means, for example,
-   that you should absolutely avoid absolute pathnames: your code must be
-   portable.
+- All documents (scripts, stimuli, documentation, data files) related to the project
+   should be on a github.com repository with a name starts with ``PCBS-``
+   followed by a label that gives an idea of what the project is about.
 
-- Readability of the code and adherence to good practices are of utmost
-   importance: Do not be overambitious: I prefer a readable code that does a
-   simple thing rather than an unreadble code that does complicated things.
+- The main page of the repository (``README.md``), should :
+    * describe the aim of the project (explain the experiment or the simulation) 
+    * explain how to install and run the experiment on one's computer (which command line, which options if any).
+    * if the project involves analyses, the README.md should point to a documents (html, pdf, not Word!!!) containing the report.
+    
+   It is highly recommended to use the ‘Pages’ system of github to generate a nice looking page (see https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site ).
 
--  Work in binomes to read, check and criticize each other code
-   regularily. it is important to have someone else check that the
+- It should be possible to clone your repository and execute your code without modifying anything.
+  That means, for example, that you should absolutely avoid absolute pathnames. Also your code must be
+   portable and run on MacOS, Windows and Linux.
+
+- Send us a link to your github project as soon as possible so that we can check your progress. 
+
+- The readability of the code, and of the main page are of the main criteria of evaluation.
+
+- Do not be overambitious: a well written project that does a simple thing but well will receive a better score than one that has an unreadble code that does complicated things.
+
+-  You can work in binomes to read, check and criticize each other code
+   regularily. it is very useful to have someone else check that the
    documentation and code that you write is readable.
 
 -  use the slack forum https://cogmaster-pcbs.slack.com/ to ask questions
-
--  You can use whichever language is suited to your project (Python, R, Processing
-   Javascript, Julia, ...). There are only two rules:
-
-   1. the code must be readable by a non specialist of the language.
-   2. Matlab is discouraged: if you use it, make sure that you avoid global variables, and factor your code in small functions. 
-
 
 - At the end of the README.md`  fill, you must include a section detailling:
     - your previous coding experience
     - what you have learned since then, by following the lecture, coding the project or working by yourself
     - what you missed in this course.  
 
--  An example of the kind of things that I expect is provided at http://chrplr.github.com/PCBS-LexicalDecision
+-  An example of the kind of things that can be expected is provided at http://chrplr.github.io/PCBS-LexicalDecision
 
 
-Examples of Students' Projects from previous sessions
------------------------------------------------------
-
-1.  Camille Williams
-    https://camzcamz.github.io/PCBS-Political-Ideologies-and-Visual-Deviance-Sensitivity/
-2.  Monica Hedge https://github.com/monicahegde/PCBS-surprise-attention
-3.  François Stockart https://github.com/francoisstock/PCBS_project
-4.  Lucie Bracon https://github.com/LucieBrcn/PCBS-PROJET
-5.  Cédric Foucault
-    https://github.com/cedricfoucault/PCBS-RetroChronoAnalysis
-6.  Ted Landron https://github.com/tlandron/PCBS_ModelRecovery
-7.  Elisa Lannelongue https://github.com/NephthysSkh/PCBS-projet
-8.  Mathilde Mus https://github.com/mathilde-mus/PCBS-final-project
-9.  Marine Pagliari
-    https://github.com/MarinePagliari/PagliariMarine_PCBS_Project
-10. Tom Puech https://github.com/puechtom/PCBS-flappyai
-11. Corentin Riet https://github.com/pocopennar/PCBS-pridil
-12. Victor Chung https://github.com/Cogstudent/PCBS-Chung.git
-13. Julien Lie https://github.com/jlie10/SelfSacrifice
-14. Clémence Bergerot https://github.com/clematisation/PCBS-Hopfield
-15. Annahita Sarré
-    https://github.com/AnnahitaSarre/PCBS-ComparaisonNumerique
-16. Antoine Parize
-    https://github.com/lejugeti/PARIZE_PCBS_cellular_automata
-17. Dawei Bai https://github.com/daweibai/PCBS-langevo
-18. Camille Courgeon
-    https://github.com/camcour/PCBS-automatic_classifier
-19. Jonny Giordano https://github.com/jvgiordano/AE-Project
-20. Judicael Fassaya https://github.com/JudiKL/PCBS-NumerosityComparison
-21. Alice Baker https://github.com/alicejmbaker/PCBS-WordGame
-22. Aurélien Fermo https://github.com/Sonybronx/PCBS-HIV_Prediction
-23. Ondine Simonot https://github.com/OndineS/Projet_PCBS
-
-24. Laurène Barbier https://github.com/laurenebarbier/PCBS-concordancier
+Some ideas for Projects
+-----------------------
 
 
-
-
-Some ideas
-----------
 
 -  How much time does it take for information to cross the two
    hemispheres? Write a simple detection experiment where a visual
@@ -190,3 +143,42 @@ Some ideas
    to invent your own algorithm(s), you can learn about the ones
    proposed by Jean-Marc Alliot (2015). “The (Final) Countdown.”
    ArXiv:1502.05450 [Cs], February. http://arxiv.org/abs/1502.05450.)
+
+
+
+Examples of Students' Projects from previous sessions
+-----------------------------------------------------
+
+1.  Camille Williams
+    https://camzcamz.github.io/PCBS-Political-Ideologies-and-Visual-Deviance-Sensitivity/
+2.  Monica Hedge https://github.com/monicahegde/PCBS-surprise-attention
+3.  François Stockart https://github.com/francoisstock/PCBS_project
+4.  Lucie Bracon https://github.com/LucieBrcn/PCBS-PROJET
+5.  Cédric Foucault
+    https://github.com/cedricfoucault/PCBS-RetroChronoAnalysis
+6.  Ted Landron https://github.com/tlandron/PCBS_ModelRecovery
+7.  Elisa Lannelongue https://github.com/NephthysSkh/PCBS-projet
+8.  Mathilde Mus https://github.com/mathilde-mus/PCBS-final-project
+9.  Marine Pagliari
+    https://github.com/MarinePagliari/PagliariMarine_PCBS_Project
+10. Tom Puech https://github.com/puechtom/PCBS-flappyai
+11. Corentin Riet https://github.com/pocopennar/PCBS-pridil
+12. Victor Chung https://github.com/Cogstudent/PCBS-Chung.git
+13. Julien Lie https://github.com/jlie10/SelfSacrifice
+14. Clémence Bergerot https://github.com/clematisation/PCBS-Hopfield
+15. Annahita Sarré
+    https://github.com/AnnahitaSarre/PCBS-ComparaisonNumerique
+16. Antoine Parize
+    https://github.com/lejugeti/PARIZE_PCBS_cellular_automata
+17. Dawei Bai https://github.com/daweibai/PCBS-langevo
+18. Camille Courgeon
+    https://github.com/camcour/PCBS-automatic_classifier
+19. Jonny Giordano https://github.com/jvgiordano/AE-Project
+20. Judicael Fassaya https://github.com/JudiKL/PCBS-NumerosityComparison
+21. Alice Baker https://github.com/alicejmbaker/PCBS-WordGame
+22. Aurélien Fermo https://github.com/Sonybronx/PCBS-HIV_Prediction
+23. Ondine Simonot https://github.com/OndineS/Projet_PCBS
+
+24. Laurène Barbier https://github.com/laurenebarbier/PCBS-concordancier
+
+

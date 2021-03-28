@@ -156,9 +156,6 @@ Books relevant to Cognitive and Brain Sciences Programming
 Stimulus/Experiment generation modules
 --------------------------------------
 
--  http://www.pygame.org (See `PyGame Drawing
-   Basics <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__)
--  http://www.lexique.org
 -  http://www.expyriment.org (See `Get started with
    Expyriment <https://docs.expyriment.org/Tutorial.html>`__
 -  http://psychopy.org (See `Programming with
@@ -166,6 +163,7 @@ Stimulus/Experiment generation modules
 -  http://psychtoolbox.org/ (See `Psychtoolbox
    demos <http://peterscarfe.com/ptbtutorials.html>`__)
 -  https://www.jspsych.org/ (See intro at https://blog.s-m.ac/using-jspsych/)
+-  https://dialoguetoolkit.github.io/chattool/
 
 
 
