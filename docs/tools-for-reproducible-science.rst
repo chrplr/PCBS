@@ -527,7 +527,7 @@ Resources to learn more about Git
 
 To learn more about git, check out:
 
-*  Openclassrooms’ MOOC `Manage your code with Git and Github <https://openclassrooms.com/en/courses/3321726-manage-your-code-with-git-and-github?status=published>`__
+*  Openclassrooms’ MOOC `Manage your code with Git and Github <https://openclassrooms.com/en/courses/5671626-manage-your-code-project-with-git-github>`__
 *  https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
 *  https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
 *  The `Git Book <https://git-scm.com/book/en/v2>`__
