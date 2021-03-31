@@ -117,6 +117,8 @@ Linux
 Windows
     Start **Git bash**. This opens a terminal, where you can type ``pip install expyriment[all]``
 
+
+
 MacOS
     1. Install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
 
@@ -125,6 +127,19 @@ MacOS
     3. In the same Terminal, type ``pip install -U pygame``
 
        This upgrade the version of pygame (1.9) installed along expyriment to pygame (2.0), which is required by recent versions of macOS. (As of 2021-02-23.)
+
+
+Remark:
+
+If you see error messages (in red), it is likely due to issues with the version of Python. If this is the case, you should create an [Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) as follows::
+
+        conda create --name expyriment python=3.7
+        conda activate expyriment
+        pip install expyriment[all]
+
+To run python scripts using the expyriment module, you will need to activate this environment with the command::
+
+        conda activate expyriment
 
 
 Whatever your operating systems, you now need to test your installation:
