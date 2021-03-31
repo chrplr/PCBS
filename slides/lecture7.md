@@ -113,19 +113,17 @@ Git commands
 Github
 =======
 
-1. create a personal account on https://github.com/
- 
-2. Create a New Repository named `test`
+1. Create a personal account on <https://github.com/>
+2. Create a new repository named `test`
+3. On your local computer, in a terminal, type:
 
-3. On your loca computer, in a terminal
+        git clone https://github.com/XXXXXX/test.git   # XXXXX should be your github user_id
 
-    git clone https://github.com/XXXXXX/test.git   # XXXXX should be your github user_id
-
-    cd test
-    nano README.md
-    git add README.md
-    git commit -m 'first commit'
-    git push
+        cd test
+        nano README.md
+        git add README.md
+        git commit -m 'first commit'
+        git push
     
 
 ---
@@ -134,12 +132,10 @@ Documentation
 =============
 
 - **Git**
-
-   * https://git-scm.com/book/en/v2
-
-   * https://openclassrooms.com/en/courses/5671626-manage-your-code-project-with-git-github?status=published
+    * <https://git-scm.com/book/en/v2> (Read the first two chapters!)
+    * <https://openclassrooms.com/en/courses/5671626-manage-your-code-project-with-git-github?status=published>
 
 
 - **Markdown**
-
-   * https://www.markdownguide.org/getting-started/
+    * <https://www.markdownguide.org/getting-started/>
+    * <https://www.markdownguide.org/cheat-sheet/>
