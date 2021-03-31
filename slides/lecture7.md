@@ -2,7 +2,7 @@ Git: a tool for version control
 ===============================
 
 
-It keeps track of the history of a project, by keeping cached copies of the previous versions of files. 
+Git keeps track of the history of a project, by keeping cached copies of the previous versions of files. 
 
 The basic idea is very simple: to create *immutable snapshots* of the project at any given step.
     
@@ -11,10 +11,36 @@ The basic idea is very simple: to create *immutable snapshots* of the project at
 This is much, much better than using a numbering scheme and multiple copies of the same file or directory (myfile001.doc, myfiles002.doc, ...). 
 
 
+
+
 ---
 
-Creating a local database
-=========================
+Basic Git
+=========
+
+
+99% ot the time you will just use:
+
+    git add       # track a file
+
+    git commit    # create a commit (snapshot
+    
+    git status    # get status of files in the current projet 
+                  # (tracked, untracked...)
+
+
+Vocabulary: 
+
+ snapshot  == *commit* (set of files, immutable) 
+ 
+ database == *repository* (sets of commits)
+
+
+---
+
+
+Example
+=======
 
 
     mkdir myproject
@@ -39,7 +65,6 @@ Creating a local database
 
 ---
 
-
 Beyond linear versioning
 ========================
 
@@ -59,6 +84,28 @@ In a nutshell
 -  **Bad**: use email’s attachments to exchange successive versions of a file.
 
 -  **Good**: collaborate on a project by using a shared git repository
+
+
+----
+
+Git commands
+============
+
+    git add       # track a file
+    git commit    # create a commit (snapshot
+    git status    # get status of files in the current projet (tracked, untracked...)
+
+
+
+    git log     # list all the commits
+    git diff    # compare files in various commits
+    git checkout  #  unpack an older version of a file or a of commit
+
+
+    git clone   #  download a repository locally
+    git pull    #  synchronize your local repository with a remote one
+    git push    #  synchronize a remote repoitory with your local one
+
 
 
 ----

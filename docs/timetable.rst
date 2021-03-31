@@ -66,7 +66,8 @@ Git repository on github (contains solutions to exercices and more)
         * :doc:`running-experiments`
    * -  Mar 31
      -  Start of the Project. Git and Github.  
-     -  :doc:`git-and-github`
+     -  * `lecture7 slides <https://rawgit.com/chrplr/PCBS/master/slides/lecture7.html>`__
+        * :doc:`git-and-github`
    * -  Apr  7
      -
      -
