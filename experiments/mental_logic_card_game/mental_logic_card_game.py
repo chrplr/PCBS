@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Time-stamp: <2021-03-29 10:54:49 christophe@pallier.org>
+# Time-stamp: <2021-04-05 19:00:34 christophe@pallier.org>
 """
 Mental logic card guessing game.
 
@@ -75,7 +75,7 @@ def is_correct(actual_response, expected_response):
 
 
 ################################################################################
-exp = design.Experiment(name="Cards", text_size=25)
+exp = design.Experiment(name="Cards", text_size=20)
 
 control.initialize(exp)
 

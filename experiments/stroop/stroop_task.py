@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-04 18:00:41 christophe@pallier.org>
+# Time-stamp: <2021-04-05 19:00:05 christophe@pallier.org>
 
 import glob
 import expyriment
@@ -79,13 +79,13 @@ fs = expyriment.stimuli.FixCross(size=(25, 25), line_width=3, colour=(127, 127, 
 
 instructions1 = expyriment.stimuli.TextScreen("Instructions",
                                               heading_size=60,
-                                              text=INSTRUCTIONS1,
-                                              text_size=40)
+                                              text=INSTRUCTIONS1
+                                              )
 
 instructions2 = expyriment.stimuli.TextScreen("Instructions",
                                               heading_size=60,
-                                              text=INSTRUCTIONS2,
-                                              text_size=40)
+                                              text=INSTRUCTIONS2
+                                             )
 
 instructions1.preload()
 instructions1.present()
