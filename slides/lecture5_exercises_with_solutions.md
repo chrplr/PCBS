@@ -87,7 +87,7 @@ Cedric's review:
 <https://commie.io/#LV4qePMk>
 
 Cedric's rewrite:
-<https://commie.io/#AhgMnvpG>
+<https://gist.github.com/cedricfoucault/48b59ef9d0757aacfbd911339a579781>
 
 
 ---
@@ -100,7 +100,7 @@ Cedric's review:
 <https://commie.io/#nuFfJsYK>
 
 Cedric's rewrite:
-<https://commie.io/#sGSCItBe>
+<https://gist.github.com/cedricfoucault/19701e37eb026d579748a618cce2e672>
 
 
 ---
@@ -113,7 +113,7 @@ Cedric's review:
 <https://commie.io/#MZApD1ij>
 
 Cedric's rewrite:
-<https://commie.io/#9EmQy6uF>
+<https://gist.github.com/cedricfoucault/5e56afa4b4cbf5b4bbeadd9b075a46c7>
 
 
 ---
@@ -136,7 +136,7 @@ Cedric's review: <https://commie.io/#i2ZBT6Ts>
 
 Cedric's rewrite: [paper draft](images/clean_code_dots_functions.png)
 
-Cedric's rewrite: code: <https://commie.io/#kVQXRazr>
+Cedric's rewrite: code: <https://gist.github.com/cedricfoucault/656d0964055ab07d95f594cc3fdf511a>
 
 
 
