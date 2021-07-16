@@ -329,7 +329,7 @@ In the Stroop Task, participants are presented with a cards on which words are w
 
    Stroop card
 
-It is difficult to name the color of a color word if they do not match. This phenomenon, known as the  `Stroop Effect <https://en.wikipedia.org/wiki/Stroop_effect>`__, demonstrates the automaticity of reading. Write a python script to create 4x8 cards for the task, as image files, avoiding repetitions of colors in neighboring cells.
+It is difficult to name the color of a color word if they do not match. This phenomenon, known as the  `Stroop Effect <https://en.wikipedia.org/wiki/Stroop_effect>`__, demonstrates the automaticity of reading. Write a python script to create 4x4 cards for the task, as image files, avoiding repetitions of colors in neighboring cells.
 
 You will need to read about how to generate images containing text, for example, in the tutorial `How to display text with
 pygame <https://nerdparadise.com/programming/pygame/part5>`__

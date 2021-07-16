@@ -71,15 +71,6 @@ Then you may read :
 - Ernest Nagel and James Newman's book `Gödel's Theorem <http://calculemus.org/cafe-aleph/raclog-arch/nagel-newman.pdf>`__ (translated into French : `Le théorème de Gödel <https://www.eyrolles.com/Sciences/Livre/le-theoreme-de-godel-9782020327787/>`__)
 
 
-Natural Language Parsing
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Parsing refers to building the syntactic structure of a sentence from
-the linear sequence of words that compose it.
-
-* Read Chapter 12 (Constituency Grammars)  and 13 (Constituency Parsing)  of Dan Jurafsky and James H. Martin's `Speech and Language Processing <https://web.stanford.edu/~jurafsky/slp3/>`__
- 
-* Explore the `various parsing algorithms <http://www.nltk.org/book/ch08.html>`__\ using the `Natural Language Toolkit <https://www.nltk.org/>`__.
 
 
 Cellular Automata
@@ -107,16 +98,51 @@ Life <https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>`__. Watch
 
 
 
+Natural Language Parsing
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parsing refers to building the syntactic structure of a sentence from
+the linear sequence of words that compose it.
+
+* Read Chapter 12 (Constituency Grammars)  and 13 (Constituency Parsing)  of Dan Jurafsky and James H. Martin's `Speech and Language Processing <https://web.stanford.edu/~jurafsky/slp3/>`__
+ 
+* Explore the `various parsing algorithms <http://www.nltk.org/book/ch08.html>`__\ using the `Natural Language Toolkit <https://www.nltk.org/>`__.
+
+
 
 Artificial Neural networks
 --------------------------
+
+
+Hopfield network
+~~~~~~~~~~~~~~~~
+
+Read https://towardsdatascience.com/hopfield-networks-are-useless-heres-why-you-should-learn-them-f0930ebeadcd and do not look at the jupyter notebook implementation provided  by the author. Try to program a hopefield network and teach irt a few patterns. Only then, check the author's solution.
+
+To go further you can read:
+
+- Ramsauer, Hubert, Bernhard Schäfl, Johannes Lehner, Philipp Seidl, Michael Widrich, Thomas Adler, Lukas Gruber, et al. 2020. “Hopfield Networks Is All You Need.” ArXiv:2008.02217 [Cs, Stat], December. http://arxiv.org/abs/2008.02217.
+
+
+Perceptron
+~~~~~~~~~~
+
+1. Read about the Percepton at https://medium.com/@thomascountz/perceptrons-in-neural-networks-dc41f3e4c1b9
+2.  Implement a Perceptron in Python
+
+For a solution, check : https://blog.dbrgn.ch/2013/3/26/perceptrons-in-python/
+
+
+Backpropagation
+~~~~~~~~~~~~~~~
+
 
 To understand the basics of artificial neural networks, I recommend that
 you first read https://victorzhou.com/blog/intro-to-neural-networks/ and
 then watch the four excellent videos at
 https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
-. The last two of them focus on the backpropagation algorithm that allow
-to train network to learn mapping.
+. The last two of them focus on the backpropagation algorithm that allows one
+to train network to learn mappings.
 
 Next, you can read and try to understand this
 `implementation <https://visualstudiomagazine.com/articles/2017/06/01/back-propagation.aspx>`__
