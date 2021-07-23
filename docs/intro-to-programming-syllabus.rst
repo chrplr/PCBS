@@ -2,7 +2,12 @@
 Introduction to Programming, with Python
 ****************************************
 
-The only prequisite is to have installed Sublime, Anaconda Python and Git bash following the instructions at `<https://pcbs.readthedocs.io/en/latest/software-installation.html>`_
+
+Prequisites
+###########
+
+* have installed Sublime, Anaconda Python and Git bash following the instructions at `<https://pcbs.readthedocs.io/en/latest/software-installation.html>`_
+* have read and followed https://pcbs.readthedocs.io/en/latest/scratch/Starting-from-Scratch.html
 
 
 Resources
