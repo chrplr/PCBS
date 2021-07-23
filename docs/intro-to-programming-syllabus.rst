@@ -5,6 +5,16 @@ Introduction to Programming, with Python
 The only prequisite is to have installed Sublime, Anaconda Python and Git bash following the instructions at `<https://pcbs.readthedocs.io/en/latest/software-installation.html>`_
 
 
+Resources
+#########
+
+* Gérard Swinnen *Apprendre à Programmer avec Python 3* (5e edition)  `<http://inforef.be/swi/python.htm>`_
+
+* Al Sweigart *How to automate the boring stuff with Python* (2e edition) `<https://automatetheboringstuff.com/>`_
+
+* Al Sweigart *Invent Your Own Computer Games with Python* (4e edition) `<http://inventwithpython.com/invent4thed/>`_ 
+
+
 Course 1
 ########
 
@@ -19,18 +29,21 @@ Skills to acquire
 Programming concepts
 --------------------
 
-* Python objects: numbers, strings, lists, and basic operations on them)
+* Python objects: numbers, strings, and basic operations on them
 * Constants vs. Variables
 * a program normally executes *sequentially* from top to bottom
-* but some instructions can change the flow: ``if`` and ``for`` loops (notion of the  interpretation pointer keeping track of the current line of execution) 
+* but some instructions can change the flow: ``if`` and ``for`` loops (notion of the  interpretation pointer keeping track of the current line of execution) -> Use `<http://pythontutor.com/>`_ to visualize the step by step execution of a program (show an example. EXplain that sutdents must try to simulate programs in their head or on paper)
+
+
 
 Examples of exercices
 ----------------------
-* download a script from the internet and execute it
+
+* Download a python script from the internet and execute it
 * Type the line "print('Hello')" in a ``hello.py`` file and execute it
 * Write code that asks the user for his/her name and prints "Hello <user_name>!".
 * Write code that prints the string ``"All work no play makes Jack a dull boy"`` 50 times
-* Write code that prints the squares of all integers between 1 and 100.
+* Write code that prints the squares of all integers between 1 and 100 using range
 * Write code that asks the user to enter a number and prints the square of it. IF the input is '0', then stop.
 * Write code that computes the factorial of an integer (no function, no recursion, just a loop)
 
@@ -38,22 +51,17 @@ Examples of exercices
 Course 2
 ########
 
-Skills
-------
-
-* Use `<http://pythontutor.com/>`_ to visualize the step by step execution of a program
-(show an example. EXplain that sutdents must try to simulate programs in their head or on paper)
 
 Programming
 -----------
 
-* random numbers 
-* More Python objects: dictionaries, sets
-* List extensions  ([2 * x for x in range(10) if x != 3])
+* Random numbers 
+* More Python objects: lists, sets, dictionaries (note : difference between 
 
 Exercices
 ---------
 
+* Monte Carlo estimation of Pi: one way to estimate the value of the π is to generate a large number of random points in the unit square and see how many fall within the unit circle; their proportion is an estimate of the area of the circle. See `<https://academo.org/demos/estimating-pi-monte-carlo>`_. Implement the proposed algorithm to estimate the value of π.
 * Lists:
   -  Given a list of numbers, print their sum
   -  Given a list of numbers, print their product
@@ -61,8 +69,7 @@ Exercices
   -  Given a list of numbers, print the largest one.
   -  Given a list of numbers, print the second largest
 * Write a program that prints the first N rows of Pascal’s triangle (see `<https://www.youtube.com/watch?v=XMriWTvPXHI>`_). 
-* Given a list of words, count the number of times each word appears in the list.
-* Monte Carlo estimation of Pi: one way to estimate the value of the π is to generate a large number of random points in the unit square and see how many fall within the unit circle; their proportion is an estimate of the area of the circle. See `<https://academo.org/demos/estimating-pi-monte-carlo>`_. Implement the proposed algorithm to estimate the value of π.
+* Given a list of words, count the number of times each word appears in the list (using dictionary)
 
 
 Course 3
@@ -72,7 +79,7 @@ Programming
 -----------
 
 * Functions, functions, functions. (see `<https://rawgit.com/chrplr/PCBS/master/slides/lecture3.html>`_)
-* pure functions (returning a value) vs. procedures (having side effects) 
+* Pure functions (returning a value) vs. Procedures (having side effects) 
 
 Exercices
 ---------
@@ -89,8 +96,11 @@ Course 4
 Programming
 -----------
 
-* function's keywords arguments
 * scope of variables: local vs. global. Use pythontutor.com
+* function's keywords arguments
+* using functions to make the code clearer (not necessarily to avoid repetition)
+* function reuse: how to create your own modules
+
 
 Exercices
 ---------
@@ -105,7 +115,7 @@ Course 5
 Skills
 ------
 
-* be able to launch ipython and test python code interactively.
+* be able to launch ipython and jupyter notebook and to test python code interactively.
 
 
 Programming
@@ -132,22 +142,11 @@ Exercices
 Course 6
 ########
 
-Skills
-------
-
-*  installing an additional python module with ``conda install`` or  ``pip install`` and testing it. E.g. nilearn, pygame...
 
 Programming
 -----------
 
-* How to write clean Code. See `<https://rawgit.com/chrplr/PCBS/master/slides/lecture5.html>`_
-
-
-
-Resources
-#########
-
-
-* `<https://automatetheboringstuff.com/>`_
+* How numbers, text, images are represented in a computer:  https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html
+* notion of object oriented programming in python (methods vs class). Examples with standard classes (e.g. turtle, tk,...)
 
 
