@@ -34,6 +34,7 @@ Programming concepts
 * a program normally executes *sequentially* from top to bottom
 * but some instructions can change the flow: ``if`` and ``for`` loops (notion of the  interpretation pointer keeping track of the current line of execution) -> Use `<http://pythontutor.com/>`_ to visualize the step by step execution of a program (show an example. EXplain that sutdents must try to simulate programs in their head or on paper)
 
+* Study the code of "Guess a Number" in `<http://inventwithpython.com/invent4thed/chapter3.html>`_
 
 
 Examples of exercices
@@ -56,7 +57,9 @@ Programming
 -----------
 
 * Random numbers 
-* More Python objects: lists, sets, dictionaries (note : difference between 
+* More Python objects: lists, sets, dictionaries
+
+* Read https://automatetheboringstuff.com/2e/chapter4/ https://automatetheboringstuff.com/2e/chapter5/
 
 Exercices
 ---------
@@ -107,7 +110,7 @@ Exercices
 
 * Define a function ``is_prime(x)`` which returns ``True`` if ``x`` is a prime number, else ``False``. Use it to list all prime numbers below 1000.
 * recursion `<https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html>`_
-* 
+
 
 Course 5
 ########
@@ -122,8 +125,8 @@ Programming
 -----------
 
 * Querying and navigating the file system `<https://automatetheboringstuff.com/2e/chapter10/>`_
-* Reading and writing text files.
-* Manipulating strings (split, join, ...).
+* Reading and writing text files. 
+* Manipulating strings (split, join, ...). (chapter 10 of Swinnen's Apprendre à programmer avec Python 3)
 
 
 Exercices
@@ -147,6 +150,6 @@ Programming
 -----------
 
 * How numbers, text, images are represented in a computer:  https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html
-* notion of object oriented programming in python (methods vs class). Examples with standard classes (e.g. turtle, tk,...)
+* notion of object oriented programming in python (classes, objects, methods). Examples with standard classes (e.g. turtle, tk,...)
 
 
