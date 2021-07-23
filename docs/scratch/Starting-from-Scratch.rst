@@ -238,11 +238,11 @@ Multiplication
 “Multiply by adding”: Write a program that reads in two integer numbers and
 displays their sum.
 
-. . .
+
 
 |image13|
 
-. . .
+
 
 Guess a number
 --------------
@@ -251,11 +251,10 @@ Guess a number
 and loop asking you for a guess and reply either ``too low``, ``too high``, or
 ``you win!`` depending on your answer.
 
-. . .
 
 |image14|
 
-. . .
+
 
 Estimate PI
 -----------
@@ -272,11 +271,10 @@ Estimate PI
    (the area of the square), is an estimate of teh area of the disk,
    that is, the number pi.
 
-. . .
 
 |image15|
 
-. . .
+
 
 
 .. |image0| image:: img/marr.jpg
