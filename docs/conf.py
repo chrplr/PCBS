@@ -58,7 +58,7 @@ latex_engine = 'xelatex'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'alabaster'
+html_theme = 'alabaster'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -70,11 +70,11 @@ html_static_path = ['_static']
 #     'nosidebar': True,
 # }
 
-def setup(app):
-    app.add_css_file('my_theme.css')
+#def setup(app):
+#    app.add_css_file('my_theme.css')
 
-extensions.append("sphinx_ansible_theme.ext.pygments_lexer")
-html_theme = "sphinx_ansible_theme"
+#extensions.append("sphinx_ansible_theme.ext.pygments_lexer")
+#html_theme = "sphinx_ansible_theme"
 highlight_language = 'python3'
 html_context = {'display_github': True, 'github_user': 'chrplr', 'github_repo': 'PCBS', 'github_version': 'master/sample-docs/', 'github_root_dir': 'master/src', 'current_version': 'latest', 'latest_version': 'latest', 'available_versions': ('latest', ), 'css_files': (), }
 html_theme_options = {'collapse_navigation': False, 'analytics_id': '', 'style_nav_header_background': '#5bbdbf', 'style_external_links': True, 'canonical_url': 'https://pradyunsg.me/sphinx-themes/', 'vcs_pageview_mode': 'edit', 'navigation_depth': 3, }
