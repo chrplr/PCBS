@@ -122,11 +122,16 @@ Windows
 MacOS
     1. Install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
 
-    2. Open a Terminal and type ``pip install expyriment[all]``
+    2. Open a Terminal and type ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`` to install `Homebrew <https://brew.sh/>`__ (which is needed to install SDL).
 
-    3. In the same Terminal, type ``pip install -U pygame``
+            - If you see "Password: ", this means the Terminal is prompting you to type your computer's administrator account password. Type your password and press the return key to continue.
+            - If you see an error message such as "Error: /usr/local/Cellar is not writable. You should change the ownership and permissions of /usr/local/Cellar back to your user account: sudo chown -R $(whoami) /usr/local/Cellar", run in the Terminal the command that was suggested (here `sudo chown -R $(whoami) /usr/local/Cellar`), and then run the previous command to try installing Homebrew once again
 
-       This upgrade the version of pygame (1.9) installed along expyriment to pygame (2.0), which is required by recent versions of macOS. (As of 2021-02-23.)
+    3. In the same Terminal, type ``brew install sdl`` to install SDL (which is needed to install expyriment). This may take a while.
+
+    4. In the same Terminal, type ``pip install "expyriment[all]"`` to install expyriment.
+
+    5. In the same Terminal, type ``pip install -U pygame`` to upgrade pygame (version >= 2.0 is required on recent versions of macOS, but this must be done *after* installing expyriment otherwise the install of expyriment will fail).
 
 
 Remark:
@@ -142,7 +147,7 @@ To run python scripts using the expyriment module, you will need to activate thi
         conda activate expyriment
 
 
-Whatever your operating systems, you now need to test your installation:
+**Whatever your operating systems, you now need to test your installation**:
 
 1. To test ``pygame``, run the following command in a Terminal::
 
