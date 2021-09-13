@@ -17,7 +17,7 @@ Git repository on github (contains solutions to exercices, ...)
    :maxdepth: 2
    :caption: Contents:
 
-   timetable
+
    first-things-first
    scratch/Starting-from-Scratch
    software-installation
