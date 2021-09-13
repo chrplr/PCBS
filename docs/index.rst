@@ -13,6 +13,25 @@ Git repository on github (contains solutions to exercices, ...)
   https://github.com/chrplr/PCBS
 
 
+Instructors
+
+   Christophe Pallier <christophe@pallier.org>
+   Cédric Foucault <cedric.foucault@gmail.com>
+   Henri van den Driessche <henri.vandendriessche@ens.fr>
+
+
+Moodle
+
+   https://moodle.u-paris.fr/course/view.php?id=7378
+
+Slack discussion forum
+
+   http://cogmaster-pcbs.slack.com (Click https://join.slack.com/t/cogmaster-pcbs/shared_invite/zt-9wid4ime-8~Pw0jKovsbIx1VRawcguQ to join).
+   Use the ``#general`` channel to ask questions.
+
+
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

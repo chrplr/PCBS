@@ -25,6 +25,37 @@ Warnings:
    simple identifier.
 
 
+
+
+The R statistical software
+--------------------------
+
+R is a programming language specialized for statistical data analyses.
+
+Windows
+   Download and install the latest version of R from
+   https://cran.rstudio.com/bin/windows/base/
+
+MacOS
+   Download and install the latest version of R from
+   https://cran.rstudio.com/bin/macosx/
+
+Linux
+   Find the version relevant for your distribution at
+   https://cran.rstudio.com/bin/linux/ and follow the instructions in
+   the ``README.html`` file.
+
+
+Rstudio Desktop
+---------------
+
+Rstudio is an *Integrated Developpement Environment* for R which greatly
+simplifies the use of RMarkdown. You can download and install the
+latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/. Make sure to select
+the correct Operating System!
+
+
+
 SublimeText code editor
 -----------------------
 
@@ -137,7 +168,7 @@ MacOS
 
 **Whatever your operating systems, you now need to test your installation**:
 
-1. To test ``pygame``, run the following command in a Terminal::
+1. To test ``pygame``, run the following command in a Terminal (see below how to open a terminal)::
 
       python -m pygame.examples.aliens
 
@@ -152,61 +183,18 @@ MacOS
 
    You should see a screen with ``Test suite``. There are various tests that you can run. Pressing ``Esc`` will stop the program.
 
-   To quit `ipython`, press `Ctrl-D`, then `y è.
+   To quit `ipython`, press `Ctrl-D`, then `y`.
 
-   To close the terminal Window, press `Ctrl-D`.
-
-Potential issues
-~~~~~~~~~~~~~~~~
-
-    - ``python: command not found``: the folder containing anaconda3's python is missing (or shadowed) from the PATH environment variable that lists all the folders where commands can be located. It is very likely that you did not follow exactly the above installation instructions for either Anaconda3 or Git Bash (Windows only), that is, you did not check the correct options. If you know how to do it, modify the PATH environment variable, else reinstall.  
-
-    - ``expyriment or pygame : module not found``. There are many potential causes for that one. Check that you followed the instructions precisely and contat us on the #general channel of the Slask forum.
+   To close the Terminal window, press `Ctrl-D`.
 
 
-    - If you see error messages (in red) when importing the expyriment module, it is likely due to issues with the version of Python. If this is the case (and only if this is the case), you should create an [Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) as follows::
+3. Watch the video at   https://www.youtube.com/watch?v=2yhcWvBt7ZE&t and try to perform the activities in it (the insturctions walso work for Mac or Linux: you just need to open a standard Terminal when in Windows you need to start 'Gih Bash'). Note: the game scripts in python mentioned in the videao ara available at https://github.com/chrplr/PCBS/tree/master/games/games.zip
 
-        conda create --name expyriment python=3.8
-        conda activate expyriment
-        pip install expyriment[all]
-
-Then, to run python scripts using the expyriment module, you will need to activate this environment with the command::
-
-        conda activate expyriment
-
-  Read more about Python Anaconda environments [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+Do not worry if you do not manage to perform these activies: there will be a training session later on that.
 
 
-The R statistical software
---------------------------
-
-R is a programming language specialized for statistical data analyses.
-
-Windows
-   Download and install the latest version of R from
-   https://cran.rstudio.com/bin/windows/base/
-
-MacOS
-   Download and install the latest version of R from
-   https://cran.rstudio.com/bin/macosx/
-
-Linux
-   Find the version relevant for your distribution at
-   https://cran.rstudio.com/bin/linux/ and follow the instructions in
-   the ``README.html`` file.
-
-
-Rstudio Desktop
----------------
-
-Rstudio is an *Integrated Developpement Environment* for R which greatly
-simplifies the use of RMarkdown. You can download and install the
-latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/. Make sure to select
-the correct Operating System!
-
-
-Learn how to open a Terminal
-----------------------------
+How To open a Terminal
+----------------------
 
 MacOS
    Type ``terminal`` in the Spotlight search field.
@@ -228,6 +216,11 @@ Linux
    ``Ctrl-Alt-T`` (gnome, xfce), or ``Win+Return`` (i3)).
 
 
+To close a Terminal Window, press `Ctrl-D`
+
+
+To go further:
+
 Inside a terminal, you interact with a program that expects you to type
 commands. This program is called a *shell* (see
 http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php).
@@ -245,7 +238,7 @@ Other resources to learn more about how to control your computer from a terminal
      - Learning the Shell  http://linuxcommand.org/lc3_learning_the_shell.php
      - OpenClassRoom : https://openclassrooms.com/en/courses/43538-reprenez-le-controle-a-laide-de-linux/37813-la-console-ca-se-mange
 
-     
+
 
 Download course materials
 -------------------------
@@ -276,6 +269,29 @@ move it if you wnat to keep a copy of your modifications) and reissue the
 ``git clone`` command above to reload the full folder.
 
 
+Potential issues
+~~~~~~~~~~~~~~~~
+
+    - ``python: command not found``: the folder containing anaconda3's python is missing (or shadowed) from the PATH environment variable that lists all the folders where commands can be located. It is very likely that you did not follow exactly the above installation instructions for either Anaconda3 or Git Bash (Windows only), that is, you did not check the correct options. If you know how to do it, modify the PATH environment variable, else reinstall.  
+
+    - ``expyriment or pygame : module not found``. There are many potential causes for that one. Check that you followed the instructions precisely and contat us on the #general channel of the Slask forum.
+
+
+    - If you see error messages (in red) when importing the expyriment module, it is likely due to issues with the version of Python. If this is the case (and only if this is the case), you should create an [Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) as follows::
+
+        conda create --name expyriment python=3.8
+        conda activate expyriment
+        pip install expyriment[all]
+
+Then, to run python scripts using the expyriment module, you will need to activate this environment with the command::
+
+        conda activate expyriment
+
+  Read more about Python Anaconda environments [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+
+
+Creating a conda environment
+----------------------------
  
 .. [#f1] (advanced students only). To avoid potential clashes betwen modules, it may be a good idea to create a conda environment before installing the modules: 
 
