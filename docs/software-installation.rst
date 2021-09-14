@@ -25,23 +25,54 @@ Warnings:
    simple identifier.
 
 
+
+
+The R statistical software
+--------------------------
+
+R is a programming language specialized for statistical data analyses.
+
+Windows
+   Download and install the latest version of R from
+   https://cran.rstudio.com/bin/windows/base/
+
+MacOS
+   Download and install the latest version of R from
+   https://cran.rstudio.com/bin/macosx/
+
+Linux
+   Find the version relevant for your distribution at
+   https://cran.rstudio.com/bin/linux/ and follow the instructions in
+   the ``README.html`` file.
+
+
+Rstudio Desktop
+---------------
+
+Rstudio is an *Integrated Developpement Environment* for R which greatly
+simplifies the use of RMarkdown. You can download and install the
+latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/. Make sure to select
+the correct Operating System!
+
+
+
 SublimeText code editor
 -----------------------
 
 A code editor is a program that allows you to edit pure text files such
-as Python programs, `Markdown <https://daringfireball.net/projects/markdown/>`__  or `LaTeX <https://www.latex-project.org/>`__ documents, ...
+as Python programs, `Markdown <https://daringfireball.net/projects/markdown/>`__  or `LaTeX <https://www.latex-project.org/>`__ documents, etc.
 
-Unless you already use an editor that you are happy with, we
+Unless you already master a code editor,  we
 recommend that you download and install `Sublime Text <https://www.sublimetext.com/>`__. Follow the instructions specific to your Operating System.
 
-If you prefer opensource software, you can try `Atom <http://atom.io>`__, but be
-aware that it is slower and more buggy than Sublime Text.
+[Note: If you prefer to stick to opensource software, you can try `Atom <http://atom.io>`__, but be
+aware that it is slower and more buggy than Sublime Text.]
 
 
 Anaconda Python3 distribution
 -----------------------------
 
-There exists various Python distributions. Among them, we recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`__ as it already contains most of the packages needed for the lectures.
+There exists various Python distributions. Among them, we recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`__ as it already contains most of the packages needed for cognitive science.
 
 1. Go to  <https://www.anaconda.com/products/individual> and  click on ``Download``. Then, select the 64-bit installer for your operating system (Windows, MacOS or Linux).
 2. Execute the Anaconda3 installer. During the installation. 
@@ -59,7 +90,7 @@ The Git version control system
 ------------------------------
 
 Git is a version control tool for software development, an indispensable
-tool to do reproducible science.
+tool to do reproducible science. To install it:
 
 Linux
    execute the command ``sudo apt install git``
@@ -78,9 +109,9 @@ Windows
    5. VERY IMPORTANT: When proposed a default editor, select 'Use the nano editor' (unless you want to learn Vim) 
    6. VERY IMPORTANT: When proposed to adjust the PATH environment variable,  tick the box "Use Git and optional unix tools from the command line prompt". 
 
-   You can accept all other defaults.  (Note: if you are hesitant, check the graphical instructions provided at https://hackernoon.com/install-git-on-windows-9acf2a1944f0)
+   You can accept all other defaults.  
 
-Open a Terminal window, following the instructions specific to your operating system:
+Now, to finish the installation of git, open a Terminal window as follows:
 
 Windows
     Launch ``Git bash`` (use the "Search box")
@@ -118,7 +149,6 @@ Windows
     Start **Git bash**. This opens a terminal, where you can type ``pip install expyriment[all]``
 
 
-
 MacOS
     1. Install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
 
@@ -134,77 +164,37 @@ MacOS
     5. In the same Terminal, type ``pip install -U pygame`` to upgrade pygame (version >= 2.0 is required on recent versions of macOS, but this must be done *after* installing expyriment otherwise the install of expyriment will fail).
 
 
-Remark:
-
-If you see error messages (in red), it is likely due to issues with the version of Python. If this is the case, you should create an [Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) as follows::
-
-        conda create --name expyriment python=3.7
-        conda activate expyriment
-        pip install expyriment[all]
-
-To run python scripts using the expyriment module, you will need to activate this environment with the command::
-
-        conda activate expyriment
 
 
 **Whatever your operating systems, you now need to test your installation**:
 
-1. To test ``pygame``, run the following command in a Terminal::
+1. To test ``pygame``, run the following command in a Terminal (see below how to open a terminal)::
 
       python -m pygame.examples.aliens
 
    You should see a window with moving spaceships.
 
-2. To test ``expyriment``, open a Terminal and type ``python``.
+2. To test ``expyriment``, open a Terminal and type ``ipython``.
 
-   Then, after the prompt ``>>>``, type the following lines::
+   Then, after the prompt ``In [1]:``, type the following lines::
 
          import expyriment
          expyriment.control.run_test_suite()
 
    You should see a screen with ``Test suite``. There are various tests that you can run. Pressing ``Esc`` will stop the program.
 
-   Finally, in the terminal running ``python``, at the ``>>>`` prompt, press ``Ctrl-D``  then ``y``. You are out of python and you can type ``exit`` to close the terminal.
+   To quit `ipython`, press `Ctrl-D`, then `y`.
+
+   To close the Terminal window, press `Ctrl-D`.
 
 
-Potential issues
-~~~~~~~~~~~~~~~~
+3. Watch the video at   https://www.youtube.com/watch?v=2yhcWvBt7ZE&t and try to perform the activities in it (the insturctions walso work for Mac or Linux: you just need to open a standard Terminal when in Windows you need to start 'Gih Bash'). Note: the game scripts in python mentioned in the videao ara available at https://github.com/chrplr/PCBS/tree/master/games/games.zip
 
-    - ``python: command not found``: the folder containing anaconda3's python is missing (or shadowed) from the PATH environment variable that lists all the folders where commands can be located. It is very likely that you did not follow exactly the above installation instructions for either Anaconda3 or Git Bash (Windows only), that is, you did not check the correct options. If you know how to do it, modify the PATH environment variable, else reinstall.  
-
-    - ``expyriment or pygame : module not found``. There are many potential causes for that one. Check that you followed the instructions precisely and contat us on the #general channel of the Slask forum.
+Do not worry if you do not manage to perform these activies: there will be a training session later on that.
 
 
-The R statistical software
---------------------------
-
-R is a programming language specialized for statistical data analyses.
-
-Windows
-   Download and install the latest version of R from
-   https://cran.rstudio.com/bin/windows/base/
-
-MacOS
-   Download and install the latest version of R from
-   https://cran.rstudio.com/bin/macosx/
-
-Linux
-   Find the version relevant for your distribution at
-   https://cran.rstudio.com/bin/linux/ and follow the instructions in
-   the ``README.html`` file.
-
-
-Rstudio Desktop
----------------
-
-Rstudio is an *Integrated Developpement Environment* for R which greatly
-simplifies the use of RMarkdown. You can download and install the
-latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/. Make sure to select
-the correct Operating System!
-
-
-Learn how to open a Terminal
-----------------------------
+How To open a Terminal
+----------------------
 
 MacOS
    Type ``terminal`` in the Spotlight search field.
@@ -226,12 +216,16 @@ Linux
    ``Ctrl-Alt-T`` (gnome, xfce), or ``Win+Return`` (i3)).
 
 
+To close a Terminal Window, press `Ctrl-D`
+
+
+To go further:
+
 Inside a terminal, you interact with a program that expects you to type
 commands. This program is called a *shell* (see
 http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php).
 
-You only need
-to know three commands in order to navigate in the filesystem:
+For the moment, you only need to know three commands in order to navigate in the filesystem:
 
 -  *ls*: list the content of the current working directory
 -  *pwd*: path of current working directory
@@ -244,14 +238,14 @@ Other resources to learn more about how to control your computer from a terminal
      - Learning the Shell  http://linuxcommand.org/lc3_learning_the_shell.php
      - OpenClassRoom : https://openclassrooms.com/en/courses/43538-reprenez-le-controle-a-laide-de-linux/37813-la-console-ca-se-mange
 
-     
+
 
 Download course materials
 -------------------------
 
 This document is available in pdf format at https://pcbs.readthedocs.io/_/downloads/en/latest/pdf/
 
-Once Git is installed  on your computer, you can download the
+Once Git is installed  on your computer, you can download all the
 course materials (python scripts, data files, ...) from http://github.com/chrplr/PCBS) with the command::
 
        git clone https://github.com/chrplr/PCBS.git
@@ -275,6 +269,29 @@ move it if you wnat to keep a copy of your modifications) and reissue the
 ``git clone`` command above to reload the full folder.
 
 
+Potential issues
+~~~~~~~~~~~~~~~~
+
+    - ``python: command not found``: the folder containing anaconda3's python is missing (or shadowed) from the PATH environment variable that lists all the folders where commands can be located. It is very likely that you did not follow exactly the above installation instructions for either Anaconda3 or Git Bash (Windows only), that is, you did not check the correct options. If you know how to do it, modify the PATH environment variable, else reinstall.  
+
+    - ``expyriment or pygame : module not found``. There are many potential causes for that one. Check that you followed the instructions precisely and contat us on the #general channel of the Slask forum.
+
+
+    - If you see error messages (in red) when importing the expyriment module, it is likely due to issues with the version of Python. If this is the case (and only if this is the case), you should create an [Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) as follows::
+
+        conda create --name expyriment python=3.8
+        conda activate expyriment
+        pip install expyriment[all]
+
+Then, to run python scripts using the expyriment module, you will need to activate this environment with the command::
+
+        conda activate expyriment
+
+  Read more about Python Anaconda environments [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
+
+
+Creating a conda environment
+----------------------------
  
 .. [#f1] (advanced students only). To avoid potential clashes betwen modules, it may be a good idea to create a conda environment before installing the modules: 
 
