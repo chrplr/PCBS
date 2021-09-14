@@ -1,0 +1,49 @@
+Intro to programming syllabus 1
+========================================================
+author: Henri Vandendriessche
+date: 14/09/2021
+autosize: true
+
+Slide 1
+========================================================
+title : false
+
+# Context
+<br>
+## - Why programming ?
+<br>
+## - Why python ?
+<br>
+## - Why programming in python for cognitive sciences ?
+
+Slide 2
+========================================================
+title : false
+
+# Writing and running a program with python
+
+<br>
+## - Open sublime
+<br>
+## - Write: <br /><br><br>*print("Hello !!")*
+<br>
+## - Open a terminal and navigate to your .py program
+<br>
+## - Run the command: <br><br>*python my_program.py*
+
+
+
+```{r}
+```
+
+Slide 3
+========================================================
+title : false
+
+# Variables and data in python
+
+
+
+```{r, echo=FALSE}
+
+```
