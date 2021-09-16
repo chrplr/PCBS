@@ -19,7 +19,7 @@ of real-time experiments, simulations...).
 
 **Main documentation**:  
 - [pdf](https://media.readthedocs.org/pdf/pcbs/latest/pcbs.pdf) 
-- [on-line html](https://pcbs.readthedocs.io/en/latest/**
+- [on-line html](https://pcbs.readthedocs.io/en/latest/)
 
 **Quiz**
 
