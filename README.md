@@ -8,12 +8,14 @@ Students in cognitive (neuro)science need to:
    scrapping,)
 3. do reproducible science: simulating models, designing experiments, running
    them, analysing data, ...
-
+   
 
 The purpose of this course is to make students able to write clean code in
 order to solve the tasks that are typically encountered in cognitive or
 neurosciences (data manipulation and analysis, creation of stimuli, programming
 of real-time experiments, simulations...). 
+
+
 
 **Main documentation**:  
 - [pdf](https://media.readthedocs.org/pdf/pcbs/latest/pcbs.pdf) 

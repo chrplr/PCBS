@@ -29,7 +29,9 @@ Slack discussion forum
    http://cogmaster-pcbs.slack.com (Click https://join.slack.com/t/cogmaster-pcbs/shared_invite/zt-9wid4ime-8~Pw0jKovsbIx1VRawcguQ to join).
    Use the ``#general`` channel to ask questions.
 
+Quiz
 
+   `Quiz Python  <../pdfs/quiz-python-2021.pdf>`__  (`Responses  <../pdfs/quiz-python-2021-reponses.pdf>`__)
 
 
 .. toctree::
