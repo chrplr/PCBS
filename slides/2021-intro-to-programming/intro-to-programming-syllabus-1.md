@@ -20,16 +20,16 @@ Slide 2
 ========================================================
 title : false
 
-# Writing and running a program with python
+## Writing and running a program with python
 
 <br>
-## - Open sublime
+### - Open sublime
 <br>
-## - Write: <br /><br><br>*print("Hello !!")*
+### - Write: <br />*print("Hello !!")*
 <br>
-## - Open a terminal and navigate to your .py program
+### - Save the file *your_program.py*
 <br>
-## - Run the command: <br><br>*python my_program.py*
+### - Open a terminal and navigate to your program and run the command: <br>*python my_program.py*
 
 
 
