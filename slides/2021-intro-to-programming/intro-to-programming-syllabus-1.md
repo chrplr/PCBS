@@ -25,13 +25,11 @@ title : false
 <br>
 ### - Open sublime
 <br>
-### - Write: <br />*print("Hello !!")*
+### - Write: <br><span style="color: grey;">*$ print("Hello !!")*</span>
 <br>
-### - Save the file *your_program.py*
+### - Save the file as *hello.py*
 <br>
-### - Open a terminal and navigate to your program and run the command: <br>*python my_program.py*
-
-
+### - Open a terminal and navigate to your program and run the command: <br><span style="color: grey;">*$ python hello.py*</span>
 
 
 
