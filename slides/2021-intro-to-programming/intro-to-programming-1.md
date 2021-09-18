@@ -1,4 +1,4 @@
-Intro to programming syllabus 1
+Intro to programming 1
 ========================================================
 author: Henri Vandendriessche
 date: 14/09/2021
@@ -25,14 +25,13 @@ title : false
 <br>
 ### - Open sublime
 <br>
-### - Write: <br><span style="color: grey;">*$ print("Hello !!")*</span>
+### - Write: <br><span style="color: grey;">`$ print("Hello !")`</span>
 <br>
 ### - Save the file as *hello.py*
 <br>
-### - Open a terminal and navigate to your program and run the command: <br><span style="color: grey;">*$ python hello.py*</span>
+### - Open a terminal and navigate to your program and run the command: <br><span style="color: grey;">`$ python hello.py`</span>
 
-```{r}
-```
+
 
 Slide 3
 ========================================================
@@ -40,8 +39,29 @@ title : false
 
 # Variables and data in python
 
+<br>
+### - Manipulating and storing data
+<br>
+### - Declaring variables
+<br>
+### - Modifiying variables
+<br>
+### - Naming variables
+
+Slide 4
+========================================================
+title : false
+
+# Types of variables
+
+<br>
+## - Primitive types: 
+
++ intergers
++ float
++ string 
++ boolean
 
 
-```{r, echo=FALSE}
 
-```
+
