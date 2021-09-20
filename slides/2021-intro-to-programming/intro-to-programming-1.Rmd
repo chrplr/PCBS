@@ -1,0 +1,219 @@
+---
+title: "Intro to programming - 1"
+author: Henri Vandendriessche
+date: 21/09/2021
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+Context
+========================================================
+
+- Why programming ?
+
+- Why python ?
+
+- Why programming in python for cognitive sciences ?
+
+
+Writing and running a program with python
+========================================================
+
+- Open sublime
+
+- Write: <br><span style="color: grey;">`$ print("Hello !")`</span>
+
+- Save the file as *hello.py*
+
+- Open a terminal and navigate to your program and run the command: <br><span style="color: grey;">`$ python hello.py`</span>
+
+
+Variables and data in python
+========================================================
+
+
+- Manipulating and storing data
+
+- Declaring variables
+
+- Modifiying variables
+
+- Naming variables
+
+- Different types of variables: Primitive types
+  + intergers
+  + float
+  + string 
+  + boolean
+
+
+
+Numeric data et operations 1/2
+========================================================
+
+
+- Differences between integers and floats
+
+- Arithmetic operators + - * / %
+
+
+- Exercice : calculate and print the result of this operation
+
+
+$$\frac{15}{3+2}-(\frac{\frac{100}{4}}{5})*2$$
+
+Numeric data et operations 2/2
+========================================================
+
+
+- Differences between integers and floats
+
+- Arithmetic operators + - * / %
+
+
+- Exercice : calculate and print the result of this operation
+
+
+$$\frac{15}{3+2}-(\frac{\frac{100}{4}}{5})*2$$
+
+```{python echo=TRUE}
+x = 15/(3+2) - (100/4/5)*2
+print(x)
+```
+
+
+Strings 1/3
+========================================================
+
+
+- Used to store text (most of the time)
+
+- Strings are declared with " " or ''. Examples:
+<br><span style="color: grey;">`$ animal = "Dog"`</span>
+<br><span style="color: grey;">`$ class = "Intro to programming in python"`</span>
+
+- String can easily be concatenated the operator +
+
+
+```{python echo=TRUE}
+greetings = "Hello"
+presentation = "My name is"
+name = "Henri"
+print( greetings + presentation + name)
+```
+
+
+Strings 2/3
+========================================================
+
+
+- Used to store text (most of the time)
+
+- Strings are declared with " " or ' '. Examples:
+<br><span style="color: grey;">`$ animal = "Dog"`</span>
+<br><span style="color: grey;">`$ class = "Intro to programming in python"`</span>
+
+- String can easily be concatenated the operator +
+
+
+```{python echo=TRUE}
+greetings = "Hello"
+presentation = "My name is"
+name = "Henri"
+print( greetings + presentation + name)
+```
+
+- Exercice: insert whitespace between the words.
+
+Strings 2/3
+========================================================
+
+
+- Used to store text (most of the time)
+
+- Strings are declared with " " or ' '. Examples:
+<br><span style="color: grey;">`$ animal = "Dog"`</span>
+<br><span style="color: grey;">`$ class = "Intro to programming in python"`</span>
+
+- String can easily be concatenated the operator +
+
+
+```{python echo=TRUE}
+greetings = "Hello"
+presentation = "My name is"
+name = "Henri"
+print( greetings + presentation + name)
+```
+
+- Exercice: insert whitespace between the words.
+```{python echo=TRUE}
+greetings = "Hello"
+presentation = "My name is"
+name = "Henri"
+print( greetings + ' ' + presentation + ' ' + name)
+
+space = ' '
+print(greetings + space + presentation + space + name)
+```
+
+Strings 3/3
+========================================================
+
+- Functions working with strings:
+    - len() calculate the length of a function
+    - replace() can replace a pattern in a string
+    - 
+    
+    
+
+Control flow 1/2
+========================================================
+
+- A program normally executes sequentially from top to bottom
+
+- But some instructions can change the flow: *if* and *for* loops 
+
+- *if* will test for a conditional comparison. Example:
+<br><span style="color: grey;">`$   string = "This string is long but not that long"`</span>
+<br><span style="color: grey;">`$   if len(string) < 10:`</span>
+<br><span style="color: grey;">`$   print("This string has at least 10 character")`</span>
+<br><span style="color: grey;">`$   elif len(string) < 20:`</span>
+<br><span style="color: grey;">`$   print("This string has at least 20 character")`</span>
+<br><span style="color: grey;">`$   elif len(string) >30:`</span>
+<br><span style="color: grey;">`$   print("That string is too long for me...")`</span>
+
+Control flow 1/2
+========================================================
+
+- A program normally executes sequentially from top to bottom
+
+- But some instructions can change the flow: *if* and *for* loops 
+
+- **if** will test for a conditional comparison. Example
+<br><span style="color: grey;">`$   string = "This string is long but not that long"`</span>
+<br><span style="color: grey;">`$   if len(string) < 10:`</span>
+<br><span style="color: grey;">`$   print("This string has at least 10 character")`</span>
+<br><span style="color: grey;">`$   elif len(string) < 20:`</span>
+<br><span style="color: grey;">`$   print("This string has at least 20 character")`</span>
+<br><span style="color: grey;">`$   elif len(string) >30:`</span>
+<br><span style="color: grey;">`$   print("That string is too long for me...")`</span>
+
+```{python echo=FALSE}
+string = "This string is long but not that long"
+
+if len(string) < 10:
+  print("This string has at least 10 character")
+elif len(string) < 20:
+  print("This string has at least 20 character")
+elif len(string) >30:
+  print("That string is too long for me...")
+```
+
+Control flow 2/2
+========================================================
+
+- **for** loop iterate one or a set of operation several times.
+
+- 
