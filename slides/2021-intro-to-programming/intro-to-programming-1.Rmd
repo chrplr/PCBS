@@ -78,7 +78,11 @@ Variables and data in python
 
 - Modifiying variables
 
-- Naming variables
+- Naming variables:
+      - Use alphanumeric characters and underscores (but no number nor underscore as first character)
+      - Use a descriptive name
+      - Avoid short versions
+      - Variable are case-sensitive: upper-case and lower-case make a difference 
 
 - Different types of variables: Primitive types
   + intergers
@@ -128,7 +132,7 @@ Strings 1/3
 
 - Used to store text (most of the time)
 
-- Strings are declared with " " or ''. Examples:
+- Strings are declared with " " or ' '. Examples:
 <br><span style="color: grey;">`$ animal = "Dog"`</span>
 <br><span style="color: grey;">`$ class = "Intro to programming in python"`</span>
 
@@ -206,37 +210,95 @@ Strings 3/3
     
     
 
-Control flow 1/2
+Program flow 1/2
 ========================================================
 
 - A program normally executes sequentially from top to bottom
 
-- But some instructions can change the flow: *if* and *for* loops 
+- But some instructions can change the flow. For examples *if* and *for* loops 
 
-- *if* will test for a conditional comparison. Example:
-<br><span style="color: grey;">`$   string = "This string is long but not that long"`</span>
-<br><span style="color: grey;">`$   if len(string) < 10:`</span>
-<br><span style="color: grey;">`$   print("This string has at least 10 character")`</span>
-<br><span style="color: grey;">`$   elif len(string) < 20:`</span>
-<br><span style="color: grey;">`$   print("This string has at least 20 character")`</span>
-<br><span style="color: grey;">`$   elif len(string) >30:`</span>
-<br><span style="color: grey;">`$   print("That string is too long for me...")`</span>
+- **if** will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it's false we will not execute those lines of codes (but why not others).
 
-Control flow 1/2
+Example 1:
+
+<br><span style="color: grey;">`$   Weekend = "False"`</span>
+<br><span style="color: grey;">`$   if Weekend :`</span>
+<br><span style="color: grey;">`$       print("Time to go to work")`</span>
+
+Program flow 1/2
 ========================================================
 
 - A program normally executes sequentially from top to bottom
 
-- But some instructions can change the flow: *if* and *for* loops 
+- But some instructions can change the flow. For examples *if* and *for* loops 
 
-- **if** will test for a conditional comparison. Example
-<br><span style="color: grey;">`$   string = "This string is long but not that long"`</span>
+- **if** will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it's false we will not execute those lines of codes (but why not others).
+
+Example 1:
+
+<br><span style="color: grey;">`$   Weekend = "False"`</span>
+<br><span style="color: grey;">`$   if Weekend :`</span>
+<br><span style="color: grey;">`$       print("Time to go to work")`</span>
+<br><span style="color: grey;">`$   else:`</span>
+<br><span style="color: grey;">`$       print("Let's do nothing and chill"`</span>
+
+
+Program flow 1/2
+========================================================
+
+- A program normally executes sequentially from top to bottom
+
+- But some instructions can change the flow. For examples *if* and *for* loops 
+
+- **if** will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it's false we will not execute those lines of codes (but why not others).
+
+Example 1:
+
+<br><span style="color: grey;">`$   Weekend = "False"`</span>
+<br><span style="color: grey;">`$   if Weekend :`</span>
+<br><span style="color: grey;">`$       print("Time to go to work")`</span>
+<br><span style="color: grey;">`$   else:"`</span>
+<br><span style="color: grey;">`$       print("Let's do nothing and chill"`</span>
+
+
+Example2 :
+
+<br><span style="color: grey;">`$   string = "This string is long but not that long. How long is it ?"`</span>
 <br><span style="color: grey;">`$   if len(string) < 10:`</span>
-<br><span style="color: grey;">`$   print("This string has at least 10 character")`</span>
+<br><span style="color: grey;">`$       print("This string has at least 10 character")`</span>
 <br><span style="color: grey;">`$   elif len(string) < 20:`</span>
-<br><span style="color: grey;">`$   print("This string has at least 20 character")`</span>
-<br><span style="color: grey;">`$   elif len(string) >30:`</span>
-<br><span style="color: grey;">`$   print("That string is too long for me...")`</span>
+<br><span style="color: grey;">`$       print("This string has at least 20 character")`</span>
+<br><span style="color: grey;">`$   else len(string) >30:`</span>
+<br><span style="color: grey;">`$       print("That string is way too long for me...")`</span>
+
+Program flow 1/3
+========================================================
+
+- A program normally executes sequentially from top to bottom
+
+- But some instructions can change the flow. For examples *if* and *for* loops 
+
+- **if** will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it's false we will not execute those lines of codes (but why not others).
+
+Example 1:
+
+<br><span style="color: grey;">`$   Weekend = "False"`</span>
+<br><span style="color: grey;">`$   if Weekend :`</span>
+<br><span style="color: grey;">`$       print("Time to go to work")`</span>
+<br><span style="color: grey;">`$   else:"`</span>
+<br><span style="color: grey;">`$       print("Let's do nothing and chill"`</span>
+
+
+Example2 :
+
+<br><span style="color: grey;">`$   string = "This string is long but not that long. How long is it ?"`</span>
+<br><span style="color: grey;">`$   if len(string) < 10:`</span>
+<br><span style="color: grey;">`$       print("This string has at least 10 character")`</span>
+<br><span style="color: grey;">`$   elif len(string) < 20:`</span>
+<br><span style="color: grey;">`$       print("This string has at least 20 character")`</span>
+<br><span style="color: grey;">`$   else len(string) >30:`</span>
+<br><span style="color: grey;">`$       print("That string is way too long for me...")`</span>
+
 
 ```{python echo=FALSE}
 string = "This string is long but not that long"
@@ -249,9 +311,41 @@ elif len(string) >30:
   print("That string is too long for me...")
 ```
 
-Control flow 2/2
+Control flow 2/3
 ========================================================
 
-- **for** loop iterate one or a set of operation several times.
+- You can also define other alternatives with **elif**
 
-- 
+- you can make use different ways to make your comparison:
+      - **and** 
+      - **or**
+      - **not**
+  
+- You can as well use comparative expressions:
+      - **<** 
+      - **>**
+      - **<=**
+      - **==** tests for equality
+      - **!=** tests for inequality
+
+Be careful **=** is not the same as **==**
+```{python echo=TRUE}
+age = 30
+
+age == 30
+
+```      
+
+Control flow 3/3
+========================================================
+
+- **for** loops iterate one or a set of operations several times.
+
+Example 1:
+
+<br><span style="color: grey;">`$  for x in range(10):`</span>
+<br><span style="color: grey;">`$     print(x)`</span>
+```{python echo=TRUE}
+for x in range(10):
+  print(x)
+```    
