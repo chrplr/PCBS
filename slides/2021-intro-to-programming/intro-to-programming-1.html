@@ -197,7 +197,7 @@ Henri Vandendriessche
 <li><p>Manipulating and storing data</p></li>
 <li><p>Declaring variables</p></li>
 <li><p>Modifiying variables</p></li>
-<li><p>Naming variables</p></li>
+<li><p>Naming variables: - Use alphanumeric characters and underscores (but no number nor underscore as first character) - Use a descriptive name - Avoid short versions - Variable are case-sensitive: upper-case and lower-case make a difference</p></li>
 <li><p>Different types of variables: Primitive types</p>
 <ul>
 <li>intergers</li>
@@ -232,7 +232,7 @@ Henri Vandendriessche
 <h1>Strings 1/3</h1>
 <ul>
 <li><p>Used to store text (most of the time)</p></li>
-<li><p>Strings are declared with &quot; &quot; or ’’. Examples: <br><span style="color: grey;"><code>$ animal = &quot;Dog&quot;</code></span> <br><span style="color: grey;"><code>$ class = &quot;Intro to programming in python&quot;</code></span></p></li>
+<li><p>Strings are declared with &quot; &quot; or ’ ’. Examples: <br><span style="color: grey;"><code>$ animal = &quot;Dog&quot;</code></span> <br><span style="color: grey;"><code>$ class = &quot;Intro to programming in python&quot;</code></span></p></li>
 <li><p>String can easily be concatenated the operator +</p></li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
@@ -284,36 +284,168 @@ Henri Vandendriessche
 <div id="strings-33" class="slide section level1">
 <h1>Strings 3/3</h1>
 <ul>
-<li>Functions working with strings:
+<li><p>Functions working with strings:</p>
 <ul>
-<li>len() calculate the length of a function</li>
-<li>replace() can replace a pattern in a string</li>
-<li></li>
+<li><strong>len()</strong> calculate the length of a function Example</li>
 </ul></li>
 </ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(greetings))</span></code></pre></div>
+<pre><code>## 5</code></pre>
+<ul>
+<li><strong>replace()</strong> can replace a pattern in a string Example</li>
+</ul>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greetings)</span></code></pre></div>
+<pre><code>## Hello</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greetings.replace(<span class="st">&#39;e&#39;</span>,<span class="st">&#39;a&#39;</span>))</span></code></pre></div>
+<pre><code>## Hallo</code></pre>
+<pre><code>- ...</code></pre>
 </div>
-<div id="control-flow-12" class="slide section level1">
-<h1>Control flow 1/2</h1>
+<div id="booleans" class="slide section level1">
+<h1>Booleans</h1>
+<ul>
+<li><p>A boolean is a pretty simple variable but sometimes complex to deal with</p></li>
+<li><p>It can have only two values <strong>True</strong> or <strong>False</strong></p></li>
+<li><p>It is used usually to store the truth value of logic</p></li>
+</ul>
+<p>Example: <br><span style="color: grey;"><code>$   Is_it_Weekend = False</code></span> <br><span style="color: grey;"><code>$   print(Is_it_Weekend)</code></span></p>
+<pre><code>## False</code></pre>
+</div>
+<div id="program-flow-14" class="slide section level1">
+<h1>Program flow 1/4</h1>
 <ul>
 <li><p>A program normally executes sequentially from top to bottom</p></li>
-<li><p>But some instructions can change the flow: <em>if</em> and <em>for</em> loops</p></li>
-<li><p><em>if</em> will test for a conditional comparison. Example: <br><span style="color: grey;"><code>$   string = &quot;This string is long but not that long&quot;</code></span> <br><span style="color: grey;"><code>$   if len(string) &lt; 10:</code></span> <br><span style="color: grey;"><code>$   print(&quot;This string has at least 10 character&quot;)</code></span> <br><span style="color: grey;"><code>$   elif len(string) &lt; 20:</code></span> <br><span style="color: grey;"><code>$   print(&quot;This string has at least 20 character&quot;)</code></span> <br><span style="color: grey;"><code>$   elif len(string) &gt;30:</code></span> <br><span style="color: grey;"><code>$   print(&quot;That string is too long for me...&quot;)</code></span></p></li>
+<li><p>But some instructions can change the flow. For examples <em>if</em> and <em>for</em> loops</p></li>
+<li><p><strong>if</strong> will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it’s false we will not execute those lines of codes (but why not others).</p></li>
 </ul>
+<p>Example 1:</p>
+<p><br><span style="color: grey;"><code>$   Weekend = &quot;False&quot;</code></span> <br><span style="color: grey;"><code>$   if Weekend :</code></span> <br><span style="color: grey;"><code>$       print(&quot;Time to go to work&quot;)</code></span></p>
 </div>
-<div id="control-flow-12-1" class="slide section level1">
-<h1>Control flow 1/2</h1>
+<div id="program-flow-14-1" class="slide section level1">
+<h1>Program flow 1/4</h1>
 <ul>
 <li><p>A program normally executes sequentially from top to bottom</p></li>
-<li><p>But some instructions can change the flow: <em>if</em> and <em>for</em> loops</p></li>
-<li><p><strong>if</strong> will test for a conditional comparison. Example <br><span style="color: grey;"><code>$   string = &quot;This string is long but not that long&quot;</code></span> <br><span style="color: grey;"><code>$   if len(string) &lt; 10:</code></span> <br><span style="color: grey;"><code>$   print(&quot;This string has at least 10 character&quot;)</code></span> <br><span style="color: grey;"><code>$   elif len(string) &lt; 20:</code></span> <br><span style="color: grey;"><code>$   print(&quot;This string has at least 20 character&quot;)</code></span> <br><span style="color: grey;"><code>$   elif len(string) &gt;30:</code></span> <br><span style="color: grey;"><code>$   print(&quot;That string is too long for me...&quot;)</code></span></p></li>
+<li><p>But some instructions can change the flow. For examples <em>if</em> and <em>for</em> loops</p></li>
+<li><p><strong>if</strong> will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it’s false we will not execute those lines of codes (but why not others).</p></li>
 </ul>
+<p>Example 1:</p>
+<p><br><span style="color: grey;"><code>$   Weekend = &quot;False&quot;</code></span> <br><span style="color: grey;"><code>$   if Weekend :</code></span> <br><span style="color: grey;"><code>$       print(&quot;Time to go to work&quot;)</code></span> <br><span style="color: grey;"><code>$   else:</code></span> <br><span style="color: grey;"><code>$       print(&quot;Let&#39;s do nothing and chill&quot;</code></span></p>
+</div>
+<div id="program-flow-14-2" class="slide section level1">
+<h1>Program flow 1/4</h1>
+<ul>
+<li><p>A program normally executes sequentially from top to bottom</p></li>
+<li><p>But some instructions can change the flow. For examples <em>if</em> and <em>for</em> loops</p></li>
+<li><p><strong>if</strong> will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it’s false we will not execute those lines of codes (but why not others).</p></li>
+</ul>
+<p>Example 1:</p>
+<p><br><span style="color: grey;"><code>$   Weekend = &quot;False&quot;</code></span> <br><span style="color: grey;"><code>$   if Weekend :</code></span> <br><span style="color: grey;"><code>$       print(&quot;Time to go to work&quot;)</code></span> <br><span style="color: grey;"><code>$   else:&quot;</code></span> <br><span style="color: grey;"><code>$       print(&quot;Let&#39;s do nothing and chill&quot;</code></span></p>
+<p>Example2 :</p>
+<p><br><span style="color: grey;"><code>$   string = &quot;This string is long but not that long. How long is it ?&quot;</code></span> <br><span style="color: grey;"><code>$   if len(string) &lt; 10:</code></span> <br><span style="color: grey;"><code>$       print(&quot;This string has at least 10 character&quot;)</code></span> <br><span style="color: grey;"><code>$   elif len(string) &lt; 20:</code></span> <br><span style="color: grey;"><code>$       print(&quot;This string has at least 20 character&quot;)</code></span> <br><span style="color: grey;"><code>$   else len(string) &gt;30:</code></span> <br><span style="color: grey;"><code>$       print(&quot;That string is way too long for me...&quot;)</code></span></p>
+</div>
+<div id="program-flow-14-3" class="slide section level1">
+<h1>Program flow 1/4</h1>
+<ul>
+<li><p>A program normally executes sequentially from top to bottom</p></li>
+<li><p>But some instructions can change the flow. For examples <em>if</em> and <em>for</em> loops</p></li>
+<li><p><strong>if</strong> will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it’s false we will not execute those lines of codes (but why not others).</p></li>
+</ul>
+<p>Example 1:</p>
+<p><br><span style="color: grey;"><code>$   Weekend = &quot;False&quot;</code></span> <br><span style="color: grey;"><code>$   if Weekend :</code></span> <br><span style="color: grey;"><code>$       print(&quot;Time to go to work&quot;)</code></span> <br><span style="color: grey;"><code>$   else:&quot;</code></span> <br><span style="color: grey;"><code>$       print(&quot;Let&#39;s do nothing and chill&quot;</code></span></p>
+<p>Example2 :</p>
+<p><br><span style="color: grey;"><code>$   string = &quot;This string is long but not that long. How long is it ?&quot;</code></span> <br><span style="color: grey;"><code>$   if len(string) &lt; 10:</code></span> <br><span style="color: grey;"><code>$       print(&quot;This string has at least 10 character&quot;)</code></span> <br><span style="color: grey;"><code>$   elif len(string) &lt; 20:</code></span> <br><span style="color: grey;"><code>$       print(&quot;This string has at least 20 character&quot;)</code></span> <br><span style="color: grey;"><code>$   else len(string) &gt;30:</code></span> <br><span style="color: grey;"><code>$       print(&quot;That string is way too long for me...&quot;)</code></span></p>
 <pre><code>## That string is too long for me...</code></pre>
 </div>
-<div id="control-flow-22" class="slide section level1">
-<h1>Control flow 2/2</h1>
+<div id="program-flow-24" class="slide section level1">
+<h1>Program flow 2/4</h1>
 <ul>
-<li><p><strong>for</strong> loop iterate one or a set of operation several times.</p></li>
-<li></li>
+<li><p>You can also define other alternatives with <strong>elif</strong></p></li>
+<li><p>you can make use different ways to make your comparison: - <strong>and</strong> - <strong>or</strong> - <strong>not</strong></p></li>
+<li><p>You can as well use comparative expressions: - <strong>&lt;</strong> - <strong>&gt;</strong> - <strong>&lt;=</strong> - <strong>==</strong> tests for equality - <strong>!=</strong> tests for inequality</p></li>
+</ul>
+<p>Be careful <strong>=</strong> is not the same as <strong>==</strong></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">==</span> <span class="dv">30</span></span></code></pre></div>
+<pre><code>## True</code></pre>
+</div>
+<div id="program-flow-34" class="slide section level1">
+<h1>Program flow 3/4</h1>
+<ul>
+<li><strong>for</strong> loops iterate one or a set of operations several times.</li>
+</ul>
+<p>Example 1:</p>
+<p><br><span style="color: grey;"><code>$  for x in range(10):</code></span> <br><span style="color: grey;"><code>$     print(x)</code></span></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(x)</span></code></pre></div>
+<pre><code>## 0
+## 1
+## 2
+## 3
+## 4
+## 5
+## 6
+## 7
+## 8
+## 9</code></pre>
+</div>
+<div id="program-flow-34-1" class="slide section level1">
+<h1>Program flow 3/4</h1>
+<ul>
+<li><strong>for</strong> loops iterate one or a set of operations several times.</li>
+</ul>
+<p>Example 1:</p>
+<p><br><span style="color: grey;"><code>$  for x in range(10):</code></span> <br><span style="color: grey;"><code>$     print(x)</code></span></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(x)</span></code></pre></div>
+<pre><code>## 0
+## 1
+## 2
+## 3
+## 4
+## 5
+## 6
+## 7
+## 8
+## 9</code></pre>
+<p>Example 2: <br><span style="color: grey;"><code>$  for i in range(5,10):</code></span> <br><span style="color: grey;"><code>$     print(i)</code></span></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>,<span class="dv">10</span>):</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code></pre></div>
+<pre><code>## 5
+## 6
+## 7
+## 8
+## 9</code></pre>
+</div>
+<div id="program-flow-44" class="slide section level1">
+<h1>Program flow 4/4</h1>
+<ul>
+<li><p>With <strong>for</strong> loops you see that your program flow is not always unilateral from the top to the bottom of your script</p></li>
+<li><p>Let’s play a small game. Download</p></li>
+</ul>
+<p><a href="https://github.com/chrplr/PCBS/blob/master/games/human-guess-a-number.py" class="uri">https://github.com/chrplr/PCBS/blob/master/games/human-guess-a-number.py</a></p>
+</div>
+<div id="program-flow-44-1" class="slide section level1">
+<h1>Program flow 4/4</h1>
+<ul>
+<li><p>With <strong>for</strong> loops you see that your program flow is not always unilateral from the top to the bottom of your script</p></li>
+<li><p>Let’s play a small game. Download</p></li>
+</ul>
+<p><a href="https://github.com/chrplr/PCBS/blob/master/games/human-guess-a-number.py" class="uri">https://github.com/chrplr/PCBS/blob/master/games/human-guess-a-number.py</a></p>
+<ul>
+<li><p>Then go on <a href="http://pythontutor.com/" class="uri">http://pythontutor.com/</a> and paste the code of the game.</p></li>
+<li><p>Look at the program flow to see how it jumps from one code section to another</p></li>
+</ul>
+</div>
+<div id="excercices" class="slide section level1">
+<h1>Excercices</h1>
+<ul>
+<li><p>Exercice 1: Write code that prints the string “All work no play makes Jack a dull boy” 50 times</p></li>
+<li><p>Exercice 2: Write code that prints the squares of all integers between 1 and 100 using range</p></li>
+<li><p>Exercice 3: Write code that browses the integer from 0 to 100 but only prints the number 1, 50 and 100</p></li>
+<li><p>Exercice 4: Write code that prints only odd numbers between 0 and 100</p></li>
+<li><p>Exercice 5: Write code that computes the factorial of an integer (no function, no recursion, just a loop)</p></li>
 </ul>
 </div>
 

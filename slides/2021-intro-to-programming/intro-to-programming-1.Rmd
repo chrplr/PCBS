@@ -204,13 +204,45 @@ Strings 3/3
 ========================================================
 
 - Functions working with strings:
-    - len() calculate the length of a function
-    - replace() can replace a pattern in a string
-    - 
-    
-    
 
-Program flow 1/2
+  - **len()** calculate the length of a function
+    Example
+```{python echo=TRUE}
+greetings = "Hello"
+print(len(greetings))
+```    
+    
+  - **replace()** can replace a pattern in a string
+  Example
+```{python echo=TRUE}
+greetings = "Hello"
+print(greetings)
+print(greetings.replace('e','a'))
+```  
+    
+    - ...
+    
+Booleans
+========================================================    
+    
+  - A boolean is a pretty simple variable but sometimes complex to deal with
+  
+  - It can have only two values **True** or **False**
+  
+  - It is used usually to store the truth value of logic
+  
+  Example:
+<br><span style="color: grey;">`$   Is_it_Weekend = False`</span>
+<br><span style="color: grey;">`$   print(Is_it_Weekend)`</span>
+
+```{python echo=FALSE}
+Is_it_Weekend = False
+print(Is_it_Weekend)
+
+```
+
+
+Program flow 1/4
 ========================================================
 
 - A program normally executes sequentially from top to bottom
@@ -225,7 +257,7 @@ Example 1:
 <br><span style="color: grey;">`$   if Weekend :`</span>
 <br><span style="color: grey;">`$       print("Time to go to work")`</span>
 
-Program flow 1/2
+Program flow 1/4
 ========================================================
 
 - A program normally executes sequentially from top to bottom
@@ -243,7 +275,7 @@ Example 1:
 <br><span style="color: grey;">`$       print("Let's do nothing and chill"`</span>
 
 
-Program flow 1/2
+Program flow 1/4
 ========================================================
 
 - A program normally executes sequentially from top to bottom
@@ -271,7 +303,7 @@ Example2 :
 <br><span style="color: grey;">`$   else len(string) >30:`</span>
 <br><span style="color: grey;">`$       print("That string is way too long for me...")`</span>
 
-Program flow 1/3
+Program flow 1/4
 ========================================================
 
 - A program normally executes sequentially from top to bottom
@@ -311,7 +343,7 @@ elif len(string) >30:
   print("That string is too long for me...")
 ```
 
-Control flow 2/3
+Program flow 2/4
 ========================================================
 
 - You can also define other alternatives with **elif**
@@ -336,7 +368,7 @@ age == 30
 
 ```      
 
-Control flow 3/3
+Program flow 3/4
 ========================================================
 
 - **for** loops iterate one or a set of operations several times.
@@ -349,3 +381,62 @@ Example 1:
 for x in range(10):
   print(x)
 ```    
+
+Program flow 3/4
+========================================================
+
+- **for** loops iterate one or a set of operations several times.
+
+Example 1:
+
+<br><span style="color: grey;">`$  for x in range(10):`</span>
+<br><span style="color: grey;">`$     print(x)`</span>
+```{python echo=TRUE}
+for x in range(10):
+  print(x)
+```
+
+Example 2:
+<br><span style="color: grey;">`$  for i in range(5,10):`</span>
+<br><span style="color: grey;">`$     print(i)`</span>
+```{python echo=TRUE}
+for i in range(5,10):
+  print(i)
+```    
+
+Program flow 4/4
+========================================================
+
+- With **for** loops you see that your program flow is not always unilateral from the top to the bottom of your script
+
+- Let's play a small game. Download
+
+https://github.com/chrplr/PCBS/blob/master/games/human-guess-a-number.py
+
+Program flow 4/4
+========================================================
+
+- With **for** loops you see that your program flow is not always unilateral from the top to the bottom of your script
+
+- Let's play a small game. Download
+
+https://github.com/chrplr/PCBS/blob/master/games/human-guess-a-number.py
+
+
+- Then go on http://pythontutor.com/ and paste the code of the game.
+
+- Look at the program flow to see how it jumps from one code section to another
+
+Excercices
+========================================================
+
+- Exercice 1: Write code that prints the string "All work no play makes Jack a dull boy" 50 times
+
+- Exercice 2: Write code that prints the squares of all integers between 1 and 100 using range
+
+- Exercice 3: Write code that browses the integer from 0 to 100 but only prints the number 1, 50 and 100
+
+- Exercice 4: Write code that prints only odd numbers between 0 and 100
+
+- Exercice 5: Write code that computes the factorial of an integer (no function, no recursion, just a loop)
+
