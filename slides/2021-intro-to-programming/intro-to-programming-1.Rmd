@@ -21,6 +21,25 @@ Context
 - Why programming in python for cognitive sciences ?
 
 
+Survival rules for programming
+========================================================
+
+
+
+1- Try by yourself before looking for solutions
+
+2- Internet is your best friend
+
+3- Read the manual
+
+4- There is always a manual
+
+5- Have you read the fucking manual ?
+
+6- Not yet ? Then read it
+
+7- Always read the error message 
+
 
 Resources
 ========================================================
@@ -270,9 +289,9 @@ Example 1:
 
 <br><span style="color: grey;">`$   Weekend = "False"`</span>
 <br><span style="color: grey;">`$   if Weekend :`</span>
-<br><span style="color: grey;">`$       print("Time to go to work")`</span>
+<br><span style="color: grey;">`$       print("Let's do nothing and chill")`</span>
 <br><span style="color: grey;">`$   else:`</span>
-<br><span style="color: grey;">`$       print("Let's do nothing and chill"`</span>
+<br><span style="color: grey;">`$       print("Time to go to work")print("Let's do nothing and chill"`</span>
 
 
 Program flow 1/4
@@ -297,9 +316,9 @@ Example2 :
 
 <br><span style="color: grey;">`$   string = "This string is long but not that long. How long is it ?"`</span>
 <br><span style="color: grey;">`$   if len(string) < 10:`</span>
-<br><span style="color: grey;">`$       print("This string has at least 10 character")`</span>
+<br><span style="color: grey;">`$       print("This string has less than 10 character")`</span>
 <br><span style="color: grey;">`$   elif len(string) < 20:`</span>
-<br><span style="color: grey;">`$       print("This string has at least 20 character")`</span>
+<br><span style="color: grey;">`$       print("This string has less than 20 character")`</span>
 <br><span style="color: grey;">`$   else len(string) >30:`</span>
 <br><span style="color: grey;">`$       print("That string is way too long for me...")`</span>
 
@@ -325,10 +344,10 @@ Example2 :
 
 <br><span style="color: grey;">`$   string = "This string is long but not that long. How long is it ?"`</span>
 <br><span style="color: grey;">`$   if len(string) < 10:`</span>
-<br><span style="color: grey;">`$       print("This string has at least 10 character")`</span>
+<br><span style="color: grey;">`$       print("This string has less than 10 character")`</span>
 <br><span style="color: grey;">`$   elif len(string) < 20:`</span>
-<br><span style="color: grey;">`$       print("This string has at least 20 character")`</span>
-<br><span style="color: grey;">`$   else len(string) >30:`</span>
+<br><span style="color: grey;">`$       print("This string has less than 20 character")`</span>
+<br><span style="color: grey;">`$   else :`</span>
 <br><span style="color: grey;">`$       print("That string is way too long for me...")`</span>
 
 
@@ -336,9 +355,9 @@ Example2 :
 string = "This string is long but not that long"
 
 if len(string) < 10:
-  print("This string has at least 10 character")
+  print("This string has less than 10 character")
 elif len(string) < 20:
-  print("This string has at least 20 character")
+  print("This string has less than 20 character")
 elif len(string) >30:
   print("That string is too long for me...")
 ```
