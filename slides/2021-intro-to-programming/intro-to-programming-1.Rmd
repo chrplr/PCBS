@@ -11,11 +11,49 @@ knitr::opts_chunk$set(echo = FALSE)
 Context
 ========================================================
 
+
 - Why programming ?
+
 
 - Why python ?
 
+
 - Why programming in python for cognitive sciences ?
+
+
+
+Resources
+========================================================
+
+### Books & ebooks
+
+
+- Gérard Swinnen Apprendre à Programmer avec Python 3 (5e edition) http://inforef.be/swi/python.htm
+
+
+- Al Sweigart How to automate the boring stuff with Python (2e edition) https://automatetheboringstuff.com/
+
+
+- Al Sweigart Invent Your Own Computer Games with Python (4e edition) http://inventwithpython.com/invent4thed/
+
+
+
+### Online course & Mooc
+
+- openclassrooms:
+            - https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python
+            - https://openclassrooms.com/en/courses/6902811-learn-python-basics
+            - ...
+    
+    
+-https://www.my-mooc.com/fr/mooc/python-des-fondamentaux-a-lutilisation-du-langage/
+
+
+
+### Websites
+
+
+- https://pythontutor.com/ (Visualize code execution)
 
 
 Writing and running a program with python
