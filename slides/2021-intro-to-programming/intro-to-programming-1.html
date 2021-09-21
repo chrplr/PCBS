@@ -174,31 +174,43 @@ Henri Vandendriessche
 <p>6- Not yet ? Then read it</p>
 <p>7- Always read the error message</p>
 </div>
-<div id="resources" class="slide section level1">
-<h1>Resources</h1>
-<h3 id="books-ebooks">Books &amp; ebooks</h3>
+<div id="resources-12" class="slide section level1">
+<h1>Resources 1/2</h1>
+<h2 id="books-ebooks">Books &amp; ebooks</h2>
 <ul>
 <li><p>Gérard Swinnen Apprendre à Programmer avec Python 3 (5e edition) <a href="http://inforef.be/swi/python.htm" class="uri">http://inforef.be/swi/python.htm</a></p></li>
 <li><p>Al Sweigart How to automate the boring stuff with Python (2e edition) <a href="https://automatetheboringstuff.com/" class="uri">https://automatetheboringstuff.com/</a></p></li>
 <li><p>Al Sweigart Invent Your Own Computer Games with Python (4e edition) <a href="http://inventwithpython.com/invent4thed/" class="uri">http://inventwithpython.com/invent4thed/</a></p></li>
 </ul>
-<h3 id="online-course-mooc">Online course &amp; Mooc</h3>
+</div>
+<div id="resources-22" class="slide section level1">
+<h1>Resources 2/2</h1>
+<h2 id="online-course-mooc">Online course &amp; Mooc</h2>
+<h3 id="openclassrooms">Openclassrooms</h3>
 <ul>
-<li>openclassrooms: - <a href="https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python" class="uri">https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python</a> - <a href="https://openclassrooms.com/en/courses/6902811-learn-python-basics" class="uri">https://openclassrooms.com/en/courses/6902811-learn-python-basics</a> - …</li>
+<li><p><a href="https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python" class="uri">https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python</a></p></li>
+<li><p><a href="https://openclassrooms.com/en/courses/6902811-learn-python-basics" class="uri">https://openclassrooms.com/en/courses/6902811-learn-python-basics</a></p></li>
 </ul>
-<p>-<a href="https://www.my-mooc.com/fr/mooc/python-des-fondamentaux-a-lutilisation-du-langage/" class="uri">https://www.my-mooc.com/fr/mooc/python-des-fondamentaux-a-lutilisation-du-langage/</a></p>
+<h3 id="mooc-de-linria">Mooc de l’Inria</h3>
+<ul>
+<li><a href="https://www.my-mooc.com/fr/mooc/python-des-fondamentaux-a-lutilisation-du-langage/" class="uri">https://www.my-mooc.com/fr/mooc/python-des-fondamentaux-a-lutilisation-du-langage/</a></li>
+</ul>
 <h3 id="websites">Websites</h3>
 <ul>
-<li><a href="https://pythontutor.com/" class="uri">https://pythontutor.com/</a> (Visualize code execution)</li>
+<li><a href="https://pythontutor.com/" class="uri">https://pythontutor.com/</a> (Visualize and step by step code execution)</li>
 </ul>
 </div>
 <div id="writing-and-running-a-program-with-python" class="slide section level1">
 <h1>Writing and running a program with python</h1>
 <ul>
 <li><p>Open sublime</p></li>
-<li><p>Write: <br><span style="color: grey;"><code>$ print(&quot;Hello !&quot;)</code></span></p></li>
+<li><p>Write:</p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&quot;Hello !&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Hello !&quot;</code></pre>
+<ul>
 <li><p>Save the file as <em>hello.py</em></p></li>
-<li><p>Open a terminal and navigate to your program and run the command: <br><span style="color: grey;"><code>$ python hello.py</code></span></p></li>
+<li><p>Open a terminal and navigate to your program and run the command: <br><span style="color: grey;"><code>python hello.py</code></span></p></li>
 </ul>
 </div>
 <div id="variables-and-data-in-python" class="slide section level1">
@@ -207,7 +219,13 @@ Henri Vandendriessche
 <li><p>Manipulating and storing data</p></li>
 <li><p>Declaring variables</p></li>
 <li><p>Modifiying variables</p></li>
-<li><p>Naming variables: - Use alphanumeric characters and underscores (but no number nor underscore as first character) - Use a descriptive name - Avoid short versions - Variable are case-sensitive: upper-case and lower-case make a difference</p></li>
+<li><p>Naming variables</p>
+<ul>
+<li>Use alphanumeric characters and underscores (but no number nor underscore as first character)</li>
+<li>Use a descriptive name</li>
+<li>Avoid short versions</li>
+<li>Variable are case-sensitive: upper-case and lower-case make a difference</li>
+</ul></li>
 <li><p>Different types of variables: Primitive types</p>
 <ul>
 <li>intergers</li>
@@ -234,34 +252,33 @@ Henri Vandendriessche
 <li><p>Exercice : calculate and print the result of this operation</p></li>
 </ul>
 <p><span class="math display">\[\frac{15}{3+2}-(\frac{\frac{100}{4}}{5})*2\]</span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">15</span><span class="op">/</span>(<span class="dv">3</span><span class="op">+</span><span class="dv">2</span>) <span class="op">-</span> (<span class="dv">100</span><span class="op">/</span><span class="dv">4</span><span class="op">/</span><span class="dv">5</span>)<span class="op">*</span><span class="dv">2</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">15</span><span class="op">/</span>(<span class="dv">3</span><span class="op">+</span><span class="dv">2</span>) <span class="op">-</span> (<span class="dv">100</span><span class="op">/</span><span class="dv">4</span><span class="op">/</span><span class="dv">5</span>)<span class="op">*</span><span class="dv">2</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code></pre></div>
 <pre><code>## -7.0</code></pre>
 </div>
 <div id="strings-13" class="slide section level1">
 <h1>Strings 1/3</h1>
 <ul>
 <li><p>Used to store text (most of the time)</p></li>
-<li><p>Strings are declared with &quot; &quot; or ’ ’. Examples: <br><span style="color: grey;"><code>$ animal = &quot;Dog&quot;</code></span> <br><span style="color: grey;"><code>$ class = &quot;Intro to programming in python&quot;</code></span></p></li>
-<li><p>String can easily be concatenated the operator +</p></li>
+<li><p>Strings are declared with &quot; &quot; or ’ ’. Be careful when you want to print a string already stored in a variable. Examples:</p></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>presentation <span class="op">=</span> <span class="st">&quot;My name is&quot;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Henri&quot;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( greetings <span class="op">+</span> presentation <span class="op">+</span> name)</span></code></pre></div>
-<pre><code>## HelloMy name isHenri</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>animal <span class="op">=</span> <span class="st">&quot;Dog&quot;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>course <span class="op">=</span> <span class="st">&#39;Intro to programming in python&#39;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(animal)</span></code></pre></div>
+<pre><code>## Dog</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;animal&quot;</span>)</span></code></pre></div>
+<pre><code>## animal</code></pre>
 </div>
 <div id="strings-23" class="slide section level1">
 <h1>Strings 2/3</h1>
 <ul>
-<li><p>Used to store text (most of the time)</p></li>
-<li><p>Strings are declared with &quot; &quot; or ’ ’. Examples: <br><span style="color: grey;"><code>$ animal = &quot;Dog&quot;</code></span> <br><span style="color: grey;"><code>$ class = &quot;Intro to programming in python&quot;</code></span></p></li>
-<li><p>String can easily be concatenated the operator +</p></li>
+<li>String can easily be concatenated the operator +</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>presentation <span class="op">=</span> <span class="st">&quot;My name is&quot;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Henri&quot;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( greetings <span class="op">+</span> presentation <span class="op">+</span> name)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>presentation <span class="op">=</span> <span class="st">&quot;My name is&quot;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Henri&quot;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( greetings <span class="op">+</span> presentation <span class="op">+</span> name)</span></code></pre></div>
 <pre><code>## HelloMy name isHenri</code></pre>
 <ul>
 <li>Exercice: insert whitespace between the words.</li>
@@ -270,25 +287,23 @@ Henri Vandendriessche
 <div id="strings-23-1" class="slide section level1">
 <h1>Strings 2/3</h1>
 <ul>
-<li><p>Used to store text (most of the time)</p></li>
-<li><p>Strings are declared with &quot; &quot; or ’ ’. Examples: <br><span style="color: grey;"><code>$ animal = &quot;Dog&quot;</code></span> <br><span style="color: grey;"><code>$ class = &quot;Intro to programming in python&quot;</code></span></p></li>
-<li><p>String can easily be concatenated the operator +</p></li>
+<li>String can easily be concatenated the operator +</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>presentation <span class="op">=</span> <span class="st">&quot;My name is&quot;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Henri&quot;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( greetings <span class="op">+</span> presentation <span class="op">+</span> name)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>presentation <span class="op">=</span> <span class="st">&quot;My name is&quot;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Henri&quot;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( greetings <span class="op">+</span> presentation <span class="op">+</span> name)</span></code></pre></div>
 <pre><code>## HelloMy name isHenri</code></pre>
 <ul>
 <li>Exercice: insert whitespace between the words.</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>presentation <span class="op">=</span> <span class="st">&quot;My name is&quot;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Henri&quot;</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( greetings <span class="op">+</span> <span class="st">&#39; &#39;</span> <span class="op">+</span> presentation <span class="op">+</span> <span class="st">&#39; &#39;</span> <span class="op">+</span> name)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>presentation <span class="op">=</span> <span class="st">&quot;My name is&quot;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Henri&quot;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( greetings <span class="op">+</span> <span class="st">&#39; &#39;</span> <span class="op">+</span> presentation <span class="op">+</span> <span class="st">&#39; &#39;</span> <span class="op">+</span> name)</span></code></pre></div>
 <pre><code>## Hello My name is Henri</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>space <span class="op">=</span> <span class="st">&#39; &#39;</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greetings <span class="op">+</span> space <span class="op">+</span> presentation <span class="op">+</span> space <span class="op">+</span> name)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>space <span class="op">=</span> <span class="st">&#39; &#39;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greetings <span class="op">+</span> space <span class="op">+</span> presentation <span class="op">+</span> space <span class="op">+</span> name)</span></code></pre></div>
 <pre><code>## Hello My name is Henri</code></pre>
 </div>
 <div id="strings-33" class="slide section level1">
@@ -299,16 +314,16 @@ Henri Vandendriessche
 <li><strong>len()</strong> calculate the length of a function Example</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(greetings))</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(greetings))</span></code></pre></div>
 <pre><code>## 5</code></pre>
 <ul>
 <li><strong>replace()</strong> can replace a pattern in a string Example</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greetings)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>greetings <span class="op">=</span> <span class="st">&quot;Hello&quot;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greetings)</span></code></pre></div>
 <pre><code>## Hello</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greetings.replace(<span class="st">&#39;e&#39;</span>,<span class="st">&#39;a&#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greetings.replace(<span class="st">&#39;e&#39;</span>,<span class="st">&#39;a&#39;</span>))</span></code></pre></div>
 <pre><code>## Hallo</code></pre>
 <pre><code>- ...</code></pre>
 </div>
@@ -319,7 +334,9 @@ Henri Vandendriessche
 <li><p>It can have only two values <strong>True</strong> or <strong>False</strong></p></li>
 <li><p>It is used usually to store the truth value of logic</p></li>
 </ul>
-<p>Example: <br><span style="color: grey;"><code>$   Is_it_Weekend = False</code></span> <br><span style="color: grey;"><code>$   print(Is_it_Weekend)</code></span></p>
+<p>Example:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>Is_it_Weekend <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Is_it_Weekend)</span></code></pre></div>
 <pre><code>## False</code></pre>
 </div>
 <div id="program-flow-14" class="slide section level1">
@@ -330,7 +347,12 @@ Henri Vandendriessche
 <li><p><strong>if</strong> will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it’s false we will not execute those lines of codes (but why not others).</p></li>
 </ul>
 <p>Example 1:</p>
-<p><br><span style="color: grey;"><code>$   Weekend = &quot;False&quot;</code></span> <br><span style="color: grey;"><code>$   if Weekend :</code></span> <br><span style="color: grey;"><code>$       print(&quot;Time to go to work&quot;)</code></span></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>Weekend <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> Weekend :</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Let&#39;s do nothing and chill&quot;</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Time to go to work&quot;</span>)</span></code></pre></div>
+<pre><code>## Time to go to work</code></pre>
 </div>
 <div id="program-flow-14-1" class="slide section level1">
 <h1>Program flow 1/4</h1>
@@ -339,32 +361,15 @@ Henri Vandendriessche
 <li><p>But some instructions can change the flow. For examples <em>if</em> and <em>for</em> loops</p></li>
 <li><p><strong>if</strong> will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it’s false we will not execute those lines of codes (but why not others).</p></li>
 </ul>
-<p>Example 1:</p>
-<p><br><span style="color: grey;"><code>$   Weekend = &quot;False&quot;</code></span> <br><span style="color: grey;"><code>$   if Weekend :</code></span> <br><span style="color: grey;"><code>$       print(&quot;Let&#39;s do nothing and chill&quot;)</code></span> <br><span style="color: grey;"><code>$   else:</code></span> <br><span style="color: grey;"><code>$       print(&quot;Time to go to work&quot;)print(&quot;Let&#39;s do nothing and chill&quot;</code></span></p>
-</div>
-<div id="program-flow-14-2" class="slide section level1">
-<h1>Program flow 1/4</h1>
-<ul>
-<li><p>A program normally executes sequentially from top to bottom</p></li>
-<li><p>But some instructions can change the flow. For examples <em>if</em> and <em>for</em> loops</p></li>
-<li><p><strong>if</strong> will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it’s false we will not execute those lines of codes (but why not others).</p></li>
-</ul>
-<p>Example 1:</p>
-<p><br><span style="color: grey;"><code>$   Weekend = &quot;False&quot;</code></span> <br><span style="color: grey;"><code>$   if Weekend :</code></span> <br><span style="color: grey;"><code>$       print(&quot;Time to go to work&quot;)</code></span> <br><span style="color: grey;"><code>$   else:&quot;</code></span> <br><span style="color: grey;"><code>$       print(&quot;Let&#39;s do nothing and chill&quot;</code></span></p>
 <p>Example2 :</p>
-<p><br><span style="color: grey;"><code>$   string = &quot;This string is long but not that long. How long is it ?&quot;</code></span> <br><span style="color: grey;"><code>$   if len(string) &lt; 10:</code></span> <br><span style="color: grey;"><code>$       print(&quot;This string has less than 10 character&quot;)</code></span> <br><span style="color: grey;"><code>$   elif len(string) &lt; 20:</code></span> <br><span style="color: grey;"><code>$       print(&quot;This string has less than 20 character&quot;)</code></span> <br><span style="color: grey;"><code>$   else len(string) &gt;30:</code></span> <br><span style="color: grey;"><code>$       print(&quot;That string is way too long for me...&quot;)</code></span></p>
-</div>
-<div id="program-flow-14-3" class="slide section level1">
-<h1>Program flow 1/4</h1>
-<ul>
-<li><p>A program normally executes sequentially from top to bottom</p></li>
-<li><p>But some instructions can change the flow. For examples <em>if</em> and <em>for</em> loops</p></li>
-<li><p><strong>if</strong> will test for a conditional comparison. If a condition is true then we can execute some lines of codes if it’s false we will not execute those lines of codes (but why not others).</p></li>
-</ul>
-<p>Example 1:</p>
-<p><br><span style="color: grey;"><code>$   Weekend = &quot;False&quot;</code></span> <br><span style="color: grey;"><code>$   if Weekend :</code></span> <br><span style="color: grey;"><code>$       print(&quot;Time to go to work&quot;)</code></span> <br><span style="color: grey;"><code>$   else:&quot;</code></span> <br><span style="color: grey;"><code>$       print(&quot;Let&#39;s do nothing and chill&quot;</code></span></p>
-<p>Example2 :</p>
-<p><br><span style="color: grey;"><code>$   string = &quot;This string is long but not that long. How long is it ?&quot;</code></span> <br><span style="color: grey;"><code>$   if len(string) &lt; 10:</code></span> <br><span style="color: grey;"><code>$       print(&quot;This string has less than 10 character&quot;)</code></span> <br><span style="color: grey;"><code>$   elif len(string) &lt; 20:</code></span> <br><span style="color: grey;"><code>$       print(&quot;This string has less than 20 character&quot;)</code></span> <br><span style="color: grey;"><code>$   else :</code></span> <br><span style="color: grey;"><code>$       print(&quot;That string is way too long for me...&quot;)</code></span></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>string <span class="op">=</span> <span class="st">&quot;This string is long but not that long&quot;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(string) <span class="op">&lt;</span> <span class="dv">10</span>:</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;This string has less than 10 character&quot;</span>)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="bu">len</span>(string) <span class="op">&lt;</span> <span class="dv">20</span>:</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;This string has less than 20 character&quot;</span>)</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="bu">len</span>(string) <span class="op">&gt;</span><span class="dv">30</span>:</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;That string is too long for me...&quot;</span>)</span></code></pre></div>
 <pre><code>## That string is too long for me...</code></pre>
 </div>
 <div id="program-flow-24" class="slide section level1">
@@ -375,9 +380,9 @@ Henri Vandendriessche
 <li><p>You can as well use comparative expressions: - <strong>&lt;</strong> - <strong>&gt;</strong> - <strong>&lt;=</strong> - <strong>==</strong> tests for equality - <strong>!=</strong> tests for inequality</p></li>
 </ul>
 <p>Be careful <strong>=</strong> is not the same as <strong>==</strong></p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">30</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">==</span> <span class="dv">30</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">30</span> <span class="co">#(affectation)</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">==</span> <span class="dv">30</span> <span class="co">#(equality comparison that returns TRUE if correct)</span></span></code></pre></div>
 <pre><code>## True</code></pre>
 </div>
 <div id="program-flow-34" class="slide section level1">
@@ -386,9 +391,8 @@ Henri Vandendriessche
 <li><strong>for</strong> loops iterate one or a set of operations several times.</li>
 </ul>
 <p>Example 1:</p>
-<p><br><span style="color: grey;"><code>$  for x in range(10):</code></span> <br><span style="color: grey;"><code>$     print(x)</code></span></p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(x)</span></code></pre></div>
 <pre><code>## 0
 ## 1
 ## 2
@@ -406,9 +410,8 @@ Henri Vandendriessche
 <li><strong>for</strong> loops iterate one or a set of operations several times.</li>
 </ul>
 <p>Example 1:</p>
-<p><br><span style="color: grey;"><code>$  for x in range(10):</code></span> <br><span style="color: grey;"><code>$     print(x)</code></span></p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(x)</span></code></pre></div>
 <pre><code>## 0
 ## 1
 ## 2
@@ -419,9 +422,9 @@ Henri Vandendriessche
 ## 7
 ## 8
 ## 9</code></pre>
-<p>Example 2: <br><span style="color: grey;"><code>$  for i in range(5,10):</code></span> <br><span style="color: grey;"><code>$     print(i)</code></span></p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>,<span class="dv">10</span>):</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code></pre></div>
+<p>Example 2:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>,<span class="dv">10</span>):</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code></pre></div>
 <pre><code>## 5
 ## 6
 ## 7
