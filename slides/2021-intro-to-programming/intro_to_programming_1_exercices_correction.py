@@ -9,6 +9,8 @@
 # Exercice 5: Write code that computes the factorial of aninteger (no function, no recursion, just a loop)
 
 
+# NB: There always are several possibilities to solve the problem. I sometimes put 2 or 3 solutions but there are more.
+
 
 ##################
 ### Exercice 1 ###
