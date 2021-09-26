@@ -86,7 +86,7 @@ While loop 2/2
 
 
 
-List
+Lists 1/
 ========================================================
 
   - A list is a collection of related objects
@@ -104,6 +104,46 @@ dog_breeds2 = ["golden" "corgi" "Bulldog" "Husky" "Beagle"]
 
 print(dog_breeds, dog_breeds2)
 ```
+
+Lists 2/
+========================================================
+
+  - Access element in a list
+  
+  - Access characters in a string as elements of a list
+  
+  - some functions
+    + append()
+    + pop()
+    + sort()
+    + len()
+    
+    
+
+Sets
+========================================================
+
+
+
+Tuples 1/
+========================================================
+
+  - Very similar to Lists but declared with () instead of square bracket
+  
+  - They are immutable and can't be modified.
+
+
+Dictionnaries 1/
+========================================================
+
+
+Dictionnaries 2/
+========================================================
+
+
+Dictionnaries 3/
+========================================================
+
 
 Excercices
 ========================================================
