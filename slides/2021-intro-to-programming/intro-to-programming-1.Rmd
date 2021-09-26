@@ -78,7 +78,7 @@ Writing and running a program with python
 - Open sublime
 
 - Write: 
-```{r, echo=TRUE}
+```{python, echo=TRUE}
 print("Hello !")
 ```
 

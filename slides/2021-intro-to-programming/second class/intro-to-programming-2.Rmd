@@ -1,0 +1,121 @@
+---
+title: "intro-to-programming-2"
+author: "Henri Vandendriessche"
+date: "28/09/2021"
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+So far
+========================================================
+
+
+- Variables
+
+- Data types:
+  + integer
+  + float
+  + string
+  + boolean
+
+- If and For loops:
+  + syntax " : "
+  + indentation 
+  
+
+Today
+========================================================
+
+
+- While loop
+
+- Other python data types:
+  + list
+  + set
+  + tuple
+  + dictionnarie
+  
+- Excercies
+
+
+While loop 1/2
+========================================================
+
+- The **for** loop incorporate a specified number of execution of a task, the while loop is best suited for unknown or very large number of loop.
+
+- While loop will do a task all over again a set of tasks until an ending instruction.
+
+- As for **if** and **for**, **while** has a syntax and need indentation for the following lines to be included in the process
+
+- The two key features of a while loop are:
+  + the output condition 
+  + the increment statement
+  
+
+```{python, echo=TRUE}
+i = 1
+while i < 6: #  output condition
+  print(i)
+  i += 1     # increment statement
+  
+## Which is technically the same as
+
+for i in range(1,6):
+  print(i)
+
+```
+While loop 2/2
+========================================================
+  
+  - **While** loop will test if the output condition is True and if not it will execute the code and execute the increment statement
+  
+  - If one of those two condition are not correctly specified you'll encounter an error or an infinite loop...
+        
+        i = 1
+        while i < 6: #  output condition
+          print(i)
+          
+        while i != 6:
+          print(i)
+          x += 2
+
+
+
+List
+========================================================
+
+  - A list is a collection of related objects
+  
+  - It's declared with brackets [] with a comma between two objects
+  
+```{python , echo=TRUE}
+France_world_cup_winner1 = [1998 2018]
+France_world_cup_winner2 = [1998, 2018]
+
+print(France_world_cup_winner1, France_world_cup_winner2)
+
+dog_breeds = ["golden", "corgi", "Bulldog", "Husky", "Beagle"]
+dog_breeds2 = ["golden" "corgi" "Bulldog" "Husky" "Beagle"]
+
+print(dog_breeds, dog_breeds2)
+```
+
+Excercices
+========================================================
+
+- Exercice 1: Lists: - Given a list of numbers, print their sum - Given a list of numbers, print their product - Given a list of numbers, print the sum of their squares - Given a list of numbers, print the largest one. - Given a list of numbers, print the second largest
+
+- Exercice 2: Given a list of words, count the number of times each word appears in the list (using dictionary)
+
+- Exercice 3: Lottery pick. Generate 100 random lottery tickets (one ticket is a sequence of 5 digits) and pick one winner out of it. 
+
+- Exercice 4: write a program that generates a random 10 character long password including 6 letters with 2 of them uppercase, 1 digit and 1 special symbol.
+
+- Exercice 5: Monte Carlo estimation of Pi: one way to estimate the value of the π is to generate a large number of random points in the unit square and see how many fall within the unit circle; their proportion is an estimate of the area of the circle. See https://academo.org/demos/estimating-pi-monte-carlo. Implement the proposed algorithm to estimate the value of π.
+
+- Exercice 6: Write a program that prints the first N rows of Pascal’s triangle (see https://www.youtube.com/watch?v=XMriWTvPXHI).
