@@ -156,9 +156,25 @@ Henri Vandendriessche
   </p>
   <p class="date">28/09/2021</p>
 </div>
+<div id="reminder" class="slide section level1">
+<h1>Reminder</h1>
+<ul>
+<li><p>Bash commands to navigate directories</p></li>
+<li><p>Useful commands:</p>
+<ul>
+<li><p><strong>pwd</strong> Print Working Directory. Print the path of of the current directory</p></li>
+<li><p><strong>ls /folder</strong> list all files of the current directory</p></li>
+<li><p><strong>cd /folder1/folder2</strong> moving into folder1 and folder2 at once.</p></li>
+<li><p><strong>cd ..</strong> moving out of a directory</p></li>
+</ul></li>
+<li><p>“Tab” to use the auto-completion</p></li>
+<li><p>Many more bash commands to use…</p></li>
+</ul>
+</div>
 <div id="so-far" class="slide section level1">
 <h1>So far</h1>
 <ul>
+<li><p>Python</p></li>
 <li><p>Variables</p></li>
 <li><p>Data types:</p>
 <ul>
@@ -169,30 +185,41 @@ Henri Vandendriessche
 </ul></li>
 <li><p>If and For loops:</p>
 <ul>
-<li>syntax &quot; : &quot;</li>
+<li>syntax</li>
 <li>indentation</li>
 </ul></li>
+</ul>
+</div>
+<div id="reading-advice" class="slide section level1">
+<h1>Reading advice</h1>
+<p><br></p>
+<p>To complete what we’re going to see today.</p>
+<p><br> <br></p>
+<ul>
+<li><p><a href="https://automatetheboringstuff.com/2e/chapter4/" class="uri">https://automatetheboringstuff.com/2e/chapter4/</a></p></li>
+<li><p><a href="https://automatetheboringstuff.com/2e/chapter5/" class="uri">https://automatetheboringstuff.com/2e/chapter5/</a></p></li>
 </ul>
 </div>
 <div id="today" class="slide section level1">
 <h1>Today</h1>
 <ul>
 <li><p>While loop</p></li>
-<li><p>Other python data types:</p>
+<li><p>Other python data types for collections of data type</p>
 <ul>
-<li>list</li>
-<li>set</li>
-<li>tuple</li>
-<li>dictionnarie</li>
+<li><p>list</p></li>
+<li><p>set</p></li>
+<li><p>tuple</p></li>
+<li><p>dictionary</p></li>
 </ul></li>
-<li><p>Excercies</p></li>
+<li><p>Random numbers and number choices</p></li>
+<li><p>Excercices</p></li>
 </ul>
 </div>
-<div id="while-loop-1" class="slide section level1">
-<h1>While loop 1/</h1>
+<div id="while-loop-12" class="slide section level1">
+<h1>While loop 1/2</h1>
 <ul>
-<li><p>The <strong>for</strong> loop incorporate a specified number of execution of a task, the while loop is best suited for unknown or very large number of loop.</p></li>
-<li><p>While loop will do a task all over again a set of tasks until an ending instruction.</p></li>
+<li><p>The <strong>for</strong> loop incorporate a specified number of execution of a task, the <strong>while</strong> loop is best suited for unknown or very large number of loop.</p></li>
+<li><p><strong>While</strong> loop will do a task all over again a set of tasks until an ending instruction.</p></li>
 <li><p>As for <strong>if</strong> and <strong>for</strong>, <strong>while</strong> has a syntax and need indentation for the following lines to be included in the process</p></li>
 <li><p>The two key features of a while loop are:</p>
 <ul>
@@ -201,29 +228,24 @@ Henri Vandendriessche
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> i <span class="op">&lt;</span> <span class="dv">6</span>: <span class="co">#  output condition</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> i <span class="op">&lt;</span> <span class="dv">4</span>: <span class="co">#  output condition</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  i <span class="op">+=</span> <span class="dv">1</span>     <span class="co"># increment statement</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">## Which is technically the same as</span></span></code></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  i <span class="op">+=</span> <span class="dv">1</span>     <span class="co"># increment statement</span></span></code></pre></div>
 <pre><code>## 1
 ## 2
-## 3
-## 4
-## 5</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">6</span>):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code></pre></div>
+## 3</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Which is technically the same as</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(i)</span></code></pre></div>
 <pre><code>## 1
 ## 2
-## 3
-## 4
-## 5</code></pre>
+## 3</code></pre>
 </div>
-<div id="while-loop-2" class="slide section level1">
-<h1>While loop 2/</h1>
+<div id="while-loop-22" class="slide section level1">
+<h1>While loop 2/2</h1>
 <ul>
 <li><p><strong>While</strong> loop will test if the output condition is True and if not it will execute the code and execute the increment statement</p></li>
-<li><p>If one of those two condition are not correctly specified you’ll encounter an error or an infinite loop…</p>
+<li><p>If one of those two conditions are not correctly specified you’ll encounter an error or an infinite loop…</p>
 <pre><code>i = 1
 while i &lt; 6: #  output condition
   print(i)
@@ -232,13 +254,176 @@ while i != 6:
   print(i)
   x += 2</code></pre></li>
 </ul>
-<p>```</p>
 </div>
-<div id="while-loop-3" class="slide section level1">
-<h1>While loop 3/</h1>
+<div id="lists-13" class="slide section level1">
+<h1>Lists 1/3</h1>
 <ul>
-<li>Break and continue</li>
+<li><p>A list is a collection of related objects</p></li>
+<li><p>It’s declared with brackets [] with a comma between two objects</p></li>
 </ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Years_France_won_worldcup <span class="op">=</span> [<span class="dv">1998</span>, <span class="dv">2018</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Years_France_won_worldcup)</span></code></pre></div>
+<pre><code>## [1998, 2018]</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dog_breeds <span class="op">=</span> [<span class="st">&quot;golden&quot;</span>, <span class="st">&quot;corgi&quot;</span>, <span class="st">&quot;Bulldog&quot;</span>, <span class="st">&quot;Husky&quot;</span>, <span class="st">&quot;Beagle&quot;</span>]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>dog_breeds2 <span class="op">=</span> [<span class="st">&quot;golden&quot;</span> <span class="st">&quot;corgi&quot;</span> <span class="st">&quot;Bulldog&quot;</span> <span class="st">&quot;Husky&quot;</span> <span class="st">&quot;Beagle&quot;</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dog_breeds, dog_breeds2)</span></code></pre></div>
+<pre><code>## [&#39;golden&#39;, &#39;corgi&#39;, &#39;Bulldog&#39;, &#39;Husky&#39;, &#39;Beagle&#39;] [&#39;goldencorgiBulldogHuskyBeagle&#39;]</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>random_data_type_collection <span class="op">=</span> [ <span class="dv">1</span>, <span class="va">True</span>, <span class="st">&quot;Cats&quot;</span>, <span class="fl">3.14</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random_data_type_collection)</span></code></pre></div>
+<pre><code>## [1, True, &#39;Cats&#39;, 3.14]</code></pre>
+</div>
+<div id="lists-23" class="slide section level1">
+<h1>Lists 2/3</h1>
+<ul>
+<li>Access element in a list through its index</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>programming_language <span class="op">=</span> [<span class="st">&quot;python&quot;</span>, <span class="st">&quot;R&quot;</span>, <span class="st">&quot;javascript&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C#&quot;</span>, <span class="st">&quot;java&quot;</span>, <span class="st">&quot;C++&quot;</span>, <span class="st">&quot;Go&quot;</span>, <span class="st">&quot;Rust&quot;</span>]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(programming_language[<span class="dv">0</span>])</span></code></pre></div>
+<pre><code>## python</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(programming_language[<span class="op">-</span><span class="dv">1</span>])</span></code></pre></div>
+<pre><code>## Rust</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># NB: Same to access characters in a string as in a list</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>programming_language <span class="op">=</span> <span class="st">&quot;python&quot;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>programming_language[<span class="dv">0</span>]</span></code></pre></div>
+<pre><code>## &#39;p&#39;</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>programming_language[<span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## &#39;y&#39;</code></pre>
+</div>
+<div id="lists-33" class="slide section level1">
+<h1>Lists 3/3</h1>
+<ul>
+<li>some functions
+<ul>
+<li>append()</li>
+<li>remove()</li>
+<li>pop()</li>
+<li>sort()</li>
+<li>len()</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>programming_language <span class="op">=</span> [<span class="st">&quot;python&quot;</span>, <span class="st">&quot;R&quot;</span>, <span class="st">&quot;javascript&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;C#&quot;</span>, <span class="st">&quot;java&quot;</span>, <span class="st">&quot;C++&quot;</span>, <span class="st">&quot;Go&quot;</span>, <span class="st">&quot;Rust&quot;</span>]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>programming_language.append(<span class="st">&quot;html&quot;</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>programming_language.append(<span class="st">&quot;PHP&quot;</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(programming_language)</span></code></pre></div>
+<pre><code>## [&#39;python&#39;, &#39;R&#39;, &#39;javascript&#39;, &#39;C&#39;, &#39;C#&#39;, &#39;java&#39;, &#39;C++&#39;, &#39;Go&#39;, &#39;Rust&#39;, &#39;html&#39;, &#39;PHP&#39;]</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>programming_language.remove(<span class="st">&quot;html&quot;</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(programming_language)</span></code></pre></div>
+<pre><code>## 10</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>programming_language.sort()</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(programming_language)</span></code></pre></div>
+<pre><code>## [&#39;C&#39;, &#39;C#&#39;, &#39;C++&#39;, &#39;Go&#39;, &#39;PHP&#39;, &#39;R&#39;, &#39;Rust&#39;, &#39;java&#39;, &#39;javascript&#39;, &#39;python&#39;]</code></pre>
+</div>
+<div id="tuples-1" class="slide section level1">
+<h1>Tuples 1/</h1>
+<ul>
+<li><p>Very similar to Lists but declared with () instead of square bracket</p></li>
+<li><p>In contrast to lists, they are immutable and can’t be modified.</p></li>
+</ul>
+</div>
+<div id="sets" class="slide section level1">
+<h1>Sets</h1>
+<ul>
+<li><p>Very close to lists but are unordered unindexed ununchangeable and do not allow duplicate value</p></li>
+<li><p>Declared with {}</p></li>
+<li><p>Can contain different types of data</p></li>
+</ul>
+</div>
+<div id="dictionaries-1" class="slide section level1">
+<h1>Dictionaries 1/</h1>
+<ul>
+<li><p>Data structure that uses data in key-value pairs.</p></li>
+<li><p>Each items of a dictionary is a key-value pair</p></li>
+<li><p>Each key has to be unique</p></li>
+<li><p>Declared in a very specific way</p>
+<pre><code>my_dictionary = { &quot;key1&quot; : value1, &quot;key2&quot;, value2 ...}</code></pre></li>
+</ul>
+</div>
+<div id="dictionaries-23-create-a-dictionary" class="slide section level1">
+<h1>Dictionaries 2/3 Create a Dictionary</h1>
+<ul>
+<li>Creation of a dictionary:
+<ul>
+<li>several methods</li>
+</ul></li>
+<li>Examples</li>
+</ul>
+</div>
+<div id="dictionaries-33-use-common-operation" class="slide section level1">
+<h1>Dictionaries 3/3 Use common operation</h1>
+<ul>
+<li><p>Access to a a key-value pair</p></li>
+<li><p>Add a key-value pair</p></li>
+<li><p>Delete a key-value pair</p></li>
+<li><p>Check for specific key existence</p></li>
+</ul>
+</div>
+<div id="summary-on-python-collections-arrays" class="slide section level1">
+<h1>Summary on Python collections (~ Arrays)</h1>
+<pre><code>- List is a collection which is ordered and changeable. Allows duplicate members.
+- Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+- Set is a collection which is unordered and unindexed. No duplicate members.
+- Dictionary is a collection which is ordered* and changeable. No duplicate members.</code></pre>
+</div>
+<div id="python-module---example-of-random-1" class="slide section level1">
+<h1>Python module - example of <em>Random</em> 1/</h1>
+<ul>
+<li>Python incorporates in its standard library a multitude of modules for a variety of subjects and problem (network, text processing, mathematics, file and directory access, cryptography…)</li>
+</ul>
+<p><a href="https://docs.python.org/3/library/index.html" class="uri">https://docs.python.org/3/library/index.html</a></p>
+<ul>
+<li>The standard library include in particular a specific module for random (pseudo-random) number generation</li>
+</ul>
+<p><a href="https://docs.python.org/3/library/random.html" class="uri">https://docs.python.org/3/library/random.html</a></p>
+<ul>
+<li>Several ways to import a python module</li>
+</ul>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random <span class="co"># import random and from that object have access to all the functions</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>int_list <span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>random.shuffle(int_list)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(int_list)</span></code></pre></div>
+<pre><code>## [1, 3, 2]</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random <span class="im">as</span> rand <span class="co"># import random using a custom local name and from that name to access all the functions</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>rand.shuffle(int_list)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(int_list)</span></code></pre></div>
+<pre><code>## [1, 3, 2]</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> shuffle,randint,choice <span class="co"># import from the random module one or a reduced set of functions that exist in the Random module</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>shuffle(int_list)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(int_list)</span></code></pre></div>
+<pre><code>## [2, 3, 1]</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> <span class="op">*</span> <span class="co"># import from random and all the functions bundled inside Random</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>shuffle(int_list)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(int_list)</span></code></pre></div>
+<pre><code>## [3, 2, 1]</code></pre>
+</div>
+<div id="random-numbers-2" class="slide section level1">
+<h1>Random numbers 2/</h1>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(randint(<span class="dv">1</span>, <span class="dv">100</span>))    <span class="co"># Pick a random integer between 1 and 100.</span></span></code></pre></div>
+<pre><code>## 69</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(uniform(<span class="dv">1</span>, <span class="dv">100</span>))    <span class="co"># Pick a random float between 1 and 100.</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co"># prints a random value from the list</span></span></code></pre></div>
+<pre><code>## 75.4089546028945</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(choice(list1))</span></code></pre></div>
+<pre><code>## 1</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>items <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> sample(items, <span class="dv">4</span>)    <span class="co"># Pick 4 random items from the list</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(y)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="co"># using randrange() to generate in range from 20</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="co"># to 50. The last parameter 3 is step size to skip</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="co"># three numbers when selecting.</span></span></code></pre></div>
+<pre><code>## [5, 6, 1, 10]</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;A random number from range is : &quot;</span>, end<span class="op">=</span><span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<pre><code>## A random number from range is :</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(randrange(<span class="dv">20</span>, <span class="dv">50</span>, <span class="dv">3</span>))</span></code></pre></div>
+<pre><code>## 41</code></pre>
 </div>
 <div id="excercices" class="slide section level1">
 <h1>Excercices</h1>

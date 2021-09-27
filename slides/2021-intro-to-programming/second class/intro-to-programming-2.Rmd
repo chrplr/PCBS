@@ -10,22 +10,57 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+Reminder
+========================================================
+
+ 
+  - Bash commands to navigate directories
+   
+  - Useful commands:
+
+    + **pwd**     Print Working Directory. Print the path of of the current directory
+    
+    + **ls /folder**        list all files of the current directory
+    
+    + **cd /folder1/folder2**     moving into folder1 and folder2 at once. 
+    
+    + **cd ..**        moving out of a directory 
+  
+  - "Tab" to use the auto-completion
+    
+  - Many more bash commands to use...
+
 
 So far
 ========================================================
 
+  - Python
 
-- Variables
+  - Variables
 
-- Data types:
-  + integer
-  + float
-  + string
-  + boolean
+  - Data types:
+    + integer
+    + float
+    + string
+    + boolean
+  
+  - If and For loops:
+    + syntax
+    + indentation 
 
-- If and For loops:
-  + syntax " : "
-  + indentation 
+Reading advice  
+========================================================
+
+<br>
+
+  To complete what we're going to see today.
+
+<br>
+<br>
+
+  - https://automatetheboringstuff.com/2e/chapter4/
+  
+  - https://automatetheboringstuff.com/2e/chapter5/
   
 
 Today
@@ -34,21 +69,27 @@ Today
 
 - While loop
 
-- Other python data types:
+- Other python data types for collections of data type
+
   + list
+
   + set
+
   + tuple
-  + dictionnarie
+
+  + dictionary
   
-- Excercies
+- Random numbers and number choices
+  
+- Excercices
 
 
 While loop 1/2
 ========================================================
 
-- The **for** loop incorporate a specified number of execution of a task, the while loop is best suited for unknown or very large number of loop.
+- The **for** loop incorporate a specified number of execution of a task, the **while** loop is best suited for unknown or very large number of loop.
 
-- While loop will do a task all over again a set of tasks until an ending instruction.
+- **While** loop will do a task all over again a set of tasks until an ending instruction.
 
 - As for **if** and **for**, **while** has a syntax and need indentation for the following lines to be included in the process
 
@@ -59,22 +100,24 @@ While loop 1/2
 
 ```{python, echo=TRUE}
 i = 1
-while i < 6: #  output condition
+while i < 4: #  output condition
   print(i)
   i += 1     # increment statement
-  
+````  
+
+
+
+```{python, echo=TRUE}
 ## Which is technically the same as
-
-for i in range(1,6):
+for i in range(1,4):
   print(i)
-
 ```
 While loop 2/2
 ========================================================
   
   - **While** loop will test if the output condition is True and if not it will execute the code and execute the increment statement
   
-  - If one of those two condition are not correctly specified you'll encounter an error or an infinite loop...
+  - If one of those two conditions are not correctly specified you'll encounter an error or an infinite loop...
         
         i = 1
         while i < 6: #  output condition
@@ -86,7 +129,7 @@ While loop 2/2
 
 
 
-Lists 1/
+Lists 1/3
 ========================================================
 
   - A list is a collection of related objects
@@ -94,57 +137,185 @@ Lists 1/
   - It's declared with brackets [] with a comma between two objects
   
 ```{python , echo=TRUE}
-France_world_cup_winner1 = [1998 2018]
-France_world_cup_winner2 = [1998, 2018]
+Years_France_won_worldcup = [1998, 2018]
 
-print(France_world_cup_winner1, France_world_cup_winner2)
+print(Years_France_won_worldcup)
 
 dog_breeds = ["golden", "corgi", "Bulldog", "Husky", "Beagle"]
 dog_breeds2 = ["golden" "corgi" "Bulldog" "Husky" "Beagle"]
 
 print(dog_breeds, dog_breeds2)
+
+random_data_type_collection = [ 1, True, "Cats", 3.14]
+
+print(random_data_type_collection)
 ```
 
-Lists 2/
+Lists 2/3
 ========================================================
 
-  - Access element in a list
-  
-  - Access characters in a string as elements of a list
-  
+  - Access element in a list through its index
+```{python , echo=TRUE}
+programming_language = ["python", "R", "javascript", "C", "C#", "java", "C++", "Go", "Rust"]
+print(programming_language[0])
+print(programming_language[-1])
+```  
+
+```{python , echo=TRUE}
+# NB: Same to access characters in a string as in a list
+programming_language = "python"
+programming_language[0]
+programming_language[1]
+
+```  
+
+Lists 3/3
+========================================================
+
   - some functions
     + append()
+    + remove()
     + pop()
     + sort()
     + len()
+```{python , echo=TRUE}
+programming_language = ["python", "R", "javascript", "C", "C#", "java", "C++", "Go", "Rust"]
+programming_language.append("html")
+programming_language.append("PHP")
+print(programming_language)
+
+programming_language.remove("html")
+
+len(programming_language)
+
+programming_language.sort()
+print(programming_language)
+
+```  
     
-    
-
-Sets
-========================================================
-
-
 
 Tuples 1/
 ========================================================
 
   - Very similar to Lists but declared with () instead of square bracket
   
-  - They are immutable and can't be modified.
+  - In contrast to lists, they are immutable and can't be modified.
 
 
-Dictionnaries 1/
+Sets
+========================================================
+
+  - Very close to lists but are unordered unindexed ununchangeable and do not allow duplicate value
+  
+  - Declared with {}
+  
+  - Can contain different types of data
+
+
+Dictionaries 1/
+========================================================
+
+  - Data structure that uses data in key-value pairs.
+  
+  - Each items of a dictionary is a key-value pair
+  
+  - Each key has to be unique
+  
+  - Declared in a very specific way
+
+        my_dictionary = { "key1" : value1, "key2", value2 ...}
+  
+  
+  
+  
+Dictionaries 2/3 Create a Dictionary  
+========================================================
+
+  - Creation of a dictionary:
+    + several methods
+    
+  - Examples
+  
+  
+  
+
+
+Dictionaries 3/3 Use common operation
+========================================================
+
+  - Access to a a key-value pair
+  
+  - Add a key-value pair
+  
+  - Delete a key-value pair
+  
+  - Check for specific key existence
+
+
+Summary on Python collections (~ Arrays)
 ========================================================
 
 
-Dictionnaries 2/
+    - List is a collection which is ordered and changeable. Allows duplicate members.
+    - Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+    - Set is a collection which is unordered and unindexed. No duplicate members.
+    - Dictionary is a collection which is ordered* and changeable. No duplicate members.
+
+
+
+Python module - example of *Random* 1/
 ========================================================
 
+  - Python incorporates in its standard library a multitude of modules for a variety of subjects and problem (network, text processing, mathematics, file and directory access, cryptography...)
+  
+  https://docs.python.org/3/library/index.html
 
-Dictionnaries 3/
+  - The standard library include in particular a specific module for random (pseudo-random) number generation
+  
+  https://docs.python.org/3/library/random.html
+  
+  - Several ways to import a python module
+  
+``````{python, echo = TRUE}
+import random # import random and from that object have access to all the functions
+int_list =[1,2,3]
+random.shuffle(int_list)
+print(int_list)
+
+import random as rand # import random using a custom local name and from that name to access all the functions
+rand.shuffle(int_list)
+print(int_list)
+
+from random import shuffle,randint,choice # import from the random module one or a reduced set of functions that exist in the Random module
+shuffle(int_list)
+print(int_list)
+
+from random import * # import from random and all the functions bundled inside Random
+shuffle(int_list)
+print(int_list)
+``````
+Random numbers 2/
 ========================================================
+``````{python, echo = TRUE}
+from random import *
 
+print(randint(1, 100))    # Pick a random integer between 1 and 100.
+print(uniform(1, 100))    # Pick a random float between 1 and 100.
 
+# prints a random value from the list
+list1 = [1, 2, 3, 4, 5, 6]
+print(choice(list1))
+
+items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+y = sample(items, 4)    # Pick 4 random items from the list
+print(y)
+
+# using randrange() to generate in range from 20
+# to 50. The last parameter 3 is step size to skip
+# three numbers when selecting.
+print("A random number from range is : ", end="")
+print(randrange(20, 50, 3))
+``````
 Excercices
 ========================================================
 
