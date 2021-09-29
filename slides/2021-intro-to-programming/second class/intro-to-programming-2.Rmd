@@ -2,9 +2,10 @@
 title: "intro-to-programming-2"
 author: "Henri Vandendriessche"
 date: "28/09/2021"
+fontsize: 8pt
 output:
-  slidy_presentation: default
   beamer_presentation: default
+  slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -84,41 +85,49 @@ Today
 - Excercices
 
 
-While loop 1/2
+While loop 1/3
 ========================================================
 
-- The **for** loop incorporate a specified number of execution of a task, the **while** loop is best suited for unknown or very large number of loop.
+- **While** loop will keep looping all over again an ending instruction is met.
 
-- **While** loop will do a task all over again a set of tasks until an ending instruction.
+- As the **for** loop incorporate a specified number of execution, the **while** loop is best suited for unknown or very large number of loop iterations.
 
 - As for **if** and **for**, **while** has a syntax and need indentation for the following lines to be included in the process
 
 - The two key features of a while loop are:
   + the output condition 
-  + the increment statement
   
+  + the increment statement
+
+
+
+While loop 2/3
+========================================================
+
+- Example:
 
 ```{python, echo=TRUE}
 i = 1
 while i < 4: #  output condition
   print(i)
   i += 1     # increment statement
-````  
+````
 
-
-
+  
 ```{python, echo=TRUE}
 ## Which is technically the same as
 for i in range(1,4):
   print(i)
 ```
-While loop 2/2
+
+
+While loop 3/3
 ========================================================
+
+- **While** loop will test if the output condition is True and if not it will execute the code and execute the increment statement
   
-  - **While** loop will test if the output condition is True and if not it will execute the code and execute the increment statement
+- If one of those two conditions are not correctly specified you'll encounter an error or an infinite loop...
   
-  - If one of those two conditions are not correctly specified you'll encounter an error or an infinite loop...
-        
         i = 1
         while i < 6: #  output condition
           print(i)
@@ -138,35 +147,30 @@ Lists 1/3
   
 ```{python , echo=TRUE}
 Years_France_won_worldcup = [1998, 2018]
-
 print(Years_France_won_worldcup)
 
 dog_breeds = ["golden", "corgi", "Bulldog", "Husky", "Beagle"]
 dog_breeds2 = ["golden" "corgi" "Bulldog" "Husky" "Beagle"]
-
-print(dog_breeds, dog_breeds2)
+print(dog_breeds)
+print(dog_breeds2)
 
 random_data_type_collection = [ 1, True, "Cats", 3.14]
-
 print(random_data_type_collection)
 ```
 
 Lists 2/3
 ========================================================
 
-  - Access element in a list through its index
+  - Access element in a list through its index which is the same to access characters in a string as in a list
 ```{python , echo=TRUE}
-programming_language = ["python", "R", "javascript", "C", "C#", "java", "C++", "Go", "Rust"]
-print(programming_language[0])
-print(programming_language[-1])
+prog_language = ["python", "R", "C", "java", "Go", "Rust"]
+print(prog_language[0])
+print(prog_language[-1])
 ```  
 
 ```{python , echo=TRUE}
-# NB: Same to access characters in a string as in a list
 programming_language = "python"
-programming_language[0]
-programming_language[1]
-
+print(programming_language[0])
 ```  
 
 Lists 3/3
@@ -179,38 +183,92 @@ Lists 3/3
     + sort()
     + len()
 ```{python , echo=TRUE}
-programming_language = ["python", "R", "javascript", "C", "C#", "java", "C++", "Go", "Rust"]
-programming_language.append("html")
-programming_language.append("PHP")
-print(programming_language)
+prog_language = ["python", "R", "C", "java", "Go", "Rust"]
+prog_language.append("html")
+prog_language.append("PHP")
+print(prog_language)
 
-programming_language.remove("html")
+prog_language.remove("html")
 
-len(programming_language)
+len(prog_language)
 
-programming_language.sort()
-print(programming_language)
+prog_language.sort()
+print(prog_language)
 
 ```  
     
 
-Tuples 1/
+Tuples 1/3
 ========================================================
 
-  - Very similar to Lists but declared with () instead of square bracket
+  - Very similar to Lists and is used for data collection
   
-  - In contrast to lists, they are immutable and can't be modified.
+  - Declared with () instead of square bracket
+  
+``````{python, echo=TRUE}
+date_covid_shots = ("21-04-15", "21-05-18", "21-09-20")
 
+print(type(date_covid_shots)) # type function is very important
+
+print(date_covid_shots[1])  # Accessible as list with index with []
+print(len(date_covid_shots))
+``````
+  
+Tuples 2/3
+========================================================
+
+  - In contrast to lists, they are immutable and can't be modified.
+    
+        date_covid_shots = ("21-04-15", "21-05-18", "21-09-20")
+        date_covid_shots.append("21-09-27")
+  
+  - You can't change the order of items neither modify the value of an item
+
+  - Tuples are best suited when you need ordered lists that would never change
+    + If you want to code a calendar :  days and years can be coded as tuples as they would not change but are ordered.
+
+Tuples 3/3
+========================================================
+  
+  - Note that you could combine lists and tuples
+``````{python, echo=TRUE}
+Cocktails = [("Cosmo","5€"),("Daiquiri","7€"),("B52","6€")]
+Cocktails.append(("Mojito","7€"))
+
+print(Cocktails)
+``````
+
+  - NB: you can also declare a tuple that way
+`````{python, echo = TRUE}
+date_covid_shots = tuple(["21-04-15", "21-05-18", "21-09-20"])
+# in this line you transform a list into a tuple
+print(type(date_covid_shots))
+`````
+  
 
 Sets
 ========================================================
 
-  - Very close to lists but are unordered unindexed ununchangeable and do not allow duplicate value
+  - Very close to lists but are unordered unindexed and do not allow duplicate value BUT are mutable
   
   - Declared with {}
   
-  - Can contain different types of data
+`````{python, echo = TRUE}
+fruit_I_like = {"apple", "pineapple", "peach"}
+print(type(fruit_I_like))
+print(fruit_I_like)
 
+fruit_I_like.add("strawberry")
+"strawberry" in fruit_I_like # Check if a fruit is in my set
+fruit_I_like.remove("apple")
+print(fruit_I_like)
+`````
+  - But can't add/remove items in a set or access to item with index. Following instructions should throw an error
+  
+        fruit_I_like[0]
+        fruit_I_like.append("banana")
+        
+      
 
 Dictionaries 1/
 ========================================================
@@ -223,20 +281,52 @@ Dictionaries 1/
   
   - Declared in a very specific way
 
-        my_dictionary = { "key1" : value1, "key2", value2 ...}
+        my_dictionary = { "key1" : value1, "key2": value2 ...}
   
+`````{python, echo = TRUE}
+PCBS = {
+  "Name" : "PCBS",
+  "Teacher" : "Christophe Pallier",
+  "Teacher assistant1" : "Cedric",
+  "Teacher assistant2" : "Henri",
+  "Day": "Tuesday",
+  "Duration" : 3,
+  "Mandatory" : False}
   
+print(PCBS)
+`````
   
   
 Dictionaries 2/3 Create a Dictionary  
 ========================================================
 
-  - Creation of a dictionary:
-    + several methods
+  - You have several methods to create a dictionary:
+    
     
   - Examples
-  
-  
+`````{python, echo = TRUE}
+PCBS = {}
+PCBS["Name"] = "PCBS"
+PCBS["Teacher"] = "Christophe Pallier"
+PCBS["Teacher assistant1"] = "Cedric"
+PCBS["Teacher assistant2"] = "Henri"
+PCBS["Day"] = "Tuesday"
+PCBS["Duration"] = 3
+PCBS["Mandatory"] = False 
+print(PCBS)
+`````  
+  - Which is exactly the same as
+`````{python, echo = TRUE}
+PCBS = dict()
+PCBS["Name"] = "PCBS"
+PCBS["Teacher"] = "Christophe Pallier"
+PCBS["Teacher assistant1"] = "Cedric"
+PCBS["Teacher assistant2"] = "Henri"
+PCBS["Day"]= "Tuesday"
+PCBS["Duration"] = 3
+PCBS["Mandatory"] = False 
+print(PCBS)
+`````  
   
 
 
@@ -251,19 +341,27 @@ Dictionaries 3/3 Use common operation
   
   - Check for specific key existence
 
+`````{python, echo = TRUE}
+PCBS = {  "Name" : "PCBS", "Teacher" : "Christophe Pallier",
+"Teacher assistant1" : "Cedric", "Teacher assistant2" : "Henri", 
+"Day": "Tuesday", "Duration" : 3, "Mandatory" : False}
+PCBS['Day']
+PCBS["starting time"] = "13h30"
+PCBS.pop("Teacher assistant2")
+print(PCBS)
+`````    
+  
+
 
 Summary on Python collections (~ Arrays)
 ========================================================
 
 
-    - List is a collection which is ordered and changeable. Allows duplicate members.
-    - Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
-    - Set is a collection which is unordered and unindexed. No duplicate members.
-    - Dictionary is a collection which is ordered* and changeable. No duplicate members.
+![](/home/henri/Documents/Cours/PCBS/slides/2021-intro-to-programming/second class/python collections.png)
 
 
 
-Python module - example of *Random* 1/
+Python module - example of **Random** 1/4
 ========================================================
 
   - Python incorporates in its standard library a multitude of modules for a variety of subjects and problem (network, text processing, mathematics, file and directory access, cryptography...)
@@ -274,28 +372,34 @@ Python module - example of *Random* 1/
   
   https://docs.python.org/3/library/random.html
   
-  - Several ways to import a python module
+
+Python module - example of **Random** 2/4
+========================================================
+- Several ways to import a python module
   
 ``````{python, echo = TRUE}
-import random # import random and from that object have access to all the functions
+import random # import random
 int_list =[1,2,3]
-random.shuffle(int_list)
+random.shuffle(int_list)# from that object you have to access all the functions
 print(int_list)
 
-import random as rand # import random using a custom local name and from that name to access all the functions
-rand.shuffle(int_list)
+import random as rand # import random using a custom local name 
+rand.shuffle(int_list) # from that object you have to access all the functions
 print(int_list)
 
-from random import shuffle,randint,choice # import from the random module one or a reduced set of functions that exist in the Random module
-shuffle(int_list)
+from random import shuffle,randint,choice # import only needed function
+shuffle(int_list) # use the function directly without object before
 print(int_list)
 
-from random import * # import from random and all the functions bundled inside Random
+from random import * # import all the functions bundled inside Random at once
 shuffle(int_list)
 print(int_list)
 ``````
-Random numbers 2/
+
+
+Python module - example of **Random** 3/4
 ========================================================
+
 ``````{python, echo = TRUE}
 from random import *
 
@@ -309,14 +413,20 @@ print(choice(list1))
 items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 y = sample(items, 4)    # Pick 4 random items from the list
 print(y)
+``````
 
+Python module - example of **Random** 4/4
+========================================================
+
+``````{python, echo = TRUE}
 # using randrange() to generate in range from 20
 # to 50. The last parameter 3 is step size to skip
 # three numbers when selecting.
 print("A random number from range is : ", end="")
 print(randrange(20, 50, 3))
 ``````
-Excercices
+
+Excercices 1/2
 ========================================================
 
 - Exercice 1: Lists: - Given a list of numbers, print their sum - Given a list of numbers, print their product - Given a list of numbers, print the sum of their squares - Given a list of numbers, print the largest one. - Given a list of numbers, print the second largest
@@ -327,6 +437,6 @@ Excercices
 
 - Exercice 4: write a program that generates a random 10 character long password including 6 letters with 2 of them uppercase, 1 digit and 1 special symbol.
 
-- Exercice 5: Monte Carlo estimation of Pi: one way to estimate the value of the π is to generate a large number of random points in the unit square and see how many fall within the unit circle; their proportion is an estimate of the area of the circle. See https://academo.org/demos/estimating-pi-monte-carlo. Implement the proposed algorithm to estimate the value of π.
+- Exercice 5: Monte Carlo estimation of Pi: one way to estimate the value of the pi is to generate a large number of random points in the unit square and see how many fall within the unit circle; their proportion is an estimate of the area of the circle. See https://academo.org/demos/estimating-pi-monte-carlo. Implement the proposed algorithm to estimate the value of pi.
 
 - Exercice 6: Write a program that prints the first N rows of Pascal’s triangle (see https://www.youtube.com/watch?v=XMriWTvPXHI).
