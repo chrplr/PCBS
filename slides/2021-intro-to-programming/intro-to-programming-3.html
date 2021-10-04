@@ -183,7 +183,7 @@ Henri Vandendriessche
 <li>string</li>
 <li>boolean</li>
 </ul></li>
-<li><p>If, For and While loops:</p>
+<li><p><strong>If</strong>, <strong>For</strong> and <strong>While</strong> loops:</p>
 <ul>
 <li>syntax</li>
 <li>indentation</li>
@@ -212,17 +212,23 @@ Henri Vandendriessche
 <div id="functions" class="slide section level1">
 <h1>Functions</h1>
 <p>A function is a block of instructions that is given a name.</p>
-</div>
-<div id="definition-of-a-function-named-one_two" class="slide section level1">
-<h1>definition of a function named ‘one_two’</h1>
-<p>def one_two(): print(1) print(2) print(‘…’)</p>
-</div>
-<div id="function-calls" class="slide section level1">
-<h1>function calls</h1>
-<p>one_two() one_two() one_two()</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  definition of a function named &#39;one_two&#39;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> one_two():</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">1</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">2</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;...&#39;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>one_two() <span class="co"># function calls 1</span></span></code></pre></div>
+<pre><code>## 1
+## 2
+## ...</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>one_two() <span class="co"># function calls 2</span></span></code></pre></div>
+<pre><code>## 1
+## 2
+## ...</code></pre>
 <p>Calling a function is like substituting the function call by its body.</p>
 <p>If you do not call the function, it will never be executed.</p>
-<p>-&gt; Run this code inside a terminal with python (or in <a href="https://repl.it/languages/python3" class="uri">https://repl.it/languages/python3</a>), then in <a href="http://pythontutor.com/" class="uri">http://pythontutor.com/</a></p>
+<p>-&gt; Run this code in <a href="http://pythontutor.com/" class="uri">http://pythontutor.com/</a></p>
 <p>What, in your opinion, is the interest of functions?</p>
 </div>
 <div id="usefulness-of-functions" class="slide section level1">
@@ -235,90 +241,102 @@ Henri Vandendriessche
 <div id="definitions-first" class="slide section level1">
 <h1>Definitions first !</h1>
 <p>functions must be defined before they are called</p>
-<p>one_two() # function call one_two() one_two()</p>
-<p>def one_two(): # function definition print(1) print(2) print(‘…’)</p>
+<pre><code>one_two()  # function call
+one_two()
+one_two()
+
+def one_two():  # function definition
+    print(1)
+    print(2)
+    print(&#39;...&#39;)</code></pre>
 <p>-&gt; Run this code in python.</p>
 <p>Remarks:</p>
-<pre><code>- A given script can contain several function definitions.
-
-- As a convention, all functions definitions must be at the beginning of the script.</code></pre>
+<ul>
+<li><p>A given script can contain several function definitions.</p></li>
+<li><p>As a convention, all functions definitions must be at the beginning of the script.</p></li>
+</ul>
 </div>
 <div id="arguments" class="slide section level1">
 <h1>Arguments</h1>
-<p>def hello(name): print(‘Hello,’ + name)</p>
-<p>hello(‘Alice’) hello(‘Bob’)</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello(name):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, &#39;</span> <span class="op">+</span> name)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>hello(<span class="st">&#39;Alice&#39;</span>)</span></code></pre></div>
+<pre><code>## Hello, Alice</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>hello(<span class="st">&#39;Bob&#39;</span>)</span></code></pre></div>
+<pre><code>## Hello, Bob</code></pre>
 <p>During the call hello(‘Alice’), the argument Alice is stored in the variable name.</p>
 <p>-&gt; run it in <a href="http://pythontutor.com/" class="uri">http://pythontutor.com/</a></p>
 <p>Note: the variable name is created only during the execution of the function hello() (it is local to hello())</p>
 </div>
 <div id="multiple-arguments" class="slide section level1">
 <h1>Multiple arguments</h1>
-<p>def print_if__divisible(n, div): if (n % div == 0): print(n, ’ is a divisible by ’, div)</p>
-<p>print_if_divisible(10, 5) print_if_divisible(11, 5)</p>
-<p>-&gt; Exercise: using the above function, find the divisors of 10, 15, 27, 33, 64, 100``</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_if_divisible(n, div):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="op">%</span> div <span class="op">==</span> <span class="dv">0</span>):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(n, <span class="st">&#39; is a divisible by &#39;</span>, div)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>print_if_divisible(<span class="dv">10</span>, <span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## 10  is a divisible by  5</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>print_if_divisible(<span class="dv">11</span>, <span class="dv">5</span>)</span></code></pre></div>
+<p>-&gt; Exercise: using the above function, find the divisors of 10, 15, 27, 33, 64, 100</p>
 </div>
 <div id="return-values" class="slide section level1">
 <h1>Return values</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  y <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> x <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> y</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(func(<span class="fl">0.0</span>))</span></code></pre></div>
-<pre><code>## 1.0</code></pre>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(func(<span class="fl">1.0</span>))</span></code></pre></div>
-<pre><code>## 3.0</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(func(<span class="fl">2.5</span>))</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># compute the values of func for x in [-10, _9, -8, ..., 8, 9, 10] </span></span></code></pre></div>
-<pre><code>## 6.0</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">10</span>, <span class="dv">11</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> []</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> xs:</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  values.append(func(x))</span></code></pre></div>
+<p>The functions we have seen so far executed actions.</p>
+<p>A function can also return the result(s) of a computation</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  y <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> x <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> y</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(func(<span class="fl">0.0</span>))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(func(<span class="fl">1.0</span>))</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(func(<span class="fl">2.5</span>))</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># compute the values of func for x in [-10, _9, -8, ..., 8, 9, 10] </span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">10</span>, <span class="dv">11</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> []</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> xs:</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  values.append(func(x))</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co"># display them on a graphics</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>plt.plot(xs, values)</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 </div>
-<div id="display-them-on-a-graphics" class="slide section level1">
-<h1>display them on a graphics</h1>
-<p>import matplotlib.pyplot as plt plt.plot(xs, values) plt.show()</p>
-<pre><code>
-
-
-Boolean Functions
-========================================================
-
-Boolean functions return True or False
-
-
-```python
-def is_divisible(x, y):
-    if (x % y == 0):
-        result = True
-    else:
-        result = False
-
-    return result
-
-print(is_divisible(10, 5))</code></pre>
+<div id="boolean-functions" class="slide section level1">
+<h1>Boolean Functions</h1>
+<p>Boolean functions return True or False</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_divisible(x, y):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (x <span class="op">%</span> y <span class="op">==</span> <span class="dv">0</span>):</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(is_divisible(<span class="dv">10</span>, <span class="dv">5</span>))</span></code></pre></div>
 <pre><code>## True</code></pre>
 <p>-&gt; Question: how could one “simplify” (shorten) the function is_divisible ?</p>
 </div>
 <div id="returning-complex-objets" class="slide section level1">
 <h1>Returning “complex” objets</h1>
 <p>A function can return a t-uple, a list, a dictionary, …</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x): </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    y1 <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    y2 <span class="op">=</span> x <span class="op">*</span> <span class="dv">3</span> </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    y3 <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> </span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (y1, y2, y3)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>f(<span class="fl">2.0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x): </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    y1 <span class="op">=</span> x <span class="op">+</span> <span class="dv">1</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    y2 <span class="op">=</span> x <span class="op">*</span> <span class="dv">3</span> </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    y3 <span class="op">=</span> x <span class="op">**</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (y1, y2, y3)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>f(<span class="fl">2.0</span>)</span></code></pre></div>
 <pre><code>## (3.0, 6.0, 7.0)</code></pre>
 <p>Default values for arguments</p>
 <p>It is possible to provide defaults values for arguments.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> message(name, msg<span class="op">=</span><span class="st">&#39;Hello&#39;</span>):</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(msg <span class="op">+</span> <span class="st">&#39; &#39;</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">&#39;!&#39;</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>message(<span class="st">&quot;Anna&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> message(name, msg<span class="op">=</span><span class="st">&#39;Hello&#39;</span>):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(msg <span class="op">+</span> <span class="st">&#39; &#39;</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">&#39;!&#39;</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>message(<span class="st">&quot;Anna&quot;</span>)</span></code></pre></div>
 <pre><code>## Hello Anna!</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>message(<span class="st">&quot;Anna&quot;</span>, <span class="st">&quot;Gooodbye&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>message(<span class="st">&quot;Anna&quot;</span>, <span class="st">&quot;Gooodbye&quot;</span>)</span></code></pre></div>
 <pre><code>## Gooodbye Anna!</code></pre>
 </div>
 <div id="use-of-position-or-keyword" class="slide section level1">
@@ -326,64 +344,73 @@ print(is_divisible(10, 5))</code></pre>
 <ul>
 <li>In a function call, parameters are typically assigned to arguments based either on the position or on their names.</li>
 </ul>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, b):</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;a=&#39;</span>, a)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;b=&#39;</span>, b)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">1</span> ,<span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(a, b):</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;a=&#39;</span>, a)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;b=&#39;</span>, b)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">1</span> ,<span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## a= 1
 ## b= 2</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">2</span>, <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">2</span>, <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## a= 2
 ## b= 1</code></pre>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>f(b<span class="op">=</span><span class="dv">2</span>, a<span class="op">=</span><span class="dv">1</span>)   <span class="co"># but one can also use the names of arguments</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>f(b<span class="op">=</span><span class="dv">2</span>, a<span class="op">=</span><span class="dv">1</span>)   <span class="co"># but one can also use the names of arguments</span></span></code></pre></div>
 <pre><code>## a= 1
 ## b= 2</code></pre>
 </div>
 <div id="scope-of-variables-12" class="slide section level1">
 <h1>Scope of variables 1/2</h1>
 <p>-&gt; Try the following code in <a href="http://pythontutor.com/" class="uri">http://pythontutor.com/</a></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&#39;chris&#39;</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello(name):</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, &#39;</span> <span class="op">+</span> name)</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&#39;chris&#39;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello(name):</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;Hello, &#39;</span> <span class="op">+</span> name)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre></div>
 <pre><code>## chris</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>hello(<span class="st">&#39;Alice&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>hello(<span class="st">&#39;Alice&#39;</span>)</span></code></pre></div>
 <pre><code>## Hello, Alice</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>hello(<span class="st">&#39;Bob&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>hello(<span class="st">&#39;Bob&#39;</span>)</span></code></pre></div>
 <pre><code>## Hello, Bob</code></pre>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(name)</span></code></pre></div>
 <pre><code>## chris</code></pre>
 </div>
 <div id="scope-of-variables-22" class="slide section level1">
 <h1>Scope of variables 2/2</h1>
-<p>local variables</p>
-<p>Arguments or variables defined inside the body of a function only exist while the function is executed. They are destroyed ant the associated memory is freed.</p>
-<p>non-local variables*</p>
+<p><strong>local variables</strong></p>
+<p>Arguments or variables defined inside the body of a function only exist while the function is executed. They are destroyed and the associated memory is freed.</p>
+<p><strong>non-local variables</strong></p>
 <p>Variables that have been created in the environment where the variable was called. functions can access them (if they are not shadowed)</p>
 <p>Yet, this is bad practice and must be avoided except in a few cases.</p>
 <p>Why ? Because one should be able to understand what a function is going to do only based on its call.</p>
-<p>Read section &quot;“Local and Global Scope”&quot; in Automate the Boring stuff (from p. 67)</p>
+<p>Read section &quot;“Local and Global Scope”&quot; in Automate the Boring stuff <a href="https://automatetheboringstuff.com/chapter3/" class="uri">https://automatetheboringstuff.com/chapter3/</a></p>
 </div>
 <div id="functions-can-call-other-functions" class="slide section level1">
 <h1>functions can call other functions</h1>
 <p>Note that functions can call each other.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func1():</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="dv">1</span>)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func2():</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  func1()</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="dv">2</span>)</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>  func1()</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>func2()</span></code></pre></div>
 <p>-&gt; Predict the output of this script.</p>
 </div>
 <div id="functions-can-call-other-functions-1" class="slide section level1">
 <h1>functions can call other functions</h1>
 <p>Note that functions can call each other.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func1():</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">1</span>)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func2():</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    func1()</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">2</span>)</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    func1()</span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>func2()</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func1():</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="dv">1</span>)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func2():</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>  func1()</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="dv">2</span>)</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>  func1()</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>func2()</span></code></pre></div>
 <pre><code>## 1
 ## 2
 ## 1</code></pre>
@@ -392,20 +419,23 @@ print(is_divisible(10, 5))</code></pre>
 <h1>Recursive functions</h1>
 <p>Recursive functions are function that contains calls to themselves:</p>
 <p>For example:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fact(n):</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> fact(n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fact(n):</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> fact(n <span class="op">-</span> <span class="dv">1</span>)</span></code></pre></div>
 </div>
 <div id="modules" class="slide section level1">
 <h1>Modules</h1>
 <p>Functions defined in a file myfunc.py in the current folder can be called from another python script.</p>
-<h3 id="file-mymodule.py">file “mymodule.py”</h3>
-<p>def hello(name): print(“Hello”, name, “!”)</p>
-<h3 id="file-myscript.py">file “myscript.py”</h3>
-<p>import mymodule</p>
-<p>mymodule.hello(“Chris”)</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">### file &quot;mymodule.py&quot;</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello(name):</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Hello &quot;</span>, name, <span class="st">&quot;!&quot;</span>)</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co">### file &quot;myscript.py&quot;</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> mymodule</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>mymodule.hello(<span class="st">&quot;Chris&quot;</span>)</span></code></pre></div>
 <ul>
 <li>modules (aka libraries) allow to reuse functions.</li>
 <li>Python comes with many modules, e.g. random, math, os.</li>
@@ -426,139 +456,6 @@ print(is_divisible(10, 5))</code></pre>
 <p>3- Define a function is_prime(x) which returns True if x is a prime number, else False. Use it to list all prime numbers below 1000.</p>
 <p>4- Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns ‘company A’ and ‘company B’, the cheapest company for a given distance.</p>
 <p>5- Write a function are_anagrams(word1, word2) that tests if two words are anagrams, that is contain the same letters in different orders.</p>
-</div>
-<div id="exercice-1" class="slide section level1">
-<h1>Exercice 1:</h1>
-<p>1- Define a function with two arguments — a string msg and a number nrepetitions — that prints msg, nrepetition times.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_n_times(msg, n):</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n):</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(msg)</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>print_n_times(<span class="st">&quot;test0&quot;</span>, <span class="dv">0</span>)</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>print_n_times(<span class="st">&quot;test1&quot;</span>, <span class="dv">1</span>)</span></code></pre></div>
-<pre><code>## test1</code></pre>
-<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>print_n_times(<span class="st">&quot;test4&quot;</span>, <span class="dv">4</span>)</span></code></pre></div>
-<pre><code>## test4
-## test4
-## test4
-## test4</code></pre>
-</div>
-<div id="exercice-2" class="slide section level1">
-<h1>Exercice 2:</h1>
-<ul>
-<li>Read <a href="https://en.wikipedia.org/wiki/Fahrenheit" class="uri">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit</li>
-</ul>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Fahrenheit_to_Celsius(t):</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (f <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> <span class="fl">5.0</span><span class="op">/</span><span class="fl">9.0</span></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Celsius_to_Fahrenheit(t):</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (t <span class="op">*</span> <span class="fl">9.0</span><span class="op">/</span><span class="fl">5.0</span>) <span class="op">+</span> <span class="dv">32</span></span></code></pre></div>
-</div>
-<div id="exercice-3" class="slide section level1">
-<h1>Exercice 3:</h1>
-<ul>
-<li>Define a function is_prime(x) which returns True if x is a prime number, else False. Use it to list all prime numbers below 1000.</li>
-</ul>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_prime(n):</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">3</span>:</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, n):</span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (n <span class="op">%</span> i) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span>
-<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">1000</span>) <span class="cf">if</span> is_prime(x)])</span></code></pre></div>
-<pre><code>## [1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997]</code></pre>
-</div>
-<div id="exercie-4" class="slide section level1">
-<h1>Exercie 4:</h1>
-<ul>
-<li>Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns ‘company A’ and ‘company B’, the cheapest company for a given distance.</li>
-</ul>
-<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> costs(distance):</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    price_A <span class="op">=</span> <span class="fl">4.8</span> <span class="op">+</span> <span class="fl">1.15</span> <span class="op">*</span> distance</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    price_B <span class="op">=</span> <span class="fl">3.2</span> <span class="op">+</span> <span class="fl">1.20</span> <span class="op">*</span> distance</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (price_A, price_B)</span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cheapest_company(distance):</span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> costs(distance)</span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&lt;</span> b:</span>
-<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;Company A&#39;</span></span>
-<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;Company B&#39;</span></span>
-<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> d <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">50</span>):</span>
-<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{d}</span><span class="ss"> km -&gt; &quot;</span> <span class="op">+</span> cheapest_company(d))</span></code></pre></div>
-<pre><code>## 1 km -&gt; Company B
-## 2 km -&gt; Company B
-## 3 km -&gt; Company B
-## 4 km -&gt; Company B
-## 5 km -&gt; Company B
-## 6 km -&gt; Company B
-## 7 km -&gt; Company B
-## 8 km -&gt; Company B
-## 9 km -&gt; Company B
-## 10 km -&gt; Company B
-## 11 km -&gt; Company B
-## 12 km -&gt; Company B
-## 13 km -&gt; Company B
-## 14 km -&gt; Company B
-## 15 km -&gt; Company B
-## 16 km -&gt; Company B
-## 17 km -&gt; Company B
-## 18 km -&gt; Company B
-## 19 km -&gt; Company B
-## 20 km -&gt; Company B
-## 21 km -&gt; Company B
-## 22 km -&gt; Company B
-## 23 km -&gt; Company B
-## 24 km -&gt; Company B
-## 25 km -&gt; Company B
-## 26 km -&gt; Company B
-## 27 km -&gt; Company B
-## 28 km -&gt; Company B
-## 29 km -&gt; Company B
-## 30 km -&gt; Company B
-## 31 km -&gt; Company B
-## 32 km -&gt; Company A
-## 33 km -&gt; Company A
-## 34 km -&gt; Company A
-## 35 km -&gt; Company A
-## 36 km -&gt; Company A
-## 37 km -&gt; Company A
-## 38 km -&gt; Company A
-## 39 km -&gt; Company A
-## 40 km -&gt; Company A
-## 41 km -&gt; Company A
-## 42 km -&gt; Company A
-## 43 km -&gt; Company A
-## 44 km -&gt; Company A
-## 45 km -&gt; Company A
-## 46 km -&gt; Company A
-## 47 km -&gt; Company A
-## 48 km -&gt; Company A
-## 49 km -&gt; Company A</code></pre>
-</div>
-<div id="exercie-5" class="slide section level1">
-<h1>Exercie 5:</h1>
-<ul>
-<li>Write a function are_anagrams(word1, word2) that tests if two words are anagrams, that is contain the same letters in different orders.</li>
-</ul>
-<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> are_anagrams(w1, w2):</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sorted</span>(w1) <span class="op">==</span> <span class="bu">sorted</span>(w2)</span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(are_anagrams(<span class="st">&#39;listen&#39;</span>, <span class="st">&#39;silent&#39;</span>))</span></code></pre></div>
-<pre><code>## True</code></pre>
-<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(are_anagrams(<span class="st">&#39;listen&#39;</span>, <span class="st">&#39;speak&#39;</span>))</span></code></pre></div>
-<pre><code>## False</code></pre>
-</div>
-<div id="even-more-exercices" class="slide section level1">
-<h1>Even more exercices:</h1>
-<p>See</p>
-<ul>
-<li><a href="https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html" class="uri">https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html</a></li>
-<li><a href="https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html" class="uri">https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html</a></li>
-</ul>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->

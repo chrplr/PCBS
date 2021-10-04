@@ -43,7 +43,7 @@ So far
     + string
     + boolean
   
-  - If, For and While loops:
+  - **If**, **For** and **While** loops:
     + syntax
     + indentation 
 
@@ -71,22 +71,22 @@ Functions
 
 A function is a block of instructions that is given a name.
 
+```{python, echo =TRUE}
 #  definition of a function named 'one_two'
 def one_two():
     print(1)
     print(2)
     print('...')
 
-# function calls
-one_two()
-one_two()
-one_two()
+one_two() # function calls 1
+one_two() # function calls 2
+```
 
 Calling a function is like substituting the function call by its body.
 
 If you do not call the function, it will never be executed.
 
--> Run this code inside a terminal with python (or in https://repl.it/languages/python3), then in http://pythontutor.com/
+-> Run this code in http://pythontutor.com/
 
 What, in your opinion, is the interest of functions?   
 
@@ -109,34 +109,37 @@ Definitions first !
 
 functions must be defined before they are called
 
-one_two()  # function call
-one_two()
-one_two()
-
-def one_two():  # function definition
-    print(1)
-    print(2)
-    print('...')
+    one_two()  # function call
+    one_two()
+    one_two()
+    
+    def one_two():  # function definition
+        print(1)
+        print(2)
+        print('...')
 
 -> Run this code in python.
 
 Remarks:
 
-    - A given script can contain several function definitions.
+  - A given script can contain several function definitions.
 
-    - As a convention, all functions definitions must be at the beginning of the script.
+  - As a convention, all functions definitions must be at the beginning of the script.
 
 
 Arguments
 ========================================================
 
+```{python, echo =TRUE}
 def hello(name):
     print('Hello, ' + name)
 
 hello('Alice')
 hello('Bob')
+```
 
 During the call hello('Alice'), the argument Alice is stored in the variable name.
+
 
 -> run it in http://pythontutor.com/
 
@@ -146,12 +149,14 @@ Note: the variable name is created only during the execution of the function hel
 Multiple arguments
 ========================================================
 
-  def print_if__divisible(n, div):
-    if (n % div == 0):
-        print(n, ' is a divisible by ', div)
+```{python, echo =TRUE}
+def print_if_divisible(n, div):
+  if (n % div == 0):
+    print(n, ' is a divisible by ', div)
 
 print_if_divisible(10, 5)
 print_if_divisible(11, 5)
+```
 
 -> Exercise: using the above function, find the divisors of 10, 15, 27, 33, 64, 100
 
@@ -162,25 +167,27 @@ The functions we have seen so far executed actions.
 
 A function can also return the result(s) of a computation
 
-```{python, echo=TRUE}
+```{python eval=FALSE, echo = TRUE}
 def func(x):
   y = 2 * x + 1
   return y
+
 print(func(0.0))
 print(func(1.0))
 print(func(2.5))
-
+    
 # compute the values of func for x in [-10, _9, -8, ..., 8, 9, 10] 
 xs = range(-10, 11)
 values = []
 for x in xs:
   values.append(func(x))
-  
+      
 # display them on a graphics
 import matplotlib.pyplot as plt
 plt.plot(xs, values)
 plt.show()
 ```
+
 
 
 
@@ -267,11 +274,11 @@ print(name)
 Scope of variables 2/2
 ========================================================
 
-local variables
+**local variables**
 
-Arguments or variables defined inside the body of a function only exist while the function is executed. They are destroyed ant the associated memory is freed.
+Arguments or variables defined inside the body of a function only exist while the function is executed. They are destroyed and the associated memory is freed.
 
-non-local variables*
+**non-local variables**
 
 Variables that have been created in the environment where the variable was called. functions can access them (if they are not shadowed)
 
@@ -279,7 +286,8 @@ Yet, this is bad practice and must be avoided except in a few cases.
 
 Why ? Because one should be able to understand what a function is going to do only based on its call.
 
-Read section ""Local and Global Scope"" in Automate the Boring stuff (from p. 67)        
+Read section ""Local and Global Scope"" in Automate the Boring stuff 
+https://automatetheboringstuff.com/chapter3/
       
 
 functions can call other functions
@@ -287,15 +295,15 @@ functions can call other functions
 
 Note that functions can call each other.
 
-```{python eval=FALSE, include=FALSE}
+```{python eval=FALSE, echo = TRUE}
 def func1():
-    print(1)
-
+  print(1)
+    
 def func2():
-    func1()
-    print(2)
-    func1()
-
+  func1()
+  print(2)
+  func1()
+    
 func2()
 ```
 -> Predict the output of this script.
@@ -307,12 +315,12 @@ Note that functions can call each other.
 
 ```{python echo=TRUE}
 def func1():
-    print(1)
+  print(1)
 
 def func2():
-    func1()
-    print(2)
-    func1()
+  func1()
+  print(2)
+  func1()
 
 func2()
 ```  
@@ -336,16 +344,16 @@ Modules
 
 Functions defined in a file myfunc.py in the current folder can be called from another python script.
 
-
+```{python eval=FALSE, echo = TRUE}
 ### file "mymodule.py"
-def  hello(name):
+def hello(name):
   print("Hello ", name, "!")
-
+    
 ### file "myscript.py"
 import mymodule
-
+    
 mymodule.hello("Chris")
-
+```    
   - modules (aka libraries) allow to reuse functions.
   - Python comes with many modules, e.g. random, math, os.
   - Anaconda adds scientific librariesnumpy, scipy
@@ -377,91 +385,3 @@ Exercices:
 
 5- Write a function are_anagrams(word1, word2) that tests if two words are anagrams, that is contain the same letters in different orders.
 
-Exercice 1:
-========================================================
-
-1- Define a function with two arguments --- a string msg and a number nrepetitions --- that prints msg, nrepetition times.
-
-```{python, echo=TRUE}
-def print_n_times(msg, n):
-    for _ in range(n):
-        print(msg)
-
-print_n_times("test0", 0)
-print_n_times("test1", 1)
-print_n_times("test4", 4)
-```
-
-Exercice 2:
-========================================================
-
-- Read https://en.wikipedia.org/wiki/Fahrenheit and write a function that converts from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit
-
-```{python, echo=TRUE}
-def Fahrenheit_to_Celsius(t):
-    return (f - 32) * 5.0/9.0
-
-def Celsius_to_Fahrenheit(t):
-    return (t * 9.0/5.0) + 32
-```
-
-Exercice 3:
-========================================================
-- Define a function is_prime(x) which returns True if x is a prime number, else False. Use it to list all prime numbers below 1000.
-
-```{python, echo = TRUE}
-def is_prime(n):
-    if n < 3:
-        return True
-    for i in range(2, n):
-        if (n % i) == 0:
-            return False
-    return True
-
-print([x for x in range(1, 1000) if is_prime(x)])
-
-```
-
-
-Exercie 4:
-========================================================
-- Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
-
-```{python echo=TRUE}
-def costs(distance):
-    price_A = 4.8 + 1.15 * distance
-    price_B = 3.2 + 1.20 * distance
-    return (price_A, price_B)
-
-def cheapest_company(distance):
-    a, b = costs(distance)
-    if a < b:
-        return 'Company A'
-    else:
-        return 'Company B'
-
-for d in range(1, 50):
-    print(f"{d} km -> " + cheapest_company(d))
-```
-
-Exercie 5:
-========================================================
-
-- Write a function are_anagrams(word1, word2) that tests if two words are anagrams, that is contain the same letters in different orders.
-
-```{python, echo=TRUE}
-def are_anagrams(w1, w2):
-    return sorted(w1) == sorted(w2)
-
-print(are_anagrams('listen', 'silent'))
-print(are_anagrams('listen', 'speak'))
-```
-
-
-Even more exercices:
-========================================================
-
-See
-
-  -  https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html
-  -  https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html
