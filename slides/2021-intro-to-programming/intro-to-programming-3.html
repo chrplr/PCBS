@@ -6,8 +6,8 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Henri Vandendriessche" />
-  <meta name="date" content="2021-03-10" />
-  <title>intro-to-programming-3.Rmd</title>
+  <meta name="date" content="2021-05-10" />
+  <title>intro-to-programming-3</title>
   <style type="text/css">
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -151,11 +151,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </head>
 <body>
 <div class="slide titlepage">
-  <h1 class="title">intro-to-programming-3.Rmd</h1>
+  <h1 class="title">intro-to-programming-3</h1>
   <p class="author">
 Henri Vandendriessche
   </p>
-  <p class="date">03/10/2021</p>
+  <p class="date">05/10/2021</p>
 </div>
 <div id="reminder" class="slide section level1">
 <h1>Reminder</h1>
@@ -456,6 +456,154 @@ def one_two():  # function definition
 <p>3- Define a function is_prime(x) which returns True if x is a prime number, else False. Use it to list all prime numbers below 1000.</p>
 <p>4- Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns ‘company A’ and ‘company B’, the cheapest company for a given distance.</p>
 <p>5- Write a function are_anagrams(word1, word2) that tests if two words are anagrams, that is contain the same letters in different orders.</p>
+</div>
+<div id="exercice-1" class="slide section level1">
+<h1>Exercice 1:</h1>
+<ul>
+<li>Define a function with two arguments:
+<ul>
+<li>a string msg and a number nrepetitions</li>
+<li>that prints msg, nrepetition times.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_n_times(msg, n):</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(msg)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>print_n_times(<span class="st">&quot;test0&quot;</span>, <span class="dv">0</span>)</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>print_n_times(<span class="st">&quot;test1&quot;</span>, <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## test1</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>print_n_times(<span class="st">&quot;test4&quot;</span>, <span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## test4
+## test4
+## test4
+## test4</code></pre>
+</div>
+<div id="exercice-2" class="slide section level1">
+<h1>Exercice 2:</h1>
+<ul>
+<li>Read <a href="https://en.wikipedia.org/wiki/Fahrenheit" class="uri">https://en.wikipedia.org/wiki/Fahrenheit</a> and write a function that converts from Fahrenheit to Celsius, and another one that converts from Celsius to Fahrenheit</li>
+</ul>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Fahrenheit_to_Celsius(f):</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (f <span class="op">-</span> <span class="dv">32</span>) <span class="op">*</span> <span class="fl">5.0</span><span class="op">/</span><span class="fl">9.0</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Celsius_to_Fahrenheit(c):</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (c <span class="op">*</span> <span class="fl">9.0</span><span class="op">/</span><span class="fl">5.0</span>) <span class="op">+</span> <span class="dv">32</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>Fahrenheit_to_Celsius(<span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## -9.444444444444445</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>Celsius_to_Fahrenheit(<span class="dv">15</span>)</span></code></pre></div>
+<pre><code>## 59.0</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>Fahrenheit_to_Celsius(<span class="op">-</span><span class="dv">40</span>)</span></code></pre></div>
+<pre><code>## -40.0</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>Celsius_to_Fahrenheit(<span class="op">-</span><span class="dv">40</span>)</span></code></pre></div>
+<pre><code>## -40.0</code></pre>
+</div>
+<div id="exercice-3" class="slide section level1">
+<h1>Exercice 3:</h1>
+<ul>
+<li>Define a function is_prime(x) which returns True if x is a prime number, else False. Use it to list all prime numbers below 1000.</li>
+</ul>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_prime(n):</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">3</span>:</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, n):</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (n <span class="op">%</span> i) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">1000</span>) <span class="cf">if</span> is_prime(x)])</span></code></pre></div>
+<pre><code>## [1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997]</code></pre>
+</div>
+<div id="exercie-4" class="slide section level1">
+<h1>Exercie 4:</h1>
+<ul>
+<li>Two taxi companies propose differents pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns ‘company A’ and ‘company B’, the cheapest company for a given distance.</li>
+</ul>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> costs(distance):</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>    price_A <span class="op">=</span> <span class="fl">4.8</span> <span class="op">+</span> <span class="fl">1.15</span> <span class="op">*</span> distance</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>    price_B <span class="op">=</span> <span class="fl">3.2</span> <span class="op">+</span> <span class="fl">1.20</span> <span class="op">*</span> distance</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (price_A, price_B)</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cheapest_company(distance):</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> costs(distance)</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&lt;</span> b:</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;Company A&#39;</span></span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;Company B&#39;</span></span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> d <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">50</span>):</span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{d}</span><span class="ss"> km -&gt; &quot;</span> <span class="op">+</span> cheapest_company(d))</span></code></pre></div>
+<pre><code>## 1 km -&gt; Company B
+## 2 km -&gt; Company B
+## 3 km -&gt; Company B
+## 4 km -&gt; Company B
+## 5 km -&gt; Company B
+## 6 km -&gt; Company B
+## 7 km -&gt; Company B
+## 8 km -&gt; Company B
+## 9 km -&gt; Company B
+## 10 km -&gt; Company B
+## 11 km -&gt; Company B
+## 12 km -&gt; Company B
+## 13 km -&gt; Company B
+## 14 km -&gt; Company B
+## 15 km -&gt; Company B
+## 16 km -&gt; Company B
+## 17 km -&gt; Company B
+## 18 km -&gt; Company B
+## 19 km -&gt; Company B
+## 20 km -&gt; Company B
+## 21 km -&gt; Company B
+## 22 km -&gt; Company B
+## 23 km -&gt; Company B
+## 24 km -&gt; Company B
+## 25 km -&gt; Company B
+## 26 km -&gt; Company B
+## 27 km -&gt; Company B
+## 28 km -&gt; Company B
+## 29 km -&gt; Company B
+## 30 km -&gt; Company B
+## 31 km -&gt; Company B
+## 32 km -&gt; Company A
+## 33 km -&gt; Company A
+## 34 km -&gt; Company A
+## 35 km -&gt; Company A
+## 36 km -&gt; Company A
+## 37 km -&gt; Company A
+## 38 km -&gt; Company A
+## 39 km -&gt; Company A
+## 40 km -&gt; Company A
+## 41 km -&gt; Company A
+## 42 km -&gt; Company A
+## 43 km -&gt; Company A
+## 44 km -&gt; Company A
+## 45 km -&gt; Company A
+## 46 km -&gt; Company A
+## 47 km -&gt; Company A
+## 48 km -&gt; Company A
+## 49 km -&gt; Company A</code></pre>
+</div>
+<div id="exercie-5" class="slide section level1">
+<h1>Exercie 5:</h1>
+<ul>
+<li>Write a function are_anagrams(word1, word2) that tests if two words are anagrams, that is contain the same letters in different orders.</li>
+</ul>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> are_anagrams(w1, w2):</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sorted</span>(w1) <span class="op">==</span> <span class="bu">sorted</span>(w2)</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(are_anagrams(<span class="st">&#39;listen&#39;</span>, <span class="st">&#39;silent&#39;</span>))</span></code></pre></div>
+<pre><code>## True</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(are_anagrams(<span class="st">&#39;listen&#39;</span>, <span class="st">&#39;speak&#39;</span>))</span></code></pre></div>
+<pre><code>## False</code></pre>
+</div>
+<div id="even-more-exercices" class="slide section level1">
+<h1>Even more exercices:</h1>
+<p>See</p>
+<ul>
+<li><a href="https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html" class="uri">https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html</a></li>
+<li><a href="https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html" class="uri">https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html</a></li>
+</ul>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->
