@@ -11,45 +11,18 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-Reminder
-========================================================
-
- 
-  - Bash commands to navigate directories
-   
-  - Useful commands:
-
-    + **pwd**     Print Working Directory. Print the path of of the current directory
-    
-    + **ls /folder**        list all files of the current directory
-    
-    + **cd /folder1/folder2**     moving into folder1 and folder2 at once. 
-    
-    + **cd ..**        moving out of a directory 
-  
-  - "Tab" to use the auto-completion
-    
-  - Many more bash commands to use...
 
 
 So far
 ========================================================
 
-  - Python
+  - Python, its life, its choice
 
-  - Data types:
-    + integer
-    + float
-    + string
-    + boolean
+  - Data types: (integer / float / string / boolean)
   
   - **If**, **For** and **While** loops: 
 
-  - Data collections:
-    + list
-    + tuple
-    + set
-    + dictionary
+  - Data collections: (list, tuple, set, dictionary)
     
   - Functions
 
@@ -61,9 +34,9 @@ Today
 
 ### - Building abstraction with :
 
-####    + Recursive functions
+#####    + Recursive functions
 
-####    + High order functions
+#####    + High order functions (part 1)
 
 
 Building abstraction
@@ -96,6 +69,8 @@ Back on function
     + have an input (one or several arguments of any kind of data types) 
     + have an output (return one or several data)
     + but not necessarily
+    
+  - Variables defined in a function stay in the function
   
   - One good practice is to place functions in an external modules such as in the standard library 
   
@@ -282,7 +257,7 @@ print(rev(["a", "b", "c", "d"]))
 Exercice 2
 ========================================================
 
-2 - Write a script that displays the Koch snowflake (see on wikipedia) using a recursive function. You can use the turtle graphics module to draw on screen (as shown in section 16.5 of thinkcspy).
+2 - Write a script that displays the Koch snowflake (see on wikipedia) using a recursive function. You can use the turtle graphics (https://docs.python.org/3.8/library/turtle.html) module to draw on screen (as shown in section 16.5 of thinkcspy).
 
 https://en.wikipedia.org/wiki/Koch_snowflake
 
@@ -295,13 +270,10 @@ def Koch(n, l):
         turtle.forward(l)
     else:
         Koch(n - 1, l / 3)
-
         turtle.left(60)
         Koch(n - 1, l / 3)
-
         turtle.right(120)
         Koch(n - 1, l / 3)
-
         turtle.left(60)
         Koch(n - 1, l / 3)
 
@@ -337,23 +309,187 @@ perms('abc')
 Exercice 4
 ========================================================
 
-4 - Write a script that returns the pathnames of all the files ending in .txt contained inside a directory (at any depth of the hierarchy). You will need to use os.listdir() and os.path.isdir().
+4 - Write a script that returns the pathnames of all the files contained inside a directory (at any depth of the hierarchy). You will need to use os.listdir() and os.path.isdir().
 
 
 ```{python, echo=TRUE}
+import os
+ 
+def listdirs(rootdir):
+  for file in os.listdir(rootdir):
+    print(file)
+    d = os.path.join(rootdir, file)
+    if os.path.isdir(d):
+      print(d)
+      listdirs(d)
+ 
+rootdir = '/home/henri/Documents/Cours/PCBS/slides/2021-intro-to-programming/'
+listdirs(rootdir)
+```
 
+
+Higher-order functions : Intro
+========================================================
+
+  - A higher-order function is a function that does at least one of the following:
+
+    + takes one or more functions as arguments (i.e. functions are assigned as variable)
+  
+    + returns a function as its result
+  
+  - High order function had a new layer of complexity in term of abstraction
+
+Reading advice:
+
+https://wizardforcel.gitbooks.io/sicp-in-python/content/6.html
+
+
+
+Application of high order function 1
+========================================================
+
+  - Example of Function as an arguments
+  
+```{python, echo = TRUE} 
+# Python program to illustrate functions 
+# can be passed as arguments to other functions 
+def shout(text): 
+    return text.upper() 
+    
+def whisper(text): 
+    return text.lower() 
+    
+def greet(function): 
+    # storing the function in a variable 
+    greeting = function("Hi, I am created by a function \
+    passed as an argument.") 
+    print(greeting)  
+ 
+  
+greet(shout) 
+greet(whisper)
+```
+
+
+Application of high order function 2  1/4
+========================================================
+
+  - Consider these examples:
+```{python, echo=TRUE}
+def sum_naturals(n):
+  total, k = 0, 1
+  while k <= n:
+    total, k = total + k, k + 1
+  return total
+sum_naturals(4)
+```  
+
+```{python, echo=TRUE}
+def sum_cubes(n):
+  total, k = 0, 1
+  while k <= n:
+    total, k = total + pow(k, 3), k + 1
+  return total
+sum_cubes(4)
+```
+
+```{python, echo=TRUE}
+def pi_sum(n):
+  total, k = 0, 1
+  while k <= n:
+    total, k = total + 8 / (k * (k + 2)), k + 4
+  return total
+pi_sum(100)
+```
+  
+  - These functions have lots of things in common except for the names and the calculation of k
   
   
+Application of high order function 2  2/4
+======================================================== 
+
+  - The pattern is 
+  
+```{python, eval = FALSE, echo = TRUE}  
+def <name>(n):
+    total, k = 0, 1
+    while k <= n:
+        total, k = total + <term>(k), <next>(k)
+    return total
+```
+
+  - The presence of this kind of pattern is an evidence for a new level or abstraction that can be brought
+  
+  - for example in putting <term> and <next> as arguments
+
+Application of high order function 2  2/4
+======================================================== 
+
+  - The pattern is the following
+  
+```{python, eval = FALSE, echo = TRUE}  
+def <name>(n):
+    total, k = 0, 1
+    while k <= n:
+        total, k = total + <term>(k), <next>(k)
+    return total
+```
+
+  - The presence of this kind of pattern is an evidence for a new level or abstraction that can be brought
+  
+  - In that case in putting <term> and <next> as arguments
+```{python, eval = FALSE, echo = TRUE}  
+#changing the name
+def summation(n, term, next):
+        total, k = 0, 1
+        while k <= n:
+            total, k = total + term(k), next(k)
+        return total
+```
+
+
+Application of high order function 2  3/4
+========================================================
+
+```{python, eval = FALSE, echo = TRUE}  
+def summation(n, term, next):
+        total, k = 0, 1
+        while k <= n:
+            total, k = total + term(k), next(k)
+        return total
+
+def cube(k):
+  return pow(k,3)
+
+def successor(k):
+  return k + 1
+
+def sum_cubes(n):
+  return summation(n,cube,successor)
+
+sum_cubes(3)
 
 ```
 
 
-Higher-order functions
+Application of high order function 2  4/4
 ========================================================
 
-- higher-order function is a function that does at least one of the following:
+```{python, echo = TRUE}  
+def summation(n, term, next):
+        total, k = 0, 1
+        while k <= n:
+            total, k = total + term(k), next(k)
+        return total
 
-  + takes one or more functions as arguments (i.e. procedural parameters),
-  + returns a function as its result.
+def identity(k):
+  return k
 
+def successor(k):
+  return k + 1
 
+def sum_naturals(n):
+  return summation(n, identity, successor)
+
+sum_naturals(3)
+```

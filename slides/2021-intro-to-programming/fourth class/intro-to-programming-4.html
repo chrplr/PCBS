@@ -157,40 +157,13 @@ Henri Vandendriessche
   </p>
   <p class="date">12/10/2021</p>
 </div>
-<div id="reminder" class="slide section level1">
-<h1>Reminder</h1>
-<ul>
-<li><p>Bash commands to navigate directories</p></li>
-<li><p>Useful commands:</p>
-<ul>
-<li><p><strong>pwd</strong> Print Working Directory. Print the path of of the current directory</p></li>
-<li><p><strong>ls /folder</strong> list all files of the current directory</p></li>
-<li><p><strong>cd /folder1/folder2</strong> moving into folder1 and folder2 at once.</p></li>
-<li><p><strong>cd ..</strong> moving out of a directory</p></li>
-</ul></li>
-<li><p>“Tab” to use the auto-completion</p></li>
-<li><p>Many more bash commands to use…</p></li>
-</ul>
-</div>
 <div id="so-far" class="slide section level1">
 <h1>So far</h1>
 <ul>
-<li><p>Python</p></li>
-<li><p>Data types:</p>
-<ul>
-<li>integer</li>
-<li>float</li>
-<li>string</li>
-<li>boolean</li>
-</ul></li>
+<li><p>Python, its life, its choice</p></li>
+<li><p>Data types: (integer / float / string / boolean)</p></li>
 <li><p><strong>If</strong>, <strong>For</strong> and <strong>While</strong> loops:</p></li>
-<li><p>Data collections:</p>
-<ul>
-<li>list</li>
-<li>tuple</li>
-<li>set</li>
-<li>dictionary</li>
-</ul></li>
+<li><p>Data collections: (list, tuple, set, dictionary)</p></li>
 <li><p>Functions</p></li>
 </ul>
 </div>
@@ -198,8 +171,8 @@ Henri Vandendriessche
 <h1>Today</h1>
 <h3 id="back-on-functions">- Back on functions</h3>
 <h3 id="building-abstraction-with">- Building abstraction with :</h3>
-<h4 id="recursive-functions">+ Recursive functions</h4>
-<h4 id="high-order-functions">+ High order functions</h4>
+<h5 id="recursive-functions">+ Recursive functions</h5>
+<h5 id="high-order-functions-part-1">+ High order functions (part 1)</h5>
 </div>
 <div id="building-abstraction" class="slide section level1">
 <h1>Building abstraction</h1>
@@ -225,6 +198,7 @@ Henri Vandendriessche
 <li>have an output (return one or several data)</li>
 <li>but not necessarily</li>
 </ul></li>
+<li><p>Variables defined in a function stay in the function</p></li>
 <li><p>One good practice is to place functions in an external modules such as in the standard library</p></li>
 <li><p>Functions can call functions</p></li>
 <li><p>Functions can call themselves…</p></li>
@@ -380,7 +354,7 @@ Henri Vandendriessche
 </div>
 <div id="exercice-2" class="slide section level1">
 <h1>Exercice 2</h1>
-<p>2 - Write a script that displays the Koch snowflake (see on wikipedia) using a recursive function. You can use the turtle graphics module to draw on screen (as shown in section 16.5 of thinkcspy).</p>
+<p>2 - Write a script that displays the Koch snowflake (see on wikipedia) using a recursive function. You can use the turtle graphics (<a href="https://docs.python.org/3.8/library/turtle.html" class="uri">https://docs.python.org/3.8/library/turtle.html</a>) module to draw on screen (as shown in section 16.5 of thinkcspy).</p>
 <p><a href="https://en.wikipedia.org/wiki/Koch_snowflake" class="uri">https://en.wikipedia.org/wiki/Koch_snowflake</a></p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> turtle</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -389,25 +363,22 @@ Henri Vandendriessche
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        turtle.forward(l)</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        Koch(n <span class="op">-</span> <span class="dv">1</span>, l <span class="op">/</span> <span class="dv">3</span>)</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        turtle.left(<span class="dv">60</span>)</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        Koch(n <span class="op">-</span> <span class="dv">1</span>, l <span class="op">/</span> <span class="dv">3</span>)</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        turtle.right(<span class="dv">120</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        turtle.left(<span class="dv">60</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        Koch(n <span class="op">-</span> <span class="dv">1</span>, l <span class="op">/</span> <span class="dv">3</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        turtle.right(<span class="dv">120</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        Koch(n <span class="op">-</span> <span class="dv">1</span>, l <span class="op">/</span> <span class="dv">3</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        turtle.left(<span class="dv">60</span>)</span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        Koch(n <span class="op">-</span> <span class="dv">1</span>, l <span class="op">/</span> <span class="dv">3</span>)</span>
 <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>        turtle.left(<span class="dv">60</span>)</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        Koch(n <span class="op">-</span> <span class="dv">1</span>, l <span class="op">/</span> <span class="dv">3</span>)</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>turtle.penup()</span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>turtle.backward(<span class="dv">600</span>)</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>turtle.pendown()</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>Koch(<span class="dv">1</span>, <span class="dv">400</span>)</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>Koch(<span class="dv">2</span>, <span class="dv">400</span>)</span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>Koch(<span class="dv">3</span>, <span class="dv">400</span>)</span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>turtle.exitonclick()</span></code></pre></div>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>turtle.penup()</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>turtle.backward(<span class="dv">600</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>turtle.pendown()</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>Koch(<span class="dv">1</span>, <span class="dv">400</span>)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>Koch(<span class="dv">2</span>, <span class="dv">400</span>)</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>Koch(<span class="dv">3</span>, <span class="dv">400</span>)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>turtle.exitonclick()</span></code></pre></div>
 </div>
 <div id="exercice-3" class="slide section level1">
 <h1>Exercice 3</h1>
@@ -425,7 +396,190 @@ Henri Vandendriessche
 </div>
 <div id="exercice-4" class="slide section level1">
 <h1>Exercice 4</h1>
-<p>4 - Write a script that returns the pathnames of all the files ending in .txt contained inside a directory (at any depth of the hierarchy). You will need to use os.listdir() and os.path.isdir().</p>
+<p>4 - Write a script that returns the pathnames of all the files contained inside a directory (at any depth of the hierarchy). You will need to use os.listdir() and os.path.isdir().</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> listdirs(rootdir):</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="bu">file</span> <span class="kw">in</span> os.listdir(rootdir):</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="bu">file</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    d <span class="op">=</span> os.path.join(rootdir, <span class="bu">file</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.isdir(d):</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(d)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>      listdirs(d)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>rootdir <span class="op">=</span> <span class="st">&#39;/home/henri/Documents/Cours/PCBS/slides/2021-intro-to-programming/&#39;</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>listdirs(rootdir)</span></code></pre></div>
+<pre><code>## fourth class
+## /home/henri/Documents/Cours/PCBS/slides/2021-intro-to-programming/fourth class
+## intro-to-programming-4.Rmd
+## intro-to-programming-4.pdf
+## cleancode.png
+## intro-to-programming-4.html
+## recursivity.png
+## .Rhistory
+## second class
+## /home/henri/Documents/Cours/PCBS/slides/2021-intro-to-programming/second class
+## intro-to-programming-2.pdf
+## intro-to-programming-2.html
+## intro_to_programming_2_exercices_correction.py
+## python collections.png
+## intro-to-programming-2.Rmd
+## .Rhistory
+## third class
+## /home/henri/Documents/Cours/PCBS/slides/2021-intro-to-programming/third class
+## intro-to-programming-3.Rmd
+## intro-to-programming-3.pdf
+## intro-to-programming-3.html
+## first class
+## /home/henri/Documents/Cours/PCBS/slides/2021-intro-to-programming/first class
+## intro_to_programming_1_exercices_correction.py
+## intro-to-programming-1.pdf
+## intro-to-programming-1.Rmd
+## intro-to-programming-1.html
+## .Rhistory</code></pre>
+</div>
+<div id="higher-order-functions-intro" class="slide section level1">
+<h1>Higher-order functions : Intro</h1>
+<ul>
+<li><p>A higher-order function is a function that does at least one of the following:</p>
+<ul>
+<li><p>takes one or more functions as arguments (i.e. functions are assigned as variable)</p></li>
+<li><p>returns a function as its result</p></li>
+</ul></li>
+<li><p>High order function had a new layer of complexity in term of abstraction</p></li>
+</ul>
+<p>Reading advice:</p>
+<p><a href="https://wizardforcel.gitbooks.io/sicp-in-python/content/6.html" class="uri">https://wizardforcel.gitbooks.io/sicp-in-python/content/6.html</a></p>
+</div>
+<div id="application-of-high-order-function-1" class="slide section level1">
+<h1>Application of high order function 1</h1>
+<ul>
+<li>Example of Function as an arguments</li>
+</ul>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python program to illustrate functions </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># can be passed as arguments to other functions </span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> shout(text): </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text.upper() </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> whisper(text): </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text.lower() </span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greet(function): </span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># storing the function in a variable </span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    greeting <span class="op">=</span> function(<span class="st">&quot;Hi, I am created by a function \</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="st">    passed as an argument.&quot;</span>) </span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(greeting)  </span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>greet(shout) </span></code></pre></div>
+<pre><code>## HI, I AM CREATED BY A FUNCTION     PASSED AS AN ARGUMENT.</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>greet(whisper)</span></code></pre></div>
+<pre><code>## hi, i am created by a function     passed as an argument.</code></pre>
+</div>
+<div id="application-of-high-order-function-2-14" class="slide section level1">
+<h1>Application of high order function 2 1/4</h1>
+<ul>
+<li>Consider these examples:</li>
+</ul>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_naturals(n):</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  total, k <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> k <span class="op">&lt;=</span> n:</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    total, k <span class="op">=</span> total <span class="op">+</span> k, k <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> total</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>sum_naturals(<span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## 10</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_cubes(n):</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  total, k <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> k <span class="op">&lt;=</span> n:</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    total, k <span class="op">=</span> total <span class="op">+</span> <span class="bu">pow</span>(k, <span class="dv">3</span>), k <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> total</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>sum_cubes(<span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## 100</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pi_sum(n):</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  total, k <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> k <span class="op">&lt;=</span> n:</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    total, k <span class="op">=</span> total <span class="op">+</span> <span class="dv">8</span> <span class="op">/</span> (k <span class="op">*</span> (k <span class="op">+</span> <span class="dv">2</span>)), k <span class="op">+</span> <span class="dv">4</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> total</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>pi_sum(<span class="dv">100</span>)</span></code></pre></div>
+<pre><code>## 3.121594652591009</code></pre>
+<ul>
+<li>These functions have lots of things in common except for the names and the calculation of k</li>
+</ul>
+</div>
+<div id="application-of-high-order-function-2-24" class="slide section level1">
+<h1>Application of high order function 2 2/4</h1>
+<ul>
+<li>The pattern is</li>
+</ul>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>(n):</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    total, k <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> k <span class="op">&lt;=</span> n:</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>        total, k <span class="op">=</span> total <span class="op">+</span> <span class="op">&lt;</span>term<span class="op">&gt;</span>(k), <span class="op">&lt;</span><span class="bu">next</span><span class="op">&gt;</span>(k)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span></code></pre></div>
+<ul>
+<li><p>The presence of this kind of pattern is an evidence for a new level or abstraction that can be brought</p></li>
+<li><p>for example in putting <term> and <next> as arguments</p></li>
+</ul>
+</div>
+<div id="application-of-high-order-function-2-24-1" class="slide section level1">
+<h1>Application of high order function 2 2/4</h1>
+<ul>
+<li>The pattern is the following</li>
+</ul>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>(n):</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    total, k <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> k <span class="op">&lt;=</span> n:</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        total, k <span class="op">=</span> total <span class="op">+</span> <span class="op">&lt;</span>term<span class="op">&gt;</span>(k), <span class="op">&lt;</span><span class="bu">next</span><span class="op">&gt;</span>(k)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total</span></code></pre></div>
+<ul>
+<li><p>The presence of this kind of pattern is an evidence for a new level or abstraction that can be brought</p></li>
+<li><p>In that case in putting <term> and <next> as arguments</p></li>
+</ul>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#changing the name</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> summation(n, term, <span class="bu">next</span>):</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>        total, k <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> k <span class="op">&lt;=</span> n:</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>            total, k <span class="op">=</span> total <span class="op">+</span> term(k), <span class="bu">next</span>(k)</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> total</span></code></pre></div>
+</div>
+<div id="application-of-high-order-function-2-34" class="slide section level1">
+<h1>Application of high order function 2 3/4</h1>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> summation(n, term, <span class="bu">next</span>):</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>        total, k <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> k <span class="op">&lt;=</span> n:</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>            total, k <span class="op">=</span> total <span class="op">+</span> term(k), <span class="bu">next</span>(k)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> total</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cube(k):</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">pow</span>(k,<span class="dv">3</span>)</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> successor(k):</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> k <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_cubes(n):</span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> summation(n,cube,successor)</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>sum_cubes(<span class="dv">3</span>)</span></code></pre></div>
+</div>
+<div id="application-of-high-order-function-2-44" class="slide section level1">
+<h1>Application of high order function 2 4/4</h1>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> summation(n, term, <span class="bu">next</span>):</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>        total, k <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> k <span class="op">&lt;=</span> n:</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>            total, k <span class="op">=</span> total <span class="op">+</span> term(k), <span class="bu">next</span>(k)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> total</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> identity(k):</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> k</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> successor(k):</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> k <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sum_naturals(n):</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> summation(n, identity, successor)</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>sum_naturals(<span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## 6</code></pre>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->
