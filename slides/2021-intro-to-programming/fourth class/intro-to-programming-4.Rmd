@@ -1,0 +1,359 @@
+---
+title: "intro to programming 4"
+author: "Henri Vandendriessche"
+date: "12/10/2021"
+fontsize: 8pt
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Reminder
+========================================================
+
+ 
+  - Bash commands to navigate directories
+   
+  - Useful commands:
+
+    + **pwd**     Print Working Directory. Print the path of of the current directory
+    
+    + **ls /folder**        list all files of the current directory
+    
+    + **cd /folder1/folder2**     moving into folder1 and folder2 at once. 
+    
+    + **cd ..**        moving out of a directory 
+  
+  - "Tab" to use the auto-completion
+    
+  - Many more bash commands to use...
+
+
+So far
+========================================================
+
+  - Python
+
+  - Data types:
+    + integer
+    + float
+    + string
+    + boolean
+  
+  - **If**, **For** and **While** loops: 
+
+  - Data collections:
+    + list
+    + tuple
+    + set
+    + dictionary
+    
+  - Functions
+
+Today
+========================================================
+
+
+### - Back on functions
+
+### - Building abstraction with :
+
+####    + Recursive functions
+
+####    + High order functions
+
+
+Building abstraction
+========================================================
+
+- In programming, we control the intellectual complexity of our programs by building abstractions that hide details when appropriate
+
++ That is exactly what you do when you use function like **len()**
+
++ That is exactly what you do when you build your own functions/modules
+
+- This allows you to chunk compound operations as conceptual units, give them a name and manipulate them
+
+- In this module, you will explore two other means to build abstractions with functions: recursive functions and higher-order functions.
+
+Back on function
+========================================================
+
+  - A function is a block of instructions that is given a name
+  
+  - Functions must be defined before they are called
+
+  - Using functions avoids to duplicate code (i.e. by cutting and pasting)
+
+  - Using functions typically serves to make the code more readable (and maybe shorter)
+
+  - If you do not call the function, it will never be executed
+  
+  - A function can:
+    + have an input (one or several arguments of any kind of data types) 
+    + have an output (return one or several data)
+    + but not necessarily
+  
+  - One good practice is to place functions in an external modules such as in the standard library 
+  
+  - Functions can call functions
+  
+  - Functions can call themselves...
+  
+  
+  
+Recursive function
+========================================================
+
+
+  - Remember what I said about recursive functions last time ?
+
+
+Recursive function
+========================================================
+
+
+  - Remember what I said about recursive functions last time ?
+
+  - Recursion is a function calling itself
+  
+  - That has a termination condition
+  
+  - And an increment statement
+
+
+
+Recursive function example 1
+========================================================
+
+  - OK boomer
+
+![](/home/henri/Documents/Cours/PCBS/slides/2021-intro-to-programming/fourth class/recursivity.png)
+
+Recursive function example 2
+========================================================
+
+  - Recursion and lists: add every number in list with for loops
+  
+```{python, echo =TRUE}
+## With a loop for
+
+def sum(list):
+  sum = 0
+  
+  # Add every number in the list.
+  for i in range(0, len(list)):
+    sum = sum + list[i]
+        
+  # Return the sum.
+  return sum
+
+print(sum([5,7,3,8,10]))
+```
+Recursive function example 2
+========================================================
+
+  - Recursion and lists: with recursion
+  
+```{python, echo =TRUE}
+def sum(list):
+  if len(list)==1:
+    return list[0]
+  else:
+    return list[0] + sum(list[1:])
+
+print(sum([5,7,3,8,10]))
+```
+  
+
+Recursive function example 3
+========================================================
+
+  - Factorial with for loops
+
+```{python, echo=TRUE}
+def calcFactorial(number):
+    factorial = 1
+    
+    for count in range (1, number):
+        factorial = factorial*count
+            
+    factorial = factorial*number
+    return factorial
+  
+print(calcFactorial(5))
+```
+
+Recursive function example 3
+========================================================
+
+  - Factorial with for recursion
+  
+```{python, echo =TRUE}
+def factorial(n):
+  if n == 1:
+    return 1
+  else :
+    return n * factorial(n-1)
+  
+print(factorial(5))
+```
+
+- But it has limitations. Everytime a function calls itself it allocates memory for that new call of the function. So you might easily run into an error. Python stops the function calls after a depth of 1000 calls. 
+      RecursionError: maximum recursion depth exceeded in comparison
+
+- You don't have that problem with the for loop
+
+
+Recursive function example 3
+========================================================
+
+```{python, eval = FALSE, echo =TRUE}
+
+def calcFactorial(number):
+    factorial = 1
+    
+    for count in range (1, number):
+        factorial = factorial*count
+            
+    factorial = factorial*number
+    return factorial
+  
+print(calcFactorial(3000))
+
+
+def factorial(n):
+  if n == 1:
+    return 1
+  else :
+    return n * factorial(n-1)
+  
+print(factorial(1000))
+```
+
+
+
+Recursive function example 3
+========================================================
+
+```{python,eval = FALSE, echo=TRUE}
+import sys
+
+sys.setrecursionlimit(5000)
+
+def factorial(n):
+  if n == 1:
+    return 1
+  else :
+    return n * factorial(n-1)
+  
+print(factorial(1000))
+```
+- But keep in mind that it has limitations and recursion is very suited for certain problems but not for all
+
+Exercices on recursion
+========================================================
+
+1 - Write a recursive function to reverse a list
+
+2 - Write a script that displays the Koch snowflake (see on wikipedia) using a recursive function. You can use the turtle graphics module to draw on screen (as shown in section 16.5 of thinkcspy).
+
+3 - Write a recursive function to generate all permutations of a list of values
+
+4 - Write a script that returns the pathnames of all the files ending in .txt contained inside a directory (at any depth of the hierarchy). You will need to use os.listdir() and os.path.isdir().
+
+Exercice 1
+========================================================
+
+1 - Write a recursive function to reverse a list
+
+```{python, echo=TRUE}
+def rev(l):
+  if len(l) == 0: 
+    return []
+  return [l[-1]] + rev(l[:-1])
+  
+print(rev(["a", "b", "c", "d"]))
+```
+
+Exercice 2
+========================================================
+
+2 - Write a script that displays the Koch snowflake (see on wikipedia) using a recursive function. You can use the turtle graphics module to draw on screen (as shown in section 16.5 of thinkcspy).
+
+https://en.wikipedia.org/wiki/Koch_snowflake
+
+
+```{python,eval = FALSE, echo=TRUE}
+import turtle
+
+def Koch(n, l):
+    if n == 0:
+        turtle.forward(l)
+    else:
+        Koch(n - 1, l / 3)
+
+        turtle.left(60)
+        Koch(n - 1, l / 3)
+
+        turtle.right(120)
+        Koch(n - 1, l / 3)
+
+        turtle.left(60)
+        Koch(n - 1, l / 3)
+
+turtle.penup()
+turtle.backward(600)
+turtle.pendown()
+
+Koch(1, 400)
+Koch(2, 400)
+Koch(3, 400)
+
+turtle.exitonclick()
+```
+
+
+Exercice 3
+========================================================
+
+3 - Write a recursive function to generate all permutations of a list of values
+
+```{python, echo=TRUE}
+def perms(s):        
+    if(len(s)==1): return [s]
+    result=[]
+    for i,v in enumerate(s):
+        result += [v+p for p in perms(s[:i]+s[i+1:])]
+    return result
+
+
+perms('abc')
+```
+
+Exercice 4
+========================================================
+
+4 - Write a script that returns the pathnames of all the files ending in .txt contained inside a directory (at any depth of the hierarchy). You will need to use os.listdir() and os.path.isdir().
+
+
+```{python, echo=TRUE}
+
+  
+  
+
+```
+
+
+Higher-order functions
+========================================================
+
+- higher-order function is a function that does at least one of the following:
+
+  + takes one or more functions as arguments (i.e. procedural parameters),
+  + returns a function as its result.
+
+
