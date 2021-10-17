@@ -238,7 +238,7 @@ Exercices on recursion
 
 3 - Write a recursive function to generate all permutations of a list of values
 
-4 - Write a script that returns the pathnames of all the files ending in .txt contained inside a directory (at any depth of the hierarchy). You will need to use os.listdir() and os.path.isdir().
+4 - Write a script that returns the pathnames of all the files contained inside a directory (at any depth of the hierarchy). You will need to use os.listdir() and os.path.isdir().
 
 Exercice 1
 ========================================================
@@ -292,11 +292,12 @@ turtle.exitonclick()
 Exercice 3
 ========================================================
 
-3 - Write a recursive function to generate all permutations of a list of values
+3 - Write a recursive function to generate all permutations of a string of character
 
 ```{python, echo=TRUE}
 def perms(s):        
-    if(len(s)==1): return [s]
+    if(len(s)==1): 
+      return [s]
     result=[]
     for i,v in enumerate(s):
         result += [v+p for p in perms(s[:i]+s[i+1:])]

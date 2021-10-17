@@ -1,0 +1,60 @@
+---
+title: "intro to programming 5"
+author: "Henri Vandendriessche"
+date: "12/10/2021"
+fontsize: 8pt
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+Read a file
+
+print content of a file
+
+number of lines
+number of words
+store number of words in dictionary
+
+Plot it
+
+Special character ?
+
+Create a file
+
+Read a csv file
+
+
+"
+    Querying and navigating the file system https://automatetheboringstuff.com/2e/chapter10/
+    Reading and writing text files.
+    Manipulating strings (split, join, ...). (chapter 10 of Swinnen's Apprendre à programmer avec Python 3)
+
+Exercices
+
+    Write a script that prints the first 10 lines of a file
+    Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long).
+    Write a script that opens and read a text file, and print all the lines that contain a given target word
+    compute the number of the number of words (removing punctuation) in a text file
+    compute the number of occurences of each word in a text file
+    read a matrix in a text file and return the mean of each row (not using pandas, ...)
+    find and list all *.csv files in a folder and its subfolders.
+    rename all files in a folder by adding the last modification date and the end of the name (before the extension)
+"
+
+
+reading and writing files
+file:///home/henri/Documents/Cours/Info-2/EXERCICES-2/python-exercices-02-doc.html#reading-and-writing-files
+
+https://inforef.be/swi/download/apprendre_python3_5.pdf
