@@ -12,14 +12,127 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
----
+So far
+========================================================
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+  - Python, its life, its choice
+
+  - Data types: (integer / float / string / boolean)
+  
+  - **If**, **For** and **While** loops: 
+
+  - Data collections: (list, tuple, set, dictionary)
+    
+  - Functions
+  
+  - Higher order function (Recursive function)
+
+
+Today
+========================================================
+
+
+### - Read and write files
+
+### - Building abstraction with high order functions (part 1)
+
+### - clean code
+
+
+Manipulate files : Open and read a file
+========================================================
+
+- To do so you have one function available in the built-in functions of python
+  + https://docs.python.org/3/library/functions.html
+
+- The function **open()**
+  + that works like that 
+       open(file, mode='r', buffering=- 1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+       
+- see https://docs.python.org/3/library/functions.html#open
+      
+- Mode can be:
+  + "r" - Read - Default value. Opens a file for reading, error if the file does not exist
+  + "a" - Append - Opens a file for appending, creates the file if it does not exist
+  + "w" - Write - Opens a file for writing, creates the file if it does not exist
+  + "x" - Create - Creates the specified file, returns an error if the file exist
+
+
+```{python, echo = TRUE}
+Myfile = open('Survival rules for programming.txt', 'r')
+
+print(Myfile.read())
+```
+Manipulate files : create a file
+========================================================
+
+- Note that if you don't specify any path, it will be created in the current directory (ie, same directory as your script). It's called creating a file using a **relative path**
+
+```{python, echo = TRUE}
+import os
+path = os.getcwd()
+
+print(os.listdir(path))
+
+MyTestFile = open('test.txt', 'x')
+
+print(os.listdir(path))
+```
+- If you want to create in a precise directory you can specify it using an **absolute path**
+```{python, echo = TRUE, eval = FALSE}
+MyTestFile = open('/home/henri/Desktop/test.txt', 'x')
 ```
 
-## R Markdown
-Read a file
+Manipulate files : write a file
+========================================================
+   
+   - We need an access mode 'w' if we want to create and write anything into a file
+   
+   - Note that to be able to read a just created file you need to close it and open it again in read mode
+```{python, echo = TRUE}
+MyTestFile = open('test2.txt', 'w')
+
+MyTestFile.write("Once upon a time in a Cognitive Master")
+
+MyTestFile.close()
+
+MyTestFile = open('test2.txt', 'r')
+
+print(MyTestFile.read())
+```
+Manipulate files : append text to a file
+========================================================
+
+```{python, echo = TRUE}
+MyTestFile = open('test2.txt', 'a')
+
+MyTestFile.write("There was a module names \"Intro to programming\"")
+
+MyTestFile.close()
+
+MyTestFile = open('test2.txt', 'r')
+
+print(MyTestFile.read())
+```
+Manipulate files : specific character and new lines
+========================================================
+
+```{python, echo = TRUE}
+MyTestFile = open('test2.txt', 'a')
+
+MyTestFile.write("\nWith youngs a bright students")
+
+MyTestFile.close()
+
+MyTestFile = open('test2.txt', 'r')
+
+print(MyTestFile.read())
+```
+```{python, echo = TRUE}
+with open(r'E:\pynative\reports\profit.txt', 'w') as fp:
+    fp.write('This is first line')
+    pass
+```
 
 print content of a file
 
@@ -52,7 +165,9 @@ Exercices
     find and list all *.csv files in a folder and its subfolders.
     rename all files in a folder by adding the last modification date and the end of the name (before the extension)
 "
-
+create a log file of your script
+Create File with a DateTime
+Create a file with Permission
 
 reading and writing files
 file:///home/henri/Documents/Cours/Info-2/EXERCICES-2/python-exercices-02-doc.html#reading-and-writing-files
