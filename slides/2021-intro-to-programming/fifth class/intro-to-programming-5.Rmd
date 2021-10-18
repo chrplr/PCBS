@@ -60,9 +60,17 @@ Manipulate files : Open and read a file
 
 ```{python, echo = TRUE}
 Myfile = open('Survival rules for programming.txt', 'r')
-
 print(Myfile.read())
+Myfile.close()
+
+Myfile = open('Survival rules for programming.txt', 'r')
+print(Myfile.read(5))
+
+print(Myfile.readlines(1))
+print(Myfile.readlines()[1])
 ```
+
+
 Manipulate files : create a file
 ========================================================
 
@@ -83,6 +91,7 @@ print(os.listdir(path))
 MyTestFile = open('/home/henri/Desktop/test.txt', 'x')
 ```
 
+
 Manipulate files : write a file
 ========================================================
    
@@ -100,13 +109,15 @@ MyTestFile = open('test2.txt', 'r')
 
 print(MyTestFile.read())
 ```
+
+
 Manipulate files : append text to a file
 ========================================================
 
 ```{python, echo = TRUE}
 MyTestFile = open('test2.txt', 'a')
 
-MyTestFile.write("There was a module names \"Intro to programming\"")
+MyTestFile.write("There was a module names Intro to programming")
 
 MyTestFile.close()
 
@@ -114,28 +125,150 @@ MyTestFile = open('test2.txt', 'r')
 
 print(MyTestFile.read())
 ```
+
+
 Manipulate files : specific character and new lines
 ========================================================
+
+- Inside a string you can use the antislash to insert special codes:
+  + **\n** return to line
+  + **\t** add a tab
+  + **\r** return to line (same as \n in python)
+  + **\"** add a quotation mark inside a string delimited itself by **"**
 
 ```{python, echo = TRUE}
 MyTestFile = open('test2.txt', 'a')
 
-MyTestFile.write("\nWith youngs a bright students")
+MyTestFile.write("\nWith youngs and bright \tstudents \r!!!!!")
 
 MyTestFile.close()
 
 MyTestFile = open('test2.txt', 'r')
 
 print(MyTestFile.read())
+MyTestFile.close()
+```
+
+
+Manipulate files : Automatic close of the file
+========================================================
+
+- the **with open()** statement automatically close the file
+
+```{python, echo = TRUE}
+lines = ['and one last line', '\n... and one last...']
+
+with open("test2.txt", "a") as MyTestFile:
+    for line in lines: 
+      MyTestFile.write(line)
+```
+
+```{python, echo = TRUE}
+MyTestFile = open("test2.txt", "r")
+print(MyTestFile.read())
+```
+
+
+Exercices
+========================================================
+
+  - 1 Write a script that prints the first 10 lines of a file
+  - 2 Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long)
+  - 3 Write a script that opens and read a text file, and print all the lines that contain a given target word
+  - 4 compute the number of the number of words (removing punctuation) in a text file
+  - 5 compute the number of occurences of each word in a text file
+  - 6 read a matrix in a text file and return the mean of each row (not using pandas, ...)
+  - 7 find and list all *.csv files in a folder and its subfolders.
+  - 8 rename all files in a folder by adding the last modification date and the end of the name (before the extension)
+
+
+Exercices 1
+========================================================
+
+- 1 Write a script that prints the first 10 lines of a file
+
+```{python, echo = TRUE}
+MyTestFile = open('Survival rules for programming.txt', 'r')
+lines = MyTestFile.readlines()
+
+for i in range(10):
+  print(lines[i])
 ```
 ```{python, echo = TRUE}
-with open(r'E:\pynative\reports\profit.txt', 'w') as fp:
-    fp.write('This is first line')
-    pass
+MyTestFile = open('Survival rules for programming.txt', 'r')
+lines = MyTestFile.readlines()
+print(lines[0:9])
 ```
 
-print content of a file
+Exercices 2
+========================================================
 
+- 2 Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long)
+
+```{python, echo = TRUE}
+MyTestFile = open('Survival rules for programming.txt', 'r')
+lines = MyTestFile.readlines()
+
+for i in range(1,10):
+  print(lines[-i])
+```
+Exercices 3
+========================================================
+
+- 3 Write a script that opens and read a text file, and print all the lines that contain a given target word
+
+```{python, echo = TRUE}
+```
+
+Exercices 4
+========================================================
+
+- 4 compute the number of the number of words (removing punctuation) in a text file
+
+```{python, echo = TRUE}
+```
+
+Exercices 5
+========================================================
+
+- 5 compute the number of occurences of each word in a text file
+
+```{python, echo = TRUE}
+```
+
+
+Exercices 6
+========================================================
+
+- 6 read a matrix in a text file and return the mean of each row (not using pandas, ...)
+
+```{python, echo = TRUE}
+```
+
+
+Exercices 7
+========================================================
+
+- 7 find and list all *.csv files in a folder and its subfolders.
+
+```{python, echo = TRUE}
+```
+
+Exercices 8
+========================================================
+
+- 8 rename all files in a folder by adding the last modification date and the end of the name (before the extension)
+
+```{python, echo = TRUE}
+```
+
+Exercices 5
+========================================================
+
+- 5 compute the number of occurences of each word in a text file
+
+```{python, echo = TRUE}
+```
 number of lines
 number of words
 store number of words in dictionary
@@ -154,17 +287,8 @@ Read a csv file
     Reading and writing text files.
     Manipulating strings (split, join, ...). (chapter 10 of Swinnen's Apprendre à programmer avec Python 3)
 
-Exercices
 
-    Write a script that prints the first 10 lines of a file
-    Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long).
-    Write a script that opens and read a text file, and print all the lines that contain a given target word
-    compute the number of the number of words (removing punctuation) in a text file
-    compute the number of occurences of each word in a text file
-    read a matrix in a text file and return the mean of each row (not using pandas, ...)
-    find and list all *.csv files in a folder and its subfolders.
-    rename all files in a folder by adding the last modification date and the end of the name (before the extension)
-"
+
 create a log file of your script
 Create File with a DateTime
 Create a file with Permission

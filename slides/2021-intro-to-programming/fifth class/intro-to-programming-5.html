@@ -195,8 +195,7 @@ Henri Vandendriessche
 </ul></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Myfile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.read())</span></code></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.read())</span></code></pre></div>
 <pre><code>## 1- Try by yourself before looking for solutions
 ## 
 ## 2- Internet is your best friend
@@ -210,25 +209,32 @@ Henri Vandendriessche
 ## 6- Not yet ? Then read it
 ## 
 ## 7- Always read the error message</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Myfile.close()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Myfile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.read(<span class="dv">5</span>))</span></code></pre></div>
+<pre><code>## 1- Tr</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.readlines(<span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## [&#39;y by yourself before looking for solutions\n&#39;]</code></pre>
 </div>
 <div id="manipulate-files-create-a-file" class="slide section level1">
 <h1>Manipulate files : create a file</h1>
 <ul>
 <li>Note that if you don’t specify any path, it will be created in the current directory (ie, same directory as your script). It’s called creating a file using a <strong>relative path</strong></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> os.getcwd()</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir(path))</span></code></pre></div>
-<pre><code>## [&#39;Survival rules for programming.txt&#39;, &#39;intro-to-programming-5.Rmd&#39;, &#39;intro-to-programming-5.html&#39;, &#39;.Rhistory&#39;]</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test.txt&#39;</span>, <span class="st">&#39;x&#39;</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir(path))</span></code></pre></div>
-<pre><code>## [&#39;Survival rules for programming.txt&#39;, &#39;intro-to-programming-5.Rmd&#39;, &#39;intro-to-programming-5.html&#39;, &#39;.Rhistory&#39;, &#39;test.txt&#39;]</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> os.getcwd()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir(path))</span></code></pre></div>
+<pre><code>## [&#39;intro-to-programming-5.Rmd&#39;, &#39;Survival rules for programming.txt&#39;, &#39;intro-to-programming-5.html&#39;, &#39;.Rhistory&#39;]</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test.txt&#39;</span>, <span class="st">&#39;x&#39;</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir(path))</span></code></pre></div>
+<pre><code>## [&#39;test.txt&#39;, &#39;intro-to-programming-5.Rmd&#39;, &#39;Survival rules for programming.txt&#39;, &#39;intro-to-programming-5.html&#39;, &#39;.Rhistory&#39;]</code></pre>
 <ul>
 <li>If you want to create in a precise directory you can specify it using an <strong>absolute path</strong></li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;/home/henri/Desktop/test.txt&#39;</span>, <span class="st">&#39;x&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;/home/henri/Desktop/test.txt&#39;</span>, <span class="st">&#39;x&#39;</span>)</span></code></pre></div>
 </div>
 <div id="manipulate-files-write-a-file" class="slide section level1">
 <h1>Manipulate files : write a file</h1>
@@ -236,42 +242,77 @@ Henri Vandendriessche
 <li><p>We need an access mode ‘w’ if we want to create and write anything into a file</p></li>
 <li><p>Note that to be able to read a just created file you need to close it and open it again in read mode</p></li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;Once upon a time in a Cognitive Master&quot;</span>)</span></code></pre></div>
-<pre><code>## 38</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
-<pre><code>## Once upon a time in a Cognitive Master</code></pre>
-</div>
-<div id="manipulate-files-append-text-to-a-file" class="slide section level1">
-<h1>Manipulate files : append text to a file</h1>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;a&#39;</span>)</span>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;There was a module names </span><span class="ch">\&quot;</span><span class="st">Intro to programming</span><span class="ch">\&quot;</span><span class="st">&quot;</span>)</span></code></pre></div>
-<pre><code>## 47</code></pre>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;Once upon a time in a Cognitive Master&quot;</span>)</span></code></pre></div>
+<pre><code>## 38</code></pre>
 <div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
-<pre><code>## Once upon a time in a Cognitive MasterThere was a module names &quot;Intro to programming&quot;</code></pre>
+<pre><code>## Once upon a time in a Cognitive Master</code></pre>
+</div>
+<div id="manipulate-files-append-text-to-a-file" class="slide section level1">
+<h1>Manipulate files : append text to a file</h1>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;a&#39;</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;There was a module names Intro to programming&quot;</span>)</span></code></pre></div>
+<pre><code>## 45</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
+<pre><code>## Once upon a time in a Cognitive MasterThere was a module names Intro to programming</code></pre>
 </div>
 <div id="manipulate-files-specific-character-and-new-lines" class="slide section level1">
 <h1>Manipulate files : specific character and new lines</h1>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;a&#39;</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.writelines(<span class="st">&quot;with youngs a bright students&quot;</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
-<pre><code>## Once upon a time in a Cognitive MasterThere was a module names &quot;Intro to programming&quot;with youngs a bright students</code></pre>
+<ul>
+<li>Inside a string you can use the antislash to insert special codes:
+<ul>
+<li>*** return to line</li>
+<li>** add a tab</li>
+<li>** return to line (same as in python)</li>
+<li><strong>&quot;</strong> add a quotation mark inside a string delimited itself by <strong>&quot;</strong></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;a&#39;</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">With youngs and bright </span><span class="ch">\t</span><span class="st">students </span><span class="ch">\r</span><span class="st">!!!!!&quot;</span>)</span></code></pre></div>
+<pre><code>## 40</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
+<pre><code>## Once upon a time in a Cognitive MasterThere was a module names Intro to programming
+## With youngs and bright   students 
+## !!!!!</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span></code></pre></div>
+</div>
+<div id="manipulate-files-automatic-close-of-the-file" class="slide section level1">
+<h1>Manipulate files : Automatic close of the file</h1>
+<ul>
+<li>the <strong>with open()</strong> statement automatically close the file</li>
+</ul>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> [<span class="st">&#39;and one last line&#39;</span>, <span class="st">&#39;</span><span class="ch">\n</span><span class="st">... and one last...&#39;</span>]</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;test2.txt&quot;</span>, <span class="st">&quot;a&quot;</span>) <span class="im">as</span> MyTestFile:</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> lines: </span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>      MyTestFile.write(line)</span></code></pre></div>
+<pre><code>## 17
+## 20</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&quot;test2.txt&quot;</span>, <span class="st">&quot;r&quot;</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
+<pre><code>## Once upon a time in a Cognitive MasterThere was a module names Intro to programming
+## With youngs and bright   students 
+## !!!!!and one last line
+## ... and one last...</code></pre>
+</div>
+<div id="exercices" class="slide section level1">
+<h1>Exercices</h1>
+<p>1 - Write a script that prints the first 10 lines of a file 2 - Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long). 3 - Write a script that opens and read a text file, and print all the lines that contain a given target word 4 - compute the number of the number of words (removing punctuation) in a text file 5 - compute the number of occurences of each word in a text file 6 - read a matrix in a text file and return the mean of each row (not using pandas, …) 7 - find and list all *.csv files in a folder and its subfolders. 8 - rename all files in a folder by adding the last modification date and the end of the name (before the extension)</p>
 <p>print content of a file</p>
 <p>number of lines number of words store number of words in dictionary</p>
 <p>Plot it</p>
@@ -279,16 +320,7 @@ Henri Vandendriessche
 <p>Create a file</p>
 <p>Read a csv file</p>
 <p>&quot; Querying and navigating the file system <a href="https://automatetheboringstuff.com/2e/chapter10/" class="uri">https://automatetheboringstuff.com/2e/chapter10/</a> Reading and writing text files. Manipulating strings (split, join, …). (chapter 10 of Swinnen’s Apprendre à programmer avec Python 3)</p>
-<p>Exercices</p>
-<pre><code>Write a script that prints the first 10 lines of a file
-Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long).
-Write a script that opens and read a text file, and print all the lines that contain a given target word
-compute the number of the number of words (removing punctuation) in a text file
-compute the number of occurences of each word in a text file
-read a matrix in a text file and return the mean of each row (not using pandas, ...)
-find and list all *.csv files in a folder and its subfolders.
-rename all files in a folder by adding the last modification date and the end of the name (before the extension)</code></pre>
-<p>&quot; create a log file of your script Create File with a DateTime Create a file with Permission</p>
+<p>create a log file of your script Create File with a DateTime Create a file with Permission</p>
 <p>reading and writing files <a href="file:///home/henri/Documents/Cours/Info-2/EXERCICES-2/python-exercices-02-doc.html#reading-and-writing-files" class="uri">file:///home/henri/Documents/Cours/Info-2/EXERCICES-2/python-exercices-02-doc.html#reading-and-writing-files</a></p>
 <p><a href="https://inforef.be/swi/download/apprendre_python3_5.pdf" class="uri">https://inforef.be/swi/download/apprendre_python3_5.pdf</a></p>
 </div>
