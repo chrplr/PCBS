@@ -1,11 +1,11 @@
 ---
 title: "intro to programming 5"
 author: "Henri Vandendriessche"
-date: "12/10/2021"
+date: "19/10/2021"
 fontsize: 8pt
 output:
-  beamer_presentation: default
   slidy_presentation: default
+  beamer_presentation: default
 ---
 
 ```{r setup, include=FALSE}
