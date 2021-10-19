@@ -171,11 +171,9 @@ Henri Vandendriessche
 <div id="today" class="slide section level1">
 <h1>Today</h1>
 <h3 id="read-and-write-files">- Read and write files</h3>
-<h3 id="building-abstraction-with-high-order-functions-part-1">- Building abstraction with high order functions (part 1)</h3>
-<h3 id="clean-code">- clean code</h3>
 </div>
-<div id="manipulate-files-open-and-read-a-file" class="slide section level1">
-<h1>Manipulate files : Open and read a file</h1>
+<div id="manipulate-files-open-and-read-a-file-13" class="slide section level1">
+<h1>Manipulate files : Open and read a file 1/3</h1>
 <ul>
 <li><p>To do so you have one function available in the built-in functions of python</p>
 <ul>
@@ -194,47 +192,69 @@ Henri Vandendriessche
 <li>“x” - Create - Creates the specified file, returns an error if the file exist</li>
 </ul></li>
 </ul>
+</div>
+<div id="manipulate-files-open-and-read-a-file-23" class="slide section level1">
+<h1>Manipulate files : Open and read a file 2/3</h1>
+<ul>
+<li><p>to manipulate and for example print the text you need to read it using <strong>read()</strong></p></li>
+<li><p>All available function are specified here:</p>
+<ul>
+<li><a href="https://docs.python.org/3/library/io.html" class="uri">https://docs.python.org/3/library/io.html</a></li>
+</ul></li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Myfile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.read())</span></code></pre></div>
-<pre><code>## 1- Try by yourself before looking for solutions
+<pre><code>## Try by yourself before looking for solutions
 ## 
-## 2- Internet is your best friend
+## Internet is your best friend
 ## 
-## 3- Read the manual
+## Read the manual
 ## 
-## 4- There is always a manual
+## There is always a manual
 ## 
-## 5- Have you read the fucking manual ?
+## Have you read the fucking manual ?
 ## 
-## 6- Not yet ? Then read it
+## Not yet ? Then read it
 ## 
-## 7- Always read the error message</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Myfile.close()</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Myfile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.read(<span class="dv">5</span>))</span></code></pre></div>
-<pre><code>## 1- Tr</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.readlines(<span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## [&#39;y by yourself before looking for solutions\n&#39;]</code></pre>
+## Always read the error message</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.read(<span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Myfile.close()</span></code></pre></div>
+</div>
+<div id="manipulate-files-open-and-read-a-file-33" class="slide section level1">
+<h1>Manipulate files : Open and read a file 3/3</h1>
+<ul>
+<li><p>You can also use:</p></li>
+<li><p>readline() can be used to return one line</p></li>
+<li><p>readlines() can be used to return a list of lines</p></li>
+<li><p>NB 1: if the file is not close the next call of readline() or readlines() will take the subsequent lines of the file even though you specified the first index</p></li>
+<li><p>NB 2: As readlines() return a list you can use all the functions in the built in module <strong>string</strong> such as len(), joins(), split()…</p></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Myfile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.readline())</span></code></pre></div>
+<pre><code>## Try by yourself before looking for solutions</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.readlines(<span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## [&#39;\n&#39;, &#39;Internet is your best friend\n&#39;]</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Myfile.readlines()[<span class="dv">1</span>])</span></code></pre></div>
+<pre><code>## Read the manual</code></pre>
 </div>
 <div id="manipulate-files-create-a-file" class="slide section level1">
 <h1>Manipulate files : create a file</h1>
 <ul>
 <li>Note that if you don’t specify any path, it will be created in the current directory (ie, same directory as your script). It’s called creating a file using a <strong>relative path</strong></li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> os.getcwd()</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir(path))</span></code></pre></div>
-<pre><code>## [&#39;intro-to-programming-5.Rmd&#39;, &#39;Survival rules for programming.txt&#39;, &#39;intro-to-programming-5.html&#39;, &#39;.Rhistory&#39;]</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test.txt&#39;</span>, <span class="st">&#39;x&#39;</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir(path))</span></code></pre></div>
-<pre><code>## [&#39;test.txt&#39;, &#39;intro-to-programming-5.Rmd&#39;, &#39;Survival rules for programming.txt&#39;, &#39;intro-to-programming-5.html&#39;, &#39;.Rhistory&#39;]</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> os.getcwd()</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir(path))</span></code></pre></div>
+<pre><code>## [&#39;hist.png&#39;, &#39;intro-to-programming-5.Rmd&#39;, &#39;Survival rules for programming.txt&#39;, &#39;intro-to-programming-5.html&#39;, &#39;.Rhistory&#39;]</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test.txt&#39;</span>, <span class="st">&#39;x&#39;</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(os.listdir(path))</span></code></pre></div>
+<pre><code>## [&#39;hist.png&#39;, &#39;test.txt&#39;, &#39;intro-to-programming-5.Rmd&#39;, &#39;Survival rules for programming.txt&#39;, &#39;intro-to-programming-5.html&#39;, &#39;.Rhistory&#39;]</code></pre>
 <ul>
 <li>If you want to create in a precise directory you can specify it using an <strong>absolute path</strong></li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;/home/henri/Desktop/test.txt&#39;</span>, <span class="st">&#39;x&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;/home/henri/Desktop/test.txt&#39;</span>, <span class="st">&#39;x&#39;</span>)</span></code></pre></div>
 </div>
 <div id="manipulate-files-write-a-file" class="slide section level1">
 <h1>Manipulate files : write a file</h1>
@@ -242,28 +262,31 @@ Henri Vandendriessche
 <li><p>We need an access mode ‘w’ if we want to create and write anything into a file</p></li>
 <li><p>Note that to be able to read a just created file you need to close it and open it again in read mode</p></li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;Once upon a time in a Cognitive Master&quot;</span>)</span></code></pre></div>
-<pre><code>## 38</code></pre>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
-<pre><code>## Once upon a time in a Cognitive Master</code></pre>
-</div>
-<div id="manipulate-files-append-text-to-a-file" class="slide section level1">
-<h1>Manipulate files : append text to a file</h1>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;a&#39;</span>)</span>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;There was a module names Intro to programming&quot;</span>)</span></code></pre></div>
-<pre><code>## 45</code></pre>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;Once upon a time in a Cognitive Master&quot;</span>)</span></code></pre></div>
+<pre><code>## 38</code></pre>
 <div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
+<pre><code>## Once upon a time in a Cognitive Master</code></pre>
+</div>
+<div id="manipulate-files-append-text-to-a-file" class="slide section level1">
+<h1>Manipulate files : append text to a file</h1>
+<ul>
+<li>We need an access mode ‘a’</li>
+</ul>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;a&#39;</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;There was a module names Intro to programming&quot;</span>)</span></code></pre></div>
+<pre><code>## 45</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
 <pre><code>## Once upon a time in a Cognitive MasterThere was a module names Intro to programming</code></pre>
 </div>
 <div id="manipulate-files-specific-character-and-new-lines" class="slide section level1">
@@ -271,40 +294,40 @@ Henri Vandendriessche
 <ul>
 <li>Inside a string you can use the antislash to insert special codes:
 <ul>
-<li>*** return to line</li>
-<li>** add a tab</li>
-<li>** return to line (same as in python)</li>
-<li><strong>&quot;</strong> add a quotation mark inside a string delimited itself by <strong>&quot;</strong></li>
+<li><strong>\n</strong> return to line</li>
+<li><strong>\t</strong> add a tab</li>
+<li><strong>\r</strong> return to line (same as in python)</li>
+<li><strong>\&quot;</strong> add a quotation mark inside a string delimited itself by <strong>&quot;</strong></li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;a&#39;</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">With youngs and bright </span><span class="ch">\t</span><span class="st">students </span><span class="ch">\r</span><span class="st">!!!!!&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;a&#39;</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>MyTestFile.write(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">With youngs and bright </span><span class="ch">\t</span><span class="st">students </span><span class="ch">\r</span><span class="st">!!!!!&quot;</span>)</span></code></pre></div>
 <pre><code>## 40</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;test2.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
 <pre><code>## Once upon a time in a Cognitive MasterThere was a module names Intro to programming
 ## With youngs and bright   students 
 ## !!!!!</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>MyTestFile.close()</span></code></pre></div>
 </div>
 <div id="manipulate-files-automatic-close-of-the-file" class="slide section level1">
 <h1>Manipulate files : Automatic close of the file</h1>
 <ul>
 <li>the <strong>with open()</strong> statement automatically close the file</li>
 </ul>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> [<span class="st">&#39;and one last line&#39;</span>, <span class="st">&#39;</span><span class="ch">\n</span><span class="st">... and one last...&#39;</span>]</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;test2.txt&quot;</span>, <span class="st">&quot;a&quot;</span>) <span class="im">as</span> MyTestFile:</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> lines: </span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>      MyTestFile.write(line)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> [<span class="st">&#39;and one last line&#39;</span>, <span class="st">&#39;</span><span class="ch">\n</span><span class="st">... and one last...&#39;</span>]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;test2.txt&quot;</span>, <span class="st">&quot;a&quot;</span>) <span class="im">as</span> MyTestFile:</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> lines: </span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>      MyTestFile.write(line)</span></code></pre></div>
 <pre><code>## 17
 ## 20</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&quot;test2.txt&quot;</span>, <span class="st">&quot;r&quot;</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&quot;test2.txt&quot;</span>, <span class="st">&quot;r&quot;</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(MyTestFile.read())</span></code></pre></div>
 <pre><code>## Once upon a time in a Cognitive MasterThere was a module names Intro to programming
 ## With youngs and bright   students 
 ## !!!!!and one last line
@@ -312,17 +335,181 @@ Henri Vandendriessche
 </div>
 <div id="exercices" class="slide section level1">
 <h1>Exercices</h1>
-<p>1 - Write a script that prints the first 10 lines of a file 2 - Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long). 3 - Write a script that opens and read a text file, and print all the lines that contain a given target word 4 - compute the number of the number of words (removing punctuation) in a text file 5 - compute the number of occurences of each word in a text file 6 - read a matrix in a text file and return the mean of each row (not using pandas, …) 7 - find and list all *.csv files in a folder and its subfolders. 8 - rename all files in a folder by adding the last modification date and the end of the name (before the extension)</p>
-<p>print content of a file</p>
-<p>number of lines number of words store number of words in dictionary</p>
-<p>Plot it</p>
-<p>Special character ?</p>
-<p>Create a file</p>
-<p>Read a csv file</p>
-<p>&quot; Querying and navigating the file system <a href="https://automatetheboringstuff.com/2e/chapter10/" class="uri">https://automatetheboringstuff.com/2e/chapter10/</a> Reading and writing text files. Manipulating strings (split, join, …). (chapter 10 of Swinnen’s Apprendre à programmer avec Python 3)</p>
-<p>create a log file of your script Create File with a DateTime Create a file with Permission</p>
-<p>reading and writing files <a href="file:///home/henri/Documents/Cours/Info-2/EXERCICES-2/python-exercices-02-doc.html#reading-and-writing-files" class="uri">file:///home/henri/Documents/Cours/Info-2/EXERCICES-2/python-exercices-02-doc.html#reading-and-writing-files</a></p>
-<p><a href="https://inforef.be/swi/download/apprendre_python3_5.pdf" class="uri">https://inforef.be/swi/download/apprendre_python3_5.pdf</a></p>
+<ul>
+<li>1 Write a script that prints the first 10 lines of a file</li>
+<li>2 Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long)</li>
+<li>3 Write a script that opens and read a text file, and print all the lines that contain a given target word</li>
+<li>4 compute the number of words (removing punctuation) in a text file (Hint: use split() and strip() functions)</li>
+<li>5 compute the number of occurrences of each word in a text file</li>
+<li>6 print a bar plot of the occurrences found in the previous exercices (using matplotlib)</li>
+</ul>
+</div>
+<div id="exercices-1" class="slide section level1">
+<h1>Exercices 1</h1>
+<ul>
+<li>1 Write a script that prints the first 10 lines of a file</li>
+</ul>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> MyTestFile.readlines()</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(lines[i])</span></code></pre></div>
+<pre><code>## Try by yourself before looking for solutions
+## 
+## 
+## 
+## Internet is your best friend
+## 
+## 
+## 
+## Read the manual
+## 
+## 
+## 
+## There is always a manual
+## 
+## 
+## 
+## Have you read the fucking manual ?</code></pre>
+</div>
+<div id="exercices-1-1" class="slide section level1">
+<h1>Exercices 1</h1>
+<ul>
+<li>1 Write a script that prints the first 10 lines of a file</li>
+</ul>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> MyTestFile.readlines()</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lines[<span class="dv">0</span>:<span class="dv">9</span>])</span></code></pre></div>
+<pre><code>## [&#39;Try by yourself before looking for solutions\n&#39;, &#39;\n&#39;, &#39;Internet is your best friend\n&#39;, &#39;\n&#39;, &#39;Read the manual\n&#39;, &#39;\n&#39;, &#39;There is always a manual\n&#39;, &#39;\n&#39;, &#39;Have you read the fucking manual ?\n&#39;]</code></pre>
+</div>
+<div id="exercices-2" class="slide section level1">
+<h1>Exercices 2</h1>
+<ul>
+<li>2 Write a script that prints the last 10 lines of a file (or the whole file is it is less than 10 lines long)</li>
+</ul>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>lines <span class="op">=</span> MyTestFile.readlines()</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>):</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(lines[<span class="op">-</span>i])</span></code></pre></div>
+<pre><code>## Always read the error message 
+## 
+## 
+## 
+## Not yet ? Then read it
+## 
+## 
+## 
+## Have you read the fucking manual ?
+## 
+## 
+## 
+## There is always a manual
+## 
+## 
+## 
+## Read the manual</code></pre>
+</div>
+<div id="exercices-3" class="slide section level1">
+<h1>Exercices 3</h1>
+<ul>
+<li>3 Write a script that opens and read a text file, and print all the lines that contain a given target word</li>
+</ul>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_line_with_specific_word(text,word):</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> l <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>):</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> word <span class="kw">in</span> text[l]:</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(text[l])</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> :</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>      <span class="bu">print</span>(<span class="st">&quot;FALSE&quot;</span>)</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> MyTestFile.readlines()</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>print_line_with_specific_word(text,<span class="st">&quot;manual&quot;</span>)</span></code></pre></div>
+<pre><code>## FALSE
+## FALSE
+## FALSE
+## Read the manual
+## 
+## FALSE
+## There is always a manual
+## 
+## FALSE
+## Have you read the fucking manual ?
+## 
+## FALSE</code></pre>
+</div>
+<div id="exercices-4" class="slide section level1">
+<h1>Exercices 4</h1>
+<ul>
+<li>4 compute the number of words (removing punctuation) in a text file (Hint: use split() and strip() functions)</li>
+</ul>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> string</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_words(text):</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  c <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> l <span class="kw">in</span> text:</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> w <span class="kw">in</span> l.strip().split():</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> w <span class="kw">not</span> <span class="kw">in</span> string.punctuation:</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>        c <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> c</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> MyTestFile.readlines()</span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(count_words(text))</span></code></pre></div>
+<pre><code>## 36</code></pre>
+</div>
+<div id="exercices-5" class="slide section level1">
+<h1>Exercices 5</h1>
+<ul>
+<li>5 compute the number of occurrences of each word in a text file</li>
+</ul>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_words(text):</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  dict_words <span class="op">=</span> {}</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> l <span class="kw">in</span> text:</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> w <span class="kw">in</span> l.strip().split():</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> w <span class="kw">in</span> dict_words:</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>        dict_words[w] <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>        dict_words[w] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> dict_words</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> MyTestFile.readlines()</span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(count_words(text))</span></code></pre></div>
+<pre><code>## {&#39;Try&#39;: 1, &#39;by&#39;: 1, &#39;yourself&#39;: 1, &#39;before&#39;: 1, &#39;looking&#39;: 1, &#39;for&#39;: 1, &#39;solutions&#39;: 1, &#39;Internet&#39;: 1, &#39;is&#39;: 2, &#39;your&#39;: 1, &#39;best&#39;: 1, &#39;friend&#39;: 1, &#39;Read&#39;: 1, &#39;the&#39;: 3, &#39;manual&#39;: 3, &#39;There&#39;: 1, &#39;always&#39;: 1, &#39;a&#39;: 1, &#39;Have&#39;: 1, &#39;you&#39;: 1, &#39;read&#39;: 3, &#39;fucking&#39;: 1, &#39;?&#39;: 2, &#39;Not&#39;: 1, &#39;yet&#39;: 1, &#39;Then&#39;: 1, &#39;it&#39;: 1, &#39;Always&#39;: 1, &#39;error&#39;: 1, &#39;message&#39;: 1}</code></pre>
+</div>
+<div id="exercices-6" class="slide section level1">
+<h1>Exercices 6</h1>
+<ul>
+<li>6 print a bar plot of the occurrences found in the previous exercices (using matplotlib)</li>
+</ul>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_words(text):</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  dict_words <span class="op">=</span> {}</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> l <span class="kw">in</span> text:</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> w <span class="kw">in</span> l.strip().split():</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> w <span class="kw">in</span> dict_words:</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>        dict_words[w] <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>        dict_words[w] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> dict_words</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_frequency(dictionary):</span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>  plt.bar(<span class="bu">list</span>(dictionary.keys()), dictionary.values(), color<span class="op">=</span><span class="st">&#39;g&#39;</span>)</span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>  plt.show()</span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a>MyTestFile <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;Survival rules for programming.txt&#39;</span>, <span class="st">&#39;r&#39;</span>)</span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> MyTestFile.readlines()</span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a>plot_frequency(count_words(text))</span></code></pre></div>
+<p><img src="data:image/png;base64,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AAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgAEAAAAAAACSEIABAAAAAAAAkhCAAQAAAAAAAJIQgOEANTQ0xHve857o0aNH9OnTJ+rr62Pt2rX73GbRokVRUVHR4lRVVdVOEwMAAAAAAJCVAAwH6OGHH47p06fHT3/601i2bFm8/vrr8cEPfjB27Nixz+2qq6ujsbGxdFq/fn07TQwAAAAAAEBWnTt6ACh3DzzwQIvzixYtij59+sTjjz8e73//+1vdrqKiIurq6g72eAAAAAAAABxGHAEMbWzr1q0REdG7d+99rrd9+/Y4/vjjY+DAgXH++efHM888s8/1m5ubY9u2bS1OAAAAAAAA8GYCMLSh3bt3x8yZM+O9731vDBs2rNX1hg4dGrfeemvcd999cccdd8Tu3btj7Nix8etf/7rVbRoaGqKmpqZ0Gjhw4MG4CQAAAAAAAJQxARja0PTp0+Ppp5+OO++8c5/rjRkzJqZMmRIjRoyIcePGxT333BPHHntsfOMb32h1mzlz5sTWrVtLp40bN7b1+AAAAAAAAJQ5fwMY2siMGTPi/vvvj0ceeSQGDBjwtrbt0qVLjBw5MtatW9fqOpWVlVFZWXmgYwIAAAAAAJCYI4DhABVFETNmzIh77703HnrooRg8ePDbvoxdu3bFU089FX379j0IEwIAAAAAAHC4cAQwHKDp06fH4sWL47777osePXpEU1NTRETU1NRE165dIyJiypQp0b9//2hoaIiIiGuuuSbOOuusGDJkSGzZsiWuu+66WL9+fVx66aUddjsAAAAAAAAofwIwHKCbbropIiLGjx/fYvltt90W06ZNi4iIDRs2RKdOfzzg/uWXX47LLrssmpqaolevXjFq1KhYuXJlnHLKKe01NgAAAAAAAAkJwHCAiqJ4y3VWrFjR4vz8+fNj/vz5B2kiAAAAAAAADlf+BjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAAAAAAAABAEgIwAAAAAAAAQBICMAAAAAAAAEASAjAcoIaGhnjPe94TPXr0iD59+kR9fX2sXbv2Lbf77ne/GyeddFJUVVXFaaedFkuXLm2HaQEAAAAAAMhMAIYD9PDDD8f06dPjpz/9aSxbtixef/31+OAHPxg7duxodZuVK1fGRRddFJdcckk8+eSTUV9fH/X19fH000+34+QAAAAAAABkU1EURdHRQ0AmL730UvTp0ycefvjheP/737/XdS688MLYsWNH3H///aVlZ511VowYMSJuvvnm/bqebdu2RU1NTWzdujWqq6vbZHYAAA4PFXMrOnqEFoqr3vptaTnODBw6PIYAwOHFz8853DkCGNrY1q1bIyKid+/era6zatWqmDBhQotlEydOjFWrVh3U2QAAAAAAAMitc0cPAJns3r07Zs6cGe9973tj2LBhra7X1NQUtbW1LZbV1tZGU1NTq9s0NzdHc3Nz6fy2bdsOfGAAAAAAAABSEYChDU2fPj2efvrpePTRR9v8shsaGmLu3LltfrkA0J58/CIAQF6H2mu9CK/3AIDDk4+AhjYyY8aMuP/+++PHP/5xDBgwYJ/r1tXVxaZNm1os27RpU9TV1bW6zZw5c2Lr1q2l08aNG9tkbgAAAAAAAPIQgOEAFUURM2bMiHvvvTceeuihGDx48FtuM2bMmFi+fHmLZcuWLYsxY8a0uk1lZWVUV1e3OAEAAAAAAMCb+QhoOEDTp0+PxYsXx3333Rc9evQo/R3fmpqa6Nq1a0RETJkyJfr37x8NDQ0REXHFFVfEuHHjYt68eTF58uS48847Y/Xq1bFw4cIOux0AAAAAAACUP0cAwwG66aabYuvWrTF+/Pjo27dv6XTXXXeV1tmwYUM0NjaWzo8dOzYWL14cCxcujOHDh8f3vve9WLJkSQwbNqwjbgIAAAAAAABJOAIYDlBRFG+5zooVK/ZYdsEFF8QFF1xwECYCAAAAAADgcOUIYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAAAAAAAIAkBGAAAAAAAACAJARgAAAAAAAAgCQEYAAA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Bz5QfOYzn2mx7emnn15ceeWV7TxxUYwbN6446qijiiuuuKJ49tlnizvuuKPo1q1bsXDhwmLjxo1Fp06discee6y0/hNPPFFUVFQUzz///H5fx6uvvlrU1NQU3/nOd0rLNm3aVHTu3Ll46KGHinvuuafo0qVLsWDBgmLt2rXFvHnziiOOOKJ46KGHiqIoihdeeKGIiOLJJ58sbf/yyy8XEVH8+Mc/Loqi9X196qmnFh/96EeL//7v/y6ee+654jvf+U6xZs2aoiiKYt26dUX37t2L+fPnF88991zxk5/8pBg5cmQxbdq00vUcf/zxxfz584uiKIrNmzcX5557bnHssccW3bt3Lz71qU/tsc+KoiguvfTSYuzYscUjjzxSrFu3rrjuuuuKysrK4rnnniuam5uLtWvXFhFR3H333UVjY2PR3NxcrF69uujUqVNxzTXXFGvXri1uu+22omvXrsVtt93WYpbq6uria1/7WrFu3brSqbXbMG7cuOKKK64oiqIoPvShDxUnn3xy8cgjjxRr1qwpJk6cWAwZMqTYuXNnURTFfl//G/viq1/9anH00UcXP/vZz1rcl964vjfW7927d7FgwYLil7/8ZdHQ0FB06tSpePbZZ4uiKIqtW7cWvXv3Lj760Y8WzzzzTLF06dLiXe961x7/12/Hli1bimuuuaYYMGBA0djYWGzevLm4/PLLi379+hVLly4tnnnmmWLq1KlFr169it/97nf7vO/szYsvvlh07ty5uP7664sXXnih+M///M9iwYIFxSuvvFJcf/31RXV1dfHtb3+7ePbZZ4vZs2cXXbp0KZ577rmiKPa8H//p40VRFMW9995bvPEy6tVXXy0+//nPF6eeemrR2NhYNDY2Fq+++mpRFEUREcW9995bFEVRbN++vejbt2/xl3/5l8VTTz1VLF++vBg8eHAxderU0uVOnTq1qK6uLj71qU8V9fX1xZlnnln8v/buPb7nuv/j+NNmm5ltTsOcJofNchhKTjEyJO1ySkIOhUIOJUvUz1zJL3JJRQmXuIio5PolKoeQltZyrMyxIUW5JLVy2OH1+8Ntn2vfnTHT9b0e99ttt9u+3+/n8P68v+/j5/X5fj4lS5a00NBQCwgIsIceesg8PDxs2LBhVqxYMXv11VftpZdesp9++skk2aJFi5z8NDP75JNPLCAgwBYvXmxHjhyx9evXW40aNWzy5MnOPiVZhQoV7PXXX7cjR47YsWPHLDY21kqVKuWk9ZNPPrFKlSrZxIkTnfWeffZZq1u3rn344Yd25MgRW7Rokfn4+NiWLVssNTXVVq1aZZLswIEDdvLkSfvll1+uqqxkyCi3CQkJ5unpacuXL7ejR4/azp077aWXXrqmbV+JG9lOXqu8+hGzvNtEM7MuXbpYhw4dbO/evXbkyBFbs2aNbd26tVC+75zahIz0xsTE2P79+502KXO9unTpkoWHh9uDDz5oe/futX379lnfvn0tLCzMLl68aGau9SoxMdHWrFnjctxmZp07d7aIiAjbvn27ffnll9ayZUvz9fV12tKCGDhwoHXt2tV5/dVXX1mlSpWsWbNmZpZ3nck4lkmTJllCQoJ9++23zvezcuVKZ5vTp0+3MmXK2KpVq2zfvn02ePBg8/f3d9lvYfjll1+sRYsWNnToUKdd27hxo0myZs2a2ZYtW+ybb76x1q1bW8uWLZ31CtLm5CcyMtL8/f1typQpdvDgQZsyZYp5enpa586dbf78+Xbw4EEbPny4lStXzn7//fcC5VtBykDmcpUhMDDQpX+dMmWKxcXFWVJSkr333ntWsWJFmz59uvN5bGysRURE5HhcOfUlZv+u79earzm15Vfyfbzzzju2atUqO3TokO3atcuio6OtQYMGlpaWlq3dGjt2rHXp0sXMzNLT061s2bJWvnx5++CDD8zM7I033rAqVao42164cKGtW7fOjhw5Ytu3b7cWLVpY586dnc+nTp1qN998s0t6Ro8ebW3atDEzs7ffftsCAgJs3bp1duzYMYuPj3f57gpLXnlwvWVtPzJklI+zZ8/aiRMnbMaMGbZr1y47cuSIvfzyy+bp6emM8X7++Wfz9va2jRs3OuufOXPG5b3CqKN5KYo+srBk7WM+//xzCwoKsgkTJlhiYqLt3LnTOnToYO3atXPWya+M/PbbbxYUFGR9+/a1r7/+2tasWWM1a9bMd8ycUx+YeTyfISIiwmJjY83MLC0tzZo3b2716tWz9evXO/3yunXrzMy1zTl+/LiFhYXZwIEDLTU11cxcy1bG8l5eXhYVFWUJCQm2Y8cOCw8Pt759+zr7f/bZZ61s2bL27rvvWmJiog0bNswCAgIKvQ/KkJ6eboMGDbL69es7ffqNklFH3333XStRooR99913ZuY6J8hvnnbmzBmrWrWqPfPMM07fer3lVyfzaxNym2MUpqLoH6tWrWrLly+3Q4cO2ejRo61UqVKFMrYuqIx5zPUuAwsXLrRbb73VzMzWrFljtWrVsvT0dDPLXud79OhhjzzyiJn9u/8IDAy0xMREM7tc31u1auVse9asWfbxxx9bUlKSbdq0ycLCwmz48OHO50OHDrW77rrLJT1/+ctfbMCAAWZmNmPGDKtWrZp98skndvToUdu2bZstX74832PKa/yc25wppznEiRMnrGTJkjZixAhLTEy01atXW/ny5Z021cy1X2jatKn5+fkVeDx69uzZPPuQvM5PpKSkWGBgoI0bN84OHz5s+/bts8WLF9uxY8fMzGz37t322muv2VdffWUHDx60p59+2kqUKOF8bmYWFRVljRo1ss8//9x27NhhkZGR2eYyUVFRFh0dbQkJCXbw4EF7/PHHrVy5ckVaFwAUPQLAAP4r5RYA/uc//+my3MqVK61MmTJ24cIFMzPbsWOHFStWzJKSkoowtZdFRkZaeHi4M4A3Mxs/fryFh4eb2eWT15kH4KNGjbK2bdte8X6GDx/uclJu5syZVrNmTUtPT7eWLVva0KFDXZbv1auXM9C/ksBG1rz29/e3xYsX55imwYMH20MPPeTy3rZt28zDw8POnz9vZpbtJEnXrl2tYsWKuebZsWPHzNPT077//nuX7bZv394mTJiQY9rNzPr27WsdOnRwWScmJsblxGVISIh169atwMfQunVrGzNmjB08eNAkWVxcnLPMv/71L/P19XUm7QXd/6xZs+yJJ56w4OBg+/rrr12WzykAfP/99zuv09PTrUKFCjZ37lwzM5s7d66VK1fOyWszswULFlxTANjs8iQyJCTEzC4HR728vGzZsmXO55cuXbLKlSvb888/b2a5l52c7NixwyTZ0aNHs31WuXJlmzp1qst7TZs2dS72uNIAsFnuJ/0zBxTmz59vZcqUseTkZOfztWvXmoeHh506dcrMLp9cCgkJsdTUVOdEU69evSwoKMhuv/12W7VqlQUEBNivv/5qTZs2tfHjx+e4rwzt27e3//3f/3V5b+nSpRYcHOyy3qOPPuqyTGxsrJUsWdJ+/fVX572YmBgnkHXhwgUrWbKkffbZZy7rDR482Pr06WNm2U8yXKuMcps5D26UG9VOXqu8+pGCtIkNGjTINUhQGN935jYhI72NGzfOtlzmsr506VILCwtzOaaLFy+ar6+vffTRR2bmWq8y9OrVy3r37m1m5lzsk/kiqsTERJN0xQFgT09P8/PzMx8fH5NkHh4e9s477xSozuTkkUcesZ49ezqvg4ODnTbRzCwlJcWqVq16XU6+Z+0rMr7jzMGltWvXmiSnfyhIm1OQ/d5+++3O69TUVPPz87P+/fs77508edIk2fbt23PcRtZ8y68MmBUsAJzVjBkz7JZbbnFeX0sA+FrzNae2/Fq+j9OnT5sk++qrr7K1W++9954FBgZaamqq7d692ypVqmRjxoxx+qQhQ4a4BI2ySkhIMEn222+/mZnZ999/7xLIvHTpkpUvX94ZF86cOdNCQ0Odi+GKSuY8uN4ytx+Z/0qUKJFn29qlSxd7/PHHndddu3a1Bx980Hk9b948q1y5shOgLIw6mp/r3UcWlqx9zJQpU6xjx44uy3z33XfOxU05yVpG5s2bl23MPHfu3AKNmbP2gfkFgD/66CPz8PDINW0Zbc7+/futWrVqNnr0aJe+MqcAsCQ7fPiws8wrr7xiFStWdF5XrFjRZsyY4bxOTU216tWrX7cA8IMPPmihoaF24sSJ67L9K5H5Io3mzZs79SzznOBK5mlFKa86WdD+JWv/WJiKon98+umnndfJyckmybloqShkHlNdzzLQsmVLe/HFF83s8hixfPny2eYXGXX+5Zdftnr16pmZ2T//+U9r1qyZde3a1TkHEBUV5XLxb1Zvv/22lStXznkdHx9vnp6e9sMPP5jZvy80yLjQcdSoUXbHHXe4tEP5yW/8nNucKac5xMSJE7PNGV555RUrVaqU00dmXu9Kx6P59SF5nZ84c+aMSXLyqiDq1atns2fPNrN/z1sSEhKczw8dOuQyl9m2bZsFBAQ45zYz1KpVy+bNm1fg/QL4z8MtoAEgk1tvvdXldbdu3eTp6anVq1dLunxrrHbt2hXarY+uVPPmzV1uE9SiRQsdOnRIaWlpGjp0qN58801duHBBly5d0vLly11u91ZQQ4cO1fr16/X9999LunzMgwYNUrFixZSYmKhWrVq5LN+qVSslJiZe8X6y5vXYsWM1ZMgQRUVFadq0aS63U9uzZ48WL16sUqVKOX+dOnVSenq6kpKS8txPbnn21VdfKS0tTaGhoS7b3bp1a563+8stDzK+h9yOL69juHDhgrPt4sWLq1mzZs565cqVU1hYmJPHBd3/zJkztWDBAn366aeqV69ennkkSQ0bNnT+z7gFV8btGQ8cOKCGDRuqRIkSzjK33XZbvtu8EkeOHFFKSorLsXl5eem2227LVr6y5m1OIiIi1L59ezVo0EC9evXSggULdPbsWf3666/64YcfCq0cX4nExERFRETIz8/PZb/p6ekutzKrV6+ePD09ndfBwcFKSUlRw4YN1aFDB4WEhKhmzZo6efKktm/f7tyWKyd79uzRM88841Luhg4dqpMnT7qsl1Oe1qhRw7kNekY6MsrE4cOH9ccff6hDhw4u216yZMl1v11m5jzo37+/li1blmceXA83qp0sDNfSJo4ePVrPPvusWrVqpdjYWO3du7fQ05fVLbfckufne/bs0eHDh+Xv7++kuWzZsrpw4YJLWcypXmWU54y2N/O+6tatm+3W7wXRrl077d69W/Hx8Ro4cKAeeOAB9ezZs8B15pVXXtEtt9yioKAglSpVSvPnz9fx48clSefOndPJkydd+ojixYtfl3KSl8z9RcatAjPysqBtzpXsw9PTU+XKlVODBg2c9ypWrOiy37zyLUNeZaCgVq5cqVatWjm3p3z66aez7edqFUa+5jT2KOj3cejQIfXp00c1a9ZUQECAM9bN6fhat26t3377Tbt27dLWrVsVGRmptm3bOrfo3bp1q9q2bessv2PHDkVHR6t69ery9/dXZGSky7YrV66sLl266PXXX5ckrVmzRhcvXlSvXr0kSb169dL58+dVs2ZNDR06VKtXry60WxZfbR5cDxntR+a/v//9787naWlpmjJliho0aKCyZcuqVKlS+uijj1zS169fP61atcq53euyZct03333ycPj8qmfwqqjeSmqPrIwZG739+zZo82bN7vkTd26dSXJaafzKyOJiYnZxswtWrS4LmnfvXu3qlatqtDQ0FyXOX/+vFq3bq0ePXo4t/TPS8mSJVWrVi3ndeZ28ty5c/rxxx9d5gCenp759tNXKyEhQa+//rree+89ValS5brs42pNnz5d//jHP7KV24LO04paXnWyKNqEa1UY/WPmbfj5+SkgIOCKxwB/dgcOHNAXX3yhPn36SLo8Ruzdu7cWLlyY4/KRkZHat2+fTp8+7fTbGX15SkqKPvvsM5e+fOPGjWrfvr2qVKkif39/9e/fX2fO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7969tX37ds2ZM0evvvpqnunI6xgy1KlTR127dtXQoUM1b948+fv768knn1SVKlXUtWvXK95/y5YttW7dOnXu3FnFixe/6kBq37599dRTT+mhhx7Sk08+qePHj+tvf/ubJOV7K7mC8vPz0/DhwxUTE6OyZcuqevXqev755/XHH39c1S+k4+PjtWnTJnXs2FEVKlRQfHy8Tp8+rfDwcMXExCg2Nla1atVSo0aNtGjRIu3evTvHXxBKUrNmzVSyZElNnDhRo0ePVnx8vBYvXuyyTI0aNZSUlOTcjs/f3z/bL2H79eun2NhYDRw4UJMnT9bp06c1atQo9e/f37l9VH7ef/99ffvtt2rTpo3++OMP/fjjj0pPT1dYWJhq1KihTZs2qVWrVvLx8VGZMmU0adIk3X333apevbruueceeXh4aM+ePfr666/17LPPXnG+ZvD399e4ceP02GOPKT09XbfffrvOnTunuLg4BQQEaODAgQoJCVGxYsX0/vvv66677pKvr2+h/Lo+cx6UKVNG69atc/KgKBV1O1lYrqVNfPTRR9W5c2eFhobq7Nmz2rx5s9PnXK/vOz/9+vXTjBkz1LVrVz3zzDOqWrWqjh07pnfffVdPPPFEgU7ohIWF6c4779TDDz+suXPnOu1lYfT3vXr1UkxMjObNm5dvnalTp46WLFmijz76SDfddJOWLl2qhIQE3XTTTc72xowZo2nTpqlOnTqqW7euXnjhhWsOVOemRo0aio+P19GjR1WqVKkC/VLmerU5eSlIvhXEHXfcoTlz5qhFixZKS0vT+PHjXX7lUadOHR0/flwrVqxQ06ZNtXbtWucRIdfb1eZrQdcrU6aMypUrp/nz5ys4OFjHjx/P9+4hbdu21ezZsxUUFOScVG7btq3mzJnj3LpZunynFm9vb82ePVvDhg3T119/rSlTpmTbnqenpwYNGqQJEyaoTp06LrfNXbx4sdLS0pz++I033pCvr69zwVhhuJo8KGp16tTRO++8o88++0xlypTRCy+8oB9//NElACxdbhfvvvtuffPNN06wOENR1dH/xD7ykUce0YIFC9SnTx898cQTKlu2rA4fPqwVK1bo73//e4HKSMaYeejQoZowYYKOHj3qjJmv1B133KHFixcrOjpapUuX1qRJk1wu9oyMjFSbNm3Us2dPvfDCC6pdu7b279+vYsWK6c4773SW8/T01LJly9SnTx/dcccd2rJliypVqnRVaRo1apSee+451a5dW3Xr1tXs2bN19uzZQpsPZLZ582ZNmDBB+/fvL/RtF4YGDRqoX79+evnll533CjJPq1Gjhj755BPdd9998vHxUfny5YskvbnVyYK0CTnNMf4sbsS441pdjzLw/vvv6+zZsxo8eLACAwNdPuvZs6cWLlyoGTNmZFuvbdu2evzxx3Xrrbc64/Y2bdpo2bJliomJcZarXbu2UlJSNHv2bEVHRysuLk6vvfZatu2VKVNGPXr0UExMjDp27OgyDn/hhRcUHBysxo0by8PDQ2+//bYqVaqU569P85tzXsk4YMSIEXrxxRc1atQojRw5UgcOHFBsbKzGjh3rBLWvRX59yJdffpnr+YmkpCTNnz9ff/nLX1S5cmUdOHBAhw4d0oABAyRd7v/fffddRUdHq1ixYvqf//kfl3F53bp1FRUVpYceekhz586Vl5eXHn/8cfn6+jrtc1RUlFq0aKFu3brp+eefV2hoqH744QetXbtW3bt3L/JHygAoQjfo2cMAcEMtWrTIAgMDndebN282SXb27Nkcl1+4cKFJsi+++KJoEpiDyMhIGzFihA0bNswCAgKsTJkyNnHiREtPT3dZrnXr1lavXr1r3l///v2tbNmyduHCBZf3X331VatZs6Z5eXlZaGioLVmyxOXzffv2WYsWLczX19caNWpk69evN0m2efNmM8s5ry9evGj33XefVatWzby9va1y5co2cuRIO3/+vLPMF198YR06dLBSpUqZn5+fNWzY0KZOnep8HhISYrNmzXJed+3a1SpWrJhnnl26dMkmTZpkNWrUMC8vLwsODrbu3bvb3r17zczs7NmzLmnP8M4779jNN99sXl5eVr16dZsxY4bL51nTkt8xREZG2pgxY8zM7Oeff7b+/ftbYGCg+fr6WqdOnezgwYPXtP+tW7ean5+fvfzyy2ZmLvvLLb0REREWGxvrvI6Li7OGDRuat7e33XLLLbZ8+XKTZPv37892nAU1a9YsCwkJcV6fP3/eRo0aZeXLlzcfHx9r1aqVS53Lr55mtm/fPuvUqZMFBQWZj4+PhYaG2uzZs83MLC0tzSZPnmxVqlQxLy8vi4iIsA8++MBZNykpySTZrl27nPdWr15ttWvXNl9fX7v77rtt/vz5lnkYdeHCBevZs6eV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AAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE0QAAYAAAAAAAAAAAAAN0EAGAAAAAAAAAAAAADcBAFgAAAAAAAAAAAAAHATBIABAAAAAAAAAAAAwE38PwqmaqiaGBEwAAAAAElFTkSuQmCC" /></p>
 </div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->
