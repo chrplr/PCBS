@@ -333,4 +333,4 @@ text = MyTestFile.readlines()
 plot_frequency(count_words(text))
 ```
 
-![](/home/henri/Documents/Cours/PCBS/slides/2021-intro-to-programming/fifth class/hist.png)
+![](hist.png)
