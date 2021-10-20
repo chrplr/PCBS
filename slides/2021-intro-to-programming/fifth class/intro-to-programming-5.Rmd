@@ -268,7 +268,7 @@ import string
 
 def count_words(text):
   c = 0
-  for l in text:
+  for l in text: # 
     #print(l.split())
     for w in l.strip().split():
       #print(list(w))
