@@ -143,7 +143,10 @@ We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli
 You first need to install the modules [#f1]_:
 
 Linux
-    Open a Terminal (``Ctrl-Alt-T``) and type ``pip install expyriment[all]``
+    Open a Terminal (``Ctrl-Alt-T``) and type::
+
+        sudo apt-get install build-essential libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsdl1.2-dev libsmpeg-dev libportmidi-dev ffmpeg libswscale-dev libavformat-dev libavcodec-dev libfreetype6-dev
+        pip install expyriment[all]
 
 Windows
     Start **Git bash**. This opens a terminal, where you can type ``pip install expyriment[all]``
