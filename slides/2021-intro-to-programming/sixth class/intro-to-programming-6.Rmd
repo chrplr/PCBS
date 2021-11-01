@@ -1,0 +1,107 @@
+---
+title: "intro-to-programming-6"
+author: "Henri Vandendriessche"
+date: "02/11/2021"
+fontsize: 8pt
+output:
+  beamer_presentation: default
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+So far
+========================================================
+
+  - Python, its life, its choice
+
+  - Data types: (integer / float / string / boolean)
+  
+  - **If**, **For** and **While** loops: 
+
+  - Data collections: (list, tuple, set, dictionary)
+    
+  - Functions
+  
+  - Higher order function (Recursive function)
+  
+  - Read and write files
+
+
+Today
+========================================================
+
+  
+  - Object-Oriented Programming in Python
+  
+  - Classes
+  
+  - Objects
+
+  - Manage exceptions
+  
+  - Clean Code
+
+
+Object-Oriented Programming
+========================================================
+
+
+  - Programming paradigm based of the concept of "objects"
+  
+  - Objects contains data and code
+  
+  - 
+  
+Classes 1/
+========================================================
+  
+  - Classes are templates for objects
+  
+  - Example: You have a power point templates for all your presentations of articles with 
+      + a graphic chart
+      + your font 
+      + your background image
+      + all your slides with generic titles (Introduction, study 1, results study 1...)
+      
+  - That templates in python is a class. A kind of general recipe that specify an object (in our case a power point presentation for a class)
+  
+  
+  
+
+Classes 2/
+========================================================
+  
+  - Classes are templates for objects
+  
+  - power point templates
+  
+  
+  
+Objects
+========================================================
+
+  - Objects are instances on classes
+  
+  - In our metaphor one object is for example the power point of your class of "introduction to Cognitive psychology"
+  
+  - That power point has the same features and characteristics that the power point of your class of "introduction to Linguistics" yet the content differs.
+  
+  
+  
+Create your class
+========================================================
+
+
+
+Constructors
+========================================================
+  
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
