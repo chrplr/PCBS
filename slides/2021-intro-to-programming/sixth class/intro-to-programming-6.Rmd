@@ -2,14 +2,16 @@
 title: "intro-to-programming-6"
 author: "Henri Vandendriessche"
 date: "02/11/2021"
-fontsize: 8pt
 output:
-  beamer_presentation: default
   slidy_presentation: default
+  ioslides_presentation: default
+  beamer_presentation: default
+fontsize: 8pt
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)  
+knitr::knit_engines$set(python = reticulate::eng_python)  
 ```
 
 So far
@@ -34,26 +36,31 @@ Today
 ========================================================
 
   
-  - Object-Oriented Programming in Python
+  - Object-Oriented Programming in Python:
   
-  - Classes
+  + Classes
   
-  - Objects
-
-  - Manage exceptions
+  + Objects
+  
+  + Methods
+  
+  + Constructors
   
   - Clean Code
 
 
-Object-Oriented Programming
+Object-Oriented Programming (OOP)
 ========================================================
 
 
   - Programming paradigm based of the concept of "objects"
   
-  - Objects contains data and code
+  - Python has been developped with an "oriented-object" approach
   
-  - 
+  - It's not a Python thing. Other object-oriented languages includes: Java, C++, C#, R, PHP ...
+  
+  - OOP is defined around two key concepts that are **classes** and **objects**
+  
   
 Classes 1/
 ========================================================
@@ -66,7 +73,9 @@ Classes 1/
       + your background image
       + all your slides with generic titles (Introduction, study 1, results study 1...)
       
-  - That templates in python is a class. A kind of general recipe that specify an object (in our case a power point presentation for a class)
+  - That templates in python is a class. A kind of general recipe that define a skeleton for every object (in our case a power point presentation for a class)
+  
+ 
   
   
   
@@ -74,34 +83,267 @@ Classes 1/
 Classes 2/
 ========================================================
   
-  - Classes are templates for objects
+  - A class contains state and behavior
   
-  - power point templates
+  - State: is referring to data or or variables. For example: your power point for your class of "introduction to Cognitive psychology" has a specific name and specific graphs.
+  
+  - Behavior: is a set of thing the class can do. For example: your power point can have animations, play sounds or videos. This behavior is define in a method which is like a function but specific to classes.
   
   
   
-Objects
+Classes 3/
+========================================================
+  
+  - The creation of an object is called an instantiation. From your template of power point you'll create a new power point for presenting an article in your class of "introduction to evolutionary anthropology"
+  
+  - That instantiation will have:
+    + specific attributes (a name, a number of slides ....) 
+    + common methods (animations, videos, sounds ...) like the other objects
+    
+  
+  
+  
+  
+  
+Objects 1/
 ========================================================
 
   - Objects are instances on classes
   
-  - In our metaphor one object is for example the power point of your class of "introduction to Cognitive psychology"
+  - Objects can be stored in variable and its type is the class
   
-  - That power point has the same features and characteristics that the power point of your class of "introduction to Linguistics" yet the content differs.
+  - In our metaphor one object is one specific power-point. For example the power point of your class of "introduction to Cognitive psychology"
   
+  - That power point has the same structure and the same features and characteristics as the power point of your class of "introduction to Linguistics" yet the content differs.
+
+  - You can instantiate multiple objects from the same class.
   
-  
-Create your class
+  - Those objects are independent  
+
+
+
+Method
 ========================================================
 
+  - A method is very similar to a function but is part of a class when a function is independent.
+  
+  - It can:
+      + modify an object's internal state of an object
+      + call others methods or functions
+      + return values
+      + etc ...
+      
+      
+  - The only difference between function and method is that method belong to a class/object.
+
+
+  
+Create your class 1/2
+========================================================
+
+```{python, echo = TRUE}
+class Rectangle:
+  width = 3
+  length = 2
+  color = 'red'
+  def calculate_area(self):
+      return self.width * self.length
+
+type(Rectangle)    
+
+rect=Rectangle
+
+print(rect.width)
+print(Rectangle.calculate_area(rect))
+
+```
+
+  - We can see the state:
+      + width and height
+  - And the behavior, in this case the method calculate_area.
+  
+
+Create your class 2/2
+========================================================
+  
+```{python class, echo = TRUE}
+class Rectangle:
+  width = 3
+  length = 2
+  color = 'red'
+  def calculate_area(self):
+      return self.width * self.length
+
+rect=Rectangle
+
+print(rect.width)
+print(Rectangle.calculate_area(rect))
+```
+
+  - We can note the **self** that refers to its own class and its own variables
+  
+  - **self** is always the first parameter in order to access all the object's attributes
 
 
 Constructors
 ========================================================
   
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+  - Constructors are special methods. Every class has one and it's used to create an object
+  
+  - We need to use **__init__**
+  
+```{python constructor, echo=TRUE}
+class Rectangle:
+    def __init__(self, width, length, color):
+        self.width = width
+        self.length = length
+        self.color = color
+    def calculate_area(self):
+      return self.width * self.length
+        
+rect = Rectangle(3,2, "blue")
+print(rect.width)
+print(rect.calculate_area())
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Instantiate an object 1/2
+========================================================
+
+  - You can use the constructor to instantiate an object
+
+```{python instatiantion, echo = TRUE}
+class Rectangle:
+    def __init__(self, width, length, color):
+        self.width = width
+        self.length = length
+        self.color = color
+    def calculate_area(self):
+      return self.width * self.length
+rect = Rectangle(5,3,'red')
+
+print(rect.width)
+```  
+  
+Instantiate an object 2/2
+========================================================
+
+  - You can select default variables
+  
+  - Then you don't have specify the default variable
+
+```{python instatiantion2, echo = TRUE}
+class Rectangle:
+    def __init__(self, width, length, color='red'):
+        self.width = width
+        self.length = length
+        self.color = color
+    def calculate_area(self):
+      return self.width * self.length
+rect = Rectangle(5,3)
+
+print(rect.width)
+```    
+  
+  
+Modify an object
+======================================================== 
+  
+```{python modify, echo = TRUE}
+class Rectangle:
+    def __init__(self, width, length, color='red'):
+        self.width = width
+        self.length = length
+        self.color = color
+    def calculate_area(self):
+      return self.width * self.length
+
+rect = Rectangle(5,3)
+
+print(rect.color)
+
+rect.color = "purple"  
+print(rect.color)
+```
+And beyond
+======================================================== 
+
+    - A class can have a parent class or superclass.
+
+    - The class with a parent is known as a subclass or child.
+
+    - That class inherits attributes from its parent.
+
+    - The child class can implement extra attributes on top of that which it inherits.
+  
+  
+Clean code 1/
+======================================================== 
+  
+![](clean_code.png)
+  
+The goal of clean code is to make your code **easy to understand** and **easy to change** !
+
+Clean code 2/
+========================================================
+
+  - Example with a former function in the third class
+
+```{python example, echo = TRUE}
+def costs(d):
+    a = 4.8 + 1.15 * d
+    b = 3.2 + 1.20 * d
+    return (a, b)
+
+def cheap(d):
+    a, b = costs(d)
+    if a < b:
+        return 'A'
+    else:
+        return 'B'
+
+for d in range(30, 40):
+    print(cheap(d))
+```
+
+
+Clean code 3/
+========================================================
+
+```{python example2, echo = TRUE}
+def costs(distance):
+    # Calculate the price with the fixed charge plus the charge for every km
+    price_A = 4.8 + 1.15 * distance
+    price_B = 3.2 + 1.20 * distance
+    return (price_A, price_B)
+
+def cheapest_company(distance):
+    # calculate the cost for every company with a certain distance
+    a, b = costs(distance)
+    if a < b:
+        return 'Company A'
+    else:
+        return 'Company B'
+
+# print the distance from 1km to 50km
+for d in range(30, 40):
+    print(f"{d} km -> " + cheapest_company(d))
+```
+
+
+Clean code 4/  Rules
+========================================================
+
+  - CC1. Use meaningful names
+  
+  - CC2. Create functions that do one thing
+  
+  - CC3 DRY: Don't Repeat Yourself.
+
+  - CC4 Explain yourself in code, not comments.
+
+
+Clean code 4/  CC1. Use meaningful names
+========================================================
+
+  - Replace magic numbers with named variables, parameters, or constants
+
