@@ -324,26 +324,409 @@ def cheapest_company(distance):
     else:
         return 'Company B'
 
-# print the distance from 1km to 50km
+# print the distance from 30km to 50km
 for d in range(30, 40):
     print(f"{d} km -> " + cheapest_company(d))
 ```
 
 
-Clean code 4/  Rules
+Clean code 4/  Overview
 ========================================================
 
-  - CC1. Use meaningful names
+### Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way. (https://www.oreilly.com/library/view/clean-code-a/9780136083238/)
+
+  - We will cover a set of rules or advice to write cleaner code that can be read and edited by other developers
   
+  - Clean code is unfortunately never a priority but is a healthy practice
+  
+  - The clean code principle goes way beyond the scope of this course so bear in mind that we'll see only a small subset of the clean code principle.
+
+
+Clean code:  CC1. Use meaningful names
+========================================================
+  
+  - Example:
+  
+```{python , echo = TRUE, eval = FALSE}
+w = x2 - x1
+```
+
+Clean code:  CC1. Use meaningful names
+========================================================
+  
+  - Example:
+  
+```{python , echo = TRUE, eval = FALSE}
+w = x2 - x1
+```
+
+  - What are w, x1 and x2?
+
+    + What do they represent?
+    + What are they used for?
+  
+  - Does "w" stand for "weight", "window", "word", or is it just a symbol for a generic computation?
+
+Clean code: CC1. Use meaningful names
+========================================================
+  
+  - Instead one can write 
+  
+```{python , echo = TRUE, eval = FALSE}
+width = x_right - x_left
+```
+
+  - **Use meaningful names**
+
+Clean code:  CC1. Replace magic numbers
+========================================================
+  
+  - Other example
+  
+```{python , echo = TRUE, eval = FALSE}
+width = x_right - x_left +10
+```
+
+
+
+Clean code:  CC1. Replace magic numbers
+========================================================
+  
+  - Other example
+  
+```{python , echo = TRUE, eval = FALSE}
+width = x_right - x_left +10
+```
+
+
+  - Where does '10' come from?
+
+  - What does it represent? 
+
+  - Can I change it? Is it a constant, a variable.
+
+
+Clean code:  CC1. Replace magic numbers
+========================================================
+  
+  - Instead one can write 
+  
+```{python , echo = TRUE, eval = FALSE}
+horizontal_margin = 10
+
+width = x_right - x_left + horizontal_margin
+```
+
+  - **Replace magic numbers** with named parameters whatever the type of that parameters
+
+
+Clean code:  CC1. Function names should say what they do
+========================================================
+
+  - Example
+  
+```{python , echo = TRUE, eval = FALSE}
+def check_divisible(n, divisor):
+    if (n % divisor == 0):
+        print(n, ' is divisible by ', divisor)
+```  
+
+Clean code:  CC1. Function names should say what they do
+========================================================
+
+  - Example
+  
+```{python , echo = TRUE, eval = FALSE}
+def check_divisible(n, divisor):
+    if (n % divisor == 0):
+        print(n, ' is divisible by ', divisor)
+```  
+
+  - Misleading name: I don't expect "something to be checked" but something to be printed or not
+  
+    - A more accurate name would be
+```{python , echo = TRUE, eval = FALSE}
+def print_if_divisible(n, divisor):
+    if (n % divisor == 0):
+        print(n, ' is divisible by ', divisor)
+```  
+    
+Clean code: CC1. Fear the ambiguous name
+========================================================
+  
+  - Example
+  
+```{python , echo = TRUE, eval = FALSE}
+remove(l, n)
+```
+
+
+Clean code:  CC1. Fear the ambiguous name
+========================================================
+  
+  - Example
+  
+```{python , echo = TRUE, eval = FALSE}
+remove(l, n)
+```
+
+  - What do you think this does? Ambiguous name:
+
+    + Does it remove the element in l whose value is equal to n?
+    + Or does it remove the element in l at index n?
+
+
+Clean code: CC1. Fear the ambiguous name
+========================================================
+  
+  - Example
+  
+```{python , echo = TRUE, eval = FALSE}
+remove_list_element_at_index(l, i)
+```
+
+  - [CC1] Choose unambiguous names
+  
+  - Clarity at the point of use is more important than brevity
+  
+  - Include all the words needed to avoid ambiguity from the perspective of someone calling the function
+  
+  - A general naming template: **verb_keywords** (the verb indicates what the function does, the keywords what parameters are expected)
+
+
+Clean code:  CC1. Use different words for different concepts
+========================================================
+
+  - Example: two function calls:
+  
+```{python , echo = TRUE, eval = FALSE}
+add_number(a , b)
+add_list(c, d)
+```
+
+  - What do you think they do ?
+  
+Clean code:  CC1. Use different words for different concepts
+========================================================
+
+  - The implementation of the functions:
+  
+```{python , echo = TRUE, eval = FALSE}
+def add_number(a , b):
+    return a + b
+
+def add_list(l, e):
+    l.append(e)
+```
+
+Clean code:  CC1. Use different words for different concepts
+========================================================
+
+  - The implementation of the functions:
+  
+```{python , echo = TRUE, eval = FALSE}
+def add_number(a , b):
+    return a + b
+
+def add_list(l, e):
+    l.append(e)
+```
+
+  -Confusing to use the same word "add" for the two functions:
+    + in the first case, add calculates the addition
+    + in the second case, add inserts an element
+    + in the first case, add has no side effects, in the second, it does!
+
+Clean code:  CC1. Use different words for different concepts
+========================================================
+
+  - One way to remove the confusion:
+  
+```{python , echo = TRUE, eval = FALSE}
+def add_numbers(a , b):
+    return a + b
+
+def append_element_to_list(e, l):
+    l.append(e)
+```
+
+  - Use different words for different concepts
+
+
+Clean code:  CC2. Functions should do one thing 1/3
+======================================================== 
+
+- Let's revisit an earlier example:
+  
+```{python , echo = TRUE, eval = FALSE}
+def print_if_divisible(n, divisor):
+    if (n % divisor == 0):
+        print(n, ' is divisible by ', divisor)
+
+```
+
+  - This function does two things:
+    + Calculating whether an integer is divisible by another
+    + Printing conditionally on the result
+
+These are two conceptually distinct operations. There is no good reason for them to be done in the same function.
+
+
+Clean code:  CC2. Functions should do one thing 2/3
+======================================================== 
+
+A solution:
+```{python , echo = TRUE, eval = FALSE}
+def is_divisible(n, divisor):
+    return (n % divisor == 0)
+```
+    
+  - [CC2] Functions should do one thing
+
+This solution has the added benefit to remove side-effects from the function.
+
+
+Clean code:  CC2. Functions should do one thing 3/3
+======================================================== 
+
   - CC2. Create functions that do one thing
+
+    + A lot of programming is about chunking
+    + Chunking means grouping elements together in a meaningful named chunk (e.g. with a function) that you can manipulate as one conceptual unit
+    + These chunks help you reason about your program and control its intellectual complexity
+
+Clean code:  CC3. DRY: Don't Repeat Yourself 1/3
+======================================================== 
+
+  - Example
+
+![](student_example1.png)
+  - What's wrong?
+
+Clean code:  CC3. DRY: Don't Repeat Yourself 2/3
+======================================================== 
+
+![](student_example1_features.png)
+
+  - What's wrong? Code duplication.
   
+  - Why is it wrong?
+  
+Clean code:  CC3. DRY: Don't Repeat Yourself 3/3
+======================================================== 
+
+  - It makes code hard to change.
+  
+  - One solution
+  
+![](student_example1_corrected.png)
+
+Clean code:  CC4. Explain yourself in code, not comments 1/4
+======================================================== 
+
+  - Example
+  
+```{python , echo = TRUE, eval = FALSE}
+def distance_points(couple1,couple2):
+    """Fonction controllant la distance entre nos points
+    pour notre ensemble de points aléatoires"""
+    return math.sqrt((couple1[0]-couple2[0])**2+(couple1[1]-couple2[1])**2
+```
+
+
+Clean code:  CC4. Explain yourself in code, not comments 2/4
+======================================================== 
+
+  - Misleading comment. It does not accurately describe what the function does.
+  
+```{python , echo = TRUE, eval = FALSE}
+def distance_points(couple1,couple2):
+    """Fonction controllant la distance entre nos points
+    pour notre ensemble de points aléatoires"""
+    return math.sqrt((couple1[0]-couple2[0])**2+(couple1[1]-couple2[1])**2
+```
+
+  - An alternative:
+```{python , echo = TRUE, eval = FALSE}
+def distance_between_points(point_1, point_2):
+    return math.sqrt((couple1[0]-couple2[0])**2+(couple1[1]-couple2[1])**2
+```
+	
+  - Does this need any comments?
+
+
+Clean code:  CC4. Comments do not make up for bad code 1/3
+======================================================== 
+  
+  - Example
+  
+```{python , echo = TRUE, eval = FALSE}
+if shuffledtarg_dist[i][1] == 1: ### IF TARGET ###
+    # [some code ...]
+elif shuffledtarg_dist[i][1] == 0: ### IF DISTRACTOR ###
+    # [some other code ...]
+```
+
+  - Why do we need such comments next to if and elif?
+
+Clean code:  CC4. Explain yourself in code, not comments 2/3
+======================================================== 
+  
+  - Good intentions, but bad approach
+  
+```{python , echo = TRUE, eval = FALSE}
+if shuffledtarg_dist[i][1] == 1: ### IF TARGET ###
+    # [some code ...]
+elif shuffledtarg_dist[i][1] == 0: ### IF DISTRACTOR ###
+    # [some other code ...]
+```
+
+  - Comments do not make up for bad code
+  
+```{python , echo = TRUE, eval = FALSE}
+if stimulus_type == STIMULUS_TYPE_TARGET:
+    # [some code ...]
+elif stimulus_type == STIMULUS_TYPE_DISTRACTOR:
+    # [some other code ...]
+```
+
+  - Clear and expressive code with few comments is superior to obscure code with lots of comments
+  
+Clean code:  CC4. Explain yourself in code, not comments 3/3
+======================================================== 
+
+```{python , echo = TRUE, eval = FALSE}
+if shuffledtarg_dist[i][1] == 1: ### IF TARGET ###
+    # [some code ...]
+elif shuffledtarg_dist[i][1] == 0: ### IF DISTRACTOR ###
+    # [some other code ...]
+```
+
+  - An even better solution
+
+```{python , echo = TRUE, eval = FALSE}
+if is_target(stimulus):
+    # [some code ...]
+elif is_distractor(stimulus):
+    # [some other code ...]
+```
+
+  - [CC4] Clear and expressive code with few comments is superior to obscure code with lots of comments
+  
+  - Does this need any comments?
+
+
+Clean code: Summary
+======================================================== 
+
+### The goal is to make code easy to understand and easy to change.
+
+  - CC1 Use meaningful names:
+    + Reveal purpose. Replace magic numbers. Say what functions do. Reveal/Avoid side-effects. Remove ambiguity. Use different words for different concepts. Use the appropriate level of description.
+
+  - CC2 Create functions that do one thing.
+
   - CC3 DRY: Don't Repeat Yourself.
 
   - CC4 Explain yourself in code, not comments.
-
-
-Clean code 4/  CC1. Use meaningful names
-========================================================
-
-  - Replace magic numbers with named variables, parameters, or constants
 
