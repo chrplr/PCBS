@@ -1,6 +1,6 @@
 ---
 title: "intro-to-programming-6"
-author: "Henri Vandendriessche"
+author: "Henri Vandendriessche highly based on Cedric Foucaut for the clean code part"
 date: "02/11/2021"
 output:
   beamer_presentation: default
@@ -347,7 +347,7 @@ Clean code: Overview 4/4
 
 ### Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way. (https://www.oreilly.com/library/view/clean-code-a/9780136083238/)
 
-  - We will cover a set of rules or advice to write cleaner code that can be read and edited by other developers
+  - We will cover a set of rules or advices to write cleaner code that can be read and edited by other developers
   
   - Clean code is unfortunately never a priority but is a healthy practice
   
