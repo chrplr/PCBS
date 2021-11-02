@@ -3,9 +3,9 @@ title: "intro-to-programming-6"
 author: "Henri Vandendriessche"
 date: "02/11/2021"
 output:
-  slidy_presentation: default
-  ioslides_presentation: default
   beamer_presentation: default
+  ioslides_presentation: default
+  slidy_presentation: default
 fontsize: 8pt
 ---
 
@@ -55,14 +55,14 @@ Object-Oriented Programming (OOP)
 
   - Programming paradigm based of the concept of "objects"
   
-  - Python has been developped with an "oriented-object" approach
+  - Python has been developed with an "oriented-object" approach
   
   - It's not a Python thing. Other object-oriented languages includes: Java, C++, C#, R, PHP ...
   
   - OOP is defined around two key concepts that are **classes** and **objects**
   
   
-Classes 1/
+Classes 1/3
 ========================================================
   
   - Classes are templates for objects
@@ -74,24 +74,31 @@ Classes 1/
       + all your slides with generic titles (Introduction, study 1, results study 1...)
       
   - That templates in python is a class. A kind of general recipe that define a skeleton for every object (in our case a power point presentation for a class)
-  
- 
-  
+
+![](class object.png)
   
   
 
-Classes 2/
+Classes 2/3
 ========================================================
   
   - A class contains state and behavior
   
-  - State: is referring to data or or variables. For example: your power point for your class of "introduction to Cognitive psychology" has a specific name and specific graphs.
+  - State: is referring to data or or variables. For example: your power point for your class of "introduction to Cognitive psychology" has:
   
-  - Behavior: is a set of thing the class can do. For example: your power point can have animations, play sounds or videos. This behavior is define in a method which is like a function but specific to classes.
+    + a specific name 
+    + specific graphs
+    + a number of pages
+  
+  - Behavior: is a set of thing the class can do. For example: your power point can have
+  
+    + animations, 
+    + play sounds or videos. 
+    + This behavior is define in a method which is like a function but specific to classes.
   
   
   
-Classes 3/
+Classes 3/3
 ========================================================
   
   - The creation of an object is called an instantiation. From your template of power point you'll create a new power point for presenting an article in your class of "introduction to evolutionary anthropology"
@@ -105,16 +112,16 @@ Classes 3/
   
   
   
-Objects 1/
+Objects 
 ========================================================
 
   - Objects are instances on classes
   
   - Objects can be stored in variable and its type is the class
   
-  - In our metaphor one object is one specific power-point. For example the power point of your class of "introduction to Cognitive psychology"
+  - In our metaphor, one object is one specific power-point. For example the power point of your class of "introduction to Cognitive psychology"
   
-  - That power point has the same structure and the same features and characteristics as the power point of your class of "introduction to Linguistics" yet the content differs.
+  - That power-point has the same structure and the same features and characteristics as the power point of your class of "introduction to Linguistics" yet the content differs.
 
   - You can instantiate multiple objects from the same class.
   
@@ -125,14 +132,15 @@ Objects 1/
 Method
 ========================================================
 
-  - A method is very similar to a function but is part of a class when a function is independent.
+  - As said before a method is part of the behavior of a class
+  
+  - A method is very similar to a function but is part of a class when a function is independent
   
   - It can:
       + modify an object's internal state of an object
       + call others methods or functions
       + return values
       + etc ...
-      
       
   - The only difference between function and method is that method belong to a class/object.
 
@@ -264,26 +272,30 @@ print(rect.color)
 rect.color = "purple"  
 print(rect.color)
 ```
-And beyond
+
+
+And beyond ... but not for now
 ======================================================== 
 
-    - A class can have a parent class or superclass.
+ - A class can have a parent class or superclass.
 
-    - The class with a parent is known as a subclass or child.
+ - The class with a parent is known as a subclass or child.
 
-    - That class inherits attributes from its parent.
+ - That class inherits attributes from its parent.
 
-    - The child class can implement extra attributes on top of that which it inherits.
+ - The child class can implement extra attributes on top of that which it inherits.
   
   
-Clean code 1/
+Clean code: Overview 1/4
 ======================================================== 
-  
-![](clean_code.png)
-  
+
 The goal of clean code is to make your code **easy to understand** and **easy to change** !
 
-Clean code 2/
+![](clean_code.png)
+  
+
+
+Clean code: Overview 2/4
 ========================================================
 
   - Example with a former function in the third class
@@ -306,7 +318,7 @@ for d in range(30, 40):
 ```
 
 
-Clean code 3/
+Clean code: Overview 3/4
 ========================================================
 
 ```{python example2, echo = TRUE}
@@ -330,7 +342,7 @@ for d in range(30, 40):
 ```
 
 
-Clean code 4/  Overview
+Clean code: Overview 4/4  
 ========================================================
 
 ### Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn't have to be that way. (https://www.oreilly.com/library/view/clean-code-a/9780136083238/)
@@ -342,7 +354,7 @@ Clean code 4/  Overview
   - The clean code principle goes way beyond the scope of this course so bear in mind that we'll see only a small subset of the clean code principle.
 
 
-Clean code:  CC1. Use meaningful names
+Clean code:  CC1. Use meaningful names 1/3
 ========================================================
   
   - Example:
@@ -351,7 +363,7 @@ Clean code:  CC1. Use meaningful names
 w = x2 - x1
 ```
 
-Clean code:  CC1. Use meaningful names
+Clean code:  CC1. Use meaningful names 2/3
 ========================================================
   
   - Example:
@@ -367,7 +379,7 @@ w = x2 - x1
   
   - Does "w" stand for "weight", "window", "word", or is it just a symbol for a generic computation?
 
-Clean code: CC1. Use meaningful names
+Clean code: CC1. Use meaningful names 3/3
 ========================================================
   
   - Instead one can write 
@@ -378,7 +390,7 @@ width = x_right - x_left
 
   - **Use meaningful names**
 
-Clean code:  CC1. Replace magic numbers
+Clean code: CC1. Replace magic numbers 1/3
 ========================================================
   
   - Other example
@@ -389,7 +401,7 @@ width = x_right - x_left +10
 
 
 
-Clean code:  CC1. Replace magic numbers
+Clean code: CC1. Replace magic numbers 2/3
 ========================================================
   
   - Other example
@@ -406,7 +418,7 @@ width = x_right - x_left +10
   - Can I change it? Is it a constant, a variable.
 
 
-Clean code:  CC1. Replace magic numbers
+Clean code: CC1. Replace magic numbers 3/3
 ========================================================
   
   - Instead one can write 
@@ -420,7 +432,7 @@ width = x_right - x_left + horizontal_margin
   - **Replace magic numbers** with named parameters whatever the type of that parameters
 
 
-Clean code:  CC1. Function names should say what they do
+Clean code: CC1. Function names should say what they do 1/2
 ========================================================
 
   - Example
@@ -431,7 +443,7 @@ def check_divisible(n, divisor):
         print(n, ' is divisible by ', divisor)
 ```  
 
-Clean code:  CC1. Function names should say what they do
+Clean code:  CC1. Function names should say what they do 1/2
 ========================================================
 
   - Example
@@ -451,7 +463,7 @@ def print_if_divisible(n, divisor):
         print(n, ' is divisible by ', divisor)
 ```  
     
-Clean code: CC1. Fear the ambiguous name
+Clean code: CC1. Fear the ambiguous name 1/3
 ========================================================
   
   - Example
@@ -461,7 +473,7 @@ remove(l, n)
 ```
 
 
-Clean code:  CC1. Fear the ambiguous name
+Clean code:  CC1. Fear the ambiguous name 2/3
 ========================================================
   
   - Example
@@ -476,7 +488,7 @@ remove(l, n)
     + Or does it remove the element in l at index n?
 
 
-Clean code: CC1. Fear the ambiguous name
+Clean code: CC1. Fear the ambiguous name 3/3
 ========================================================
   
   - Example
@@ -494,7 +506,7 @@ remove_list_element_at_index(l, i)
   - A general naming template: **verb_keywords** (the verb indicates what the function does, the keywords what parameters are expected)
 
 
-Clean code:  CC1. Use different words for different concepts
+Clean code: CC1. Use different words for different concepts 1/4
 ========================================================
 
   - Example: two function calls:
@@ -506,7 +518,7 @@ add_list(c, d)
 
   - What do you think they do ?
   
-Clean code:  CC1. Use different words for different concepts
+Clean code: CC1. Use different words for different concepts 2/4
 ========================================================
 
   - The implementation of the functions:
@@ -519,7 +531,7 @@ def add_list(l, e):
     l.append(e)
 ```
 
-Clean code:  CC1. Use different words for different concepts
+Clean code: CC1. Use different words for different concepts 3/4
 ========================================================
 
   - The implementation of the functions:
@@ -537,7 +549,7 @@ def add_list(l, e):
     + in the second case, add inserts an element
     + in the first case, add has no side effects, in the second, it does!
 
-Clean code:  CC1. Use different words for different concepts
+Clean code: CC1. Use different words for different concepts 4/4
 ========================================================
 
   - One way to remove the confusion:
