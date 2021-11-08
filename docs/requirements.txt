@@ -1,3 +1,2 @@
 sphinx==4.0.1
 sphinx-rtd-theme
-pyramid-rtd-theme
