@@ -60,7 +60,8 @@ latex_engine = 'xelatex'
 #
 #html_theme = 'master'
 #html_theme = 'pyramid'
-html_theme = 'classic'
+#html_theme = 'classic'
+html_theme = "sphinx_rtd_theme"
 #html_theme = 'alabaster'
 
 # Add any paths that contain custom static files (such as style sheets) here,
