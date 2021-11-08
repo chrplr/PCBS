@@ -65,7 +65,7 @@ html_theme = 'pyramid'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
 
 # html_theme_options = {
 #     # Disable showing the sidebar. Defaults to 'false'
@@ -77,5 +77,5 @@ html_static_path = ['_static']
 
 highlight_language = 'python3'
 html_context = {'display_github': True, 'github_user': 'chrplr', 'github_repo': 'PCBS', 'github_version': 'master/sample-docs/', 'github_root_dir': 'master/src', 'current_version': 'latest', 'latest_version': 'latest', 'available_versions': ('latest', ), 'css_files': (), }
-html_theme_options = {'collapse_navigation': False, 'analytics_id': '', 'style_nav_header_background': '#5bbdbf', 'style_external_links': True, 'canonical_url': 'https://pradyunsg.me/sphinx-themes/', 'vcs_pageview_mode': 'edit', 'navigation_depth': 3, }
+#html_theme_options = {'collapse_navigation': False, 'analytics_id': '', 'style_nav_header_background': '#5bbdbf', 'style_external_links': True, 'canonical_url': 'https://pradyunsg.me/sphinx-themes/', 'vcs_pageview_mode': 'edit', 'navigation_depth': 3, }
 pygments_style = 'sphinx'
