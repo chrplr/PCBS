@@ -75,8 +75,6 @@ html_static_path = ['_static']
 #def setup(app):
 #    app.add_css_file('my_theme.css')
 
-#extensions.append("sphinx_ansible_theme.ext.pygments_lexer")
-#html_theme = "sphinx_ansible_theme"
 highlight_language = 'python3'
 html_context = {'display_github': True, 'github_user': 'chrplr', 'github_repo': 'PCBS', 'github_version': 'master/sample-docs/', 'github_root_dir': 'master/src', 'current_version': 'latest', 'latest_version': 'latest', 'available_versions': ('latest', ), 'css_files': (), }
 html_theme_options = {'collapse_navigation': False, 'analytics_id': '', 'style_nav_header_background': '#5bbdbf', 'style_external_links': True, 'canonical_url': 'https://pradyunsg.me/sphinx-themes/', 'vcs_pageview_mode': 'edit', 'navigation_depth': 3, }
