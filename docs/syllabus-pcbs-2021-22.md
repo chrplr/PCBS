@@ -1,39 +1,46 @@
-Aim: 
+Aim 
+====
 
-learn  useful tools for cognitive science and implement some typical activities of cogntivie scientist:
+Learn  useful tools for cognitive science and implement some typical activities of cogntivie scientist:
 
-Méthode: Atelier (=TP). 10 min d'introduction au thème du jour, suivi de TP. 
+Method: hands-on lecture (=TD). After 15~30 min of introduction, you are given a series of excercices to perform.
 
 
-# Creating Visual stimuli, Programming simple reaction-time tasks. 2 cours
+# Creating Visual stimuli with pygame
 
 https://pcbs.readthedocs.io/en/latest/running-experiments.html
 
-Currently, we use pygame then expyriment.  Not ideal... Psychopy?
+# Programming simple reaction-time tasks with expyriment
+
+# Manipulation of sound with Praat
+
+* How is sound represented in hte computer. How can it be manipulated. See http://www.pallier.org/lectures/tpexp2/tp.html
+
+* Programming an ABX sound experiment with epxyriment
+
+# Search a lexical database with R / Learn about regular expressions
+
+- https://github.com/chrplr/openlexicon/blob/master/documents/Interroger-Lexique-avec-R/interroger-lexique-avec-R.pdf
+
+- https://pcbs.readthedocs.io/en/latest/regular_expressions.html
+
+- Zipf law
 
 
-# Audio stimuli and experiment 1 cours
-
-Comment le son est réprésenté. Utiliser un editeur de son (Praat ou Audacity). programmer une manip de discrimination sonore
-
-http://www.pallier.org/lectures/tpexp2/tp.html
+# Numerical Simulations with numpy
 
 
-# Interroger une base de données lexicale pour créer du matériel experimental / Expressions regulières 1 cours
+## Statistics by simulations
+
+* Permutation test and the concept of p-values.
+
+* The issue of multiple comparisons
+
+* Analyses of time-series
 
 
-https://github.com/chrplr/openlexicon/blob/master/documents/Interroger-Lexique-avec-R/interroger-lexique-avec-R.pdf
 
-Refaire ca en python. 
-
-
-https://pcbs.readthedocs.io/en/latest/regular_expressions.html
-
-
-# Numpy for Simulations & data analysis ): 2 cours
-
-
-* Réseaux de neurones et/ou automate cellulaire
+## Réseaux de neurones et/ou automate cellulaire
 
 ** Hopfield network
 
@@ -55,10 +62,15 @@ For a solution, check : https://blog.dbrgn.ch/2013/3/26/perceptrons-in-python/
 
 Find examples from Neural Data Science
 
+# Prerequite and Evaluation:
+
+Prerequisites:
+
+- to have instaled the software described in the documentation
+- to have basic knowledge of programming in Python 
+
+Evaluation: Pass/Fail.
+
+Being present at each lecture  and send us your code (zip file) at the end of each lecture.
 
 
-
-
-REquisite: presence à chaque cours. Nous envoyer le code en fin de cours. On jettera un coup d'oeil. Le code n'est pas né! 
-
-Evaluation : ?  Pass/Fail. 
