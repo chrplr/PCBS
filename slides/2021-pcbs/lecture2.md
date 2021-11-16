@@ -64,7 +64,7 @@ There are three blocks of trials: a first one in which the target is always visu
 
 Add python code to ``simple-detection-audiovisual.py`` to display instructions at the start of the experiment. 
 
-11. If there is time left, follow https://pcbs.readthedocs.io/en/latest/running-experiments.html#decision-times
+11. If time allows, follow https://pcbs.readthedocs.io/en/latest/running-experiments.html#decision-times
 
 
 

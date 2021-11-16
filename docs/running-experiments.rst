@@ -80,7 +80,7 @@ Exercises:
 
 1. Modify ``simple-detection-visual-expyriment.py`` to display a white disk instead of a cross.
 
-2. Modify  ``simple-detection-visual-expyriment.py`` to display a white disk on half of the trials and a gray disk on the other half of the trials (thesis experimental conditions should be shuffled randomly). Then modify it to display disks with four levels of gray. Thus you can assess the effect of luminisity on detection time.   
+2. Modify  ``simple-detection-visual-expyriment.py`` to display a white disk on half of the trials and a gray disk on the other half of the trials (thesis experimental conditions should be shuffled randomly). Then modify it to display disks with four levels of gray. Thus you can assess the effect of luminosity on detection time. (see  :download:`/expyriment/expyriment_minimal_template.py <../experiments/expyriment/simple_reaction_times/grey-levels.py>` for a solution using Expyriment's ``design.Block`` and ``design.Trial`` objects).
 
 3. Modify  ``simple-detection-visual-expyriment.py`` to play a short sound (:download:`click.wav <../experiments/expyriment/simple_reaction_times/click.wav>`) in lieu of displaying a visual stimulus (hint: use ``stimuli.Audio()``). Thus, you have created a simple audio detection experiment.
 
