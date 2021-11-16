@@ -48,9 +48,19 @@ A more adequate library for this task is Expyriment_ (another one is Psychopy_).
 .. _Expyriment: http://www.expyriment.org
 .. _Psychopy: http://www.psychopy.org
 
-Make sure you have installed Expyriment_.
 
-Then, download :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` and run it with::
+From here, we are going to use it to generate experiments.
+
+Make sure you have installed Expyriment_::
+
+
+     $ python
+     >>> import expyriment
+
+
+If an error message ``moduleNotFoundError: No module named 'expyriment'`` appears, check :doc:`software_installation.rst`.
+
+Let us start by downloading :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` and run it with::
 
     python simple-detection-visual-expyriment.py
 
@@ -58,21 +68,29 @@ Then, in the subfolder ``data``, locate a file with a name starting with  ``simp
 
     python analyse_rt.py data/simple-detection-visual-expyriment_*.xpd 
 
- 
-Note: The basic principles of the ``expyriment`` module are introduced in https://docs.expyriment.org/Tutorial.html. A minimal template is provided at :download:`/expyriment/expyriment_minimal_template.py <../experiments/expyriment/expyriment_minimal_template.py>`
 
-Exercise: Modify :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` to play a short sound (:download:`click.wav <../experiments/expyriment/simple_reaction_times/click.wav>`) in lieu of displaying a cross (hint: use ``stimuli.Audio()``). Thus, you have created a simple audio detection experiment.
+Compare the codes of ``simple-detection-visual-expyriment.py`` and ``simple-detection-visual-pygame.py``. This should convince you that using expyriment will make your life simpler if you need to program a psychology experiment.
 
+The documentation of expyriment is available at http://docs.expyriment.org/. Have q a quick look at it, especially http://docs.expyriment.org/expyriment.stimuli.html
 
-Exercise: Have a quick look at the script :download:`simple-detection-audiovisual.py <../experiments/expyriment/simple_reaction_times/simple-detection-audiovisual.py>`. Can you understant it understand it?
+The basic principles of the ``expyriment`` module are introduced in https://docs.expyriment.org/Tutorial.html. 
+I provide a minimal template at :download:`/expyriment/expyriment_minimal_template.py <../experiments/expyriment/expyriment_minimal_template.py>` that one can use to start writing a expyriment script.
 
-Run it::
+Exercises:
 
-     python simple-detection-audiovisual.py
+1. Modify ``simple-detection-visual-expyriment.py`` to display a white disk instead of a cross.
+
+2. Modify  ``simple-detection-visual-expyriment.py`` to display a white disk on half of the trials and a gray disk on the other half of the trials (thesis experimental conditions should be shuffled randomly). Then modify it to display disks with four levels of gray. Thus you can assess the effect of luminisity on detection time.   
+
+3. Modify  ``simple-detection-visual-expyriment.py`` to play a short sound (:download:`click.wav <../experiments/expyriment/simple_reaction_times/click.wav>`) in lieu of displaying a visual stimulus (hint: use ``stimuli.Audio()``). Thus, you have created a simple audio detection experiment.
+
+4. Download and run  :download:`simple-detection-audiovisual.py <../experiments/expyriment/simple_reaction_times/simple-detection-audiovisual.py>`::  
+
+        python simple-detection-audiovisual.py
 
 There are three blocks of trials: a first one in which the target is always visual, a second one in which it is always a sound, and a third one in which the stimulus is, randomly, visual or auditory. Are we slowed down in the latter condition? Use :download:`analyse_audiovisual_rt.py <../experiments/expyriment/simple_reaction_times/analyse_audiovisual_rt.py>` to analyse the reaction times.
 
-Exercice: add an instruction display at the start of the experiment. 
+Exercice: add python code to ``simple-detection-audiovisual.py`` to display instructions at the start of the experiment. 
 
 
 Decision times
@@ -93,7 +111,7 @@ Exercise:
 | - Add feedback; when the subjects presses the wrong key, play the sound :download:`wrong-answer.ogg <../experiments/expyriment/parity_decision/wrong-answer.ogg>`.
 
 
-  Here is a solution: :download:`parity.py <../experiments/expyriment/parity_decision/parity_feedback.py>`
+  Here is a solution: :download:`parity_feedback.py <../experiments/expyriment/parity_decision/parity_feedback.py>`
 
 
 Numerical distance effect
@@ -111,31 +129,6 @@ Posner’s attentional cueing task
 Exercise (\*\*): Read about `Posner’s attentional cueing task <https://en.wikipedia.org/wiki/Posner_cueing_task>`__ and program the experiment. 
 
   See a solution in :download:`Posner-attention/posner_task.py <../experiments/Posner-attention/posner_task.py>`
-
-
-Lexical Decision Task
----------------------
-
-In a lexical decision experiment, a string of characters is flashed at
-the center of the screen and the participant has to decide if it is real
-word or not, indicating his/her decision by pressing a left or right
-button. Reaction time is measured from the word onset, providing an
-estimate of the speed of word recognition.
-
--  Visit the web site http://www.lexique.org
--  Learn to query Lexical databases from R, follow the instructions in
-   http://chrplr.github.io/PCBS/databases/lexique/interroger-lexique-avec-R.nb.html
--  Select 20 high frequency nouns, 20 low frequency nouns, 20 high
-   frequency verbs and 20 low frequency verbs. They must all have
-   a length of 5 to 8 characters.
--  Generate 50 pseudowords using either https://github.com/chrplr/openlexicon/blob/master/scripts/generate-pseudowords1/generate-pseudowords.R or `Wuggy <http://crr.ugent.be/programs-data/wuggy>`__
--  Program a lexical decision using the ``expyriment`` module. 
--  Run it and compute the average decision times using pandas
-
-
-See a solution at https://github.com/chrplr/PCBS-LexicalDecision
-
-
 
 Stroop Effect
 -------------
@@ -165,6 +158,31 @@ The times are in the subfolder ``data``. Compute the average reading times as a 
 Exercise: Program a Stroop task with a single colored word displayed at each trial. To record actual naming times, you will need to record (!) the subject's vocal response. A simple solution is to run a audio recording application while the script is running. You script should play a brief sound each time you present a target. Then, with a audio editor  (e.g. `Audacity <https://www.audacityteam.org/>`__), you can locate the times of presentation of stimuli and the onsets of vocal responses. Check out the program "CheckVocal" at https://github.com/0avasns/CheckVocal which does just that!
 
 
+Lexical Decision Task
+---------------------
+
+In a lexical decision experiment, a string of characters is flashed at
+the center of the screen and the participant has to decide if it is real
+word or not, indicating his/her decision by pressing a left or right
+button. Reaction time is measured from the word onset, providing an
+estimate of the speed of word recognition.
+
+-  Visit the web site http://www.lexique.org
+-  Learn to query Lexical databases from R, follow the instructions in
+   http://chrplr.github.io/PCBS/databases/lexique/interroger-lexique-avec-R.nb.html
+-  Select 20 high frequency nouns, 20 low frequency nouns, 20 high
+   frequency verbs and 20 low frequency verbs. They must all have
+   a length of 5 to 8 characters.
+-  Generate 50 pseudowords using either https://github.com/chrplr/openlexicon/blob/master/scripts/generate-pseudowords1/generate-pseudowords.R or `Wuggy <http://crr.ugent.be/programs-data/wuggy>`__
+-  Program a lexical decision using the ``expyriment`` module. 
+-  Run it and compute the average decision times using pandas
+
+
+See a solution at https://github.com/chrplr/PCBS-LexicalDecision
+
+
+
+
 A general audio visual stimulus presentation script
 ---------------------------------------------------
 
@@ -185,8 +203,8 @@ Exercise: Modify the previous script to present *two* pictures and use expyrimen
 More examples using Expyriment
 ------------------------------
 
-- Check out
+Besides the examples from this course, you can find more expyriment scripts at
 
-   * https://github.com/expyriment/expyriment-stash
    * https://mbroedl.github.io/cognitive-tasks-for-expyriment/
+   * https://github.com/expyriment/expyriment-stash
 

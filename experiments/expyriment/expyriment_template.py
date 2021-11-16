@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Minimal skeleton for an expyriment script
+skeleton for an expyriment script
 
 See <https://docs.expyriment.org/Tutorial.html>
 
@@ -15,9 +15,22 @@ control.initialize(exp)
 
 ### insert here some code to generate the stimuli
 
-control.start()
+NTRIALS = 10
+
+stim1 
+
+aTrial
+
+
+control.start(skip_ready_screen=True)
+
+stimuli.TextScreen('Instructions', """""")
+exp.keyboard.wait()
 
 ### insert here some code to present the stimuli and record responses
+
+for itrial in range(NTRIALS):
+    stim
 
 control.end()
 

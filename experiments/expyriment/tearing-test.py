@@ -1,46 +1,54 @@
 #! /usr/bin/env python
 # Time-stamp: <2021-03-02 18:24:19 christophe@pallier.org>
 
-""" Displays a vertical moving bar """
+""" Displays a vertical moving bar to check the absence (or presence) of tearing. """
 
-from numpy import diff, histogram
-import expyriment
+from collections import Counter
+from expyriment import design, control, stimuli
 
-## Initialisation
-exp = expyriment.design.Experiment(name="First Experiment")  # create an Experiment object
+
+exp = design.Experiment(name="First Experiment")  
 
 ## Set develop mode. Comment for real experiment
 # expyriment.control.set_develop_mode(on=True)
 
-expyriment.control.initialize(exp)
-
-## Creating the stimulus
+control.initialize(exp)
 
 W, H = exp.screen.size
+print(f"Screen size: {W}x{H}")
 
-rect = expyriment.stimuli.Rectangle((5, H), colour=(255, 255, 255))
+
+# Create a white vertical line
+rect = stimuli.Rectangle((4, H), colour=(255, 255, 255))
 rect.preload()
 
-## Run the experiment
-expyriment.control.start()
+exp.add_data_variable_names(['skip', 'xpos', 'time', 'delta_time'])
 
-timings = []
-for skip in [2, 4, 8, 16]:
+control.start(subject_id=1, skip_ready_screen=True)
+
+stimuli.TextScreen('Tearing test', """A moving vertical bar will be displayed. 
+
+If the synchronization to vertical blank is set, 
+and the computer is fast enough, 
+the bar should not be brokeni""").present()
+exp.keyboard.wait()
+
+t0 = exp.clock.time
+timings= []
+for skip in [8, 16, 32]:
     xpos = 0
     rect.reposition((-W // 2, 0))
     while xpos < W:
         rect.move((skip, 0))
         rect.present(clear=True, update=True)
-        timings.append(exp.clock.time)
+        t1 = exp.clock.time
+        exp.data.add([skip, xpos, t1, t1 - t0])
+        timings.append(t1 - t0)
         xpos += skip
+        t0 = t1
 
-expyriment.control.end()
+control.end()
+
 
 print('histogram of time differences between displays')
-n, val = histogram(diff(timings))
-for i in n:
-    print(f'{i:>5}', end='')
-print()
-for v in val:
-    print(f'{v:>5}', end='')
-print()
+print(Counter(timings))

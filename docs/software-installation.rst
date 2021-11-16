@@ -304,3 +304,8 @@ Creating a conda environment
                   conda activate pcbs
    
           But then, you must not forget to activate the environment (``conda activate pcbs``) before working on the materials presented here.
+
+Installing Psychopy and Psychtoolbox on Linux
+---------------------------------------------
+
+If you want to install the psychology experiment generators [Psychtoolbox](http://psychtoolbox.org/) and [Psychopy](https://www.psychopy.org)  (which we will not use in this course), you can find instruction for Linux at http://www.pallier.org/installing-a-linux-workstation-with-psychtoolbox-psychopy-expyriment.html  (For Windows or MacOSX instructions, check their websites)
