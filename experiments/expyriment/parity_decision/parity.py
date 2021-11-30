@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-24 08:15:54 christophe@pallier.org>
+# Time-stamp: <2021-11-30 16:53:10 christophe@pallier.org>
 """This is a simple decision experiment.
 
 At each trial, a number between 0 and 9 is presented at the center of the
@@ -11,13 +11,21 @@ it is odd.
 import random
 from expyriment import design, control, stimuli
 
+N_TRIALS_PER_DIGIT = 50
 MAX_RESPONSE_DELAY = 2000
-TARGETS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] * 5
+TARGETS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] * N_TRIALS_PER_DIGIT
 EVEN_RESPONSE = 'f'
 ODD_RESPONSE = 'j'
 
 exp = design.Experiment(name="Parity Decision", text_size=40)
 control.initialize(exp)
+
+# prepare the stimuli
+trials = []
+for number in TARGETS:
+    trials.append((number, stimuli.TextLine(str(number))))
+
+random.shuffle(trials)
 
 cue = stimuli.FixCross(size=(50, 50), line_width=4)
 blankscreen = stimuli.BlankScreen()
@@ -32,25 +40,19 @@ instructions = stimuli.TextScreen("Instructions",
 
     Press the space bar to start.""")
 
-# prepare the stimuli
-trials = []
-for number in TARGETS:
-    trials.append((number, stimuli.TextLine(str(number))))
-
-
-exp.add_data_variable_names(['number', 'respkey', 'RT'])
+exp.add_data_variable_names(['number', 'oddity', 'respkey', 'RT'])
 
 control.start(skip_ready_screen=True)
 instructions.present()
 exp.keyboard.wait()
 
-for t in trials:
+for number, number_stim in trials:
     blankscreen.present()
     exp.clock.wait(1000)
     cue.present()
     exp.clock.wait(500)
-    t[1].present()
-    key, rt = exp.keyboard.wait(EVEN_RESPONSE + ODD_RESPONSE, duration=MAX_RESPONSE_DELAY)
-    exp.data.add([t[0],  key, rt])
+    number_stim.present()
+    key, rt = exp.keyboard.wait_char([EVEN_RESPONSE, ODD_RESPONSE], duration=MAX_RESPONSE_DELAY)
+    exp.data.add([number, number % 2, key, rt])
 
 control.end()

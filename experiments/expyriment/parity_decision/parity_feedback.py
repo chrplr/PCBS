@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-24 14:41:36 christophe@pallier.org>
+# Time-stamp: <2021-11-30 16:57:51 christophe@pallier.org>
 """This is a simple decision experiment.
 
 At each trial, a number between 0 and 9 is presented at the center of the
@@ -11,12 +11,13 @@ it is odd.
 import random
 from expyriment import design, control, stimuli, misc
 
+N_TRIALS_PER_DIGIT = 5
 MAX_RESPONSE_DELAY = 2000
-EVEN_RESPONSE_KEY = misc.constants.K_f
-ODD_RESPONSE_KEY = misc.constants.K_j
+EVEN_RESPONSE_KEY = 'f'
+ODD_RESPONSE_KEY = 'j'
 BUZZER = 'wrong-answer.ogg'
 
-exp = design.Experiment(name="Parity Decision", text_size=40)
+exp = design.Experiment(name="Parity Decision", text_size=30)
 
 control.initialize(exp)
 
@@ -24,8 +25,9 @@ cue = stimuli.FixCross(size=(50, 50), line_width=4)
 blankscreen = stimuli.BlankScreen()
 
 block = design.Block()
-targets = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] * 5
+targets = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] * N_TRIALS_PER_DIGIT
 random.shuffle(targets)
+
 for number in targets:
     t = design.Trial()
     t.set_factor('number', number)
@@ -38,9 +40,9 @@ negative_feedback = stimuli.Audio(BUZZER)
 instructions = stimuli.TextScreen("Instructions",
     f"""When you'll see a number, your task to decide, as quickly as possible, whether it is even or odd.
 
-    if it is even, press '{chr(EVEN_RESPONSE_KEY)}'
+    if it is even, press '{EVEN_RESPONSE_KEY}'
 
-    if it is odd, press '{chr(ODD_RESPONSE_KEY)}'
+    if it is odd, press '{ODD_RESPONSE_KEY}'
 
     There will be {len(targets)} trials in total.
 
@@ -59,7 +61,7 @@ for trial in block.trials:
     cue.present()
     exp.clock.wait(500)
     trial.stimuli[0].present()
-    key, rt = exp.keyboard.wait([EVEN_RESPONSE_KEY, ODD_RESPONSE_KEY], duration=MAX_RESPONSE_DELAY)
+    key, rt = exp.keyboard.wait_char([EVEN_RESPONSE_KEY, ODD_RESPONSE_KEY], duration=MAX_RESPONSE_DELAY)
 
     is_correct_answer = (trial.get_factor('is_even') and key == EVEN_RESPONSE_KEY) or \
                         (not trial.get_factor('is_even') and key ==  ODD_RESPONSE_KEY)
