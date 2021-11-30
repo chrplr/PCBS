@@ -12,6 +12,9 @@ PDF version of this document
 Git repository on github (contains solutions to exercices, ...)
   https://github.com/chrplr/PCBS
 
+Slides of the lectures
+  https://github.com/chrplr/PCBS/tree/master/slides/2021-pcbs
+  https://github.com/chrplr/PCBS/tree/master/slides/2021-intro-to-programming
 
 Instructors
 
