@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-11-30 16:53:10 christophe@pallier.org>
+# Time-stamp: <2021-11-30 17:02:36 christophe@pallier.org>
 """This is a simple decision experiment.
 
 At each trial, a number between 0 and 9 is presented at the center of the
@@ -40,7 +40,10 @@ instructions = stimuli.TextScreen("Instructions",
 
     Press the space bar to start.""")
 
-exp.add_data_variable_names(['number', 'oddity', 'respkey', 'RT'])
+exp.add_data_variable_names(['number',
+                             'oddity',
+                             'respkey',
+                             'RT'])
 
 control.start(skip_ready_screen=True)
 instructions.present()
@@ -52,7 +55,8 @@ for number, number_stim in trials:
     cue.present()
     exp.clock.wait(500)
     number_stim.present()
-    key, rt = exp.keyboard.wait_char([EVEN_RESPONSE, ODD_RESPONSE], duration=MAX_RESPONSE_DELAY)
+    key, rt = exp.keyboard.wait_char([EVEN_RESPONSE, ODD_RESPONSE],
+                                     duration=MAX_RESPONSE_DELAY)
     exp.data.add([number, number % 2, key, rt])
 
 control.end()

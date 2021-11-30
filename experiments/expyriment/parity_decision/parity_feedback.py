@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-11-30 16:57:51 christophe@pallier.org>
+# Time-stamp: <2021-11-30 17:01:42 christophe@pallier.org>
 """This is a simple decision experiment.
 
 At each trial, a number between 0 and 9 is presented at the center of the
@@ -9,7 +9,7 @@ it is odd.
 """
 
 import random
-from expyriment import design, control, stimuli, misc
+from expyriment import design, control, stimuli
 
 N_TRIALS_PER_DIGIT = 5
 MAX_RESPONSE_DELAY = 2000
@@ -49,7 +49,11 @@ instructions = stimuli.TextScreen("Instructions",
     Press the space bar to start.""")
 
 
-exp.add_data_variable_names(['number', 'is_even', 'respkey', 'RT', 'is_correct'])
+exp.add_data_variable_names(['number',
+                             'is_even',
+                             'respkey',
+                             'RT',
+                             'is_correct'])
 
 control.start(skip_ready_screen=True)
 instructions.present()
@@ -61,13 +65,18 @@ for trial in block.trials:
     cue.present()
     exp.clock.wait(500)
     trial.stimuli[0].present()
-    key, rt = exp.keyboard.wait_char([EVEN_RESPONSE_KEY, ODD_RESPONSE_KEY], duration=MAX_RESPONSE_DELAY)
+    key, rt = exp.keyboard.wait_char([EVEN_RESPONSE_KEY, ODD_RESPONSE_KEY],
+                                     duration=MAX_RESPONSE_DELAY)
 
     is_correct_answer = (trial.get_factor('is_even') and key == EVEN_RESPONSE_KEY) or \
                         (not trial.get_factor('is_even') and key ==  ODD_RESPONSE_KEY)
     if not is_correct_answer:
-            negative_feedback.play()
+        negative_feedback.play()
 
-    exp.data.add([trial.get_factor('number'), trial.get_factor('is_even'), key, rt, is_correct_answer])
+    exp.data.add([trial.get_factor('number'),
+                  trial.get_factor('is_even'),
+                  key,
+                  rt,
+                  is_correct_answer])
 
 control.end()
