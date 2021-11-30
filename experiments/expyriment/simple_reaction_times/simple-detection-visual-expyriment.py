@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-03-23 19:13:19 christophe@pallier.org>
+# Time-stamp: <2021-11-16 15:36:47 christophe@pallier.org>
 """ This is a simple reaction-time experiment.
 
 At each trial, a cross is presented at the center of the screen and
@@ -15,6 +15,7 @@ MAX_WAIT_TIME = 2000
 MAX_RESPONSE_DELAY = 2000
 
 exp = design.Experiment(name="Visual Detection", text_size=40)
+control.set_develop_mode(on=True)
 control.initialize(exp)
 
 target = stimuli.FixCross(size=(50, 50), line_width=4)
@@ -31,8 +32,8 @@ instructions = stimuli.TextScreen("Instructions",
 exp.add_data_variable_names(['trial', 'wait', 'respkey', 'RT'])
 
 control.start(skip_ready_screen=True)
-instructions.present()
-exp.keyboard.wait()
+#instructions.present()
+#exp.keyboard.wait()
 
 for i_trial in range(N_TRIALS):
     blankscreen.present()

@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-10-08 10:22:03 cp983411>
+# Time-stamp: <2021-11-16 13:53:46 christophe@pallier.org>
 
 """Draws the Ebbinghaus-Titchener illusion.
 
@@ -55,7 +55,7 @@ def main():
 
         big_circles_size, upper_limit = 35, 35
         small_circles_size, lower_limit = 15, 15
-        time_between_refresh = 50  # ms
+        time_between_refresh = 200  # ms
         delta = -1
 
         done = False

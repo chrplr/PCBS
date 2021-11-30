@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
-# Time-stamp: <2020-02-21 18:19:33 christophe@pallier.org>
+# Time-stamp: <2021-11-16 13:23:44 christophe@pallier.org>
 
 ''' Display two white squares in alternance and play sounds simultanously, 
 to check timing with external equipment (oscilloscope, BlackBox ToolKit, ...) '''
@@ -13,7 +13,7 @@ SOA = 3000
 
 
 exp = expyriment.design.Experiment(name="Cross-modal-timing-test")
-expyriment.control.set_develop_mode(True)  # commented because we need fullscreen
+#expyriment.control.set_develop_mode(True)  # commented because we need fullscreen
 
 expyriment.control.initialize(exp)
 
