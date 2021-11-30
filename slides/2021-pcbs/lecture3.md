@@ -78,5 +78,6 @@ Note: (PROJ course's example of a Lexical decision experiment web site: <https:/
 
 # Anagrams
 
-Given the list of french words, write a program that prints all anagrams.
+Given the list of french words, write a program that prints all anagrams (words sharing the same letters in different order).
 
+(For a solution, see <https://github.com/chrplr/openlexicon/tree/master/scripts/anagrams>)
