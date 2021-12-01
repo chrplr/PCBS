@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-11-30 17:02:36 christophe@pallier.org>
+# Time-stamp: <2021-12-01 10:00:13 christophe@pallier.org>
 """This is a simple decision experiment.
 
 At each trial, a number between 0 and 9 is presented at the center of the
@@ -11,26 +11,23 @@ it is odd.
 import random
 from expyriment import design, control, stimuli
 
-N_TRIALS_PER_DIGIT = 50
-MAX_RESPONSE_DELAY = 2000
-TARGETS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] * N_TRIALS_PER_DIGIT
+TARGETS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+N_TRIALS_PER_TARGET = 10
 EVEN_RESPONSE = 'f'
 ODD_RESPONSE = 'j'
+MAX_RESPONSE_DELAY = 2000
 
 exp = design.Experiment(name="Parity Decision", text_size=40)
 control.initialize(exp)
 
 # prepare the stimuli
-trials = []
-for number in TARGETS:
-    trials.append((number, stimuli.TextLine(str(number))))
-
+trials = [(number, stimuli.TextLine(str(number))) for number in TARGETS * N_TRIALS_PER_TARGET]
 random.shuffle(trials)
 
 cue = stimuli.FixCross(size=(50, 50), line_width=4)
 blankscreen = stimuli.BlankScreen()
 instructions = stimuli.TextScreen("Instructions",
-    f"""When you'll see a number, your task to decide, as quickly as possible, whether it is even or odd.
+    f"""When you'll see a number, your task to decide, as q:wuickly as possible, whether it is even or odd.
 
     if it is even, press '{EVEN_RESPONSE}'
 
@@ -49,12 +46,12 @@ control.start(skip_ready_screen=True)
 instructions.present()
 exp.keyboard.wait()
 
-for number, number_stim in trials:
+for number, stim in trials:
     blankscreen.present()
     exp.clock.wait(1000)
     cue.present()
     exp.clock.wait(500)
-    number_stim.present()
+    stim.present()
     key, rt = exp.keyboard.wait_char([EVEN_RESPONSE, ODD_RESPONSE],
                                      duration=MAX_RESPONSE_DELAY)
     exp.data.add([number, number % 2, key, rt])
