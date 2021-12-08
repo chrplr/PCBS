@@ -5,7 +5,6 @@ In a _lexical decision task_, a stimulus is presented at each trial and the subj
 ---
 
 # Step 1: stimuli in constants
-
 First of all, modify the [parity task script](../parity_decision/parity.py) to display either a word or a pseudoword at each trial (in a random order).
 
 For testing purposes, you can use the following variables:
@@ -17,7 +16,6 @@ Solution at [lexdec_v1.py](lexdec_v1.py)
 
 ---
 # Stage 2: read stimuli from a csv file
-
 
 Then modify the lexical decision script to read the stimuli from a comma-separated text file (`stimuli.csv`) with two columns. Here is the content of `stimuli.csv`:
 
@@ -75,6 +73,7 @@ Merge `words.csv` and `pseudowords.csv` into a single `stimuli2.csv` file:
 
 ---
 # Use `sys.argv` to pass the name of the file containing the list of stimuli.  
+
 
 Modify `lexdec_v2.py` to be able to pass the name of the stimuli file as an argument on the command line:
 
