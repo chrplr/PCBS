@@ -7,7 +7,7 @@ In a lexical decision task,  a stimuli is presented at each trial and the subjec
 
 In our implementation, the stimuli are listed in table with two columns saved in a csv file: 
 
-    stimulus,category 
+    item,category
     bonjour,W
     chien,W
     president,W
@@ -132,6 +132,6 @@ Given a list of words (e.g. the `ortho` field from Lexique383), write a program 
 
 ## Rhyme dictionary
 
-Using the field `syll` of the Lexique383.csv, create a dictionary organisez by rhymes, that is the lase, syllable
+Using the field `syll` of `Lexique383.csv`, create a dictionary organised by rhymes, that is the last syllable.
 
 

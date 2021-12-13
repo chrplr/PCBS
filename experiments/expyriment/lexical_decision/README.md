@@ -44,9 +44,31 @@ Solution at [lexdec_v2.py](lexdec_v2.py)
 
 2. how many words of grammatical category (`cgram`) 'NOM', and of length 5 (`nblettres`), of lexical frequency (`freqfilms2`) comprised between 10 and 100 per millions are there in this database? (answer=367). Save these words (i.e. the content of the field `Words`) into a `words.csv` file (you may have to clean manually, ie. remove unwanted columns, using Excel or Libroffice Calc).
 
+
 ---
 
-# Create nonwords. 
+# Automatising database searches with R and Python
+
+To select words, rather than using the interface at <http://www.lexique.org>, one can write scripts in R or Python. This promotes reproducible science.
+
+1. Open <https://github.com/chrplr/openlexicon/tree/master/documents/Interroger-Lexique-avec-R> and follow the instructions in the document `interroger-lexique-avec-R.pdf` 
+
+2. Read  <https://github.com/chrplr/openlexicon/tree/master/scripts#selecting-lexical-items-with-python>
+
+To select 100 5-letter long nouns for our lexical decision, execute:
+
+    import pandas
+    lex = pandas.read_csv("http://www.lexique.org/databases/Lexique382/Lexique382.tsv", sep='\t')
+    subset = lex.loc[(lex.nblettres == 5) & (lex.cgram == "NOM") & (lex.freqfilms2 > 10) & (lex.nombre == 's')]
+    samp = subset.sample(100)
+    samp2 = samp.rename(columns = {'ortho':'item'})
+    samp2.item.to_csv('words.csv', index=False)
+
+This creates `words.csv`. 
+
+---
+
+# Generate nonwords 
 
 1. Write a function that returns a nonword (a string containing random characters)
 
@@ -69,7 +91,7 @@ Merge `words.csv` and `pseudowords.csv` into a single `stimuli2.csv` file:
         p = pandas.read_csv('pseudowords.csv')
         p['category'] = 'P'
         allstims = pandas.concat([w, p])
-        allstims.to_csv('stimuli2.csv')
+        allstims.to_csv('stimuli2.csv', index=False)
 
 ---
 # Use `sys.argv` to pass the name of the file containing the list of stimuli.  
@@ -93,16 +115,24 @@ Solution at [lexdec_v3.py](lexdec_v3.py)
 
 ---
 
-# Automatising database searches with R and Python
+# Data analysis
 
-To select words, rather than using the interface at <http://www.lexique.org>, one can write scripts in R or Python. This promotes reproducible science.
+    import matplotlib.pyplot as plt 
+    import pandas as pd
+    import seaborn as sns
+    import scipy
+    
+    results = pd.read_csv('data/lexdec_v3_02_202112131227.xpd', comment='#')
+    results.head()
+    sns.boxplot(x="cat", y="RT", hue="respkey", data=results)
+    plt.show()
+    
+    results.groupby(results.cat).describe()
+    scipy.stats.ttest_ind(results.RT.loc[results.cat=='W'],
+                          results.RT.loc[results.cat=='P'],
+                          equal_var=False)
 
-1. Open <https://github.com/chrplr/openlexicon/tree/master/documents/Interroger-Lexique-avec-R> and follow the instructions in the document `interroger-lexique-avec-R.pdf` 
-
-2. Read and execute <https://github.com/chrplr/openlexicon/tree/master/scripts#selecting-lexical-items-with-python>
-
----
-
+--- 
 # Finally
 
 Check out the example of a Lexical decision experiment at <https://chrplr.github.io/PCBS-LexicalDecision/>)
