@@ -1,27 +1,48 @@
 Programming a Lexical decision task
-===================================
++++++++++++++++++++++++++++++++++++
+
 
 In a *lexical decision task*, a stimulus is presented at each trial and
 the subject must decide if it is a word or not (and indicate his
 response by pressing one of two keys). Let’s program such a task.
 
---------------
 
 Step 1: stimuli in constants
 ============================
 
 First of all, modify the `parity task
-script <../parity_decision/parity.py>`__ to display either a word or a
+script <../experiments/expyriment/parity_decision/parity.py>`__ to display either a word or a
 pseudoword at each trial (in a random order).
 
-For testing purposes, you can use the following variables:
-
-::
+For testing purposes, you can use the following variables::
 
    words = ['bonjour', 'chien', 'président']
    pseudos = ['lopadol', 'mirance', 'clapour' ]
 
-Solution at `lexdec_v1.py <lexdec_v1.py>`__
+Solution at `lexdec_v1.py <../experiments/expyriment/lexical_decision/lexdec_v1.py>`__
+
+
+Step 2: read stimuli from a csv file
+====================================
+
+Then modify the lexical decision script to read the stimuli from a comma-separated text file (`stimuli.csv`) with two columns. Here is the content of `stimuli.csv`::
+
+    item,category 
+    bonjour,W
+    chien,W
+    président,W
+    lopadol,P
+    mirance,P
+    clapour,P
+
+(hint: To read a csv file, one can use `pandas.read_csv`)
+
+Solution at `lexdec_v2.py <../experiments/expyriment/lexical_decision/lexdec_v2.py>`__ 
+
+Note: You can use a file comparator, e.g. [meld](https://meldmerge.org/), to compare the two versions::
+
+     meld lexdec_v1.py lexcdec_v2.py
+
 
 Select words in a lexical dabatase
 ==================================
@@ -42,7 +63,7 @@ Select words in a lexical dabatase
    ``Words``) into a ``words.csv`` file (you may have to clean manually,
    ie. remove unwanted columns, using Excel or Libroffice Calc).
 
---------------
+
 
 Automatising database searches with R and Python
 ================================================
@@ -85,21 +106,19 @@ Generate nonwords
        def pseudo(length):
            """ returns a nonword of length `length` """
 
-   Solution at `create_nonwords.py <create_nonwords.py>`__
+   Solution at `create_nonwords.py <../experiments/expyriment/lexical_decision/create_nonwords.py>`__
 
 2. Use this function to create a list of 100 nonwords and save it in a
    file ``"pseudowords.csv"`` (one pseudoword per line) (see
    https://www.pythontutorial.net/python-basics/python-write-text-file/)
 
---------------
+
 
 Create a stimuli file
 =====================
 
 Merge ``words.csv`` and ``pseudowords.csv`` into a single
-``stimuli2.csv`` file:
-
-::
+``stimuli2.csv`` file::
 
        import pandas
        w = pandas.read_csv('words.csv')
@@ -108,6 +127,20 @@ Merge ``words.csv`` and ``pseudowords.csv`` into a single
        p['category'] = 'P'
        allstims = pandas.concat([w, p])
        allstims.to_csv('stimuli2.csv', index=False)
+
+
+Use `sys.argv` to pass the name of the file containing the list of stimuli  
+==========================================================================
+
+Modify `lexdec_v2.py` to be able to pass the name of the stimuli file as an argument on the command line::
+
+        python lexdec_v3.py stimuli2.csv
+
+(hint: use `sys.argv[]`; see https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/)
+
+Solution at `lexdec_v3.py <../experiments/expyriment/lexical_decision/lexdec_v3.py>`__ 
+
+
 
 Improving the pseudowords
 =========================
@@ -118,7 +151,6 @@ Improving the pseudowords
 2. Generate a new list of pseudowords and add them to a new
    ``stimuli3.csv`` file
 
---------------
 
 Data analysis
 =============
@@ -140,7 +172,6 @@ Data analysis
                          results.RT.loc[results.cat=='P'],
                          equal_var=False)
 
---------------
 
 Finally
 =======

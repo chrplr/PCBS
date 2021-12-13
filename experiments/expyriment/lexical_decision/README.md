@@ -105,7 +105,7 @@ Modify `lexdec_v2.py` to be able to pass the name of the stimuli file as an argu
 
         python lexdec_v3.py stimuli2.csv
 
-(hint: use `sys.argv[]`; see <https://www.tutorialspoint.com/python3/python_command_line_arguments.htm>)
+(hint: use `sys.argv[]`; see <https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/>)
 
 Solution at [lexdec_v3.py](lexdec_v3.py) 
 

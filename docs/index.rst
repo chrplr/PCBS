@@ -48,6 +48,7 @@ Slack discussion forum
    representing-numbers-images-text
    stimulus-creation
    running-experiments
+   lexical-decision.rst
    triggers
    data-analyses
    simulations          
