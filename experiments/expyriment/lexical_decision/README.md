@@ -31,6 +31,10 @@ Then modify the lexical decision script to read the stimuli from a comma-separat
 
 Solution at [lexdec_v2.py](lexdec_v2.py) 
 
+Note: You can use a file comparator, e.g. [meld](https://meldmerge.org/), to compare the two versions:
+
+     meld lexdec_v1.py lexcdec_v2.py
+ 
 --- 
 
 # Select words in a lexical dabatase
@@ -55,7 +59,7 @@ To select words, rather than using the interface at <http://www.lexique.org>, on
 
 2. Read  <https://github.com/chrplr/openlexicon/tree/master/scripts#selecting-lexical-items-with-python>
 
-To select 100 5-letter long nouns for our lexical decision, execute:
+To select 100 five letters long nouns for our lexical decision, execute:
 
     import pandas
     lex = pandas.read_csv("http://www.lexique.org/databases/Lexique382/Lexique382.tsv", sep='\t')

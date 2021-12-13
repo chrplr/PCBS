@@ -27,13 +27,12 @@ random.shuffle(trials)
 
 cue = stimuli.FixCross(size=(50, 50), line_width=4)
 blankscreen = stimuli.BlankScreen()
-instructions = stimuli.TextScreen(
-    "Instructions",
+instructions = stimuli.TextScreen("Instructions",
     f"""When you'll see a stimulus, your task to decide, as quickly as possible, whether it is a word or not.
 
     if it is a word, press '{WORD_RESPONSE_KEY.upper()}'
 
-    if it is odd, press '{NONW_RESPONSE_KEY.upper()}'
+    if it is a non-word, press '{NONW_RESPONSE_KEY.upper()}'
 
     Press the space bar to start.""")
 

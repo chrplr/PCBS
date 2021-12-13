@@ -43,7 +43,7 @@ instructions = stimuli.TextScreen("Instructions",
 
     if it is a word, press '{WORD_RESPONSE_KEY.upper()}'
 
-    if it is odd, press '{NONW_RESPONSE_KEY.upper()}'
+    if it is a non-word, press '{NONW_RESPONSE_KEY.upper()}'
 
     Press the space bar to start.""")
 
