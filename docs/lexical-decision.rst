@@ -157,26 +157,28 @@ Improving the pseudowords
 Data analysis
 -------------
 
-::
+After running::
 
-   import matplotlib.pyplot as plt 
-   import pandas as pd
-   import seaborn as sns
-   import scipy
+      python lexdec_v3.py stimuli2.csv
 
-   results = pd.read_csv('data/lexdec_v3_02_202112131227.xpd', comment='#')
-   results.head()
-   sns.boxplot(x="cat", y="RT", hue="respkey", data=results)
-   plt.show()
+the subject's responses are stored in the subfolder ``data/`` contains a file ``lexdec...xpd``
 
-   results.groupby(results.cat).describe()
-   scipy.stats.ttest_ind(results.RT.loc[results.cat=='W'],
-                         results.RT.loc[results.cat=='P'],
-                         equal_var=False)
+You can download this :download:`xpd file <../experiments/expyriment/lexical_decision/data/lexdec_v3_02_202112131227.xpd'>`__ as an example.
+
+1. Use ``pandas.read_csv(..., comment='#')`` to read the responses into a pandas dataframe.
+
+2. Compute the average reaction times for words and for pseudo-words. 
+
+3. Plot the distribution of reactions times using ``seaborn.boxplot()``
+
+4. Use  ``scipy.stats.ttest_ind()`` to perform a Student t-test compairn gthe RTs of Words and Non-Words.
+
+Check a solution :download:`analyze_RT.py <../experiments/expyriment/lexical_decision/analyze_RT.py>`
+
 
 
 Finally
 -------
 
-Check out the example of a Lexical decision experiment at
+Check out the example of a 'real' lexical decision experiment at
 https://chrplr.github.io/PCBS-LexicalDecision/)

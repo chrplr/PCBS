@@ -13,14 +13,14 @@ Git repository on github (contains solutions to exercices, ...)
   https://github.com/chrplr/PCBS
 
 Slides of the lectures
-  https://github.com/chrplr/PCBS/tree/master/slides/2021-pcbs
-  https://github.com/chrplr/PCBS/tree/master/slides/2021-intro-to-programming
+   - https://github.com/chrplr/PCBS/tree/master/slides/2021-pcbs
+   - https://github.com/chrplr/PCBS/tree/master/slides/2021-intro-to-programming
 
 Instructors
 
-   Christophe Pallier <christophe@pallier.org>
-   Cédric Foucault <cedric.foucault@gmail.com>
-   Henri van den Driessche <henri.vandendriessche@ens.fr>
+   - Christophe Pallier <christophe@pallier.org>
+   - Cédric Foucault <cedric.foucault@gmail.com>
+   - Henri van den Driessche <henri.vandendriessche@ens.fr>
 
 
 Moodle

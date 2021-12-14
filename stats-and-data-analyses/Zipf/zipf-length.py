@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2018-11-23 11:23:25 cp983411>
+# Time-stamp: <2021-12-14 09:48:36 christophe@pallier.org>
 
 """ plot the relationship between word length and frequency """
 
@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sas
 
-lex = pd.read_csv('../lexical-decision/lexique382-reduced.txt', sep='\t')
+lex = pd.read_csv('lexique382-reduced.txt', sep='\t')
 
 print(lex.head())
 
