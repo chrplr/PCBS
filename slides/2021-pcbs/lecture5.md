@@ -13,9 +13,11 @@ Go to the bottom of <https://pcbs.readthedocs.io/en/latest/lexical-decision.html
 
 Do you know about Zipf's law? 
 
-![](images/960px-Zipf_30wiki_en_labels.png)
+![](images/480px-Zipf.png)
 
 See http://en.wikipedia.org/wiki/Zipf%27s_law 
+
+---
 
 1. Write a function that, given a list of words, returns the number of occurrences of each word. This function should return the results in the form of a Python dictionary associating each word to its number of occurrences in the original list.
 
