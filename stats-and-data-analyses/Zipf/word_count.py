@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-# Time-stamp: <2018-11-16 09:25:33 cp983411>
+# Time-stamp: <2021-12-14 15:41:16 christophe@pallier.org>
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -49,7 +49,7 @@ def zipf_plot(ftable, logx=False, logy=False):
         ftable: pd.Series mapping words to their frequencies
     """
 
-    x = np.arange(len(ftable))
+    x = 1 + np.arange(len(ftable))
     y = ftable
     if logx:
         x = np.log10(x)
