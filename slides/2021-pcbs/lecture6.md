@@ -94,7 +94,7 @@ Produce the raster plot:
         
     for trial, spikes in enumerate(tenSpikeTrains):
          plt.vlines(spikes.nonzero(), trial, trial + 1)
-    plt.xlim([0, len(spiketrain)])
+    plt.xlim([0, tenSpikeTrains.shape[1]) 
     plt.axvspan(5, 14, alpha=0.1, color='green')
     plt.show()
 
@@ -146,7 +146,7 @@ Check out [permutation_test.py](https://github.com/chrplr/PCBS/blob/master/stats
 
 ## Exercise
 
-The file provides measurements obtained in two groups. 
+The file `[two-groups.csv](https://github.com/chrplr/PCBS/blob/master/slides/2021-pcbs/two-groups.csv)` provides measurements obtained in two groups. 
 
 - read the data and compute the means and standards deviations in each group
 - draw figures showing the two distributions (1) using side-by-side boxplots (2) using overlapping histograms 
@@ -187,13 +187,11 @@ The _Student t test_ is often used to compare two samples. In Python, it is avai
 
 1. Use it compute a p-value associated to the previous samples.
 
-2. Let's run it on simulated data.
+2. write code that generates two random samples of size `n` from populations having having means `m1` and `m2`, standard deviations `sd1` and `sd2`respectively.
 
-   - write code that generates two random samples of size `n` from populations having having means `m1` and `m2`, standard deviations `sd1` and `sd2`respectively.
+3. Fix m1=100, m2=110, sd1=sd2=10, n=10; Compute the distribution of p-values obtained from t-tests comparing such samples
 
-   - Fix m1=100, m2=110, sd1=sd2=10, n=10; Compute the distribution of p-values obtained from t-tests comparing such samples
-
-   - Plot the probability to detect an effect of size 1/2 (that is `m1-m2 = 1/2 * sd1)` as a function of `n`.
+4. Plot the probability to detect an effect of size 1/2 (that is `m1-m2 = 1/2 * sd1)` as a function of `n`.
 
 ---
 

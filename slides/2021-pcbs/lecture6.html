@@ -1660,7 +1660,7 @@ tenSpikeTrains = np.array([[0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,1,0,0,0], [0,0,0,0
 
 for trial, spikes in enumerate(tenSpikeTrains):
      plt.vlines(spikes.nonzero(), trial, trial + 1)
-plt.xlim([0, len(spiketrain)])
+plt.xlim([0, tenSpikeTrains.shape[1]) 
 plt.axvspan(5, 14, alpha=0.1, color='green')
 plt.show()
 </code></pre></section>
@@ -1829,7 +1829,7 @@ plt.show()
             <header><h2>Exercise</h2></header>
             
             
-            <section><p>The file provides measurements obtained in two groups. </p>
+            <section><p>The file <code>[two-groups.csv](https://github.com/chrplr/PCBS/blob/master/slides/2021-pcbs/two-groups.csv)</code> provides measurements obtained in two groups. </p>
 <ul>
 <li>read the data and compute the means and standards deviations in each group</li>
 <li>draw figures showing the two distributions (1) using side-by-side boxplots (2) using overlapping histograms </li>
@@ -1919,9 +1919,6 @@ detach(dat)
 <ol>
 <li>
 <p>Use it compute a p-value associated to the previous samples.</p>
-</li>
-<li>
-<p>Let's run it on simulated data.</p>
 </li>
 <li>
 <p>write code that generates two random samples of size <code>n</code> from populations having having means <code>m1</code> and <code>m2</code>, standard deviations <code>sd1</code> and <code>sd2</code>respectively.</p>
