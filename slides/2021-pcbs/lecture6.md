@@ -146,7 +146,7 @@ Check out [permutation_test.py](https://github.com/chrplr/PCBS/blob/master/stats
 
 ## Exercise
 
-The file `[two-groups.csv](https://github.com/chrplr/PCBS/blob/master/slides/2021-pcbs/two-groups.csv)` provides measurements obtained in two groups. 
+The file [two-groups.csv](https://github.com/chrplr/PCBS/blob/master/slides/2021-pcbs/two-groups.csv) provides measurements obtained in two groups. 
 
 - read the data and compute the means and standards deviations in each group
 - draw figures showing the two distributions (1) using side-by-side boxplots (2) using overlapping histograms 
