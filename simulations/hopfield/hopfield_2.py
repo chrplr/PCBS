@@ -17,8 +17,13 @@ def compute_next_state(state, weight):
 
     Returns
     -------
-    next_state: array of shape (N)
+    next_state: array of shape (N,)
     """
+    # Note: '@' is a shorthand for 'np.matmul()'. Numpy automatically promotes
+    # 1D arrays (vectors) into 2D arrays (matrices) before applying the
+    # matrix multiplication, turning the left operand (here 'state') into a
+    # matrix of shape (1, N). After applying the matrix multiplication,
+    # numpy then perform the inverse transformation to give back a 1D array.
     next_state = np.where(state @ weight >= 0, +1, -1)
     return next_state
 
