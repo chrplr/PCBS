@@ -58,6 +58,7 @@ Slack discussion forum
    coding-exercices
    regular_expressions
    building_abstractions_with_functions
+   hopfield
    git-and-github
    
 
