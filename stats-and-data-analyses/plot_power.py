@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# Time-stamp: <2022-01-05 13:57:33 christophe@pallier.org>
 
 """ Estimate the statistical power of Student t test. """
 

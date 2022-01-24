@@ -187,7 +187,7 @@ Data analyses, Statistics in Python
 -  *Python Data Science Handbook* by Jake VanderPlas:
    https://jakevdp.github.io/PythonDataScienceHandbook
 -  *Introduction to Data Science in Python*: notebook from a 2 day workshop organized by the Paris-Saclay Center for Data Science: https://github.com/paris-saclay-cds/data-science-workshop-2019
-
+-  *Machine Learning with scikit-learn" MOOC*: https://www.fun-mooc.fr/en/courses/machine-learning-python-scikit-learn/  (on github: https://inria.github.io/scikit-learn-mooc/)
 
 Simulations
 -----------
