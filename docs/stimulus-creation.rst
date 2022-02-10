@@ -65,8 +65,9 @@ Here is a Python script that opens a window and displays a square:
     pygame.draw.rect(screen, BLUE, (left_x, top_y, width, height))
 
     pygame.display.flip()  # display the backbuffer on the screen
+                           # Note: this function is synonymous with `pygame.display.update()`
 
-    # Save the image into a file
+   # Save the image into a file
     pygame.image.save(screen, "square-blue.png")
 
     # Wait until the window is closed
@@ -84,12 +85,16 @@ Download (:download:`square.py <../stimuli/visual-illusions/square.py>`) and run
 
     python square.py
 
+
+Have a look at the code.
+
+
 Exercise (*): make a copy of the script and modify the copy to
    - change the color of the rectangle to RED
    - change the size of the rectangle to 100 x 300
+   - comment the line `pygame.display.flip()` and run the script.  You should realize that merely drawing something to the display surface (`screen`) doesn't cause it to appear on the screen -- you need to call `pygame.display.flip()` to move the surface from general memory to video memory. This will be useful when you want to make an animation, that is, draw a sequences of images.  
 
-
-Remark: you can get some help from:
+Have a look at:
    - `Pygame drawing basics <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__
    - `Pygame online documentation <https://www.pygame.org/docs/>`__
 

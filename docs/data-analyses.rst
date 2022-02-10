@@ -61,7 +61,7 @@ Zipf law
     import string
     def remove_punctuation(text):
        punct = string.punctuation + chr(10)
-       return text.translate(str.maketrans(punct, " " \* len(punct)))
+       return text.translate(str.maketrans(punct, " " * len(punct)))
 
 -  Zipf law states that the product rank X frequency is roughly
    constant. This ‘law’ was discovered by Estoup and popularized by
