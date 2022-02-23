@@ -43,7 +43,7 @@ Updating
 -  The state of a neuron is updated according to the sign of the input
    it receives in the following way:
 
-   .. figure:: images/hopfield_update_equation.svg
+   .. figure:: images/hopfield_update_equation.png
       :alt: Update equation
 
 
