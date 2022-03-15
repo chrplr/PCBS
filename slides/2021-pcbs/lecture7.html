@@ -1388,7 +1388,7 @@ self-recurrent connections. Thus, the weight matrix is symmetric
 <li>The state of a neuron is updated according to the sign of the input it receives
 in the following way:</li>
 </ul>
-<p><img src="https://latex.codecogs.com/svg.image?&space;s_{j}(t&plus;1)=&space;\begin{cases}&space;&space;&space;&space;&plus;1,&&space;\text{if&space;}&space;\sum_{i=0}^{N-1}s_{i}(t)w_{ij}&space;\geq&space;0\\&space;&space;&space;&space;-1,&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\text{otherwise}\end{cases}" title=" s_{j}(t+1)= \begin{cases} +1,& \text{if } \sum_{i=0}^{N-1}s_{i}(t)w_{ij} \geq 0\\ -1, & \text{otherwise}\end{cases}" /></p>
+<p><img src="https://latex.codecogs.com/svg.image?&space;s_{i}(t&plus;1)=&space;\begin{cases}&space;&space;&space;&space;&plus;1,&&space;\text{if&space;}&space;\sum_{j=0}^{N-1}w_{ij}s_{j}(t)&space;\geq&space;0\\&space;&space;&space;&space;-1,&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\text{otherwise}\end{cases}" title=" s_{i}(t+1)= \begin{cases} +1,& \text{if } \sum_{j=0}^{N-1}w_{ij}s_{j}(t) \geq 0\\ -1, & \text{otherwise}\end{cases}" /></p>
 <ul>
 <li>Here we will use the synchronous update rule, where all of the neurons are
 updated at the same time from one time step to the next.</li>
