@@ -11,9 +11,8 @@ def compute_next_state(state, weight):
     state: array of shape (N,)
         state vector with binary values, coded as +1 or -1
     weight: 2d array of shape (N, N)
-        weight matrix where weight[i, j] is the connection weight from
-        unit j to unit i and from unit i to unit j (connections are symmetric
-        in a Hopfield network)
+        weight matrix where weight[i, j] is the connection weight between
+        unit i and unit j (connections are symmetric in a Hopfield network)
 
     Returns
     -------
@@ -21,10 +20,10 @@ def compute_next_state(state, weight):
     """
     # Note: '@' is a shorthand for 'np.matmul()'. Numpy automatically promotes
     # 1D arrays (vectors) into 2D arrays (matrices) before applying the
-    # matrix multiplication, turning the left operand (here 'state') into a
-    # matrix of shape (1, N). After applying the matrix multiplication,
+    # matrix multiplication, turning the right operand (here 'state') into a
+    # matrix of shape (N, 1). After applying the matrix multiplication,
     # numpy then perform the inverse transformation to give back a 1D array.
-    next_state = np.where(state @ weight >= 0, +1, -1)
+    next_state = np.where(weight @ state >= 0, +1, -1)
     return next_state
 
 def compute_final_state(initial_state, weight, max_iter=1000):
