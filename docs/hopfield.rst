@@ -43,8 +43,9 @@ Updating
 -  The state of a neuron is updated according to the sign of the input
    it receives in the following way:
 
-   .. figure:: images/hopfield_update_equation.png
-      :alt: Update equation
+.. raw:: html
+
+   <p><img src="https://latex.codecogs.com/svg.image?&space;s_{i}(t&plus;1)=&space;\begin{cases}&space;&space;&space;&space;&plus;1,&&space;\text{if&space;}&space;\sum_{j=0}^{N-1}w_{ij}s_{j}(t)&space;\geq&space;0\\&space;&space;&space;&space;-1,&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&space;&&space;\text{otherwise}\end{cases}" title=" s_{i}(t+1)= \begin{cases} +1,& \text{if } \sum_{j=0}^{N-1}w_{ij}s_{j}(t) \geq 0\\ -1, & \text{otherwise}\end{cases}" /></p>
 
 
 -  Here we will use the synchronous update rule, where all of the
