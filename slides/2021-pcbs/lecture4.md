@@ -5,7 +5,7 @@ Day 4
 
 In a lexical decision task,  a stimuli is presented at each trial and the subject must decide if it is a word or not (and indicate his response by pressing one of two keys).
 
-In our implementation, the stimuli are listed in table with two columns saved in a csv file: 
+Program a lexical decision experiment, with stimuli are listed in table with two columns saved in a csv file: 
 
     item,category
     bonjour,W
