@@ -1442,17 +1442,8 @@ pre { background: #fdf6e3; color: #586e75; }
 <p>Rules of the game:</p>
 <ul>
 <li>your code should work and be <strong>portable</strong>, i.e., use relatives paths, so that anyone can run it **</li>
-<li>your code should be <strong>readable</strong>, following, as much a possible, <a href="https://pcbs.readthedocs.io/en/latest/tips-to-write-clean-code.html">Clean Code</a>. </li>
-<li>
-<p>do not be overambitious, the smaller the code the better (~30~100 lines of code (not comments) is fine)</p>
-</li>
-<li>
-<p>your project must contain a readable documentation written in  <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Markdown</a>.</p>
-</li>
-<li>
-<p>You project must be publicly available on http://github.com   </p>
-</li>
-<li>You must use the <strong>Git</strong> version system.    </li>
+<li>your code should be <strong>readable</strong>, following, as much a possible, <a href="https://pcbs.readthedocs.io/en/latest/tips-to-write-clean-code.html">Clean Code</a>. (do not be overambitious, ~30~200 lines of code (not including comments) is fine)</li>
+<li>You have to use the <strong>Git</strong> versionning system to keep track of the progress of your code.</li>
 </ul></section>
             
           </div>
@@ -1470,7 +1461,7 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              1/2
+              1/3
             </aside>
           </footer>
         </div>
@@ -1481,8 +1472,18 @@ pre { background: #fdf6e3; color: #586e75; }
         <div class="slide slide-2">
           <div class="inner">
             
-            <header><h1>Git</h1></header>
             
+            <section><ul>
+<li>
+<p>your project must contain a readable documentation written in  <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Markdown</a>.</p>
+</li>
+<li>
+<p>You project must be publicly available on http://github.com   </p>
+</li>
+</ul>
+<p>Examples:</p>
+<p><a href="https://github.com/chrplr/PCBS-LexicalDecision">https://github.com/chrplr/PCBS-LexicalDecision</a>, <a href="https://github.com/sepehr-rasouli/PCBS-ITRL/">https://github.com/sepehr-rasouli/PCBS-ITRL/</a>, 
+<a href="https://github.com/doriguzmn/PCBS-DataAnalysis">https://github.com/doriguzmn/PCBS-DataAnalysis</a></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1499,7 +1500,71 @@ pre { background: #fdf6e3; color: #586e75; }
             </aside>
             
             <aside class="page_number">
-              2/2
+              2/3
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: proj.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h1>Git</h1></header>
+            
+            
+            <section><p>Check <a href="https://pcbs.readthedocs.io/en/latest/tools-for-reproducible-science.html">https://pcbs.readthedocs.io/en/latest/tools-for-reproducible-science.html</a></p>
+<p>The reference <a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></p>
+<h1>Github</h1>
+<ol>
+<li>
+<p>Create an account on github.com</p>
+</li>
+<li>
+<p>Create an ssh key on your local computer, using the command <code>ssh-keygen</code> and copy it on github.com. DEtailed instructions are available at <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a></p>
+</li>
+<li>
+<p>Create a new repository named <code>project</code> selecting 'Public' and 'Add a README file'.</p>
+</li>
+<li>
+<p>Clone it on your local computer:</p>
+<ul>
+<li>PRess the green button 'Code' and copy the ssh url (for me:git@github.com:chrplr/test.git )</li>
+<li>
+<p>in a terminal (git bash for windows), type:</p>
+<p>git clone URL</p>
+<p>where URL is the address you copied on the previous step </p>
+</li>
+</ul>
+</li>
+<li>
+<p>edit the file <code>README</code>, adding a line.</p>
+</li>
+</ol>
+<p>5.
+    git add README
+    git commit -m test
+    git push</p>
+<p>Different authentifcation methods in github:</p>
+<p>https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/#what-you-need-to-do-today</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="proj.md">proj.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/3
             </aside>
           </footer>
         </div>
@@ -1525,9 +1590,9 @@ pre { background: #fdf6e3; color: #586e75; }
       </tr>
       
       
-      <tr id="toc-row-2">
-        <th><a href="#slide:2">Git</a></th>
-        <td><a href="#slide:2">2</a></td>
+      <tr id="toc-row-3">
+        <th><a href="#slide:3">Git</a></th>
+        <td><a href="#slide:3">3</a></td>
       </tr>
       
       
