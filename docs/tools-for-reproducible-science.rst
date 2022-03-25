@@ -98,23 +98,20 @@ You can also compare two files on the command-line with the command
 
    diff file1 file2
 
-But I recommend another command, ``meld``, as it has a more
+But I recommend another command, ``meld`` (which can be downloaded from http://meldmerge.org), as it has a more
 user-friendly output::
 
    meld file1 file2
 
-(you may need to install the program ``meld`` with
-``sudo apt-get install meld`` if you are under Linux, or from
-http://meldmerge.org)
+On Mac, meld can be difficult to install, you can rather use ``opendiff`` or ``filemerge`` (See https://eclecticlight.co/2018/04/14/comparing-files-filemerge-opendiff-and-bbedit/).
+
 
 These tools also work on directories. To quickly check if there is any
 difference between two directories::
 
    diff -r -q dir1 dir2
 
-or
-
-::
+or::
 
    meld dir1 dir2
 
@@ -131,11 +128,7 @@ Introducing git
 A version control system keeps track of the history of changes to a project, allows one to explore ideas by maintaining several parallel versions of the
 code.
 
-In these lectures, we use Git. Although Git is a complex beast, you will only need to know a few commands (`git clone, git pull, git init, git add, git
-status, git commit and git push``)
-
-
-
+In these lectures, we use Git. Although Git is a complex beast, you will only need to know a few commands (``git clone, git pull, git init, git add, git status, git commit`` and ``git push``)
 
 
 

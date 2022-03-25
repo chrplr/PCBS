@@ -44,22 +44,23 @@ Slack discussion forum
    software-installation
    practical-interaction
    running-python
+   coding-exercices
    automata-turing-machines-and-computers
    representing-numbers-images-text
    stimulus-creation
    running-experiments
-   triggers
    data-analyses
+   regular_expressions
    simulations          
+   hopfield
+   web-scraping
    tools-for-reproducible-science
+   git-and-github
    how-to-solve-problems
    tips-to-write-clean-code
-   projects
-   coding-exercices
-   regular_expressions
    building_abstractions_with_functions
-   hopfield
-   git-and-github
+   projects
+   triggers
    
 
 

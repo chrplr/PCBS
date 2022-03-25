@@ -1,5 +1,5 @@
-Aim 
-====
+New Aim 
+=======
 
 Learn  useful tools for cognitive science and implement some typical activities of cogntivie scientist:
 
