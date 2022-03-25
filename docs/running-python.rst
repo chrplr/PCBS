@@ -21,21 +21,16 @@ To run a python script, that is, a text file containing python code, you need to
 
 1. Open a Terminal
 
-MacOS
-   Type ``terminal`` in the Spotlight search field.
-
-Windows
-   Start ``Git Bash`` (This assumes that you have installed
+  * MacOSX: Search for ``terminal`` in Spotlight.
+  * Windows: Launch ``Git Bash`` (This assumes that you have installed
    ``Git for windows`` as described in `Instructions for software
    installation <#instructions-for-software-installation>`__)
+  * Linux: Launch ``Terminal`` from your application menu or use
+   ``Ctrl-Alt-T`` in Gnome, Xfce or ``Win+Return`` in i3.
 
-Linux
-   Launch ``Terminal`` from your application menu or use
-   ``Ctrl-Alt-T`` (gnome, xfce), or ``Win+Return`` (i3)).
+2. If the script is not located in your home directory, use the ``cd`` command to navigate to the directory that contains the script (to learn about this, read `Navigation in the shell <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`__). 
 
-2. If the script is not located in the current working directory (the user's home directory), use the `cd command <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`__ to navigate to the relevant directory
-
-3. Type ``python`` followed by the script's filename, then press the ``return`` key.
+3. Type ``python`` followed by the script's filename, then press the ``return/enter`` key.
 
 For example, let us suppose that you want to execute a script named ``matches.py`` located in a subdirectory ``PCBS/games`` of your home directory. Open a terminal and type::
 
@@ -45,22 +40,23 @@ For example, let us suppose that you want to execute a script named ``matches.py
 
 Remarks:
 
-  * When the script has run to completion, you will be back interacting with the shell (see http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php).
+  * When the script has run to completion, you will be back to interacting with `the shell <http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php)>`_.
 
   * It you need to interrupt a running python script, you can press ``Ctrl-C`` in the Terminal.
 
-  * You can specify `absolute or relative pathnames <https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/>`__ to specify the location of the scripts::
+  * You can specify `absolute or relative pathnames <https://www.geeksforgeeks.org/absolute-relative-pathnames-unix/>`__ to specify the location of the script::
 
      python ~/PCBS/games/matches.py
 
-  * A good practice is to always take a glance to the code *before* running it. Depending on your system, you might be able to do this with the commands ``cat filename.py`` or ``less filename.py`` or ``micro filename.py``, ...
+   Note: The directory from which you started the script is the **current working directory**: it will be the root for any relative path names that may be used within the script.
 
+  * A good practice is to systematically take a glance to the code *before* running it. Depending on your system, you might be able to do this with the commands ``cat filename.py`` or ``less filename.py`` or ``micro filename.py``.
 
 
 Testing a short piece of python code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To quickly test some Python code, type ``ipython`` on a command line.
+To quickly test some Python code, type ``ipython`` (“interactive Python”) on a command line.
 
 .. figure:: figures/ipython_terminal1.png
 
@@ -111,23 +107,19 @@ It is possible to  execute a python script from within ipython. While in ipython
 Finally, To quit ipython, type ``quit()`` or press ``Ctrl-D`` .
 
 This approach is fine if you need to quickly test an idea. But as soon as you quit ``ipython``, you lose
-all what you have done (technically, this is not entirely true: ipython saves the history of commands that you have typed).
+all what you have done.
 
-To keep track of your work, you need to use a text editor and the
-*Edit-run* approach.
-
+To keep track of your work, you need to use a code editor and the *Edit-Run* approach.
 
 
 
-
-
-Write code inside a text editor (Edit-run cycle)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Write code with a text editor (Edit-run cycle)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 A script is nothing but a pure text file, that is, a sequence of characters.
 
-A Python script is written with a **text editor**, saved on the disk, and then executed
+A Python script is written with a **text editor**, saved on the disk, and then executed.
 
 1. Open a Text-Editor (e.g. Sublime Text) and a Terminal window side-by-side:
 
@@ -158,7 +150,8 @@ Important: you must make sure that the *current working directory* of
 the terminal is the same directory where the file ``myscript.py`` has
 been saved. Otherwise, you will get an error message such as ‘No such
 file or directory’. To fix this problem, you must use the ``cd`` command
-to navigate the directory structure.
+to `navigate the directory structure <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`_. 
+  
 
 Remarks:
 
@@ -192,13 +185,13 @@ back and forth from the text editor to the terminal. The Anaconda Python distrib
 
 Visual Code, PyCharm, Spyder... are very nice IDEs but you should not use them to run python scripts that open new graphics windows (e.g. scripts using ``tkinter``, ``pygame``, ...) because, when such scripts crash, they can leave the IDE in an unstable state. It is always safer to run a script directly from the command line in a terminal windows.
 
-One commendable approach is to use an IDE to edit python code, but then  use the command line to run the scripts.
+One commendable approach is to use an IDE to edit python code, but use the command line to run the scripts.
 
 
 Perform an interactive data analysis with jupyter-notebook or jupyter-lab
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To perform a data analysis and produce a nicely formatter report, it is recommended to use  ``jupyter-notebook`` or ``jupyter-lab``  (see https://jupyter.org/).
+To perform data analyses and produce nicely formatted reports, one can use  ``jupyter-notebook`` or ``jupyter-lab``  (see https://jupyter.org/).
 
 In practice, launch Jupyter Notebook from the Start Menu/Anaconda3 (in Windows) or
 type ``jupyter notebook`` in a terminal (Linux, MacOS). The "Jupyter homepage" should then open in your browser:

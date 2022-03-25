@@ -25,6 +25,8 @@ author = 'Christophe Pallier'
 # -- General configuration ---------------------------------------------------
 
 source_suffix = ['.rst', '.md']
+source_encoding = 'utf-8-sig'
+
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -81,3 +83,7 @@ highlight_language = 'python3'
 html_context = {'display_github': True, 'github_user': 'chrplr', 'github_repo': 'PCBS', 'github_version': 'master/sample-docs/', 'github_root_dir': 'master/src', 'current_version': 'latest', 'latest_version': 'latest', 'available_versions': ('latest', ), 'css_files': (), }
 #html_theme_options = {'collapse_navigation': False, 'analytics_id': '', 'style_nav_header_background': '#5bbdbf', 'style_external_links': True, 'canonical_url': 'https://pradyunsg.me/sphinx-themes/', 'vcs_pageview_mode': 'edit', 'navigation_depth': 3, }
 pygments_style = 'sphinx'
+     
+
+latex_toplevel_sectioning = 'part'
+latex_show_urls = 'footnote'

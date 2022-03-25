@@ -58,7 +58,7 @@ Make sure you have installed Expyriment_::
      >>> import expyriment
 
 
-If an error message ``moduleNotFoundError: No module named 'expyriment'`` appears, check :doc:`software_installation.rst`.
+If an error message ``moduleNotFoundError: No module named 'expyriment'`` appears, check :doc:`software-installation.rst`.
 
 Let us start by downloading :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` and run it with::
 

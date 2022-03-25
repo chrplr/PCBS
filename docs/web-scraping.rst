@@ -949,55 +949,55 @@ Web Scraping
     .. rubric:: Resources
          :name: resources
 
-      **Idioms and style**
+**Idioms and style**
 
-      -  `On the ``if __name__ == "__main__":``
-         convention <http://stackoverflow.com/questions/419163/what-does-if-name-main-do>`__
-      -  `On writing idiomatic
-         Python <http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html>`__
-      -  `PEP 8 style
-         guidelines <https://www.python.org/dev/peps/pep-0008/>`__.
-      -  `The ``with`` idiom for opening
-         files <http://stackoverflow.com/questions/11555468/how-should-i-read-a-file-line-by-line-in-python>`__
+-  `On the ``if __name__ == "__main__":``
+    convention <http://stackoverflow.com/questions/419163/what-does-if-name-main-do>`__
+-  `On writing idiomatic
+    Python <http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html>`__
+-  `PEP 8 style
+    guidelines <https://www.python.org/dev/peps/pep-0008/>`__.
+-  `The ``with`` idiom for opening
+    files <http://stackoverflow.com/questions/11555468/how-should-i-read-a-file-line-by-line-in-python>`__
 
-      **Docstrings and comments** - `Wikipedia on Python
-      docstrings <https://en.wikipedia.org/wiki/Docstring#Python>`__ -
-      `Google Python docstring
-      style <http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__
-      - `PEP 257 docstring
-      guidelines <https://www.python.org/dev/peps/pep-0257/>`__ - `What
-      inline comments are
-      for <https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/>`__
+**Docstrings and comments** - `Wikipedia on Python
+docstrings <https://en.wikipedia.org/wiki/Docstring#Python>`__ -
+`Google Python docstring
+style <http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html>`__
+- `PEP 257 docstring
+guidelines <https://www.python.org/dev/peps/pep-0257/>`__ - `What
+inline comments are
+for <https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/>`__
 
-      **Command line arguments** -
-      ```argparse`` <https://docs.python.org/3/library/argparse.html>`__
+**Command line arguments** -
+```argparse`` <https://docs.python.org/3/library/argparse.html>`__
 
-      **Useful facts** - `Standard input, output, and
-      error <http://www.diveintopython.net/scripts_and_streams/stdin_stdout_stderr.html>`__
-      -
-      `Namespaces <https://bytebaker.com/2008/07/30/python-namespaces/>`__
-      - `Python
-      modules <https://docs.python.org/2/tutorial/modules.html>`__
+**Useful facts** - `Standard input, output, and
+error <http://www.diveintopython.net/scripts_and_streams/stdin_stdout_stderr.html>`__
+-
+`Namespaces <https://bytebaker.com/2008/07/30/python-namespaces/>`__
+- `Python
+modules <https://docs.python.org/2/tutorial/modules.html>`__
 
-      **Examples** `Example Python
-      code <http://docs.python-guide.org/en/latest/writing/reading/>`__
+**Examples** `Example Python
+code <http://docs.python-guide.org/en/latest/writing/reading/>`__
 
-      **Unicode** - `Stack Overflow explanation of Unicode print
-      problems <http://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file>`__
-      - `More on Unicode print
-      problems <https://wiki.python.org/moin/PrintFails>`__ - `A more
-      technical list of Unicode frustrations in
-      Python <https://pythonhosted.org/kitchen/unicode-frustrations.html>`__
-      - `Reading Unicode <http://www.evanjones.ca/python-utf8.html>`__ -
-      `Python Unicode
-      HOWTO <https://docs.python.org/2/howto/unicode.html>`__
+**Unicode** - `Stack Overflow explanation of Unicode print
+problems <http://stackoverflow.com/questions/4545661/unicodedecodeerror-when-redirecting-to-file>`__
+- `More on Unicode print
+problems <https://wiki.python.org/moin/PrintFails>`__ - `A more
+technical list of Unicode frustrations in
+Python <https://pythonhosted.org/kitchen/unicode-frustrations.html>`__
+- `Reading Unicode <http://www.evanjones.ca/python-utf8.html>`__ -
+`Python Unicode
+HOWTO <https://docs.python.org/2/howto/unicode.html>`__
 
-      **Unit testing** - `Unit testing and the ``unittest``
-      module <http://pymbook.readthedocs.io/en/latest/testing.html>`__
+**Unit testing** - `Unit testing and the ``unittest``
+module <http://pymbook.readthedocs.io/en/latest/testing.html>`__
 
-      **Python debugger** -
-      `pdb <https://docs.python.org/2/library/pdb.html>`__
+**Python debugger** -
+`pdb <https://docs.python.org/2/library/pdb.html>`__
 
-      **NLP textbook** - `Jurafsky and Martin
-      draft <http://stp.lingfil.uu.se/~santinim/ml/2014/JurafskyMartinSpeechAndLanguageProcessing2ed_draft%202007.pdf>`__
+**NLP textbook** - `Jurafsky and Martin
+draft <http://stp.lingfil.uu.se/~santinim/ml/2014/JurafskyMartinSpeechAndLanguageProcessing2ed_draft%202007.pdf>`__
 
