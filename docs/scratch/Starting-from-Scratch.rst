@@ -2,8 +2,6 @@
 Starting from Scratch
 *********************
 
-.. contents::
-
 
 What is programming?
 ====================

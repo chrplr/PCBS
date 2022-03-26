@@ -13,8 +13,8 @@ Git repository on github (contains slides, solutions to exercices, and more)
    :caption: Contents:
 
    foreword
-   scratch/Starting-from-Scratch
    software-installation
+   scratch/Starting-from-Scratch
    practical-interaction
    running-python
    coding-exercices
