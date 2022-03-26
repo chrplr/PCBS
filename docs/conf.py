@@ -85,5 +85,5 @@ html_context = {'display_github': True, 'github_user': 'chrplr', 'github_repo': 
 pygments_style = 'sphinx'
      
 
-latex_toplevel_sectioning = 'part'
+#latex_toplevel_sectioning = 'part'
 latex_show_urls = 'footnote'

@@ -53,12 +53,13 @@ From here, we are going to use it to generate experiments.
 
 Make sure you have installed Expyriment_::
 
+.. code-block:: bash
 
-     $ python
-     >>> import expyriment
+   $ python
+   >>> import expyriment
 
 
-If an error message ``moduleNotFoundError: No module named 'expyriment'`` appears, check :doc:`software-installation.rst`.
+If an error message ``moduleNotFoundError: No module named 'expyriment'`` appears, check :doc:`software-installation`.
 
 Let us start by downloading :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` and run it with::
 
@@ -229,7 +230,7 @@ Generate nonwords
            """ returns a nonword of length `length` """
 
    Solution at :download:`create_nonwords.py <../experiments/expyriment/lexical_decision/create_nonwords.py>`
-:w
+
 
 2. Use this function to create a list of 100 nonwords and save it in a
    file ``"pseudowords.csv"`` (one pseudoword per line) (see
@@ -284,7 +285,7 @@ After running::
 
 the subject's responses are stored in the subfolder ``data/`` contains a file ``lexdec...xpd``
 
-You can download this :download:`xpd file <../experiments/expyriment/lexical_decision/data/lexdec_v3_02_202112131227.xpd'>`__ as an example.
+You can download this :download:`xpd file <../experiments/expyriment/lexical_decision/data/lexdec_v3_02_202112131227.xpd'>` as an example.
 
 1. Use ``pandas.read_csv(..., comment='#')`` to read the responses into a pandas dataframe.
 
