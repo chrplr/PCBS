@@ -1,25 +1,40 @@
-.. _first:
+.. _cogmaster:
 
 
 ******************
 Cogmaster Lectures
 ******************
 
-.. .. contents::
+.. .. .. contents::
 ..
    ::
 
-Practical informations
-======================
+**Ateliers de Programmation pour les (Neuro)Sciences Cognitives / Programming for Cognitive and Brain Sciences**
 
-Syllabus 2021-2022
+This year (2021-2022) the lecture is split in 3 independent modules:
 
-    See :doc:`syllabus-pcbs-2021-22`
+1. PROG Introduction to Programming with Python (first half of first semester)
 
+   This series of lectures targets students with little or no prior
+   knowledge of programming. It will introduce the fundamentals concepts
+   of coding : variables, expressions, functions, control structures,
+   input/ouput. The course will make use of https://pythontutor.com/
 
-Schedule
+2. PCBS Programming for Cognitive and Brain Sciences (2 sessions: second
+   half of semester 1 and first half of semester 2)
 
-    See :doc:`timetable`
+   The purpose of this module is to train students to solve typical tasks
+   encountered in cognitive or neurosciences: (creation of stimuli,
+   programming of real-time experiments, data manipulation and analysis,
+   simulations…), using Python ou R. The course consists of short lectures
+   followed by hands-on exercises.
+
+3. PROJ Programming project (second half of semester 2)
+
+   Each student selects a cognitive science topic (psychology
+   experiment, simulations of a cognitive system, etc, …) and implements
+   it using a programming language. The project’s development should be
+   public on github.
 
 Instructors
 
