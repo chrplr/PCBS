@@ -23,10 +23,10 @@ To run a python script, that is, a text file containing python code, you need to
 
   * MacOSX: Search for ``terminal`` in Spotlight.
   * Windows: Launch ``Git Bash`` (This assumes that you have installed
-   ``Git for windows`` as described in `Instructions for software
-   installation <#instructions-for-software-installation>`__)
+     ``Git for windows`` as described in `Instructions for software
+     installation <#instructions-for-software-installation>`__)
   * Linux: Launch ``Terminal`` from your application menu or use
-   ``Ctrl-Alt-T`` in Gnome, Xfce or ``Win+Return`` in i3.
+     ``Ctrl-Alt-T`` in Gnome, Xfce or ``Win+Return`` in i3.
 
 2. If the script is not located in your home directory, use the ``cd`` command to navigate to the directory that contains the script (to learn about this, read `Navigation in the shell <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`__). 
 

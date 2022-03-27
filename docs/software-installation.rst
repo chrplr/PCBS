@@ -13,141 +13,219 @@ Warnings:
    Therefore, make sure to have a decent connection.
 -  Make sure that you have at least 5GB of free space on your hard drive
    to unpack the various software.
--  You might need to have administrator rights to install some of the
+-  You will need to have administrator rights to install some of the
    softwares. If you are using a computer from an Institution, this is
    not always the case. Check with your IT team.
--  If you are using Windows 10, make sure your user name doesn’t include
+-  If you are using Windows, make sure your user name doesn’t include
    spaces or characters that don’t belong to the English alphabet
    (accents, ideograms,…). If you do, better create a new user with a
    simple identifier.
 
 
+
+Instructions for Windows
+------------------------
+
+You are going to install Ubuntu Linux on your Windows system, using the *Windows Subsystem for Linux* (WSL)/
+
+The instructions to follow are at https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps
+
+In a nutshell, you have to
+
+#. Install the vGPU drivers for your graphics card (Intel, AMD or Nvidia GPU. Note: to check your GPU type, open the *Task Manager*, e.g. with ``Ctrl-Alt-Del``, and search for GPU under the *Performance* tab)  
+#. Launch “Windows PowerShell” as administrator, and enter the command line ``wsl --install -d ubuntu`` and press ``Enter``.
+
+This downloads the full Ubuntu linux which may take a while. At some point during the install, a new Terminal window titled “Ubuntu” will open and will ask for a user name and password. You can put anything but it is crucial that you note down the password as it will be needed to install software under Ubuntu.
+
+Once the installation is finished, you can open the “Ubuntu” App and follow the instructions below for Linux.
+
+
+Instructions for Linux (Ubuntu 20.04)
+-------------------------------------
+
+Open a Terminal, that is:
+* If you are under Windows with the WSL, just launch the “Ubuntu” app.
+* If you are under Linux, press ``Ctrl-Alt-T``
+
+Then, for each software section below, copy and paste in the terminal the lines that are in the boxes and press ``Enter'' to execute them.
+
+Python3
+~~~~~~~
+
+`Python3 <https://www.python.org/>`_ will be the language 
+
+.. code-block:: bash
+
+    sudo apt install -y python3 ipython3 python3-dev python-is-python3 python3-future python3-opengl python3-pip python3-ipython python3-pygame python3-numpy python3-matplotlib python3-skimage python3-pandas python3-scipy python3-imageio python3-ipython
+
+    sudo pip install expyriment[all]
+
+    sudo apt-get install -y python3-dev libasound2-dev
+    sudo pip install simpleaudio
+
+Git
+~~~
+
+`Git <https://git-scm.com/>`_ is a free distributed version control system.
+
+.. code-block:: bash
+
+   sudo apt install git
+
+Now, type the following command lines, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information::
+
+.. code-block:: bash
+
+  git config --global user.name "your_first_and_last_names_here" 
+  git config --global user.email your_email_here 
+  git config --global core.editor nano
+
+
+Sublime code editor
+~~~~~~~~~~~~~~~~~~~
+
+`Sublime Text <https://www.sublimetext.com/>`_ is a powerful text editor with a good Python mode. 
+
+.. code-block:: bash
+
+  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+  sudo apt-get install apt-transport-https
+  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+  sudo apt-get update
+  sudo apt-get install sublime-text
+
+(instructions extracted from https://www.sublimetext.com/docs/linux_repositories.html)
+
+R language for statistics
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`R <https://www.r-project.org/>`_ is a free software environment for statistical computing and graphics.
+
+.. code-block:: bash
+
+  sudo apt update -qq
+  sudo apt install --no-install-recommends software-properties-common dirmngr
+  wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+  sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+  sudo apt install --no-install-recommends r-base
+  sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
+
+(instructions extracted from https://cran.rstudio.com/bin/linux/ubuntu/)
+
+Rstudio Desktop
+~~~~~~~~~~~~~~~
+
+Rstudio is an *Integrated Developpement Environment* for R which greatly
+simplifies the use of RMarkdown. You can download and install the
+latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/.
+Make sure to select the ubuntu version!
+
+.. code-block:: bash
+
+  wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.1-461-amd64.deb
+  sudo apt install ./rstudio-2022.02.1-461-amd64.deb
+
+
+Psychtoolbox
+~~~~~~~~~~~~
+
+`Psychtoolbox-3 <http://psychtoolbox.org/>`_ is a set Octave functions which is very popular in vision and neuroscience research.
+
+
+.. code-block:: bash
+
+    ## Add Neurodebian repository 
+    ## Select the neurodebian repository on  [Neurodebian](https://neuro.debian.net/), and copy the command lines, e.g.:
+
+    wget -O- http://neuro.debian.net/lists/focal.de-m.full | sudo tee /etc/apt/sources.list.d/neurodebian.sources.list
+    sudo apt-key adv --recv-keys --keyserver hkps://keyserver.ubuntu.com 0xA5D32F012649A5A9
+
+    ## activate sources and install  required packages
+
+    sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
+    sudo apt update
+
+    sudo apt build-dep octave-psychtoolbox-3
+    sudo apt install subversion libdc1394-22-dev libfreenect* libgstreamer1.0-dev libgstreamer-plugins-*
+
+    ## download psychtoolbox
+
+    wget https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/master/Psychtoolbox/DownloadPsychtoolbox.m.zip
+    unzip DownloadPsychtoolbox.m.zip 
+
+    mkdir ~/PTB3
+
+Now, launch octave (typing ``octave'' on the command line) and type::
+
+      DownloadPsychtoolbox('/home/neurostim/PTB3')
+      PsychLinuxConfiguration()
+
+      # test 
+      DrawingSpeedTest()
+
+
+Instructions for MacOS X
+------------------------
+
+
 SublimeText code editor
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 A code editor is a program that allows you to edit pure text files such
 as Python programs, `Markdown <https://daringfireball.net/projects/markdown/>`__  or `LaTeX <https://www.latex-project.org/>`__ documents, etc.
 
-Unless you already master a code editor,  we recommend that you download and install `Sublime Text <https://www.sublimetext.com/>`__. Follow the instructions specific to your Operating System.
+Unless you already master a code editor,  we recommend that you download and install `Sublime Text <https://www.sublimetext.com/>`__. Follow the instructions specific to MacOS.
 
-[Note: If you prefer to stick to opensource software, you can try `Atom <http://atom.io>`__, but be
-aware that it is slower and more buggy than Sublime Text.]
 
 
 The Git version control system
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Git is a version control tool for software development, an indispensable
-tool to do reproducible science. To install it:
 
-Linux
-   execute the command ``sudo apt install git``
+Download and install `Xcode <https://developer.apple.com/xcode/>`__, either from the App store, or by using the command line ``xcode-select --install``. This will provide git.
 
-MacOSX
-   Download and install `Xcode <https://developer.apple.com/xcode/>`__, either from the App store, or by using the command line ``xcode-select --install``. This will provide git.
 
-Windows
-   Download the 64 bit version of `Git for Windows <https://git-scm.com/download/win>`__ and
-   launch it.
-
-   1. When the GNU Licence is displayed, press ``Next``;
-   2. Accept the default installation folder and press ``Next``;
-   3. Accept all the Components selected by default and press ``Next``
-   4. Accept the creation of a start menu folder named 'Git': press ``Next``;
-   5. VERY IMPORTANT: When proposed a default editor, select 'Use the nano editor' (unless you want to learn Vim) 
-   6. VERY IMPORTANT: When proposed to adjust the PATH environment variable,  tick the box "Use Git and optional unix tools from the command line prompt". 
-
-   You can accept all other defaults.  
-
-Now, to finish the installation of git, open a Terminal window (see `survival`_) and type the following command lines, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information::
+To finish the installation of git, open a Terminal window (see `survival`_) and type the following command lines, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information::
 
     git config --global user.name "your_first_and_last_names_here" 
     git config --global user.email your_email_here 
     git config --global core.editor nano
 
 
-You can then close the Terminal window by typing the command `exit` or, faster, by pressing `Ctrl-D`, or by just closing its window.
-
-
-
 The R statistical software
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-R is a programming language specialized for statistical data analyses.
-
-Windows
-   Download and install the latest version of R from
-   https://cran.rstudio.com/bin/windows/base/
-
-MacOS
-   Download and install the latest version of R from
-   https://cran.rstudio.com/bin/macosx/
-
-Linux
-   Find the version relevant for your distribution at
-   https://cran.rstudio.com/bin/linux/ and follow the instructions in
-   the ``README.html`` file.
+Download and install the latest version of R from https://cran.rstudio.com/bin/macosx/
 
 
 Rstudio Desktop
----------------
+~~~~~~~~~~~~~~~
 
 Rstudio is an *Integrated Developpement Environment* for R which greatly
 simplifies the use of RMarkdown. You can download and install the
 latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/.
-Make sure to select the correct Operating System!
-
-
-Anaconda Python3 distribution
------------------------------
-
-There exists various Python distributions. Among them, we highly recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`_ as it already contains most of the packages needed for cognitive science.
-
-1. Go to  <https://www.anaconda.com/products/individual> and  click on ``Download``. Then, select the 64-bit installer for your operating system (Windows, MacOS or Linux).
-2. Execute the Anaconda3 installer. During the installation. 
-    * If you are on a Mac, you can accept all the default for the proposed options.
-    * If you are under Windows, pay close attention to the following options:
-
-       -  verify that you Install for ``Just Me (recommended)``, then click on ``Next``
-       -  Accept the default Destination folder and click on ``Next``
-       -  VERY IMPORTANT: Check the boxes in front ``Add Anaconda to my PATH`` (ignore the warning that this is not recommended) and ``Register Anaconda as my default Python`` and click on ``Install``
-       -  upon completion, click on ``Next``, then ``Finish``
+Make sure to select the MacOS version!
 
 
 
 The Pygame and Expyriment python modules
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli and the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments [#f1]_.
 
-Linux
-    Open a Terminal (``Ctrl-Alt-T``) and type::
+ 1. Install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
 
-        sudo apt-get install build-essential libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsdl1.2-dev libsmpeg-dev libportmidi-dev ffmpeg libswscale-dev libavformat-dev libavcodec-dev libfreetype6-dev
-        pip install expyriment[all]
-
-Windows
-    Launch the program ``Git bash`` and enter the command ``pip install expyriment[all]`` on the command line (see `survival`_).
-
-
-MacOS
-    1. Install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
-
-    2. Open a Terminal and type ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`` to install `Homebrew <https://brew.sh/>`__ (which is needed to install SDL).
+ 2. Open a Terminal and type ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`` to install `Homebrew <https://brew.sh/>`__ (which is needed to install SDL).
 
             - If you see "Password: ", this means the Terminal is prompting you to type your computer's administrator account password. Type your password and press the return key to continue.
             - If you see an error message such as "Error: /usr/local/Cellar is not writable. You should change the ownership and permissions of /usr/local/Cellar back to your user account: sudo chown -R $(whoami) /usr/local/Cellar", run in the Terminal the command that was suggested (here ``sudo chown -R $(whoami) /usr/local/Cellar``), and then run the previous command to try installing Homebrew once again
 
-    3. In the same Terminal, type ``brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf pkg-config`` to install SDL (which is needed to install expyriment). This may take a while.
+  3. In the same Terminal, type ``brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf pkg-config`` to install SDL (which is needed to install expyriment). This may take a while.
 
-    4. In the same Terminal, type ``pip install "expyriment[all]"`` to install expyriment.
+  4. In the same Terminal, type ``pip install "expyriment[all]"`` to install expyriment.
 
-    5. In the same Terminal, type ``pip install -U pygame`` to upgrade pygame (version >= 2.0 is required on recent versions of macOS, but this must be done *after* installing expyriment otherwise the install of expyriment will fail).
-
-Install Psychopy and Psychtoolbox on Linux (optional)
------------------------------------------------------
-
-If you want to install the [Psychtoolbox](http://psychtoolbox.org/) and [Psychopy](https://www.psychopy.org) experiments generators (which are not needed in this course), you can find instructions for Linux at https://gist.github.com/chrplr/61ec2de7f0e001ebf65aec89e6f6ddc9 (For Windows or MacOSX instructions, follow the instructions on the psychtoolbox and the psychopy websites).
+  5. In the same Terminal, type ``pip install -U pygame`` to upgrade pygame (version >= 2.0 is required on recent versions of macOS, but this must be done *after* installing expyriment otherwise the install of expyriment will fail).
 
 
 Check your installation
@@ -166,7 +244,7 @@ Remarks:
 Download the course material
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Open a Terminal (see `survival`_) and enter the following command line: 
+Open a Terminal and enter the following command line: 
 
 .. code-block:: bash
 
@@ -243,43 +321,10 @@ move it if you wnat to keep a copy of your modifications) and reissue the
 ``git clone`` command above to reload the full folder.)
 
 
-Potential issues
-~~~~~~~~~~~~~~~~
-
-    - ``python: command not found``: the folder containing anaconda3's python is missing (or shadowed) from the PATH environment variable that lists all the folders where commands can be located. It is very likely that you did not follow exactly the above installation instructions for either Anaconda3 or Git Bash (Windows only), that is, you did not check the correct options. If you know how to do it, modify the PATH environment variable, else reinstall.  
-
-    - ``expyriment or pygame : module not found``. There are many potential causes for that one. Check that you followed the instructions precisely and contat us on the #general channel of the Slask forum.
-
-
-    - If you see error messages (in red) when importing the expyriment module, it is likely due to issues with the version of Python. If this is the case (and only if this is the case), you should create an [Anaconda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) as follows:
-
-    .. code-block:: bash
-
-       conda create --name expyriment python=3.8
-       conda activate expyriment
-       pip install expyriment[all]
-
-Then, to run python scripts using the expyriment module, you will need to activate this environment with the command::
-
-        conda activate expyriment
-
-  Read more about Python Anaconda environments [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
-
-
-Creating a conda environment
-----------------------------
- 
-.. [#f1] (advanced students only). To avoid potential clashes betwen modules, it may be a good idea to create a conda environment before installing the modules: 
-
-          .. code:: bash
-
-                  conda create --name pcbs
-                  conda activate pcbs
-   
-          But then, you must not forget to activate the environment (``conda activate pcbs``) before working on the materials presented here.
 
 
 .. _survival:
+
 
 Basic surviving skill: how to enter command lines in a Terminal
 ---------------------------------------------------------------
@@ -297,12 +342,7 @@ MacOS
    double-click on the ``Terminal`` icon..
 
 Windows
-   Start ``Git Bash`` (This assumes that you have installed
-   ``Git for windows`` as described above)
-
-   1. Click the Windows or Start icon.
-   2. In the Programs list, open the Git folder.
-   3. Click the option for Git Bash.
+   After installing the WSL, you just have to launch the “Ubuntu” App.
 
 
 Inside the terminal, you interact with a program --- the `shell <http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php>`_ --- that prints a prompt (typically a dollar sign) and shows a blinking cursor, expecting *you* to type a command and press the ``Return`` key. Then, it will (try to)  execute the command.
@@ -319,6 +359,5 @@ Here are some resources to learn more about how to control your computer from a 
 
      - Learning the Shell  http://linuxcommand.org/lc3_learning_the_shell.php
      - OpenClassRoom : https://openclassrooms.com/en/courses/43538-reprenez-le-controle-a-laide-de-linux/37813-la-console-ca-se-mange
-
 
 

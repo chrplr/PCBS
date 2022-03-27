@@ -34,7 +34,7 @@ for row in range(2 * n):
         pygame.draw.rect(canvas, BLACK, (left, top, side, side))
         pygame.draw.circle(canvas, WHITE,
                            (left - gap//2, top - gap//2),
-                           gap//1.414)
+                           int(gap/1.414))
 
 # Rotation of the canvas at an angle of 45°
 rot_image = pygame.transform.rotate(canvas, 45)

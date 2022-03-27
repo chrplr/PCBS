@@ -20,7 +20,7 @@ random.shuffle(trials)
 
 
 exp = design.Experiment(name="Posner-task",
-                        text_size=50,
+                        text_size=30,
                         background_colour=GREY,
                         foreground_colour=BLACK)
 # control.set_develop_mode()

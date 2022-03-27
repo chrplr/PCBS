@@ -12,7 +12,7 @@ import random
 from expyriment import design, control, stimuli
 
 TARGETS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-N_TRIALS_PER_TARGET = 10
+N_TRIALS_PER_TARGET = 4
 EVEN_RESPONSE_KEY = 'f'
 ODD_RESPONSE_KEY = 'j'
 MAX_RESPONSE_DELAY = 2000
@@ -43,7 +43,7 @@ instructions = stimuli.TextScreen(
 
     if it is odd, press '{ODD_RESPONSE_KEY}'
 
-    There will be {len(TARGETS)} trials in total.
+    There will be {N_TRIALS_PER_TARGET * len(TARGETS)} trials in total.
 
     Press the space bar to start.""")
 
