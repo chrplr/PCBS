@@ -9,7 +9,7 @@ We explain below how to install:
 - a code editor: *Sublime text*
 - a version control system: *Git*
 - the statistical programming language: *R*
-- its integrated development environement: *R Studio*
+- its integrated development environment: *R Studio*
 - Various python packages, including *expyriment*,
 - the *Psychtoolbox-3* for vision and neural sciences. 
 
@@ -53,7 +53,7 @@ Then, for each software section below, copy and paste in the terminal the lines 
 Python3
 ~~~~~~~
 
-`Python3 <https://www.python.org/>`_ will be the language 
+We will use the programming language `Python <https://www.python.org/>`_ and various modules. The folliwng lines imports these.
 
 .. code-block:: bash
 
@@ -202,9 +202,7 @@ Download and install the latest version of R from https://cran.rstudio.com/bin/m
 Rstudio Desktop
 ~~~~~~~~~~~~~~~
 
-Rstudio is an *Integrated Developpement Environment* for R which greatly
-simplifies the use of RMarkdown. You can download and install the
-latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/.
+Download and install the latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/.
 Make sure to select the MacOS version!
 
 
@@ -215,7 +213,7 @@ The Pygame and Expyriment python modules
 
 We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli and the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments [#f1]_.
 
- 1. Install `XQuartz <https://www.xquartz.org/>`__. Download the .dmg from the official website and open it to install.
+ 1. Install `XQuartz <https://www.xquartz.org/>`__. Download the ``.dmg`` file from the official website and open it to install.
 
  2. Open a Terminal and type ``/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`` to install `Homebrew <https://brew.sh/>`__ (which is needed to install SDL).
 
@@ -229,8 +227,8 @@ We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli
   5. In the same Terminal, type ``pip install -U pygame`` to upgrade pygame (version >= 2.0 is required on recent versions of macOS, but this must be done *after* installing expyriment otherwise the install of expyriment will fail).
 
 
-Check your installation
------------------------
+Check that everything works
+---------------------------
 
 
 Download the course material
@@ -249,7 +247,7 @@ You should be able to move inside the PCBS directory and list its content:
 .. code-block:: bash
 
     cd PCBS
-    ls
+    
 
 If you get any error messages, check  `Navigating the file system <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`_ to understand how to set the correct current working directory.
 
