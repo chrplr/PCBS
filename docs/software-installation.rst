@@ -4,22 +4,23 @@
 Software Installation
 *********************
 
-We explain below how to install a code editor (*sublime text*), a version control system (*git*), the statistical programming language *R* and the associated integrated development environement (*R Studio*), the *Anaconda3 Python* distribution and the *Expyriment* python module. (In addition, we provide a link to instructions on how to install the *Psychtoolbox* and *Psychopy* experiment generators, an optional step as this book does not rely on these modules). 
+We explain below how to install:
 
+- a code editor: *Sublime text*
+- a version control system: *Git*
+- the statistical programming language: *R*
+- its integrated development environement: *R Studio*
+- Various python packages, including *expyriment*,
+- the *Psychtoolbox-3* for vision and neural sciences. 
 
 Warnings:
 
--  You will need to download about 1GB of software from the Internet.
+-  You will need to download several GB of software from the Internet.
    Therefore, make sure to have a decent connection.
 -  Make sure that you have at least 5GB of free space on your hard drive
    to unpack the various software.
 -  You will need to have administrator rights to install some of the
-   softwares. If you are using a computer from an Institution, this is
-   not always the case. Check with your IT team.
--  If you are using Windows, make sure your user name doesn’t include
-   spaces or characters that don’t belong to the English alphabet
-   (accents, ideograms,…). If you do, better create a new user with a
-   simple identifier.
+   softwares. If you are using a computer from an Institution, check with the IT support team.
 
 
 
@@ -230,15 +231,6 @@ We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli
 
 Check your installation
 -----------------------
-
-Test Python
-~~~~~~~~~~~
-
-Watch the video at   https://www.youtube.com/watch?v=2yhcWvBt7ZE&t and try to reproduce the activities.
-
-Remarks:
-- if you have a Mac or Linux, the only difference is how to open a terminal. Check `survival`_ for help on this.
-- The ``games.zip`` file mentioned in the video is available at https://github.com/chrplr/PCBS/tree/master/games/games.zip
 
 
 Download the course material
