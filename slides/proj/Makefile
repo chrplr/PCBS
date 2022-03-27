@@ -4,3 +4,6 @@
 
 proj.html: proj.md
 	darkslide -x tables --embed --relative -l table $< -d $@
+
+clean_%.html: clean_%.md
+	landslide -x tables --embed --relative -l table $< -d $@
