@@ -381,6 +381,96 @@ Here are some resources to learn more about how to control your computer from a 
      - Learning the Shell  http://linuxcommand.org/lc3_learning_the_shell.php
      - OpenClassRoom : https://openclassrooms.com/en/courses/43538-reprenez-le-controle-a-laide-de-linux/37813-la-console-ca-se-mange
 
+Instructions for native installation under Windows (without WSL)
+----------------------------------------------------------------
+
+
+R and Rstudio
+~~~~~~~~~~~~~
+
+R is a programming language specialized for statistical data analyses.
+
+Download and install the latest version of R from https://cran.rstudio.com/bin/windows/base/
+
+Rstudio is an *Integrated Developpement Environment* for R which greatly
+simplifies the use of RMarkdown. You can download and install the
+latest version of RStudio Desktop from https://www.rstudio.com/products/rstudio/download/.
+
+
+
+SublimeText code editor
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Download and install `Sublime Text <https://www.sublimetext.com/>`__.
+
+[Note: If you prefer to stick to opensource software, you can try `Atom <http://atom.io>`__, but be
+aware that it is slower and more buggy than Sublime Text.]
+
+
+Anaconda Python3 distribution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There exists various Python distributions. Under Windows, we recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`__ as it already contains most of the packages needed for cognitive science.
+
+1. Go to  <https://www.anaconda.com/products/individual>, click on ``Download`` and select the 64-bit installer for iWindows. 
+2. Execute the Anaconda3 installer. During the installation. 
+    * If you are on a Mac, you can accept all the default for the proposed options.
+    * If you are under Windows, pay close attention to the following options:
+
+       -  verify that you Install for ``Just Me (recommended)``, then click on ``Next``
+       -  Accept the default Destination folder and click on ``Next``
+       -  VERY IMPORTANT: Check the boxes in front ``Add Anaconda to my PATH`` (ignore the warning that this is not recommended) and ``Register Anaconda as my default Python`` and click on ``Install``
+       -  upon completion, click on ``Next``, then ``Finish``
+
+
+
+The Git version control system
+------------------------------
+
+Git is a version control tool for software development, an indispensable
+tool to do reproducible science.
+
+Download the 64 bit version of `Git for Windows <https://git-scm.com/download/win>`__ and launch it.
+
+   1. When the GNU Licence is displayed, press ``Next``;
+   2. Accept the default installation folder and press ``Next``;
+   3. Accept all the Components selected by default and press ``Next``
+   4. Accept the creation of a start menu folder named 'Git': press ``Next``;
+   5. VERY IMPORTANT: When proposed a default editor, select 'Use the nano editor' (unless you want to learn Vim) 
+   6. VERY IMPORTANT: When proposed to adjust the PATH environment variable,  tick the box "Use Git and optional unix tools from the command line prompt". 
+
+   You can accept all other defaults.  
+
+Now, to finish the installation of git, start ``Git bash`` (use the "Search box")
+
+Then, type the following command lines, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information::
+
+    git config --global user.name "your_first_and_last_names_here" 
+    git config --global user.email your_email_here 
+    git config --global core.editor nano
+
+
+You can close the Terminal by typing the command `exit` or, faster, by pressing `Ctrl-D`, or by just closing its window.
+
+
+
+The Pygame and Expyriment python modules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli and the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments.
+
+Start **Git bash** and, in the openned Terminal, type::
+
+   pip install expyriment[all]
+
+Learn to use Sublime Text and Git Bash Terminal to create Python scripts 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Watch the video at   https://www.youtube.com/watch?v=2yhcWvBt7ZE&t and try to perform the activities in it (the insturctions walso work for Mac or Linux: you just need to open a standard Terminal when in Windows you need to start 'Gih Bash'). Note: the game scripts mentioned in the video are available at https://github.com/chrplr/PCBS/tree/master/games/games.zip
+
+
+
+
 ------------
 
 .. [1] To determine which type of GPU (Intel, AMD, Nvidia) is installed on your computer, under Windows, open the *Task Manager*, e.g. with ``Ctrl-Alt-Del``, and search for GPU under the *Performance* tab.
