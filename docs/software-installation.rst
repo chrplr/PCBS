@@ -237,7 +237,7 @@ There exists various Python distributions. Under Windows, we recommend the `Anac
 
 
 The Git version control system
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Git is a version control tool for software development, an indispensable
 tool to do reproducible science.
@@ -471,9 +471,8 @@ Notes:
 
 
 Basic surviving skill: how to enter command lines in a Terminal
----------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Inside the terminal, you interact with a program --- the `shell <http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php>`_ --- that prints a prompt (typically a dollar sign) and shows a blinking cursor, expecting *you* to type a command and press the ``Return`` key. Then, it will (try to)  execute the command.
 
 For the moment, you mostly need to know the following three commands:
 
