@@ -1,6 +1,5 @@
 .. _install:
 
-.. contents::
 
 *********************
 Software Installation
