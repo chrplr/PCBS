@@ -10,7 +10,7 @@ We explain below how to install:
 - a version control system: *Git*
 - the statistical programming language: *R*
 - its integrated development environment: *R Studio*
-- Various python packages, including *expyriment*,
+- various python packages, including *expyriment*,
 - the *Psychtoolbox-3* for vision and neural sciences. 
 
 Warnings:
@@ -20,20 +20,20 @@ Warnings:
 -  Make sure that you have at least 5GB of free space on your hard drive
    to unpack the various software.
 -  You will need to have administrator rights to install some of the
-   softwares. If you are using a computer from an Institution, check with the IT support team.
+   softwares. If you are using a computer from an institution, check with the IT support team.
 
 
 
 Instructions for Windows
 ------------------------
 
-You are going to install Ubuntu Linux on your Windows system, using the *Windows Subsystem for Linux* (WSL)/
+You are going to install Ubuntu Linux on your Windows system, using the *Windows Subsystem for Linux* (aka WSL).
 
 The instructions to follow are at https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps
 
 In a nutshell, you have to
 
-#. Install the vGPU drivers for your graphics card (Intel, AMD or Nvidia GPU. Note: to check your GPU type, open the *Task Manager*, e.g. with ``Ctrl-Alt-Del``, and search for GPU under the *Performance* tab)  
+#. Install the vGPU drivers for your graphics card (Intel, AMD or Nvidia) [1]_.  
 #. Launch “Windows PowerShell” as administrator, and enter the command line ``wsl --install -d ubuntu`` and press ``Enter``.
 
 This downloads the full Ubuntu linux which may take a while. At some point during the install, a new Terminal window titled “Ubuntu” will open and will ask for a user name and password. You can put anything but it is crucial that you note down the password as it will be needed to install software under Ubuntu.
@@ -44,25 +44,29 @@ Once the installation is finished, you can open the “Ubuntu” App and follow 
 Instructions for Linux (Ubuntu 20.04)
 -------------------------------------
 
-Open a Terminal, that is:
-* If you are under Windows with the WSL, just launch the “Ubuntu” app.
-* If you are under Linux, press ``Ctrl-Alt-T``
+Open a Terminal [2]_.
 
-Then, for each software section below, copy and paste in the terminal the lines that are in the boxes and press ``Enter'' to execute them.
+
+Then, for each software section below, copy and paste in the terminal the lines that are in the boxes and press ``Enter`` to execute them.
 
 Python3
 ~~~~~~~
 
-We will use the programming language `Python <https://www.python.org/>`_ and various modules. The folliwng lines imports these.
+`Python <https://www.python.org/>`_ is the main programming language used in these courses.
+The following commands install various modules that will be needed. 
 
 .. code-block:: bash
 
-    sudo apt install -y python3 ipython3 python3-dev python-is-python3 python3-future python3-opengl python3-pip python3-ipython python3-pygame python3-numpy python3-matplotlib python3-skimage python3-pandas python3-scipy python3-imageio python3-ipython
+    sudo apt install -y python3 ipython3 python3-dev python-is-python3 python3-future \
+              python3-opengl python3-pip python3-ipython python3-pygame python3-numpy \
+              python3-matplotlib python3-skimage python3-pandas python3-scipy \
+              python3-imageio python3-ipython
 
     sudo pip install expyriment[all]
 
     sudo apt-get install -y python3-dev libasound2-dev
     sudo pip install simpleaudio
+
 
 Git
 ~~~
@@ -73,7 +77,7 @@ Git
 
    sudo apt install git
 
-Now, type the following command lines, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information::
+Now, type the following command lines, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information:
 
 .. code-block:: bash
 
@@ -95,7 +99,8 @@ Sublime code editor
   sudo apt-get update
   sudo apt-get install sublime-text
 
-(instructions extracted from https://www.sublimetext.com/docs/linux_repositories.html)
+(from https://www.sublimetext.com/docs/linux_repositories.html)
+
 
 R language for statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -111,7 +116,8 @@ R language for statistics
   sudo apt install --no-install-recommends r-base
   sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
 
-(instructions extracted from https://cran.rstudio.com/bin/linux/ubuntu/)
+(from https://cran.rstudio.com/bin/linux/ubuntu/)
+
 
 Rstudio Desktop
 ~~~~~~~~~~~~~~~
@@ -156,7 +162,7 @@ Psychtoolbox
 
     mkdir ~/PTB3
 
-Now, launch octave (typing ``octave'' on the command line) and type::
+Now, start ``octave`` on the command line and type::
 
       DownloadPsychtoolbox('/home/neurostim/PTB3')
       PsychLinuxConfiguration()
@@ -196,22 +202,24 @@ To finish the installation of git, open a Terminal window (see `survival`_) and 
 The R statistical software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Download and install the latest version of R from https://cran.rstudio.com/bin/macosx/
+Download and install the latest version of **R** from https://cran.rstudio.com/bin/macosx/
 
 
 Rstudio Desktop
 ~~~~~~~~~~~~~~~
 
-Download and install the latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/.
-Make sure to select the MacOS version!
+Download and install the latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/. Make sure to select the MacOS version!
 
+Python
+~~~~~~
+
+Download and install **Anaconda3 Python** from https://www.anaconda.com/products/individual
+ 
 
 
 The Pygame and Expyriment python modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli and the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments [#f1]_.
 
  1. Install `XQuartz <https://www.xquartz.org/>`__. Download the ``.dmg`` file from the official website and open it to install.
 
@@ -230,35 +238,51 @@ We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli
 Check that everything works
 ---------------------------
 
+Test Git
+~~~~~~~~
 
-Download the course material
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Open a Terminal and enter the following command line: 
-
-.. code-block:: bash
+To download the course materials using Git, enter the following command line in a Terminal:: 
 
     git clone https://github.com/chrplr/PCBS.git
 
-This should download all the course materials (python scripts, data files, ...) in a subfolder  ``PCBS`` inside your home directory (If a folder named ``PCBS`` already exists in the current working directory, git will stop and not download the content of the website. In that case, you must delete or move the existing PCBS folder before running the ``git clone`` command above).
+This should download all the course materials (python scripts, data files, ...) in a directory  ``PCBS`` inside your home directory (If a folder named ``PCBS`` already exists in the current working directory, git will stop and not download the content of the website. In that case, you must delete or move the existing PCBS folder before running the ``git clone`` command above).
 
-You should be able to move inside the PCBS directory and list its content: 
+You can move inside the PCBS directory and list its content: 
 
 .. code-block:: bash
 
     cd PCBS
+    ls
     
-
 If you get any error messages, check  `Navigating the file system <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`_ to understand how to set the correct current working directory.
+
+
+Test Python
+~~~~~~~~~~~
 
 .. code-block:: bash
 
-    cd games
+    cd ~/PCBS/games
     python human-guess-a-number.py          
 
 This should play a guessing game with you.
 
 .. image:: images/guess-number.png
+
+Test matplotlib
+~~~~~~~~~~~~~~~
+
+.. code-block::
+
+    cd ~/PCBS/stimuli/visual
+
+    python bullseye.py
+    python contrast_modulated_grating.py
+    python gabor.py
+    python image-manipulation.py
+    python wedgering.py
+
+
 
 Test pygame
 ~~~~~~~~~~~
@@ -272,6 +296,7 @@ This should open a window displaying the Kanizsa triangle.
 
 .. image:: images/ktri.png
 
+
 Test expyriment
 ~~~~~~~~~~~~~~~
 
@@ -284,8 +309,17 @@ This should run an experiment where you have to judge the parity of digits.
 
 .. class:: center
 
-   **If everything works, you are done !**
+Sublime Text
+~~~~~~~~~~~~
 
+.. code-block:: bash
+
+   subl
+
+
+This should open the sublime text editor. If you get a message ``command not found``, ask the instructr to  fix your path.
+
+Then, check out https://www.youtube.com/watch?v=SVkR1ZkNusI for a short tutorial.
 
 Annexes
 -------
@@ -302,15 +336,14 @@ The course materials are often updated. To make sure you have the latest version
       git pull
 
 Notes:
-- if the PCBS iis not in your home directory (``~``), you will need to use the appropriate path in the first cd command.
+
+- if the PCBS directory is not in your home directory (``~``), you will need to use the appropriate path in the first cd command.
 - do not manually modify or create new files in the ``PCBS`` folder.
-If you do so, git will notice it and might prevent an automatic upgrade
-and ask you to ‘resolve conflicts’. If you get such a message, the
-simplest course of action, for beginners, is to delete the PCBS folder (or
-move it if you wnat to keep a copy of your modifications) and reissue the
-``git clone`` command above to reload the full folder.)
-
-
+  If you do so, git will notice it and might prevent an automatic upgrade
+  and ask you to ‘resolve conflicts’. If you get such a message, the
+  simplest course of action, for beginners, is to delete the PCBS folder (or
+  move it if you wnat to keep a copy of your modifications) and reissue the
+  ``git clone`` command above to reload the full folder.)
 
 
 .. _survival:
@@ -318,22 +351,6 @@ move it if you wnat to keep a copy of your modifications) and reissue the
 
 Basic surviving skill: how to enter command lines in a Terminal
 ---------------------------------------------------------------
-
-If you do not already have an open Terminal window, you need to open one:
-
-Linux
-   Launch ``Terminal`` from your application menu or use
-   ``Ctrl-Alt-T`` (gnome, xfce) or ``Win+Return`` (i3).
-
-MacOS
-   Type ``terminal`` in the Spotlight search field.
-   Alternatively, you can open a ``Finder`` window and select the
-   ``Application`` folder, then the ``Utilities`` folder, then
-   double-click on the ``Terminal`` icon..
-
-Windows
-   After installing the WSL, you just have to launch the “Ubuntu” App.
-
 
 Inside the terminal, you interact with a program --- the `shell <http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php>`_ --- that prints a prompt (typically a dollar sign) and shows a blinking cursor, expecting *you* to type a command and press the ``Return`` key. Then, it will (try to)  execute the command.
 
@@ -350,4 +367,17 @@ Here are some resources to learn more about how to control your computer from a 
      - Learning the Shell  http://linuxcommand.org/lc3_learning_the_shell.php
      - OpenClassRoom : https://openclassrooms.com/en/courses/43538-reprenez-le-controle-a-laide-de-linux/37813-la-console-ca-se-mange
 
+------------
+
+.. [1] To determine which type of GPU (Intel, AMD, Nvidia) is installed on your computer, under Windows, open the *Task Manager*, e.g. with ``Ctrl-Alt-Del``, and search for GPU under the *Performance* tab.
+
+.. [2] To open a Terminal:
+
+        - Windows with the WSL: launch the “Ubuntu” app.
+        - Windows with Git for Windows: launch “Git bash”.
+        - Linux: Launch ``Terminal`` or press ``Ctrl-Alt-T`` (Gnome or Xfce) or ``Win-Return`` (i3).
+        - MacOS: Type ``terminal`` in the Spotlight search field.
+          Alternatively, you can open a ``Finder`` window and select the
+          ``Application`` folder, then the ``Utilities`` folder, then
+          double-click on the ``Terminal`` icon..
 

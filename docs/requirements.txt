@@ -1,2 +1,3 @@
 sphinx==4.0.1
+docutiles=0.16
 sphinx-rtd-theme
