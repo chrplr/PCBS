@@ -317,7 +317,7 @@ Sublime Text
    subl
 
 
-This should open the sublime text editor. If you get a message ``command not found``, ask the instructr to  fix your path.
+This should open the sublime text editor. If you get a message ``command not found``, ask the instructor to fix your path.
 
 Then, check out https://www.youtube.com/watch?v=SVkR1ZkNusI for a short tutorial.
 
