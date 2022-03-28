@@ -28,7 +28,7 @@ are self-similar at several scales.
    -  use the turtle module
    -  use recursion
 
-   My solution: :download:`games/koch.py <../games/koch.py>`
+   My solution: :download:`koch0.py <../simulations/fractals/koch0.py>`
 
 
 Formal systems
