@@ -1,5 +1,7 @@
 .. _install:
 
+.. contents::
+
 *********************
 Software Installation
 *********************
@@ -10,7 +12,7 @@ We explain below how to install:
 - a version control system: *Git*
 - the statistical programming language: *R*
 - its integrated development environment: *R Studio*
-- various python packages, including *expyriment*,
+- Python and several useful modules, including *Expyriment*,
 - the *Psychtoolbox-3* for vision and neural sciences. 
 
 Warnings:
@@ -27,18 +29,24 @@ Warnings:
 Instructions for Windows
 ------------------------
 
-You are going to install Ubuntu Linux on your Windows system, using the *Windows Subsystem for Linux* (aka WSL).
-
-The instructions to follow are at https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps
-
-In a nutshell, you have to
+You are going to install Ubuntu Linux on your Windows system, using the *Windows
+Subsystem for Linux* (aka WSL). The instructions are detailed `here
+<https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps>`_. In a
+nutshell, you have to
 
 #. Install the vGPU drivers for your graphics card (Intel, AMD or Nvidia) [1]_.  
-#. Launch “Windows PowerShell” as administrator, and enter the command line ``wsl --install -d ubuntu`` and press ``Enter``.
+#. Launch “Windows PowerShell” as administrator, and execute the command::
 
-This downloads the full Ubuntu linux which may take a while. At some point during the install, a new Terminal window titled “Ubuntu” will open and will ask for a user name and password. You can put anything but it is crucial that you note down the password as it will be needed to install software under Ubuntu.
+        wsl --install -d ubuntu
 
-Once the installation is finished, you can open the “Ubuntu” App and follow the instructions below for Linux.
+
+This downloads the full Ubuntu linux which may take a while. At some point
+during the install, a new Terminal window titled “Ubuntu” will open and will ask
+for a user name and password. You can put anything but it is crucial that you
+note down the password as it will be needed to install software under Ubuntu.
+
+Once the installation is finished, open the “Ubuntu” App and follow the
+instructions for Linux below.
 
 
 Instructions for Linux (Ubuntu 20.04)
@@ -47,13 +55,15 @@ Instructions for Linux (Ubuntu 20.04)
 Open a Terminal [2]_.
 
 
-Then, for each software section below, copy and paste in the terminal the lines that are in the boxes and press ``Enter`` to execute them.
+Then, for each software section below, copy and paste in the terminal the lines
+that are in the boxes and press ``Enter`` to execute them.
 
 Python3
 ~~~~~~~
 
-`Python <https://www.python.org/>`_ is the main programming language used in these courses.
-The following commands install various modules that will be needed. 
+`Python <https://www.python.org/>`_ is the main programming language used in
+these courses. The following commands install various modules that will be
+needed.
 
 .. code-block:: bash
 
@@ -77,7 +87,9 @@ Git
 
    sudo apt install git
 
-Now, type the following command lines, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information:
+Now, type the following command lines, making sure to replace
+``your_first_and_last_name_here`` and ``your_email_here`` by the relevant
+personal information:
 
 .. code-block:: bash
 
@@ -123,8 +135,8 @@ Rstudio Desktop
 ~~~~~~~~~~~~~~~
 
 Rstudio is an *Integrated Developpement Environment* for R which greatly
-simplifies the use of RMarkdown. You can download and install the
-latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/.
+simplifies the use of RMarkdown. You can download and install the latest version
+of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/.
 Make sure to select the ubuntu version!
 
 .. code-block:: bash
@@ -136,7 +148,9 @@ Make sure to select the ubuntu version!
 Psychtoolbox
 ~~~~~~~~~~~~
 
-`Psychtoolbox-3 <http://psychtoolbox.org/>`_ is a set Octave functions which is very popular in vision and neuroscience research.
+`Psychtoolbox-3 <http://psychtoolbox.org/>`_ is a set Octave functions which is
+very popular in vision and neuroscience research. This installation is optional
+as the Psychtoolbox is **not used** in this book.
 
 
 .. code-block:: bash
