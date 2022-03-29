@@ -16,14 +16,13 @@ We explain below how to install:
 
 After the installation, `check`_ that everything works. 
 
-Warnings:
-
--  You will need to download several GB of software from the Internet.
-   Therefore, make sure to have a decent connection.
--  Make sure that you have at least 5GB of free space on your hard drive
-   to unpack the various software.
--  You will need to have administrator rights to install some of the
-   softwares. If you are using a computer from an institution, check with the IT support team.
+.. warning::
+   -  You will need to download several GB of software from the Internet.
+      Therefore, make sure to have a decent connection.
+   -  Make sure that you have at least 5GB of free space on your hard drive
+      to unpack the various software.
+   -  You will need to have administrator rights to install some of the
+      softwares. If you are using a computer from an institution, check with the IT support team.
 
 
 .. contents:: :depth: 2
@@ -165,6 +164,8 @@ Now, start ``octave`` on the command line and type::
       # test 
       DrawingSpeedTest()
 
+Now you can `check`_ if everything works. 
+
 
 
 Instructions for Windows (WSL)
@@ -173,23 +174,29 @@ Instructions for Windows (WSL)
 This is the simplest, and therefore recommended, method. 
 
 You are going to install Ubuntu Linux on your Windows system, using the *Windows
-Subsystem for Linux* (aka WSL). The instructions are detailed `here
-<https://docs.microsoft.com/en-us/windows/wsl/tutorials/gui-apps>`_. In a
-nutshell, you have to
+Subsystem for Linux* (aka WSL).  In a nutshell, you have to:
 
-#. Install the vGPU drivers for your graphics card (Intel, AMD or Nvidia) [2]_.  
-#. Launch “Windows PowerShell” as administrator, and execute the command::
+#. Install the vGPU driver for your graphics card (`Intel
+   <https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html?>`__,
+   `AMD <https://www.amd.com/en/support/kb/release-notes/rn-rad-win-wsl-support>`__
+   or `Nvidia <https://developer.nvidia.com/cuda/wsl>`__) [2]_ if it not
+   already there.  
+#. Launch “Windows PowerShell” as administrator, and execute
+   the command::
 
         wsl --install -d ubuntu
 
 
-This downloads the full Ubuntu linux which may take a while. At some point
-during the install, a new Terminal window titled “Ubuntu” will open and will ask
-for a user name and password. You can put anything but it is crucial that you
-note down the password as it will be needed to install software under Ubuntu.
+This downloads the full Ubuntu linux which may take a while. Some versions of
+Windows may even ask you to reboot during the installation process. At some
+point during the install, a new Terminal window titled “Ubuntu” will open and
+will ask for a user name and password. You can put anything but it is crucial
+that you note down the password as it will be needed to install software under
+Ubuntu.
 
 Once the installation is finished, open the “Ubuntu” App and follow the
-instructions for linux_.
+instructions for linux_ to install more software.
+
 
 Instructions for Windows (Native, without WSL)
 ----------------------------------------------
