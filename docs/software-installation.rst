@@ -26,7 +26,9 @@ Warnings:
    softwares. If you are using a computer from an institution, check with the IT support team.
 
 
+.. contents:: :depth: 2
 
+.. _linux:
 
 Instructions for Linux (Ubuntu 20.04)
 -------------------------------------
@@ -187,7 +189,7 @@ for a user name and password. You can put anything but it is crucial that you
 note down the password as it will be needed to install software under Ubuntu.
 
 Once the installation is finished, open the “Ubuntu” App and follow the
-instructions for Linux below.
+instructions for linux_.
 
 Instructions for Windows (Native, without WSL)
 ----------------------------------------------
