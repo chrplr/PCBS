@@ -105,14 +105,14 @@ Exercise:
 | - Modify :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` to display, rather than a cross, a random integer between 0 and 9 (hint: Use ``stimuli.TextLine()``). Now, the task is to decide if the figure is odd or even, by pressing one of two keys.
 
 
-| Here is a solution: :download:`parity.py <../experiments/expyriment/parity_decision/parity.py>`
+| Here is a solution: :download:`parity.py <../experiments/parity_decision/parity.py>`
 
 | Comparing the average decision time to the time to react to a simple cross provides a (rough) estimate of the time to decide about the parity of a number. By the way, one can wonder what happens for multiple digits numbers: are we influenced by the flanking digits? 
 
-| - Add feedback; when the subjects presses the wrong key, play the sound :download:`wrong-answer.ogg <../experiments/expyriment/parity_decision/wrong-answer.ogg>`.
+| - Add feedback; when the subjects presses the wrong key, play the sound :download:`wrong-answer.ogg <../experiments/parity_decision/wrong-answer.ogg>`.
 
 
-  Here is a solution: :download:`parity_feedback.py <../experiments/expyriment/parity_decision/parity_feedback.py>`
+  Here is a solution: :download:`parity_feedback.py <../experiments/parity_decision/parity_feedback.py>`
 
 
 Numerical distance effect
@@ -139,14 +139,14 @@ Let us program such a task.
 Step 1: stimuli listed in constants
 +++++++++++++++++++++++++++++++++++
 
-Modify the :download:`parity task script <../experiments/expyriment/parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order).
+Modify the :download:`parity task script <../experiments/parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order).
 
 For testing purposes, you can use the following variables::
 
    words = ['bonjour', 'chien', 'président']
    pseudos = ['lopadol', 'mirance', 'clapour' ]
 
-A solution is proposed in :download:`lexdec_v1.py <../experiments/expyriment/lexical_decision/lexdec_v1.py>`
+A solution is proposed in :download:`lexdec_v1.py <../experiments/lexical_decision/lexdec_v1.py>`
 
 Step 2: read stimuli from a csv file
 ++++++++++++++++++++++++++++++++++++
@@ -163,7 +163,7 @@ Then modify the lexical decision script to read the stimuli from a comma-separat
 
 (hint: To read a csv file, one can use ``pandas.read_csv()``)
 
-A solution is proposed in :download:`lexdec_v2.py <../experiments/expyriment/lexical_decision/lexdec_v2.py>` 
+A solution is proposed in :download:`lexdec_v2.py <../experiments/lexical_decision/lexdec_v2.py>` 
 
 Note: You can use a file comparator, e.g. `meld <https://meldmerge.org/>`__, to compare the two versions::
 

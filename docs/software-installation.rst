@@ -412,7 +412,7 @@ Test expyriment
    cd ~/PCBS/experiments/Posner-attention
    python posner_task.py 
 
-   cd ~/PCBS/experiments/expyriment/parity_decision
+   cd ~/PCBS/experiments/parity_decision
    python parity_feedback.py
 
    cd ~/PCBS/experiments/mental_logic_card_game

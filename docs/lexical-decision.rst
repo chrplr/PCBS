@@ -14,7 +14,7 @@ Let us program such a task.
 Step 1: stimuli in constants
 ----------------------------
 
-Modify the :download:`parity task script <../experiments/expyriment/parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order).
+Modify the :download:`parity task script <../experiments/parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order).
 
 For testing purposes, you can use the following variables::
 
