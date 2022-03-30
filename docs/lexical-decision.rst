@@ -132,7 +132,7 @@ Merge ``words.csv`` and ``pseudowords.csv`` into a single
 Use `sys.argv` to pass the name of the file containing the list of stimuli  
 --------------------------------------------------------------------------
 
-Modify `lexdec_v2.py` to be able to pass the name of the stimuli file as an argument on the command line::
+Modify ``lexdec_v2.py`` to be able to pass the name of the stimuli file as an argument on the command line::
 
         python lexdec_v3.py stimuli2.csv
 

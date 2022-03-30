@@ -84,14 +84,17 @@ Sublime code editor
 `Sublime Text <https://www.sublimetext.com/>`_ is a powerful text editor with a good Python mode. 
 
 .. code-block:: bash
-
+                
   wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+
+.. code-block:: bash
+
   sudo apt-get install apt-transport-https
   echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
   sudo apt-get update
   sudo apt-get install sublime-text
 
-(from https://www.sublimetext.com/docs/linux_repositories.html)
+(if this does not work, check the latest instructions from https://www.sublimetext.com/docs/linux_repositories.html)
 
 
 R language for statistics
@@ -102,13 +105,16 @@ R language for statistics
 .. code-block:: bash
 
   sudo apt update -qq
+
+.. code-block:: bash
+
   sudo apt install --no-install-recommends software-properties-common dirmngr
   wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
   sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
   sudo apt install --no-install-recommends r-base
   sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
 
-(from https://cran.rstudio.com/bin/linux/ubuntu/)
+(in case of trouble, check the latest instructions at https://cran.rstudio.com/bin/linux/ubuntu/)
 
 
 Rstudio Desktop
@@ -132,16 +138,17 @@ Psychtoolbox
 very popular in vision and neuroscience research. This installation is optional
 as the Psychtoolbox is **not used** in this book.
 
+First, add the [Neurodebian](https://neuro.debian.net/) repository.
 
 .. code-block:: bash
 
-    ## Add Neurodebian repository 
-    ## Select the neurodebian repository on  [Neurodebian](https://neuro.debian.net/), and copy the command lines, e.g.:
-
     wget -O- http://neuro.debian.net/lists/focal.de-m.full | sudo tee /etc/apt/sources.list.d/neurodebian.sources.list
+
+.. code-block:: bash
+
     sudo apt-key adv --recv-keys --keyserver hkps://keyserver.ubuntu.com 0xA5D32F012649A5A9
 
-    ## activate sources and install  required packages
+Then activate the sources and install the required packages::
 
     sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
     sudo apt update
@@ -149,14 +156,14 @@ as the Psychtoolbox is **not used** in this book.
     sudo apt build-dep octave-psychtoolbox-3
     sudo apt install subversion libdc1394-22-dev libfreenect* libgstreamer1.0-dev libgstreamer-plugins-*
 
-    ## download psychtoolbox
+Download the psychtoolbox installation script::
 
     wget https://raw.github.com/Psychtoolbox-3/Psychtoolbox-3/master/Psychtoolbox/DownloadPsychtoolbox.m.zip
     unzip DownloadPsychtoolbox.m.zip 
 
     mkdir ~/PTB3
 
-Now, start ``octave`` on the command line and type::
+Finally, start ``octave`` and, on Octave's command line, type::
 
       DownloadPsychtoolbox('/home/neurostim/PTB3')
       PsychLinuxConfiguration()
@@ -164,7 +171,7 @@ Now, start ``octave`` on the command line and type::
       # test 
       DrawingSpeedTest()
 
-Now you can `check`_ if everything works. 
+Now you should `check`_ if everything works. 
 
 
 
@@ -194,8 +201,11 @@ will ask for a user name and password. You can put anything but it is crucial
 that you note down the password as it will be needed to install software under
 Ubuntu.
 
-Once the installation is finished, open the “Ubuntu” App and follow the
-instructions for linux_ to install more software.
+When the WSL installation is finished, go to the linux_ section to install more software.
+
+.. note::
+  Detailed information about the WSL is available at https://docs.microsoft.com/en-us/windows/wsl/
+  In particular, if anything goes wrong during the installation check the `Troubleshoting WSL <https://docs.microsoft.com/en-us/windows/wsl/troubleshooting>`__ section. 
 
 
 Instructions for Windows (Native, without WSL)
@@ -204,7 +214,7 @@ Instructions for Windows (Native, without WSL)
 This is not recommended because this approach has several pitfalls (if  you do not carefully follow the instructions, many things will not work correclty). However there are two reasons to take this route:
 
 - WSL does not work on your machine.
-- you want to avoid a potential overhead of WSL, e.g. when Python needs to access devices.
+- if you are concerned by potential overheads of the WSL (but read `this <https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively>`__).
 
 
 R and Rstudio

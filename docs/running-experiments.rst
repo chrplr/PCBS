@@ -146,7 +146,7 @@ For testing purposes, you can use the following variables::
    words = ['bonjour', 'chien', 'président']
    pseudos = ['lopadol', 'mirance', 'clapour' ]
 
-A solution is proposed in :download:`lexdec_v1.py <../experiments/lexical_decision/lexdec_v1.py>`
+A solution is proposed in :download:`lexdec_v1.py <../experiments/expyriment/lexical_decision/lexdec_v1.py>`
 
 Step 2: read stimuli from a csv file
 ++++++++++++++++++++++++++++++++++++
@@ -163,7 +163,7 @@ Then modify the lexical decision script to read the stimuli from a comma-separat
 
 (hint: To read a csv file, one can use ``pandas.read_csv()``)
 
-A solution is proposed in :download:`lexdec_v2.py <../experiments/lexical_decision/lexdec_v2.py>` 
+A solution is proposed in :download:`lexdec_v2.py <../experiments/expyriment/lexical_decision/lexdec_v2.py>` 
 
 Note: You can use a file comparator, e.g. `meld <https://meldmerge.org/>`__, to compare the two versions::
 
