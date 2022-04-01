@@ -180,10 +180,10 @@ Instructions for Windows (WSL)
 
 This is the simplest, and therefore recommended, method. 
 
-You are going to install Ubuntu Linux on your Windows system, using the *Windows
-Subsystem for Linux* (aka WSL).  In a nutshell,
+You need to install Ubuntu Linux on your Windows system, using the *Windows
+Subsystem for Linux* (aka WSL).  
 
-* if you have Windows 11:
+- If you have Windows 11:
 
   #. Install the vGPU driver for your graphics card (`Intel
      <https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html?>`__,
@@ -195,8 +195,7 @@ Subsystem for Linux* (aka WSL).  In a nutshell,
 
        wsl --install -d ubuntu
 
-* if you have Windows 10, follow [these
-instructions](https://omggubuntu.co.uk/how-to-install-wsl2-on-windows-10).
+- If you have Windows 10, follow `these instructions <https://omggubuntu.co.uk/how-to-install-wsl2-on-windows-10>`__.
 
 This downloads the full Ubuntu linux which may take a while. Some versions of
 Windows may even ask you to reboot during the installation process. At some
@@ -217,8 +216,8 @@ Instructions for Windows (Native, without WSL)
 
 This is not recommended because this approach has several pitfalls (if  you do not carefully follow the instructions, many things will not work correclty). However there are two reasons to take this route:
 
-- WSL does not work on your machine.
-- if you are concerned by potential overheads of the WSL (but read `this <https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively>`__).
+- WSL does not work on your machine (for example, your CPU does not allow `virtualization <https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/>`__). 
+- You are concerned by potential overheads of the WSL (yet, read `this <https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively>`__).
 
 
 R and Rstudio
