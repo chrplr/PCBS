@@ -271,11 +271,12 @@ To go further:
 -  If you want to know how negative integer numbers are represented, see
    http://en.wikipedia.org/wiki/Two%27s_complement
 
--  To understand how real numbers are encoded, read `What Every
+-  To understand how real numbers (a.k.a. “floats”) are encoded, read `What Every
    Programmer Should Know About Floating-Point
    Arithmetic <http://floating-point-gui.de/>`__ and
    https://docs.python.org/2/tutorial/floatingpoint.html#tut-fp-issues
 
+   
 
 Representation of text
 ======================

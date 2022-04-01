@@ -181,18 +181,22 @@ Instructions for Windows (WSL)
 This is the simplest, and therefore recommended, method. 
 
 You are going to install Ubuntu Linux on your Windows system, using the *Windows
-Subsystem for Linux* (aka WSL).  In a nutshell, you have to:
+Subsystem for Linux* (aka WSL).  In a nutshell,
 
-#. Install the vGPU driver for your graphics card (`Intel
-   <https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html?>`__,
-   `AMD <https://www.amd.com/en/support/kb/release-notes/rn-rad-win-wsl-support>`__
-   or `Nvidia <https://developer.nvidia.com/cuda/wsl>`__) [2]_ if it not
-   already there.  
-#. Launch “Windows PowerShell” as administrator, and execute
-   the command::
+* if you have Windows 11:
 
-        wsl --install -d ubuntu
+  #. Install the vGPU driver for your graphics card (`Intel
+     <https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html?>`__,
+     `AMD <https://www.amd.com/en/support/kb/release-notes/rn-rad-win-wsl-support>`__
+     or `Nvidia <https://developer.nvidia.com/cuda/wsl>`__) [2]_ if it not already
+     installed.
+  #. Launch “Windows PowerShell” as administrator, and execute
+     the command::
 
+       wsl --install -d ubuntu
+
+* if you have Windows 10, follow [these
+instructions](https://omggubuntu.co.uk/how-to-install-wsl2-on-windows-10).
 
 This downloads the full Ubuntu linux which may take a while. Some versions of
 Windows may even ask you to reboot during the installation process. At some
@@ -294,6 +298,7 @@ Start **Git bash** and, in the openned Terminal, type::
 
    pip install expyriment[all]
 
+
 Learn to use Sublime Text and Git Bash Terminal to create Python scripts 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -317,7 +322,6 @@ Unless you already master a code editor,  we recommend that you download and ins
 
 The Git version control system
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 Download and install `Xcode <https://developer.apple.com/xcode/>`__, either from the App store, or by using the command line ``xcode-select --install``. This will provide git.
 
@@ -344,12 +348,10 @@ Python
 ~~~~~~
 
 Download and install **Anaconda3 Python** from https://www.anaconda.com/products/individual
- 
 
 
 The Pygame and Expyriment python modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
  1. Install `XQuartz <https://www.xquartz.org/>`__. Download the ``.dmg`` file from the official website and open it to install.
 
