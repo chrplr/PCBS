@@ -40,7 +40,7 @@ For example, let us suppose that you want to execute a script named ``matches.py
 
 Remarks:
 
-  * When the script has run to completion, you will be back to interacting with `the shell <http://linuxcommand.sourceforge.net/lc3_learning_the_shell.php)>`_.
+  * When the script has run to completion, you will be back to interacting with `the shell <https://linuxcommand.sourceforge.net/lc3_learning_the_shell.php)>`_.
 
   * It you need to interrupt a running python script, you can press ``Ctrl-C`` in the Terminal.
 

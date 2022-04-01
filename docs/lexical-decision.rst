@@ -80,7 +80,7 @@ promotes reproducible science.
    ``interroger-lexique-avec-R.pdf``
 
 2. Read
-   https://github.com/chrplr/openlexicon/tree/master/scripts#selecting-lexical-items-with-python
+   https://github.com/chrplr/openlexicon/tree/master/scripts
 
 To select 100 five letters long nouns for our lexical decision, execute::
 

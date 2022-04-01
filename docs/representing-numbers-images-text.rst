@@ -531,8 +531,8 @@ Each dot (pixel) is either ‘0’ (black) or ‘1’ (white).
 Numpy’s arrays are a new type of object. There are similar to lists, but
 optimised for mathematical computations. Notably, they can be
 multidimensional (i.e. you can use a[i,j] notation). You can learn more
-about arrays in the documents https://scipy-lectures.org/ and
-http://wiki.scipy.org/Tentative_NumPy_Tutorial.
+about arrays in the documents https://scipy-lectures.org/ and 
+https://www.projectpro.io/data-science-in-python-tutorial/numpy-python-tutorial
 
 Here is another example:
 
