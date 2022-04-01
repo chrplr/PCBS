@@ -351,7 +351,6 @@ Or “triple” quotes for multilines strings::
 They have a type ``str``::
 
    type('bonjour')
-   <class 'str'>
 
 To convert an object to a string representation::
 

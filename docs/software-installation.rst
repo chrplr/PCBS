@@ -21,8 +21,8 @@ After the installation, `check`_ that everything works.
       Therefore, make sure to have a decent connection.
    -  Make sure that you have at least 5GB of free space on your hard drive
       to unpack the various software.
-   -  You will need to have administrator rights to install some of the
-      softwares. If you are using a computer from an institution, check with the IT support team.
+   - You will need to have administrator rights to install some of the
+     software. If you are using a computer from an institution, check with the IT support team.
 
 
 .. contents:: :depth: 2
@@ -195,7 +195,7 @@ Subsystem for Linux* (aka WSL).
 
        wsl --install -d ubuntu
 
-- If you have Windows 10, follow `these instructions <https://omggubuntu.co.uk/how-to-install-wsl2-on-windows-10>`__.
+- If you have Windows 10, follow `these instructions <https://omgubuntu.co.uk/how-to-install-wsl2-on-windows-10>`__.
 
 This downloads the full Ubuntu linux which may take a while. Some versions of
 Windows may even ask you to reboot during the installation process. At some
