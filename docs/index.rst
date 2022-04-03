@@ -14,6 +14,7 @@ Git repository on github (contains slides, solutions to exercices, and more)
 
    foreword
    software-installation
+   testing-tour
    scratch/Starting-from-Scratch
    practical-interaction
    running-python
