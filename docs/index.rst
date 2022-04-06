@@ -17,6 +17,7 @@ Git repository on github (contains slides, solutions to exercices, and more)
    software-installation
    testing-tour
    scratch/Starting-from-Scratch
+   fun-programming-languages
    practical-interaction
    running-python
    coding-exercices

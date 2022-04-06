@@ -3,48 +3,6 @@ Starting from Scratch
 *********************
 
 
-What is programming?
-====================
-
-Programming = solving a problem with code
------------------------------------------
-
-**Problem => Algorithm => Code**
-
-Examples of Problems::
-
-   - Cooking boiled eggs
-   - Integer division of two numbers
-   - Missile Pursuit (or animal chasing a prey)
-   - Play a game like chess
-   - Recover 3D information from stereoscopic images
-
-It is important to realize the different nature of the two tasks:
-
-  1. finding an algorithm to solve a problem
-  2. translating an algorithm into a code (*coding*)
-
-
-. . .
-
-Things to be aware of
----------------------
-
-- Because computers are stupid, that is, lack a *theory of mind* and
-  cannot guess your desires and intentions, you must provide very
-  detailed and exhaustive instructions.
-
-- Learning to code takes time because it requires to master not only
-  the semantic but also the syntax (=grammar) of the language.
-
-- Just as learning to play an instrument, or speak a second language,
-  programming is a skill that can only be acquire with lots of practice.
-
-. . .
-
-Starting with Scratch
----------------------
-
 To begin our journey into programming, we will use Scratch_, a system developed the MIT media lab to teach how to program to kids.
 
 .. _Scratch: http://scratch.mit.edu
@@ -59,8 +17,7 @@ downloading Scratch_ at
 -  https://scratch.mit.edu/scratch_1.4/ (version 1)
 -  https://scratch.mit.edu/scratch2download/ (version 2)
 
-It may be a good idea to run the tutorial “Getting Started with Scratch” on the
-`website <https://scratch.mit.edu/projects/editor/?tip_bar=home>`__
+We recommend the reader to run the tutorial `“Getting Started with Scratch” <https://scratch.mit.edu/projects/editor/?tip_bar=home>`__
 
 
 First steps
