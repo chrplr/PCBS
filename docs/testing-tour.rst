@@ -1,28 +1,29 @@
 .. _check:
 
-**********************
+***********************
 Check your installation  
-**********************
+***********************
 
 .. contents:: :depth: 2
 
 
-Test Git
---------
+Check Git
+---------
 
 Download the course materials using Git by entering the following command line in a Terminal:: 
 
     git clone https://github.com/chrplr/PCBS.git
 
-You should see a message ``Cloning into 'PCBS'...`` and, if everything goes well, all
-course materials (python scripts, data files, ...) should be downloaded in a new subdirectory, ``PCBS``, in the current working directory.
-You now can move inside the PCBS directory and list its content:
+You should see a message ``Cloning into 'PCBS'...`` and, if everything goes well, all the
+course materials (python scripts, data files, ...) should be downloaded in a new subdirectory called ``PCBS``, within the current working directory. You can cd into it and list its content:
 
 .. code-block:: bash
 
     cd PCBS
     pwd
     ls
+
+Your Terminal window should more or less look like this:
 
 .. image:: images/term-git-clone-pcbs.png
   :width: 600
@@ -42,8 +43,8 @@ You now can move inside the PCBS directory and list its content:
    the file system <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`_.
 
 
-Test Python
------------
+Check Python
+------------
 
 This tests if Python3 is installed and correctly configured.
 
@@ -63,8 +64,8 @@ This tests if Python3 is installed and correctly configured.
 .. warning::
   If you receive an error message such as ``bash: python: No such file or directory``, and you are sure that python is installed, the most likely reason is that the problems lies with the `PATH environment variable <https://linuxhint.com/path_in_bash/>`__) listing all the directories: the directory containing the python executable file may be missing from the list. This happens for example, if you run the Anaconda3 installer and did not check the relevant box. 
 
-Test basic graphics
--------------------
+Check basic graphics
+--------------------
 
 .. code-block:: bash
 
@@ -82,8 +83,8 @@ Test basic graphics
      :width: 200
 
 
-Test matplotlib
----------------
+Check matplotlib
+----------------
 
 matplotlib is a python library to create and display graphics.
 
@@ -128,8 +129,8 @@ matplotlib is a python library to create and display graphics.
 
 .. image:: images/wedge-ring.png
 
-Test pygame
------------
+Check pygame
+------------
 
 `Pygame <http://www.pygame.org>`__ is a Python library to create simple audio visual games.
 
@@ -157,10 +158,11 @@ Test pygame
    python lilac_chaser_blurred.py
 
 
-Test Expyriment
----------------
+Check Expyriment
+----------------
 
-`Expyriment <http://expyriment.org>`__ is a Python library for designing and conducting behavioural and neuroimaging experiments. 
+`Expyriment <http://expyriment.org>`__ is a Python library for designing and conducting behavioural and neuroimaging experiments. Try to run the floowing three experiments (Note that the programs can be interrupted at any time by pressing the ``Esc`` key).
+
 
 .. code-block:: bash
 
@@ -173,7 +175,6 @@ Test Expyriment
    cd ~/PCBS/experiments/mental_logic_card_game
    python mental_logic_card_game.py             
 
-Note: the programs can be interrupted at any time by pressing the ``Esc`` key.
 
 
 
@@ -235,8 +236,9 @@ Here are some resources to learn more about how to control your computer from a 
      - OpenClassRoom : https://openclassrooms.com/en/courses/43538-reprenez-le-controle-a-laide-de-linux/37813-la-console-ca-se-mange
 
 
-.. _[1]:
-  Read https://linuxhint.com/path_in_bash/ , locate the folder containing ``subl``,  then use a text editor to add the following line at the end of the file ``~/.bashrc``::
+.. rubric:: Footnotes
+
+.. [1]  Read https://linuxhint.com/path_in_bash/ , locate the folder containing ``subl``,  then use a text editor to add the following line at the end of the file ``~/.bashrc``::
 
        export PATH="path_to_the_directory_containing_subl":"${PATH}"
 
