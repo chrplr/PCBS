@@ -53,8 +53,8 @@ This tests if Python3 is installed and correclty configured.
     python human-guess-a-number.py
     python matches.py
 
-.. image:: images/term-python-guess-a-number.png
-     :width: 400
+.. image:: images/guess-number.png
+   :width: 400
 
 
 .. note::
@@ -67,10 +67,14 @@ Test basic graphics
 
   cd ~/PCBS/simulations/fractals
   python koch0.py
-  python tree.py
 
 .. image:: images/koch.png
      :width: 600
+
+.. code::
+
+  python tree.py
+
 
 .. image:: images/tree.png
      :width: 200
@@ -84,20 +88,35 @@ matplotlib is a python library to create and display graphics.
 .. code-block:: bash
 
     cd ~/PCBS/stimuli/visual
-    python bullseye.py
+
+::
+   python bullseye.py
+
+.. image:: images/bullseye.png
+     :width: 300
+
     python contrast_modulated_grating.py
+
+.. image:: images/contrast-modulated.png
+     :width: 300
+
+::
     python gabor.py
+
+
+.. image:: images/gabor.png
+     :width: 300
+
+::
     python image-manipulation.py
-    python wedgering.py
 
-.. image: images/contrast-modulated.png
-     :width: 400
 
-.. image: images/gabor.png
-     :width: 400
+.. image:: images/image-manip.png
+     :width: 600
 
-.. image: images/image-manip.png
-     :width: 400
+::
+   python wedgering.py
+
 
 
 Test pygame

@@ -50,26 +50,28 @@ Subsystem for Linux* (aka WSL).
        wsl --install -d ubuntu
 
 - If you have Windows 10, follow `these instructions <https://omgubuntu.co.uk/how-to-install-wsl2-on-windows-10>`__.
-(you may have to enable [Hyper-V](https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/) in your BIOS)
+  (You may have to enable `Hyper-V <https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/>`__)
 
-This downloads the full Ubuntu linux which may take a while. Some versions of
+This downloads the full Ubuntu Linux distribution which may take a while. Some versions of
 Windows may even ask you to reboot during the installation process. At some
-point during the install, a new Terminal window titled “Ubuntu” will open and
-will ask for a user name and password. You can put anything but it is crucial
+point during the install, a new Terminal window entitled “Ubuntu” will open and
+will require a new user name and password. You can type anything but it is crucial
 that you note down the password as it will be needed to install software under
 Ubuntu.
 
-When the WSL installation is finished, go to the linux_ section to install more software.
 
 .. note::
   Detailed information about the WSL is available at https://docs.microsoft.com/en-us/windows/wsl/
   In particular, if anything goes wrong during the installation check the `Troubleshoting WSL <https://docs.microsoft.com/en-us/windows/wsl/troubleshooting>`__ section. 
 
 
-Instructions for Windows (Native, without WSL)
-----------------------------------------------
+When the WSL installation is finished, go to the linux_ section in order to install the required software.
 
-This is not recommended because this approach has several pitfalls (if  you do not carefully follow the instructions, many things will not work correclty). However there are two reasons to take this route:
+
+Instructions for native Windows (without WSL)
+---------------------------------------------
+
+This approach is not recommended because it has several pitfalls (if  you do not carefully follow the instructions, many things will not work correclty). Yet, there are two reasons why one may want to follow this path:
 
 - WSL does not work on your machine (for example, your CPU does not allow `virtualization <https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/>`__). 
 - You are concerned by potential overheads of the WSL (yet, read `this <https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively>`__).
@@ -78,9 +80,7 @@ This is not recommended because this approach has several pitfalls (if  you do n
 R and Rstudio
 ~~~~~~~~~~~~~
 
-R is a programming language specialized for statistical data analyses.
-
-Download and install the latest version of R from https://cran.rstudio.com/bin/windows/base/
+R is a programming language specialized for statistical data analyses; Download and install it from https://cran.rstudio.com/bin/windows/base/
 
 Rstudio is an *Integrated Developpement Environment* for R which greatly
 simplifies the use of RMarkdown. You can download and install the
