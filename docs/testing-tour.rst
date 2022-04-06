@@ -98,10 +98,6 @@ matplotlib is a python library to create and display graphics.
 
 .. image: images/image-manip.png
      :width: 400
-        
-
-
-
 
 
 Test pygame
@@ -116,6 +112,11 @@ Test pygame
    python hering.py
    python lilac_chaser_blurred.py
 
+.. image:: images/kani.png
+    :width: 200
+
+.. image:: images/hering0.png
+    :width: 400
 
 Test expyriment
 ---------------
