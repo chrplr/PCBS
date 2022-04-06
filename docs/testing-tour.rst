@@ -1,7 +1,7 @@
 .. _check:
 
 **********************
-Test your installation  
+Check your installation  
 **********************
 
 .. contents:: :depth: 2
@@ -14,37 +14,38 @@ Download the course materials using Git by entering the following command line i
 
     git clone https://github.com/chrplr/PCBS.git
 
+You should see a message ``Cloning into 'PCBS'...`` and, if everything goes well, all
+course materials (python scripts, data files, ...) should be downloaded in a new subdirectory, ``PCBS``, in the current working directory.
 
-You should see a message ``Cloning into PCBS...`` and if all goes well, all the
-course materials (python scripts, data files, ...) in a subdirectory ``PCBS`` in
-the current working directory (that is, your home directory if you just opened a
-Terminal; You can check with the command ``pwd``).
-
-.. image:: images/terminal-git-pcbs.png
+.. image:: images/term-git-clone-pcbs.png
   :width: 400
   :alt: Terminal showing the results of git clone...
-
-
-.. note::
-   If a folder named ``PCBS`` already exists in the current working
-   directory, git will stop and will not download the content of the remote PCBS
-   repository. In that case, you must delete or move the existing PCBS folder
-   before running the ``git clone`` command above).
 
 You now can move inside the PCBS directory and list its content: 
 
 .. code-block:: bash
 
     cd PCBS
+    pwd
     ls
-    
-If you are lost at this point, read  `Navigating the file system <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`_.
+
+
+.. note::
+   If a folder named ``PCBS`` already exists in the current working
+   directory, git will stop and will not download the content of the remote PCBS
+   repository. In that case, you must delete or move the existing ``PCBS`` folder
+   before running the ``git clone`` command above.
+
+   When you open a Terminal, the current working directory is your “home”, or
+   “user”, directory, until you start navigating in the filesystem with the ``cd
+   (change directory)`` command. If you are lost at this point, read `Navigating
+   the file system <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`_.
 
 
 Test Python
 -----------
 
-This will test if Python3 is installed and correclty configured.
+This tests if Python3 is installed and correclty configured.
 
 .. code-block:: bash
 
@@ -69,8 +70,10 @@ Test basic graphics
   python tree.py
 
 .. image:: images/koch.png
+     :width: 600
 
 .. image:: images/tree.png
+     :width: 200
 
 
 Test matplotlib
@@ -86,6 +89,16 @@ matplotlib is a python library to create and display graphics.
     python gabor.py
     python image-manipulation.py
     python wedgering.py
+
+.. image: images/contrast-modulated.png
+     :width: 400
+
+.. image: images/gabor.png
+     :width: 400
+
+.. image: images/image-manip.png
+     :width: 400
+        
 
 
 
