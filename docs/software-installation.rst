@@ -50,6 +50,7 @@ Subsystem for Linux* (aka WSL).
        wsl --install -d ubuntu
 
 - If you have Windows 10, follow `these instructions <https://omgubuntu.co.uk/how-to-install-wsl2-on-windows-10>`__.
+(you may have to enable [Hyper-V](https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/) in your BIOS)
 
 This downloads the full Ubuntu linux which may take a while. Some versions of
 Windows may even ask you to reboot during the installation process. At some

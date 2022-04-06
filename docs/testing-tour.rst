@@ -14,34 +14,73 @@ Download the course materials using Git by entering the following command line i
 
     git clone https://github.com/chrplr/PCBS.git
 
-This should download all the course materials (python scripts, data files, ...) in a directory  ``PCBS`` inside your home directory (If a folder named ``PCBS`` already exists in the current working directory, git will stop and not download the content of the website. In that case, you must delete or move the existing PCBS folder before running the ``git clone`` command above).
 
-You can move inside the PCBS directory and list its content: 
+You should see a message ``Cloning into PCBS...`` and if all goes well, all the
+course materials (python scripts, data files, ...) in a subdirectory ``PCBS`` in
+the current working directory (that is, your home directory if you just opened a
+Terminal; You can check with the command ``pwd``).
+
+.. image:: images/terminal-git-pcbs.png
+  :width: 400
+  :alt: Terminal showing the results of git clone...
+
+
+.. note::
+   If a folder named ``PCBS`` already exists in the current working
+   directory, git will stop and will not download the content of the remote PCBS
+   repository. In that case, you must delete or move the existing PCBS folder
+   before running the ``git clone`` command above).
+
+You now can move inside the PCBS directory and list its content: 
 
 .. code-block:: bash
 
     cd PCBS
     ls
     
-If you get any error messages, check  `Navigating the file system <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`_ to understand how to set the correct current working directory.
+If you are lost at this point, read  `Navigating the file system <http://linuxcommand.sourceforge.net/lc3_lts0020.php>`_.
 
 
 Test Python
 -----------
 
+This will test if Python3 is installed and correclty configured.
+
 .. code-block:: bash
 
-    cd -/PCBS/games
+    cd ~/PCBS/games
     python human-guess-a-number.py
     python matches.py
+
+.. image:: images/term-python-guess-a-number.png
+     :width: 400
+
+
+.. note::
+  If you receive an error message such as ``bash: python: No such file or directory``, and you are sure that python is installed, the most likely reason is that the problems lies with the [PATH environment variable](https://linuxhint.com/path_in_bash/) listing all the directories: the directory containing the python executable may be missng from hte list. This happens for example, if one did not check the right box during Anaconda installation.  
+
+Test basic graphics
+-------------------
+
+.. code-block:: bash
+
+  cd ~/PCBS/simulations/fractals
+  python koch0.py
+  python tree.py
+
+.. image:: images/koch.png
+
+.. image:: images/tree.png
 
 
 Test matplotlib
 ---------------
 
+matplotlib is a python library to create and display graphics.
+
 .. code-block:: bash
 
-    cd -/PCBS/stimuli/visual
+    cd ~/PCBS/stimuli/visual
     python bullseye.py
     python contrast_modulated_grating.py
     python gabor.py
@@ -50,12 +89,16 @@ Test matplotlib
 
 
 
+
+
 Test pygame
 -----------
 
+[Pygame](http://www.pygame.org) is a Python library to create simple audio visual games.
+
 .. code-block:: bash
 
-   cd -/PCBS/stimuli/visual-illusions/
+   cd ~/PCBS/stimuli/visual-illusions/
    python kanizsa_triangle.py
    python hering.py
    python lilac_chaser_blurred.py
@@ -64,27 +107,21 @@ Test pygame
 Test expyriment
 ---------------
 
+[Expyriment](http://expyriment.org) is a Python library for designing and conducting behavioural and neuroimaging experiments. 
+
 .. code-block:: bash
 
-   cd -/PCBS/experiments/Posner-attention
+   cd ~/PCBS/experiments/Posner-attention
    python posner_task.py 
 
-   cd -/PCBS/experiments/parity_decision
+   cd ~/PCBS/experiments/parity_decision
    python parity_feedback.py
 
-   cd -/PCBS/experiments/mental_logic_card_game
+   cd ~/PCBS/experiments/mental_logic_card_game
    python mental_logic_card_game.py             
 
 Note: the programs can be interrupted at any time by pressing the ``Esc`` key.
 
-Test graphics
--------------
-
-.. code-block:: bash
-
-  cd -/PCBS/simulations/fractals
-  python koch0.py
-  python tree.py
 
 
 Sublime Text
@@ -95,7 +132,7 @@ Sublime Text
    subl
 
 
-This should open the sublime text editor. If you get a message ``command not found``, ask the instructor to fix your path.
+This should open a new window with the sublime text editor. If you get a message ``command not found``, ask the instructor to fix your path.
 
 Then, check out https://www.youtube.com/watch?v=SVkR1ZkNusI for a short tutorial.
 
@@ -110,7 +147,7 @@ The course materials are often updated. To make sure you have the latest version
 
 .. code-block:: bash
 
-      cd -/PCBS
+      cd ~/PCBS
       git pull
 
 Notes:
