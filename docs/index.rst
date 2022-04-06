@@ -9,6 +9,7 @@ Git repository on github (contains slides, solutions to exercices, and more)
 
 
 .. toctree::
+   :numbered:
    :maxdepth: 2
    :caption: Contents:
 

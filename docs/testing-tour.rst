@@ -16,12 +16,7 @@ Download the course materials using Git by entering the following command line i
 
 You should see a message ``Cloning into 'PCBS'...`` and, if everything goes well, all
 course materials (python scripts, data files, ...) should be downloaded in a new subdirectory, ``PCBS``, in the current working directory.
-
-.. image:: images/term-git-clone-pcbs.png
-  :width: 400
-  :alt: Terminal showing the results of git clone...
-
-You now can move inside the PCBS directory and list its content: 
+You now can move inside the PCBS directory and list its content:
 
 .. code-block:: bash
 
@@ -29,8 +24,13 @@ You now can move inside the PCBS directory and list its content:
     pwd
     ls
 
+.. image:: images/term-git-clone-pcbs.png
+  :width: 400
+  :alt: Terminal showing the results of git clone...
 
-.. note::
+
+
+.. warning::
    If a folder named ``PCBS`` already exists in the current working
    directory, git will stop and will not download the content of the remote PCBS
    repository. In that case, you must delete or move the existing ``PCBS`` folder
@@ -51,13 +51,16 @@ This tests if Python3 is installed and correclty configured.
 
     cd ~/PCBS/games
     python human-guess-a-number.py
-    python matches.py
+
 
 .. image:: images/guess-number.png
    :width: 400
 
+.. code-block:: bash
 
-.. note::
+    python matches.py
+
+.. warning::
   If you receive an error message such as ``bash: python: No such file or directory``, and you are sure that python is installed, the most likely reason is that the problems lies with the [PATH environment variable](https://linuxhint.com/path_in_bash/) listing all the directories: the directory containing the python executable may be missng from hte list. This happens for example, if one did not check the right box during Anaconda installation.  
 
 Test basic graphics
@@ -68,13 +71,12 @@ Test basic graphics
   cd ~/PCBS/simulations/fractals
   python koch0.py
 
-.. image:: images/koch.png
+.. image:: images/koch0.png
      :width: 600
 
 .. code::
 
   python tree.py
-
 
 .. image:: images/tree.png
      :width: 200
@@ -89,32 +91,39 @@ matplotlib is a python library to create and display graphics.
 
     cd ~/PCBS/stimuli/visual
 
-::
+.. code-block:: bash
+
+
    python bullseye.py
 
 .. image:: images/bullseye.png
      :width: 300
+
+.. code-block:: bash
 
     python contrast_modulated_grating.py
 
 .. image:: images/contrast-modulated.png
      :width: 300
 
-::
+.. code-block:: bash
+
     python gabor.py
 
 
 .. image:: images/gabor.png
      :width: 300
 
-::
+.. code-block:: bash
+
     python image-manipulation.py
 
 
 .. image:: images/image-manip.png
      :width: 600
 
-::
+.. code-block:: bash
+
    python wedgering.py
 
 
