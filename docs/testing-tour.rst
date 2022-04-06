@@ -25,7 +25,7 @@ You now can move inside the PCBS directory and list its content:
     ls
 
 .. image:: images/term-git-clone-pcbs.png
-  :width: 400
+  :width: 600
   :alt: Terminal showing the results of git clone...
 
 
@@ -45,7 +45,7 @@ You now can move inside the PCBS directory and list its content:
 Test Python
 -----------
 
-This tests if Python3 is installed and correclty configured.
+This tests if Python3 is installed and correctly configured.
 
 .. code-block:: bash
 
@@ -54,14 +54,14 @@ This tests if Python3 is installed and correclty configured.
 
 
 .. image:: images/guess-number.png
-   :width: 400
+   :width: 600
 
 .. code-block:: bash
 
     python matches.py
 
 .. warning::
-  If you receive an error message such as ``bash: python: No such file or directory``, and you are sure that python is installed, the most likely reason is that the problems lies with the [PATH environment variable](https://linuxhint.com/path_in_bash/) listing all the directories: the directory containing the python executable may be missng from hte list. This happens for example, if one did not check the right box during Anaconda installation.  
+  If you receive an error message such as ``bash: python: No such file or directory``, and you are sure that python is installed, the most likely reason is that the problems lies with the `PATH environment variable <https://linuxhint.com/path_in_bash/>`__) listing all the directories: the directory containing the python executable file may be missing from the list. This happens for example, if you run the Anaconda3 installer and did not check the relevant box. 
 
 Test basic graphics
 -------------------
@@ -126,30 +126,41 @@ matplotlib is a python library to create and display graphics.
 
    python wedgering.py
 
-
+.. image:: images/wedge-ring.png
 
 Test pygame
 -----------
 
-[Pygame](http://www.pygame.org) is a Python library to create simple audio visual games.
+`Pygame <http://www.pygame.org>`__ is a Python library to create simple audio visual games.
 
 .. code-block:: bash
 
    cd ~/PCBS/stimuli/visual-illusions/
    python kanizsa_triangle.py
-   python hering.py
-   python lilac_chaser_blurred.py
 
 .. image:: images/kani.png
     :width: 200
 
+.. code-block:: bash
+
+   python hering.py
+
 .. image:: images/hering0.png
     :width: 400
 
-Test expyriment
+.. code-block:: bash
+
+   python extinction-rotated.py 
+
+.. image:: images/exctinction.png
+
+   python lilac_chaser_blurred.py
+
+
+Test Expyriment
 ---------------
 
-[Expyriment](http://expyriment.org) is a Python library for designing and conducting behavioural and neuroimaging experiments. 
+`Expyriment <http://expyriment.org>`__ is a Python library for designing and conducting behavioural and neuroimaging experiments. 
 
 .. code-block:: bash
 
@@ -174,7 +185,7 @@ Sublime Text
    subl
 
 
-This should open a new window with the sublime text editor. If you get a message ``command not found``, ask the instructor to fix your path.
+This should open a new window with the sublime text editor. If you get a message ``command not found``, ask the instructor to fix your PATH variable or try to do it by tourself [1]_.  
 
 Then, check out https://www.youtube.com/watch?v=SVkR1ZkNusI for a short tutorial.
 
@@ -224,3 +235,9 @@ Here are some resources to learn more about how to control your computer from a 
      - OpenClassRoom : https://openclassrooms.com/en/courses/43538-reprenez-le-controle-a-laide-de-linux/37813-la-console-ca-se-mange
 
 
+.. _[1]:
+  Read https://linuxhint.com/path_in_bash/ , locate the folder containing ``subl``,  then use a text editor to add the following line at the end of the file ``~/.bashrc``::
+
+       export PATH="path_to_the_directory_containing_subl":"${PATH}"
+
+   Once this is done, type `. ~/.bashrc` and enter the command ``subl``
