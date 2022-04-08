@@ -47,9 +47,13 @@ Moodle
 
    https://moodle.u-paris.fr/course/view.php?id=7378
 
+Slides
+
+   http://github.com/chrplr/PCBS/tree/master/slides
+
 Slack discussion forum
 
-   http://cogmaster-pcbs.slack.com (Click https://join.slack.com/t/cogmaster-pcbs/shared_invite/zt-9wid4ime-8~Pw0jKovsbIx1VRawcguQ to join).
+   http://cogmaster-pcbs.slack.com (Click `here <https://join.slack.com/t/cogmaster-pcbs/shared_invite/zt-9wid4ime-8~Pw0jKovsbIx1VRawcguQ>`__ to join).
    Use the ``#general`` channel to ask questions.
 
 
