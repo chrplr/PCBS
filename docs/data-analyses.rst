@@ -3,6 +3,26 @@ Data Analyses
 
 .. contents::
 
+Permutation tests
+-----------------
+
+-  Read about the principle of `permutation tests <https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests>`__
+
+-  Implement a python script that uses a permutation test to compare two
+   samples.
+
+-  Check out the solution I propose:
+   :download:`permutation_test/permutation_test.py <../stats-and-data-analyses/permutation_test/permutation_test.py>`.
+
+
+Bootstrap
+---------
+
+-  Implement the
+   `bootstrap <https://en.wikipedia.org/wiki/Bootstrapping_(statistics)>`__
+   to obtain confidence intervals on the means of a sample.
+
+
 
 Basic Data Analysis with R
 --------------------------
@@ -17,23 +37,8 @@ Comparing means using Easy ANOVA (Analysis of Variance)
 See http://www.pallier.org/easy-anova-with-r.html#easy-anova-with-r
 
 
-Permutation tests
------------------
-
--  Read about the principle of `permutation tests <https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests>`__
-
--  Implement a python script that uses a permutation test to compare two
-   samples.
-
--  Check out the solution I propose:
-   :download:`permutation_test/permutation_test.py <../stats-and-data-analyses/permutation_test/permutation_test.py>`.
-
-Bootstrap
----------
-
--  Implement the
-   `bootstrap <https://en.wikipedia.org/wiki/Bootstrapping_(statistics)>`__
-   to obtain confidence intervals on the means of a sample.
+.. note::
+   Check out `David Lakens's github <https://github.com/Lakens>`__  and, in particular, https://lakens.github.io/statistical_inferences/repository
 
 
 Frequency Analysis

@@ -173,8 +173,7 @@ SublimeText code editor
 A code editor is a program that allows you to edit pure text files such
 as Python programs, `Markdown <https://daringfireball.net/projects/markdown/>`__  or `LaTeX <https://www.latex-project.org/>`__ documents, etc.
 
-Unless you already master a code editor,  we recommend that you download and install `Sublime Text <https://www.sublimetext.com/>`__. Follow the instructions specific to MacOS.
-
+Unless you already use a code editor that you are familiar and happy with,  we recommend that you download and install `Sublime Text <https://www.sublimetext.com/>`__. Follow the instructions specific to MacOS.
 
 
 The Git version control system
@@ -281,7 +280,7 @@ personal information:
 Sublime code editor
 ~~~~~~~~~~~~~~~~~~~
 
-`Sublime Text <https://www.sublimetext.com/>`_ is a powerful text editor with a good Python mode. 
+`Sublime Text <https://www.sublimetext.com/>`_ is a powerful text editor with a good Python mode. To install it:
 
 .. code-block:: bash
                 
@@ -296,6 +295,8 @@ Sublime code editor
 
 (if this does not work, check the latest instructions from https://www.sublimetext.com/docs/linux_repositories.html)
 
+.. note::
+   `Atom <https://atom.io/>`__ or `Visual Studio Code <https://code.visualstudio.com/>`__. are two fine code editors too. If you prefer to use one of these instead of Sublime Text, this is perfectly fine. 
 
 R language for statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~

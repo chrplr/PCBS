@@ -1,9 +1,9 @@
 #! /usr/bin/env python
-# Time-stamp: <2021-12-01 10:02:27 christophe@pallier.org>
+# Time-stamp: <2022-04-01 11:25:42 cp983411>
 """This is an example of a binary decision experiment.
 
 At each trial, a number between 0 and 9 is presented at the center of the
-screen and the participant must press the key 'f' if the number is even, 'j' if
+screen and the participant must press the key 'F' if the number is even, 'J' if
 it is odd. If s/he gives the wrong answer, s/he receives negative feedback (a buzzer sound is played).
 
 """
