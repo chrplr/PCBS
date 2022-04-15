@@ -246,7 +246,7 @@ needed.
 
 .. code-block:: bash
 
-    sudo apt install -y python3 ipython3 python3-dev python-is-python3 python3-future \
+    sudo apt  install -y python3 ipython3 python3-dev python-is-python3 python3-future \
               python3-opengl python3-pip python3-ipython python3-pygame python3-numpy \
               python3-matplotlib python3-skimage python3-pandas python3-scipy \
               python3-imageio python3-ipython
@@ -264,7 +264,7 @@ Git
 
 .. code-block:: bash
 
-   sudo apt install git
+   sudo apt install git -y
 
 Now, type the following command lines, making sure to replace
 ``your_first_and_last_name_here`` and ``your_email_here`` by the relevant
@@ -288,10 +288,10 @@ Sublime code editor
 
 .. code-block:: bash
 
-  sudo apt-get install apt-transport-https
+  sudo apt-get install apt-transport-https -y
   echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
   sudo apt-get update
-  sudo apt-get install sublime-text
+  sudo apt-get install sublime-text -y
 
 (if this does not work, check the latest instructions from https://www.sublimetext.com/docs/linux_repositories.html)
 
@@ -309,10 +309,10 @@ R language for statistics
 
 .. code-block:: bash
 
-  sudo apt install --no-install-recommends software-properties-common dirmngr
+  sudo apt install --no-install-recommends software-properties-common dirmngr -y
   wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
   sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
-  sudo apt install --no-install-recommends r-base
+  sudo apt install --no-install-recommends r-base -y
   sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
 
 (in case of trouble, check the latest instructions at https://cran.rstudio.com/bin/linux/ubuntu/)
@@ -329,7 +329,7 @@ Make sure to select the ubuntu version!
 .. code-block:: bash
 
   wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.1-461-amd64.deb
-  sudo apt install ./rstudio-2022.02.1-461-amd64.deb
+  sudo apt install ./rstudio-2022.02.1-461-amd64.deb -y
 
 
 Psychtoolbox
@@ -354,8 +354,8 @@ Then activate the sources and install the required packages::
     sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
     sudo apt update
 
-    sudo apt build-dep octave-psychtoolbox-3
-    sudo apt install subversion libdc1394-22-dev libfreenect* libgstreamer1.0-dev libgstreamer-plugins-*
+    sudo apt build-dep octave-psychtoolbox-3 -y
+    sudo apt install subversion libdc1394-22-dev libfreenect* libgstreamer1.0-dev libgstreamer-plugins-* -y
 
 Download the psychtoolbox installation script::
 
