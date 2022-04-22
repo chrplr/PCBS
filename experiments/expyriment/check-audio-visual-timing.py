@@ -2,88 +2,86 @@
 # -*- coding: utf-8 -*-
 # Time-stamp: <2021-11-16 13:23:44 christophe@pallier.org>
 
-''' Display two white squares in alternance and play sounds simultanously, 
-to check timing with external equipment (oscilloscope, BlackBox ToolKit, ...) '''
+''' Display a white square for 100ms and play a 100ms tone simultanously, every half second 
+in order to check timing with external equipment (oscilloscope, BlackBox ToolKit, ...) '''
 
-import expyriment
+from expyriment import design, control, stimuli, misc
 
+
+PERIOD = 500  
 TONE_DURATION = 100
-SQUARE_DURATION = 60 * (1000.0 / 60) - 2  # Twenty video refresh periods at 60Hz
-SOA = 3000
+SQUARE_DURATION = 100  # should be 6 frames with a video refresh rate at 60Hz
 
+exp = design.Experiment(name="Cross-modal-timing-test")
+#control.set_develop_mode(True)  # commented because we need fullscreen
 
-exp = expyriment.design.Experiment(name="Cross-modal-timing-test")
-#expyriment.control.set_develop_mode(True)  # commented because we need fullscreen
-
-expyriment.control.initialize(exp)
+control.defaults.open_gl = 2
+control.defaults.audiosystem_buffer_size = 256
+control.initialize(exp)
 
 ##
 
-square_top = expyriment.stimuli.Rectangle((400, 400), position=(0, 300))
-tone = expyriment.stimuli.Tone(TONE_DURATION, 440)
+bs = stimuli.BlankScreen()
+square_top = stimuli.Rectangle((400, 400), position=(0, 300))
+tone = stimuli.Tone(TONE_DURATION, 440)
 
-
+bs.preload()
 square_top.preload()
 tone.preload()
 
-frame = expyriment.stimuli.Canvas((800, 800))
-msg = expyriment.stimuli.TextScreen("",f"""This script displays a white rectangle,
+
+## 
+control.start(skip_ready_screen=True)
+clock = misc.Clock()
+
+exp.screen.clear()
+bs.present(update=True)
+nframe = 0
+t1 = clock.time
+while clock.time - t1 <= 1000:
+    bs.present(update=True)
+    nframe += 1
+FPS = nframe
+
+frame = stimuli.Canvas((800, 800))
+msg = stimuli.TextScreen("",f"""This script displays a white rectangle,
 plays a tone and clears the screen, in a loop.
 
 This permits to check the timing with some external equipment
 (an oscilloscope, the Blackbox toolkit, etc.).
 
-Currently, the parameters are:
+The current parameters are:
 
 Tone duration = {TONE_DURATION} ms
 Display duration = {SQUARE_DURATION} ms
-SOA = {SOA} ms
+Period = {PERIOD} ms
+FPS = {FPS} Hz
 
-These can be changed in the source code.
-
-Press any key to start (Later, to exit the program, just press 'Esc')."""
+Press any key for next screen (Later, to exit the program, just press 'Esc')."""
                 ,
-                position=(0,-200))
+                position=(0, -200))
 msg.plot(frame)
 square_top.plot(frame)
-#square_bottom.plot(frame)
-
-## 
-expyriment.control.start(skip_ready_screen=True)
-
-exp.screen.clear()
 frame.present()
 exp.keyboard.wait()
+stimuli.TextScreen("","Press a key to start").present(clear=True, update=True)
+exp.keyboard.wait()
 
-
-clock = expyriment.misc.Clock()
-
-period = 0
-
+iperiod = 1
+clock2 = misc.Clock()
 while True:  # until the Esc key is pressed
-    period += 1
-    while (clock.time < (SOA * period)):
+    # wait until the next target period
+    while (clock2.time) < (iperiod * PERIOD - 3):
+       pass
+    start_time = clock2.time + square_top.present(update=True)
+    tone.present()
+
+    while (clock2.time - start_time < SQUARE_DURATION - 3):
         pass
-
-    if (period % 3) == 0:
-       exp.screen.clear()
-       t = 0 # ?
-    elif (period % 3) == 1:
-        start_time = clock.time
-        t = square_top.present(clear=False)
-        start_time = start_time + t
-        # t = square_top.present(clear=False)  # twice for double buffering
-        while (clock.time - start_time) < SQUARE_DURATION:
-            None
-        exp.data.add([period, 'square', start_time, clock.time ])
-        exp.screen.clear()
-        exp.screen.update()
-
-    elif (period %3) ==2:
-        exp.data.add([period, 'tone', clock.time, 0 ])
-        tone.play()
- 
+    end_time = clock2.time + bs.present(update=True)
+    exp.data.add([iperiod, start_time, end_time])
     exp.keyboard.process_control_keys()
+    iperiod += 1
 
-expyriment.control.end()
+control.end()
 
