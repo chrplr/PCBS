@@ -16,6 +16,36 @@ To send or read TTL signals with your computer, you need some extra
 hardware (unless you have a Raspberry Pi which has a GPIO port).
 
 
+Parallel Port
+-------------
+
+A parallel port have become a rarity these days.
+It provides several Digital Input/Ouput lines. The `ParallelPort object in Expryiment <https://docs.expyriment.org/expyriment.io.ParallelPort.html>__ makes it vextremly easy to access them.
+
+For example, here is a parallel port scanner in just a few lines of Python:
+
+.. code-block:: Python
+   
+  #! /usr/bin/env python3
+  # Time-stamp: <2022-05-05 19:24:05 christophe@pallier.org>
+  """// ports scanner"""
+  
+  from expyriment import io
+  
+  pports = [io.ParallelPort('/dev/' + pp)
+            for pp in io.ParallelPort.get_available_ports()]
+
+  prev_state = []
+  while True:
+    state = str([bin(p.poll()) for p in pports])
+    if state != prev_state:
+        print(state)
+        prev_state = state
+
+
+(under Linux, you may need to run http://www.vdwalle.com/Norte/ppdiag.txt to set the adequate permissions)
+
+	
 DLP-IO8-G
 ---------
 
