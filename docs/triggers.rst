@@ -1,5 +1,5 @@
-Sending TTL triggers throught the USB
-=====================================
+Sending TTL triggers
+====================
 
 Many pieces of equipment synchronize by exchanging triggers (0/1 bits)
 on a `TTL interface <https://en.wikipedia.org/wiki/Transistor%E2%80%93transistor_logic>`__.
@@ -19,7 +19,7 @@ hardware (unless you have a Raspberry Pi which has a GPIO port).
 Parallel Port
 -------------
 
-A parallel port have become a rarity these days.
+A parallel port has become a rarity these days.
 It provides several Digital Input/Ouput lines. The `ParallelPort object in Expryiment <https://docs.expyriment.org/expyriment.io.ParallelPort.html>__ makes it vextremly easy to access them.
 
 For example, here is a parallel port scanner in just a few lines of Python:
