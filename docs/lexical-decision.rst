@@ -14,14 +14,14 @@ Let us program such a task.
 Step 1: stimuli in constants
 ----------------------------
 
-Modify the :download:`parity task script <../experiments/parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order).
+Modify the :download:`parity task script <../experiments/xpy_parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order).
 
 For testing purposes, you can use the following variables::
 
    words = ['bonjour', 'chien', 'président']
    pseudos = ['lopadol', 'mirance', 'clapour' ]
 
-A solution is proposed in :download:`lexdec_v1.py <../experiments/expyriment/lexical_decision/lexdec_v1.py>`
+A solution is proposed in :download:`lexdec_v1.py <../experiments/xpy_lexical_decision/lexdec_v1.py>`
 
 
 Step 2: read stimuli from a csv file
@@ -39,7 +39,7 @@ Then modify the lexical decision script to read the stimuli from a comma-separat
 
 (hint: To read a csv file, one can use ``pandas.read_csv()``)
 
-A solution is proposed in :download:`lexdec_v2.py <../experiments/expyriment/lexical_decision/lexdec_v2.py>` 
+A solution is proposed in :download:`lexdec_v2.py <../experiments/xpy_lexical_decision/lexdec_v2.py>` 
 
 Note: You can use a file comparator, e.g. `meld <https://meldmerge.org/>`__, to compare the two versions::
 
@@ -105,7 +105,7 @@ Generate nonwords
        def pseudo(length):
            """ returns a nonword of length `length` """
 
-   Solution at :download:`create_nonwords.py <../experiments/expyriment/lexical_decision/create_nonwords.py>`
+   Solution at :download:`create_nonwords.py <../experiments/xpy_lexical_decision/create_nonwords.py>`
 
 
 2. Use this function to create a list of 100 nonwords and save it in a
@@ -138,7 +138,7 @@ Modify ``lexdec_v2.py`` to be able to pass the name of the stimuli file as an ar
 
 (hint: use `sys.argv[]`; see https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/)
 
-Solution at :download:`lexdec_v3.py <../experiments/expyriment/lexical_decision/lexdec_v3.py>` 
+Solution at :download:`lexdec_v3.py <../experiments/xpy_lexical_decision/lexdec_v3.py>` 
 
 
 
@@ -161,7 +161,7 @@ After running::
 
 the subject's responses are stored in the subfolder ``data/`` contains a file ``lexdec...xpd``
 
-You can download this :download:`xpd file <../experiments/expyriment/lexical_decision/data/lexdec_v3_02_202112131227.xpd'>` as an example.
+You can download this :download:`xpd file <../experiments/xpy_lexical_decision/data/lexdec_v3_02_202112131227.xpd'>` as an example.
 
 1. Use ``pandas.read_csv(..., comment='#')`` to read the responses into a pandas dataframe.
 
@@ -171,7 +171,7 @@ You can download this :download:`xpd file <../experiments/expyriment/lexical_dec
 
 4. Use  ``scipy.stats.ttest_ind()`` to perform a Student t-test compairn gthe RTs of Words and Non-Words.
 
-Check a solution :download:`analyze_RT.py <../experiments/expyriment/lexical_decision/analyze_RT.py>`
+Check a solution :download:`analyze_RT.py <../experiments/xpy_lexical_decision/analyze_RT.py>`
 
 
 

@@ -1,6 +1,11 @@
 #!/usr/bin/env python
+# Time-stamp: <2022-05-12 07:39:59 christophe@pallier.org>
 """
-skeleton for an expyriment script
+Example of an expyriment script
+
+A succession of trials where a cross will randomly appear either at the left, center or right of the screen.
+
+If it is on the left, the participant must press 'F', 'G' if it is in the center 'G', or 'H' if it is on the right.
 
 See <https://docs.expyriment.org/Tutorial.html>
 
@@ -19,7 +24,14 @@ exp = xpy.design.Experiment(name="My Experiment")
 
 xpy.control.initialize(exp)
 
-### insert here some code to generate the stimuli/trials/blocks
+### code to generate the stimuli/trials/blocks
+
+instructions = xpy.stimuli.TextScreen("", f"""
+A cross will randomly appear either at the left, center or right of the screen.
+
+If it is on the left, you must press 'F', 'G' if is in the center 'G', 'H' if it is on the right.
+
+Press a key to start the first block (1/{N_BLOCKS})""")
 
 N_BLOCKS = 4
 
@@ -30,6 +42,8 @@ stimuli = { 'left':   xpy.stimuli.FixCross(position=(-300, 0)),
             'center': xpy.stimuli.FixCross(position=(0, 0)),
             'right':  xpy.stimuli.FixCross(position=(300, 0))
            }
+
+response_mapping = [('left', 'f'), ('center', 'g'), ('right', 'h')]
 
 for k, v in stimuli.items():
     v.preload()
@@ -50,16 +64,12 @@ for _ in range(N_BLOCKS):
 
 exp.add_data_variable_names(['block', 'trial', 'location', 'resp', 'rt', 'correct'])
 
-# RUN the experiment (present the stimuli and record responses)
 
 xpy.control.start()
 
-xpy.stimuli.TextScreen("", f"""
-A cross will randomly appear either at the left, center or right of the screen.
+# RUN the experiment (present the stimuli and record responses)
 
-If it is on the left, you must press 'F', in the center 'G', on the right 'H'.
-
-Press a key to start the first block (1/{N_BLOCKS})""").present()
+instructions.present()
 exp.keyboard.wait()
 
 for iblock, block in enumerate(exp.blocks):
@@ -71,7 +81,7 @@ for iblock, block in enumerate(exp.blocks):
             stim.present()
             resp, rt = exp.keyboard.wait_char('fgh', duration=1000)
             loc = trial.get_factor('location')
-            resp_correct = (loc, resp) in [('left', 'f'), ('center', 'g'), ('right', 'h')]
+            resp_correct = (loc, resp) in response_mapping
             good += resp_correct
             exp.data.add([iblock, itrial, loc, resp, rt, resp_correct])
 

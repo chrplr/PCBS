@@ -339,7 +339,7 @@ It is difficult to name the color of a color word if they do not match. This phe
 You will need to read about how to generate images containing text, for example, in the tutorial `How to display text with
 pygame <https://nerdparadise.com/programming/pygame/part5>`__
 
-Then, check  a solution at :download:`create_stroop_cards.py <../experiments/stroop/create_stroop_cards.py>`
+Then, check  a solution at :download:`create_stroop_cards.py <../experiments/xpy_Stroop_task/create_stroop_cards.py>`
 
 
 Dynamic visual stimuli

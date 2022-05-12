@@ -9,7 +9,7 @@ Simple reaction times
 
 Many psychology experiments measure *reaction-times* or *decision-times*.
 
-The script :download:`simple-detection-visual-pygame.py <../experiments/reaction-times/simple-detection-visual-pygame.py>` is a simple detection experiment programmed with pygame. The task is simple: the participant must press a key as quickly as possible when a cross appears at the center of the screen. 
+The script :download:`simple-detection-visual-pygame.py <../experiments/pygame_reaction_times/simple-detection-visual-pygame.py>` is a simple detection experiment programmed with pygame. The task is simple: the participant must press a key as quickly as possible when a cross appears at the center of the screen. 
 
 Download it and run it with::
 
@@ -38,7 +38,7 @@ Here are my results:
       Relationship between wait time and reaction time
 
 
-Browse the code of :download:`simple-detection-visual-pygame.py <../experiments/reaction-times/simple-detection-visual-pygame.py>`
+Browse the code of :download:`simple-detection-visual-pygame.py <../experiments/pygame_reaction_times/simple-detection-visual-pygame.py>`
 
 It is pretty technical! This is because Pygame_ is meant to program simple video games, not psychology experiments.
 
@@ -61,11 +61,11 @@ Make sure you have installed Expyriment_::
 
 If an error message ``moduleNotFoundError: No module named 'expyriment'`` appears, check :doc:`software-installation`.
 
-Let us start by downloading :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` and run it with::
+Let us start by downloading :download:`simple-detection-visual-expyriment.py <../experiments/xpy_simple_reaction_times/simple-detection-visual-expyriment.py>` and run it with::
 
     python simple-detection-visual-expyriment.py
 
-Then, in the subfolder ``data``, locate a file with a name starting with  ``simple-detection...`` and the extension ``.xpd``. This is a text file containing the reactions times. To analyse them, download :download:`analyse_rt.py <../experiments/expyriment/simple_reaction_times/analyse_rt.py>` and run::
+Then, in the subfolder ``data``, locate a file with a name starting with  ``simple-detection...`` and the extension ``.xpd``. This is a text file containing the reactions times. To analyse them, download :download:`analyse_rt.py <../experiments/xpy_simple_reaction_times/analyse_rt.py>` and run::
 
     python analyse_rt.py data/simple-detection-visual-expyriment_*.xpd 
 
@@ -75,21 +75,21 @@ Compare the codes of ``simple-detection-visual-expyriment.py`` and ``simple-dete
 The documentation of expyriment is available at http://docs.expyriment.org/. Have q a quick look at it, especially http://docs.expyriment.org/expyriment.stimuli.html
 
 The basic principles of the ``expyriment`` module are introduced in https://docs.expyriment.org/Tutorial.html. 
-I provide a minimal template at :download:`/expyriment/expyriment_minimal_template.py <../experiments/expyriment/expyriment_minimal_template.py>` that one can use to start writing a expyriment script.
+I provide a minimal template at :download:`expyriment_minimal_template.py <../experiments/expyriment_minimal_template.py>` that one can use to start writing a expyriment script.
 
 Exercises:
 
 1. Modify ``simple-detection-visual-expyriment.py`` to display a white disk instead of a cross.
 
-2. Modify  ``simple-detection-visual-expyriment.py`` to display a white disk on half of the trials and a gray disk on the other half of the trials (thesis experimental conditions should be shuffled randomly). Then modify it to display disks with four levels of gray. Thus you can assess the effect of luminosity on detection time. (see  :download:`/expyriment/expyriment_minimal_template.py <../experiments/expyriment/simple_reaction_times/grey-levels.py>` for a solution using Expyriment's ``design.Block`` and ``design.Trial`` objects).
+2. Modify  ``simple-detection-visual-expyriment.py`` to display a white disk on half of the trials and a gray disk on the other half of the trials (thesis experimental conditions should be shuffled randomly). Then modify it to display disks with four levels of gray. Thus you can assess the effect of luminosity on detection time. (see  :download:`xpy_simple_reaction_times/grey-levels.py <../experiments/xpy_simple_reaction_times/grey-levels.py>` for a solution using Expyriment's ``design.Block`` and ``design.Trial`` objects).
 
-3. Modify  ``simple-detection-visual-expyriment.py`` to play a short sound (:download:`click.wav <../experiments/expyriment/simple_reaction_times/click.wav>`) in lieu of displaying a visual stimulus (hint: use ``stimuli.Audio()``). Thus, you have created a simple audio detection experiment.
+3. Modify  ``simple-detection-visual-expyriment.py`` to play a short sound (:download:`click.wav <../experiments/xpy_simple_reaction_times/click.wav>`) in lieu of displaying a visual stimulus (hint: use ``stimuli.Audio()``). Thus, you have created a simple audio detection experiment.
 
-4. Download and run  :download:`simple-detection-audiovisual.py <../experiments/expyriment/simple_reaction_times/simple-detection-audiovisual.py>`::  
+4. Download and run  :download:`simple-detection-audiovisual.py <../experiments/xpy_simple_reaction_times/simple-detection-audiovisual.py>`::  
 
         python simple-detection-audiovisual.py
 
-There are three blocks of trials: a first one in which the target is always visual, a second one in which it is always a sound, and a third one in which the stimulus is, randomly, visual or auditory. Are we slowed down in the latter condition? Use :download:`analyse_audiovisual_rt.py <../experiments/expyriment/simple_reaction_times/analyse_audiovisual_rt.py>` to analyse the reaction times.
+There are three blocks of trials: a first one in which the target is always visual, a second one in which it is always a sound, and a third one in which the stimulus is, randomly, visual or auditory. Are we slowed down in the latter condition? Use :download:`analyse_audiovisual_rt.py <../experiments/xpy_simple_reaction_times/analyse_audiovisual_rt.py>` to analyse the reaction times.
 
 Exercice: add python code to ``simple-detection-audiovisual.py`` to display instructions at the start of the experiment. 
 
@@ -102,17 +102,17 @@ In the previous example, the user just had to react to a stimulus. This involved
 Other tasks involves taking a decision about some property of the stimulus.
 
 Exercise:
-| - Modify :download:`simple-detection-visual-expyriment.py <../experiments/expyriment/simple_reaction_times/simple-detection-visual-expyriment.py>` to display, rather than a cross, a random integer between 0 and 9 (hint: Use ``stimuli.TextLine()``). Now, the task is to decide if the figure is odd or even, by pressing one of two keys.
+| - Modify :download:`simple-detection-visual-expyriment.py <../experiments/xpy_simple_reaction_times/simple-detection-visual-expyriment.py>` to display, rather than a cross, a random integer between 0 and 9 (hint: Use ``stimuli.TextLine()``). Now, the task is to decide if the figure is odd or even, by pressing one of two keys.
 
 
-| Here is a solution: :download:`parity.py <../experiments/parity_decision/parity.py>`
+| Here is a solution: :download:`parity.py <../experiments/xpy_parity_decision/parity.py>`
 
 | Comparing the average decision time to the time to react to a simple cross provides a (rough) estimate of the time to decide about the parity of a number. By the way, one can wonder what happens for multiple digits numbers: are we influenced by the flanking digits? 
 
-| - Add feedback; when the subjects presses the wrong key, play the sound :download:`wrong-answer.ogg <../experiments/parity_decision/wrong-answer.ogg>`.
+| - Add feedback; when the subjects presses the wrong key, play the sound :download:`wrong-answer.ogg <../experiments/xpy_parity_decision/wrong-answer.ogg>`.
 
 
-  Here is a solution: :download:`parity_feedback.py <../experiments/parity_decision/parity_feedback.py>`
+  Here is a solution: :download:`parity_feedback.py <../experiments/xpy_parity_decision/parity_feedback.py>`
 
 
 Numerical distance effect
@@ -139,14 +139,14 @@ Let us program such a task.
 Step 1: stimuli listed in constants
 +++++++++++++++++++++++++++++++++++
 
-Modify the :download:`parity task script <../experiments/parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order).
+Modify the :download:`parity task script <../experiments/xpy_parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order).
 
 For testing purposes, you can use the following variables::
 
    words = ['bonjour', 'chien', 'président']
    pseudos = ['lopadol', 'mirance', 'clapour' ]
 
-A solution is proposed in :download:`lexdec_v1.py <../experiments/expyriment/lexical_decision/lexdec_v1.py>`
+A solution is proposed in :download:`lexdec_v1.py <../experiments/xpy_lexical_decision/lexdec_v1.py>`
 
 Step 2: read stimuli from a csv file
 ++++++++++++++++++++++++++++++++++++
@@ -163,7 +163,7 @@ Then modify the lexical decision script to read the stimuli from a comma-separat
 
 (hint: To read a csv file, one can use ``pandas.read_csv()``)
 
-A solution is proposed in :download:`lexdec_v2.py <../experiments/expyriment/lexical_decision/lexdec_v2.py>` 
+A solution is proposed in :download:`lexdec_v2.py <../experiments/xpy_lexical_decision/lexdec_v2.py>` 
 
 Note: You can use a file comparator, e.g. `meld <https://meldmerge.org/>`__, to compare the two versions::
 
@@ -229,7 +229,7 @@ Generate nonwords
        def pseudo(length):
            """ returns a nonword of length `length` """
 
-   Solution at :download:`create_nonwords.py <../experiments/expyriment/lexical_decision/create_nonwords.py>`
+   Solution at :download:`create_nonwords.py <../experiments/xpy_lexical_decision/create_nonwords.py>`
 
 
 2. Use this function to create a list of 100 nonwords and save it in a
@@ -262,7 +262,7 @@ Modify `lexdec_v2.py` to be able to pass the name of the stimuli file as an argu
 
 (hint: use `sys.argv[]`; see https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/)
 
-Solution at :download:`lexdec_v3.py <../experiments/expyriment/lexical_decision/lexdec_v3.py>` 
+Solution at :download:`lexdec_v3.py <../experiments/xpy_lexical_decision/lexdec_v3.py>` 
 
 
 
@@ -285,7 +285,7 @@ After running::
 
 the subject's responses are stored in the subfolder ``data/`` contains a file ``lexdec...xpd``
 
-You can download this :download:`xpd file <../experiments/expyriment/lexical_decision/data/lexdec_v3_02_202112131227.xpd'>` as an example.
+You can download this :download:`xpd file <../experiments/xpy_lexical_decision/data/lexdec_v3_02_202112131227.xpd'>` as an example.
 
 1. Use ``pandas.read_csv(..., comment='#')`` to read the responses into a pandas dataframe.
 
@@ -295,13 +295,13 @@ You can download this :download:`xpd file <../experiments/expyriment/lexical_dec
 
 4. Use  ``scipy.stats.ttest_ind()`` to perform a Student t-test compairn gthe RTs of Words and Non-Words.
 
-Check a solution :download:`analyze_RT.py <../experiments/expyriment/lexical_decision/analyze_RT.py>`
+Check a solution :download:`analyze_RT.py <../experiments/xpy_lexical_decision/analyze_RT.py>`
 
 Auditory Lexical Decision
 +++++++++++++++++++++++++
 
 Transform ``lexdec_v1.py`` into an auditory lexical decision script using the sound files 
-from the   `lexical decision folder <../experiments/expyriment/lexical_decision/>`:: 
+from the   `lexical decision folder <../experiments/xpy_lexical_decision/>`:: 
 
     bonjour.wav
     chien.wav
@@ -311,7 +311,7 @@ from the   `lexical decision folder <../experiments/expyriment/lexical_decision/
     mirance.wav
 
 
-Solution at :download:`lexdec_audio.py <../experiments/expyriment/lexical_decision/lexdec_audio.py>`
+Solution at :download:`lexdec_audio.py <../experiments/xpy_lexical_decision/lexdec_audio.py>`
 
 
 Finally
@@ -326,7 +326,7 @@ Posner’s attentional cueing task
 
 Exercise (\*\*): Read about `Posner’s attentional cueing task <https://en.wikipedia.org/wiki/Posner_cueing_task>`__ and program the experiment. 
 
-  See a solution in :download:`Posner-attention/posner_task.py <../experiments/Posner-attention/posner_task.py>`
+  See a solution in :download:`Posner-attention/posner_task.py <../experiments/xpy_Posner_attention_networks_task/posner_task.py>`
 
 Stroop Effect
 -------------
@@ -344,9 +344,9 @@ In the previous chapter, we created Stroop cards with Pygame.
     Stroop card
 
 
-  (see  :download:`create_stroop_cards.py <../experiments/stroop/create_stroop_cards.py>`)
+  (see  :download:`create_stroop_cards.py <../experiments/xpy_Stroop_task/create_stroop_cards.py>`)
 
-Download :download:`stroop.zip <../experiments/stroop.zip>`. Extract the files and run::
+Download :download:`stroop.zip <../experiments/Stroop_task.zip>`. Extract the files and run::
 
    python stroop_task.py
 
@@ -370,10 +370,10 @@ at the expected times is available at https://www.github.com/chrplr/audiovis
 Sound-picture matching using a touchscreen
 ------------------------------------------
 
-The :download:`sentence-picture-matching.py <../experiments/expyriment/sentence_picture_matching/sentence-picture-matching.py>` script presents a sound, followed by a picture and waits for the participant to press a button.
+The :download:`sentence-picture-matching.py <../experiments/xpy_sentence_picture_matching_test/sentence-picture-matching.py>` script presents a sound, followed by a picture and waits for the participant to press a button.
 
 
-Exercise: Modify the previous script to present *two* pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from :download:`expyriment/touchscreen_test/touchscreen-test.py  <../experiments/expyriment/touchscreen_test/touchscreen-test.py>`
+Exercise: Modify the previous script to present *two* pictures and use expyriment's `TouchScreenButtonBox` to record the subject's response, using the example from :download:`expyriment/touchscreen_test/touchscreen-test.py  <../experiments/xpy_touchscreen_test/touchscreen-test.py>`
 
 
 More examples using Expyriment

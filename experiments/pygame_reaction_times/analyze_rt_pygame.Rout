@@ -1,0 +1,48 @@
+
+R version 4.1.2 (2021-11-01) -- "Bird Hippie"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> #! /usr/bin/Rscript
+> # Time-stamp: <2021-03-25 13:30:34 christophe@pallier.org>
+> 
+> data = read.csv('reaction_times.csv')
+> summary(data)
+      Wait            RT       
+ Min.   :1011   Min.   :151.0  
+ 1st Qu.:1285   1st Qu.:245.2  
+ Median :1588   Median :256.5  
+ Mean   :1540   Mean   :265.3  
+ 3rd Qu.:1793   3rd Qu.:276.5  
+ Max.   :1983   Max.   :387.0  
+> 
+> par(mfcol=c(1, 2))
+> with(data, {
++     boxplot(RT)
++     plot(RT ~ Wait)
++ })
+> 
+> cat('\nCheck out the graphics in Rplots*.pdf\n\n')
+
+Check out the graphics in Rplots*.pdf
+
+> 
+> proc.time()
+   user  system elapsed 
+  0.662   0.613   0.188 
