@@ -19,17 +19,29 @@ hardware (unless you have a Raspberry Pi which has a GPIO port).
 Parallel Port
 -------------
 
-A parallel port has become a rarity these days.
-It provides several Digital Input/Ouput lines. The `ParallelPort object in Expryiment <https://docs.expyriment.org/expyriment.io.ParallelPort.html>__ makes it vextremly easy to access them.
+A parallel port has become a rarity these days. It provides a number of Digital (TTL) Input/Ouput lines. The `ParallelPort object in Expryiment <https://docs.expyriment.org/expyriment.io.ParallelPort.html>__ makes it extremely easy to access them.
 
-For example, here is a parallel port scanner in just a few lines of Python:
+For example, to swith on and off every second the data lines of the first parallel port:
+
+.. code-block:: Python
+
+
+    from time import sleep
+    from expyriment.io import ParallelPort
+
+    pp = ParallelPort('/dev/parport0')
+
+    while True:
+        pp.set_data(255)
+        sleep(1)
+        pp.set_data(0)
+        sleep(1)
+
+	
+Or to detect any change on any input pin of the parallel ports:
 
 .. code-block:: Python
    
-  #! /usr/bin/env python3
-  # Time-stamp: <2022-05-05 19:24:05 christophe@pallier.org>
-  """// ports scanner"""
-  
   from expyriment import io
   
   pports = [io.ParallelPort('/dev/' + pp)
@@ -42,7 +54,8 @@ For example, here is a parallel port scanner in just a few lines of Python:
         print(state)
         prev_state = state
 
-
+	
+	
 (under Linux, you may need to run http://www.vdwalle.com/Norte/ppdiag.txt to set the adequate permissions)
 
 	

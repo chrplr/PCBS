@@ -1,3 +1,18 @@
+# -*- mode: gitignore; -*-
+.RData
+*~
+\#*\#
+auto-save-list
+.\#*
+*_flymake.*
+*_archive
+/auto/
+.projectile
+tags
+Session.vim
+[._]sw[a-p]
+[._]*.sw[a-p]
+tags
 *.bmp
 *.xpd
 *.xpe
