@@ -29,13 +29,15 @@ After the installation, `check`_ that everything works.
 
 
 
-Instructions for Windows (WSL)
-------------------------------
+Instructions for Windows (with WSL)
+-----------------------------------
 
-This is the simplest, and therefore recommended, method. 
+If the *Windows Subsystem for Linux* (aka WSL) is installed on your Windows PC, with an Ubuntu Linux distribution, you can open Ubuntu and jump to the linux_ section in order to install the required software.
 
-You need to install Ubuntu Linux on your Windows system, using the *Windows
-Subsystem for Linux* (aka WSL).  
+If you want to install Linux under Windows using the WSL, follow the instructions at https://docs.microsoft.com/en-us/windows/wsl/install but be aware that thre download is large (several GB) and the installation can be lengthy (30min-1h) 
+
+Here is an overview of the process:
+
 
 - If you have Windows 11:
 
@@ -52,17 +54,11 @@ Subsystem for Linux* (aka WSL).
 - If you have Windows 10, follow `these instructions <https://omgubuntu.co.uk/how-to-install-wsl2-on-windows-10>`__.
   (You may have to enable `Hyper-V <https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/>`__)
 
-This downloads the full Ubuntu Linux distribution which may take a while. Some versions of
-Windows may even ask you to reboot during the installation process. At some
-point during the install, a new Terminal window entitled “Ubuntu” will open and
-will require a new user name and password. You can type anything but it is crucial
-that you note down the password as it will be needed to install software under
-Ubuntu.
+This downloads the full Ubuntu Linux distribution which may take a while. Some versions of Windows may even ask you to reboot during the installation process. At some point during the install, a new Terminal window entitled “Ubuntu” will open and will require a new user name and password. You can type anything but it is crucial that you note down the password as it will be needed to install software under Ubuntu.
 
 
 .. note::
-  Detailed information about the WSL is available at https://docs.microsoft.com/en-us/windows/wsl/
-  In particular, if anything goes wrong during the installation check the `Troubleshoting WSL <https://docs.microsoft.com/en-us/windows/wsl/troubleshooting>`__ section. 
+  If anything goes wrong during the installation check the `Troubleshoting WSL <https://docs.microsoft.com/en-us/windows/wsl/troubleshooting>`__ section. 
 
 
 When the WSL installation is finished, go to the linux_ section in order to install the required software.
@@ -71,7 +67,7 @@ When the WSL installation is finished, go to the linux_ section in order to inst
 Instructions for native Windows (without WSL)
 ---------------------------------------------
 
-This approach is not recommended because it has several pitfalls (if  you do not carefully follow the instructions, many things will not work correclty). Yet, there are two reasons why one may want to follow this path:
+This approach has several pitfalls. For example, if  you do not carefully follow the instructions, many things will not work correclty. Yet, there are two reasons why one may want to follow this path:
 
 - WSL does not work on your machine (for example, your CPU does not allow `virtualization <https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/>`__). 
 - You are concerned by potential overheads of the WSL (yet, read `this <https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively>`__).
@@ -80,38 +76,42 @@ This approach is not recommended because it has several pitfalls (if  you do not
 R and Rstudio
 ~~~~~~~~~~~~~
 
-R is a programming language specialized for statistical data analyses; Download and install it from https://cran.rstudio.com/bin/windows/base/
+R is a programming language specialized for statistical data analyses; Download and install it from https://cran.rstudio.com/bin/windows/base/ (accepting all the default options proposed by the installer)
+
 
 Rstudio is an *Integrated Developpement Environment* for R which greatly
 simplifies the use of RMarkdown. You can download and install the
-latest version of RStudio Desktop from https://www.rstudio.com/products/rstudio/download/.
+free version of RStudio Desktop from https://www.rstudio.com/products/rstudio/download/ (accepting all the default options)
+
+Lauch RStudio, go to the  "Tools" menu, select "install packages" and in the dialog window that opens, in the  'packages' box, type::
+
+     tidyverse lme4 ez
+
+
+This will take a while to download packages from the internet and install them. Do not close rstudio until the process is finished (no more scrolling messages in the console).
 
 
 SublimeText code editor
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Download and install `Sublime Text <https://www.sublimetext.com/>`__.
-
-[Note: If you prefer to stick to opensource software, you can try `Atom <http://atom.io>`__, but be
-aware that it is slower and more buggy than Sublime Text.]
+Download and install `Sublime Text <https://www.sublimetext.com/>`__. (accepting the default options proposed by the installer)
 
 
 Anaconda Python3 distribution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There exists various Python distributions. Under Windows, we recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`__ as it already contains most of the packages needed for cognitive science.
+There exists various Python distributions. Under Windows, we recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`__ as it already contains many of the packages needed for cognitive science (but it is very large. If you you lack disk space, you can install `miniconda <docs.conda.io/en/latest/miniconda.html>`__, but later you will need to install many python packages manually)
 
-1. Go to  <https://www.anaconda.com/products/individual>, click on ``Download`` and select the 64-bit installer for iWindows. 
-2. Execute the Anaconda3 installer. During the installation. 
-    * If you are on a Mac, you can accept all the default for the proposed options.
-    * If you are under Windows, pay close attention to the following options:
+1. Go to  <https://www.anaconda.com/products/individual>, click on ``Download`` and select the 64-bit installer for iWindows.
+2. Execute the Anaconda3 installer. Pay special attention to the options:
 
-       -  verify that you Install for ``Just Me (recommended)``, then click on ``Next``
+       -  To the question 'Install for', select ``Just Me (recommended)``
        -  Accept the default Destination folder and click on ``Next``
        -  VERY IMPORTANT: Check the boxes in front ``Add Anaconda to my PATH`` (ignore the warning that this is not recommended) and ``Register Anaconda as my default Python`` and click on ``Install``
        -  upon completion, click on ``Next``, then ``Finish``
 
-
+ 
+	  
 
 The Git version control system
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,7 +119,9 @@ The Git version control system
 Git is a version control tool for software development, an indispensable
 tool to do reproducible science.
 
-Download the 64 bit version of `Git for Windows <https://git-scm.com/download/win>`__ and launch it.
+IMPORTANT: you must wait for the installation of Anaconda to finish *before* trying to install Git.
+
+Download the installer of `Git for Windows <https://git-scm.com/download/win>`__ and launch it.
 
    1. When the GNU Licence is displayed, press ``Next``;
    2. Accept the default installation folder and press ``Next``;
@@ -130,16 +132,17 @@ Download the 64 bit version of `Git for Windows <https://git-scm.com/download/wi
 
    You can accept all other defaults.  
 
-Now, to finish the installation of git, start ``Git bash`` (use the "Search box")
+Now, to finish the installation of git, launch ``Git bash`` (use the "Search box").
 
-Then, type the following command lines, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information::
+
+Start Git Bash again, and type the following commands, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information::
 
     git config --global user.name "your_first_and_last_names_here" 
     git config --global user.email your_email_here 
     git config --global core.editor nano
 
 
-You can close the Terminal by typing the command `exit` or, faster, by pressing `Ctrl-D`, or by just closing its window.
+You can close Git Bash by typing the command `exit` or, faster, by pressing `Ctrl-D`, or by just closing its window.
 
 
 
@@ -150,7 +153,26 @@ We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli
 
 Start **Git bash** and, in the openned Terminal, type::
 
+   conda create -n expyriment python=3.7
+
+And press 'Return' to accept the installation.
+
+Then, type::
+
+   conda activate expyriment
+   conda install ipython
    pip install expyriment[all]
+
+To check the installation, type::
+
+   ipython
+
+and then::
+
+   import expyriment
+
+If a message `Experiment 0.10.0 ...` is displayed and no error message, the installation worked. Press `Ctrl-D` to quit ipython, and `Ctrl-D` again to qui Git Bash.
+
 
 
 Learn to use Sublime Text and Git Bash Terminal to create Python scripts 
@@ -296,7 +318,7 @@ Sublime code editor
 (if this does not work, check the latest instructions from https://www.sublimetext.com/docs/linux_repositories.html)
 
 .. note::
-   `Atom <https://atom.io/>`__ or `Visual Studio Code <https://code.visualstudio.com/>`__. are two fine code editors too. If you prefer to use one of these instead of Sublime Text, this is perfectly fine. 
+   `Visual Studio Code <https://code.visualstudio.com/>`__ is another fine code editor too. If you prefer to use it instead of Sublime Text, this is perfectly fine. 
 
 R language for statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~

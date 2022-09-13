@@ -7,6 +7,62 @@ Check your installation
 .. contents:: :depth: 2
 
 
+Check R and Rstudio
+-------------------
+
+Launch Rstudio.
+
+In the console (Left window), type:
+
+.. code-block:: R
+   example(density)
+
+This should display a series of graphics (Press <Return> to advance).
+
+Close RStudio. That will be all.
+
+   
+    
+Check that python can be executed in a Terminal
+-----------------------------------------------
+
+Mac & Linux users:
+
+Open a Terminal and type `which python` on the command line. You shuld see a text line containing 'anaconda'.
+
+Then type  `python` and press 'Enter'. If python works normally, you should see a prompt `>>>`. Press `Ctrl-D` to quit python. 
+
+Windows users:
+
+Open Git Bash, and on the command line, type::
+
+  conda init bash
+
+then press 'Return'
+
+Now, type::
+
+   echo "alias python='winpty python.exe'" >> ~/.bash_profile
+
+Close Git Bash, and reopen a new instance.
+
+Type::
+
+   which python
+
+And then::
+
+   python
+
+It should print a message 'Python 3.x.xx...' and a give a prompt '>>>'. You are talking to the python interpreter. Type::
+
+  2**100
+
+This should display the 100 power of 2. Press `Ctrl-D` to exit python, and again the exit 'Git Bash'.
+
+ If python does not start, there is something wrong
+
+	      
 Check Git
 ---------
 

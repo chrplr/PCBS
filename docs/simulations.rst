@@ -161,3 +161,8 @@ More readings:
 
 -  `Pattern recognition and machine learning <https://www.springer.com/fr/book/9780387310732>`__ by
    Christopher M. Bishop
+
+Using tensorflow and keras to build neural nets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following book is a gentle introduction: https://www.goodreads.com/book/show/53483757-ai-and-machine-learning-for-coders
