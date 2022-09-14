@@ -10,9 +10,7 @@ Check your installation
 Check R and Rstudio
 -------------------
 
-Launch Rstudio.
-
-In the console (Left window), type:
+Launch Rstudio, and in the Console (left window), type:
 
 .. code-block:: R
    example(density)
@@ -20,47 +18,24 @@ In the console (Left window), type:
 This should display a series of graphics (Press <Return> to advance).
 
 Close RStudio. That will be all.
-
-   
+  
     
 Check that python can be executed in a Terminal
 -----------------------------------------------
 
-Mac & Linux users:
+Open a Terminal (that is, `Git Bash` for Windows users) and type::
 
-Open a Terminal and type `which python` on the command line. You shuld see a text line containing 'anaconda'.
+  which python
 
-Then type  `python` and press 'Enter'. If python works normally, you should see a prompt `>>>`. Press `Ctrl-D` to quit python. 
+This should print the location of the python interpreter. If no message appears, the PATH environment variable is messed up, most probably due not following closely the installation instructions (for Windows users, check the Anaconda & Git for windows instructions)
 
-Windows users:
+Type  `python` and press 'Enter'.
 
-Open Git Bash, and on the command line, type::
-
-  conda init bash
-
-then press 'Return'
-
-Now, type::
-
-   echo "alias python='winpty python.exe'" >> ~/.bash_profile
-
-Close Git Bash, and reopen a new instance.
-
-Type::
-
-   which python
-
-And then::
-
-   python
-
-It should print a message 'Python 3.x.xx...' and a give a prompt '>>>'. You are talking to the python interpreter. Type::
+You should see a prompt `>>>` followed by a blinking cursor. Python is waiting for your commands! Type::
 
   2**100
 
-This should display the 100 power of 2. Press `Ctrl-D` to exit python, and again the exit 'Git Bash'.
-
- If python does not start, there is something wrong
+This should display the 100 power of 2. Press `Ctrl-D` to exit python, and again the exit the Terminal. Basic Python is working. 
 
 	      
 Check Git
@@ -84,7 +59,6 @@ Your Terminal window should more or less look like this:
 .. image:: images/term-git-clone-pcbs.png
   :width: 600
   :alt: Terminal showing the results of git clone...
-
 
 
 .. warning::
@@ -222,15 +196,11 @@ Check Expyriment
 
 .. code-block:: bash
 
-   cd ~/PCBS/experiments/Posner-attention
+   cd ~/PCBS/experiments/xpy_Posner_attention_networks_task
    python posner_task.py 
 
-   cd ~/PCBS/experiments/parity_decision
+   cd ~/PCBS/experiments/xpy_parity_decision
    python parity_feedback.py
-
-   cd ~/PCBS/experiments/mental_logic_card_game
-   python mental_logic_card_game.py             
-
 
 
 
@@ -242,7 +212,7 @@ Sublime Text
    subl
 
 
-This should open a new window with the sublime text editor. If you get a message ``command not found``, ask the instructor to fix your PATH variable or try to do it by tourself [1]_.  
+This should open a new window with the sublime text editor. If you get a message ``command not found``, ask the instructor to fix your PATH variable or try to do it by yourself [1]_.  
 
 Then, check out https://www.youtube.com/watch?v=SVkR1ZkNusI for a short tutorial.
 

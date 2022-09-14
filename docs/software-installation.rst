@@ -11,10 +11,10 @@ We explain below how to install:
 - a version control system: *Git*
 - the statistical programming language: *R*
 - its integrated development environment: *RStudio*
-- Python and several useful modules, including *Expyriment*,
-- the *Psychtoolbox-3* for vision and neural sciences. 
+- Anaconda Python
+- The experiment generatror  *Expyriment* (python module)
 
-After the installation, `check`_ that everything works. 
+After the installation, you will need to `check`_ that everything works. 
 
 .. warning::
    -  You will need to download several GB of software from the Internet.
@@ -132,10 +132,42 @@ Download the installer of `Git for Windows <https://git-scm.com/download/win>`__
 
    You can accept all other defaults.  
 
-Now, to finish the installation of git, launch ``Git bash`` (use the "Search box").
+Now, to finish the installation of git, launch ``Git bash`` (use the "Search box"), and on type::
+
+  conda init bash
+
+then press 'Return'
 
 
-Start Git Bash again, and type the following commands, making sure to replace ``your_first_and_last_name_here``  and ``your_email_here`` by the relevant personal information::
+If the computer replies with an error message of the type ``conda: command not found``, you did not properly install Anaconda  (you did not check the box that made sure it is added to the PATH). If you know how to do correct the PATH, correct it now, otherwise, reinstall anaconda. 
+
+Now, type::
+
+   echo "alias python='winpty python.exe'" >> ~/.bash_profile
+
+and press 'Return'
+
+Close the Git Bash Terminal, and reopen a new Git Bash.
+
+Type::
+
+   which python
+
+And then::
+
+   python
+
+It should print a message 'Python 3.x.xx...' and a give a prompt '>>>'. You are talking to the python interpreter. Type::
+
+  2**100
+
+This should display the 100 power of 2. Press `Ctrl-D` to exit python, and again the exit 'Git Bash'.
+
+ If python does not start, there is something wrong
+
+Finally, you must configure Git: in Git BAsh, type the following commands (replacing ``your_first_and_last_name_here``  and ``your_email_here``
+by relevant personal information) ::
+
 
     git config --global user.name "your_first_and_last_names_here" 
     git config --global user.email your_email_here 
@@ -151,7 +183,7 @@ The Pygame and Expyriment python modules
 
 We will rely on the `Pygame module <https://www.pygame.org>`__ to create stimuli and the `Expyriment Python Library <http://www.expyriment.org>`__  to program behavorial experiments.
 
-Start **Git bash** and, in the openned Terminal, type::
+Start **Git bash** and, in the Terminal that opens, type::
 
    conda create -n expyriment python=3.7
 
@@ -250,8 +282,10 @@ Now you should check if everything works, following the instructions in chapter 
 
 .. _linux:
 
-Instructions for Linux (Ubuntu 20.04)
--------------------------------------
+Instructions for Ubuntu Linux
+-----------------------------
+
+These insttuctions have been tested with Ubuntu 20.04
 
 Open a Terminal [1]_.
 
@@ -259,26 +293,7 @@ Open a Terminal [1]_.
 Then, for each software section below, copy and paste in the terminal the lines
 that are in the boxes and press ``Enter`` to execute them.
 
-Python3
-~~~~~~~
-
-`Python <https://www.python.org/>`_ is the main programming language used in
-these courses. The following commands install various modules that will be
-needed.
-
-.. code-block:: bash
-
-    sudo apt  install -y python3 ipython3 python3-dev python-is-python3 python3-future \
-              python3-opengl python3-pip python3-ipython python3-pygame python3-numpy \
-              python3-matplotlib python3-skimage python3-pandas python3-scipy \
-              python3-imageio python3-ipython
-
-    sudo pip install expyriment[all]
-
-    sudo apt-get install -y python3-dev libasound2-dev
-    sudo pip install simpleaudio
-
-
+    
 Git
 ~~~
 
@@ -354,8 +369,65 @@ Make sure to select the ubuntu version!
   sudo apt install ./rstudio-2022.02.1-461-amd64.deb -y
 
 
+
+   
+Python3
+~~~~~~~
+
+`Python <https://www.python.org/>`_ is the main programming language used in
+these courses. The following commands install various modules that will be
+needed.
+
+.. code-block:: bash
+
+    sudo apt  install -y python3 ipython3 python3-dev python-is-python3 python3-future \
+              python3-opengl python3-pip python3-ipython python3-pygame python3-numpy \
+              python3-matplotlib python3-skimage python3-pandas python3-scipy \
+              python3-imageio python3-ipython
+
+
+   
+Expyriment
+~~~~~~~~~~
+
+We now need to install the `Expyriment module <http://expyriment.org>`__.
+
+Try::
+
+    sudo apt-get install -y python3-dev libasound2-dev
+    sudo pip install simpleaudio
+  
+    sudo pip install expyriment[all]
+
+Check the installation by typing::
+
+     python
+
+and then, after `>>>`::
+
+     import expyriment
+
+If you see `No module named expyriment`, there was a problem (most probably due a version of pygame). Forcing the using of python version 3.7 should solve it.
+
+First install `pyenv <https://linuxpip.org/pyenv-ubuntu/>`__, then::
+
+    pyenv install 3.7.6
+    pyenv virtualenv 3.7.6 expyriment
+    pyenv activate expyriment
+    pip install expyriment[all]
+
+Note: Later, when you will need to run python scripts importing expyriment, you will need first to activate the virtual environment with::
+
+    pyenv activate expyriment
+
+
+
+   
+
 Psychtoolbox
 ~~~~~~~~~~~~
+
+(Optional: we do not make use of  the Psychtoolbox in this course)
 
 `Psychtoolbox-3 <http://psychtoolbox.org/>`_ is a set Octave functions which is
 very popular in vision and neuroscience research. This installation is optional
