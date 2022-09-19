@@ -10,26 +10,35 @@ Check your installation
 Check R and Rstudio
 -------------------
 
-Launch Rstudio, and in the Console (left window), type:
+Launch Rstudio, and in the Console (left window), type::
 
-.. code-block:: R
    example(density)
 
 This should display a series of graphics (Press <Return> to advance).
 
+Then type::
+
+  require(tidyverse)
+
+If the package ``tidyyverse`` is not found, you need to install it with::
+
+  install.packages('tidyverse')
+
+  
 Close RStudio. That will be all.
   
     
-Check that python can be executed in a Terminal
+Check if Python can be executed in a Terminal
 -----------------------------------------------
 
 Open a Terminal (that is, `Git Bash` for Windows users) and type::
 
   which python
 
-This should print the location of the python interpreter. If no message appears, the PATH environment variable is messed up, most probably due not following closely the installation instructions (for Windows users, check the Anaconda & Git for windows instructions)
+This should print the location of the python interpreter,  ``/home/macron/anaconda3/bin/python``
+If no message is displayed, the PATH environment variable --- which lists the directories where programs can be found --- is messed up, most probably due not following closely the installation instructions (for Windows users, check the Anaconda and Git for Windows instructions)
 
-Type  `python` and press 'Enter'.
+Type  ``python`` and press 'Enter'.
 
 You should see a prompt `>>>` followed by a blinking cursor. Python is waiting for your commands! Type::
 
@@ -162,8 +171,13 @@ matplotlib is a python library to create and display graphics.
 Check pygame
 ------------
 
-`Pygame <http://www.pygame.org>`__ is a Python library to create simple audio visual games.
+`Pygame <http://www.pygame.org>`__ is a Python library to create simple audio visual games. It was installed along with expyriment. If you had to create a Python virtual environment when you installed expyriment, you need to activate it::
 
+  conda activate expyriment  # if you use conda
+  pyenv activate expyriment  # if you use standard python with pyenv
+
+You can then check if pygame is installed by starting ``python`` on a command line and typing ``import pygame`` a the ``>>>` prompt. A message ``Hello from the pygame community.`` should be displayed. 
+    
 .. code-block:: bash
 
    cd ~/PCBS/stimuli/visual-illusions/
@@ -191,8 +205,15 @@ Check pygame
 Check Expyriment
 ----------------
 
-`Expyriment <http://expyriment.org>`__ is a Python library for designing and conducting behavioural and neuroimaging experiments. Try to run the floowing three experiments (Note that the programs can be interrupted at any time by pressing the ``Esc`` key).
+`Expyriment <http://expyriment.org>`__ is a Python library for designing and conducting behavioural and neuroimaging experiments. 
 
+If you had to create a Python virtual environment when you installed expyriment, you need to activate it (unless it is already activated in your current Terminal)::
+
+  conda activate expyriment  # if you use conda
+  pyenv activate expyriment  # if you use standard python with pyenv
+
+Try to run the following three experiments (Note that the programs can be interrupted at any time by pressing the ``Esc`` key).
+  
 
 .. code-block:: bash
 
