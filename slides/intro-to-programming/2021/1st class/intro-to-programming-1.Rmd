@@ -367,7 +367,7 @@ https://github.com/chrplr/PCBS/blob/master/games/human-guess-a-number.py
 Excercices
 ========================================================
 
-- Exercice 1: Write code that prints the string "All work no play makes Jack a dull boy" 50 times
+- Exercice 1: Write code that prints the string "All work and no play makes Jack a dull boy" 50 times
 
 - Exercice 2: Write code that prints the squares of all integers between 1 and 100 using range
 
