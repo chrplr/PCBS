@@ -36,8 +36,6 @@ Context
 - Why programming in python for cognitive sciences ?
   + Good for data science, modelling and experimental design at the same time
   + Great scientific community using it and developing tools (https://www.frontiersin.org/articles/10.3389/fninf.2015.00011/full)
-  
-- https://moodle.u-paris.fr/enrol/index.php?id=43747#section-0
 
 
 Survival rules for programming
@@ -87,6 +85,27 @@ Resources 2/2
 
 ### Websites
 >  - https://pythontutor.com/ (Visualize and step by step code execution)
+
+
+Terminal cheatsheet
+========================================================
+
+ 
+  - Bash commands to navigate directories
+   
+  - Useful commands:
+
+    + **pwd**     Print Working Directory. Print the path of of the current directory
+    
+    + **ls /folder**        list all files of the current directory
+    
+    + **cd /folder1/folder2**     moving into folder1 and folder2 at once. 
+    
+    + **cd ..**        moving out of a directory 
+  
+  - "Tab" to use the auto-completion
+    
+  - Many more bash commands to use...
 
 
 Writing and running a program with python
@@ -323,7 +342,7 @@ Program flow 1/4
 
     ```{python echo=TRUE}
     Weekend = False
-    if Weekend :
+    if Weekend == True :
       print("Let's do nothing and chill")
     else:
       print("Time to go to work")
@@ -367,10 +386,12 @@ Program flow 2/4
       - **!=** tests for inequality
 
 - Be careful **=** is not the same as **==**
-  ```{python echo=TRUE}
+  ```{python echo=TRUE, error=TRUE}
   age = 30 #(affectation)
 
   age == 30 #(equality comparison that returns TRUE if correct)
+  
+  age == 31
   ```      
 
 Program flow 3/4
@@ -423,7 +444,7 @@ Exercises
 
 > - Exercise 1: Write code that prints the string "All work and no play makes Jack a dull boy" 50 times
 
-> - Exercise 2: Write code that prints the square root of all integers between 1 and 100 using range
+> - Exercise 2: Write code that prints the square of all integers between 1 and 100 using range
 
 > - Exercise 3: Write code that browses the integer from 0 to 100 but only prints the number 1, 50 and 100
 
