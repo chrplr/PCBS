@@ -87,25 +87,40 @@ Resources 2/2
 >  - https://pythontutor.com/ (Visualize and step by step code execution)
 
 
-Terminal cheatsheet
+Terminal cheat sheet
 ========================================================
 
- 
-  - Bash commands to navigate directories
-   
-  - Useful commands:
+- Bash commands to navigate directories
 
-    + **pwd**     Print Working Directory. Print the path of of the current directory
-    
-    + **ls /folder**        list all files of the current directory
-    
-    + **cd /folder1/folder2**     moving into folder1 and folder2 at once. 
-    
-    + **cd ..**        moving out of a directory 
+  + Print Working Directory. Print the path of the current directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  pwd
+  ```
+
+  + List all files of the current directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  ls folder
+  ```
+
+  + Moving into folder1 and subfolder2 at once. 
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd folder1/subfolder2
+  ```
+
+  + Moving out of a directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd ..
+  ```
   
-  - "Tab" to use the auto-completion
+  + Going back to the root directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd ~
+  ```
+  
+- "Tab" to use the auto-completion
     
-  - Many more bash commands to use...
+- Many more bash commands to use...
+
 
 
 Writing and running a program with python

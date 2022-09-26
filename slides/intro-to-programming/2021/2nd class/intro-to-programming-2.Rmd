@@ -2,10 +2,11 @@
 title: "intro-to-programming-2"
 author: "Henri Vandendriessche"
 date: "28/09/2021"
-fontsize: 8pt
 output:
-  beamer_presentation: default
+  ioslides_presentation: default
   slidy_presentation: default
+  beamer_presentation: default
+fontsize: 8pt
 ---
 
 ```{r setup, include=FALSE}

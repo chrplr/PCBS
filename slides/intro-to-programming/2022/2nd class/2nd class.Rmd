@@ -1,0 +1,462 @@
+---
+title: "Intro to programming 2"
+author: |
+  | Henri Vandendriessche
+  | henri.vandendriessche@ens.fr
+date: "2022-09-27"
+output:
+  beamer_presentation:
+    theme: CambridgeUS
+fontsize: 8pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+Terminal cheat sheet reminder
+========================================================
+
+- Bash commands to navigate directories
+
+  + Print Working Directory. Print the path of the current directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  pwd
+  ```
+
+  + List all files of the current directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  ls folder
+  ```
+
+  + Moving into folder1 and subfolder2 at once. 
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd folder1/subfolder2
+  ```
+
+  + Moving out of a directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd ..
+  ```
+  
+  + Going back to the root directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd ~
+  ```
+  
+- "Tab" to use the auto-completion
+    
+- Many more bash commands to use...
+
+So far
+========================================================
+
+  - Python
+
+  - Variables
+
+  - Data types:
+    + integer
+    + float
+    + string
+    + boolean
+  
+  - If and For loops:
+    + syntax use the right keywords **if**, **elif**, **else**, **for**, **in** and don't forget the **:**
+    + indentation 
+
+Reading advice  
+========================================================
+
+
+  To complete what we're going to see today.
+
+  - https://automatetheboringstuff.com/2e/chapter4/
+  
+  - https://automatetheboringstuff.com/2e/chapter5/
+  
+Today
+========================================================
+
+- Constant and Variable
+
+- While loop
+
+- Other python data types for collections of data type
+
+  + list
+
+  + set
+
+  + tuple
+
+  + dictionary
+  
+- Random numbers and number choices
+  
+- Exercises
+
+Constant vs Variable
+========================================================
+
+> - So far we have seen how to declare, instantiate and modify variables
+
+> - But there are "variables" that you don't want to modify and traditionally in programming those variables are called constant
+
+> - Unfortunately there is no native way of declaring a constant in python. However there is a unwritten convention that you use only upper case
+>     ```{python, echo=TRUE}
+>     CONST_PI = 3.1415
+>     ```
+
+> - Python include in its core library some constants
+>     ```{python, echo=TRUE}
+>     import math
+>
+>     math.pi
+>     ```
+
+While loop 1/3
+========================================================
+
+> - **While** loop will keep looping all over again an ending instruction is met.
+
+> - As the **for** loop incorporate a specified number of execution, the **while** loop is best suited for unknown or very large number of loop iterations.
+
+> - As for **if** and **for**, **while** has a syntax with '**:**' and need indentation for the following lines to be included in the process
+
+> - The two key features of a while loop are:
+>     + the output condition 
+>     + the increment statement
+
+
+
+While loop 2/3
+========================================================
+
+> - Example :
+
+>   ```{python, echo=TRUE}
+>   i = 1
+>   while i < 4: #  output condition
+>     print(i)
+>     i += 1     # increment statement
+>   ```
+
+> - Which is technically the same as
+>   ```{python, echo=TRUE}
+>   for i in range(1,4):
+>     print(i)
+>   ```
+
+
+While loop 3/3
+========================================================
+
+> - **While** loop will test if the output condition is True and if not it will execute the code and execute the increment statement
+  
+> - If one of those two conditions are not correctly specified you'll encounter an error or an infinite loop...
+> - Example 1
+>     ```{python, echo=TRUE, eval=FALSE}  
+>     i = 1
+>     while i < 6: #  output condition
+>       print(i)
+>     ```  
+
+> - Example 2
+>     ```{python, echo=TRUE, eval=FALSE}
+>     while i != 6:
+>       print(i)
+>       x += 2
+>     ```
+
+
+
+Lists 1/3
+========================================================
+
+> - A list is a collection of related objects
+  
+> - It's declared with brackets [] with a comma between two objects
+
+> - Example 1
+>   ```{python , echo=TRUE}
+>   Years_France_won_worldcup = [1998, 2018]
+>   print(Years_France_won_worldcup)
+>   ```
+
+> - Example 2
+>   ```{python , echo=TRUE}
+>   dog_breeds = ["golden", "corgi", "Bulldog", "Husky", "Beagle"]
+>   dog_breeds2 = ["golden" "corgi" "Bulldog" "Husky" "Beagle"]
+>   print(dog_breeds)
+>   print(dog_breeds2)
+>   ```
+
+> - Example 3
+>   ```{python , echo=TRUE}
+>   random_data_type_collection = [ 1, True, "Cats", 3.14]
+>   print(random_data_type_collection)
+>   ```
+
+Lists 2/3
+========================================================
+
+  - Access element in a list through its index which is the same to access characters in a string as in a list
+```{python , echo=TRUE}
+prog_language = ["python", "R", "C", "java", "Go", "Rust"]
+print(prog_language[0])
+print(prog_language[-1])
+```  
+
+```{python , echo=TRUE}
+programming_language = "python"
+print(programming_language[0])
+
+print(type(programming_language))
+```  
+
+Lists 3/3
+========================================================
+
+> - As for the any other variables lists can be used with functions
+>   - append()
+>   - remove()
+>   - pop()
+>   - sort()
+>   - len()
+
+> - Example
+>   ```{python , echo=TRUE}
+>   prog_language = ["python", "R", "C", "java", "Go", "Rust"]
+>   prog_language.append("html")
+>   prog_language.append("PHP")
+>   print(prog_language)
+
+>   prog_language.remove("html")
+
+>   len(prog_language)
+
+>   prog_language.sort()
+>   print(prog_language)
+>   ```  
+    
+
+Tuples 1/3
+========================================================
+
+> - Very similar to Lists and is used for data collection
+  
+> - Declared with "**()**" instead of square bracket and with a "**,**"
+
+> - Example
+>     ```{python, echo=TRUE}
+>     date_covid_shots = ("21-04-15", "21-05-18", "21-09-20")
+
+>     print(type(date_covid_shots))
+
+>     print(date_covid_shots[1])  # Accessible as list with index with []
+>     print(len(date_covid_shots))
+>     ```
+  
+Tuples 2/3
+========================================================
+
+> - In contrast to lists, they are immutable and can't be modified.
+>     ```{python, echo=TRUE, error=TRUE}    
+>     date_covid_shots = ("21-04-15", "21-05-18", "21-09-20")
+>     date_covid_shots.append("21-09-27")
+>     ```
+  
+> - You can't change the order of items neither modify the value of an item
+
+> - Tuples are best suited when you need ordered lists that would never change
+>     + If you want to code a calendar :  days and years can be coded as tuples as they would not change but are ordered.
+
+Tuples 3/3
+========================================================
+  
+> - Note that you could combine lists and tuples
+>     ```{python, echo=TRUE}
+>     Cocktails = [("Cosmo","5€"),("Daiquiri","7€"),("B52","6€")]
+>     Cocktails.append(("Mojito","7€"))
+
+>     print(Cocktails)
+>     ```
+
+> - NB: you can also declare a tuple using a tuple() constructor
+>     ```{python, echo = TRUE}
+>     date_covid_shots = tuple(["21-04-15", "21-05-18", "21-09-20"])
+>     # in this line you transform a list into a tuple
+>     print(type(date_covid_shots))
+>     ```
+  
+
+Sets 1/2
+========================================================
+
+> - Very close to lists but are unordered unindexed and do not allow duplicate value BUT are mutable
+  
+> - Declared with {}
+
+> - Example  
+>     ```{python, echo = TRUE}
+>     fruit_I_like = {"apple", "pineapple", "peach"}
+>     print(type(fruit_I_like))
+>     print(fruit_I_like)
+
+>     fruit_I_like.add("strawberry")
+>     "strawberry" in fruit_I_like # Check if a fruit is in my set
+>     fruit_I_like.remove("apple")
+>     print(fruit_I_like)
+>     ```
+  
+Sets 2/2
+========================================================
+
+> - But can't add/remove items in a set or access to item with index. Following instructions should throw an error
+>     ```{python, echo=TRUE, error=TRUE}  
+>     fruit_I_like[0]
+>     fruit_I_like.append("banana")
+>     ```
+        
+> - NB: you can also declare a set using a set() constructor (as for the tuple)
+>     ```{python, echo = TRUE}
+>     date_covid_shots = set(["21-04-15", "21-05-18", "21-09-20"])
+>     # in this line you transform a list into a tuple
+>     print(type(date_covid_shots))
+>     ```      
+
+Dictionaries 1/5
+========================================================
+
+> - Data structure that uses data in key-value pairs.
+  
+> - Each items of a dictionary is a key-value pair
+  
+> - Each key has to be unique
+  
+> - Declared in a very specific way
+>     - my_dictionary = { "key1" : value1, "key2": value2 ...}
+
+Dictionaries 2/5
+========================================================
+
+> - Example 
+>     ```{python, echo = TRUE}
+>     PCBS = {
+>     "Name" : "PCBS",
+>     "Teacher" : "Christophe Pallier",
+>     "Teacher assistant" : "Henri",
+>     "Course" : ["1", "2"],
+>     "Day": "Tuesday",
+>     "Duration" : 3,
+>     "Mandatory" : False}
+  
+>     print(PCBS["Name"])
+>     print(PCBS["Teacher"])
+>     print(PCBS["Teacher assistant"])
+>     print(PCBS["Course"])
+>     print(PCBS["Day"])
+>     print(PCBS["Duration"])
+>     print(PCBS["Mandatory"])
+>     ```
+  
+  
+Dictionaries 3/5 Create a Dictionary  
+========================================================
+
+>  - You have several methods to create a dictionary:
+    
+    
+> - Example1
+>     ```{python, echo = TRUE}
+>     PCBS = {}
+>     PCBS["Name"] = "PCBS"
+>     PCBS["Teacher"] = "Christophe Pallier"
+>     PCBS["Teacher assistant"] = "Henri"
+>     PCBS["Course"] = ["1", "2"]
+>     PCBS["Day"] = "Tuesday"
+>     PCBS["Duration"] = 3
+>     PCBS["Mandatory"] = False 
+
+>     print(PCBS)
+
+>     print(type(PCBS))
+>     ```  
+
+
+Dictionaries 4/5 Create a Dictionary  
+========================================================
+
+> - Which is exactly the same as
+>     ```{python, echo = TRUE}
+>     PCBS = dict()
+>     PCBS["Name"] = "PCBS"
+>     PCBS["Teacher"] = "Christophe Pallier"
+>     PCBS["Teacher assistant"] = "Henri"
+>     PCBS["Course"] = ["1", "2"]
+>     PCBS["Day"]= "Tuesday"
+>     PCBS["Duration"] = 3
+>     PCBS["Mandatory"] = False 
+>     print(PCBS)
+>     ```  
+>     - But with a constructor dict()
+
+
+Dictionaries 5/5 Use common operation
+========================================================
+
+> - Access to a a key-value pair
+  
+> - Add a key-value pair
+  
+> - Delete a key-value pair
+  
+> - Check for specific key existence
+
+> - Example
+>     ```{python, echo = TRUE,options(width = 11)}
+>     PCBS = {  "Name" : "PCBS", "Teacher" : "Christophe Pallier",
+>     "Teacher assistant" : "Henri", 
+>     "Day": "Tuesday", "Duration" : 3, "Mandatory" : False}
+>     PCBS["Course"] = ["1", "2"]
+>     PCBS['Course'].append("3")
+>     PCBS['Day']
+>     PCBS["starting time"] = "14h00"
+>     PCBS.pop("Teacher assistant")
+>     print(PCBS)
+>     ```    
+  
+
+
+Summary on Python collections (~ Arrays)
+========================================================
+
+
+![](/home/dbhenri/Documents/Cours python/PCBS/slides/intro-to-programming/2022/2nd class/python collections.png)
+
+Exercises 1
+========================================================
+
+- Exercise 1: Lists: list1 = [1,2,3,4,1]
+  + Given list1 print their sum 
+  + Given list1 print their product 
+  + Given list1 print the sum of their squares 
+  + Given list1 print the largest number 
+  + Given list1 print the second largest
+
+- Exercise 2: Tuples
+  + Given a list l=[1, 2, 3, 6, 7, 4, 5], transform it into a tuple
+  + Return the min and max of each tuples: truple = [(1,3,2), (6,4,5), (8,7,9)]
+  + Given a list of tuples, return tuples that have all positive elements. test_tuples = [(1,2,3), (4,5,6), (7,8,9), (-1,2,3)]
+
+- Exercise 3 : Sets
+  + Order the tuples l from Exercise 2 and transform it into a Set 
+  + Given a set Set1 = { 1,2,3,3,5,6,7} remove the 4th items
+  + Given two sets a, b. Print True if they have items in common or False if not. a = {"apple", "pineapple", "peach", "pears", "lemon", "lychee"} b = {"banana", "mango" , "lychee", "kiwi", "apple", "orange"}
+
+- Exercise 4: Given a list of words, count the number of times each word appears in the list (using dictionary)
+  + animaList=["dog", "horse", "cat", "fish", "cat", "fox", "tiger", "tiger", "flamingo", "cat"]
+
+
