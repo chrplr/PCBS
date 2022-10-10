@@ -221,8 +221,8 @@ Python module - example of **Random** 4/4
 
 ``````{python, echo = TRUE}
 # using randrange() to generate in range from 20
-# to 50. The last parameter 3 is step size to skip
-# three numbers when selecting.
+# to 50. The last parameter 3 is the step 
+# from 20 to 50 with a step of 3 (20 - 23 - 26 ....  47 - 50)
 print("A random number from range is : ", end="")
 print(randrange(20, 50, 3))
 ``````

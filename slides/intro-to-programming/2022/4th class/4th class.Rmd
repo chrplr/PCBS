@@ -1,35 +1,60 @@
 ---
-title: "intro-to-programming-3"
-author: "Henri Vandendriessche"
-date: "05/10/2021"
-fontsize: 8pt
+title: "Intro to programming 4"
+author: |
+  | Henri Vandendriessche
+  | henri.vandendriessche@ens.fr
+date: "2022-09-27"
 output:
-  beamer_presentation: default
-  slidy_presentation: default
+  beamer_presentation:
+    theme: CambridgeUS
+fontsize: 8pt
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-Reminder
+
+
+Terminal cheat sheet reminder
 ========================================================
 
- 
-  - Bash commands to navigate directories
-   
-  - Useful commands:
+- Bash commands to navigate directories
 
-    + **pwd**     Print Working Directory. Print the path of of the current directory
-    
-    + **ls /folder**        list all files of the current directory
-    
-    + **cd /folder1/folder2**     moving into folder1 and folder2 at once. 
-    
-    + **cd ..**        moving out of a directory 
+  + Print Working Directory. Print the path of the current directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  pwd
+  ```
+
+  + List all files of the current directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  ls folder
+  ```
+
+  + Moving into folder1 and subfolder2 at once. 
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd folder1/subfolder2
+  ```
   
-  - "Tab" to use the auto-completion
-    
-  - Many more bash commands to use...
+  + Moving out of a directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd ..
+  ```
+  
+  + Going back and forth in the directory tree
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd ../../folder1/subfolder1
+  ```
+  
+  + Going back to the root directory
+  ```{bash, echo = TRUE, eval= FALSE}
+  cd ~
+  ```
+  
+- "**Tab**" to use the auto-completion
+
+- **Ctrl + C** to stop a program execution
+
+- Many more bash commands to use...
 
 
 So far
@@ -53,43 +78,61 @@ So far
     + set
     + dictionary
     
+  - Python Standard library
+    + Python modules
+    + Python built-in functions
+    
 Today
 ========================================================
-
-- Exercises from last times
 
 - Functions:
   + Pure functions
   + Procedures
 
 - Exercises
-    
 
 
-Functions  
+Functions intro 1/2
 ========================================================
 
-A function is a block of instructions that is given a name.
+>  - A function is a block of instructions that is given a name.
 
-```{python, echo =TRUE}
-#  definition of a function named 'one_two'
-def one_two():
-    print(1)
-    print(2)
-    print('...')
+>  - If you call a function, you execute the code written in that function
+>     ```{python function_example, echo =TRUE}
+>     #  definition of a function named 'one_two'
+>     def one_two():
+>       print(1)
+>       print(2)
+>       print('...')
 
-one_two() # function calls 1
-one_two() # function calls 2
-```
+>     one_two() # function calls 1
+>     one_two() # function calls 2
+>     ```
 
-Calling a function is like substituting the function call by its body.
 
-If you do not call the function, it will never be executed.
 
--> Run this code in http://pythontutor.com/
 
-What, in your opinion, is the interest of functions?   
+Functions intro 2/2
+========================================================
 
+>  - Calling a function is like substituting the function call by its body.
+
+>  - If you do not call the function, it will never be executed.
+
+>  - Run this code in http://pythontutor.com/
+>     ```{python lorem_ipsum, echo=TRUE, eval=FALSE}
+>     #  definition of a function named 'one_two'
+>     def lorem_ipsum():
+>       print("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+>       print(" Sed non risus.")
+        print("Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor")
+>       print('...')
+
+>     lorem_ipsum() # function calls 1
+>     lorem_ipsum() # function calls 2
+>     ```
+
+>  - What, in your opinion, is the interest of functions?   
 
 
 Usefulness of functions
@@ -97,58 +140,63 @@ Usefulness of functions
 
 
 
-  - Using functions avoids to duplicate code (i.e. by cutting and pasting). This facilitates the modification and correction of a program (errors are at a single place!)
+>  - Using functions avoids to duplicate code (i.e. by cutting and pasting). This facilitates the modification and correction of a program (errors are at a single place!)
 
-  - Using functions typically serves to make the code more readable (and maybe shorter).
-
+>  - Using functions typically serves to make the code more readable (and maybe shorter).
 
 
 
 Definitions first ! 
 ========================================================
+>  - Function have a syntax You define a function using **def name():**
+>     + **def **
+>     + **name + ()** as for the built-in functions (ex: len(string))
+>     + **:** Never forget the **:**
 
-functions must be defined before they are called
+>  - Functions must be defined before they are called
+>     ```{python function_example2, echo =TRUE, eval=FALSE, error=TRUE}
+>     one_two() # function calls 1
+>     one_two() # function calls 2
 
-    one_two()  # function call
-    one_two()
-    one_two()
-    
-    def one_two():  # function definition
-        print(1)
-        print(2)
-        print('...')
+>     def one_two():
+>       print(1)
+>       print(2)
+>       print('...')
+>     ```
+>     NameError: name 'one_two' is not defined 
 
--> Run this code in python.
 
-Remarks:
 
-  - A given script can contain several function definitions.
 
-  - As a convention, all functions definitions must be at the beginning of the script.
+>  - Remarks:
+>     + A given script can contain several function definitions.
+>     + As a convention, all functions definitions must be at the beginning of the script.
 
 
 Arguments
 ========================================================
 
-```{python, echo =TRUE}
-def hello(name):
-    print('Hello, ' + name)
+>  - You can also give an input to your function. This input is called a parameter
+>     ```{python, echo =TRUE}
+>     def hello(name):
+>         print('Hello, ' + name)
 
-hello('Alice')
-hello('Bob')
-```
+>     hello('Alice')
+>     hello('Bob')
+>     ```
 
-During the call hello('Alice'), the argument Alice is stored in the variable name.
+>  - During the call hello('Alice'), the argument Alice is stored in the variable name.
 
 
--> run it in http://pythontutor.com/
+>  - Run it in http://pythontutor.com/
 
-Note: the variable name is created only during the execution of the function hello() (it is local to hello())
+>  - Note: the variable name is created only during the execution of the function hello() (it is local to hello())
 
 
 Multiple arguments
 ========================================================
 
+>  - If you can pass one 
 ```{python, echo =TRUE}
 def print_if_divisible(n, div):
   if (n % div == 0):
@@ -481,4 +529,5 @@ See
 
   -  https://pcbs.readthedocs.io/en/latest/representing-numbers-images-text.html
   -  https://pcbs.readthedocs.io/en/latest/building_abstractions_with_functions.html
+
 
