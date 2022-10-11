@@ -353,7 +353,7 @@ Scope of variables 2/2
 
 >  - **local variables** : Arguments or variables defined inside the body of a function only exist while the function is executed. They are destroyed and the associated memory is freed.
 
->  - **non-local variables** : Variables that have been created in the environment where the variable was called. functions can access them (if they are not shadowed)
+>  - **non-local variables** : Variables that have been created in the environment where the variable was called. functions can access them (if they are not shadowed by a local variable)
 
 >  - Yet, this is bad practice and must be avoided except in a few cases.
 
