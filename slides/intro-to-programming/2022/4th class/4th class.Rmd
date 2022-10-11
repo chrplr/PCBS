@@ -300,7 +300,8 @@ Returning "complex" objects
 >         y3 = x ** 2 + 3 
 >         return (y1, y2, y3)
 
->     f(2.0)
+>     a,b,c =f(2.0)
+>     print(a,b,c)
 >     ```
 
 >  - Default values for arguments. You can insert a parameter by default if none are passed.
@@ -453,7 +454,7 @@ The functions in it can be reused with import script
 Functions vs Procedures
 ========================================================
 
->  - A function return a value and calculate the value based on the input.
+>  - A pure function is returning exactly the same value for the same parameter and has no side effect.
 >     ```{python, echo=TRUE}
 >     def addition(a,b):
 >       return a+b
@@ -461,7 +462,7 @@ Functions vs Procedures
 >     print(x)
 >     ```
 
->  - A pure function is returning exactly the same value for the same parameter and has no side effect.
+>  - A function return a value and calculate the value based on the input.
 >     ```{python, echo=TRUE}
 >     a=1
 >     def addition(b):
@@ -487,12 +488,12 @@ Exercises:
 
 3- Define a function is_prime(x) which returns True if x is a prime number, else False. Use it to list all prime numbers below 1000.
 
-4- Two taxi companies propose different pricing schemes: Company A charges 4.80€ plus 1.15€ by km travelled. Company B charges 3.20€ plus 1.20€ by km travelled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
+4- Two taxis companies propose different pricing schemes: Company A charges 4.80€ plus 1.15€ by km traveled. Company B charges 3.20€ plus 1.20€ by km traveled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
 
 5- Write a function are_anagrams(word1, word2) that tests if two words are anagrams, that is contain the same letters in different orders.
 
 
-Even more exercices:
+Even more exercises:
 ========================================================
 
 See

@@ -71,10 +71,10 @@ estimate1 = 4 * hits / draws
 
 print("Estimate =", estimate1)
 
-print(random.random())
+
 
 ##################
-### Exercice 6 ###
+### Exercice 4 ###
 ##################
 print("\n# N rows of Pascal's triangle")
 # Write a program that prints the first N rows of Pascal’s triangle (see https://www.youtube.com/watch?v=XMriWTvPXHI).
