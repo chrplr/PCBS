@@ -299,14 +299,14 @@ Recursive function example 2
 ## With a loop for
 
 def sum(list):
-  sum = 0
+  sum1 = 0
   
   # Add every number in the list.
   for i in range(0, len(list)):
-    sum = sum + list[i]
+    sum1 = sum1 + list[i]
         
   # Return the sum.
-  return sum
+  return sum1
 
 print(sum([5,7,3,8,10]))
 ```
@@ -587,3 +587,17 @@ def sum_naturals(n):
 
 sum_naturals(3)
 ```
+
+Conclusion 4/4
+========================================================
+
+- Building abstraction is important:
+  + To shorten your script (using functions for example)
+  + To simplify your script (using modules for example)
+  + In general to hide internal implementations of a process or method from the user 
+  
+- Abstraction is also complexifying your program.
+  + Very easy to lose track of what your functions or programs are doing (for example with recursivity and high order functions)
+  
+- Keep in mind that abstraction is very useful but has to be kept to a certain level of comprehension.
+  
