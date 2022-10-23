@@ -600,4 +600,6 @@ Conclusion 4/4
   + Very easy to lose track of what your functions or programs are doing (for example with recursivity and high order functions)
   
 - Keep in mind that abstraction is very useful but has to be kept to a certain level of comprehension.
+
+- But we'll talk more about abstraction later in the class when we'll work on the notion Oriented Object Programming (OOP) in Python
   
