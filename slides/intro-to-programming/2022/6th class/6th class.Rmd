@@ -96,7 +96,6 @@ Today
  - Read and write files
 
 
-
 Manipulate files : Open and read a file 1/3
 ========================================================
 
