@@ -183,7 +183,7 @@ Manipulate files : write a file
    
 > - We need an access mode 'w' if we want to create and write anything into a file
    
-> - Note that to be able to read a just created file you need to close it and open it again in read mode
+- Note that to be able to read a just created file you need to close it and open it again in read mode
 >   ```{python, echo = TRUE}
 >   MyTestFile = open('test2.txt', 'w')
 >   MyTestFile.write("Once upon a time in a Cognitive Master")
@@ -215,10 +215,10 @@ Manipulate files : specific character and new lines
 ========================================================
 
 > - Inside a string you can use the anti slash to insert special codes:
->     + \\n return to line
->     + **\t** add a tab
->     + **\r** return to line (same as \\n in python)
->     + **\"** add a quotation mark inside a string delimited itself by **"**
+>     + **\\n** return to line
+>     + **\\t** add a tab
+>     + **\\r** return to line (same as \\n in python)
+>     + **\\"** add a quotation mark inside a string delimited itself by **"**
 >     ```{python, echo = TRUE}
 >     MyTestFile = open('test2.txt', 'a')
 
