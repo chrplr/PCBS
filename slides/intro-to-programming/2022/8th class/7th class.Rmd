@@ -1,0 +1,168 @@
+---
+title: "Intro to programming 8"
+author: |
+  | Henri Vandendriessche
+  | henri.vandendriessche@ens.fr
+date: "2022-10-25"
+output:
+  beamer_presentation:
+    theme: CambridgeUS
+    # pandoc_args: --listings
+    # includes:
+    #   in_header: preamble.tex
+fontsize: 8pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Where are we now
+========================================================
+
+- Now that we write programs more and more complicated, we end up encountering more more and more complex situation.
+
+- And more and more complicated bugs...
+
+Your computer will do only what you tell it to do; it won’t read your mind and do what you intended it to do. Even professional programmers create bugs all the time, so don’t feel discouraged if your program has a problem.
+
+Fortunately, there are a few tools and techniques to identify what exactly your code is doing and where it’s going wrong. First, you will look at logging and assertions, two features that can help you detect bugs early. In general, the earlier you catch bugs, the easier they will be to fix.
+
+
+
+Debugging
+========================================================
+
+
+The easiest debugging rule
+========================================================
+
+> - When your program do what you asked (what you wrote) but not what you wanted...
+
+> - The simplest and easiest way to see if there is a problem in you program is to check your variables at every key points of your program:
+>   + When you perform a operation on your variable
+>   + At the end of loop
+>   + At the end of a function if there is a return statement
+>   + When you import data from a file 
+
+> - What is the best way to check on your variables and their types ?
+>   + print it: **print(your_variable)**
+>   + print the type of your variable: **print(type(your_variable))**
+
+> - **print()** can be useful for simple check but please don't debug only with print()
+
+
+Try and except statements 1/5
+========================================================
+
+> - If you have an error in your script, the execution is stopped.
+
+> - Example: What's wrong in the following script:
+>   ```{python, echo=TRUE, eval=FALSE, error=TRUE}
+>   def isDivided(divisor):
+>       return 42 / divisor
+
+>   print(isDivided(2))
+>   print(isDivided(12))
+>   print(isDivided(0))
+>   print(isDivided(3))
+>   ```
+
+Try and except statements 2/5
+========================================================
+
+- If you have an error in your script, the execution is stropped.
+
+- Example: What's wrong in the following script:
+  ```{python, echo=TRUE, eval=TRUE, error=TRUE}
+  def isDivided(divisor):
+      return 42 / divisor
+
+  print(isDivided(2))
+  print(isDivided(12))
+  print(isDivided(0))
+  ```
+
+
+Try and except statements 3/5
+========================================================
+
+- But you can still have your way around this error:
+  + **try : **
+  + **except ... : **
+
+```{python, echo=TRUE, eval=TRUE, error=TRUE}
+def isDivided(divisor):
+    try:
+      return 42 / divisor
+    except ZeroDivisionError:
+      print("What have I done again...")
+
+print(isDivided(2))
+print(isDivided(12))
+print(isDivided(0))
+print(isDivided(3))
+```
+
+
+Try and except statements 4/5
+========================================================
+
+> - You can as well include the call of your function in the try
+>   ```{python, echo=TRUE, eval=TRUE, error=TRUE}
+>   def isDivided(divisor):
+>     return 42 / divisor
+
+>   try:
+>     print(isDivided(2))
+>     print(isDivided(12))
+>     print(isDivided(0))
+>     print(isDivided(3))
+
+>   except ZeroDivisionError:
+>     print("What have I done again...")
+>   ```
+
+> - Note that **print(isDivided(3))** is not executed. Once the execution jumps in the except statement, it does not goes back to the try clause. Instead, it just continues moving down the program as normal
+
+
+Try and except statements 5/5
+========================================================
+
+- Try except is usefull for ....
+
+
+Raising Exceptions
+========================================================
+
+exceptions with try and except statements so that your program can recover from exceptions that you anticipated. But you can also raise your own exceptions in your code. Raising an exception is a way of saying, “Stop running the code in this function and move the program execution to the except statement.”
+
+Exceptions are raised with a **raise** statement. In code, a **raise** statement consists of the following:
+
+    The raise keyword
+    A call to the Exception() function
+    A string with a helpful error message passed to the Exception() function
+
+
+
+Getting the Traceback as a String
+========================================================
+
+When Python encounters an error, it produces a treasure trove of error information called the traceback. The traceback includes the error message, the line number of the line that caused the error, and the sequence of the function calls that led to the error. This sequence of calls is called the call stack.
+
+
+
+Assertions
+========================================================
+
+An assertion is a sanity check to make sure your code isn’t doing something obviously wrong. These sanity checks are performed by assert statements. If the sanity check fails, then an AssertionError exception is raised. In code, an assert statement consists of the following:
+
+
+Logging
+========================================================
+
+- Why logging better than print
+
+Python debugger: PDB
+========================================================
