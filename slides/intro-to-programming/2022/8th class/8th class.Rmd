@@ -7,9 +7,12 @@ date: "2022-10-25"
 output:
   beamer_presentation:
     theme: CambridgeUS
-    # pandoc_args: --listings
-    # includes:
-    #   in_header: preamble.tex
+    keep_tex: true
+header-includes:
+  - \let\verbatim\undefined
+  - \let\verbatimend\undefined
+  - \usepackage{listings}
+  - \lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
 fontsize: 8pt
 ---
 
@@ -50,7 +53,9 @@ The easiest debugging rule
 >   + print it: **print(your_variable)**
 >   + print the type of your variable: **print(type(your_variable))**
 
-> - **print()** can be useful for simple check but please don't debug only with print()
+> - **print()** can be useful for simple check but please don't debug your all your script with print()
+
+> - It's the level 0 of debugging
 
 
 Try and except statements 1/5
@@ -130,27 +135,97 @@ Try and except statements 4/5
 Try and except statements 5/5
 ========================================================
 
-- Try except is usefull for ....
+- Try except is useful:
+  + For making some checks on your program flow
+  + To get a (hopefully) clearer (or more adapted) error message than what python can provide
 
-
-Raising Exceptions
+Raising Exceptions 1/2
 ========================================================
 
-exceptions with try and except statements so that your program can recover from exceptions that you anticipated. But you can also raise your own exceptions in your code. Raising an exception is a way of saying, “Stop running the code in this function and move the program execution to the except statement.”
+- Python raises exceptions every time it attempts to execute an invalid code
 
-Exceptions are raised with a **raise** statement. In code, a **raise** statement consists of the following:
+- Exceptions are raised this way:
+  + **raise** keyword
+  + **Exception()** function
+  + A useful sentence that will help you understand the problem in the Exception function
+  
+```{python, echo=TRUE, error=TRUE}
+raise Exception('Ah Shit, Here We Go Again: another day another bug')
+```
 
-    The raise keyword
-    A call to the Exception() function
-    A string with a helpful error message passed to the Exception() function
+- The **try** and **except** statement allows us to handle those exceptions if we anticipate them
+
+- Without the **try** and **except** statement the program stops at the first exception raised
 
 
-
-Getting the Traceback as a String
+Raising Exceptions 2/2
 ========================================================
 
-When Python encounters an error, it produces a treasure trove of error information called the traceback. The traceback includes the error message, the line number of the line that caused the error, and the sequence of the function calls that led to the error. This sequence of calls is called the call stack.
+- When / how to raise exception ?
 
+- Exception can be passed as argument or returned at the end of a function
+```{python, echo=TRUE}
+def doBullshit():
+  raise Exception('I did bullshit')
+
+try:
+  doBullshit()
+except Exception as err:
+  print("Ooops, ", str(err) )
+    
+```
+
+
+Getting the Traceback as a String 1/2
+========================================================
+
+- Getting the information of your error.
+
+- When your program crashes you always have an error with some information like:
+  + The line of the error / the differents lines if your program uses several files
+  + The error message
+  + The function / the sequence of functions involved (i,e, the call stack)
+  
+- All of that is called the **traceback**
+
+- Example:
+```{python, echo=TRUE, error=TRUE}
+def callErrorTest():
+  errorTest()
+
+def errorTest():
+  raise Exception('FATAL ERROR')
+
+callErrorTest()
+    
+```
+
+- Those informations are here to help you locate and understand you error.
+
+
+Getting the Traceback as a String 2/2
+========================================================
+
+- Instead of just prompting it on your terminal, you can have access to your traceback using: **traceback.format_exc()**
+
+- That way you can obtain your traceback information as a string
+
+- You'll need the tracback module to access the function.
+
+- It can be useful if you want to keep track of an error and write the info in a file. That way you keep it for later when you'll be mentally prepared to debug your code.
+```{python, echo=TRUE, error=TRUE}
+import traceback
+
+try:
+  raise Exception('FATAL ERROR')
+
+except:
+  errorFile = open('errorInfo.txt', 'w')
+  errorFile.write(traceback.format_exc())
+  errorFile.close()
+  print('Don\'t have time now to debug but all info are in errorInfo.txt')
+    
+```
 
 
 Assertions

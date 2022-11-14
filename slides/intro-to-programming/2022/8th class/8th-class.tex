@@ -1,0 +1,598 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  8pt,
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{CambridgeUS}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\let\verbatim\undefined
+\let\verbatimend\undefined
+\usepackage{listings}
+\lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Intro to programming 8},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Intro to programming 8}
+\author{Henri Vandendriessche\\
+\href{mailto:henri.vandendriessche@ens.fr}{\nolinkurl{henri.vandendriessche@ens.fr}}}
+\date{2022-10-25}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Where are we now}
+\protect\hypertarget{where-are-we-now}{}
+\begin{itemize}
+\item
+  Now that we write programs more and more complicated, we end up
+  encountering more more and more complex situation.
+\item
+  And more and more complicated bugs\ldots{}
+\end{itemize}
+
+Your computer will do only what you tell it to do; it won't read your
+mind and do what you intended it to do. Even professional programmers
+create bugs all the time, so don't feel discouraged if your program has
+a problem.
+
+Fortunately, there are a few tools and techniques to identify what
+exactly your code is doing and where it's going wrong. First, you will
+look at logging and assertions, two features that can help you detect
+bugs early. In general, the earlier you catch bugs, the easier they will
+be to fix.
+\end{frame}
+
+\begin{frame}{Debugging}
+\protect\hypertarget{debugging}{}
+\end{frame}
+
+\begin{frame}{The easiest debugging rule}
+\protect\hypertarget{the-easiest-debugging-rule}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  When your program do what you asked (what you wrote) but not what you
+  wanted\ldots{}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  The simplest and easiest way to see if there is a problem in you
+  program is to check your variables at every key points of your
+  program:
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    When you perform a operation on your variable
+  \item
+    At the end of loop
+  \item
+    At the end of a function if there is a return statement
+  \item
+    When you import data from a file
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  What is the best way to check on your variables and their types ?
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    print it: \textbf{print(your\_variable)}
+  \item
+    print the type of your variable:
+    \textbf{print(type(your\_variable))}
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  \textbf{print()} can be useful for simple check but please don't debug
+  your all your script with print()
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  It's the level 0 of debugging
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Try and except statements 1/5}
+\protect\hypertarget{try-and-except-statements-15}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  If you have an error in your script, the execution is stopped.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\item
+  Example: What's wrong in the following script:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ isDivided(divisor):}
+    \ControlFlowTok{return} \DecValTok{42} \OperatorTok{/}\NormalTok{ divisor}
+
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{2}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{12}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{0}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{3}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Try and except statements 2/5}
+\protect\hypertarget{try-and-except-statements-25}{}
+\begin{itemize}
+\item
+  If you have an error in your script, the execution is stropped.
+\item
+  Example: What's wrong in the following script:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ isDivided(divisor):}
+    \ControlFlowTok{return} \DecValTok{42} \OperatorTok{/}\NormalTok{ divisor}
+
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 21.0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{12}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{0}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Error in py_call_impl(callable, dots$args, dots$keywords): ZeroDivisionError: division by zero
+\end{verbatim}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Try and except statements 3/5}
+\protect\hypertarget{try-and-except-statements-35}{}
+\begin{itemize}
+\tightlist
+\item
+  But you can still have your way around this error:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{try : }
+  \item
+    \textbf{except \ldots{} : }
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ isDivided(divisor):}
+    \ControlFlowTok{try}\NormalTok{:}
+      \ControlFlowTok{return} \DecValTok{42} \OperatorTok{/}\NormalTok{ divisor}
+    \ControlFlowTok{except} \PreprocessorTok{ZeroDivisionError}\NormalTok{:}
+      \BuiltInTok{print}\NormalTok{(}\StringTok{"What have I done again..."}\NormalTok{)}
+
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 21.0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{12}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{0}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## What have I done again...
+## None
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{3}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 14.0
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Try and except statements 4/5}
+\protect\hypertarget{try-and-except-statements-45}{}
+\begin{itemize}[<+->]
+\item
+  You can as well include the call of your function in the try
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ isDivided(divisor):}
+  \ControlFlowTok{return} \DecValTok{42} \OperatorTok{/}\NormalTok{ divisor}
+
+\ControlFlowTok{try}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{2}\NormalTok{))}
+  \BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{12}\NormalTok{))}
+  \BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{0}\NormalTok{))}
+  \BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{3}\NormalTok{))}
+
+\ControlFlowTok{except} \PreprocessorTok{ZeroDivisionError}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"What have I done again..."}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 21.0
+## 3.5
+## What have I done again...
+\end{verbatim}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Note that \textbf{print(isDivided(3))} is not executed. Once the
+  execution jumps in the except statement, it does not goes back to the
+  try clause. Instead, it just continues moving down the program as
+  normal
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Try and except statements 5/5}
+\protect\hypertarget{try-and-except-statements-55}{}
+\begin{itemize}
+\tightlist
+\item
+  Try except is useful:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For making some checks on your program flow
+  \item
+    To get a (hopefully) clearer (or more adapted) error message than
+    what python can provide
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Raising Exceptions 1/2}
+\protect\hypertarget{raising-exceptions-12}{}
+\begin{itemize}
+\item
+  Python raises exceptions every time it attempts to execute an invalid
+  code
+\item
+  Exceptions are raised this way:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{raise} keyword
+  \item
+    \textbf{Exception()} function
+  \item
+    A useful sentence that will help you understand the problem in the
+    Exception function
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{raise} \PreprocessorTok{Exception}\NormalTok{(}\StringTok{\textquotesingle{}Ah Shit, Here We Go Again: another day another bug\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Error in py_call_impl(callable, dots$args, dots$keywords): Exception: Ah Shit, Here We Go Again: another day another bug
+\end{verbatim}
+
+\begin{itemize}
+\item
+  The \textbf{try} and \textbf{except} statement allows us to handle
+  those exceptions if we anticipate them
+\item
+  Without the \textbf{try} and \textbf{except} statement the program
+  stops at the first exception raised
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Raising Exceptions 2/2}
+\protect\hypertarget{raising-exceptions-22}{}
+\begin{itemize}
+\item
+  When / how to raise exception ?
+\item
+  Exception can be passed as argument or returned at the end of a
+  function
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ doBullshit():}
+  \ControlFlowTok{raise} \PreprocessorTok{Exception}\NormalTok{(}\StringTok{\textquotesingle{}I did bullshit\textquotesingle{}}\NormalTok{)}
+
+\ControlFlowTok{try}\NormalTok{:}
+\NormalTok{  doBullshit()}
+\ControlFlowTok{except} \PreprocessorTok{Exception} \ImportTok{as}\NormalTok{ err:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Ooops, "}\NormalTok{, }\BuiltInTok{str}\NormalTok{(err) )}
+    
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Ooops,  I did bullshit
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Getting the Traceback as a String 1/2}
+\protect\hypertarget{getting-the-traceback-as-a-string-12}{}
+\begin{itemize}
+\item
+  Getting the information of your error.
+\item
+  When your program crashes you always have an error with some
+  information like:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The line of the error / the differents lines if your program uses
+    several files
+  \item
+    The error message
+  \item
+    The function / the sequence of functions involved (i,e, the call
+    stack)
+  \end{itemize}
+\item
+  All of that is called the \textbf{traceback}
+\item
+  Example:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ callErrorTest():}
+\NormalTok{  errorTest()}
+
+\KeywordTok{def}\NormalTok{ errorTest():}
+  \ControlFlowTok{raise} \PreprocessorTok{Exception}\NormalTok{(}\StringTok{\textquotesingle{}FATAL ERROR\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{callErrorTest()}
+    
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Error in py_call_impl(callable, dots$args, dots$keywords): Exception: FATAL ERROR
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Those informations are here to help you locate and understand you
+  error.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Getting the Traceback as a String 2/2}
+\protect\hypertarget{getting-the-traceback-as-a-string-22}{}
+\begin{itemize}
+\item
+  Instead of just prompting it on your terminal, you can have access to
+  your traceback using: \textbf{traceback.format\_exc()}
+\item
+  That way you can obtain your traceback information as a string
+\item
+  You'll need the tracback module to access the function.
+\item
+  It can be useful if you want to keep track of an error and write the
+  info in a file. That way you keep it for later when you'll be mentally
+  prepared to debug your code.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ traceback}
+
+\ControlFlowTok{try}\NormalTok{:}
+  \ControlFlowTok{raise} \PreprocessorTok{Exception}\NormalTok{(}\StringTok{\textquotesingle{}FATAL ERROR\textquotesingle{}}\NormalTok{)}
+
+\ControlFlowTok{except}\NormalTok{:}
+\NormalTok{  errorFile }\OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}errorInfo.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}w\textquotesingle{}}\NormalTok{)}
+\NormalTok{  errorFile.write(traceback.format\_exc())}
+\NormalTok{  errorFile.close()}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Don}\CharTok{\textbackslash{}\textquotesingle{}}\StringTok{t have time now to debug but all info are in errorInfo.txt\textquotesingle{}}\NormalTok{)}
+    
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 97
+## Don't have time now to debug but all info are in errorInfo.txt
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Assertions}
+\protect\hypertarget{assertions}{}
+An assertion is a sanity check to make sure your code isn't doing
+something obviously wrong. These sanity checks are performed by assert
+statements. If the sanity check fails, then an AssertionError exception
+is raised. In code, an assert statement consists of the following:
+\end{frame}
+
+\begin{frame}{Logging}
+\protect\hypertarget{logging}{}
+\begin{itemize}
+\tightlist
+\item
+  Why logging better than print
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Python debugger: PDB}
+\protect\hypertarget{python-debugger-pdb}{}
+\end{frame}
+
+\end{document}
