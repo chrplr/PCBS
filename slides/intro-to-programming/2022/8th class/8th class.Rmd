@@ -24,18 +24,26 @@ knitr::opts_chunk$set(echo = TRUE)
 Where are we now
 ========================================================
 
-- Now that we write programs more and more complicated, we end up encountering more more and more complex situation.
+> - Now that we write programs more and more complicated, we end up encountering more more and more complex situation
 
-- And more and more complicated bugs...
+> - And more and more complicated bugs...
 
-Your computer will do only what you tell it to do; it won’t read your mind and do what you intended it to do. Even professional programmers create bugs all the time, so don’t feel discouraged if your program has a problem.
+> - Your computer will do only what you tell it to do; it won’t read your mind and do what you intended it to do
 
-Fortunately, there are a few tools and techniques to identify what exactly your code is doing and where it’s going wrong. First, you will look at logging and assertions, two features that can help you detect bugs early. In general, the earlier you catch bugs, the easier they will be to fix.
+> - Everyone create bugs and everyone has to correct them
+
+> - Fortunately, python comes will tools to help you get over them 
 
 
-
-Debugging
+Today
 ========================================================
+
+
+ - Debugging level 0
+ - Assertion
+ - Logging
+ - pdb module
+
 
 
 The easiest debugging rule
@@ -135,9 +143,13 @@ Try and except statements 4/5
 Try and except statements 5/5
 ========================================================
 
-- Try except is useful:
+- **try except** is useful:
   + For making some checks on your program flow
   + To get a (hopefully) clearer (or more adapted) error message than what python can provide
+  
+- **try except** is not useful:
+  + To dodge error without solving them
+  + To get a running program without crash
 
 Raising Exceptions 1/2
 ========================================================
@@ -228,16 +240,266 @@ except:
 ```
 
 
-Assertions
+Assertions 1/3
 ========================================================
 
-An assertion is a sanity check to make sure your code isn’t doing something obviously wrong. These sanity checks are performed by assert statements. If the sanity check fails, then an AssertionError exception is raised. In code, an assert statement consists of the following:
+- Assertion is a very a sanity check to be sure that the data has the expected format
 
+- If the sanity check fails then an **AssertionError** exception is raised
 
-Logging
+- Assertions are raised this way:
+  + **assert** keyword
+  + A condition
+  + A comma
+  + A string to display when the check fails
+  
+- Example 1:
+```{python, echo=TRUE, error=TRUE}
+olympicGamesYears =[2021, 2012, 2008, 2024, 2016, 2000, 2004]
+
+assert olympicGamesYears[0] < olympicGamesYears[-1] , "Years doesn't seem sorted"
+```
+
+Assertions 2/3
 ========================================================
 
-- Why logging better than print
+- Assertion is a very a sanity check to be sure that the data has the expected format
 
-Python debugger: PDB
+- If the sanity check fails then an **AssertionError** exception is raised
+
+- Assertions are raised this way:
+  + **assert** keyword
+  + A condition
+  + A comma
+  + A string to display when the check fails
+  
+- Example 2:
+```{python, echo=TRUE}
+olympicGamesYears =[2004, 2012, 2008, 2024, 2016, 2000, 2021]
+
+olympicGamesYears.sort()
+
+assert olympicGamesYears[0] < olympicGamesYears[-1] , "Years doesn't seem sorted"
+```
+
+Assertions 3/3
 ========================================================
+
+- Assertion are very useful:
+  + At a key point to check that your data have the right format
+  + If well design it gives you the location and the exact reason why if failed.
+  + To save time in debugging
+  
+- But you need first to have a very concrete idea of what to expect and where in your program to set up some assertions
+
+
+Logging 1/7
+========================================================
+
+- Logging is to write down info or variable content from your script to keep track of the execution of your program
+
+- **print()** is some form of logging.
+
+- Why logging better than print :
+  + You can have access to better information like timings for example
+  + It can be systematic and organized
+
+- Of course Python has a logging module and the name is **logging**: https://docs.python.org/3/library/logging.html
+
+Logging 2/7
+========================================================
+
+- Example:
+```{python, echo=TRUE, eval=FALSE}
+def factorial(n):
+    total = 1
+    for i in range(n + 1):
+        total *= i
+    return total
+
+print(factorial(5))
+```
+
+
+Logging 2/7
+========================================================
+
+- Example:
+```{python, echo=TRUE, eval=TRUE}
+def factorial(n):
+    total = 1
+    for i in range(n + 1):
+        total *= i
+    return total
+
+print(factorial(5))
+```
+
+- What will be the output ?
+
+Logging 3/7
+========================================================
+
+- Example with logging:
+```{python, echo=TRUE}
+import logging
+
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s -  %(levelname)s -  %(message)s')
+logging.debug('Start of program')
+
+def factorial(n):
+    logging.debug('Start of factorial(%s%%)'  % (n))
+    total = 1
+    for i in range(n + 1):
+        total *= i
+        logging.debug('i is ' + str(i) + ', total is ' + str(total))
+    logging.debug('End of factorial(%s%%)'  % (n))
+    return total
+
+logging.debug('Call of the function')
+print(factorial(5))
+
+logging.debug('End of program')
+```
+
+Logging 4/7
+========================================================
+
+- Example with logging:
+```{python, echo=TRUE}
+import logging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s -  %(levelname)s -  %(message)s')
+logging.debug('Start of program')
+
+def factorial(n):
+    logging.debug('Start of factorial(%s%%)'  % (n))
+    total = 1
+    for i in range(1,n + 1):
+        total *= i
+        logging.debug('i is ' + str(i) + ', total is ' + str(total))
+    logging.debug('End of factorial(%s%%)'  % (n))
+    return total
+
+logging.debug('Call of the function')
+print(factorial(5))
+
+logging.debug('End of program')
+```
+
+
+Logging 5/7
+========================================================
+
+
+- The function **logging.basicConfig(level=logging.DEBUG, format='%(asctime)s -  %(levelname)s -  %(message)s')** can be set to look at several levels:
+  + **DEBUG** logging.debug() The lowest level. Used for small details. Usually you care about these messages only when diagnosing problems.
+  + **INFO** logging.info() Used to record information on general events in your program or confirm that things are working at their point in the program.
+  + **WARNING** logging.warning() Used to indicate a potential problem that doesn’t prevent the program from working but might do so in the future.
+  + **ERROR** logging.error() Used to record an error that caused the program to fail to do something.
+  + **CRITICAL** logging.critical() The highest level. Used to indicate a fatal error that has caused or is about to cause the program to stop running entirely.
+
+
+Logging 6/7
+========================================================
+
+- Logging can be very useful to inspect systematically your program execution
+
+- It needs some time to adapt to it but it's very practical and customizable at need
+
+- Why is it better than print ?
+  + print function can be non debugging feature so make the difference between debugging print and necessary print becomes hell
+  + can be switch off easily with **logging.disable(logging.CRITICAL)**
+  
+```{python, echo=TRUE}
+import logging
+logging.disable(logging.CRITICAL)
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.debug('Start of program')
+
+def factorial(n):
+    logging.debug('Start of factorial(%s%%)'  % (n))
+    total = 1
+    for i in range(1,n + 1):
+        total *= i
+        logging.debug('i is ' + str(i) + ', total is ' + str(total))
+    logging.debug('End of factorial(%s%%)'  % (n))
+    return total
+
+logging.debug('Call of the function')
+print(factorial(5))
+
+logging.debug('End of program')
+```
+
+
+Logging 7/7
+========================================================
+
+- Logging is very useful for debugging on the long run
+
+- To keep a track of variable of interest in a long program
+
+- Debugging even post mortem
+
+- It is especially efficient when you can have access to the terminal (i,e when you program experiment with visual stimuli)
+
+
+Python debugger: PDB 1/
+========================================================
+
+
+- The ultimate debugging tool is the **pdb** module: https://docs.python.org/3/library/pdb.html
+
+- When executing your program with the module **pdb** you have a screen like that
+
+![](/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB.png)
+
+
+Python debugger: PDB 2/
+========================================================
+
+- It is a command line tool that go sequentially at every step of the program
+
+- There are a certain number of command to know:
+  + **help**	To display all commands
+  + **where**	Display the stack trace and line number of the current line
+  + **next**	Execute the current line and move to the next line ignoring function calls
+  + **step**	Step into functions called at the current line
+  + **whatis** Check the type of variable
+  
+- Example:
+  ```{python, echo=TRUE, eval=FALSE}
+  import pdb
+
+  def addition(a, b):
+      answer = a * b
+      return answer
+
+  pdb.set_trace()
+  x = input("Enter first number : ")
+  y = input("Enter second number : ")
+  sum = addition(x, y)
+  print(sum)
+  ```
+  
+Python debugger: PDB 3/
+========================================================
+
+- You can use as well:
+  + **args** To get all arguments of a function
+  + **p** To get the value at a time t of a variable
+
+- You can navigate in pdb prompt using:
+  + **c** continue execution
+  + **q** quit the debugger/execution
+  + **n** step to next line within the same function
+  + **s** step to next line in this function or a called function
+  + **u** (up)
+  + **d** (down)
+  
+- You can also set a breakpoint at a specific point in the script
+- ![](/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_break.png)
+
+
+
+
