@@ -193,7 +193,6 @@
 \begin{frame}{Today}
 \protect\hypertarget{today}{}
 \begin{itemize}
-\tightlist
 \item
   Debugging level 0
 \item
@@ -202,6 +201,17 @@
   Logging
 \item
   pdb module
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Disclaimer}
+\protect\hypertarget{disclaimer}{}
+\begin{itemize}
+\item
+  This document is highly based on \textbf{Automate the Boring Stuff
+  with Python} chapter 11\ldots{}
+\item
+  \url{https://automatetheboringstuff.com/2e/chapter11/}
 \end{itemize}
 \end{frame}
 
@@ -816,7 +826,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-15 13:53:11,242 -  DEBUG -  Start of program
+## 2022-11-15 20:16:25,166 -  DEBUG -  Start of program
 \end{verbatim}
 
 \begin{Shaded}
@@ -835,7 +845,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-15 13:53:11,254 -  DEBUG -  Call of the function
+## 2022-11-15 20:16:25,177 -  DEBUG -  Call of the function
 \end{verbatim}
 
 \begin{Shaded}
@@ -847,14 +857,14 @@
 \begin{verbatim}
 ## 0
 ## 
-## 2022-11-15 13:53:11,261 -  DEBUG -  Start of factorial(5%)
-## 2022-11-15 13:53:11,261 -  DEBUG -  i is 0, total is 0
-## 2022-11-15 13:53:11,261 -  DEBUG -  i is 1, total is 0
-## 2022-11-15 13:53:11,261 -  DEBUG -  i is 2, total is 0
-## 2022-11-15 13:53:11,261 -  DEBUG -  i is 3, total is 0
-## 2022-11-15 13:53:11,261 -  DEBUG -  i is 4, total is 0
-## 2022-11-15 13:53:11,261 -  DEBUG -  i is 5, total is 0
-## 2022-11-15 13:53:11,261 -  DEBUG -  End of factorial(5%)
+## 2022-11-15 20:16:25,183 -  DEBUG -  Start of factorial(5%)
+## 2022-11-15 20:16:25,183 -  DEBUG -  i is 0, total is 0
+## 2022-11-15 20:16:25,183 -  DEBUG -  i is 1, total is 0
+## 2022-11-15 20:16:25,183 -  DEBUG -  i is 2, total is 0
+## 2022-11-15 20:16:25,183 -  DEBUG -  i is 3, total is 0
+## 2022-11-15 20:16:25,183 -  DEBUG -  i is 4, total is 0
+## 2022-11-15 20:16:25,183 -  DEBUG -  i is 5, total is 0
+## 2022-11-15 20:16:25,183 -  DEBUG -  End of factorial(5%)
 \end{verbatim}
 
 \begin{Shaded}
@@ -864,7 +874,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-15 13:53:11,267 -  DEBUG -  End of program
+## 2022-11-15 20:16:25,189 -  DEBUG -  End of program
 \end{verbatim}
 \end{frame}
 
@@ -885,7 +895,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-15 13:53:11,523 -  DEBUG -  Start of program
+## 2022-11-15 20:16:25,389 -  DEBUG -  Start of program
 \end{verbatim}
 
 \begin{Shaded}
@@ -904,7 +914,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-15 13:53:11,534 -  DEBUG -  Call of the function
+## 2022-11-15 20:16:25,400 -  DEBUG -  Call of the function
 \end{verbatim}
 
 \begin{Shaded}
@@ -916,13 +926,13 @@
 \begin{verbatim}
 ## 120
 ## 
-## 2022-11-15 13:53:11,540 -  DEBUG -  Start of factorial(5%)
-## 2022-11-15 13:53:11,540 -  DEBUG -  i is 1, total is 1
-## 2022-11-15 13:53:11,540 -  DEBUG -  i is 2, total is 2
-## 2022-11-15 13:53:11,540 -  DEBUG -  i is 3, total is 6
-## 2022-11-15 13:53:11,540 -  DEBUG -  i is 4, total is 24
-## 2022-11-15 13:53:11,540 -  DEBUG -  i is 5, total is 120
-## 2022-11-15 13:53:11,540 -  DEBUG -  End of factorial(5%)
+## 2022-11-15 20:16:25,406 -  DEBUG -  Start of factorial(5%)
+## 2022-11-15 20:16:25,406 -  DEBUG -  i is 1, total is 1
+## 2022-11-15 20:16:25,406 -  DEBUG -  i is 2, total is 2
+## 2022-11-15 20:16:25,406 -  DEBUG -  i is 3, total is 6
+## 2022-11-15 20:16:25,406 -  DEBUG -  i is 4, total is 24
+## 2022-11-15 20:16:25,406 -  DEBUG -  i is 5, total is 120
+## 2022-11-15 20:16:25,406 -  DEBUG -  End of factorial(5%)
 \end{verbatim}
 
 \begin{Shaded}
@@ -932,7 +942,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-15 13:53:11,546 -  DEBUG -  End of program
+## 2022-11-15 20:16:25,411 -  DEBUG -  End of program
 \end{verbatim}
 \end{frame}
 
@@ -972,17 +982,26 @@
 
 \begin{frame}[fragile]{Logging 6/7}
 \protect\hypertarget{logging-67}{}
-\begin{itemize}
+\begin{itemize}[<+->]
+\tightlist
 \item
   Logging can be very useful to inspect systematically your program
   execution
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
 \item
   It needs some time to adapt to it but it's very practical and
   customizable at need
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
 \item
   Why is it better than print ?
 
-  \begin{itemize}
+  \begin{itemize}[<+->]
   \tightlist
   \item
     print function can be non debugging feature so make the difference
@@ -993,6 +1012,7 @@
   \end{itemize}
 \end{itemize}
 
+\begin{quote}
 \begin{Shaded}
 \begin{Highlighting}[]
 \ImportTok{import}\NormalTok{ logging}
@@ -1023,39 +1043,61 @@
 \NormalTok{logging.debug(}\StringTok{\textquotesingle{}End of program\textquotesingle{}}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
+\end{quote}
 \end{frame}
 
 \begin{frame}{Logging 7/7}
 \protect\hypertarget{logging-77}{}
 \begin{itemize}
 \item
-  Logging is very useful for debugging on the long run
+  Logging is very useful for debugging without interrupting the
+  execution
 \item
-  To keep a track of variable of interest in a long program
+  For example when your program doesn't crash but doesn't exactly what
+  you want
 \item
-  Debugging even post mortem
+  Debugging even post mortem (after execution)
 \item
-  It is especially efficient when you can have access to the terminal
-  (i,e when you program experiment with visual stimuli)
+  It is especially efficient when you can not have access to the
+  terminal (i,e when you program experiment with visual stimuli)
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Python debugger: PDB 1/}
-\protect\hypertarget{python-debugger-pdb-1}{}
+\begin{frame}[fragile]{Python debugger: PDB 1/4}
+\protect\hypertarget{python-debugger-pdb-14}{}
 \begin{itemize}
 \item
   The ultimate debugging tool is the \textbf{pdb} module:
   \url{https://docs.python.org/3/library/pdb.html}
 \item
+  You just need to \textbf{import pdb} and call
+  \textbf{pdb.set\_trace()}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ pdb}
+
+\KeywordTok{def}\NormalTok{ addition(a, b):}
+\NormalTok{    answer }\OperatorTok{=}\NormalTok{ a }\OperatorTok{*}\NormalTok{ b}
+    \ControlFlowTok{return}\NormalTok{ answer}
+
+\NormalTok{pdb.set\_trace()}
+\NormalTok{x }\OperatorTok{=} \BuiltInTok{input}\NormalTok{(}\StringTok{"Enter first number : "}\NormalTok{)}
+\NormalTok{y }\OperatorTok{=} \BuiltInTok{input}\NormalTok{(}\StringTok{"Enter second number : "}\NormalTok{)}
+\BuiltInTok{sum} \OperatorTok{=}\NormalTok{ addition(x, y)}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{sum}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\item
   When executing your program with the module \textbf{pdb} you have a
   screen like that
 \end{itemize}
 
-\includegraphics{/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB.png}
+\includegraphics[width=0.5\textwidth,height=\textheight]{/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB.png}
 \end{frame}
 
-\begin{frame}[fragile]{Python debugger: PDB 2/}
-\protect\hypertarget{python-debugger-pdb-2}{}
+\begin{frame}{Python debugger: PDB 2/4}
+\protect\hypertarget{python-debugger-pdb-24}{}
 \begin{itemize}
 \item
   It is a command line tool that go sequentially at every step of the
@@ -1078,29 +1120,13 @@
   \item
     \textbf{whatis} Check the type of variable
   \end{itemize}
-\item
-  Example:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ImportTok{import}\NormalTok{ pdb}
-
-\KeywordTok{def}\NormalTok{ addition(a, b):}
-\NormalTok{    answer }\OperatorTok{=}\NormalTok{ a }\OperatorTok{*}\NormalTok{ b}
-    \ControlFlowTok{return}\NormalTok{ answer}
-
-\NormalTok{pdb.set\_trace()}
-\NormalTok{x }\OperatorTok{=} \BuiltInTok{input}\NormalTok{(}\StringTok{"Enter first number : "}\NormalTok{)}
-\NormalTok{y }\OperatorTok{=} \BuiltInTok{input}\NormalTok{(}\StringTok{"Enter second number : "}\NormalTok{)}
-\BuiltInTok{sum} \OperatorTok{=}\NormalTok{ addition(x, y)}
-\BuiltInTok{print}\NormalTok{(}\BuiltInTok{sum}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
 \end{itemize}
+
+\includegraphics{/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_step.png}
 \end{frame}
 
-\begin{frame}{Python debugger: PDB 3/}
-\protect\hypertarget{python-debugger-pdb-3}{}
+\begin{frame}{Python debugger: PDB 3/4}
+\protect\hypertarget{python-debugger-pdb-34}{}
 \begin{itemize}
 \tightlist
 \item
@@ -1131,11 +1157,28 @@
   \item
     \textbf{d} (down)
   \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Python debugger: PDB 4/4}
+\protect\hypertarget{python-debugger-pdb-44}{}
+\begin{itemize}
 \item
   You can also set a breakpoint at a specific point in the script
 \item
-  \includegraphics{/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_break.png}
+  To do that you need to write on the terminal: \textbf{break filename:
+  lineno, condition}
 \end{itemize}
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_break.png}
+
+\begin{itemize}
+\tightlist
+\item
+  You can then use \textbf{c} to run the program until your breakpoint
+\end{itemize}
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_break2.png}
 \end{frame}
 
 \end{document}
