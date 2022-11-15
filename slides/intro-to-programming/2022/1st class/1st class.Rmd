@@ -454,6 +454,25 @@ Program flow 4/4
 
 - Look at the program flow to see how it jumps from one code section to another
 
+
+Clarification on for loops
+========================================================
+  - A **for** loop is used used to iterate over the elements of a sequence (such as a string, tuple, set, list or dictionnary) or other iterable object:
+  
+  - It differs from other **for** keyword in other programming languages and works more like an iterator.
+  ```{python, echo=TRUE}
+  list1 = [1,2,3,0]
+  for x in list1:
+    print(x)
+  ```
+  - It is almost similar to (which is much closer to the "traditional" for in programming)
+  ```{python, echo=TRUE}
+  list2 = [1,2,3,0]
+  for x in range(0,len(list2)):
+    print(list2[x])
+  ```
+
+
 Exercises
 ========================================================
 

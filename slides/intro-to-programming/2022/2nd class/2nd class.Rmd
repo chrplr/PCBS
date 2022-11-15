@@ -172,6 +172,59 @@ While loop 3/3
 >       i += 2
 >     ```
 
+Warning on while loop
+========================================================
+
+  - A **While** loop cannot directly iterate over the elements of a sequence like the **for** loop
+  ```{python, echo=TRUE, eval=FALSE}
+  list1 = [1,2,3,0]
+  while x in list1:
+    print(x)
+  ```
+  NameError: name 'x' is not defined 
+
+
+Breaking a loop 1/2
+========================================================
+
+- Breaking a loop is possible using **break**. For example when the rest of a loop is useless
+```{python break, echo =TRUE}
+# Checking if a number is primitive
+N = 72239
+for i in range(2, 300):
+  if N % i == 0:
+    print(i)
+    break 
+```
+
+- Other example
+```{python break2, echo =TRUE, eval=FALSE}
+# Checking a password
+passwd = 'sesame'
+
+while True:
+  code = input('Password? ')
+  if code == passwd:
+    break
+  else:
+    print('invalid password')
+
+print("You are in!")
+```
+
+
+Breaking a loop 2/2
+========================================================
+
+- The keyword **continue** is also very useful to pass the current iteration
+
+```{python continue, echo =TRUE}
+for i in range(0,5):
+  if i == 3:
+    continue
+  else:
+    print(i)
+```
 
 
 Lists 1/3
