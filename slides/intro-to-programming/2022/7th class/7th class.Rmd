@@ -1,5 +1,5 @@
 ---
-title: "7th class"
+title: "Intro to programming 7"
 author: |
   | Henri Vandendriessche
   | henri.vandendriessche@ens.fr

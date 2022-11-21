@@ -1,0 +1,58 @@
+---
+title: "Intro to programming 9"
+author: |
+  | Henri Vandendriessche
+  | henri.vandendriessche@ens.fr
+date: "2022-11-22"
+output:
+  beamer_presentation:
+    theme: CambridgeUS
+    keep_tex: true
+header-includes:
+  - \let\verbatim\undefined
+  - \let\verbatimend\undefined
+  - \usepackage{listings}
+  - \lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+fontsize: 8pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Exercise 1
+========================================================
+
+- Write a program that asks for the first name, last name, age and date of birth of a user. Then create one or several functions that perform input validation 
+
+- Check that the age is a valid number, 
+
+- Check that the first name and last name are only letters
+
+- Check that the date of birth is in the valid format dd/mm/yyy and is coherent with the their age
+
+- Otherwise, ask again the invalid data
+
+
+Exercise 2 
+========================================================
+
+- Write a Python program to create a Caesar cipher https://en.wikipedia.org/wiki/Caesar_cipher. With one function to read the text file, one to encrypt the text with a shift and one to decrypt the text using the same shift.
+
+
+Exercise 3 
+========================================================
+
+- Write a program that compares two strings or texts and checks 1- the percentage of closeness according to letters 2- the percentage of closeness to words
+
+
+Exercise 4
+========================================================
+
+- Write a program that try to perform a Brute-force attack:
+- using these characters abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.+!:;?,
+- Ask the user a password (1 - 15 character)
+- Then write a program that try every possible combination of a a set of character
+
+
