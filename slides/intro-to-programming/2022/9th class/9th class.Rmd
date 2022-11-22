@@ -21,6 +21,62 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+
+Exercise on pdb 1/4
+========================================================
+
+- Use my exercise correction from last week on the cameras and:
+  + 1 execute line by line the program using pdb
+  + 2 print argument(s) of all function and check its type
+  + 3 set breakpoints right before every return statement of a function
+
+
+Exercise on pdb 2/4
+========================================================
+
+- Use my exercise correction from last week on the cameras and:
+  + 1 log every argument/parameter sent to a function
+  + 2 log every variable in a return statement
+  
+  
+Exercise on pdb 3/4
+======================================================== 
+
+  - Debug the following adding program:
+```{python, echo=TRUE,eval=FALSE}
+print('Enter the first number to add:')
+first = input()
+print('Enter the second number to add:')
+second = input()
+print('Enter the third number to add:')
+third = input()
+print('The sum is ' + first + second + third)
+```
+
+
+Exercise on pdb 4/4
+======================================================== 
+
+- Debug the following coin toss program:
+```{python, echo=TRUE,eval=TRUE,eval=FALSE}
+import random
+guess = ''
+while guess not in ('heads', 'tails'):
+    print('Guess the coin toss! Enter heads or tails:')
+    guess = input()
+toss = random.randint(0, 1) # 0 is tails, 1 is heads
+if toss == guess:
+    print('You got it!')
+else:
+    print('Nope! Guess again!')
+    guesss = input()
+    if toss == guess:
+        print('You got it!')
+    else:
+        print('Nope. You are really bad at this game.')
+```
+
+
 Exercise 1
 ========================================================
 
