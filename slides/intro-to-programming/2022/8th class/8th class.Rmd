@@ -476,7 +476,9 @@ Python debugger: PDB 1/4
 
 - When executing your program with the module **pdb** you have a screen like that
 
-![](/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB.png){width=50%}
+
+![](/home/dbhenri/Documents/Cours python/PCBS/slides/intro-to-programming/2022/8th class/screenPDB.png){width=50%}
+
 
 
 Python debugger: PDB 2/4
@@ -491,7 +493,7 @@ Python debugger: PDB 2/4
   + **step**	Step into functions called at the current line
   + **whatis** Check the type of variable
   
-![](/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_step.png)
+![](/home/dbhenri/Documents/Cours python/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_step.png)
   
 Python debugger: PDB 3/4
 ========================================================
@@ -516,10 +518,10 @@ Python debugger: PDB 4/4
 
 - To do that you need to write on the terminal: **break filename: lineno, condition**
 
-![](/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_break.png){width=50%}
+![](/home/dbhenri/Documents/Cours python/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_break.png){width=50%}
 
 - You can then use **c** to run the program until your breakpoint
 
-![](/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_break2.png){width=50%}
+![](/home/dbhenri/Documents/Cours python/PCBS/slides/intro-to-programming/2022/8th class/screenPDB_break2.png){width=50%}
 
 
