@@ -94,13 +94,16 @@ Exercise 1
 Exercise 2 
 ========================================================
 
-- Write a Python program to create a Caesar cipher https://en.wikipedia.org/wiki/Caesar_cipher. With one function to read the text file, one to encrypt the text with a shift and one to decrypt the text using the same shift.
-
+- Write a Python program to create a Caesar cipher https://en.wikipedia.org/wiki/Caesar_cipher. 
+- With one function to encrypt the text with a shift 
+- And one to decrypt the text using the same shift.
+- The program should consider uppercase and lower case
+- Hint: check the function ord()
 
 Exercise 3 
 ========================================================
 
-- Write a program that compares two strings or texts and checks 1- the percentage of closeness according to letters 2- the percentage of closeness to words
+- Write a program that compares two strings or texts and checks 1- the percentage of similar letters 2- the percentage of similar words
 
 
 Exercise 4
@@ -110,5 +113,6 @@ Exercise 4
 - using these characters "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.+!:;?,"
 - Ask the user a password (1 - 15 character)
 - Then write a program that try every possible combination of a a set of character
+- Hint: check itertools module
 
 
