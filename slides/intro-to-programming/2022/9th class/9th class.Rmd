@@ -107,7 +107,7 @@ Exercise 4
 ========================================================
 
 - Write a program that try to perform a Brute-force attack:
-- using these characters abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.+!:;?,
+- using these characters "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.+!:;?,"
 - Ask the user a password (1 - 15 character)
 - Then write a program that try every possible combination of a a set of character
 
