@@ -79,33 +79,32 @@ def numberOfCameraInArr(doc,arr):
 
 
 
-with open('2018-11-14-liste-cameras-pvpp-sur-paris-site-internet.csv', 'r', encoding="utf-8",) as MyTestFile:
-	text = MyTestFile.readlines()[1:]
-	
-	print("Number of camera in paris in November 2018:")
-	num = numberCam(text)
-	print(num)
+if __name__ == "__main__":
 
-	print("\nPrint all information about cameras in the 5th arrondissement:")
-	resultNumCarArr = numberOfCameraInArr(text,5)
-	print(resultNumCarArr)
+	with open('2018-11-14-liste-cameras-pvpp-sur-paris-site-internet.csv', 'r', encoding="utf-8",) as MyTestFile:
+		text = MyTestFile.readlines()[1:]
+		
+		print("Number of camera in paris in November 2018:")
+		num = numberCam(text)
+		print(num)
 
-	print("\nNumber of cameras in each arrondissement:")
-	arr = camPerArrondissement(text)
-	print(arr)
+		print("\nPrint all information about cameras in the 5th arrondissement:")
+		resultNumCarArr = numberOfCameraInArr(text,5)
+		print(resultNumCarArr)
 
-	print("\nArrondissement with the highest number of camera:")
-	[max_cam_arr, max_cam] = mostCamArr(arr)
-	print(max_cam_arr, max_cam)
+		print("\nNumber of cameras in each arrondissement:")
+		arr = camPerArrondissement(text)
+		print(arr)
 
-	print("\nDate of fisrt camera installed in paris:")
-	dict_num_date = numberCamAndDate(text)
-	
-	[numero_first_camera,date_first_camera] = firstInstalledCam(dict_num_date)
-	print(date_first_camera)
+		print("\nArrondissement with the highest number of camera:")
+		[max_cam_arr, max_cam] = mostCamArr(arr)
+		print(max_cam_arr, max_cam)
 
+		print("\nDate of fisrt camera installed in paris:")
+		dict_num_date = numberCamAndDate(text)
+		[numero_first_camera,date_first_camera] = firstInstalledCam(dict_num_date)
+		print(date_first_camera)
 
-	print("\nNumber of all the camera installed the first date:")
-	list_num_for_date = number0fCameraForDate(date_first_camera)
-	print(list_num_for_date)
-
+		print("\nNumber of all the camera installed the first date:")
+		list_num_for_date = number0fCameraForDate(date_first_camera)
+		print(list_num_for_date)
