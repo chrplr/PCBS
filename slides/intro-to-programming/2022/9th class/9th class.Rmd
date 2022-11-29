@@ -31,7 +31,7 @@ Exercise on pdb 1/4
   + 3 set breakpoints right before every return statement of a function
 
 
-Exercise on pdb 2/4
+Exercise on logging 2/4
 ========================================================
 
 - Use my exercise correction from last week on the cameras and:
@@ -99,14 +99,17 @@ Exercise 2
 - The program should consider uppercase and lower case
 - Hint: check the function ord(), char() and unicode table.
 
+
 Exercise 3 
 ========================================================
 
 - Write a program that try to perform a Brute-force attack:
-- using these characters "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_.+!:;?,"
-- Ask the user a password (1 - 15 character)
-- Then write a program that try every possible combination of a a set of character
+- using these collection of characters: first "abcdefghijklmnopqrstuvwxyz" then "abcdefghijklmnopqrstuvwxyz1234567890" and finally "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890,;:!?./§%*+="
+- Ask the user a password (1 - 6 character)
+- Then write a program that try every possible combination of our set of character with all possible length (from 1 to 5)
 - Record and print the time to find the solution
+- Write at every step the number length you are testing and time taken so far.
+- To continue, calulate the number of combination according to the length of the password and the collection of character selected.
 - Hint: check itertools module
 
 
