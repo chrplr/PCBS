@@ -826,18 +826,18 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-22 09:15:59,521 -  DEBUG -  Start of program
+## 2022-11-29 15:41:06,740 -  DEBUG -  Start of program
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{def}\NormalTok{ factorial(n):}
-\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}Start of factorial(}\SpecialCharTok{\%s\%\%}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}Start of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
 \NormalTok{    total }\OperatorTok{=} \DecValTok{1}
     \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(n }\OperatorTok{+} \DecValTok{1}\NormalTok{):}
 \NormalTok{        total }\OperatorTok{*=}\NormalTok{ i}
 \NormalTok{        logging.debug(}\StringTok{\textquotesingle{}i is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(i) }\OperatorTok{+} \StringTok{\textquotesingle{}, total is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(total))}
-\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}End of factorial(}\SpecialCharTok{\%s\%\%}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}End of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
     \ControlFlowTok{return}\NormalTok{ total}
 
 \NormalTok{logging.debug(}\StringTok{\textquotesingle{}Call of the function\textquotesingle{}}\NormalTok{)}
@@ -845,7 +845,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-22 09:15:59,529 -  DEBUG -  Call of the function
+## 2022-11-29 15:41:06,747 -  DEBUG -  Call of the function
 \end{verbatim}
 
 \begin{Shaded}
@@ -857,14 +857,14 @@
 \begin{verbatim}
 ## 0
 ## 
-## 2022-11-22 09:15:59,534 -  DEBUG -  Start of factorial(5%)
-## 2022-11-22 09:15:59,534 -  DEBUG -  i is 0, total is 0
-## 2022-11-22 09:15:59,534 -  DEBUG -  i is 1, total is 0
-## 2022-11-22 09:15:59,534 -  DEBUG -  i is 2, total is 0
-## 2022-11-22 09:15:59,534 -  DEBUG -  i is 3, total is 0
-## 2022-11-22 09:15:59,534 -  DEBUG -  i is 4, total is 0
-## 2022-11-22 09:15:59,534 -  DEBUG -  i is 5, total is 0
-## 2022-11-22 09:15:59,534 -  DEBUG -  End of factorial(5%)
+## 2022-11-29 15:41:06,751 -  DEBUG -  Start of factorial(5)
+## 2022-11-29 15:41:06,751 -  DEBUG -  i is 0, total is 0
+## 2022-11-29 15:41:06,751 -  DEBUG -  i is 1, total is 0
+## 2022-11-29 15:41:06,751 -  DEBUG -  i is 2, total is 0
+## 2022-11-29 15:41:06,751 -  DEBUG -  i is 3, total is 0
+## 2022-11-29 15:41:06,751 -  DEBUG -  i is 4, total is 0
+## 2022-11-29 15:41:06,751 -  DEBUG -  i is 5, total is 0
+## 2022-11-29 15:41:06,751 -  DEBUG -  End of factorial(5)
 \end{verbatim}
 
 \begin{Shaded}
@@ -874,7 +874,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-22 09:15:59,538 -  DEBUG -  End of program
+## 2022-11-29 15:41:06,754 -  DEBUG -  End of program
 \end{verbatim}
 \end{frame}
 
@@ -895,18 +895,18 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-22 09:15:59,717 -  DEBUG -  Start of program
+## 2022-11-29 15:41:06,917 -  DEBUG -  Start of program
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{def}\NormalTok{ factorial(n):}
-\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}Start of factorial(}\SpecialCharTok{\%s\%\%}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}Start of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
 \NormalTok{    total }\OperatorTok{=} \DecValTok{1}
     \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{,n }\OperatorTok{+} \DecValTok{1}\NormalTok{):}
 \NormalTok{        total }\OperatorTok{*=}\NormalTok{ i}
 \NormalTok{        logging.debug(}\StringTok{\textquotesingle{}i is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(i) }\OperatorTok{+} \StringTok{\textquotesingle{}, total is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(total))}
-\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}End of factorial(}\SpecialCharTok{\%s\%\%}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}End of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
     \ControlFlowTok{return}\NormalTok{ total}
 
 \NormalTok{logging.debug(}\StringTok{\textquotesingle{}Call of the function\textquotesingle{}}\NormalTok{)}
@@ -914,7 +914,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-22 09:15:59,725 -  DEBUG -  Call of the function
+## 2022-11-29 15:41:06,929 -  DEBUG -  Call of the function
 \end{verbatim}
 
 \begin{Shaded}
@@ -926,13 +926,13 @@
 \begin{verbatim}
 ## 120
 ## 
-## 2022-11-22 09:15:59,729 -  DEBUG -  Start of factorial(5%)
-## 2022-11-22 09:15:59,729 -  DEBUG -  i is 1, total is 1
-## 2022-11-22 09:15:59,729 -  DEBUG -  i is 2, total is 2
-## 2022-11-22 09:15:59,729 -  DEBUG -  i is 3, total is 6
-## 2022-11-22 09:15:59,729 -  DEBUG -  i is 4, total is 24
-## 2022-11-22 09:15:59,729 -  DEBUG -  i is 5, total is 120
-## 2022-11-22 09:15:59,729 -  DEBUG -  End of factorial(5%)
+## 2022-11-29 15:41:06,933 -  DEBUG -  Start of factorial(5)
+## 2022-11-29 15:41:06,933 -  DEBUG -  i is 1, total is 1
+## 2022-11-29 15:41:06,933 -  DEBUG -  i is 2, total is 2
+## 2022-11-29 15:41:06,933 -  DEBUG -  i is 3, total is 6
+## 2022-11-29 15:41:06,933 -  DEBUG -  i is 4, total is 24
+## 2022-11-29 15:41:06,933 -  DEBUG -  i is 5, total is 120
+## 2022-11-29 15:41:06,933 -  DEBUG -  End of factorial(5)
 \end{verbatim}
 
 \begin{Shaded}
@@ -942,7 +942,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2022-11-22 09:15:59,733 -  DEBUG -  End of program
+## 2022-11-29 15:41:06,937 -  DEBUG -  End of program
 \end{verbatim}
 \end{frame}
 
@@ -1021,12 +1021,12 @@
 \NormalTok{logging.debug(}\StringTok{\textquotesingle{}Start of program\textquotesingle{}}\NormalTok{)}
 
 \KeywordTok{def}\NormalTok{ factorial(n):}
-\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}Start of factorial(}\SpecialCharTok{\%s\%\%}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}Start of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
 \NormalTok{    total }\OperatorTok{=} \DecValTok{1}
     \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{,n }\OperatorTok{+} \DecValTok{1}\NormalTok{):}
 \NormalTok{        total }\OperatorTok{*=}\NormalTok{ i}
 \NormalTok{        logging.debug(}\StringTok{\textquotesingle{}i is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(i) }\OperatorTok{+} \StringTok{\textquotesingle{}, total is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(total))}
-\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}End of factorial(}\SpecialCharTok{\%s\%\%}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}End of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
     \ControlFlowTok{return}\NormalTok{ total}
 
 \NormalTok{logging.debug(}\StringTok{\textquotesingle{}Call of the function\textquotesingle{}}\NormalTok{)}
