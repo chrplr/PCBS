@@ -3,7 +3,7 @@ title: "Intro to programming 9"
 author: |
   | Henri Vandendriessche
   | henri.vandendriessche@ens.fr
-date: "2022-11-22"
+date: "2022-11-29"
 output:
   beamer_presentation:
     theme: CambridgeUS
@@ -95,18 +95,11 @@ Exercise 2
 ========================================================
 
 - Write a Python program to create a Caesar cipher https://en.wikipedia.org/wiki/Caesar_cipher. 
-- With one function to encrypt the text with a shift 
-- And one to decrypt the text using the same shift.
+- With one function to encrypt and decrypt the text with a shift. Positive shift for encryption and negative shift for decryption.
 - The program should consider uppercase and lower case
-- Hint: check the function ord()
+- Hint: check the function ord(), char() and unicode table.
 
 Exercise 3 
-========================================================
-
-- Write a program that compares two strings or texts and checks 1- the percentage of similar letters 2- the percentage of similar words
-
-
-Exercise 4
 ========================================================
 
 - Write a program that try to perform a Brute-force attack:
