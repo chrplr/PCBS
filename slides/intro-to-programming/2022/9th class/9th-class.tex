@@ -137,7 +137,7 @@
 \title{Intro to programming 9}
 \author{Henri Vandendriessche\\
 \href{mailto:henri.vandendriessche@ens.fr}{\nolinkurl{henri.vandendriessche@ens.fr}}}
-\date{2022-11-22}
+\date{2022-11-29}
 
 \begin{document}
 \frame{\titlepage}
@@ -161,8 +161,8 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Exercise on pdb 2/4}
-\protect\hypertarget{exercise-on-pdb-24}{}
+\begin{frame}{Exercise on logging 2/4}
+\protect\hypertarget{exercise-on-logging-24}{}
 \begin{itemize}
 \tightlist
 \item
@@ -253,9 +253,14 @@
 \tightlist
 \item
   Write a Python program to create a Caesar cipher
-  \url{https://en.wikipedia.org/wiki/Caesar_cipher}. With one function
-  to read the text file, one to encrypt the text with a shift and one to
-  decrypt the text using the same shift.
+  \url{https://en.wikipedia.org/wiki/Caesar_cipher}.
+\item
+  With one function to encrypt and decrypt the text with a shift.
+  Positive shift for encryption and negative shift for decryption.
+\item
+  The program should consider uppercase and lower case
+\item
+  Hint: check the function ord(), char() and unicode table.
 \end{itemize}
 \end{frame}
 
@@ -264,27 +269,27 @@
 \begin{itemize}
 \tightlist
 \item
-  Write a program that compares two strings or texts and checks 1- the
-  percentage of closeness according to letters 2- the percentage of
-  closeness to words
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Exercise 4}
-\protect\hypertarget{exercise-4}{}
-\begin{itemize}
-\tightlist
-\item
   Write a program that try to perform a Brute-force attack:
 \item
-  using these characters
-  **``abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-\_.+!:;?,''
-  **
+  using these collection of characters: first
+  ``abcdefghijklmnopqrstuvwxyz'' then
+  ``abcdefghijklmnopqrstuvwxyz1234567890'' and finally
+  ``abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890,;:!?./§\%*+=''
 \item
-  Ask the user a password (1 - 15 character)
+  Ask the user a password (1 - 6 character)
 \item
-  Then write a program that try every possible combination of a a set of
-  character
+  Then write a program that try every possible combination of our set of
+  character with all possible length (from 1 to 5)
+\item
+  Record and print the time to find the solution
+\item
+  Write at every step the number length you are testing and time taken
+  so far.
+\item
+  To continue, calculate the number of combination according to the
+  length of the password and the collection of character selected.
+\item
+  Hint: check itertools module
 \end{itemize}
 \end{frame}
 
