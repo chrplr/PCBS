@@ -109,7 +109,7 @@ Exercise 3
 - Then write a program that try every possible combination of our set of character with all possible length (from 1 to 5)
 - Record and print the time to find the solution
 - Write at every step the number length you are testing and time taken so far.
-- To continue, calulate the number of combination according to the length of the password and the collection of character selected.
+- To continue, calculate the number of combination according to the length of the password and the collection of character selected.
 - Hint: check itertools module
 
 
