@@ -1,0 +1,296 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  8pt,
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usetheme[]{CambridgeUS}
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\let\verbatim\undefined
+\let\verbatimend\undefined
+\usepackage{listings}
+\lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Intro to programming 9},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Intro to programming 9}
+\author{Henri Vandendriessche\\
+\href{mailto:henri.vandendriessche@ens.fr}{\nolinkurl{henri.vandendriessche@ens.fr}}}
+\date{2022-11-29}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Exercise on pdb 1/4}
+\protect\hypertarget{exercise-on-pdb-14}{}
+\begin{itemize}
+\tightlist
+\item
+  Use my exercise correction from last week on the cameras and:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    1 execute line by line the program using pdb
+  \item
+    2 print argument(s) of all function and check its type
+  \item
+    3 set breakpoints right before every return statement of a function
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise on logging 2/4}
+\protect\hypertarget{exercise-on-logging-24}{}
+\begin{itemize}
+\tightlist
+\item
+  Use my exercise correction from last week on the cameras and:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    1 log every argument/parameter sent to a function
+  \item
+    2 log every variable in a return statement
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Exercise on pdb 3/4}
+\protect\hypertarget{exercise-on-pdb-34}{}
+\begin{itemize}
+\tightlist
+\item
+  Debug the following adding program:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Enter the first number to add:\textquotesingle{}}\NormalTok{)}
+\NormalTok{first }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Enter the second number to add:\textquotesingle{}}\NormalTok{)}
+\NormalTok{second }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Enter the third number to add:\textquotesingle{}}\NormalTok{)}
+\NormalTok{third }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}The sum is \textquotesingle{}} \OperatorTok{+}\NormalTok{ first }\OperatorTok{+}\NormalTok{ second }\OperatorTok{+}\NormalTok{ third)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Exercise on pdb 4/4}
+\protect\hypertarget{exercise-on-pdb-44}{}
+\begin{itemize}
+\tightlist
+\item
+  Debug the following coin toss program:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ random}
+\NormalTok{guess }\OperatorTok{=} \StringTok{\textquotesingle{}\textquotesingle{}}
+\ControlFlowTok{while}\NormalTok{ guess }\KeywordTok{not} \KeywordTok{in}\NormalTok{ (}\StringTok{\textquotesingle{}heads\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}tails\textquotesingle{}}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Guess the coin toss! Enter heads or tails:\textquotesingle{}}\NormalTok{)}
+\NormalTok{    guess }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\NormalTok{toss }\OperatorTok{=}\NormalTok{ random.randint(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{) }\CommentTok{\# 0 is tails, 1 is heads}
+\ControlFlowTok{if}\NormalTok{ toss }\OperatorTok{==}\NormalTok{ guess:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}You got it!\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Nope! Guess again!\textquotesingle{}}\NormalTok{)}
+\NormalTok{    guesss }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+    \ControlFlowTok{if}\NormalTok{ toss }\OperatorTok{==}\NormalTok{ guess:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}You got it!\textquotesingle{}}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Nope. You are really bad at this game.\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}{Exercise 1}
+\protect\hypertarget{exercise-1}{}
+\begin{itemize}
+\item
+  Write a program that asks for the first name, last name, age and date
+  of birth of a user. Then create one or several functions that perform
+  input validation
+\item
+  Check that the age is a valid number,
+\item
+  Check that the first name and last name are only letters
+\item
+  Check that the date of birth is in the valid format dd/mm/yyy and is
+  coherent with the their age
+\item
+  Otherwise, ask again the invalid data
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 2}
+\protect\hypertarget{exercise-2}{}
+\begin{itemize}
+\tightlist
+\item
+  Write a Python program to create a Caesar cipher
+  \url{https://en.wikipedia.org/wiki/Caesar_cipher}.
+\item
+  With one function to encrypt and decrypt the text with a shift.
+  Positive shift for encryption and negative shift for decryption.
+\item
+  The program should consider uppercase and lower case
+\item
+  Hint: check the function ord(), char() and unicode table.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 3}
+\protect\hypertarget{exercise-3}{}
+\begin{itemize}
+\tightlist
+\item
+  Write a program that try to perform a Brute-force attack:
+\item
+  using these collection of characters: first
+  ``abcdefghijklmnopqrstuvwxyz'' then
+  ``abcdefghijklmnopqrstuvwxyz1234567890'' and finally
+  ``abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890,;:!?./§\%*+=''
+\item
+  Ask the user a password (1 - 6 character)
+\item
+  Then write a program that try every possible combination of our set of
+  character with all possible length (from 1 to 5)
+\item
+  Record and print the time to find the solution
+\item
+  Write at every step the number length you are testing and time taken
+  so far.
+\item
+  To continue, calculate the number of combination according to the
+  length of the password and the collection of character selected.
+\item
+  Hint: check itertools module
+\end{itemize}
+\end{frame}
+
+\end{document}

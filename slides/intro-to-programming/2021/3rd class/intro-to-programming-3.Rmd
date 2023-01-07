@@ -56,13 +56,13 @@ So far
 Today
 ========================================================
 
-- Exercices from last times
+- Exercises from last times
 
 - Functions:
   + Pure functions
   + Procedures
 
-- Excercices
+- Exercises
     
 
 
