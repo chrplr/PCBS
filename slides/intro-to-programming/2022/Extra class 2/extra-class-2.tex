@@ -75,6 +75,19 @@
 \makeatother
 \usepackage{xcolor}
 \newif\ifbibliography
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -137,6 +150,11 @@ coding
   Get the evolution of one crime over all boroughs over all the time
   periods
 \end{itemize}
+\end{frame}
+
+\begin{frame}{London Boroughs}
+\protect\hypertarget{london-boroughs}{}
+\includegraphics{london-boroughs-700x604.jpg}
 \end{frame}
 
 \end{document}

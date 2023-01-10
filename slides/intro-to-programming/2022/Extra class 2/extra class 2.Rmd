@@ -42,3 +42,9 @@ Make sure to use functions whenever it's possible and avoid redundant coding
 - Get the names of all boroughs in a appropriate data collection type.
 
 - Get the evolution of one crime over all boroughs over all the time periods
+
+
+London Boroughs
+========================================================
+
+![](london-boroughs-700x604.jpg)
