@@ -21,8 +21,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+Exercise on logging
+========================================================
 
-Exercise on pdb 1/4
+- Use my exercise correction from last week on the cameras and:
+  + 1 log every argument/parameter sent to a function
+  + 2 log every variable in a return statement
+
+
+Exercise on pdb 1/3
 ========================================================
 
 - Use my exercise correction from last week on the cameras and:
@@ -30,16 +37,9 @@ Exercise on pdb 1/4
   + 2 print argument(s) of all function and check its type
   + 3 set breakpoints right before every return statement of a function
 
-
-Exercise on logging 2/4
-========================================================
-
-- Use my exercise correction from last week on the cameras and:
-  + 1 log every argument/parameter sent to a function
-  + 2 log every variable in a return statement
   
   
-Exercise on pdb 3/4
+Exercise on pdb 2/3
 ======================================================== 
 
   - Debug the following adding program:
@@ -54,7 +54,7 @@ print('The sum is ' + first + second + third)
 ```
 
 
-Exercise on pdb 4/4
+Exercise on pdb 3/3
 ======================================================== 
 
 - Debug the following coin toss program:
@@ -109,7 +109,7 @@ Exercise 3
 - Then write a program that try every possible combination of our set of character with all possible length (from 1 to 5)
 - Record and print the time to find the solution
 - Write at every step the number length you are testing and time taken so far.
-- To continue, calculate the number of combination according to the length of the password and the collection of character selected.
+- To continue, calulate the number of combination according to the length of the password and the collection of character selected.
 - Hint: check itertools module
 
 

@@ -1,6 +1,10 @@
 import datetime
 
+logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s -  %(message)s')
+
+
 def camPerArrondissement(text):
+	logging.DEBUG("Beggining of the CamPerArrondissement function " + text)
 	dict_Arrondissements = {}
 	for l in text:
 		#print(l)
