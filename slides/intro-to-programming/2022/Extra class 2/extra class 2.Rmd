@@ -1,0 +1,44 @@
+---
+title: "Extra class 2"
+author: |
+  | Henri Vandendriessche
+  | henri.vandendriessche@ens.fr
+date: "2023-01-10"
+output:
+  beamer_presentation:
+    theme: CambridgeUS
+    keep_tex: true
+header-includes:
+  - \let\verbatim\undefined
+  - \let\verbatimend\undefined
+  - \usepackage{listings}
+  - \lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+fontsize: 8pt
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Coding Exercise
+========================================================
+
+- From https://data.london.gov.uk/dataset/recorded_crime_summary download the first file under Data & resources named “MPS Borough Level Crime (most recent 24 months)”. It contains the types and number of crimes per London borough between November 2020 and October 2022.
+
+Make sure to use functions whenever it's possible and avoid redundant coding
+
+- Get the total number of crimes across all boroughs in the oldest time period
+
+- Get all the months available in dataset
+
+- Get the index of a specific time period (month)
+
+- Get the total number of crimes across all boroughs for a specific month that you asked the user to input.
+
+- Get the evolution of one crime in one borough over all of the time periods.
+
+- Get the names of all boroughs in a appropriate data collection type.
+
+- Get the evolution of one crime over all boroughs over all the time periods
