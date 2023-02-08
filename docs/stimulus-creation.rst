@@ -95,7 +95,7 @@ Exercise (*): make a copy of the script and modify the copy to
    - comment the line `pygame.display.flip()` and run the script.  You should realize that merely drawing something to the display surface (`screen`) doesn't cause it to appear on the screen -- you need to call `pygame.display.flip()` to move the surface from general memory to video memory. This will be useful when you want to make an animation, that is, draw a sequences of images.  
 
 Have a look at:
-   - `Pygame drawing basics <https://www.cs.ucsb.edu/~pconrad/cs5nm/topics/pygame/drawing/>`__
+   - `Pygame drawing basics <https://ryanstutorials.net/pygame-tutorial/pygame-shapes.php>`__
    - `Pygame online documentation <https://www.pygame.org/docs/>`__
 
 
