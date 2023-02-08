@@ -1,28 +1,36 @@
 # Programming Experiments for Psychology and Neuroscience
 
 
-![](images/chris.jpg)
 
-* Christophe Pallier, Researcher @ Neurospin
 
-![](images/maxime_small.jpg)
 
-* Maxime Cauté, PhD student @ Neurospin
+|                                              |                              |
+|----------------------------------------------|------------------------------|
+| Christophe Pallier  <christophe@pallier.org> | ![](images/chris.jpg)        |
+|                                             |                              |
+|                                              |                              |
+| Maxime Cauté <maxime.caute@free.fr>          | ![](images/maxime_small.jpg) |
 
----
 
-**Content**: how to create visual and auditory stimuli, program real-time experiments that record participants responses, perform basic data processing to analyse results... how to use revision control software (git), and clean code methods that promote scientific reproducibility.
-
-**Aim**: to improve your programming skills. This lecture is of interest even for students who are not going to need to program experiments 
 
 ---
 
-**Prerequisites**:
+## What you will learn (hopefully)
 
-- basic knowledge of programming (numbers, strings, lists, variables, loops, conditional, functions) and of Python.
-- having installed the software described in the documentation (Python, pandas, expyriment, git, + an editor)
+-  How to create visual and auditory stimuli, to program real-time experiments that record participants responses, to perform basic data processing to analyse results.
 
-**Programming languages**: mostly Python (+ pygame + expyriment + pandas) and Javascript (jsPsych).
+- How to use revision control software (git), and clean code methods that promote scientific reproducibility (the aim os to improve your programming skills; This lecture is of interest even for students who are not going to need to program experiments)
+
+---
+
+## Prerequisites
+
+- Basic knowledge of programming (numbers, strings, lists, variables, loops, conditional, functions) and of Python.
+- Having installed the software described in the documentation (Python, pandas, expyriment, git, + an editor)
+
+### Programming languages 
+
+Mostly Python (+ pygame + expyriment + pandas) and a bit of Javascript (jsPsych) and R.
 
 ---
 
@@ -30,9 +38,9 @@
 
 **Evaluation**: PASS/FAIL based on:
 
-    * the realisation of a project (each student must provide a running, clean, code, corectly documented on github)
+   * The realisation of a project (each student must provide a running, clean, code, corectly documented on github)
 
-    * Attendance: you must be present at each lecture (it is possible to be absent exceptionnaly, with excuse) and send us your code at the end of each lecture  (in a zip file with you name and the number of the lecture) 
+   * Attendance. We expect you to be present at each lecture (it is possible to be absent exceptionnaly, with excuse) and to send us your code at the end of each lecture  (in a zip file with PCBS_xx_your_name.zip where xx is the number of the lecture) 
 
 ---
 
@@ -43,12 +51,12 @@ Course materials:
 - Code: https://github.com/chrplr/PCBS
 
 
-- discord forum https://discord.gg/dZauP3pb
+- Discord forum https://discord.gg/dZauP3pb
 
 ---
 
 
-# Plan for the lectures
+## Plan for the lectures
 
 1. Creating visual stimuli with Pygame (python)
 
@@ -60,7 +68,7 @@ Course materials:
 
 5. Manipulating sound. Program an audio experiment (python)
 
-6. More on-line exepriments with jsPsych (javascript)
+6. More on-line experiments with jsPsych (javascript)
 
 7. Clean code programming, Introduction to Git, Start of the project.
 
@@ -70,7 +78,7 @@ Course materials:
 ---
 
 
-# Software to run experiments
+## Software to run experiments
 
 Two options:
 
@@ -90,10 +98,23 @@ Two options:
 
 ---
 
-# Menu of the day
+## Menu of the day
 
-## Creating Visual Stimuli with Pygame
+* Check that you can create a python script with an editor and run it from the command line (follow the instructions from section 7.3 of 
+<https://pcbs.readthedocs.io/en/latest/running-python.html>)
 
-Go to chapter [Creating Stimuli](https://pcbs.readthedocs.io/en/latest/stimulus-creation.html#creating-stimuli) of  https://pcbs.readthedocs.io:
 
-(Note: If you do not know how to run Python, check out <https://pcbs.readthedocs.io/en/latest/running-python.html>)
+* Create Visual Stimuli with Pygame
+
+Go to chapter [Creating Stimuli](https://pcbs.readthedocs.io/en/latest/stimulus-creation.html#creating-stimuli) of  <https://pcbs.rtfd.io>
+
+Starting from the `square.py` script, you will program:
+
+1. Troxler effect 
+2. Kanizsa Square
+3. Herman grid
+4. Ebbinghaus-Tichener illusion
+
+
+
+
