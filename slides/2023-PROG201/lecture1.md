@@ -44,17 +44,6 @@ Mostly Python (+ pygame + expyriment + pandas) and a bit of Javascript (jsPsych)
 
 ---
 
-Course materials: 
-
-- Slides: https://github.com/chrplr/PCBS/tree/master/slides/2023-PROG201
-- Book:  https://pcbs.rtfd.io/   
-- Code: https://github.com/chrplr/PCBS
-
-
-- Discord forum https://discord.gg/dZauP3pb
-
----
-
 
 ## Plan for the lectures
 
@@ -74,27 +63,34 @@ Course materials:
 
 8-13 : Project
 
- 
 ---
 
+## Course materials 
 
-## Software to run experiments
+- Slides: <https://github.com/chrplr/PCBS/tree/master/slides/2023-PROG201>
+- Book:  <https://pcbs.rtfd.io/>
+- Code: <https://github.com/chrplr/PCBS>
+- Discord forum: <https://discord.gg/dZauP3pb>
+
+---
+
+## Software to run psych. experiments
 
 Two options:
 
 * run locally: best to control precisely the timing: duration of stimuli, synchronisation with recording equipement (e.g. EEG, MEG).
 
-   1. psychtoolbox (Matlab) 
-   2. psychopy (Python)
-   3. Expyriment (Python)
+    1. psychtoolbox (Matlab) 
+    2. psychopy (Python)
+    3. Expyriment (Python)
 
 
 * run inside an internet browser, allowing to test subjects remotely. 
 
-   1. jsPsych
-   2. PsychoJS
+    1. jsPsych
+    2. PsychoJS
 
-   See e.g. https://pavlovia.org/
+    See e.g. https://pavlovia.org/
 
 ---
 
