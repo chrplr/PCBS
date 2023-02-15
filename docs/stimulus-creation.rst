@@ -96,7 +96,8 @@ Exercise (*): make a copy of the script and modify the copy to
 
 Have a look at:
    - `Pygame drawing basics <https://ryanstutorials.net/pygame-tutorial/pygame-shapes.php>`__
-   - `Pygame online documentation <https://www.pygame.org/docs/>`__
+   - `Pygame tutorial <https://pygame.readthedocs.io/>`__
+   - `Pygame's on-line documentation <https://www.pygame.org/docs/>`__
 
 
 It is of course possible to draw other shapes. Check out for example the two scripts:
@@ -236,7 +237,7 @@ Read about the `Ebbinghaus–Titchener stimulus <http://www.abc-people.com/illus
 Exercise (**): Using :download:`circle.py <../stimuli/visual-illusions/circle.py>` as a starting point, write a program to display a static stimulus (one central circle surrounded by a number of circles). 
 
 
-   Hint: A littel bit of `trigonometry <https://en.wikipedia.org/wiki/Unit_circle>`__ helps:
+   Hint: A little bit of `trigonometry <https://en.wikipedia.org/wiki/Unit_circle>`__ helps:
 
    The coordinates of a location at and at distance ``R`` from the origin and an angle ``alpha`` from the left-right line are::
 

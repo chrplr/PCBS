@@ -53,8 +53,6 @@ From here, we are going to use it to generate experiments.
 
 Make sure you have installed Expyriment_::
 
-.. code-block:: bash
-
    $ python
    >>> import expyriment
 
