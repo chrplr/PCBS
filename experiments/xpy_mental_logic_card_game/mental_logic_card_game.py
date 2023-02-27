@@ -180,7 +180,8 @@ for trial in block.trials:
     t1 = trial.stimuli[1].present(update=True, clear=True)
     if resp is None:
         resp, rt = exp.keyboard.wait_char('qsdn', MAX_RESPONSE_TIME)
-        rt = rt + BACK_DISPLAY_DURATION
+        if rt is not None:
+            rt = rt + BACK_DISPLAY_DURATION
     else:
         exp.clock.wait(500)
 
