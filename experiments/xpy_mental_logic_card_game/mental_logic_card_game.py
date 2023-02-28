@@ -75,7 +75,7 @@ def is_correct(actual_response, expected_response):
 
 
 ################################################################################
-exp = design.Experiment(name="Cards", text_size=20)
+exp = design.Experiment(name="Cards", text_size=30)
 
 control.initialize(exp)
 
@@ -162,7 +162,7 @@ exp.data.add_variable_names(['condition', 'response', 'rt', 'is_correct'])
 
 ######################## Display Instructions ##################################
 
-instructions = stimuli.TextScreen('Instructions', INSTRUCTIONS, text_size=15)
+instructions = stimuli.TextScreen('Instructions', INSTRUCTIONS, text_size=25)
 instructions.present(clear=True, update=True)
 exp.keyboard.wait_char(' ')
 
