@@ -29,6 +29,7 @@ Self-evaluation quizz (do you need to attend PROG101?):
    running-experiments
    lexical-decision
    data-analyses
+   web-based-experiments
    regular_expressions
    simulations          
    hopfield
