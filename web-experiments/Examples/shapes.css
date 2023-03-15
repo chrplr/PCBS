@@ -1,0 +1,14 @@
+.centered {
+  position: absolute;
+  top: 50vh; left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+div {
+  background-color: red;
+  width: 200px; height: 200px;
+}

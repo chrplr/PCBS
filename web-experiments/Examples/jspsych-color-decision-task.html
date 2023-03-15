@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+  <title>Color decision task using JsPsych</title>
+
+    <script src = "../jspsych-7.3.0/jspsych.js"></script>
+    <script src = "../jspsych-7.3.0/plugins/plugin-html-keyboard-response.js"></script>
+    <link href = "../jspsych-7.3.0/css/jspsych.css"
+          rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+  <!-- Helpers -->
+  <script>
+    const JS_PSYCH = initJsPsych({
+      on_finish: function(){JS_PSYCH.data.get().localSave('csv', `data-${ID}.csv`)}
+    });
+
+    const RESPONSE_KEYS = JS_PSYCH.randomization.shuffle(["F", "J"]);
+    const FIRST_COLOR = "red";
+    const SECOND_COLOR = "blue";
+    const SHAPE_SIZE = 200
+
+    const CIRCLE_SHAPE = "circle";
+    const SQUARE_SHAPE = "square";
+    const TRIANGLE_SHAPE = "triangle";
+
+    const ID = JS_PSYCH.randomization.randomID(10)
+    const INSTRUCTIONS = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: `\
+        <p>You are taking a (fake) psychology experiment.</p>\
+        <p>You will see a series of colored shapes. \
+          Some shapes will be <span style="color: ${FIRST_COLOR}">${FIRST_COLOR}</span>, \
+          others will be <span style="color: ${SECOND_COLOR}">${SECOND_COLOR}</span>.</p> \
+        <p>Your task will be to identify the color of the shape:\
+          press <strong>[${RESPONSE_KEYS[0]}]</strong> if the shape is <span style="color: ${FIRST_COLOR}">${FIRST_COLOR}</span>,\
+          press <strong>[${RESPONSE_KEYS[1]}]</strong> if it is <span style="color: ${SECOND_COLOR}">${SECOND_COLOR}</span>.</p>\
+        <p>Your accuracy and reaction time will be measured. \
+          So please stay focused and try to answer as soon as you have the answer!\ <br/>
+          Some trials may be harder than others: do not worry if you make some errors!</p>\
+        <p>Press any key to start the experiment.</p>`,
+      data: {id: ID},
+    };
+
+    const SOUND_INCORRECT = new Audio('../res/sound/correct.wav');
+    const SOUND_CORRECT = new Audio('../res/sound/incorrect.wav');
+
+    function createShapeProperties(shape, shapeSize){
+      let shapeString = shape;
+
+      switch (shape) {
+        case SQUARE_SHAPE:
+          return `rect width="${shapeSize}" height=${shapeSize}`;
+        case CIRCLE_SHAPE:
+          return `circle \
+            cx="${shapeSize / 2}"\
+            cy="${shapeSize / 2}"\
+            r=${shapeSize / 2}`;
+        case TRIANGLE_SHAPE:
+          return `polygon \
+            points="\
+              0 ${shapeSize},\
+              ${shapeSize} ${shapeSize},\
+              ${shapeSize / 2} 0\
+            "`;
+        default:
+          console.error("INVALID SHAPE!");
+          // Not a great solution, but we won't go into errors in this course.
+          return ""
+      }
+    }
+
+    function createTrial(participantID, color, shape, shapeSize){
+      let trial = {
+        type: jsPsychHtmlKeyboardResponse,
+        choices: RESPONSE_KEYS,
+        data: {color: color,
+               shape: shape,
+               shapeSize: shapeSize,
+               id: participantID,
+             },
+        on_finish: function(data){
+            data.responseKey = data.response
+            data.response = JS_PSYCH.pluginAPI.compareKeys(data.response, RESPONSE_KEYS[0]) ?
+              FIRST_COLOR : SECOND_COLOR
+
+            data.response == data.color ? SOUND_INCORRECT.play() : SOUND_CORRECT.play();
+          },
+      };
+
+      let stimulus = '<svg \
+        id = "my-' + shape + '"\
+        style = "\
+          height:' + shapeSize + 'px;\
+          width:' + shapeSize + 'px;\
+          position: absolute; top: 50vh; left: 50vw;\
+          transform: translate(-50%, - 50%)">' +
+          '<' + createShapeProperties(shape, shapeSize) + ' fill="' + color + '"/>' +
+          '</svg>';
+
+      trial.stimulus = stimulus;
+
+      return trial;
+    }
+  </script>
+
+  <!-- JsPsych -->
+  <script>
+    let timeline = [];
+
+    let parameters = JS_PSYCH.randomization.factorial({
+      shape: [SQUARE_SHAPE, CIRCLE_SHAPE, TRIANGLE_SHAPE],
+      color: [FIRST_COLOR, SECOND_COLOR],
+    });
+
+    for (let i = 0; i < parameters.length; i++){
+      timeline.push(
+        createTrial(ID, parameters[i].color, parameters[i].shape, SHAPE_SIZE)
+      );
+    }
+
+    timeline = JS_PSYCH.randomization.shuffleNoRepeats(timeline,
+      function(trial1, trial2){return trial1.data.shape == trial2.data.shape});
+    JS_PSYCH.run([INSTRUCTIONS].concat(timeline));
+  </script>
+<body>
