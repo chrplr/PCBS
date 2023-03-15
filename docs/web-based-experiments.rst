@@ -38,8 +38,7 @@ A HTML file contains: - A declaration that you are using HTML5;
 
 -  A head where most webpage-level elements (e.g. title) are defined,
 
-:: code-block:: html
-
+.. code-block:: html
    <head></head>
 
 ..
@@ -58,14 +57,12 @@ A HTML file contains: - A declaration that you are using HTML5;
 -  A body which will contain the main elements of the page, especially
    what will be displayed to the user.
 
-:: code-block:: html
-
+.. code-block:: html
    <body></body>
 
 Our first document thus look like this, and is read as a blank page.
 
-:: code-block:: html
-
+.. code-block:: html
    <!DOCTYPE html>
    <head></head>
    <body></body>
@@ -76,8 +73,7 @@ Setting up a title
 You can use the ``<title>`` tag in the head of the document to set a
 title.
 
-:: code-block:: html
-
+.. code-block:: html
    <head>
      <title>My first page!</title>
    </head>
@@ -100,8 +96,7 @@ variety of way, we will start by using colored ‘divs’.
 
 You may use the following body for your HTML code.
 
-:: code-block:: html
-
+.. code-block:: html
    <body>
     <div></div>
    </body>
@@ -126,8 +121,7 @@ a style that forces a 200px width and a 200px height.
 
 The result is as follows:
 
-:: code-block:: html
-
+.. code-block:: html
    <body>
     <div style = "width: 200px; height: 200px"></div>
    </body>
@@ -169,8 +163,7 @@ not to see it!
 To specify the color (actually background color of the square), you may
 use another specification in the style:
 
-:: code-block:: html
-
+.. code-block:: html
    <body>
     <div style = "...; background-color = "red""></div>
    </body>
@@ -198,8 +191,7 @@ elements, but for now we will stick to simple solutions.
 First, we can specify the position of the left corner on the square in
 the style. This works similar to setting the dimensions of the square.
 
-:: code-block:: html
-
+.. code-block:: html
    <div style = "...; top: 100px; left: 200px"></div>
 
 Although we are moving the square, it is still not centered on the
@@ -211,16 +203,14 @@ window. ``1vw`` is 1% of the *width* of the window. Do not confuse both!
 
 As such, we can (somewhat) center the square using the following style:
 
-:: code-block:: html
-
+.. code-block:: html
    <div style = "...; top: 50vh; left: 50vw"></div>
 
 Notice that we are still slightly off, since we actually centered the
 top left corner of the square. To correct this we will apply a simple
 translation, of half the square dimensions.
 
-:: code-block:: html
-
+.. code-block:: html
    <div style = "...;
      top: 50vh; left: 50vw;
      transform: translate(-50%, -50%)"></div>
@@ -257,8 +247,7 @@ slightly modified. As an example, their corners can be rounded, a
 property which we will make use of to make circles. For that we will use
 a ``border-radius`` specification within our style.
 
-:: code-block:: html
-
+.. code-block:: html
    <div style = "...; border-radius = 50%"></div>
 
 You may try and change the value of this ``border-radius``, to better
@@ -272,8 +261,7 @@ shapes. Here we will use the ``<circle>`` shape element. We will specify
 its properties (radius, center, color) with tags directly linked to the
 element.
 
-:: code-block:: html
-
+.. code-block:: html
    <svg>
      <circle cx="100" cy="100" r="100" fill="red"/>
    </svg>
@@ -290,8 +278,7 @@ words, our 150x300 pixels containers does not have the right shape to
 display the whole shape. We thus have to specify the size of the
 container, with the usual ``style`` attribute.
 
-:: code-block:: html
-
+.. code-block:: html
    <svg style = "height = 200px; width=200px">
      <circle cx="100" cy="100" r="100" fill="red"/>
    </svg>
@@ -311,8 +298,7 @@ You may separate integers with spaces ```` or commas ``,`` alike. In the
 code for an isoceles triangle below, I use a mix of both: spaces
 separate *x* and *y* coordinates, while commas separates vertices.
 
-:: code-block:: html
-
+.. code-block:: html
    <svg>
        <polygon points="0 200, 200 200, 100 0" fill="red" />
    </svg>
@@ -325,8 +311,7 @@ In all the above examples, you probably reused the same value for the
 deal with this by providing a style sheet. It may be defined in the head
 of the file as per the following code (which defines an empty style).
 
-:: code-block:: html
-
+.. code-block:: html
    <head>
      <style>
        <!-- Put the style here -->
@@ -343,8 +328,7 @@ of the file as per the following code (which defines an empty style).
 We can now define our stylesheet. First, let us make all divs have a red
 background by default.
 
-:: code-block:: html
-
+.. code-block:: html
    <style>
      div {
        background-color: red
@@ -384,8 +368,7 @@ dot ``.``. The dot indicates that this style applies to a class.
 To apply this style to our divs, we have to specify that this class
 applies such as in the following example.
 
-:: code-block:: html
-
+.. code-block:: html
    <body>
      <div class = "centered">
      </div>
@@ -404,8 +387,7 @@ tedious, which is why style sheets are often defined in their own
 into a file named ``shapes.css``. You may now load the styl in your HTML
 file, using the following code in the ``<head>`` section.
 
-:: code-block:: html
-
+.. code-block:: html
    <head>
      <link rel="stylesheet" href ="./shapes.css">
      </link>
@@ -457,8 +439,7 @@ Note that everything within this tag will be interpreted as JavaScript.
 For our first script, we will display a simple text on the console. To
 this end, we may use the line code ``console.log(myText)``.
 
-:: code-block:: html
-
+.. code-block:: html
    <body>
      <script>
        // All that is written here is JavaScript!
@@ -480,7 +461,7 @@ Basic syntax of JavaScript
 
 The following code shows you the basics of the JavaScript synta
 
-:: 
+.. code-block:: javascript
 
    let x = 0;
    function printNumber(x){
@@ -519,7 +500,7 @@ Loops
 
 This code prints integers from 0 to 5.
 
-:: 
+.. code-block:: javascript 
 
    for (i = 0; i < 5; i++){
      console.log(i);
@@ -528,7 +509,7 @@ This code prints integers from 0 to 5.
 Modifying elements with innerHTML
 ---------------------------------
 
-:: 
+.. code-block:: javascript 
 
    document.body.innerHTML +=
      "<div style = "background-color:red; height: 200px; width: 200px"></div>"
@@ -538,14 +519,15 @@ Modifying elements with innerHTML
    **Multiline strings in JS** It is done by adding a backslash ``\``
    continuation at the end of each line.
 
-   :: 
+.. code-block:: javascript 
 
       "This is \
       a \
       multiline string".
 
-   Be careful not putting any space after the continuation!
+   Be careful not to put any space after the continuation!
 
+   
 Modifying elements with pure JS
 -------------------------------
 
@@ -575,7 +557,7 @@ we will load in our experiment. To load an external script in HTML, one
 can simply use the ``src`` attribute of the ``<script>`` tag, with the
 path to the script file as a value.
 
-.. code::  javascript
+.. code-block::  javascript
 
    <!DOCTYPE html>
    <head>
@@ -590,7 +572,7 @@ Here, you only loaded all the helper functions of JsPsych. You will now
 create an instance of the plugin using ``initJsPsych``, which will
 handle all your JsPsych-related instructions.
 
-.. code::  javascript
+.. code-block::  javascript
 
    <script>
      const jsPsych = initJsPsych();
@@ -612,7 +594,7 @@ This timeline is implemented as an array containing all the trials.
 Arrays in JavaScript are defined using square brackets ``[]``. We will
 first start with an empty timeline, which we’ll gradually fill.
 
-.. code::  javascript
+.. code-block::  javascript
 
    let timeline = [];
 
@@ -639,7 +621,7 @@ brackets ``{}``; it holds properties, defined with ``name: value``, and
 separated by commas ``,``. Below is the instantiation of a
 ``jsPsychHtmlKeyboardResponse`` trial.
 
-.. code::  javascript
+.. code-block::  javascript
 
    let trial = {
      type: jsPsychHtmlKeyboardResponse,
@@ -655,7 +637,7 @@ separated by commas ``,``. Below is the instantiation of a
 You may now add the trial to the timeline using the ``push`` method of
 arrays, which adds an element at the end of it.
 
-.. code::  javascript
+.. code-block::  javascript
 
    timeline.push(trial);
 
@@ -666,13 +648,13 @@ arrays, which adds an element at the end of it.
 And we can finally run the experiment with our 1-trial timeline, using
 the ``jsPsych`` instance we previously created.
 
-.. code::  javascript
+.. code-block::  javascript
 
    jsPsych.run(timeline);
 
 Your final code should look like this:
 
-.. code::  javascript
+.. code-block::  javascript
 
    // We initialize JsPsych
    const jsPsych = initJsPsych();
@@ -796,7 +778,7 @@ JsPsych provides use with a function to shuffle an array, i.e. order its
 element randomly: ``jsPsych.randomization.shuffleNoRepeats``. To
 randomize the timeline, use:
 
-.. code::  javascript
+.. code-block::  javascript
 
    timeline = jsPsych.randomization.shuffleNoRepeats(timeline);
 
@@ -816,7 +798,7 @@ cleanly, creating a trial should be done using parameters (in a ``for``
 loop or even better a function) including a ``shape`` variable. Adding
 it to the trial should thus be fairly straightforward.
 
-.. code::  javascript
+.. code-block::  javascript
 
    trial = {
      ...
@@ -835,7 +817,7 @@ be added in the data! The next session will develop how to do it.
 
 In the mean time, we can now define our equality function:
 
-.. code::  javascript
+.. code-block::  javascript
 
    timeline = jsPsych.randomization.shuffleNoRepeat(timeline,
      function(trial1, trial2){return trial1.shape == trial2.shape});
@@ -893,7 +875,7 @@ anything.
 
 We can thus use on finish to modify the response encoded in our data:
 
-.. code::  javascript
+.. code-block::  javascript
 
    let trial = {
      ...,
@@ -928,7 +910,7 @@ on your own. JsPsych provides us with a way to compare the encoding of a
 key to a representation such as ``"f"``:
 ``jsPsych.pluginAPI.compareKeys``.
 
-.. code::  javascript
+.. code-block::  javascript
 
    let trial = {
      ...,
@@ -955,14 +937,14 @@ the end of the trial to give audio feedback to our participants.
 To play audio in JavaScript, you first have to create ``Audio`` objects
 containing the audio file you want to play.
 
-.. code::  javascript
+.. code-block::  javascript
 
    let audio = new Audio(pathToFile);
 
 You can now play the audio using the ``play`` function of this audio
 object:
 
-.. code::  javascript
+.. code-block::  javascript
 
    audio.play()
 
@@ -1002,7 +984,7 @@ In this course, we will only use local save, which is still useful for
 debugging and/or piloting. Our ``data`` object possesses a ``localSave``
 method that precisely saves the experiment’s data as a ``.csv`` file:
 
-.. code::  javascript
+.. code-block::  javascript
 
    jsPsych.data.get().localSave('csv', "data.csv");
 
@@ -1011,7 +993,7 @@ the experiment! Similarly to trials, our JsPsych instance can be created
 with an additional ``on_finish`` method. Note that unlike for trials,
 this one does not take a ``data`` argument.
 
-.. code::  javascript
+.. code-block::  javascript
 
    let jsPsych = initJsPsych({
      on_finish: function(){
@@ -1056,7 +1038,7 @@ We can create a 10-character long ID for our participant with the
 following line. We use a constant here because it should never be
 modified.
 
-.. code::  javascript
+.. code-block::  javascript
 
    const ID = jsPsych.randomization.randomID(10);
 
@@ -1070,7 +1052,7 @@ As a final note, you will most likely want to use this ID for the data
 file you save at the end of the experiment: if all participants’ files
 have the same name, they will overwrite one another!
 
-.. code::  javascript
+.. code-block::  javascript
 
    jsPsych.data.get().localSave('csv', "data-"+ID+".csv");
 
