@@ -586,9 +586,7 @@ Using JsPsych
 JsPsych is a library that allows you to easily create experiments from
 premade plugins. First, download the library in version 7.3.0 from the
 `following
-link <https://www.github.com/jspsych/jspsych/releases/latest/download/jspsych.zip>`__,
-and unzip it in your code folder. The following codes assume that the
-folder is named ``jspsych-7.3.0``.
+link <https://www.github.com/jspsych/jspsych/releases/latest/download/jspsych.zip>`__, create a subfolder ``jspsych-7.3.0`` in your code folder and unzip ``jspsych.zip`` there. The library's code should be in ``./jspsych-7.3.0/dist``.
 
 Loading JsPsych
 ---------------
@@ -605,16 +603,19 @@ path to the script file as a value.
      <title>A simple jsPsych experiment</title>
    </head>
    <body>
-     <script src="./jspsych-7.3.0/jspsych.js">
+     <script src="./jspsych-7.3.0/dist/jspsych.js">
      </script>
    </body>
 
 Here, you only loaded all the helper functions of JsPsych. You will now
-create an instance of the plugin using ``initJsPsych``, which will
+need to load create an instance of the plugin using ``initJsPsych``, which will
 handle all your JsPsych-related instructions.
 
 .. code-block::  javascript
 
+     <script src="./jspsych-7.3.0/dist/plugin-html-keyboard-response.js">
+     </script>
+		 
    <script>
      const jsPsych = initJsPsych();
    </script>
