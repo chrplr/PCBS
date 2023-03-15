@@ -25,9 +25,12 @@ HTML5. Let us see how it works.
 HTML document structure overview
 --------------------------------
 
-A HTML file contains: - A declaration that you are using HTML5;
+A HTML file contains:
 
-``<!DOCTYPE html>``
+- A declaration that you are using HTML5;
+
+ 
+   ``<!DOCTYPE html>``
 
    **What happens if you remove it? - A note on browser compatibility**
    Most browsers will not care and behave similarly. However, you have
@@ -39,6 +42,8 @@ A HTML file contains: - A declaration that you are using HTML5;
 -  A head where most webpage-level elements (e.g. title) are defined,
 
 .. code-block:: html
+
+
    <head></head>
 
 ..
@@ -58,11 +63,15 @@ A HTML file contains: - A declaration that you are using HTML5;
    what will be displayed to the user.
 
 .. code-block:: html
+
+
    <body></body>
 
 Our first document thus look like this, and is read as a blank page.
 
 .. code-block:: html
+
+
    <!DOCTYPE html>
    <head></head>
    <body></body>
@@ -74,6 +83,8 @@ You can use the ``<title>`` tag in the head of the document to set a
 title.
 
 .. code-block:: html
+
+
    <head>
      <title>My first page!</title>
    </head>
@@ -97,6 +108,8 @@ variety of way, we will start by using colored ‘divs’.
 You may use the following body for your HTML code.
 
 .. code-block:: html
+
+
    <body>
     <div></div>
    </body>
@@ -122,6 +135,8 @@ a style that forces a 200px width and a 200px height.
 The result is as follows:
 
 .. code-block:: html
+
+
    <body>
     <div style = "width: 200px; height: 200px"></div>
    </body>
@@ -164,6 +179,8 @@ To specify the color (actually background color of the square), you may
 use another specification in the style:
 
 .. code-block:: html
+
+
    <body>
     <div style = "...; background-color = "red""></div>
    </body>
@@ -192,6 +209,8 @@ First, we can specify the position of the left corner on the square in
 the style. This works similar to setting the dimensions of the square.
 
 .. code-block:: html
+
+
    <div style = "...; top: 100px; left: 200px"></div>
 
 Although we are moving the square, it is still not centered on the
@@ -204,6 +223,8 @@ window. ``1vw`` is 1% of the *width* of the window. Do not confuse both!
 As such, we can (somewhat) center the square using the following style:
 
 .. code-block:: html
+
+
    <div style = "...; top: 50vh; left: 50vw"></div>
 
 Notice that we are still slightly off, since we actually centered the
@@ -211,6 +232,8 @@ top left corner of the square. To correct this we will apply a simple
 translation, of half the square dimensions.
 
 .. code-block:: html
+
+
    <div style = "...;
      top: 50vh; left: 50vw;
      transform: translate(-50%, -50%)"></div>
@@ -248,6 +271,8 @@ property which we will make use of to make circles. For that we will use
 a ``border-radius`` specification within our style.
 
 .. code-block:: html
+
+
    <div style = "...; border-radius = 50%"></div>
 
 You may try and change the value of this ``border-radius``, to better
@@ -262,6 +287,8 @@ its properties (radius, center, color) with tags directly linked to the
 element.
 
 .. code-block:: html
+
+
    <svg>
      <circle cx="100" cy="100" r="100" fill="red"/>
    </svg>
@@ -279,6 +306,8 @@ display the whole shape. We thus have to specify the size of the
 container, with the usual ``style`` attribute.
 
 .. code-block:: html
+
+
    <svg style = "height = 200px; width=200px">
      <circle cx="100" cy="100" r="100" fill="red"/>
    </svg>
@@ -299,6 +328,8 @@ code for an isoceles triangle below, I use a mix of both: spaces
 separate *x* and *y* coordinates, while commas separates vertices.
 
 .. code-block:: html
+
+
    <svg>
        <polygon points="0 200, 200 200, 100 0" fill="red" />
    </svg>
@@ -312,6 +343,8 @@ deal with this by providing a style sheet. It may be defined in the head
 of the file as per the following code (which defines an empty style).
 
 .. code-block:: html
+
+
    <head>
      <style>
        <!-- Put the style here -->
@@ -329,6 +362,8 @@ We can now define our stylesheet. First, let us make all divs have a red
 background by default.
 
 .. code-block:: html
+
+
    <style>
      div {
        background-color: red
@@ -369,6 +404,8 @@ To apply this style to our divs, we have to specify that this class
 applies such as in the following example.
 
 .. code-block:: html
+
+
    <body>
      <div class = "centered">
      </div>
@@ -388,6 +425,8 @@ into a file named ``shapes.css``. You may now load the styl in your HTML
 file, using the following code in the ``<head>`` section.
 
 .. code-block:: html
+
+
    <head>
      <link rel="stylesheet" href ="./shapes.css">
      </link>
@@ -440,6 +479,8 @@ For our first script, we will display a simple text on the console. To
 this end, we may use the line code ``console.log(myText)``.
 
 .. code-block:: html
+
+
    <body>
      <script>
        // All that is written here is JavaScript!
