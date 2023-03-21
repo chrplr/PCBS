@@ -162,7 +162,7 @@ exp.data.add_variable_names(['condition', 'response', 'rt', 'is_correct'])
 
 ######################## Display Instructions ##################################
 
-instructions = stimuli.TextScreen('Instructions', INSTRUCTIONS, text_size=25)
+instructions = stimuli.TextScreen('Instructions', INSTRUCTIONS, text_size=40)
 instructions.present(clear=True, update=True)
 exp.keyboard.wait_char(' ')
 

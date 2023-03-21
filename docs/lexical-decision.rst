@@ -14,20 +14,22 @@ Let us program such a task.
 Step 1: stimuli in constants
 ----------------------------
 
-Modify the :download:`parity task script <../experiments/xpy_parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order).
+Modify the :download:`parity task script <../experiments/xpy_parity_decision/parity.py>` to display either a word or a pseudoword at each trial (in a random order). the task of the subject is to press 'F' when the displayed stimulus is a word, 'J' if it is a pseudowords.
 
-For testing purposes, you can use the following variables::
+For testing purposes, let us assume that::
 
    words = ['bonjour', 'chien', 'président']
    pseudos = ['lopadol', 'mirance', 'clapour' ]
 
-A solution is proposed in :download:`lexdec_v1.py <../experiments/xpy_lexical_decision/lexdec_v1.py>`
+Run the script and check the results in ``/data``.
+   
+Compare your script with the solution proposed  :download:`lexdec_v1.py <../experiments/xpy_lexical_decision/lexdec_v1.py>`
 
 
 Step 2: read stimuli from a csv file
 ------------------------------------
 
-Then modify the lexical decision script to read the stimuli from a comma-separated text file (`stimuli.csv`) with two columns. Here is the content of ``stimuli.csv``::
+Modify the lexical decision script so that it reads the stimuli from a comma-separated text file (`stimuli.csv`) with two columns. Here is the content of ``stimuli.csv``::
 
     item,category 
     bonjour,W
@@ -37,7 +39,7 @@ Then modify the lexical decision script to read the stimuli from a comma-separat
     mirance,P
     clapour,P
 
-(hint: To read a csv file, one can use ``pandas.read_csv()``)
+(hint: To read a csv file, you can use ``pandas.read_csv()``)
 
 A solution is proposed in :download:`lexdec_v2.py <../experiments/xpy_lexical_decision/lexdec_v2.py>` 
 
@@ -45,6 +47,8 @@ Note: You can use a file comparator, e.g. `meld <https://meldmerge.org/>`__, to 
 
      meld lexdec_v1.py lexcdec_v2.py
 
+
+Optional; 
 
 Select words in a lexical dabatase
 ----------------------------------
@@ -145,8 +149,8 @@ Solution at :download:`lexdec_v3.py <../experiments/xpy_lexical_decision/lexdec_
 Improving the pseudowords
 -------------------------
 
-1. Check out the pseudoword generator
-   `UniPseudo <http://www.lexique.org/?page_id=582>`__
+1. Check out the `Unipseudo <http://www.lexique.org/shiny/unipseudo/>`__ pseudoword generator.
+ 
 
 2. Generate a new list of pseudowords and add them to a new
    ``stimuli3.csv`` file

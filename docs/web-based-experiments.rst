@@ -754,7 +754,7 @@ Using the console interactively: accessing experiment data
 
 Before going any further, let us test that the experiment worked as
 intended. If so, the data in our trial should have been registered. You
-can access JsPsych’s saved data using ``jsPsych.data.get()``
+can access JsPsych’s saved data using ``jsPsych.data.get()``.
 
    If we break down this line, here we access the property ``data`` of
    our ``jsPsych`` instance. But ``data`` actually saves many
@@ -762,9 +762,8 @@ can access JsPsych’s saved data using ``jsPsych.data.get()``
    ``data`` object has a convenient function (or method) ``get()`` that
    allows us to precisely access test data.
 
-Although you could use it in your script to access it at any given time
-(and, e.g. print it), you can also use the console to access it whenever
-you want. Just type the line into it!
+Although you could use it in your script to access it at any given time, you can also use the console to access it whenever
+you want. Try  typing ````jsPsych.data.get()`` on the console.
 
 It should print you something of the form
 ``Object { trials: (1) […] }``, which you can unfold: ``trials``
@@ -777,15 +776,15 @@ Response keys
 
 In your trial’s data, ``response`` may contain any single key, since all
 are allowed by default. However, decision tasks will require them to
-press one of two chosen keys. We can specify the valid keys using (yet
+press one of two target keys. We can specify these targer keys using (yet
 another) parameter: ``choices``. As a value, we will pass it an array of
 valid keys in the forms of strings, here ‘f’ and ‘j’
 
-:: 
+.. code-block:: jav:ascript
 
    let trial = {
      type: jsPsychHtmlKeyboardResponse,
-     stimulus: "Bonjour! Please press any key."
+     stimulus: "Bonjour! Please press any key.",
      choices: ['f', 'j'].
    }
 

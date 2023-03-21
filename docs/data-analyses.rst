@@ -6,7 +6,7 @@ Data Analyses
 Permutation tests
 -----------------
 
--  Read about the principle of `permutation tests <https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests>`__
+-  Read about the principle of `permutation tests <https://en.wikipedia.org/wiki/Permutation_test>`__
 
 -  Implement a python script that uses a permutation test to compare two
    samples.

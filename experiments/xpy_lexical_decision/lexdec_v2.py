@@ -20,8 +20,7 @@ control.initialize(exp)
 
 # prepare the stimuli
 materials = pandas.read_csv(STIM_FILE)
-trials = [(row['category'], row['item'], stimuli.TextLine(row['item']))
-          for _, row in materials.iterrows()]
+trials = [(row.category, row.item, stimuli.TextLine(row.item)) for row in materials.itertuples()]
 
 random.shuffle(trials)
 
