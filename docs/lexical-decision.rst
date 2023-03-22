@@ -58,8 +58,8 @@ Select words in a lexical dabatase
    Click on “Recherche en Ligne” and play with the interface:
 
    -  enter ``5...5`` in the ``nbletters`` field
-   -  enter ``^b.t$`` in the field ``ortho`` field (see
-      http://www.lexique.org/?page_id=101 for more examples of pattern
+   -  enter ``^b.t$`` in the field ``Word`` field (see
+      http://www.lexique.org/?page_id=101 for more examples of patterns
       that can be used)
 
 2. how many words of grammatical category (``cgram``) ‘NOM’, and of
