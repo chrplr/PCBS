@@ -94,8 +94,24 @@ Python
 To use the device under Python, you need the `pyserial
 module <https://pyserial.readthedocs.io/en/latest/shortintro.html>`__
 
-sending a trigger
-~~~~~~~~~~~~~~~~~
+
+
+sending triggers
+~~~~~~~~~~~~~~~~
+
+
+
+.. code:: python
+
+	  from serial import Serial
+
+	  dlp = Serial(port='/dev/ttyUSB0', baudrate=115200)  # open serial port
+
+	  dlp.write(b'QWERTYUI')  # set all lines to '0'
+	  dlp.write(b'12345678')  # set all lines to '1'
+
+
+
 
 .. code:: python
 
