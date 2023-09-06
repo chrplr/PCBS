@@ -81,7 +81,7 @@ R is a programming language specialized for statistical data analyses; Download 
 
 Rstudio is an *Integrated Developpement Environment* for R which greatly
 simplifies the use of RMarkdown. You can download and install the
-free version of RStudio Desktop from https://www.rstudio.com/products/rstudio/download/ (accepting all the default options)
+free version of RStudio Desktop from https://posit.co/download/rstudio-desktop/  (accepting all the default options)
 
 Lauch RStudio, go to the  "Tools" menu, select "install packages" and in the dialog window that opens, in the  'packages' box, type::
 
@@ -252,7 +252,7 @@ Download and install the latest version of **R** from https://cran.rstudio.com/b
 Rstudio Desktop
 ~~~~~~~~~~~~~~~
 
-Download and install the latest version of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/. Make sure to select the MacOS version!
+Download and install the latest version of **RStudio Desktop** from https://posit.co/download/rstudio-desktop/. Make sure to select the MacOS version!
 
 Python
 ~~~~~~
@@ -360,13 +360,13 @@ Rstudio Desktop
 
 Rstudio is an *Integrated Developpement Environment* for R which greatly
 simplifies the use of RMarkdown. You can download and install the latest version
-of **RStudio Desktop** from https://www.rstudio.com/products/rstudio/download/.
+of **RStudio Desktop** from https://posit.co/download/rstudio-desktop/
 Make sure to select the ubuntu version!
 
 .. code-block:: bash
 
-  wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.1-461-amd64.deb
-  sudo apt install ./rstudio-2022.02.1-461-amd64.deb -y
+  wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.2-561-amd64.deb
+  sudo apt install ./rstudio-2023.06.2-561-amd64.deb -y
 
 
 
