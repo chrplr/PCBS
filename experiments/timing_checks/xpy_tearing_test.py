@@ -8,7 +8,8 @@ from expyriment import design, control, stimuli
 
 
 exp = design.Experiment(name="First Experiment")  
-control.open_gl = 0
+# control.open_gl = 0  # 0, 1, 2 or 3 
+
 
 ## Set develop mode. Comment for real experiment
 # expyriment.control.set_develop_mode(on=True)
