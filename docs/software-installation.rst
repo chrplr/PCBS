@@ -7,12 +7,12 @@ Software Installation
 
 We explain below how to install:
 
-- a code editor: *Sublime text*
+- a code editor: *Visual Studio Code*
 - a version control system: *Git*
-- the statistical programming language: *R*
-- its integrated development environment: *RStudio*
-- Anaconda Python
-- The experiment generatror  *Expyriment* (python module)
+- the statistical programming language *R*
+- the integrated development environment *RStudio*
+- The programming language *Python*
+- The experiment generator  *Expyriment* (python module)
 
 After the installation, you will need to `check`_ that everything works. 
 
@@ -22,46 +22,13 @@ After the installation, you will need to `check`_ that everything works.
    -  Make sure that you have at least 5GB of free space on your hard drive
       to unpack the various software.
    - You will need to have administrator rights to install some of the
-     software. If you are using a computer from an institution, check with the IT support team.
+     software. If you are using a computer from an institution, check
+     with the IT support team.
 
 
 .. contents:: :depth: 2
 
 
-
-Instructions for Windows (with WSL)
------------------------------------
-
-If the *Windows Subsystem for Linux* (aka WSL) is installed on your Windows PC, with an Ubuntu Linux distribution, you can open Ubuntu and jump to the linux_ section in order to install the required software.
-
-If you want to install Linux under Windows using the WSL, follow the instructions at https://docs.microsoft.com/en-us/windows/wsl/install but be aware that thre download is large (several GB) and the installation can be lengthy (30min-1h) 
-
-Here is an overview of the process:
-
-
-- If you have Windows 11:
-
-  #. Install the vGPU driver for your graphics card (`Intel
-     <https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html?>`__,
-     `AMD <https://www.amd.com/en/support/kb/release-notes/rn-rad-win-wsl-support>`__
-     or `Nvidia <https://developer.nvidia.com/cuda/wsl>`__) [2]_ if it not already
-     installed.
-  #. Launch “Windows PowerShell” as administrator, and execute
-     the command::
-
-       wsl --install -d ubuntu
-
-- If you have Windows 10, follow `these instructions <https://omgubuntu.co.uk/how-to-install-wsl2-on-windows-10>`__.
-  (You may have to enable `Hyper-V <https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/>`__)
-
-This downloads the full Ubuntu Linux distribution which may take a while. Some versions of Windows may even ask you to reboot during the installation process. At some point during the install, a new Terminal window entitled “Ubuntu” will open and will require a new user name and password. You can type anything but it is crucial that you note down the password as it will be needed to install software under Ubuntu.
-
-
-.. note::
-  If anything goes wrong during the installation check the `Troubleshoting WSL <https://docs.microsoft.com/en-us/windows/wsl/troubleshooting>`__ section. 
-
-
-When the WSL installation is finished, go to the linux_ section in order to install the required software.
 
 
 Instructions for native Windows (without WSL)
@@ -91,10 +58,13 @@ Lauch RStudio, go to the  "Tools" menu, select "install packages" and in the dia
 This will take a while to download packages from the internet and install them. Do not close rstudio until the process is finished (no more scrolling messages in the console).
 
 
-SublimeText code editor
-~~~~~~~~~~~~~~~~~~~~~~~
+Code editor
+~~~~~~~~~~~
 
-Download and install `Sublime Text <https://www.sublimetext.com/>`__. (accepting the default options proposed by the installer)
+A code editor is a program that allows you to edit pure text files such
+as Python programs, `Markdown <https://daringfireball.net/projects/markdown/>`__  or `LaTeX <https://www.latex-project.org/>`__ documents, etc.
+
+Download and install `Visual Studio Code <https://code.visualstudio.com/>`__ (accepting all the default options proposed by the installer)
 
 
 Anaconda Python3 distribution
@@ -207,8 +177,8 @@ If a message `Experiment 0.10.0 ...` is displayed and no error message, the inst
 
 
 
-Learn to use Sublime Text and Git Bash Terminal to create Python scripts 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Learn to use the Git Bash Terminal to create Python scripts 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Watch the video at   https://www.youtube.com/watch?v=2yhcWvBt7ZE&t and try to perform the activities in it (the insturctions walso work for Mac or Linux: you just need to open a standard Terminal when in Windows you need to start 'Gih Bash'). Note: the game scripts mentioned in the video are available at https://github.com/chrplr/PCBS/tree/master/games/games.zip
 
@@ -217,17 +187,61 @@ Now you should check if everything works, following the instructions in chapter 
 
 
 
+Instructions for Windows using the Windows Subsystem for Linux (WSL)
+-------------------------------------------------------------------
+
+As an alternative to installing Python et coll. as native Windows applications, you can install Ubuntu Linux under Windows, relying on Microsoft's *Windows Subsystem for Linux* (aka WSL) and then install Python and coll. within Ubuntu.
+
+The interest of having WSL is that it gives you the opportunity to learn to use Linux, which may come handy if one day you need to access remote computational facilities such as the Jean Zay supercomputer.
+
+If you already have WSL Ubuntu installed on your Windows PC, you can just open an Ubuntu terminal and jump directly to the linux_ section.
+
+If not, and want to try it, keep reading. 
+
+Installing the Microsoft's *Windows Subsystem for Linux*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to install Linux under Windows using the WSL, follow the instructions at https://docs.microsoft.com/en-us/windows/wsl/install but be aware that the download is large (several GB) and the installation can be lengthy, depeding on the power of your PC (30min-1h) 
+
+Here is an overview of the process:
+
+
+- If you have Windows 11:
+
+  #. Install the vGPU driver for your graphics card (`Intel
+     <https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html?>`__,
+     `AMD <https://www.amd.com/en/support/kb/release-notes/rn-rad-win-wsl-support>`__
+     or `Nvidia <https://developer.nvidia.com/cuda/wsl>`__) [2]_ if it not already
+     installed.
+  #. Launch “Windows PowerShell” as administrator, and execute
+     the command::
+
+       wsl --install -d ubuntu
+
+- If you have Windows 10, follow `these instructions <https://omgubuntu.co.uk/how-to-install-wsl2-on-windows-10>`__.
+  (You may have to enable `Hyper-V <https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/>`__)
+
+This downloads the full Ubuntu Linux distribution which may take a while. Some versions of Windows may even ask you to reboot during the installation process. At some point during the install, a new Terminal window entitled “Ubuntu” will open and will require a new user name and password. You can type anything but it is crucial that you note down the password as it will be needed to install software under Ubuntu.
+
+
+.. note::
+  If anything goes wrong during the installation check the `Troubleshoting WSL <https://docs.microsoft.com/en-us/windows/wsl/troubleshooting>`__ section. 
+
+
+Now that the WSL installation is finished, jump to the linux_ section in order to install the required software.
+
+
 Instructions for MacOS X
 ------------------------
 
 
-SublimeText code editor
-~~~~~~~~~~~~~~~~~~~~~~~
+Code editor
+~~~~~~~~~~~
 
 A code editor is a program that allows you to edit pure text files such
 as Python programs, `Markdown <https://daringfireball.net/projects/markdown/>`__  or `LaTeX <https://www.latex-project.org/>`__ documents, etc.
 
-Unless you already use a code editor that you are familiar and happy with,  we recommend that you download and install `Sublime Text <https://www.sublimetext.com/>`__. Follow the instructions specific to MacOS.
+Unless you already use a code editor that you are familiar and happy with,  we recommend that you download and install `Visual Studio Code <https://code.visualstudio.com/>`__. Follow the instructions specific to MacOS.
 
 
 The Git version control system
@@ -314,27 +328,12 @@ personal information:
   git config --global core.editor nano
 
 
-Sublime code editor
-~~~~~~~~~~~~~~~~~~~
+Visual Studio Code editor
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Sublime Text <https://www.sublimetext.com/>`_ is a powerful text editor with a good Python mode. To install it:
+ Download and install  `Visual Studio Code <https://code.visualstudio.com/>`__.
 
-.. code-block:: bash
-                
-  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-
-.. code-block:: bash
-
-  sudo apt-get install apt-transport-https -y
-  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-  sudo apt-get update
-  sudo apt-get install sublime-text -y
-
-(if this does not work, check the latest instructions from https://www.sublimetext.com/docs/linux_repositories.html)
-
-.. note::
-   `Visual Studio Code <https://code.visualstudio.com/>`__ is another fine code editor too. If you prefer to use it instead of Sublime Text, this is perfectly fine. 
-
+  
 R language for statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
