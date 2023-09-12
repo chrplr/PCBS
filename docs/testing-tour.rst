@@ -31,11 +31,13 @@ Close RStudio. That will be all.
 Check if Python can be executed in a Terminal
 -----------------------------------------------
 
+
 Open a Terminal (that is, `Git Bash` for Windows users) and type::
 
   which python
 
 This should print the location of the python interpreter,  ``/home/macron/anaconda3/bin/python``
+
 If no message is displayed, the PATH environment variable --- which lists the directories where programs can be found --- is messed up, most probably due not following closely the installation instructions (for Windows users, check the Anaconda and Git for Windows instructions)
 
 Type  ``python`` and press 'Enter'.
@@ -225,17 +227,7 @@ Try to run the following three experiments (Note that the programs can be interr
 
 
 
-Sublime Text
-------------
 
-.. code-block:: bash
-
-   subl
-
-
-This should open a new window with the sublime text editor. If you get a message ``command not found``, ask the instructor to fix your PATH variable or try to do it by yourself [1]_.  
-
-Then, check out https://www.youtube.com/watch?v=SVkR1ZkNusI for a short tutorial.
 
 Appendices
 ----------
@@ -267,6 +259,8 @@ Notes:
 
 Basic surviving skill: how to enter command lines in a Terminal
 ---------------------------------------------------------------
+
+Watch the video at   https://www.youtube.com/watch?v=2yhcWvBt7ZE&t and try to perform the activities in it (the instructions also work for Mac or Linux: you just need to open a standard Terminal while in Windows you start 'Git Bash'). Note: the game scripts mentioned in the video are available at https://github.com/chrplr/PCBS/tree/master/games/games.zip
 
 
 For the moment, you mostly need to know the following three commands:

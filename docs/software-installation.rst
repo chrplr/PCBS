@@ -11,7 +11,7 @@ We explain below how to install:
 - a version control system: *Git*
 - the statistical programming language *R*
 - the integrated development environment *RStudio*
-- The programming language *Python*
+- The programming language *Python* (**version 3.7** !)
 - The experiment generator  *Expyriment* (python module)
 
 After the installation, you will need to `check`_ that everything works. 
@@ -34,17 +34,12 @@ After the installation, you will need to `check`_ that everything works.
 Instructions for native Windows (without WSL)
 ---------------------------------------------
 
-This approach has several pitfalls. For example, if  you do not carefully follow the instructions, many things will not work correclty. Yet, there are two reasons why one may want to follow this path:
-
-- WSL does not work on your machine (for example, your CPU does not allow `virtualization <https://www.zdnet.com/article/windows-10-tip-find-out-if-your-pc-can-run-hyper-v/>`__). 
-- You are concerned by potential overheads of the WSL (yet, read `this <https://www.techradar.com/news/windows-11-wsl-2-is-almost-as-quick-as-running-linux-natively>`__).
-
+**Please  follow these instructions carefully**! If you do not, many things could go wrong and you mights have to reinstall.
 
 R and Rstudio
 ~~~~~~~~~~~~~
 
 R is a programming language specialized for statistical data analyses; Download and install it from https://cran.rstudio.com/bin/windows/base/ (accepting all the default options proposed by the installer)
-
 
 Rstudio is an *Integrated Developpement Environment* for R which greatly
 simplifies the use of RMarkdown. You can download and install the
@@ -55,7 +50,7 @@ Lauch RStudio, go to the  "Tools" menu, select "install packages" and in the dia
      tidyverse lme4 ez
 
 
-This will take a while to download packages from the internet and install them. Do not close rstudio until the process is finished (no more scrolling messages in the console).
+This will take a while to download packages from the internet and install them. Do not close rstudio until the process is finished (no more scrolling messages in the console). Meanwhile, you can start the installation of the other software below.
 
 
 Code editor
@@ -67,8 +62,8 @@ as Python programs, `Markdown <https://daringfireball.net/projects/markdown/>`__
 Download and install `Visual Studio Code <https://code.visualstudio.com/>`__ (accepting all the default options proposed by the installer)
 
 
-Anaconda Python3 distribution
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Python3 using the Anaconda distribution
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There exists various Python distributions. Under Windows, we recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`__ as it already contains many of the packages needed for cognitive science (but it is very large. If you you lack disk space, you can install `miniconda <docs.conda.io/en/latest/miniconda.html>`__, but later you will need to install many python packages manually)
 
@@ -135,7 +130,7 @@ This should display the 100 power of 2. Press `Ctrl-D` to exit python, and again
 
  If python does not start, there is something wrong
 
-Finally, you must configure Git: in Git BAsh, type the following commands (replacing ``your_first_and_last_name_here``  and ``your_email_here``
+Finally, you must configure Git: Within a Git Bash terminal, type the following commands (replacing ``your_first_and_last_name_here``  and ``your_email_here``
 by relevant personal information) ::
 
 
@@ -176,14 +171,11 @@ and then::
 If a message `Experiment 0.10.0 ...` is displayed and no error message, the installation worked. Press `Ctrl-D` to quit ipython, and `Ctrl-D` again to qui Git Bash.
 
 
-
-Learn to use the Git Bash Terminal to create Python scripts 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Watch the video at   https://www.youtube.com/watch?v=2yhcWvBt7ZE&t and try to perform the activities in it (the insturctions walso work for Mac or Linux: you just need to open a standard Terminal when in Windows you need to start 'Gih Bash'). Note: the game scripts mentioned in the video are available at https://github.com/chrplr/PCBS/tree/master/games/games.zip
-
+Checking everything
+~~~~~~~~~~~~~~~~~~~
 
 Now you should check if everything works, following the instructions in chapter :doc:`testing-tour`.
+
 
 
 
@@ -299,7 +291,7 @@ Now you should check if everything works, following the instructions in chapter 
 Instructions for Ubuntu Linux
 -----------------------------
 
-These insttuctions have been tested with Ubuntu 20.04
+These instructions were tested with Ubuntu 20.04
 
 Open a Terminal [1]_.
 
@@ -331,8 +323,12 @@ personal information:
 Visual Studio Code editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
- Download and install  `Visual Studio Code <https://code.visualstudio.com/>`__.
+Install  `Visual Studio Code <https://code.visualstudio.com/>`__::
 
+
+   snap install code
+ 
+ 
   
 R language for statistics
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -345,11 +341,14 @@ R language for statistics
 
 .. code-block:: bash
 
-  sudo apt install --no-install-recommends software-properties-common dirmngr -y
-  wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
-  sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
-  sudo apt install --no-install-recommends r-base -y
-  sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
+
+sudo apt install --no-install-recommends software-properties-common dirmngr
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+
+sudo apt install --no-install-recommends r-base		
+sudo add-apt-repository ppa:c2d4u.team/c2d4u4.0+
+sudo apt install --no-install-recommends r-cran-tidyverse
 
 (in case of trouble, check the latest instructions at https://cran.rstudio.com/bin/linux/ubuntu/)
 
