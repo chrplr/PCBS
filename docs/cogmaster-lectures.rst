@@ -11,36 +11,27 @@ Cogmaster Lectures
 
 **Ateliers de Programmation pour les (Neuro)Sciences Cognitives / Programming for Cognitive and Brain Sciences**
 
-This year (2021-2022) the lecture is split in 3 independent modules:
+This year (2023-2024) the lecture is split in two:
 
-1. PROG Introduction to Programming with Python (first half of first semester)
+1. PROG101 Introduction to Programming with Python (first semester)
 
    This series of lectures targets students with little or no prior
    knowledge of programming. It will introduce the fundamentals concepts
    of coding : variables, expressions, functions, control structures,
    input/ouput. The course will make use of https://pythontutor.com/
 
-2. PCBS Programming for Cognitive and Brain Sciences (2 sessions: second
-   half of semester 1 and first half of semester 2)
+2. PCBS Programming Experiments for Cognitive and Brain Sciences (second semester)
 
-   The purpose of this module is to train students to solve typical tasks
-   encountered in cognitive or neurosciences: (creation of stimuli,
-   programming of real-time experiments, data manipulation and analysis,
-   simulations…), using Python ou R. The course consists of short lectures
-   followed by hands-on exercises.
-
-3. PROJ Programming project (second half of semester 2)
-
-   Each student selects a cognitive science topic (psychology
-   experiment, simulations of a cognitive system, etc, …) and implements
-   it using a programming language. The project’s development should be
-   public on github.
+   The purpose of this module is to train students to program cognitive psychology experiments. During the first 7 lectures, the course starts with an introduction and is follwoed by hands-on exercises. In the second part of the semester, 
+   Each student chooses an experiment to implement. The project’s development should be public on github.
 
 Instructors
 
-   - Christophe Pallier <christophe@pallier.org>
-   - Cédric Foucault <cedric.foucault@gmail.com>
-   - Henri van den Driessche <henri.vandendriessche@ens.fr>
+
+   - Henri van den Driessche <henri.vandendriessche@ens.fr> (PROG101)
+
+   - Christophe Pallier <christophe@pallier.org> (PROG201)
+   - Maxime Cauté  <maxime.caute@ens-rennes.fr> (PROG201)
 
 
 Moodle
@@ -50,11 +41,6 @@ Moodle
 Slides
 
    http://github.com/chrplr/PCBS/tree/master/slides
-
-Slack discussion forum
-
-   http://cogmaster-pcbs.slack.com (Click `here <https://join.slack.com/t/cogmaster-pcbs/shared_invite/zt-9wid4ime-8~Pw0jKovsbIx1VRawcguQ>`__ to join).
-   Use the ``#general`` channel to ask questions.
 
 
 
@@ -107,10 +93,10 @@ Course policies
 ---------------
                     
 Laptops: Students must bring there own laptop (preferably fully charged!) with
-the specified software preinstalled.
+the specified software preinstalled (see https://pcbs.readthedocs.io/en/latest/software-installation.html)
                     
-Participation. You are strongly encouraged to participate in lectures and on the
-slack discussion forum. The more advanced students are expected to help the
+Participation: You are strongly encouraged to participate in lectures and on the
+discord discussion forum. The more advanced students are expected to help the
 beginners.
 
 
@@ -126,7 +112,7 @@ Students are expected to know how to open a terminal and `navigate in the file s
 Projects
 ========
 
-The project should try to replicate an experiment or some simulations related to cognitive (neuro-) science.
+The project should try to replicate an experiment related to cognitive (neuro-) science.
 
 An example of the kind of things that we expect is provided at http://chrplr.github.io/PCBS-LexicalDecision
 
@@ -152,16 +138,12 @@ An example of the kind of things that we expect is provided at http://chrplr.git
    regularily. it is very useful to have someone else check that the
    documentation and code that you write is readable.
 
--  use the slack forum https://cogmaster-pcbs.slack.com/ to ask questions
+-  use the discord channel to ask questions
 
 - At the end of the `README.md` file, you must include a section detailling:
     - your previous coding experience
     - what you have learned since then, by following the lecture, coding the project or working by yourself
     - what you missed in this course.  
 
-
----
-
-I have uploaded some experimental papers on the Schoology web size (in Materials: `papers-for-projects.zip`) that can be used as the basis of your project.
 
 
