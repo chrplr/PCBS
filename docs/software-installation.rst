@@ -29,12 +29,10 @@ After the installation, you will need to `check`_ that everything works.
 .. contents:: :depth: 2
 
 
-
-
 Instructions for native Windows (without WSL)
 ---------------------------------------------
 
-**Please  follow these instructions carefully**! If you do not, many things could go wrong and you mights have to reinstall.
+**Please  follow these instructions carefully**! If you do not, many things could go wrong and you might need to run the installers again.
 
 R and Rstudio
 ~~~~~~~~~~~~~
@@ -59,23 +57,25 @@ Code editor
 A code editor is a program that allows you to edit pure text files such
 as Python programs, `Markdown <https://daringfireball.net/projects/markdown/>`__  or `LaTeX <https://www.latex-project.org/>`__ documents, etc.
 
-Download and install `Visual Studio Code <https://code.visualstudio.com/>`__ (accepting all the default options proposed by the installer)
+
+If you do not already have a code editor that you like, download and install `Visual Studio Code <https://code.visualstudio.com/>`__ (accepting the default options proposed by the installer)
 
 
 Python3 using the Anaconda distribution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+You will need to install Python version 3.7 (because the expyriment module, to be installed later, requires this specific version)
+
 There exists various Python distributions. Under Windows, we recommend the `Anaconda3 distribution <https://www.anaconda.com/distribution>`__ as it already contains many of the packages needed for cognitive science (but it is very large. If you you lack disk space, you can install `miniconda <docs.conda.io/en/latest/miniconda.html>`__, but later you will need to install many python packages manually)
 
-1. Go to  <https://www.anaconda.com/products/individual>, click on ``Download`` and select the 64-bit installer for iWindows.
+
+1. Go to  <https://www.anaconda.com/products/individual>, click on ``Download`` and select the 64-bit installer for Windows.
 2. Execute the Anaconda3 installer. Pay special attention to the options:
 
        -  To the question 'Install for', select ``Just Me (recommended)``
        -  Accept the default Destination folder and click on ``Next``
        -  VERY IMPORTANT: Check the boxes in front ``Add Anaconda to my PATH`` (ignore the warning that this is not recommended) and ``Register Anaconda as my default Python`` and click on ``Install``
        -  upon completion, click on ``Next``, then ``Finish``
-
- 
 	  
 
 The Git version control system
@@ -128,7 +128,7 @@ It should print a message 'Python 3.x.xx...' and a give a prompt '>>>'. You are 
 
 This should display the 100 power of 2. Press `Ctrl-D` to exit python, and again the exit 'Git Bash'.
 
- If python does not start, there is something wrong
+If python does not start, there is something wrong. Most probably, you forgot to check the boxe ``Add Anaconda to my PATH`` during the installation of Anaconda. do it again. If it still does not work, ask for help.
 
 Finally, you must configure Git: Within a Git Bash terminal, type the following commands (replacing ``your_first_and_last_name_here``  and ``your_email_here``
 by relevant personal information) ::
@@ -175,7 +175,6 @@ Checking everything
 ~~~~~~~~~~~~~~~~~~~
 
 Now you should check if everything works, following the instructions in chapter :doc:`testing-tour`.
-
 
 
 
@@ -425,7 +424,7 @@ Note: Later, when you will need to run python scripts importing expyriment, you 
 Psychtoolbox
 ~~~~~~~~~~~~
 
-(Optional: we do not make use of  the Psychtoolbox in this course)
+(This is optional: we do not make use of the Psychtoolbox in this course)
 
 `Psychtoolbox-3 <http://psychtoolbox.org/>`_ is a set Octave functions which is
 very popular in vision and neuroscience research. This installation is optional
