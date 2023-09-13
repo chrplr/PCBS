@@ -74,8 +74,10 @@ There exists various Python distributions. Under Windows, we recommend the `Anac
 
        -  To the question 'Install for', select ``Just Me (recommended)``
        -  Accept the default Destination folder and click on ``Next``
-       -  VERY IMPORTANT: Check the boxes in front ``Add Anaconda to my PATH`` (ignore the warning that this is not recommended) and ``Register Anaconda as my default Python`` and click on ``Install``
+       -  VERY IMPORTANT: Check the boxes in front ``Add Anaconda3 to my PATH`` (ignore the warning that this is not recommended) and ``Register Anaconda as my default Python`` (all the other default options are fine). Click on ``Install``.
        -  upon completion, click on ``Next``, then ``Finish``
+
+
 	  
 
 The Git version control system
@@ -95,7 +97,7 @@ Download the installer of `Git for Windows <https://git-scm.com/download/win>`__
    5. VERY IMPORTANT: When proposed a default editor, select 'Use the nano editor' (unless you want to learn Vim) 
    6. VERY IMPORTANT: When proposed to adjust the PATH environment variable,  tick the box "Use Git and optional unix tools from the command line prompt". 
 
-   You can accept all other defaults.  
+   You can accept all the other defaults.  
 
 Now, to finish the installation of git, launch ``Git bash`` (use the "Search box"), and on type::
 
@@ -126,7 +128,9 @@ It should print a message 'Python 3.x.xx...' and a give a prompt '>>>'. You are 
 
   2**100
 
-This should display the 100 power of 2. Press `Ctrl-D` to exit python, and again the exit 'Git Bash'.
+This should display the 100 power of 2. To exit python, type::
+
+  quit()
 
 If python does not start, there is something wrong. Most probably, you forgot to check the boxe ``Add Anaconda to my PATH`` during the installation of Anaconda. do it again. If it still does not work, ask for help.
 

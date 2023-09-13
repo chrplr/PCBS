@@ -36,7 +36,7 @@ Open a Terminal (that is, `Git Bash` for Windows users) and type::
 
   which python
 
-This should print the location of the python interpreter,  ``/home/macron/anaconda3/bin/python``
+This should print the location of the python interpreter,  e.g. something like  ``/home/macron/anaconda3/python``
 
 If no message is displayed, the PATH environment variable --- which lists the directories where programs can be found --- is messed up, most probably due not following closely the installation instructions (for Windows users, check the Anaconda and Git for Windows instructions)
 
@@ -46,7 +46,7 @@ You should see a prompt `>>>` followed by a blinking cursor. Python is waiting f
 
   2**100
 
-This should display the 100 power of 2. Press `Ctrl-D` to exit python, and again the exit the Terminal. Basic Python is working. 
+This should display the 100 power of 2. Type ``quit()`` to leave Python and press `Ctrl-D` to close the Terminal. Basic Python is working. 
 
 	      
 Check Git
@@ -98,10 +98,6 @@ This tests if Python3 is installed and correctly configured.
 .. image:: images/guess-number.png
    :width: 600
 
-.. code-block:: bash
-
-    python matches.py
-
 .. warning::
   If you receive an error message such as ``bash: python: No such file or directory``, and you are sure that python is installed, the most likely reason is that the problems lies with the `PATH environment variable <https://linuxhint.com/path_in_bash/>`__) listing all the directories: the directory containing the python executable file may be missing from the list. This happens for example, if you run the Anaconda3 installer and did not check the relevant box. 
 
@@ -116,18 +112,15 @@ Check basic graphics
 .. image:: images/koch0.png
      :width: 600
 
-.. code::
-
-  python tree.py
-
-.. image:: images/tree.png
-     :width: 200
+You can launch the Visual Code editor and open the python file ``PCBS/simulations/fractals/koch0.py`` to check the code. 
+	     
 
 
 Check matplotlib
 ----------------
 
 matplotlib is a python library to create and display graphics.
+Here, we try to generate some graphical effects to check that this library has been correctly installed.
 
 .. code-block:: bash
 
@@ -214,19 +207,18 @@ If you had to create a Python virtual environment when you installed expyriment,
   conda activate expyriment  # if you use conda
   pyenv activate expyriment  # if you use standard python with pyenv
 
-Try to run the following three experiments (Note that the programs can be interrupted at any time by pressing the ``Esc`` key).
+Try to run the following experiment (Note that the programs can be interrupted at any time by pressing the ``Esc`` key).
   
 
 .. code-block:: bash
 
-   cd ~/PCBS/experiments/xpy_Posner_attention_networks_task
-   python posner_task.py 
-
    cd ~/PCBS/experiments/xpy_parity_decision
    python parity_feedback.py
 
+This should run a small exepriment where the participant must chech the parity (odd or even) of numbers.
+   
 
-
+That's all folks !
 
 
 Appendices
