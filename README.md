@@ -21,6 +21,9 @@ of real-time experiments, simulations...).
 - [pdf](https://media.readthedocs.org/pdf/pcbs/latest/pcbs.pdf) 
 - [on-line html](https://pcbs.readthedocs.io/en/latest/)
 
+**Discord server**:
+  [https://discord.gg/9hKDQmRu](https://discord.gg/9hKDQmRu)
+
 **Quiz**
 
   [Quiz.pdf](https://github.com/chrplr/PCBS/blob/master/pdfs/quiz-python-2021.pdf)
