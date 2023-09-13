@@ -2,16 +2,10 @@ Resources
 =========
 
 
-Learning Python
----------------
+Learning Python3
+----------------
 
--  I **strongly recommend** the freely available book `Automate the
-   boring stuff with Python: Practical programming for total
-   beginners. <https://automatetheboringstuff.com/>`__ to total novices
-   (as well as the other books by the author). For those who dislike
-   reading, there are videos on the site.
-
--  See :download:`Python in a Nutshell <../slides/02_Python_in_a_nutshell/Python_in_a_nutshell-doc.html>`
+-  Check :download:`Python in a Nutshell <../slides/02_Python_in_a_nutshell/Python_in_a_nutshell-doc.html>` for a quick tour of Python.
 
 
 *  Books:
@@ -33,7 +27,7 @@ Learning Python
    -  `Openclassrooms’ Apprendre à programmer en
       Python <https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python>`__
    -  `Python 3 : des fondamentaux aux concepts avancés du
-      langage <https://www.fun-mooc.fr/courses/course-v1:UCA+107001+session02/eb326b60bec3461ba2621fd4d6bd95b8/>`__.
+      langage <https://www.fun-mooc.fr/en/cours/python-3-des-fondamentaux-aux-concepts-avances-du-langage/>`__
 
 
 Programming skills
@@ -53,7 +47,7 @@ Resources to learn the command shell
 
 Remarks:
 
-- Under Windows, after having installed Git, you have access to ``git bash``, which provides a terminal with the bash shell and emulates many unix commands.
+- Under Windows, if you have installed `Git for Windows <https://git-scm.com/download/win>`__, you have access to ``Git bash`` which provides a terminal with the bash shell and emulates many Unix commands.
 
 - Under Windows 10, Microsoft has recently made available the “Windows Subsystem for Linux”, which provides a virtual Linux system running inside Windows. (See https://itsfoss.com/install-bash-on-windows/, and https://itsfoss.com/windows-linux-kernel-wsl-2/).
 
