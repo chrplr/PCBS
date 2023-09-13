@@ -14,7 +14,7 @@ We explain below how to install:
 - The programming language *Python* (**version 3.7** !)
 - The experiment generator  *Expyriment* (python module)
 
-After the installation, you will need to `check`_ that everything works. 
+After the installation, you will need to check that everything works (see :ref:`check`
 
 .. warning::
    -  You will need to download several GB of software from the Internet.
@@ -179,7 +179,7 @@ Now you should check if everything works, following the instructions in chapter 
 
 
 Instructions for Windows using the Windows Subsystem for Linux (WSL)
--------------------------------------------------------------------
+--------------------------------------------------------------------
 
 As an alternative to installing Python et coll. as native Windows applications, you can install Ubuntu Linux under Windows, relying on Microsoft's *Windows Subsystem for Linux* (aka WSL) and then install Python and coll. within Ubuntu.
 
