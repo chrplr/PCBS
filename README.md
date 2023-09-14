@@ -26,9 +26,10 @@ of real-time experiments, simulations...).
 
 **Quiz**
 
-  [Quiz.pdf](https://github.com/chrplr/PCBS/blob/master/pdfs/quiz-python-2021.pdf)
+[questions](https://docs.google.com/forms/d/e/1FAIpQLSdBSxnvXvJb5G7NPkDg5SQ8E1BAVbrSQS5bBjnlzFDr3zZs7Q/viewform)
+
+<!---  [Quiz.pdf](https://github.com/chrplr/PCBS/blob/master/pdfs/quiz-python-2021.pdf) -->
   
-**Slack discussion forum**: <http://cogmaster-pcbs.slack.com> (Join [here](https://join.slack.com/t/cogmaster-pcbs/shared_invite/enQtNzc2MDQ0OTQ4NTUwLWYzZTNmMGQyMzJhOGJlYzZjOGM3NTU1MTZiMDcyMGI5MjlkMjljY2RlMjAzNzk0ODMxZDU1YjBlNWQ4N2U0MmQ)). Use the ``#general`` channel to ask questions. Do not hesitate!
 
 --
 [Christophe Pallier](http://www.pallier.org)
