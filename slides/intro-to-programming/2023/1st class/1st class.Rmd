@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Context
 ========================================================
-- inscription on the moodle: https://moodle.u-paris.fr/course/view.php?id=43747
+- Inscription on the moodle: https://moodle.u-paris.fr/course/view.php?id=43747  
 - and discord: https://discord.gg/9hKDQmRu
 
 
@@ -75,62 +75,62 @@ Resources 1/2
 >  - Allen B. Downey: Think Python http://greenteapress.com/thinkpython2/ 
 
 
-Resources 2/2
+Resources 2/2 : Online course & Mooc
 ========================================================
 
-## Online course & Mooc
-### Openclassrooms
+## Openclassrooms
 >  - https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python
     
 >  - https://openclassrooms.com/en/courses/6902811-learn-python-basics
   
-### Mooc de l'Inria
+## Mooc de l'Inria
 >  - https://www.my-mooc.com/fr/mooc/python-des-fondamentaux-a-lutilisation-du-langage/
 
-### Udemy
->  - Udemy: Python programming for absolute beginners: https://www.udemy.com/python-programming-for-absolute-beginners/                
+## Udemy
+>  - Udemy: https://www.udemy.com/python-programming-for-absolute-beginners/                
 
-### Code Academy
->  - Code Academy: Learn Python module: https://www.codecademy.com/learn/learn- python
+## Code Academy
+>  - Code Academy: Learn Python module: https://www.codecademy.com/learn/learn-python-3
 
-### Other
+## Other
 >  - Python 3: des fondamentaux aux concepts avancés du langage: https://lms.fun-mooc.fr/
 
-### Websites
+## Websites
 >  - https://pythontutor.com/ (Visualize and step by step code execution)
 
 
 Terminal cheat sheet
 ========================================================
 
-- Bash commands to navigate directories
+- Bash commands to navigate directories (with Gitbash in Windows or a terminal Linux of Mac)
 
   + Print Working Directory. Print the path of the current directory
-  ```{bash, echo = TRUE, eval= FALSE}
-  pwd
-  ```
+    ```{bash, echo = TRUE, eval= FALSE}
+    pwd
+    ```
 
   + List all files of the current directory
-  ```{bash, echo = TRUE, eval= FALSE}
-  ls folder
-  ```
+    ```{bash, echo = TRUE, eval= FALSE}
+    ls folder
+    ```
 
   + Moving into folder1 and subfolder2 at once. 
-  ```{bash, echo = TRUE, eval= FALSE}
-  cd folder1/subfolder2
-  ```
+    ```{bash, echo = TRUE, eval= FALSE}
+    cd folder1/subfolder2
+    ```
 
   + Moving out of a directory
-  ```{bash, echo = TRUE, eval= FALSE}
-  cd ..
-  ```
+    ```{bash, echo = TRUE, eval= FALSE}
+    cd ..
+    ```
   
   + Going back to the root directory
-  ```{bash, echo = TRUE, eval= FALSE}
-  cd ~
-  ```
+    ```{bash, echo = TRUE, eval= FALSE}
+    cd ~
+    ```
   
 - "Tab" to use the auto-completion
+- "Upper arrow" to see last commands
 
 - Many more bash commands to use...
 
@@ -156,10 +156,10 @@ Variables and data in python I
 - A variable is a named container for a particular set of bits or type of data (like integer, float, string etc...)
 
 - Declaring variables
-```{python, echo=TRUE}
-x = 10
-print(x)
-```
+  ```{python, echo=TRUE}
+  x = 10
+  print(x)
+  ```
 
 
 Variables and data in python II
@@ -179,6 +179,7 @@ Variables and data in python II
       _ = 5
       print(_)
       ```
+      This works
 
 
 Variables and data in python III
@@ -189,18 +190,18 @@ Variables and data in python III
 >   + Variables can contain digits but must not consist solely of digits and cannot start with a digit.
 >   + Variables are case-sensitive; uppercase and lowercase letters are distinct. 
 >   + There is no length limit for variables.
-      ```{python, echo=TRUE, error=TRUE}
-      1x = 10
-      print(x)
-      ``` 
-      ```{python, echo=TRUE, error=TRUE}
-      a bc = 2
-      print(abc)
-      ``` 
-      ```{python, echo=TRUE, error=TRUE}
-      t-t = 10
-      print(t-t)
-      ```
+>     ```{python, echo=TRUE, error=TRUE}
+>     1x = 10
+>     print(x)
+>     ``` 
+>     ```{python, echo=TRUE, error=TRUE}
+>     a bc = 2
+>     print(abc)
+>     ``` 
+>     ```{python, echo=TRUE, error=TRUE}
+>     t-t = 10
+>     print(t-t)
+>     ```
 
       This doesn't work
       
@@ -209,7 +210,7 @@ Variables and data in python III
 Variables and data in python IV
 ========================================================
 - Different types of variables: Primitive types
-    + integers
+    + integer
       ```{python, echo=TRUE, error=TRUE}
       x = 10
       print(type(x))
@@ -335,7 +336,7 @@ Strings 3/3
 
 - Functions working with strings:
 
-  - **len()** calculate the length of a function. Example:
+  - **len()** calculates the length of a function. Example:
     ```{python echo=TRUE}
     greetings = "Hello"
     print(len(greetings))
@@ -358,7 +359,7 @@ Booleans
   
   - It can have only two values **True** or **False**
   
-  - It is used usually to store the truth value of logic. Example:
+  - It is usually used to store the truth value in logic. Example:
     ```{python echo=TRUE}
     Is_it_Weekend = False
     print(Is_it_Weekend)
@@ -386,38 +387,38 @@ Program flow 1/4
 Program flow 1/4
 ========================================================
 
-- A program typically executes sequentially, moving from top to bottom.
+> - A program typically executes sequentially, moving from top to bottom.
 
-- But some instructions can change the flow. For examples *if* and *for* loops 
+> - But some instructions can change the flow. For examples *if* and *for* loops 
 
-- **if** will test a conditional comparison. If the condition is true, we can execute certain lines of code; if it's false, those lines of code may not be executed (though other code may still be executed). Example2 :
-  ```{python echo=TRUE}
-  string = "This string is long but not that long"
+> - **if** will test a conditional comparison. If the condition is true, we can execute certain lines of code; if it's false, those lines of code may not be executed (though other code may still be executed). Example2 :
+>   ```{python echo=TRUE}
+>   string = "This string is long but not that long"
 
-  if len(string) < 10:
-    print("This string has less than 10 character")
-  elif len(string) < 20:
-    print("This string has less than 20 character")
-  elif len(string) >30:
-    print("That string is too long for me...")
-  ```
+>   if len(string) < 10:
+>     print("This string has less than 10 character")
+>   elif len(string) < 20:
+>     print("This string has less than 20 character")
+>   elif len(string) >30:
+>     print("That string is too long for me...")
+>   ```
 
 Program flow 2/4
 ========================================================
 
 - You can also define other alternatives with **elif**
 
-- you can make use different ways to make your comparison:
-      - **and** 
-      - **or**
-      - **not**
+- You can use different methods to make your comparisons:
+    - **and** 
+    - **or**
+    - **not**
   
-- You can as well use comparative expressions:
-      - **<** 
-      - **>**
-      - **<=**
-      - **==** tests for equality
-      - **!=** tests for inequality
+- You can also use comparative expressions:
+    - **<** 
+    - **>**
+    - **<=**
+    - **==** tests for equality
+    - **!=** tests for inequality
 
 - Be careful **=** is not the same as **==**
   ```{python echo=TRUE, error=TRUE}
@@ -428,7 +429,7 @@ Program flow 2/4
   age == 31
   ```      
 
-Program flow 3/4
+Program flow 3/4 For loops
 ========================================================
 
 - **for** loops iterate one or a set of operations multiple times.
@@ -440,7 +441,7 @@ for x in range(5):
   print(x)
 ```    
 
-Program flow 3/4
+Program flow 3/4 For loops
 ========================================================
 
 - **for** loops iterate one or a set of operations multiple times.
