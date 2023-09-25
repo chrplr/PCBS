@@ -3,7 +3,7 @@ title: "Intro to programming 2"
 author: |
   | Henri Vandendriessche
   | henri.vandendriessche@ens.fr
-date: "2022-09-27"
+date: "2023-09-26"
 output:
   beamer_presentation:
     theme: CambridgeUS
@@ -47,6 +47,8 @@ Terminal cheat sheet reminder
   
 - "**Tab**" to use the auto-completion
 
+- "**Upper arrow**" to see last commands
+
 - **Ctrl + C** to stop a program execution
     
 - Many more bash commands to use...
@@ -65,8 +67,9 @@ So far
     + boolean
   
   - If and For loops:
-    + syntax use the right keywords **if**, **elif**, **else**, **for**, **in** and don't forget the **:**
-    + indentation 
+    + syntax use the right keywords **if**, **elif**, **else**, **for**, **in** 
+    + don't forget the **:**
+    + and the indentation 
 
 Reading advice  
 ========================================================
@@ -103,14 +106,14 @@ Constant vs Variable
 
 > - So far we have seen how to declare, instantiate and modify variables
 
-> - But there are "variables" that you don't want to modify and traditionally in programming those variables are called constant
+> - However, there are "variables" that you don't want to modify, and traditionally in programming, these variables are called constants.
 
-> - Unfortunately there is no native way of declaring a constant in python. However there is a unwritten convention that you use only upper case
+> - Unfortunately, there is no native way of declaring a constant in Python. However, there is an unwritten convention that you should use only uppercase letters.
 >     ```{python, echo=TRUE}
 >     CONST_PI = 3.1415
 >     ```
 
-> - Python include in its core library some constants
+> - Python includes some constants in its core library.
 >     ```{python, echo=TRUE}
 >     import math
 >
@@ -120,13 +123,13 @@ Constant vs Variable
 While loop 1/3
 ========================================================
 
-> - **While** loop will keep looping all over again an ending instruction is met.
+> - **While** loops will keep looping until an ending condition is met
 
-> - As the **for** loop incorporate a specified number of execution, the **while** loop is best suited for unknown or very large number of loop iterations.
+> - Unlike the **for** loop, which incorporates a specified number of executions, the **while** loop is best suited for situations with an unknown or very large number of loop iterations.
 
-> - As for **if** and **for**, **while** has a syntax with '**:**' and need indentation for the following lines to be included in the process
+> - Similar to **if** and **for**, the **while** loop has a syntax with ':' and requires indentation for the following lines to be included in the process.
 
-> - The two key features of a while loop are:
+> - The two key features of a **while** loop are:
 >     + the output condition 
 >     + the increment statement
 
@@ -154,9 +157,9 @@ While loop 2/3
 While loop 3/3
 ========================================================
 
-> - **While** loop will test if the output condition is True and if not it will execute the code and execute the increment statement
+> - The **While** loop will test if the output condition is True, and if not, it will execute the code and then execute the increment statement.
   
-> - If one of those two conditions are not correctly specified you'll encounter an error or an infinite loop...
+> - If either of these two conditions is not correctly specified, you may encounter an error or an infinite loop....
 > - Example 1
 >     ```{python, echo=TRUE, eval=FALSE}  
 >     i = 1
@@ -182,12 +185,12 @@ Warning on while loop
     print(x)
   ```
   NameError: name 'x' is not defined 
-
-
-Breaking a loop 1/2
+  
+  
+  Breaking a loop 1/2
 ========================================================
 
-- Breaking a loop is possible using **break**. For example when the rest of a loop is useless
+- You can break out of a loop using the **break** statement. This is useful, for example, when the remaining iterations of the loop are unnecessary.
 ```{python break, echo =TRUE}
 # Checking if a number is primitive
 N = 72239
@@ -213,10 +216,11 @@ print("You are in!")
 ```
 
 
+
 Breaking a loop 2/2
 ========================================================
 
-- The keyword **continue** is also very useful to pass the current iteration
+- The keyword **continue** also very useful for skipping the current iteration.is also very useful to pass the current iteration
 
 ```{python continue, echo =TRUE}
 for i in range(0,5):
@@ -227,12 +231,13 @@ for i in range(0,5):
 ```
 
 
+
 Lists 1/3
 ========================================================
 
 > - A list is a collection of related objects
   
-> - It's declared with brackets [] with a comma between two objects
+> - It is declared using square brackets [] with commas separating the objects.
 
 > - Example 1
 >   ```{python , echo=TRUE}
@@ -257,7 +262,7 @@ Lists 1/3
 Lists 2/3
 ========================================================
 
-  - Access element in a list through its index which is the same to access characters in a string as in a list
+  - You can access elements in a list through their index, which is the same as accessing characters in a string.
 ```{python , echo=TRUE}
 prog_language = ["python", "R", "C", "java", "Go", "Rust"]
 print(prog_language[0])
@@ -274,7 +279,7 @@ print(type(programming_language))
 Lists 3/3
 ========================================================
 
-> - As for the any other variables lists can be used with functions
+> - Lists, like any other variables, can be used with functions.
 >   - append()
 >   - remove()
 >   - pop()
@@ -294,15 +299,14 @@ Lists 3/3
 
 >   prog_language.sort()
 >   print(prog_language)
->   ```  
-    
+>   ```
 
 Tuples 1/3
 ========================================================
 
-> - Very similar to Lists and is used for data collection
+> - **Tuples** are very similar to Lists and is used for data collection
   
-> - Declared with "**()**" instead of square bracket and with a "**,**"
+> - They are declared with parentheses **()** instead of square brackets and with commas **,** to separate the objects.
 
 > - Example
 >     ```{python, echo=TRUE}
@@ -323,15 +327,15 @@ Tuples 2/3
 >     date_covid_shots.append("21-09-27")
 >     ```
   
-> - You can't change the order of items neither modify the value of an item
+> - You can't change the order of items or modify the value of an item.
 
 > - Tuples are best suited when you need ordered lists that would never change
->     + If you want to code a calendar :  days and years can be coded as tuples as they would not change but are ordered.
+>     + For example, if you want to represent a calendar, days and years can be coded as tuples since they won't change but are ordered.
 
 Tuples 3/3
 ========================================================
   
-> - Note that you could combine lists and tuples
+> - Note that you can combine lists and tuples
 >     ```{python, echo=TRUE}
 >     Cocktails = [("Cosmo","5€"),("Daiquiri","7€"),("B52","6€")]
 >     Cocktails.append(("Mojito","7€"))
@@ -339,20 +343,20 @@ Tuples 3/3
 >     print(Cocktails)
 >     ```
 
-> - NB: you can also declare a tuple using a tuple() constructor
+> - NB: You can also declare a tuple using the **tuple()** constructor.
 >     ```{python, echo = TRUE}
 >     date_covid_shots = tuple(["21-04-15", "21-05-18", "21-09-20"])
 >     # in this line you transform a list into a tuple
 >     print(type(date_covid_shots))
 >     ```
-  
 
 Sets 1/2
 ========================================================
 
-> - Very close to lists but are unordered unindexed and do not allow duplicate value BUT are mutable
+> - **Sets** are very similar to **lists** but differ in that they are unordered, unindexed, and do not allow duplicate values. However, they are mutable.
+
   
-> - Declared with {}
+> - Sets are declared using curly braces **{}** and items again are separated with **,**.
 
 > - Example  
 >     ```{python, echo = TRUE}
@@ -369,13 +373,13 @@ Sets 1/2
 Sets 2/2
 ========================================================
 
-> - But can't add/remove items in a set or access to item with index. Following instructions should throw an error
+> - You cannot add or remove items in a **set**, or access items with an index. Attempting to do so will result in an error.
 >     ```{python, echo=TRUE, error=TRUE}  
 >     fruit_I_like[0]
 >     fruit_I_like.append("banana")
 >     ```
 
-- append() doesn't work cause it imply an order to add an item at the end
+> - The **append()** method doesn't work with **sets** because it implies an order to add an item at the end, which sets do not have.
         
 > - NB: you can also declare a set using a set() constructor (as for the tuple)
 >     ```{python, echo = TRUE}
@@ -384,16 +388,17 @@ Sets 2/2
 >     print(type(date_covid_shots))
 >     ```      
 
+
 Dictionaries 1/5
 ========================================================
 
-> - Data structure that uses data in key-value pairs.
+> - **Dictionaries** are data structure that uses data in key-value pairs.
   
-> - Each items of a dictionary is a key-value pair
+> - Each item of a dictionary is a key-value pair.
   
-> - Each key has to be unique
+> - Each key in a dictionary must be unique.
   
-> - Declared in a very specific way
+> - Dictionaries are declared in a very specific way.
 >     - my_dictionary = { "key1" : value1, "key2": value2 ...}
 
 Dictionaries 2/5
@@ -423,7 +428,7 @@ Dictionaries 2/5
 Dictionaries 3/5 Create a Dictionary  
 ========================================================
 
->  - You have several methods to create a dictionary:
+>  - But you have several methods to create a dictionary:
     
     
 > - Example1
@@ -461,7 +466,7 @@ Dictionaries 4/5 Create a Dictionary
 >     - But with a constructor dict()
 
 
-Dictionaries 5/5 Use common operation
+Dictionaries 5/5 Common operation
 ========================================================
 
 > - Access to a a key-value pair
@@ -491,9 +496,10 @@ Summary on Python collections (~ Arrays)
 ========================================================
 
 
-![](/home/dbhenri/Documents/Cours python/PCBS/slides/intro-to-programming/2023/2nd class/python collections.png)
+![](/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/2nd class/python collections.png)
 
-Exercises 1
+
+Exercises
 ========================================================
 
 - Exercise 1: Lists: list1 = [1,2,3,4,1]
@@ -515,5 +521,3 @@ Exercises 1
 
 - Exercise 4: Given a list of words, count the number of times each word appears in the list (using dictionary)
   + animaList=["dog", "horse", "cat", "fish", "cat", "fox", "tiger", "tiger", "flamingo", "cat"]
-
-
