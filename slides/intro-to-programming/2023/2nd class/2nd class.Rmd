@@ -496,7 +496,7 @@ Summary on Python collections (~ Arrays)
 ========================================================
 
 
-![](/home/henri/Documents/python/course/PCBS/slides/intro-to-programming/2022/2nd class/python collections.png)
+![](/home/dbhenri/Documents/Cours python/PCBS/slides/intro-to-programming/2023/2nd class/python collections.png)
 
 
 Exercises
