@@ -89,6 +89,14 @@ Today
 - Exercises
 
 
+If you want to practice a bit
+========================================================
+
+- You can find exercises online for example on W3schools.com 
+  + https://www.w3schools.com/python/exercise.asp
+
+
+
 Python standard library 1/3
 ========================================================
 
