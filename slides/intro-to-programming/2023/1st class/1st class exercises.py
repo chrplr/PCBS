@@ -58,7 +58,7 @@ for i in range(101):
         print(i)
 
 # solution 2
-for i in range(0,102,2):  # in that solution the range fonction increment 2 by 2 so i would always be odd.
+for i in range(0,101,2):  # in that solution the range fonction increment 2 by 2 so i would always be odd.
     print(i)
 
 
