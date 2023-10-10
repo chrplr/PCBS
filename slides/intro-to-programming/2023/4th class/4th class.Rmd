@@ -1,5 +1,5 @@
 ---
-title: "Intro tp programming 4"
+title: "Intro to programming 4"
 author: |
   | Henri Vandendriessche
   | henri.vandendriessche@ens.fr
