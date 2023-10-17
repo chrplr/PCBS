@@ -249,7 +249,7 @@ plt.show()
 Return values 3/3
 ========================================================
 
-```{python, eval=TRUE, echo=FALSE}
+```{python, eval=FALSE, echo=FALSE}
 def func(x):
   y = 2 * x + 1
   return y
@@ -521,7 +521,7 @@ Exercises:
 
 3- Define a function is_prime(x) which returns True if x is a prime number, else False. Use it to list all prime numbers below 1000.
 
-4- Two taxis companies propose different pricing schemes: Company A charges 4.80€ plus 1.15€ by km traveled. Company B charges 3.20€ plus 1.20€ by km traveled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' and 'company B', the cheapest company for a given distance.
+4- Two taxis companies propose different pricing schemes: Company A charges 4.80€ plus 1.15€ by km traveled. Company B charges 3.20€ plus 1.20€ by km traveled. Write a first function which, given a distance, returns the costs of both companies, and a second function that returns 'company A' or 'company B', the cheapest company for a given distance.
 
 5- Write a function are_anagrams(word1, word2) that tests if two words are anagrams, that is contain the same letters in different orders.
 

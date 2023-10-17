@@ -211,7 +211,7 @@ Exercises
 
 - Exercise 1: Lottery pick. Generate 100 random lottery tickets (one ticket is a sequence of 5 digits) and pick one winner out of it. 
 
-- Exercise 2: write a program that generates a random 10 character long password including 6 letters with 2 of them uppercase, 1 digit and 1 special symbol.
+- Exercise 2: write a program that generates a random 10 character long password including 6 lowercase letters and 2 of them uppercase, 1 digit and 1 special symbol.
 
 - Exercise 3: Monte Carlo estimation of Pi: one way to estimate the value of the pi is to generate a large number of random points in the unit square and see how many fall within the unit circle; their proportion is an estimate of the area of the circle. See https://academo.org/demos/estimating-pi-monte-carlo. Implement the proposed algorithm to estimate the value of pi.
 
