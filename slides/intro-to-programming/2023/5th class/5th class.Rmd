@@ -226,7 +226,7 @@ Recursive function example 1
 
   - Let's consider a concrete example of a recursive implementation, although it may not be the most efficient:
 
-![](/home/hv/Documents/python/course/PCBS/slides/intro-to-programming/2023/5th class/recursivity.png)
+![](/home/dbhenri/Documents/Cours python/PCBS/slides/intro-to-programming/2023/5th class/recursivity.png)
 
 Recursive function example 2
 ========================================================
@@ -406,7 +406,7 @@ greet(whisper)
 Application of high order function 2  1/5
 ========================================================
 
-  - More examples of Functions as Arguments:
+  - Let's consider these examples:
   
 ```{python, echo=TRUE}
 def sum_naturals(n):
@@ -431,7 +431,7 @@ sum_cubes(4)
 Application of high order function 2  2/5
 ========================================================
 
-  - More example of Functions as Arguments:
+  - Another example:
   
 ```{python, echo=TRUE}
 def pi_sum(n):
@@ -442,7 +442,7 @@ def pi_sum(n):
 pi_sum(100)
 ```
 
-  
+  - These functions share many commonalities, except for their names and the calculation of k.
   
 Application of high order function 2  3/5
 ======================================================== 
