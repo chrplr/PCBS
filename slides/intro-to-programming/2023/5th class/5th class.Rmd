@@ -355,7 +355,7 @@ Exercises on recursion
 
 1 - Write a recursive function to reverse a list.
 
-2 - Write a recursive function to generate all permutations of a list of values.
+2 - Write a recursive function to generate all permutations of a string of 3 characters "abc".
 
 3 - Write a script that returns the pathnames of all the files contained inside a directory, regardless of the hierarchy's depth. You will need to use os.listdir() and os.path.isdir().
 
