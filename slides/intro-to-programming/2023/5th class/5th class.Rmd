@@ -119,7 +119,7 @@ More on functions 1/4
 More on functions 2/4
 ========================================================
 
-- Arbitrary Argument or \*args:
+- **Arbitrary Argument** or \*args:
 ```{python arg, echo =TRUE}
 def my_function(*parameter):
   print("Hello, my name is", parameter[1])
@@ -156,7 +156,7 @@ f(b=1, a=2)
 More on functions 4/4
 ========================================================
 
-> - If you can pass an unknown number of arguments to a function using \*args and accept them in an unordered manner with Keyword arguments, you have the capability to use Arbitrary Keyword Arguments, also known as \*\*kwargs.
+> - If you can pass an unknown number of arguments to a function using \*args and accept them in an unordered manner with Keyword arguments, you have the capability to use **Arbitrary Keyword Arguments**, also known as \*\*kwargs.
 >   ```{python kwarg, echo =TRUE}
 >   def my_function(**parameter):
 >     print("Hello, my name is", parameter["name1"], "and not", parameter["name3"])
