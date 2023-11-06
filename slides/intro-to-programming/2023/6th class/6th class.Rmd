@@ -3,7 +3,7 @@ title: "Intro to programming 6"
 author: |
   | Henri Vandendriessche
   | henri.vandendriessche@ens.fr
-date: "2022-10-25"
+date: "2023-11-06"
 output:
   beamer_presentation:
     theme: CambridgeUS
@@ -92,11 +92,10 @@ Previously on Intro to Programming (Python)
 Today
 ========================================================
 
-
  - Read and write files
 
 
-Manipulate files : Open and read a file 1/3
+Manipulate files : Open and read a file 1/4
 ========================================================
 
 > - To interact with files in Python, you have a built-in function available: **open()**.
@@ -127,7 +126,7 @@ Manipulate files : Open and read a file 2/4
 >   ```
 
 
-Manipulate files : Open and read a file 2/4
+Manipulate files : Open and read a file 3/4
 ========================================================
 
 - Example 2:
@@ -137,7 +136,7 @@ print(Myfile.read(5))
 Myfile.close()
 ```
 
-Manipulate files : Open and read a file 3/4
+Manipulate files : Open and read a file 4/4
 ========================================================
   
 > - You can also use:
