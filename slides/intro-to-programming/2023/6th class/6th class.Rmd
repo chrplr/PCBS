@@ -255,6 +255,6 @@ Exercises
   - 1 Write a script that prints the first 10 lines of a file.
   - 2 Write a script that prints the last 10 lines of a file (or the whole file if it is less than 10 lines long).
   - 3 Write a script that opens and reads a text file, printing all lines containing a given target word.
-  - 4 Calculate the number of words (removing punctuation) in a text file. Hint: use the **split()** and **strip()** functions.
+  - 4 Calculate the number of words (removing punctuation) in a text file. Hint: use the **split()** functions.
   - 5 Calculate the number of occurrences of each word in a text file.
   - 6 Print a bar plot of the word occurrences found in the previous exercises using matplotlib.
