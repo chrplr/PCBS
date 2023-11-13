@@ -180,7 +180,7 @@ Manipulate files : write a file
    
 > - To create and write to a file, you need to use the access mode 'w'.
    
-- Note that to read a file just created, you need to close it and open it again in read mode.
+> - Note that to read a file just created, you need to close it and open it again in read mode.
 >   ```{python, echo = TRUE}
 >   MyTestFile = open('test2.txt', 'w')
 >   MyTestFile.write("Once upon a time in a Cognitive Master")
