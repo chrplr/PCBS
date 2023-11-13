@@ -17,6 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Terminal cheat sheet reminder
 ========================================================
 
+
 - Bash commands to navigate directories
 
   + Print Working Directory. Print the path of the current directory
@@ -53,7 +54,10 @@ Terminal cheat sheet reminder
 
 - **Ctrl + C** to stop a program execution
 
+- "**Upper arrow**" to see last commands
+
 - Many more bash commands to use...
+
 
 
 Previously on Intro to Programming (Python)
