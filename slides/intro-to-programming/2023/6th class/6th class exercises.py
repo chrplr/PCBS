@@ -92,7 +92,7 @@ def count_words(text):
   c = 0
   for l in text: # 
     print(l.split()) # split the line
-    for w in l.split(): # for loop through all word of strip and split line
+    for w in l.split(): # for loop through all word and split line
       print(list(w))
       print(type(w))
       for char in list(w):
