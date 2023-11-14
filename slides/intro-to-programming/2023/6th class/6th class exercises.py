@@ -111,3 +111,51 @@ text = MyTestFile.readlines()
 print(count_words(text))
 
 MyTestFile.close()
+
+
+
+##################
+### Exercice 5 ###
+##################
+
+print("Exercise 5")
+
+#- 5 compute the number of occurrences of each word in a text file
+
+def count_words(text):
+  dict_words = {}
+  for l in text:
+    for w in l.split():
+      if w in dict_words:
+        dict_words[w] +=1
+      else:
+        dict_words[w] = 1
+  return dict_words
+
+
+MyTestFile = open('Survival rules for programming.txt', 'r')
+text = MyTestFile.readlines()
+
+print(count_words(text))
+
+
+
+##################
+### Exercice 6 ###
+##################
+
+print("Exercise 6")
+
+# - 6 print a bar plot of the occurrences found in the previous exercises (using matplotlib)
+
+import matplotlib.pyplot as plt
+
+
+def plot_frequency(dictionary):
+  plt.bar(list(dictionary.keys()), dictionary.values(), color='g')
+  plt.show()
+
+MyTestFile = open('Survival rules for programming.txt', 'r')
+text = MyTestFile.readlines()
+
+plot_frequency(count_words(text)) # We use the function af the last exercise count words
