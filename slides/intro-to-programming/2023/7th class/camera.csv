@@ -1,0 +1,1392 @@
+Code postal;Numéro;Implantation;Rue croisement 1;Rue croisement 2;Rue croisement 3;Précision de l’implantation;Date de mise en service
+75001;46685;Avenue du Général Lemonnier, rue de Rivoli;Avenue du Général Lemonnier; rue de Rivoli;;croisement;20/01/12
+75001;1058;Jardin des Halles, Colonne Médicis;Jardin des Halles; Colonne Médicis;;croisement;inconnue
+75001;1059;Jardin des Halles, Porte du Louvre;Jardin des Halles; Porte du Louvre;;croisement;inconnue
+75001;1060;Jardin des Halles, rue Berger, rue des Prouvaires;Jardin des Halles; rue Berger; rue des Prouvaires;croisement;inconnue
+75001;35388;Place André Malraux, avenue Opéra;Place André Malraux; avenue Opéra;;croisement;25/01/13
+75001;51066;Place de la Concorde, rue de Rivoli;Place de la Concorde; rue de Rivoli;;croisement;11/01/13
+75001;81411;Place du Châtelet, avenue Victoria;Place du Châtelet; avenue Victoria;;croisement;21/12/11
+75001;43353;Place du Palais-Royal;Place du Palais-Royal;;;adresse imprécise;27/01/12
+75001;29222;Place Joachim du Bellay, rue Saint-Denis, rue des Innocents;Place Joachim du Bellay; rue Saint-Denis; rue des Innocents;croisement;27/01/12
+75001;42234;Place Joachim du Bellay, rue Berger, rue Pierre Lescot;Place Joachim du Bellay; rue Berger; rue Pierre Lescot;croisement;09/11/12
+75001;58791;Place Joachim du Bellay, rue des Innocents;Place Joachim du Bellay; rue des Innocents;;croisement;09/03/12
+75001;77747;Place Joachim du Bellay, rue Berger, rue Saint-Denis;Place Joachim du Bellay; rue Berger; rue Saint-Denis;croisement;03/02/12
+75001;60777;Place Maurice Barrès — rue Cambon, rue Saint-Honoré;Place Maurice Barrès — rue Cambon; rue Saint-Honoré;;croisement;21/09/12
+75001;21868;Place Palais Royal;Place Palais Royal;;;adresse imprécise;21/12/11
+75001;16739;Place Vendôme;Place Vendôme;;;adresse imprécise;02/11/12
+75001;1043;Place Vendôme (Sud-Est);Place Vendôme (Sud-Est);;;point décrit;inconnue
+75001;89978;Pont de la Concorde amont — Seine;Pont de la Concorde amont — Seine;;;point décrit;01/03/13
+75001;96356;Pont des Arts amont — Seine;Pont des Arts amont — Seine;;;point décrit;21/12/12
+75001;16887;Quai de la Mégisserie, Pont Neuf;Quai de la Mégisserie; Pont Neuf;;croisement;21/12/11
+75001;1041;Quai des Orfèvres, rue de Harlay;Quai des Orfèvres; rue de Harlay;;croisement;15/12/17
+75001;99000;Quai François Mitterrand, Pont du Carrousel;Quai François Mitterrand; Pont du Carrousel;;croisement;01/03/13
+75001;1057;Quai François Mitterrand, rue de l'Amiral de Coligny;Quai François Mitterrand; rue de l'Amiral de Coligny;;croisement;08/06/18
+75001;10439;Rue Berger, rue Pierre Lescot;Rue Berger; rue Pierre Lescot;;croisement;23/03/12
+75001;11011;Rue Berger, Porte Berger (Forum des Halles);Rue Berger; Porte Berger (Forum des Halles);;croisement;21/01/13
+75001;35346;Rue Colonel Driant, rue Valois;Rue Colonel Driant; rue Valois;;croisement;08/06/12
+75001;67865;Rue Coquillière, rue du Louvre;Rue Coquillière; rue du Louvre;;croisement;04/05/12
+75001;79769;Rue Croix des Petits Champs, rue Vrillière;Rue Croix des Petits Champs; rue Vrillière;;croisement;04/05/12
+75001;23987;Rue de la Paix, rue Danielle Casanova;Rue de la Paix; rue Danielle Casanova;;croisement;02/11/12
+75001;82064;Rue de la Reynie, boulevard de Sébastopol;Rue de la Reynie; boulevard de Sébastopol;;croisement;17/02/12
+75001;10642;Rue de Rivoli, rue des Bourdonnais;Rue de Rivoli; rue des Bourdonnais;;croisement;14/12/12
+75001;44373;Rue de Rivoli, rue de l'Echelle;Rue de Rivoli; rue de l'Echelle;;croisement;08/06/12
+75001;44805;Rue de Rivoli, rue du 29 Juillet;Rue de Rivoli; rue du 29 Juillet;;croisement;08/06/12
+75001;67140;Rue de Rivoli, rue de Marengo;Rue de Rivoli; rue de Marengo;;croisement;08/06/12
+75001;79901;Rue de Rivoli, rue de Castiglione;Rue de Rivoli; rue de Castiglione;;croisement;25/05/12
+75001;50256;Rue de Viarmes, rue Adolphe Julien;Rue de Viarmes; rue Adolphe Julien;;croisement;08/06/12
+75001;1049;Rue des Halles, rue de la Ferronerie;Rue des Halles; rue de la Ferronerie;;croisement;08/11/18
+75001;16819;Rue des Pyramides, avenue de l'Opéra;Rue des Pyramides; avenue de l'Opéra;;croisement;06/07/12
+75001;74254;Rue du Cygne, rue Saint-Denis;Rue du Cygne; rue Saint-Denis;;croisement;24/02/12
+75001;1011;Rue du Jour, rue Rambuteau;Rue du Jour; rue Rambuteau;;croisement;11/10/13
+75001;1055;Rue Montmartre, rue de Turbigo;Rue Montmartre; rue de Turbigo;;croisement;10/03/17
+75001;1056;Rue Montorgueil, rue de Turbigo;Rue Montorgueil; rue de Turbigo;;croisement;10/03/17
+75001;34698;Rue Pierre Lescot, rue de Turbigo;Rue Pierre Lescot; rue de Turbigo;;croisement;27/01/12
+75001;82655;Rue Pierre Lescot, rue de la Cossonnerie;Rue Pierre Lescot; rue de la Cossonnerie;;croisement;02/03/12
+75001;11498;Rue Rambuteau, boulevard de Sébastopol;Rue Rambuteau; boulevard de Sébastopol;;croisement;03/02/12
+75001;1051;Rue Saint-Denis, rue de Rivoli;Rue Saint-Denis; rue de Rivoli;;croisement;08/07/16
+75001;57222;Rue Saint-Honoré, place Vendôme;Rue Saint-Honoré; place Vendôme;;croisement;07/09/12
+75001;1069;Jardin des Halles — allée Nord-Ouest, Coquillière;;;;point décrit;27/01/17
+75001;1071;Halles — Canopée Sud-Ouest, rue Berger;;;;point décrit;02/03/17
+75001;11522;Quai des Tuileries, pont de Solférino — Seine;;;;point décrit;10/10/14
+75001;30950;Place du Châtelet;;;;adresse imprécise;20/01/12
+75001;70744;Place Maurice Quentin;;;;adresse précise;04/05/12
+75001;79777;Place du Carrousel;;;;adresse imprécise;22/02/13
+75001;88364;Pont Neuf amont — Seine;;;;point décrit;22/05/15
+75001;92689;Pont de la Concorde aval — Seine;;;;point décrit;01/03/13
+75001;99375;Pont Neuf en aval — Seine;;;;point décrit;22/05/15
+75001;1053;Place Joachim du Bellay (Toiture hôtel Citadines);;;;point décrit;19/10/16
+75001;1065;Halles — Canopée Nord-Ouest, rue Rambuteau;;;;point décrit;02/03/17
+75001;1066;Jardin des Halles — Saint-Eustache, Rambuteau;;;;point décrit;27/01/17
+75001;1067;Jardin des Halles — Prairie Ouest;;;;point décrit;02/03/17
+75001;1068;Jardin des Halles — Prairie Est;;;;point décrit;inconnue
+75002;2006;Boulevard des Capucines, rue Scribe;Boulevard des Capucines; rue Scribe;;croisement;Début 2019
+75002;15493;Boulevard des Capucines, rue Caumartin;Boulevard des Capucines; rue Caumartin;;croisement;13/04/12
+75002;70766;Boulevard des Italiens, rue de la Michodière;Boulevard des Italiens; rue de la Michodière;;croisement;03/08/12
+75002;89516;Boulevard des Italiens, rue Le Peletier, rue Favart;Boulevard des Italiens; rue Le Peletier; rue Favart;croisement;13/04/12
+75002;72618;Boulevard Poissonnière, rue Poissonnière;Boulevard Poissonnière; rue Poissonnière;;croisement;26/10/12
+75002;88097;Boulevard Poissonnière, rue Montmartre;Boulevard Poissonnière; rue Montmartre;;croisement;09/03/12
+75002;91229;Boulevard Saint-Denis, boulevard de Sébastopol;Boulevard Saint-Denis; boulevard de Sébastopol;;croisement;22/06/12
+75002;20941;Place de la Bourse, rue Vivienne, rue Feydeau;Place de la Bourse; rue Vivienne; rue Feydeau;croisement;24/02/12
+75002;23076;Place de la Bourse, rue Notre-Dame des Victoires, rue Réaumur;Place de la Bourse; rue Notre-Dame des Victoires; rue Réaumur;croisement;01/08/14
+75002;24047;Place de la Bourse, rue Notre-Dame des Victoires;Place de la Bourse; rue Notre-Dame des Victoires;;croisement;10/02/12
+75002;31706;Place de la Bourse, rue du Quatre Septembre;Place de la Bourse; rue du Quatre Septembre;;croisement;21/12/11
+75002;17326;Rue d'Antin, avenue de l'Opéra;Rue d'Antin; avenue de l'Opéra;;croisement;12/10/12
+75002;89465;Rue Danielle Casanova, avenue de l'Opéra;Rue Danielle Casanova; avenue de l'Opéra;;croisement;12/10/12
+75002;40753;Rue Daunou, rue de la Paix;Rue Daunou; rue de la Paix;;croisement;30/03/12
+75002;26709;Rue de Gramont, boulevard des Italiens;Rue de Gramont; boulevard des Italiens;;croisement;08/06/12
+75002;2033;Rue de la Lune, rue Notre-Dame de Bonne Nouvelle;Rue de la Lune; rue Notre-Dame de Bonne Nouvelle;;croisement;25/11/16
+75002;72782;Rue des Petits Champs, rue Sainte-Anne;Rue des Petits Champs; rue Sainte-Anne;;croisement;02/06/14
+75002;29697;Rue Drouot, boulevard Haussmann;Rue Drouot; boulevard Haussmann;;croisement;13/04/12
+75002;93299;Rue du Louvre, rue Montmartre;Rue du Louvre; rue Montmartre;;croisement;07/09/12
+75002;12927;Rue du Saint-Denis, rue Greneta;Rue du Saint-Denis; rue Greneta;;croisement;06/07/12
+75002;62793;Rue Monsigny, rue du Quatre Septembre, rue de Choiseul;Rue Monsigny; rue du Quatre Septembre; rue de Choiseul;croisement;27/01/12
+75002;72870;Rue Radziwill, rue des Petits Champs;Rue Radziwill; rue des Petits Champs;;croisement;09/03/12
+75002;18870;Rue Réaumur, rue Saint-Denis;Rue Réaumur; rue Saint-Denis;;croisement;21/12/11
+75002;22579;Rue Réaumur, boulevard de Sébastopol;Rue Réaumur; boulevard de Sébastopol;;croisement;20/07/12
+75002;78022;Rue Réaumur, rue des Petits Carreaux;Rue Réaumur; rue des Petits Carreaux;;croisement;18/01/13
+75002;15991;Rue Saint-Denis, rue Sainte-Apolline;Rue Saint-Denis; rue Sainte-Apolline;;croisement;21/09/12
+75002;96475;Rue Vivienne, boulevard Montmartre;Rue Vivienne; boulevard Montmartre;;croisement;22/06/12
+75002;67171;19, boulevard Poissonnière;;;;adresse précise;04/05/12
+75003;57802;20, rue Notre-Dame de Nazareth;;;;adresse précise;23/03/12
+75003;29963;Boulevard Beaumarchais, rue Saint-Sébastien;Boulevard Beaumarchais; rue Saint-Sébastien;;croisement;17/08/12
+75003;79973;Boulevard Beaumarchais, rue du Pas-de-la-Mule;Boulevard Beaumarchais; rue du Pas-de-la-Mule;;croisement;14/09/12
+75003;86717;Boulevard Beaumarchais, rue des Arquebusiers;Boulevard Beaumarchais; rue des Arquebusiers;;croisement;14/09/12
+75003;40244;Boulevard de Sébastopol, rue de Turbigo;Boulevard de Sébastopol; rue de Turbigo;;croisement;25/05/12
+75003;45415;Boulevard des Filles du Calvaire, rue des Filles du Calvaire;Boulevard des Filles du Calvaire; rue des Filles du Calvaire;;croisement;06/07/12
+75003;74979;Boulevard Saint-Denis, boulevard de Strasbourg;Boulevard Saint-Denis; boulevard de Strasbourg;;croisement;15/06/12
+75003;27643;Place de la République, boulevard du Temple;Place de la République; boulevard du Temple;;croisement;14/09/12
+75003;84550;Place de la République, rue du Temple;Place de la République; rue du Temple;;croisement;12/10/12
+75003;77904;Rue de Bretagne, rue de Turenne;Rue de Bretagne; rue de Turenne;;croisement;08/05/15
+75003;3033;Rue de Montgolfier, rue Borda;Rue de Montgolfier; rue Borda;;croisement;28/07/16
+75003;56119;Rue de Picardie, rue de Franche Comté;Rue de Picardie; rue de Franche Comté;;croisement;29/06/12
+75003;76984;Rue de Réaumur, rue de Bretagne;Rue de Réaumur; rue de Bretagne;;croisement;29/06/12
+75003;27377;Rue de Turbigo, rue des Fontaines du Temple;Rue de Turbigo; rue des Fontaines du Temple;;croisement;18/05/12
+75003;84854;Rue de Turbigo, rue du Temple;Rue de Turbigo; rue du Temple;;croisement;27/04/12
+75003;84809;Rue des Archives, rue Rambuteau;Rue des Archives; rue Rambuteau;;croisement;13/01/12
+75003;18247;Rue des Francs Bourgeois, rue de Turenne;Rue des Francs Bourgeois; rue de Turenne;;croisement;13/04/12
+75003;3036;Rue du Temple, rue Michel le Comte;Rue du Temple; rue Michel le Comte;;croisement;29/07/16
+75003;23535;Rue du Temple, rue Rambuteau;Rue du Temple; rue Rambuteau;;croisement;13/01/12
+75003;92031;Rue du Vertbois, rue de Turbigo;Rue du Vertbois; rue de Turbigo;;croisement;18/01/13
+75003;14591;Rue Papin, rue Saint-Martin;Rue Papin; rue Saint-Martin;;croisement;22/02/13
+75003;54318;Rue Perrée, rue Eugène Spuller;Rue Perrée; rue Eugène Spuller;;croisement;29/06/12
+75003;36697;Rue Réaumur, rue de Turbigo;Rue Réaumur; rue de Turbigo;;croisement;20/01/12
+75003;71418;Rue Réaumur, rue Saint-Martin;Rue Réaumur; rue Saint-Martin;;croisement;15/06/12
+75003;64258;Rue Vaucanson, rue du Vertbois;Rue Vaucanson; rue du Vertbois;;croisement;18/05/12
+75003;3040;Rue Vieille du Temple, rue de la Perle;Rue Vieille du Temple; rue de la Perle;;croisement;08/07/16
+75003;55744;9, place de la République;;;;adresse précise;28/09/12
+75004;74952;14, place des Vosges;;;;adresse précise;24/02/12
+75004;4059;Boulevard Bourdon, rue Bassompierre;Boulevard Bourdon; rue Bassompierre;;croisement;11/05/17
+75004;79965;Boulevard Bourdon, boulevard Morland;Boulevard Bourdon; boulevard Morland;;croisement;09/01/12
+75004;68710;Boulevard du Palais, quai des Orfèvres;Boulevard du Palais; quai des Orfèvres;;croisement;16/03/12
+75004;39504;Boulevard Henri IV, rue Castex;Boulevard Henri IV; rue Castex;;croisement;06/07/12
+75004;24684;Place Baudoyer, rue François Miron;Place Baudoyer; rue François Miron;;croisement;27/04/12
+75004;29297B;Place de l'Hôtel de Ville, avenue Victoria;Place de l'Hôtel de Ville; avenue Victoria;;croisement;03/02/12
+75004;29297;Place de l'Hôtel de Ville, avenue Victoria;Place de l'Hôtel de Ville; avenue Victoria;;croisement;03/02/12
+75004;65260;Place de la Bastille, boulevard Beaumarchais;Place de la Bastille; boulevard Beaumarchais;;croisement;29/06/12
+75004;15674;Place du Parvis Notre-Dame, Pont au Double;Place du Parvis Notre-Dame; Pont au Double;;croisement;17/02/12
+75004;37825;Place Georges Pompidou, 141, rue Saint-Martin;;;;point décrit;16/11/12
+75004;71698;Place Georges Pompidou, rue Saint-Martin, rue Aubry le Boucher;Place Georges Pompidou; rue Saint-Martin; rue Aubry le Boucher;croisement;19/10/12
+75004;42910;Pont Louis Philippe, quai de l'Hôtel de Ville;Pont Louis Philippe; quai de l'Hôtel de Ville;;croisement;09/11/12
+75004;93031;Pont Notre-Dame, quai de Corse;Pont Notre-Dame; quai de Corse;;croisement;22/06/12
+75004;94871;Pont Saint-Louis aval — Seine;Pont Saint-Louis aval — Seine;;;point décrit;29/06/12
+75004;27843;Quai d'Orléans, rue Jean du Bellay;Quai d'Orléans; rue Jean du Bellay;;croisement;13/01/12
+75004;29770;Quai de Gesvres, rue Saint-Martin;Quai de Gesvres; rue Saint-Martin;;croisement;21/12/11
+75004;48238;Quai de l'Archevêché, pont de l'Archevêché;Quai de l'Archevêché; pont de l'Archevêché;;croisement;26/10/12
+75004;59063;Quai de l'Hôtel de Ville, Pont d'Arcole;Quai de l'Hôtel de Ville; Pont d'Arcole;;croisement;22/06/12
+75004;66461;Quai des Célestins, pont Marie;Quai des Célestins; pont Marie;;croisement;06/07/12
+75004;25230;Quai Henri IV, Pont de Sully;Quai Henri IV; Pont de Sully;;croisement;01/03/13
+75004;17774;Rue Brisemiche, rue du Cloître Saint-Merri;Rue Brisemiche; rue du Cloître Saint-Merri;;croisement;08/06/12
+75004;42301;Rue Charlemagne, rue des Jardins Saint-Paul;Rue Charlemagne; rue des Jardins Saint-Paul;;croisement;04/05/12
+75004;67266B;Rue d'Arcole, place du Parvis Notre-Dame;Rue d'Arcole; place du Parvis Notre-Dame;;croisement;09/03/12
+75004;67266;Rue d'Arcole, place du Parvis Notre-Dame;Rue d'Arcole; place du Parvis Notre-Dame;;croisement;10/02/12
+75004;4003;Rue de la Cité, place du Parvis de Notre-Dame;Rue de la Cité; place du Parvis de Notre-Dame;;croisement;20/11/17
+75004;31606;Rue de la Coutellerie, avenue Victoria;Rue de la Coutellerie; avenue Victoria;;croisement;21/12/11
+75004;47437;Rue de la Verrerie, rue du Renard;Rue de la Verrerie; rue du Renard;;croisement;08/06/12
+75004;84795;Rue de Lobau, rue de Rivoli;Rue de Lobau; rue de Rivoli;;croisement;30/03/12
+75004;15518;Rue de Rivoli, rue Saint-Martin;Rue de Rivoli; rue Saint-Martin;;croisement;21/12/11
+75004;35777;Rue de Rivoli, rue Pont Louis Philippe;Rue de Rivoli; rue Pont Louis Philippe;;croisement;20/04/12
+75004;67079;Rue de Rivoli, boulevard de Sébastopol;Rue de Rivoli; boulevard de Sébastopol;;croisement;27/04/12
+75004;4058;Rue de Sully, boulevard Henri IV;Rue de Sully; boulevard Henri IV;;croisement;08/07/16
+75004;97572;Rue des Ecouffes, rue des Rosiers;Rue des Ecouffes; rue des Rosiers;;croisement;09/03/12
+75004;4051;Rue des Francs Bourgeois, rue Vieille du Temple;Rue des Francs Bourgeois; rue Vieille du Temple;;croisement;24/11/16
+75004;66378;Rue des Rosiers, rue Vieille du Temple;Rue des Rosiers; rue Vieille du Temple;;croisement;09/03/12
+75004;95558;Rue des Tournelles, rue du Pas-de-la-Mule;Rue des Tournelles; rue du Pas-de-la-Mule;;croisement;27/04/12
+75004;38824;Rue du Cloître Notre Dame, quai de l'Archevêché;Rue du Cloître Notre Dame; quai de l'Archevêché;;croisement;29/06/12
+75004;96036;Rue du Petit Musc, rue Saint-Antoine;Rue du Petit Musc; rue Saint-Antoine;;croisement;21/12/11
+75004;51128;Rue Ferdinand Duval, rue des Rosiers;Rue Ferdinand Duval; rue des Rosiers;;croisement;09/03/12
+75004;85333;Rue Geoffroy l'Asnier, allée des Justes de France;Rue Geoffroy l'Asnier; allée des Justes de France;;croisement;13/04/12
+75004;60044;Rue Nonnains d'Hyères, rue Charlemagne;Rue Nonnains d'Hyères; rue Charlemagne;;croisement;23/03/12
+75004;56633;Rue Pavée, rue du Roi de Sicile;Rue Pavée; rue du Roi de Sicile;;croisement;20/01/12
+75004;11218;Rue Rambuteau, rue Beaubourg;Rue Rambuteau; rue Beaubourg;;croisement;21/12/11
+75004;19726;Rue Saint-Antoine, rue de Sévigné;Rue Saint-Antoine; rue de Sévigné;;croisement;03/02/12
+75004;96299;Pont Marie amont — Seine;;;;point décrit;27/07/12
+75004;99492;Pont d'Arcole amont — Seine;;;;point décrit;26/10/12
+75004;14314;Port de l'Hôtel de Ville — Seine;;;;point décrit;24/10/14
+75004;14914;Port des Célestins — Seine;;;;point décrit;19/09/14
+75004;43699;Place du Marché Sainte-Catherine;;;;adresse imprécise;25/05/12
+75004;45070;3, rue de Lobau;;;;adresse précise;27/04/12
+75004;51827;Cité/Notre-Dame;;;;point décrit;16/11/12
+75004;57088;Ile Saint-Louis Pointe amont — Seine;;;;point décrit;27/07/12
+75004;65370;Toit de l'Hôtel de Ville;;;;point décrit;03/08/12
+75004;82723;Place Louis Lépine abords de la Cité;;;;point décrit;16/11/12
+75004;83818;18, boulevard Morland;;;;adresse précise;01/03/13
+75005;93342;8, rue de Santeuil;;;;adresse précise;10/02/12
+75005;20669;Boulevard Saint-Germain, quai de la Tournelle;Boulevard Saint-Germain; quai de la Tournelle;;croisement;13/04/12
+75005;53322;Boulevard Saint-Germain, rue Saint-Jacques;Boulevard Saint-Germain; rue Saint-Jacques;;croisement;21/12/12
+75005;38623;Boulevard Saint-Michel, place de laSorbonne;Boulevard Saint-Michel; place de laSorbonne;;croisement;03/02/12
+75005;39271;Boulevard Saint-Michel, rue Soufflot;Boulevard Saint-Michel; rue Soufflot;;croisement;27/01/12
+75005;53679;Boulevard Saint-Michel, place Louis Marin;Boulevard Saint-Michel; place Louis Marin;;croisement;28/09/12
+75005;61991;Boulevard Saint-Michel, boulevard Saint- Germain;Boulevard Saint-Michel; boulevard Saint- Germain;;croisement;15/06/12
+75005;5013;Place Alphonse Laveran, rue Saint-Jacques;Place Alphonse Laveran; rue Saint-Jacques;;croisement;23/03/17
+75005;80737;Place de l'Abbé Basset, rue de la Montagne Sainte-Geneviève;Place de l'Abbé Basset; rue de la Montagne Sainte-Geneviève;;croisement;20/04/12
+75005;65680;Place du Panthéon, rue d'Ulm, rue Clotaire;Place du Panthéon; rue d'Ulm; rue Clotaire;croisement;21/12/11
+75005;67726;Place du Puits de L'Ermite, rue de Quatrefages;Place du Puits de L'Ermite; rue de Quatrefages;;croisement;21/12/11
+75005;67726B;Place du Puits de L'Ermite, rue de Quatrefages;Place du Puits de L'Ermite; rue de Quatrefages;;croisement;21/12/11
+75005;45866;Place Saint-Médard, rue Mouffetard;Place Saint-Médard; rue Mouffetard;;croisement;13/01/12
+75005;69567;Place Saint-Michel, pont Saint-Michel;Place Saint-Michel; pont Saint-Michel;;croisement;29/03/13
+75005;95510;Pont de l'Archevêché amont — Seine;Pont de l'Archevêché amont — Seine;;;point décrit;26/10/12
+75005;54992;Pont de Sully, quai Tournelle;Pont de Sully; quai Tournelle;;croisement;20/04/12
+75005;5022;Port de la Tournelle — Seine;Port de la Tournelle — Seine;;;point décrit;Début 2019
+75005;5060;Port Saint-Bernard (Alvéoles 1, 2 et 3) — Seine;;;;point décrit;Début 2019
+75005;65348;Quai de Montebello, rue du Petit Pont;Quai de Montebello; rue du Petit Pont;;croisement;01/02/13
+75005;51005;Quai Saint-Bernard, rue Cuvier;Quai Saint-Bernard; rue Cuvier;;croisement;06/07/12
+75005;26800;Rue Bernardin, rue Monge;Rue Bernardin; rue Monge;;croisement;21/12/11
+75005;12312;Rue Blainville, place de la Contrescarpe;Rue Blainville; place de la Contrescarpe;;croisement;19/10/12
+75005;62140;Rue Chantier, rue des Fossés Saint-Bernard;Rue Chantier; rue des Fossés Saint-Bernard;;croisement;21/12/11
+75005;62140B;Rue Chantier, rue des Fossés Saint-Bernard;Rue Chantier; rue des Fossés Saint-Bernard;;croisement;21/12/11
+75005;5055;Rue Claude Bernard, rue de Valence;Rue Claude Bernard; rue de Valence;;croisement;18/12/17
+75005;5056;Rue Claude Bernard, rue Bazeilles;Rue Claude Bernard; rue Bazeilles;;croisement;28/06/18
+75005;5057;Rue Claude Bernard, rue Vauquelin;Rue Claude Bernard; rue Vauquelin;;croisement;21/09/16
+75005;53494;Rue Clovis, rue Descartes;Rue Clovis; rue Descartes;;croisement;13/01/12
+75005;23250;Rue d'Ulm, rue d'Erasme;Rue d'Ulm; rue d'Erasme;;croisement;01/06/12
+75005;98521;Rue Daubenton, rue Geoffroy Saint-Hilaire;Rue Daubenton; rue Geoffroy Saint-Hilaire;;croisement;21/12/11
+75005;13146;Rue de Jussieu, rue des Fossés Saint-Bernard;Rue de Jussieu; rue des Fossés Saint-Bernard;;croisement;08/03/13
+75005;43043;Rue de la Harpe, rue de la Huchette;Rue de la Harpe; rue de la Huchette;;croisement;18/01/13
+75005;5052;Rue de la Montagne Sainte-Geneviève, rue Descartes;Rue de la Montagne Sainte-Geneviève; rue Descartes;;croisement;10/07/18
+75005;92343;Rue des Bernardins, quai de la Tournelle;Rue des Bernardins; quai de la Tournelle;;croisement;21/12/11
+75005;35784;Rue des Ecoles, rue Monge;Rue des Ecoles; rue Monge;;croisement;13/01/12
+75005;85724;Rue des Ecoles, square Paul Painlevé;Rue des Ecoles; square Paul Painlevé;;croisement;21/12/11
+75005;33168;Rue du Cardinal Lemoine, rue Monge;Rue du Cardinal Lemoine; rue Monge;;croisement;21/12/11
+75005;53982;Rue du Cardinal Lemoine, rue des Ecoles;Rue du Cardinal Lemoine; rue des Ecoles;;croisement;08/03/13
+75005;5051;Rue du Fouarre, rue Lagrange;Rue du Fouarre; rue Lagrange;;croisement;21/12/16
+75005;78605;Rue Jussieu, rue Cuvier;Rue Jussieu; rue Cuvier;;croisement;21/12/11
+75005;50581;Rue Linné, rue des Boulangers;Rue Linné; rue des Boulangers;;croisement;03/02/12
+75005;76722;Rue Monge, rue Larrey;Rue Monge; rue Larrey;;croisement;10/02/12
+75005;96546;Rue Monge, rue Censier;Rue Monge; rue Censier;;croisement;24/02/12
+75005;50044;Rue Mouffetard, rue de l'Epée de Bois;Rue Mouffetard; rue de l'Epée de Bois;;croisement;18/05/12
+75005;5058;Rue Pierre Nicole, rue du Val de Grâce;Rue Pierre Nicole; rue du Val de Grâce;;croisement;30/09/16
+75005;5054;Rue Poliveau, rue Geoffroy Saint-Hilaire;Rue Poliveau; rue Geoffroy Saint-Hilaire;;croisement;22/07/16
+75005;5053;Rue Saint-Jacques, rue Soufflot;Rue Saint-Jacques; rue Soufflot;;croisement;16/05/18
+75005;50850;Rue Saint-Jacques, rue des Ecoles;Rue Saint-Jacques; rue des Ecoles;;croisement;21/12/11
+75005;62185;Rue Saint-Jacques, rue Gay Lussac;Rue Saint-Jacques; rue Gay Lussac;;croisement;21/12/11
+75005;99977;Rue Saint-Jacques, rue Cujas;Rue Saint-Jacques; rue Cujas;;croisement;21/12/11
+75005;73849;Rue Saint-Julien le Pauvre, rue Galande;Rue Saint-Julien le Pauvre; rue Galande;;croisement;25/05/12
+75005;79793;Rue Saint-Victor, rue de Pontoise;Rue Saint-Victor; rue de Pontoise;;croisement;21/12/11
+75005;89248;Rue Victor Cousin, rue Cujas;Rue Victor Cousin; rue Cujas;;croisement;21/12/11
+75005;58021;Square Tino Rossi, quai Saint-Bernard;Square Tino Rossi; quai Saint-Bernard;;croisement;06/07/12
+75005;15242;Place Maubert;;;;adresse imprécise;03/02/12
+75005;48902;Square Tino Rossi;;;;adresse imprécise;18/01/13
+75005;63441;81, boulevard de Port-Royal;;;;adresse précise;15/06/12
+75005;96233;Pont Saint-Michel rive gauche en aval — Seine;;;;point décrit;29/03/13
+75006;94309;63, rue d'Assas;;;;adresse précise;10/02/12
+75006;13067;Boulevard Raspail, rue de Rennes;Boulevard Raspail; rue de Rennes;;croisement;18/05/12
+75006;41562;Boulevard Raspail, boulevard du Montparnasse;Boulevard Raspail; boulevard du Montparnasse;;croisement;25/05/12
+75006;11093;Boulevard Saint-Germain, place Saint-Germain-des-Prés;Boulevard Saint-Germain; place Saint-Germain-des-Prés;;croisement;30/03/12
+75006;23489;Boulevard Saint-Germain, rue de l'Ecole de Médecine;Boulevard Saint-Germain; rue de l'Ecole de Médecine;;croisement;10/02/12
+75006;11106;Boulevard Saint-Michel, rue Serpente;Boulevard Saint-Michel; rue Serpente;;croisement;19/10/12
+75006;82624;Boulevard Saint-Michel, boulevard Saint- Germain;Boulevard Saint-Michel; boulevard Saint- Germain;;croisement;15/06/12
+75006;27809;Place de l'Acadie, rue de Buci, boulevard Saint-Germain;Place de l'Acadie; rue de Buci; boulevard Saint-Germain;croisement;25/05/12
+75006;69103;Place du 18 Juin 1940, rue de Rennes;Place du 18 Juin 1940; rue de Rennes;;croisement;24/02/12
+75006;57429;Place Henri Mondor — boulevard Saint- Germain, rue de l'Odéon;Place Henri Mondor — boulevard Saint- Germain; rue de l'Odéon;;croisement;30/03/12
+75006;62619;Place J-P Sartre — S. de Beauvoir — boulevard Saint-Germain;Place J-P Sartre — S. de Beauvoir — boulevard Saint-Germain;;;point décrit;09/03/12
+75006;16543;Place Paul Claudel, rue Rotrou;Place Paul Claudel; rue Rotrou;;croisement;08/05/15
+75006;27767;Pont Neuf, rive Gauche;Pont Neuf; rive Gauche;;croisement;20/01/12
+75006;31195;Quai de Conti, pont Neuf;Quai de Conti; pont Neuf;;croisement;17/02/12
+75006;86313;Quai Malaquais, rue Bonaparte;Quai Malaquais; rue Bonaparte;;croisement;21/12/11
+75006;6034;Rue Auguste Comte, avenue de l'Observatoire, place André Honorat;Rue Auguste Comte; avenue de l'Observatoire; place André Honorat;croisement;09/09/16
+75006;26704;Rue d'Assas, rue de Rennes;Rue d'Assas; rue de Rennes;;croisement;21/09/12
+75006;29482;Rue d'Assas, rue Auguste Comte;Rue d'Assas; rue Auguste Comte;;croisement;24/08/12
+75006;6036;Rue Danton, rue de l'Eperon;Rue Danton; rue de l'Eperon;;croisement;05/10/18
+75006;6037;Rue de Buci, rue de l'Ancienne Comédie;Rue de Buci; rue de l'Ancienne Comédie;;croisement;20/09/18
+75006;35348;Rue de l'Ecole de Médecine, boulevard Saint-Michel, rue Racine;Rue de l'Ecole de Médecine; boulevard Saint-Michel; rue Racine;croisement;08/06/12
+75006;10124;Rue de Rennes, rue de Vaugirard;Rue de Rennes; rue de Vaugirard;;croisement;18/05/12
+75006;93838;Rue de Rennes, rue du Four;Rue de Rennes; rue du Four;;croisement;11/05/12
+75006;43190;Rue de Sèvres, boulevard Raspail;Rue de Sèvres; boulevard Raspail;;croisement;23/03/12
+75006;30386;Rue de Vaugirard, rue Guynemer;Rue de Vaugirard; rue Guynemer;;croisement;21/12/11
+75006;64061;Rue de Vaugirard, boulevard Raspail;Rue de Vaugirard; boulevard Raspail;;croisement;15/06/12
+75006;86611;Rue de Vaugirard, rue d'Assas;Rue de Vaugirard; rue d'Assas;;croisement;13/01/12
+75006;24647;Rue des Saints-Pères, boulevard Saint-Germain;Rue des Saints-Pères; boulevard Saint-Germain;;croisement;inconnue
+75006;74824;Rue des Saints-Pères, rue Perronet;Rue des Saints-Pères; rue Perronet;;croisement;25/05/12
+75006;30579;Rue du Four, rue du Cherche Midi;Rue du Four; rue du Cherche Midi;;croisement;23/03/12
+75006;91297;Rue du Vieux Colombier, rue du Cherche Midi;Rue du Vieux Colombier; rue du Cherche Midi;;croisement;18/05/12
+75006;98526;Rue du Vieux Colombier, rue Bonaparte;Rue du Vieux Colombier; rue Bonaparte;;croisement;21/12/11
+75006;43920;Rue Garancière, rue Saint-Sulpice;Rue Garancière; rue Saint-Sulpice;;croisement;20/01/12
+75006;64111;Rue Monsieur Le Prince, rue Racine;Rue Monsieur Le Prince; rue Racine;;croisement;17/02/12
+75006;63215;Rue Saint-André des Arts, place Saint- Michel;Rue Saint-André des Arts; place Saint- Michel;;croisement;21/12/11
+75006;77910;Rue Saint-Sulpice, rue de Tournon;Rue Saint-Sulpice; rue de Tournon;;croisement;08/06/12
+75006;61344;Place de l'Institut;;;;adresse imprécise;25/05/12
+75007;37705;23, rue de Babylone;;;;adresse précise;07/09/12
+75007;59027;Avenue Bosquet, rue du Champ de Mars;Avenue Bosquet; rue du Champ de Mars;;croisement;11/05/12
+75007;65857;Avenue Bosquet, rue de Grenelle;Avenue Bosquet; rue de Grenelle;;croisement;01/06/12
+75007;7089;Avenue Charles Risler, allée Pierre Loti;Avenue Charles Risler; allée Pierre Loti;;croisement;27/05/16
+75007;7082;Avenue de la Bourdonnais, quai Branly côté impair;Avenue de la Bourdonnais; quai Branly côté impair;;croisement;02/10/17
+75007;39764;Avenue de la Motte Picquet, boulevard de la Tour Maubourg;Avenue de la Motte Picquet; boulevard de la Tour Maubourg;;croisement;08/06/12
+75007;58390;Avenue de la Motte Picquet, rue Cler;Avenue de la Motte Picquet; rue Cler;;croisement;27/04/12
+75007;7083;Avenue de la Motte-Picquet, Champ de Mars, Ecole Militaire;Avenue de la Motte-Picquet; Champ de Mars; Ecole Militaire;croisement;23/08/18
+75007;11264;Avenue de Ségur, avenue de Suffren;Avenue de Ségur; avenue de Suffren;;croisement;06/04/12
+75007;85482;Avenue de Ségur, avenue de Suffren;Avenue de Ségur; avenue de Suffren;;croisement;06/04/12
+75007;52217;Avenue de Suffren, avenue Joseph Bouvard;Avenue de Suffren; avenue Joseph Bouvard;;croisement;13/01/12
+75007;55428;Avenue de Tourville, avenue de Ségur;Avenue de Tourville; avenue de Ségur;;croisement;17/02/12
+75007;56154;Avenue de Tourville, avenue de Villars;Avenue de Tourville; avenue de Villars;;croisement;10/02/12
+75007;7090;Avenue du Docteur Brouardel, alléeThomy Thierry;Avenue du Docteur Brouardel; allée Thomy Thierry;;croisement;27/05/16
+75007;34479;Avenue du Général Détrié, avenue Charles Floquet;Avenue du Général Détrié; avenue Charles Floquet;;croisement;20/07/12
+75007;33282;Avenue du Maréchal Galliéni, rue de l'Université;Avenue du Maréchal Galliéni; rue de l'Université;;croisement;27/04/12
+75007;69173;Avenue Duquesne, avenue de Ségur;Avenue Duquesne; avenue de Ségur;;croisement;03/02/12
+75007;59293;Avenue Emile Deschanel, avenue de Belgrade;Avenue Emile Deschanel; avenue de Belgrade;;croisement;20/01/12
+75007;78678;Avenue Gustave Eiffel, allée des Refuzniks;Avenue Gustave Eiffel; allée des Refuzniks;;croisement;15/06/12
+75007;17567;Avenue Saxe, avenue Breteuil (place de Breteuil);Avenue Saxe; avenue Breteuil (place de Breteuil);;croisement;03/02/12
+75007;75099;Avenue Saxe, avenue Breteuil (place de Breteuil);Avenue Saxe; avenue Breteuil (place de Breteuil);;croisement;27/01/12
+75007;21909;Boulevard de la Tour Maubourg, rue de l'Université;Boulevard de la Tour Maubourg; rue de l'Université;;croisement;14/06/13
+75007;28398;Boulevard de la Tour Maubourg, avenue de Tourville;Boulevard de la Tour Maubourg; avenue de Tourville;;croisement;03/02/12
+75007;58617;Boulevard des Invalides, rue de Grenelle;Boulevard des Invalides; rue de Grenelle;;croisement;20/04/12
+75007;60800;Boulevard des Invalides, rue de Varenne;Boulevard des Invalides; rue de Varenne;;croisement;13/07/12
+75007;69064;Boulevard des Invalides, avenue de Tourville;Boulevard des Invalides; avenue de Tourville;;croisement;11/05/12
+75007;39480;Boulevard Raspail, rue de Varenne;Boulevard Raspail; rue de Varenne;;croisement;27/07/12
+75007;51211;Boulevard Raspail, rue de Varenne;Boulevard Raspail; rue de Varenne;;croisement;27/07/12
+75007;69116;Boulevard Raspail, boulevard Saint-Germain;Boulevard Raspail; boulevard Saint-Germain;;croisement;09/03/12
+75007;12509;Boulevard Saint-Germain, boulevard Raspail;Boulevard Saint-Germain; boulevard Raspail;;croisement;23/03/12
+75007;29504;Boulevard Saint-Germain, rue de Bellechasse;Boulevard Saint-Germain; rue de Bellechasse;;croisement;27/01/12
+75007;75710;Boulevard Saint-Germain, rue de Solférino;Boulevard Saint-Germain; rue de Solférino;;croisement;27/04/12
+75007;13455;Ecole Militaire, Champ de Mars;Ecole Militaire; Champ de Mars;;croisement;02/11/12
+75007;83784;Mail Branly, Passerelle Débilly;Mail Branly; Passerelle Débilly;;croisement;13/01/12
+75007;49553;Pilier Nord de la Tour Eiffel;Pilier Nord de la Tour Eiffel;;;point décrit;21/12/11
+75007;19899;Pilier Ouest de la Tour Eiffel;Pilier Ouest de la Tour Eiffel;;;point décrit;21/12/11
+75007;86298B;Pilier Sud de la Tour Eiffel;Pilier Sud de la Tour Eiffel;;;point décrit;15/06/12
+75007;7001;Place de Fontenoy, Ecole Militaire;Place de Fontenoy; Ecole Militaire;;croisement;Début 2019
+75007;7002;Place de Fontenoy, rue d'Estrées;Place de Fontenoy; rue d'Estrées;;croisement;03/01/17
+75007;61705;Place de l'Ecole Militaire, avenue de La Motte-Picquet, avenue Duquesne;Place de l'Ecole Militaire; avenue de La Motte-Picquet; avenue Duquesne;croisement;03/02/12
+75007;83731B;Place du Palais Bourbon;Place du Palais Bourbon;;;adresse imprécise;06/04/12
+75007;36804;Place Jacques Rueff;Place Jacques Rueff;;;adresse imprécise;21/09/12
+75007;11361;Place Saint-Thomas d'Aquin, rue Saint-Thomas d'Aquin;Place Saint-Thomas d'Aquin; rue Saint-Thomas d'Aquin;;croisement;24/02/12
+75007;46990;Pont Alexandre III, quai Anatole France;Pont Alexandre III; quai Anatole France;;croisement;21/09/12
+75007;72958;Pont de la Concorde, quai Anatole France;Pont de la Concorde; quai Anatole France;;croisement;04/05/12
+75007;97187;Pont Royal (amont) — Seine;Pont Royal (amont) — Seine;;;point décrit;12/10/12
+75007;23371;Port de Solférino, niveau Musée de la Légion d'Honneur — Seine;Port de Solférino; niveau Musée de la Légion d'Honneur — Seine;;croisement;26/07/13
+75007;29075;Port des Invalides, aval du pont Alexandre III — Seine;Port des Invalides; aval du pont Alexandre III — Seine;;croisement;13/12/13
+75007;86974;Port des Invalides, amont du pont Alexandre III — Seine;;;;point décrit;inconnue
+75007;71064;Quai Anatole France, Pont Royal;Quai Anatole France; Pont Royal;;croisement;12/10/12
+75007;78263;Quai Anatole France, rue de la Légion d'Honneur;Quai Anatole France; rue de la Légion d'Honneur;;croisement;04/05/12
+75007;17103;Quai Branly, avenue de Suffren;Quai Branly; avenue de Suffren;;croisement;15/06/12
+75007;39992;Quai Branly, pont d'Iéna;Quai Branly; pont d'Iéna;;croisement;10/02/12
+75007;7080;Quai d'Orsay, rue Robert Esnault Pelterie;Quai d'Orsay; rue Robert Esnault Pelterie;;croisement;27/05/16
+75007;87406;Quai Voltaire, pont du Carrousel;Quai Voltaire; pont du Carrousel;;croisement;25/05/12
+75007;7091;Rue Champfleury, rue Charles Flocquet;Rue Champfleury; rue Charles Flocquet;;croisement;06/11/17
+75007;22580;Rue de Babylone, rue Barbet de Jouy;Rue de Babylone; rue Barbet de Jouy;;croisement;25/05/12
+75007;7087;Rue de Grenelle, square de La Tour-Maubourg;Rue de Grenelle; square de La Tour-Maubourg;;croisement;07/09/17
+75007;7092;Rue de Grenelle, rue des Saints-Pères;Rue de Grenelle; rue des Saints-Pères;;croisement;19/09/18
+75007;31779;Rue de Grenelle, rue de Bellechasse;Rue de Grenelle; rue de Bellechasse;;croisement;23/03/12
+75007;56623;Rue de Grenelle, rue de Talleyrand;Rue de Grenelle; rue de Talleyrand;;croisement;25/05/12
+75007;7084;Rue de l'Université, avenue Franco-Russe;Rue de l'Université; avenue Franco-Russe;;croisement;11/09/17
+75007;69121;Rue de l'Université, rue de Constantine;Rue de l'Université; rue de Constantine;;croisement;16/03/12
+75007;79336;Rue de l'Université, boulevard Saint-Germain;Rue de l'Université; boulevard Saint-Germain;;croisement;27/07/12
+75007;56538;Rue de la Comète, rue de Grenelle;Rue de la Comète; rue de Grenelle;;croisement;21/12/11
+75007;30736;Rue de Sèvres, rue du Bac;Rue de Sèvres; rue du Bac;;croisement;23/03/12
+75007;84190;Rue de Sèvres, rue Vaneau;Rue de Sèvres; rue Vaneau;;croisement;26/07/13
+75007;7016;Rue de Varenne, rue Vaneau;Rue de Varenne; rue Vaneau;;croisement;14/03/17
+75007;33167;Rue des Saints-Pères, rue de Lille;Rue des Saints-Pères; rue de Lille;;croisement;24/02/12
+75007;59729;Rue du Bac, rue de Varenne;Rue du Bac; rue de Varenne;;croisement;27/07/12
+75007;96815;Rue Duquesne, avenue de Ségur;Rue Duquesne; avenue de Ségur;;croisement;18/05/12
+75007;20276;Rue Duroc, boulevard des Invalides;Rue Duroc; boulevard des Invalides;;croisement;21/09/12
+75007;39930;Rue Jacob, rue des Saints-Pères;Rue Jacob; rue des Saints-Pères;;croisement;17/02/12
+75007;55440;Rue Las Cases, rue Casimir Perrier;Rue Las Cases; rue Casimir Perrier;;croisement;27/01/12
+75007;38933;Rue Lille, rue de Bellechasse;Rue Lille; rue de Bellechasse;;croisement;04/05/12
+75007;65614;Rue Masseran, rue Eblé;Rue Masseran; rue Eblé;;croisement;21/09/12
+75007;7075;Rue Recamier, rue de Sèvres (côté pair);Rue Recamier; rue de Sèvres (côté pair);;croisement;15/03/18
+75007;14157;Rue Saint-Dominique, rue Cler;Rue Saint-Dominique; rue Cler;;croisement;16/11/12
+75007;86183;Rue Saint-Dominique, rue Amélie;Rue Saint-Dominique; rue Amélie;;croisement;16/11/12
+75007;10583;Pilier Est de la Tour Eiffel;;;;point décrit;15/06/12
+75007;18769;Place André Tardieu;;;;adresse imprécise;24/02/12
+75007;38775;Place de la Résistance;;;;adresse imprécise;21/12/11
+75007;52733;Assemblée Nationale;;;;point décrit;17/08/12
+75007;53718;Place du Général Gouraud;;;;adresse imprécise;21/09/12
+75007;54776;Port du Gros Caillou, aval pont des Invalides — Seine;;;;point décrit;26/07/13
+75007;56074;Place Jacques Rueff;;;;adresse imprécise;21/09/12
+75007;60073;Port des Invalides, aval pont de la Concorde — Seine;;;;point décrit;26/07/13
+75007;63877;Port de la Bourdonnais, aval pont de l'Alma — Seine;;;;point décrit;26/07/13
+75007;66070;Port de Solférino, niveau Musée d'Orsay — Seine;;;;point décrit;26/07/13
+75007;71658;Place Joffre;;;;adresse imprécise;27/01/12
+75007;76202;Quai Branly trottoir Nord;;;;point décrit;20/07/12
+75007;77782;Quai Branly voie Nord;;;;point décrit;19/10/12
+75007;78472;Port de Solférino, niveau 23, quai Anatole France — Seine;;;;point décrit;26/07/13
+75007;83731;Place du Palais Bourbon;;;;adresse imprécise;30/03/12
+75007;86298;Pilier Sud de la Tour Eiffel;;;;point décrit;06/07/12
+75007;89776;Port du Gros Caillou;;;;adresse imprécise;22/03/13
+75007;90890;Pont des Invalides (amont) — Seine;;;;point décrit;20/07/12
+75007;93957;Place Vauban;;;;adresse imprécise;27/04/12
+75008;8137;1, avenue Montaigne;;;;adresse précise;20/11/17
+75008;8135;22, avenue Montaigne;;;;adresse précise;06/12/17
+75008;8007;29, rue du Faubourg Saint-Honoré;;;;adresse précise;21/04/17
+75008;14075;35, avenue de Wagram;;;;adresse précise;01/06/12
+75008;8131;49, avenue Montaigne;;;;adresse précise;Début 2019
+75008;8021; Avenue George V, rue de la Tremoille; Avenue George V; rue de la Tremoille;;croisement;20/11/17
+75008;8106; Rue du Faubourg Saint-Honoré, rue Jean Mermoz, rue du Colisée; Rue du Faubourg Saint-Honoré; rue Jean Mermoz; rue du Colisée;croisement;21/02/18
+75008;26821;Arc de Triomphe, avenue de Friedland;Arc de Triomphe; avenue de Friedland;;croisement;03/08/12
+75008;79921;Arc de Triomphe, Wagram;Arc de Triomphe; Wagram;;croisement;03/08/12
+75008;14374;Avenue Churchill (face Grand Palais), Cours de la Reine;Avenue Churchill (face Grand Palais); Cours de la Reine;;croisement;14/12/12
+75008;27113;Avenue de Friedland, rue de Balzac;Avenue de Friedland; rue de Balzac;;croisement;06/07/12
+75008;68828;Avenue de Friedland, rue du Faubourg Saint-Honoré;Avenue de Friedland; rue du Faubourg Saint-Honoré;;croisement;06/07/12
+75008;33613;Avenue des Champs Elysées, rue Galilée;Avenue des Champs Elysées; rue Galilée;;croisement;20/01/12
+75008;49454;Avenue des Champs Elysées, rue Lincoln;Avenue des Champs Elysées; rue Lincoln;;croisement;21/12/11
+75008;8009;Avenue des Champs-Elysées, avenue de Marigny;Avenue des Champs-Elysées; avenue de Marigny;;croisement;31/10/18
+75008;8112;Avenue des Champs-Elysées, rue la Boétie;Avenue des Champs-Elysées; rue la Boétie;;croisement;inconnue
+75008;24626;Avenue des Champs-Elysées, rue de Berri;Avenue des Champs-Elysées; rue de Berri;;croisement;inconnue
+75008;96044;Avenue des Champs-Elysées, rue de Balzac;Avenue des Champs-Elysées; rue de Balzac;;croisement;21/12/11
+75008;63259;Avenue des Champs-Elysées, rue Balzac;Avenue des Champs-Elysées; rue Balzac;;croisement;21/12/11
+75008;72824;Avenue des Champs-Elysées, place de la Concorde;Avenue des Champs-Elysées; place de la Concorde;;croisement;15/06/12
+75008;79152;Avenue des Champs-Elysées, place de l'Etoile;Avenue des Champs-Elysées; place de l'Etoile;;croisement;03/08/12
+75008;8127;Avenue du Faubourg Saint-Honoré, rue Laure Diebold;Avenue du Faubourg Saint-Honoré; rue Laure Diebold;;croisement;19/12/17
+75008;49225;Avenue Franklin D. Roosevelt, rue de la Boétie;Avenue Franklin D. Roosevelt; rue de la Boétie;;croisement;29/06/12
+75008;16526;Avenue Franklin Roosevelt, Cours de la Reine;Avenue Franklin Roosevelt; Cours de la Reine;;croisement;21/12/12
+75008;8114;Avenue George V, rue François 1er;Avenue George V; rue François 1er;;croisement;09/11/17
+75008;8115;Avenue George V, rue Pierre 1er de Serbie;Avenue George V; rue Pierre 1er de Serbie;;croisement;20/01/17
+75008;73532;Avenue George V, avenue des Champs-Elysées;Avenue George V; avenue des Champs-Elysées;;croisement;03/02/12
+75008;78928;Avenue Hoche, rue du Faubourg Saint-Honoré;Avenue Hoche; rue du Faubourg Saint-Honoré;;croisement;06/07/12
+75008;83843;Avenue Marceau, avenue Pierre Ier de Serbie;Avenue Marceau; avenue Pierre Ier de Serbie;;croisement;04/05/12
+75008;8071;Avenue Matignon, rue de Ponthieu;Avenue Matignon; rue de Ponthieu;;croisement;26/12/17
+75008;8122;Avenue Montaigne, rue du Boccador;Avenue Montaigne; rue du Boccador;;croisement;20/02/17
+75008;8133;Avenue Montaigne, rue Bayard;Avenue Montaigne; rue Bayard;;croisement;01/10/18
+75008;8134;Avenue Montaigne, rue Clément Marot;Avenue Montaigne; rue Clément Marot;;croisement;20/11/17
+75008;8138;Avenue Montaigne, place de la Reine Astrid;Avenue Montaigne; place de la Reine Astrid;;croisement;20/11/17
+75008;8003;Avenue Montaigne contre-allée Nord, rond-point des Champs-Elysées;Avenue Montaigne contre-allée Nord; rond-point des Champs-Elysées;;croisement;18/01/18
+75008;8002;Avenue Montaigne contre-allée Sud, rond-point des Champs-Elysées;Avenue Montaigne contre-allée Sud; rond-point des Champs-Elysées;;croisement;22/11/17
+75008;8129;Avenue Montaigne Nord, rue François 1er;Avenue Montaigne Nord; rue François 1er;;croisement;23/03/17
+75008;8130;Avenue Montaigne Sud, rue François 1er;Avenue Montaigne Sud; rue François 1er;;croisement;16/02/17
+75008;97400;Avenue Wagram, rue de Tilsitt;Avenue Wagram; rue de Tilsitt;;croisement;15/06/12
+75008;52904;Bas de l'avenue des Champs-Elysées, coté droit de la chaussée;;;;point décrit;24/02/12
+75008;18514;Boulevard des Batignolles, rue de Rome;Boulevard des Batignolles; rue de Rome;;croisement;03/02/12
+75008;20956;Boulevard Haussmann, avenue de Messine;Boulevard Haussmann; avenue de Messine;;croisement;29/03/13
+75008;98601;Boulevard Haussmann, rue du Havre;Boulevard Haussmann; rue du Havre;;croisement;25/05/12
+75008;31609;Boulevard Malesherbes, rue de Mirosmenil;Boulevard Malesherbes; rue de Mirosmenil;;croisement;21/12/11
+75008;48713;Boulevard Malesherbes, place de la Madeleine;Boulevard Malesherbes; place de la Madeleine;;croisement;27/04/12
+75008;86086;Boulevard Malesherbes, rue de Lisbonne;Boulevard Malesherbes; rue de Lisbonne;;croisement;04/05/12
+75008;97502;Cours de la Reine, avenue Winston Churchill;Cours de la Reine; avenue Winston Churchill;;croisement;21/12/12
+75008;49576;cours de la Reine, place de la Concorde;cours de la Reine; place de la Concorde;;croisement;24/02/12
+75008;14362;Obélisque, place de la Concorde;Obélisque; place de la Concorde;;croisement;14/12/12
+75008;97602;Obélisque, place de la Concorde;Obélisque; place de la Concorde;;croisement;21/12/12
+75008;55647;Place Charles de Gaulle, avenue Wagram;Place Charles de Gaulle; avenue Wagram;;croisement;01/06/12
+75008;41361;Place de Clichy, avenue de Clichy;Place de Clichy; avenue de Clichy;;croisement;25/10/13
+75008;19898;Place de Dublin, rue de Saint-Petersbourg;Place de Dublin; rue de Saint-Petersbourg;;croisement;21/12/11
+75008;33371;Place de l'Alma;Place de l'Alma;;;adresse imprécise;02/03/12
+75008;57233;Place de l'Alma;Place de l'Alma;;;adresse imprécise;24/02/12
+75008;38142;Place de l'Etoile, avenue des Champs- Elysées;Place de l'Etoile; avenue des Champs- Elysées;;croisement;03/08/12
+75008;62600;Place de l'Europe, rue de Madrid;Place de l'Europe; rue de Madrid;;croisement;04/05/12
+75008;8096;Place de la Concorde, avenue Gabriel;Place de la Concorde; avenue Gabriel;;croisement;13/07/18
+75008;94149;Place de la Concorde, avenue Gabriel;Place de la Concorde; avenue Gabriel;;croisement;29/06/12
+75008;76964;Place de la Concorde, rue Royale;Place de la Concorde; rue Royale;;croisement;07/09/12
+75008;91357;Place de la Madeleine, rue Tronchet;Place de la Madeleine; rue Tronchet;;croisement;20/04/12
+75008;77583;Place de la Madeleine, rue Royale;Place de la Madeleine; rue Royale;;croisement;22/06/12
+75008;85742;Place de la Madeleine, boulevard Madeleine;Place de la Madeleine; boulevard Madeleine;;croisement;22/06/12
+75008;20103;Place des Ternes, avenue de Wagram;Place des Ternes; avenue de Wagram;;croisement;01/06/12
+75008;45343;Place des Ternes, boulevard de Courcelles;Place des Ternes; boulevard de Courcelles;;croisement;01/06/12
+75008;50968;Place Prosper Boubeaux, rue du Rocher;Place Prosper Boubeaux; rue du Rocher;;croisement;20/04/12
+75008;56522;Place Prosper Goubaux, boulevard des Batignolles;Place Prosper Goubaux; boulevard des Batignolles;;croisement;27/01/12
+75008;69340;Place République Dominicaine, boulevard de Courcelles, rue Phalsbourg;Place République Dominicaine; boulevard de Courcelles; rue Phalsbourg;croisement;01/06/12
+75008;8028;Place Rio de Janeiro, rue de Lisbonne, rue de Monceau;Place Rio de Janeiro;rue de Lisbonne; rue de Monceau;croisement;20/02/17
+75008;31281;Rond-point des Champs-Elysées, avenue Matignon;Rond-point des Champs-Elysées; avenue Matignon;;croisement;03/02/12
+75008;59093;Rond-point des Champs-Elysées, avenue Montaigne;Rond-point des Champs-Elysées; avenue Montaigne;;croisement;20/01/12
+75008;72520;Rue d'Amsterdam, rue de Londres;Rue d'Amsterdam; rue de Londres;;croisement;22/06/12
+75008;20308;Rue de Berry, rue de Ponthieu;Rue de Berry; rue de Ponthieu;;croisement;10/02/12
+75008;77702;Rue de Courcelles, boulevard de Courcelles;Rue de Courcelles; boulevard de Courcelles;;croisement;21/06/13
+75008;87273;Rue de Courcelles, boulevard Haussmann;Rue de Courcelles; boulevard Haussmann;;croisement;29/06/12
+75008;8105;Rue de La Boëtie, rue de Miromesnil;Rue de La Boëtie; rue de Miromesnil;;croisement;03/03/17
+75008;63118;Rue de Moscou, rue d'Amsterdam;Rue de Moscou; rue d'Amsterdam;;croisement;24/02/12
+75008;40093;Rue de Naples, rue du Général Foy;Rue de Naples; rue du Général Foy;;croisement;21/12/11
+75008;90317;Rue de Ponthieu, avenue Franklin Roosevelt;Rue de Ponthieu; avenue Franklin Roosevelt;;croisement;13/01/12
+75008;39003;Rue de Ponthieu, rue Paul Baudry;Rue de Ponthieu; rue Paul Baudry;;croisement;24/08/12
+75008;61734;Rue de Rome, cour de Rome;Rue de Rome; cour de Rome;;croisement;23/03/12
+75008;50601;Rue de Stockolm, rue de Rome;Rue de Stockolm; rue de Rome;;croisement;20/04/12
+75008;96909;Rue de Tilsitt, avenue des Champs-Elysées;Rue de Tilsitt; avenue des Champs-Elysées;;croisement;18/05/12
+75008;61880;Rue du Colisée, avenue des Champs-Elysées;Rue du Colisée; avenue des Champs-Elysées;;croisement;27/01/12
+75008;8107;Rue du Faubourg Saint-Honoré, avenue Matignon;Rue du Faubourg Saint-Honoré; avenue Matignon;;croisement;07/04/17
+75008;21989;Rue du Général Foy, rue de Naples;Rue du Général Foy; rue de Naples;;croisement;21/12/11
+75008;64332;Rue du Havre, rue Saint-Lazare;Rue du Havre; rue Saint-Lazare;;croisement;03/08/12
+75008;8128;Rue du Rocher, rue de Monceau;Rue du Rocher; rue de Monceau;;croisement;06/10/16
+75008;8119;Rue François 1er, rue Marbeuf;Rue François 1er; rue Marbeuf;;croisement;13/11/18
+75008;8123;Rue Jean Goujon, rue François 1er;Rue Jean Goujon; rue François 1er;;croisement;20/02/17
+75008;99944;Rue la Boétie, rue du Faubourg Saint-Honoré;Rue la Boétie; rue du Faubourg Saint-Honoré;;croisement;29/06/12
+75008;58978;Rue la Boétie, rue d'Artois;Rue la Boétie; rue d'Artois;;croisement;21/09/12
+75008;8126;Rue Laure Diebold, rue Louis de Funès;Rue Laure Diebold; rue Louis de Funès;;croisement;inconnue
+75008;8118;Rue Marbeuf, avenue George V;Rue Marbeuf; avenue George V;;croisement;07/10/16
+75008;56883;Rue Marbeuf, avenue des Champs-Elysées;Rue Marbeuf; avenue des Champs-Elysées;;croisement;11/01/12
+75008;64811;Rue Pierre Charron, avenue des Champs-Elysées;Rue Pierre Charron; avenue des Champs-Elysées;;croisement;11/05/12
+75008;8102;Rue Rocher, rue de Laborde, rue Joseph Sansbœuf;Rue Rocher; rue de Laborde; rue Joseph Sansbœuf;croisement;06/09/18
+75008;37958;Rue Royale, rue Saint-Honoré;Rue Royale; rue Saint-Honoré;;croisement;21/09/12
+75008;61079;Rue Saint-Lazare, rue d'Amsterdam;Rue Saint-Lazare; rue d'Amsterdam;;croisement;22/06/12
+75008;22916;Avenue Van Dyck;;;;adresse imprécise;09/03/12
+75008;97325;Place Charles de Gaulle — Terrasse immeuble Publicis;;;;point décrit;05/10/12
+75008;44259;Place Gabriel Péri;;;;adresse imprécise;27/01/12
+75008;47380;Place Clémenceau;;;;adresse imprécise;27/04/12
+75008;71625;Place Saint-Augustin;;;;adresse imprécise;27/01/12
+75008;89055;Rond-point des Champs-Elysées;;;;adresse imprécise;01/06/12
+75009;72367;18, rue Saint-Lazare;;;;adresse précise;19/10/12
+75009;79823;11 bis, rue Scribe;;;;adresse précise;08/06/12
+75009;49535;Boulevard de Clichy, place Pigalle Ouest;Boulevard de Clichy; place Pigalle Ouest;;croisement;22/06/12
+75009;74548;Boulevard de Clichy, boulevard de Rochechouart;Boulevard de Clichy; boulevard de Rochechouart;;croisement;04/05/12
+75009;87208;Boulevard de Clichy, boulevard de Rochechouart;Boulevard de Clichy; boulevard de Rochechouart;;croisement;04/05/12
+75009;15819;Boulevard de la Chapelle, boulevard Magenta;Boulevard de la Chapelle; boulevard Magenta;;croisement;24/08/12
+75009;65899;Boulevard Haussmann, rue Halévy;Boulevard Haussmann; rue Halévy;;croisement;04/05/12
+75009;95710;Boulevard Haussmann, rue Le Peletier;Boulevard Haussmann; rue Le Peletier;;croisement;13/04/12
+75009;92563;Boulevard Poissonnière, rue du Sentier;Boulevard Poissonnière; rue du Sentier;;croisement;21/12/11
+75009;95588;Boulevard Poissonnière, rue du Faubourg Montmartre;Boulevard Poissonnière; rue du Faubourg Montmartre;;croisement;09/03/12
+75009;24660;Place Blanche, boulevard de Clichy, rue Lepic;Place Blanche; boulevard de Clichy; rue Lepic;croisement;inconnue
+75009;35099;Place Blanche, boulevard de Clichy, rue de Bruxelles;Place Blanche; boulevard de Clichy; rue de Bruxelles;croisement;10/02/12
+75009;46329;Place Charles Garnier, rue Auber, rue Scribe;Place Charles Garnier; rue Auber; rue Scribe;croisement;25/05/12
+75009;20076;Place d'Anvers, avenue Trudaine;Place d'Anvers; avenue Trudaine;;croisement;08/06/12
+75009;32213;Place d'Anvers, boulevard de Rochechouart;Place d'Anvers; boulevard de Rochechouart;;croisement;13/01/12
+75009;21129;Place d'Estienne d'Orves, rue Saint-Lazare;Place d'Estienne d'Orves; rue Saint-Lazare;;croisement;19/10/12
+75009;23596;Place de l'Opéra, avenue de l'Opéra;Place de l'Opéra; avenue de l'Opéra;;croisement;13/04/12
+75009;25540;Place de l'Opéra, boulevard des Capucines;Place de l'Opéra; boulevard des Capucines;;croisement;13/04/12
+75009;90714;Place de l'Opéra, rue Auber;Place de l'Opéra; rue Auber;;croisement;13/04/12
+75009;81014;Place Diaghilev;Place Diaghilev;;;adresse imprécise;20/04/12
+75009;75499;Place Jacob Kaplan;Place Jacob Kaplan;;;adresse imprécise;24/02/12
+75009;48781;Place Pigalle, rue Jean-Baptiste Pigalle;Place Pigalle; rue Jean-Baptiste Pigalle;;croisement;03/02/12
+75009;88620;Place Pigalle Est — boulevard de Clichy, rue Houdon;Place Pigalle Est — boulevard de Clichy; rue Houdon;;croisement;31/08/12
+75009;9059;Rue Blanche, rue Jean-Baptiste Pigalle;Rue Blanche; rue Jean-Baptiste Pigalle;;croisement;25/08/16
+75009;34724;Rue Chauchat, rue Rossini;Rue Chauchat; rue Rossini;;croisement;10/02/12
+75009;89791;Rue Clichy, rue de Moncey;Rue Clichy; rue de Moncey;;croisement;29/06/12
+75009;64951;Rue de Caumartin, boulevard Haussmann;Rue de Caumartin; boulevard Haussmann;;croisement;13/04/12
+75009;21487;Rue de Châteaudun, rue Saint-Georges;Rue de Châteaudun; rue Saint-Georges;;croisement;31/05/13
+75009;57584;Rue de Châteaudun, rue La Fayette;Rue de Châteaudun; rue La Fayette;;croisement;09/11/12
+75009;81258;Rue de Châteaudun, rue Taitbout;Rue de Châteaudun; rue Taitbout;;croisement;31/05/13
+75009;87305;Rue de Châteaudun, rue Buffault;Rue de Châteaudun; rue Buffault;;croisement;09/11/12
+75009;47183;Rue de Douai, place Adolphe Max;Rue de Douai; place Adolphe Max;;croisement;20/01/12
+75009;59521;Rue de la Chaussée d'Antin, rue Halévy;Rue de la Chaussée d'Antin; rue Halévy;;croisement;04/05/12
+75009;9060;Rue de la Rochefoucauld, rue d'Aumale;Rue de la Rochefoucauld; rue d'Aumale;;croisement;09/10/17
+75009;10372;Rue de la Tour d'Auvergne, rue Milton;Rue de la Tour d'Auvergne; rue Milton;;croisement;09/11/12
+75009;21230;Rue de la Victoire, rue Saint-Georges;Rue de la Victoire; rue Saint-Georges;;croisement;11/05/12
+75009;72329;Rue de Maubeuge, rue de Rochechouart;Rue de Maubeuge; rue de Rochechouart;;croisement;27/01/12
+75009;64143;Rue de Provence, rue de Caumartin;Rue de Provence; rue de Caumartin;;croisement;19/10/12
+75009;9027;Rue de Rochechouard, rue Condorcet;Rue de Rochechouard; rue Condorcet;;croisement;Début 2019
+75009;61124;Rue de Rochechouart, avenue de Dunkerque;Rue de Rochechouart; avenue de Dunkerque;;croisement;09/03/12
+75009;58520;Rue des Martyrs (pair), rue de la Tour d'Auvergne (pair);Rue des Martyrs (pair); rue de la Tour d'Auvergne (pair);;croisement;16/11/12
+75009;25108;Rue Drouot, rue La Fayette, rue du Faubourg Montmartre;Rue Drouot; rue La Fayette; rue du Faubourg Montmartre;croisement;17/02/12
+75009;55431;Rue Drouot, rue Rossini;Rue Drouot; rue Rossini;;croisement;03/02/12
+75009;84503;Rue du Faubourg Montmartre, rue Montyon;Rue du Faubourg Montmartre; rue Montyon;;croisement;03/02/12
+75009;27982;Rue du Faubourg Poissonnière, rue du Delta;Rue du Faubourg Poissonnière; rue du Delta;;croisement;19/06/15
+75009;84772;Rue du Faubourg Poissonnière, rue Richer;Rue du Faubourg Poissonnière; rue Richer;;croisement;03/02/12
+75009;84555;Rue Fontaine, rue de Douai;Rue Fontaine; rue de Douai;;croisement;15/06/12
+75009;9062;Rue La Bruyère, rue Notre-Dame de Lorette;Rue La Bruyère; rue Notre-Dame de Lorette;;croisement;25/11/16
+75009;17498;Rue La Fayette, rue Pierre Sémard;Rue La Fayette; rue Pierre Sémard;;croisement;09/05/14
+75009;94663;Rue Lamartine, rue de Rochechouart;Rue Lamartine; rue de Rochechouart;;croisement;09/11/12
+75009;13257;Rue Mayran, rue Rochambeau;Rue Mayran; rue Rochambeau;;croisement;11/01/12
+75009;10756;Rue Pierre Fontaine, rue Jean-Baptiste Pigalle;Rue Pierre Fontaine; rue Jean-Baptiste Pigalle;;croisement;06/07/12
+75009;79444;Rue Saint-Lazare, rue Caumartin;Rue Saint-Lazare; rue Caumartin;;croisement;22/02/13
+75009;33643;Rue Sainte-Cécile, rue Trévise;Rue Sainte-Cécile; rue Trévise;;croisement;21/12/11
+75009;81422;Place Kossuth;;;;adresse imprécise;14/09/12
+75010;76166;11, boulevard de Bonne Nouvelle;;;;adresse précise;21/12/11
+75010;70442;162, rue du Faubourg Saint-Martin;;;;adresse précise;04/05/12
+75010;42055;Boulevard de la Chapelle, rue du Faubourg Saint-Denis;Boulevard de la Chapelle; rue du Faubourg Saint-Denis;;croisement;08/06/12
+75010;77612;Boulevard de la Chapelle, rue de Maubeuge;Boulevard de la Chapelle; rue de Maubeuge;;croisement;08/06/12
+75010;10036;Boulevard de la Chapelle, rue Guy Patin;Boulevard de la Chapelle; rue Guy Patin;;croisement;Début 2019
+75010;75111;Boulevard de la Villette, rue La Fayette;Boulevard de la Villette; rue La Fayette;;croisement;03/08/12
+75010;43214;Boulevard de Magenta, rue de Lancry;Boulevard de Magenta; rue de Lancry;;croisement;08/06/12
+75010;72971;Boulevard de Magenta, rue de Nancy;Boulevard de Magenta; rue de Nancy;;croisement;05/10/12
+75010;28234;Boulevard de Magenta, rue La Fayette;Boulevard de Magenta; rue La Fayette;;croisement;08/11/13
+75010;55825;Boulevard de Strasbourg, rue du Château d'Eau;Boulevard de Strasbourg; rue du Château d'Eau;;croisement;28/09/12
+75010;12116;Boulevard de Strasbourg, rue Saint-Laurent;Boulevard de Strasbourg; rue Saint-Laurent;;croisement;20/04/12
+75010;24512;Boulevard de Strasbourg, boulevard de Magenta;Boulevard de Strasbourg; boulevard de Magenta;;croisement;inconnue
+75010;61135;Boulevard Magenta, rue Ambroise Paré;Boulevard Magenta; rue Ambroise Paré;;croisement;18/05/12
+75010;65760;Boulevard Magenta, boulevard de Strasbourg;Boulevard Magenta; boulevard de Strasbourg;;croisement;13/04/12
+75010;12742;Place de la Bataille de Stalingrad, rue du Faubourg Saint-Martin;Place de la Bataille de Stalingrad; rue du Faubourg Saint-Martin;;croisement;16/05/14
+75010;98051;Place de la République, rue du Faubourg du Temple;Place de la République; rue du Faubourg du Temple;;croisement;26/10/12
+75010;15560;Place de la République, rue du Faubourg du Temple;Place de la République; rue du Faubourg du Temple;;croisement;21/06/13
+75010;32626;Place de Roubaix, boulevard de Magenta, rue de Dunkerque;Place de Roubaix; boulevard de Magenta; rue de Dunkerque;croisement;06/04/12
+75010;86043;Place du Colonel Fabien, rue de la Grange aux Belles;Place du Colonel Fabien; rue de la Grange aux Belles;;croisement;11/05/12
+75010;87526;Place Franz Liszt, rue La Fayette;Place Franz Liszt; rue La Fayette;;croisement;12/10/12
+75010;25943;Place Johann Strauss, face à la rue deLancry;Place Johann Strauss; face à la rue deLancry;;croisement;15/06/12
+75010;45873;Quai de Jemmapes, boulevard Jules Ferry;Quai de Jemmapes; boulevard Jules Ferry;;croisement;27/04/12
+75010;50523;Quai de Jemmapes, rue des Ecluses Saint-Martin;Quai de Jemmapes; rue des Ecluses Saint-Martin;;croisement;20/04/12
+75010;25626;Quai de Jemmapes, rue Alibert;Quai de Jemmapes; rue Alibert;;croisement;17/02/12
+75010;48209;Quai de Valmy, rue Louis Blanc;Quai de Valmy; rue Louis Blanc;;croisement;09/03/12
+75010;51230;Quai de Valmy, rue Lucien Sampaix, rue Recollet;Quai de Valmy; rue Lucien Sampaix; rue Recollet;croisement;17/02/12
+75010;73562;Quai de Valmy, rue de Lancry;Quai de Valmy; rue de Lancry;;croisement;17/02/12
+75010;30934;Quai Valmy, rue Beaurepaire, rue Marseille;Quai Valmy; rue Beaurepaire; rue Marseille;croisement;23/03/12
+75010;10013;Rue Ambroise Paré, rue Saint-Vincent-de-Paul;Rue Ambroise Paré; rue Saint-Vincent-de-Paul;;croisement;Début 2019
+75010;79289;Rue d'Alsace, rue des deux Gares;Rue d'Alsace; rue des deux Gares;;croisement;08/06/12
+75010;29730;Rue d'Alsace, rue du 8 Mai 1945;Rue d'Alsace; rue du 8 Mai 1945;;croisement;13/04/12
+75010;78368;Rue de Dunkerque, rue La Fayette;Rue de Dunkerque; rue La Fayette;;croisement;25/05/12
+75010;18930;Rue de Dunkerque, rue de Saint-Quentin;Rue de Dunkerque; rue de Saint-Quentin;;croisement;13/04/12
+75010;26787;Rue de Dunkerque, rue de Compiègne;Rue de Dunkerque; rue de Compiègne;;croisement;13/04/12
+75010;10079;Rue de l'Aqueduc, rue du Chaudron;Rue de l'Aqueduc; rue du Chaudron;;croisement;07/04/17
+75010;62163;Rue de la Grange aux Belles, rue des Ecluses Saint-Martin;Rue de la Grange aux Belles; rue des Ecluses Saint-Martin;;croisement;27/07/12
+75010;59687;Rue de Maubeuge, rue Ambroise Paré;Rue de Maubeuge; rue Ambroise Paré;;croisement;08/06/12
+75010;37472;Rue de Paradis, rue du Faubourg Poissonnière;Rue de Paradis; rue du Faubourg Poissonnière;;croisement;22/06/12
+75010;10067;Rue de Paradis, rue Martel;Rue de Paradis; rue Martel;;croisement;14/06/17
+75010;37532;Rue de Sambre et Meuse, rue Sainte-Marthe;Rue de Sambre et Meuse; rue Sainte-Marthe;;croisement;13/01/12
+75010;10080;Rue du Buisson-Saint-Louis, rue du Chalet;Rue du Buisson-Saint-Louis; rue du Chalet;;croisement;28/02/17
+75010;61137;Rue du Château d'Eau, boulevard de Magenta;Rue du Château d'Eau; boulevard de Magenta;;croisement;21/09/12
+75010;48813;Rue du Château Landon, rue Louis Blanc;Rue du Château Landon; rue Louis Blanc;;croisement;21/09/12
+75010;80333;Rue du Château Landon, rue du Faubourg Saint-Martin;Rue du Château Landon; rue du Faubourg Saint-Martin;;croisement;23/03/12
+75010;92421;Rue du Faubourg du Temple, boulevard de la Villette;Rue du Faubourg du Temple; boulevard de la Villette;;croisement;31/05/13
+75010;27797;Rue du Faubourg du Temple, avenue Parmentier;Rue du Faubourg du Temple; avenue Parmentier;;croisement;19/10/12
+75010;75399;Rue du Faubourg Saint-Denis, rue Cail;Rue du Faubourg Saint-Denis; rue Cail;;croisement;25/05/12
+75010;86066;Rue du Faubourg Saint-Denis, rue Demarquay;Rue du Faubourg Saint-Denis; rue Demarquay;;croisement;22/02/13
+75010;10064;Rue du Faubourg Saint-Denis, rue de Metz;Rue du Faubourg Saint-Denis; rue de Metz;;croisement;14/10/16
+75010;10068;Rue du Faubourg Saint-Denis, boulevard Magenta — square A Satragne;Rue du Faubourg Saint-Denis; boulevard Magenta — square A Satragne;;croisement;04/01/17
+75010;38438;Rue du Faubourg Saint-Martin, rue du Château d'Eau;Rue du Faubourg Saint-Martin; rue du Château d'Eau;;croisement;05/10/12
+75010;45724;Rue du Faubourg Saint-Martin, rue du 8 mai 1945;Rue du Faubourg Saint-Martin; rue du 8 mai 1945;;croisement;06/07/12
+75010;56959;Rue du Faubourg Saint-Martin, boulevard de Magenta;Rue du Faubourg Saint-Martin; boulevard de Magenta;;croisement;19/10/12
+75010;10966;Rue du Faubourg Saint-Martin, rue La Fayette;Rue du Faubourg Saint-Martin; rue La Fayette;;croisement;12/10/12
+75010;26718;Rue Juliette Dodu, avenue Claude Vellefaux;Rue Juliette Dodu; avenue Claude Vellefaux;;croisement;10/02/12
+75010;32795;Rue La Fayette, rue Chabrol;Rue La Fayette; rue Chabrol;;croisement;19/12/14
+75010;10072;Rue Saint-Maur, rue du Buisson Saint-Louis;Rue Saint-Maur; rue du Buisson Saint-Louis;;croisement;04/08/16
+75010;33253;Porte Saint-Martin;;;;adresse imprécise;27/07/12
+75010;66168;Place Sainte-Marthe;;;;adresse imprécise;27/04/12
+75010;72791;Place Robert Desnos;;;;adresse imprécise;25/05/12
+75010;10069;Rue Georg Friedrich Haendel;;;;adresse imprécise;03/03/17
+75010;10070;5, rue Albert Camus;;;;adresse précise;20/12/16
+75010;10075;Rue Léon Schwartzenberg (Médiathèque);;;;point décrit;inconnue
+75010;12884;Place Napoléon III;;;;adresse imprécise;13/04/12
+75010;22859;Rue de Chabrol;;;;adresse imprécise;20/01/12
+75011;44425;Avenue de la République, rue Saint-Maur;Avenue de la République; rue Saint-Maur;;croisement;15/06/12
+75011;30567;Avenue Parmentier, rue Oberkampf;Avenue Parmentier; rue Oberkampf;;croisement;25/05/12
+75011;88238;Avenue Parmentier, rue Saint-Ambroise;Avenue Parmentier; rue Saint-Ambroise;;croisement;07/06/13
+75011;33278;Avenue Philippe Auguste, boulevard de Charonne;Avenue Philippe Auguste; boulevard de Charonne;;croisement;22/06/12
+75011;56760;Boulevard Belleville, rue Jean-Pierre Timbaud;Boulevard Belleville; rue Jean-Pierre Timbaud;;croisement;20/07/12
+75011;28998;Boulevard de Ménilmontant, avenue Philippe Auguste;Boulevard de Ménilmontant; avenue Philippe Auguste;;croisement;24/02/12
+75011;53843;Boulevard Richard Lenoir, rue Saint-Sabin;Boulevard Richard Lenoir; rue Saint-Sabin;;croisement;27/07/12
+75011;13871;Boulevard Voltaire, rue Jean-Pierre Timbaud;Boulevard Voltaire; rue Jean-Pierre Timbaud;;croisement;01/03/13
+75011;43592;Boulevard Voltaire, rue du Chemin Vert;Boulevard Voltaire; rue du Chemin Vert;;croisement;09/11/12
+75011;48009;Boulevard Voltaire, rue de Charonne;Boulevard Voltaire; rue de Charonne;;croisement;21/12/11
+75011;52920;Boulevard Voltaire, rue de Montreuil;Boulevard Voltaire; rue de Montreuil;;croisement;04/05/12
+75011;59464;Boulevard Voltaire, boulevard Richard Lenoir;Boulevard Voltaire; boulevard Richard Lenoir;;croisement;01/03/13
+75011;68231;Boulevard Voltaire, rue Saint-Ambroise;Boulevard Voltaire; rue Saint-Ambroise;;croisement;08/06/12
+75011;79048;Boulevard Voltaire, rue Léon Frot;Boulevard Voltaire; rue Léon Frot;;croisement;13/07/12
+75011;20997;Place Auguste Métivier;Place Auguste Métivier;;;adresse imprécise;25/05/12
+75011;88838;Place de la Bastille, rue de la Roquette;Place de la Bastille; rue de la Roquette;;croisement;01/06/12
+75011;28421;Place de la Nation, Cours de Vincennes;Place de la Nation; Cours de Vincennes;;croisement;20/04/12
+75011;64906;Place de la Nation, boulevard Diderot;Place de la Nation; boulevard Diderot;;croisement;20/04/12
+75011;69661;Place de la Nation, rue de Taillebourg;Place de la Nation; rue de Taillebourg;;croisement;01/06/12
+75011;87044;Place de la Nation, rue du Faubourg Saint-Antoine;Place de la Nation; rue du Faubourg Saint-Antoine;;croisement;20/04/12
+75011;86133;Place de la République, avenue de laRépublique;Place de la République; avenue de laRépublique;;croisement;01/03/13
+75011;96081;Place de la République, boulevard Voltaire;Place de la République; boulevard Voltaire;;croisement;01/03/13
+75011;46326;Place Léon Blum (Sud), boulevard Voltaire;Place Léon Blum (Sud); boulevard Voltaire;;croisement;09/03/12
+75011;68375;Rue Alexandre Dumas, boulevard de Charonne;Rue Alexandre Dumas; boulevard de Charonne;;croisement;21/12/11
+75011;11056;Rue de Charonne, rue de Lappe;Rue de Charonne; rue de Lappe;;croisement;07/04/17
+75011;30637;Rue de Charonne, avenue Ledru-Rollin;Rue de Charonne; avenue Ledru-Rollin;;croisement;01/06/12
+75011;94261;Rue de Charonne, boulevard de Charonne;Rue de Charonne; boulevard de Charonne;;croisement;23/03/12
+75011;94639;Rue de l'Orillon, boulevard de Belleville;Rue de l'Orillon; boulevard de Belleville;;croisement;20/01/12
+75011;90486;Rue du Faubourg du Temple, rue de Malte;Rue du Faubourg du Temple; rue de Malte;;croisement;08/06/12
+75011;12357;Rue du Faubourg Saint-Antoine, rue de la Forge Royale;Rue du Faubourg Saint-Antoine; rue de la Forge Royale;;croisement;02/03/12
+75011;84362;Rue Faidherbe, rue du Faubourg Saint-Antoine;Rue Faidherbe; rue du Faubourg Saint-Antoine;;croisement;09/03/12
+75011;85426;Rue Jean-Pierre Timbaud, rue Moret, rue de Vaucouleurs;Rue Jean-Pierre Timbaud; rue Moret; rue de Vaucouleurs;croisement;16/11/12
+75011;29510;Rue Léon Frot, rue de la Roquette;Rue Léon Frot; rue de la Roquette;;croisement;27/04/12
+75011;37820;Rue Léon Frot, rue Mercœur;Rue Léon Frot; rue Mercœur;;croisement;13/04/12
+75011;55843;Rue Mercœur, rue Auguste Laurent;Rue Mercœur; rue Auguste Laurent;;croisement;08/06/12
+75011;15301;Rue Merlin, rue Duranti;Rue Merlin; rue Duranti;;croisement;24/02/12
+75011;16178;Rue Oberkampf, boulevard Voltaire;Rue Oberkampf; boulevard Voltaire;;croisement;05/07/13
+75011;21067;Rue Oberkampf, boulevard de Belleville;Rue Oberkampf; boulevard de Belleville;;croisement;27/07/12
+75011;84274;Rue Popincourt, rue de la Roquette;Rue Popincourt; rue de la Roquette;;croisement;23/03/12
+75011;60866;Rue Robert Houdin, rue du Faubourg du Temple;Rue Robert Houdin; rue du Faubourg du Temple;;croisement;19/10/12
+75011;30322;Rue Roquette, rue de Lappe;Rue Roquette; rue de Lappe;;croisement;01/06/12
+75011;81850;Rue Saint-Maur, avenue de la République;Rue Saint-Maur; avenue de la République;;croisement;15/06/12
+75011;35385;Rue Sedaine, boulevard Richard Lenoir;Rue Sedaine; boulevard Richard Lenoir;;croisement;01/06/12
+75011;11057;Bréguet Chemin Vert — Villa Marcès — gymnase;;;;point décrit;inconnue
+75011;11058;Jardin Truillot — entrée jardin côté boulevard Richard Lenoir;;;;point décrit;inconnue
+75011;30471;Colonne Bastille Nord;;;;point décrit;14/09/12
+75012;32959;195, rue de Bercy;;;;adresse précise;11/05/12
+75012;37644;Avenue Courteline, boulevard périphérique intérieur;Avenue Courteline; boulevard périphérique intérieur;;croisement;16/11/12
+75012;16993;Avenue Daumesnil, route de ceinture du lac Daumesnil;Avenue Daumesnil; route de ceinture du lac Daumesnil;;croisement;18/01/13
+75012;25517;Avenue Daumesnil, avenue Ledru Rollin;Avenue Daumesnil; avenue Ledru Rollin;;croisement;06/07/12
+75012;47573;Avenue Daumesnil, rue de Rambouillet;Avenue Daumesnil; rue de Rambouillet;;croisement;03/02/12
+75012;58302;Avenue Daumesnil, boulevard Diderot;Avenue Daumesnil; boulevard Diderot;;croisement;05/10/12
+75012;81204;Avenue de la Porte de Vincennes;Avenue de la Porte de Vincennes;;;adresse imprécise;16/11/12
+75012;12089;Avenue du Général Bizot, rue du Sahel;Avenue du Général Bizot; rue du Sahel;;croisement;29/11/16
+75012;94387;Avenue Ledru Rollin, rue du Faubourg Saint-Antoine;Avenue Ledru Rollin; rue du Faubourg Saint-Antoine;;croisement;16/03/12
+75012;80257;Avenue Saint-Mandé, rue de Picpus;Avenue Saint-Mandé; rue de Picpus;;croisement;22/06/12
+75012;10557;Boulevard de la Bastille, rue Jules César;Boulevard de la Bastille; rue Jules César;;croisement;29/06/12
+75012;94447;Boulevard de Reuilly, rue Taine;Boulevard de Reuilly; rue Taine;;croisement;13/07/12
+75012;14293;Boulevard Diderot, rue Michel Chasles;Boulevard Diderot; rue Michel Chasles;;croisement;06/04/12
+75012;55469;Boulevard Diderot, rue de Chaligny;Boulevard Diderot; rue de Chaligny;;croisement;21/12/11
+75012;61905;Boulevard Diderot, rue de Picpus;Boulevard Diderot; rue de Picpus;;croisement;21/12/11
+75012;73321;Boulevard Diderot, rue de Bercy;Boulevard Diderot; rue de Bercy;;croisement;13/04/12
+75012;84480;Boulevard Diderot, rue Pierre Bourdan;Boulevard Diderot; rue Pierre Bourdan;;croisement;21/12/11
+75012;19779;Boulevard Poniatowski, rue Claude Decaen;Boulevard Poniatowski; rue Claude Decaen;;croisement;07/12/12
+75012;83531;Boulevard Poniatowski, rue de Charenton;Boulevard Poniatowski; rue de Charenton;;croisement;16/11/12
+75012;93044;Boulevard Soult, avenue de la Porte de Vincennes;Boulevard Soult; avenue de la Porte de Vincennes;;croisement;23/11/12
+75012;97975;Boulevard Soult, avenue de Saint-Mandé;Boulevard Soult; avenue de Saint-Mandé;;croisement;16/11/12
+75012;97975A;Boulevard Soult, avenue Courteline;Boulevard Soult; avenue Courteline;;croisement;16/11/12
+75012;12084;Caserne Reuilly — placette Chaligny vers jardin ouvert;Caserne Reuilly — placette Chaligny vers jardin ouvert;;;point décrit;inconnue
+75012;12085;Caserne Reuilly — placette Diderot vers jardin ouvert;Caserne Reuilly — placette Diderot vers jardin ouvert;;;point décrit;inconnue
+75012;42411;Cours de Vincennes, avenue du Docteur Arnold Netter;Cours de Vincennes; avenue du Docteur Arnold Netter;;croisement;20/12/13
+75012;10100;Cours de Vincennes, avenue du Trône;Cours de Vincennes; avenue du Trône;;croisement;08/06/12
+75012;12082;Parc de Bercy, skate Parc;Parc de Bercy; skate Parc;;croisement;09/01/17
+75012;12034;Passerelle Simone de Beauvoir (aval rive droite) — Seine;Passerelle Simone de Beauvoir (aval rive droite) — Seine;;;point décrit;inconnue
+75012;17733;Place de la Bastille, port de l'Arsenal;Place de la Bastille; port de l'Arsenal;;croisement;09/11/12
+75012;33039;Place de la Bastille, rue de Lyon;Place de la Bastille; rue de Lyon;;croisement;09/11/12
+75012;22458;Place Edouard Renard, boulevard Soult;Place Edouard Renard; boulevard Soult;;croisement;07/12/12
+75012;50229;Place Edouard Renard;Place Edouard Renard;;;adresse imprécise;09/11/12
+75012;90101;Place Félix Eboué angle avenue Daumesnil, boulevard de Reuilly;Place Félix Eboué angle avenue Daumesnil; boulevard de Reuilly;;croisement;03/08/12
+75012;30906;Place Henri Frenay, rue Roland Barthes;Place Henri Frenay; rue Roland Barthes;;croisement;20/07/12
+75012;12067;Place Léonard Bernstein, entrée Parc de Bercy;Place Léonard Bernstein; entrée Parc de Bercy;;croisement;29/03/17
+75012;12029;Place Maurice de Fontenay;Place Maurice de Fontenay;;;adresse imprécise;31/08/18
+75012;33599;Pont Charles de Gaulle, quai de la Rapée;Pont Charles de Gaulle; quai de la Rapée;;croisement;11/05/12
+75012;30738;Quai de Bercy, niveau POPB;;;;point décrit;01/06/12
+75012;65346;Quai de Bercy, pont de Tolbiac;Quai de Bercy; pont de Tolbiac;;croisement;20/07/12
+75012;35702;Quai de la Râpée, boulevard Diderot;Quai de la Râpée; boulevard Diderot;;croisement;27/04/12
+75012;46378;Quai de la Râpée, avenue Ledru Rollin;Quai de la Râpée; avenue Ledru Rollin;;croisement;22/06/12
+75012;36726;Rue de Charenton, avenue Ledru Rollin;Rue de Charenton; avenue Ledru Rollin;;croisement;23/03/12
+75012;12069;Rue de Charenton, boulevard de Reuilly;Rue de Charenton; boulevard de Reuilly;;croisement;30/11/16
+75012;53155;Rue de la Brèche aux Loups, rue de la Durance;Rue de la Brèche aux Loups; rue de la Durance;;croisement;04/05/12
+75012;90513;Rue de Rambouillet, rue de Châlon;Rue de Rambouillet; rue de Châlon;;croisement;11/05/12
+75012;17662;Rue de Tourneux, rue Edouard Robert;Rue de Tourneux; rue Edouard Robert;;croisement;20/04/12
+75012;19963;Rue de Wattignies, rue de Fécamp;Rue de Wattignies; rue de Fécamp;;croisement;07/09/12
+75012;84570;Rue Erard, rue de Reuilly;Rue Erard; rue de Reuilly;;croisement;21/12/11
+75012;12091;Rue Fécamp, avenue Daumesnil;Rue Fécamp; avenue Daumesnil;;croisement;01/09/16
+75012;60061;Rue François Truffaut, rue de l'Ambroisie;Rue François Truffaut; rue de l'Ambroisie;;croisement;09/11/12
+75012;12083;Rue Hénard, allée Vivaldi;Rue Hénard; allée Vivaldi;;croisement;27/09/16
+75012;12090;Rue Jacques Hillairet, rue Albinoni;Rue Jacques Hillairet; rue Albinoni;;croisement;20/10/16
+75012;75510;Rue Montgallet, rue de Reuilly;Rue Montgallet; rue de Reuilly;;croisement;13/01/12
+75012;41676;Rue Reuilly, boulevard Diderot;Rue Reuilly; boulevard Diderot;;croisement;13/01/12
+75012;62164;Rue Roland Barthes, rue Chrétien deTroyes;Rue Roland Barthes; rue Chrétien deTroyes;;croisement;18/05/12
+75012;12003;Rue Villiot, rue de Bercy;Rue Villiot; rue de Bercy;;croisement;31/05/18
+75012;12087;Bercy Charenton — prolongement rue Baron Le Roy;;;;point décrit;inconnue
+75012;12088;Léo Lagrange;;;;point décrit;inconnue
+75012;12432;12-14, cité Moynet;;;;point décrit;27/07/12
+75012;13469;Face au 30, boulevard Carnot;;;;point décrit;02/11/12
+75012;16271;177, rue de Bercy;;;;adresse précise;11/05/12
+75012;30427;Place Colonel Bourgouin — rue Erard, rue de Charenton;;;;point décrit;14/09/12
+75012;33553;Place d'Aligre;;;;adresse imprécise;04/05/12
+75012;38396;Place Félix Eboué;;;;adresse imprécise;13/04/12
+75012;42724;Place du Bataillon du Pacifique;;;;adresse imprécise;18/03/14
+75012;47130;Colonne Bastille Sud;;;;point décrit;14/09/12
+75012;48147;Place des Combattants en Afrique du Nord;;;;adresse imprécise;13/04/12
+75012;64001;59, boulevard Soult;;;;adresse précise;09/11/12
+75012;66094;Pont de Bercy Rive droite;;;;point décrit;20/04/12
+75012;68606;63, rue de Picpus;;;;adresse précise;31/08/12
+75012;72637;Route de la Pyramide;;;;adresse imprécise;15/05/15
+75012;77071;Place Henri Frenay;;;;adresse imprécise;03/02/12
+75012;87643;19, rue du Colonel Rozanoff;;;;adresse précise;28/11/14
+75012;91445;Esplanade Saint-Louis;;;;adresse imprécise;15/05/15
+75012;91873;Pont de Tolbiac (aval) — Seine;;;;point décrit;06/07/12
+75013;13099;239, rue de Tolbiac;;;;adresse précise;29/12/15
+75013;16986;Avenue d'Italie, rue de Tolbiac;Avenue d'Italie; rue de Tolbiac;;croisement;10/08/12
+75013;23065;Avenue d'Italie, rue Vandrezanne;Avenue d'Italie; rue Vandrezanne;;croisement;19/10/12
+75013;11144;Avenue d'Italie, rue du Tage;Avenue d'Italie; rue du Tage;;croisement;07/09/12
+75013;14707;Avenue d'Italie, boulevard Kellermann, boulevard Massena;Avenue d'Italie; boulevard Kellermann; boulevard Massena;croisement;07/09/12
+75013;64594;Avenue de Choisy, rue Baudricourt;Avenue de Choisy; rue Baudricourt;;croisement;01/06/12
+75013;29712;Avenue de France, rue Raymond Aron;Avenue de France; rue Raymond Aron;;croisement;01/11/13
+75013;58448;Avenue de France, boulevard Vincent Auriol;Avenue de France; boulevard Vincent Auriol;;croisement;21/12/11
+75013;89076;Avenue de France, rue de Tolbiac;Avenue de France; rue de Tolbiac;;croisement;20/12/13
+75013;16244;Avenue de la Porte d'Ivry, avenue Claude Régaud;Avenue de la Porte d'Ivry; avenue Claude Régaud;;croisement;19/10/12
+75013;48567;Avenue des Gobelins, boulevard Saint-Marcel;Avenue des Gobelins; boulevard Saint-Marcel;;croisement;01/06/12
+75013;53448;Avenue des Gobelins, boulevard Saint- Marcel;Avenue des Gobelins; boulevard Saint-Marcel;;croisement;01/06/12
+75013;67935;Avenue Joseph Bédier, rue Maryse Bastié;Avenue Joseph Bédier; rue Maryse Bastié;;croisement;19/10/12
+75013;91336;Avenue Pierre de Coubertin, boulevard Kellermann;Avenue Pierre de Coubertin; boulevard Kellermann;;croisement;01/06/12
+75013;13109;Avenue Pierre Mendès France, rue Paul Klee;Avenue Pierre Mendès France; rue Paul Klee;;croisement;inconnue
+75013;68021;Boulevard Auguste Blanqui, rue Corvisart;Boulevard Auguste Blanqui; rue Corvisart;;croisement;21/12/11
+75013;68334;Boulevard Auguste Blanqui, rue de la Glacière;Boulevard Auguste Blanqui; rue de la Glacière;;croisement;21/12/11
+75013;62732;Boulevard de l'Hôpital, rue Pinel;Boulevard de l'Hôpital; rue Pinel;;croisement;13/07/12
+75013;64071;Boulevard de l'Hôpital, quai d'Austerlitz, gare d'Austerlitz;Boulevard de l'Hôpital; quai d'Austerlitz;;croisement;31/08/12
+75013;78185;Boulevard de l'Hôpital, rue Jeanne d'Arc;Boulevard de l'Hôpital; rue Jeanne d'Arc;;croisement;13/07/12
+75013;82014;Boulevard de Port Royal, rue Glacière;Boulevard de Port Royal; rue Glacière;;croisement;07/09/12
+75013;33183;Boulevard Général Jean Simon, Pont National;Boulevard Général Jean Simon; Pont National;;croisement;28/12/12
+75013;34836;Boulevard Massena, avenue de Choisy;Boulevard Massena; avenue de Choisy;;croisement;17/05/13
+75013;13054;Boulevard Massena, rue Darmesteter;Boulevard Massena; rue Darmesteter;;croisement;24/02/17
+75013;63591;Boulevard Masséna, avenue de la Porte d'Ivry;Boulevard Masséna; avenue de la Porte d'Ivry;;croisement;14/09/12
+75013;13077;Boulevard Masséna, avenue de la Porte de Vitry;Boulevard Masséna; avenue de la Porte de Vitry;;croisement;14/11/16
+75013;79232;Boulevard Masséna, rue Jean-Baptiste Berlier;Boulevard Masséna; rue Jean-Baptiste Berlier;;croisement;09/11/12
+75013;58557;Boulevard Saint-Marcel, boulevard de l'Hôpital;Boulevard Saint-Marcel; boulevard de l'Hôpital;;croisement;01/06/12
+75013;75329;Boulevard Vincent Auriol, quai d'Austerlitz;Boulevard Vincent Auriol; quai d'Austerlitz;;croisement;19/10/12
+75013;84568;Boulevard Vincent Auriol, rue Nationale;Boulevard Vincent Auriol; rue Nationale;;croisement;19/10/12
+75013;13080;Dalle Olympiades — Cour de Rome, Galerie Stadium;Dalle Olympiades — Cour de Rome; Galerie Stadium;;croisement;01/09/16
+75013;13101;Passerelle Simone de Beauvoir (amont rive gauche) — Seine;Passerelle Simone de Beauvoir (amont rive gauche) — Seine;;;point décrit;inconnue
+75013;35012;Place Claude Bourdet, rue des Cordelières, rue Corvisart;Place Claude Bourdet; rue des Cordelières; rue Corvisart;croisement;21/12/11
+75013;19891;Place d'Italie, boulevard Vincent Auriol;Place d'Italie; boulevard Vincent Auriol;;croisement;21/12/11
+75013;61371;Place d'Italie, côté avenue des Gobelins;Place d'Italie; côté avenue des Gobelins;;croisement;20/01/12
+75013;75778;Place d'Italie, boulevard Hôpital;Place d'Italie; boulevard Hôpital;;croisement;21/12/11
+75013;78193;Place de Port au Prince, avenue de la Porte de Choisy;Place de Port au Prince; avenue de la Porte de Choisy;;croisement;01/06/12
+75013;81328;Place de Rungis — rue Barrault, rue Boussingault;Place de Rungis — rue Barrault; rue Boussingault;;croisement;09/03/12
+75013;13104;Place Farhat Hached;Place Farhat Hached;;;adresse imprécise;inconnue
+75013;13772;Place Jeanne d'Arc, place Souham;Place Jeanne d'Arc; place Souham;;croisement;14/09/12
+75013;13412;Pont Charles de Gaulle, quai d'Austerlitz;Pont Charles de Gaulle; quai d'Austerlitz;;croisement;18/01/13
+75013;85095;Pont de Bercy (aval) — Seine;Pont de Bercy (aval) — Seine;;;point décrit;09/11/12
+75013;62347;Pont de Tolbiac, quai François Mauriac;Pont de Tolbiac; quai François Mauriac;;croisement;30/07/13
+75013;13102;Pont RATP — Seine;Pont RATP — Seine;;;point décrit;inconnue
+75013;30922;Quai François Mauriac, passerelle Simone de Beauvoir;Quai François Mauriac; passerelle Simone de Beauvoir;;croisement;13/07/12
+75013;29435;Rue Albert, rue Jean Fautrier;Rue Albert; rue Jean Fautrier;;croisement;17/02/12
+75013;13085;Rue Bobillot, place Paul Verlaine, rue Vandrezanne;Rue Bobillot; place Paul Verlaine; rue Vandrezanne;croisement;13/03/17
+75013;13081;Rue Bourgon, rue du Moulin de la Pointe;Rue Bourgon; rue du Moulin de la Pointe;;croisement;30/11/16
+75013;25765;Rue Cantagrel, rue Eugène Oudiné;Rue Cantagrel; rue Eugène Oudiné;;croisement;07/06/13
+75013;13108;Rue Chevaleret, rue Alphonse Boudard, rue Charcot;Rue Chevaleret; rue Alphonse Boudard; rue Charcot;croisement;inconnue
+75013;82224;Rue de la Colonie, rue de la Fontaine à Mulard;Rue de la Colonie; rue de la Fontaine à Mulard;;croisement;21/12/11
+75013;13086;Rue de la Glacière, boulevard Arago;Rue de la Glacière; boulevard Arago;;croisement;24/02/17
+75013;15476;Rue de Tolbiac, rue du Chevaleret;Rue de Tolbiac; rue du Chevaleret;;croisement;23/03/12
+75013;59136;Rue de Tolbiac, avenue de Choisy;Rue de Tolbiac; avenue de Choisy;;croisement;01/06/12
+75013;13084;Rue de Tolbiac, rue Bobillot;Rue de Tolbiac; rue Bobillot;;croisement;10/03/17
+75013;97058;Rue de Tolbiac, rue Nationale;Rue de Tolbiac; rue Nationale;;croisement;19/10/12
+75013;12569;Rue des Frères d'Astier de la Vigerie, rue Simone Weil;Rue des Frères d'Astier de la Vigerie; rue Simone Weil;;croisement;01/06/12
+75013;83092;Rue des Grands Moulins, rue Marie Andrée Lagroua Weil Hallé;Rue des Grands Moulins; rue Marie Andrée Lagroua Weil Hallé;;croisement;07/09/12
+75013;63074;Rue des Longues Raies, boulevard Kellermann;Rue des Longues Raies; boulevard Kellermann;;croisement;19/10/12
+75013;15868;Rue des Peupliers, rue du docteur Tuffier;Rue des Peupliers; rue du docteur Tuffier;;croisement;07/09/12
+75013;17197;Rue Docteur Magnan, rue Charles Moureu;Rue Docteur Magnan; rue Charles Moureu;;croisement;01/06/12
+75013;13075;Rue du Château des Rentiers, rue Ricaut;Rue du Château des Rentiers; rue Ricaut;;croisement;01/08/16
+75013;18332;Rue du Chevaleret, rue Clisson;Rue du Chevaleret; rue Clisson;;croisement;13/07/12
+75013;47653;Rue du Dessous des Berges, rue Eugène Oudiné, rue de Patay;Rue du Dessous des Berges; rue Eugène Oudiné; rue de Patay;croisement;21/12/11
+75013;13087;Rue Jean-Baptiste Berlier, allée Paris-Ivry;Rue Jean-Baptiste Berlier; allée Paris-Ivry;;croisement;inconnue
+75013;47824;Rue Jeanne d'Arc, rue de Domrémy, rue de Patay;Rue Jeanne d'Arc; rue de Domrémy; rue de Patay;croisement;24/08/12
+75013;67014;Rue Jeanne d'Arc, boulevard Saint-Marcel;Rue Jeanne d'Arc; boulevard Saint-Marcel;;croisement;25/05/12
+75013;13103;Rue Louise Bourgeois, rue Julie Daubie;Rue Louise Bourgeois; rue Julie Daubie;;croisement;inconnue
+75013;13076;Rue Patay, rue de Tolbiac;Rue Patay; rue de Tolbiac;;croisement;22/09/16
+75013;28637;Rue Péan, boulevard Masséna;Rue Péan; boulevard Masséna;;croisement;18/01/13
+75013;71821;Rue Regnault, rue du Château des Rentiers;Rue Regnault; rue du Château des Rentiers;;croisement;13/01/12
+75013;46911;Rue Sainte-Hélène, rue de la poterne des Peupliers;Rue Sainte-Hélène; rue de la poterne des Peupliers;;croisement;19/10/12
+75013;14765;Place de Vénétie;;;;adresse imprécise;25/01/13
+75013;19286;Olympiades — Rome (accueil);;;;point décrit;18/01/13
+75013;19566;Avenue d'Ivry (côté impair) au niveau de la rue Regnault;;;;point décrit;17/02/12
+75013;30118;15 bis, rue de Tolbiac;;;;adresse précise;21/12/11
+75013;45705;Carrefour des Gobelins;;;;adresse imprécise;01/06/12
+75013;60972;Face au 122, rue du Château des Rentiers;;;;point décrit;24/08/12
+75013;62734;Porte d'Italie/périphérique;;;;point décrit;19/10/12
+75013;66003;Place d'Italie, rue Bobillot, boulevard Auguste Blanqui;;;;point décrit;21/12/11
+75013;67390;Vis-à-vis du 90, rue de Tolbiac;;;;point décrit;01/06/12
+75013;70071;Pont National amont — Seine;;;;point décrit;21/12/12
+75013;10105;8, boulevard de l'Hôpital;;;;adresse précise;21/12/11
+75013;13074;55, boulevard Vincent Auriol;;;;adresse précise;06/03/17
+75013;13088;ZAC RG — Halle Freyssinet « douve » arrière créée;;;;point décrit;23/05/17
+75013;13089;RG — Bédier Ilot Franc-Nohain;;;;point décrit;inconnue
+75013;13090;ZAC RG — Oudiné-Chevaleret;;;;point décrit;inconnue
+75013;13091;ZAC Paul Bourget — arrière de la rue Bourget;;;;point décrit;inconnue
+75013;13105;Place Aurélie Nemours;;;;adresse imprécise;inconnue
+75013;13106;Place Jean-Michel Basquiat — Avenue de France, rue Emile Durkheim;;;;point décrit;inconnue
+75013;13107;Place Jean-Michel Basquiat — Promenade plantée;;;;point décrit;inconnue
+75013;13110;Rue Ada Lovelace;;;;adresse imprécise;inconnue
+75013;13231;Olympiades — Londres, Anvers;;;;point décrit;18/01/13
+75013;13532;Olympiades — Mexico;;;;point décrit;18/01/13
+75013;13700;Olympiades — Squaw Valley;;;;point décrit;18/01/13
+75013;13967;Rue du Colonel Dominé (Côté porte d'Italie);;;;point décrit;11/01/13
+75013;73087;Pont d'Austerlitz aval — Seine;;;;point décrit;27/07/12
+75013;79596;Pont d'Austerlitz amont — Seine;;;;point décrit;27/07/12
+75013;80562;Pont National aval — Seine;;;;point décrit;28/12/12
+75013;84574;Pont de Bercy (amont) — Seine;;;;point décrit;19/10/12
+75013;87040;91, boulevard Masséna;;;;adresse précise;20/01/12
+75014;17143;16, rue du Faubourg Saint-Jacques;;;;adresse précise;27/04/12
+75014;69585;72, avenue Denfert-Rochereau;;;;adresse précise;21/12/11
+75014;61992;Avenue Adolphe Pinard, avenue de la Porte de Châtillon;Avenue Adolphe Pinard; avenue de la Porte de Châtillon;;croisement;07/09/12
+75014;41203;Avenue de la Porte d'Orléans, boulevard Romain Rolland;Avenue de la Porte d'Orléans; boulevard Romain Rolland;;croisement;19/10/12
+75014;51743;Avenue de la Porte d'Orléans, place du 25 août 1944;Avenue de la Porte d'Orléans; place du 25 août 1944;;croisement;04/05/12
+75014;14064;Avenue du Général Leclerc, rue Mouton Duvernet;Avenue du Général Leclerc; rue Mouton Duvernet;;croisement;03/07/18
+75014;52404;Avenue du Maine, avenue du Commandant René Mouchotte;Avenue du Maine; avenue du Commandant René Mouchotte;;croisement;17/02/12
+75014;84620;Avenue du Maine, rue Froidevaux;Avenue du Maine; rue Froidevaux;;croisement;14/09/12
+75014;14001;Avenue du Maine, rue de la Gaîté;Avenue du Maine; rue de la Gaîté;;croisement;inconnue
+75014;10155;Avenue Ernest Reyer, rue Edmond Rousse;Avenue Ernest Reyer; rue Edmond Rousse;;croisement;28/12/12
+75014;73923;Avenue Jean Moulin, boulevard Brune;Avenue Jean Moulin; boulevard Brune;;croisement;22/06/12
+75014;13654;Avenue Jean Moulin, rue Auguste Cain;Avenue Jean Moulin; rue Auguste Cain;;croisement;05/10/12
+75014;77797;Avenue Marc Sangnier, rue Wilfrid Laurier;Avenue Marc Sangnier; rue Wilfrid Laurier;;croisement;26/10/12
+75014;56510;Avenue Maurice d'Ocagne, avenue Georges Lafenestre;Avenue Maurice d'Ocagne; avenue Georges Lafenestre;;croisement;17/02/12
+75014;41472;Avenue Pierre de Coubertin, avenue Paul Vaillant-Couturier;Avenue Pierre de Coubertin; avenue Paul Vaillant-Couturier;;croisement;22/06/12
+75014;14067;Avenue Reille, rue René Coty;Avenue Reille; rue René Coty;;croisement;01/12/16
+75014;14068;Avenue Reille, rue Gazan et rue Lemaignan;Avenue Reille; rue Gazan et rue Lemaignan;;croisement;08/09/16
+75014;43339;Boulevard Arago, rue du Faubourg Saint-Jacques;Boulevard Arago; rue du Faubourg Saint-Jacques;;croisement;20/01/12
+75014;39250;Boulevard Auguste Blanqui, rue de la Santé;Boulevard Auguste Blanqui; rue de la Santé;;croisement;20/01/12
+75014;81104;Boulevard Brune, avenue de la Porte de Vanves;Boulevard Brune; avenue de la Porte de Vanves;;croisement;17/02/12
+75014;71184;Boulevard de Port Royal, avenue de l'Observatoire;Boulevard de Port Royal; avenue de l'Observatoire;;croisement;21/12/11
+75014;34956;Boulevard du Montparnasse, rue du Départ;Boulevard du Montparnasse; rue du Départ;;croisement;08/06/12
+75014;77867;Boulevard du Montparnasse, avenue de l'Observatoire;Boulevard du Montparnasse; avenue de l'Observatoire;;croisement;21/12/11
+75014;86283;Boulevard Edgard Quinet, boulevard Raspail;Boulevard Edgard Quinet; boulevard Raspail;;croisement;13/04/12
+75014;97328;Boulevard Jourdan, rue Emile Deutsch de la Meurthe;Boulevard Jourdan; rue Emile Deutsch de la Meurthe;;croisement;21/09/12
+75014;13583;Boulevard Raspail, rue Huyghens;Boulevard Raspail; rue Huyghens;;croisement;27/01/12
+75014;13312;Boulevard Saint-Jacques, rue Ferrus;Boulevard Saint-Jacques; rue Ferrus;;croisement;21/12/11
+75014;81962;Jonction boulevard Brune, boulevard Jourdan;Jonction boulevard Brune; boulevard Jourdan;;croisement;19/12/14
+75014;83193;Jonction boulevard Brune, boulevard Jourdan;Jonction boulevard Brune; boulevard Jourdan;;croisement;19/12/14
+75014;35666;Place de Catalogne;Place de Catalogne;;;adresse imprécise;27/07/12
+75014;20037;Place Denfert Rochereau, avenue du Général Leclerc;Place Denfert Rochereau; avenue du Général Leclerc;;croisement;20/01/12
+75014;16056;Place Denfert-Rochereau, rue de Grancey;Place Denfert-Rochereau; rue de Grancey;;croisement;21/12/11
+75014;18838;Place Denfert-Rochereau, boulevard Saint-Jacques;Place Denfert-Rochereau; boulevard Saint-Jacques;;croisement;27/01/12
+75014;70611;Place Jacques Demy — Mouton Duvernet, Saillard;;;;point décrit;25/05/12
+75014;54322;Place Perroy, avenue du Maine;Place Perroy; avenue du Maine;;croisement;08/06/12
+75014;38285;Rue Adolphe Pinard, avenue de la Porte de Vanves;Rue Adolphe Pinard; avenue de la Porte de Vanves;;croisement;21/12/12
+75014;60857;Rue Boulard, rue Daguerre;Rue Boulard; rue Daguerre;;croisement;21/12/11
+75014;70540;Rue d'Alésia, villa d'Alésia;Rue d'Alésia; villa d'Alésia;;croisement;02/11/12
+75014;73025;Rue d'Alésia, rue de la Santé;Rue d'Alésia; rue de la Santé;;croisement;01/06/12
+75014;83358;Rue d'Alésia, rue Didot;Rue d'Alésia; rue Didot;;croisement;28/09/12
+75014;14066;Rue d'Alésia, rue René Coty;Rue d'Alésia; rue René Coty;;croisement;09/11/18
+75014;33506;Rue d'Alésia, rue de la Tombe Issoire;Rue d'Alésia; rue de la Tombe Issoire;;croisement;30/03/12
+75014;18452;Rue de l'Eure, rue Didot;Rue de l'Eure; rue Didot;;croisement;24/02/12
+75014;32695;Rue de la Légion Etrangère, boulevard Romain Rolland;Rue de la Légion Etrangère; boulevard Romain Rolland;;croisement;19/10/12
+75014;14063;Rue de la Sablière, rue Hippolyte Maindron;Rue de la Sablière; rue Hippolyte Maindron;;croisement;07/04/17
+75014;82788;Rue de la Santé;Rue de la Santé;;;adresse imprécise;28/09/12
+75014;11453;Rue des Plantes, rue Antoine Chantin;Rue des Plantes; rue Antoine Chantin;;croisement;28/09/12
+75014;14251;Rue du Cange, rue de Gergovie;Rue du Cange; rue de Gergovie;;croisement;17/02/12
+75014;15950;Rue du Moulin de la Vierge, rue Decrès;Rue du Moulin de la Vierge; rue Decrès;;croisement;17/02/12
+75014;14048;Rue Guilleminot, rue Crocé Spinelli;Rue Guilleminot; rue Crocé Spinelli;;croisement;03/11/17
+75014;42789;Rue Jean Dolent, rue Messier;Rue Jean Dolent; rue Messier;;croisement;20/01/12
+75014;81787;Rue Messier, boulevard Arago;Rue Messier; boulevard Arago;;croisement;27/01/12
+75014;14074;Rue Pernety, rue de l'Ouest;Rue Pernety; rue de l'Ouest;;croisement;09/09/16
+75014;89511;Rue Raymond Losserand, rue d'Alésia;Rue Raymond Losserand; rue d'Alésia;;croisement;23/03/12
+75014;94232;Rue Raymond Losserand, rue Pernety;Rue Raymond Losserand; rue Pernety;;croisement;09/03/12
+75014;14602;Rue Raymond Losserand, rue Pierre Larousse;Rue Raymond Losserand; rue Pierre Larousse;;croisement;17/02/12
+75014;32303;Rue Saillard, place Ferdinand Brunot;Rue Saillard; place Ferdinand Brunot;;croisement;25/05/12
+75014;54552;Rue Vercingétorix, rue d'Alésia;Rue Vercingétorix; rue d'Alésia;;croisement;06/07/12
+75014;92903;Rue Vercingétorix, rue Pernety;Rue Vercingétorix; rue Pernety;;croisement;17/02/12
+75014;44351;Boulevard Jourdan — RER;;;;point décrit;17/05/13
+75014;48506;Place Fernand Mourlot — rue de la Gaîté, boulevard Edgard Quinet;;;;point décrit;19/06/15
+75014;75264;10, boulevard Brune;;;;adresse précise;17/02/12
+75014;79474;Place de Moro Giafféri;;;;adresse imprécise;21/12/11
+75014;14070;Promenade plantée Broussais — le long de la promenade;;;;point décrit;inconnue
+75014;14071;Promenade plantée Broussais — zone bâtiment E.H.P.A.D.;;;;point décrit;inconnue
+75014;15349;Place de la Porte de Vanves;;;;adresse imprécise;14/12/12
+75014;32762;Place Victor et Hélène Basch;;;;adresse imprécise;25/05/12
+75015;68007;11, rue Chasseloup Laubat;;;;adresse précise;21/12/11
+75015;12079;Avenue Albert Bartholomé, rue André Theuriet;Avenue Albert Bartholomé; rue André Theuriet;;croisement;09/03/12
+75015;89051;Avenue de la Porte de Brançion, boulevard Lefebvre;Avenue de la Porte de Brançion; boulevard Lefebvre;;croisement;08/06/12
+75015;68651;Avenue de Suffren, avenue de la Motte-Piquet;Avenue de Suffren; avenue de la Motte-Piquet;;croisement;11/05/12
+75015;49453;Avenue du Maine, rue du Départ;Avenue du Maine; rue du Départ;;croisement;20/04/12
+75015;90461;Avenue Emile Zola, rue des Entrepreneurs;Avenue Emile Zola; rue des Entrepreneurs;;croisement;23/03/12
+75015;10476;Boulevard de Grenelle, rue du Commerce;Boulevard de Grenelle; rue du Commerce;;croisement;21/12/11
+75015;85735;Boulevard de Grenelle, boulevard Garibaldi;Boulevard de Grenelle; boulevard Garibaldi;;croisement;21/12/11
+75015;43832;Boulevard de Montparnasse, avenue du Maine;Boulevard de Montparnasse; avenue du Maine;;croisement;24/02/12
+75015;41677;Boulevard du Montparnasse, rue de l'Arrivée;Boulevard du Montparnasse; rue de l'Arrivée;;croisement;06/09/13
+75015;39029;Boulevard Lefebvre, rue Jean Sicard;Boulevard Lefebvre; rue Jean Sicard;;croisement;02/03/12
+75015;48258;Boulevard Lefebvre, avenue Porte de la Plaine;Boulevard Lefebvre; avenue Porte de la Plaine;;croisement;24/02/12
+75015;95742;Boulevard Pasteur, passage Alexandre;Boulevard Pasteur; passage Alexandre;;croisement;20/01/12
+75015;96500;Boulevard Pasteur, rue de l'Armorique;Boulevard Pasteur; rue de l'Armorique;;croisement;20/01/12
+75015;15043;Boulevard Victor, avenue de la Porte de Sèvres;Boulevard Victor; avenue de la Porte de Sèvres;;croisement;20/09/17
+75015;24120;Boulevard Victor, rue Lecourbe;Boulevard Victor; rue Lecourbe;;croisement;inconnue
+75015;53603;Esplanade Max Guedj, rue Balard;Esplanade Max Guedj; rue Balard;;croisement;03/08/12
+75015;38101;Place Balard;Place Balard;;;adresse imprécise;15/06/12
+75015;94561;Place Cambronne — Avenue Roger Cahen, rue Alexandre Cabanel;;;;point décrit;21/12/11
+75015;15229;Place des Insurgés de Varsovie;Place des Insurgés de Varsovie;;;adresse imprécise;04/05/12
+75015;60499;Place Henri Queille, boulevard Garibaldi, avenue de Breteuil;Place Henri Queille; boulevard Garibaldi; avenue de Breteuil;croisement;17/02/12
+75015;17892;Place Henri Queuille — boulevard Garibaldi, rue Lecourbe;;;;point décrit;17/02/12
+75015;72738;Place Léon Paul Fargue — boulevard des Invalides, rue de Sèvres;Place Léon Paul Fargue — boulevard des Invalides; rue de Sèvres;;croisement;25/05/12
+75015;43956;Place Marcel Cerdan, boulevard de Grenelle, rue Humblot;Place Marcel Cerdan; boulevard de Grenelle; rue Humblot;croisement;17/02/12
+75015;45963B;Place Raoul Dautry, boulevard de Vaugirard, rue de l'Arrivée;Place Raoul Dautry; boulevard de Vaugirard; rue de l'Arrivée;croisement;20/04/12
+75015;45963;Place Raoul Dautry, boulevard de Vaugirard, rue de l'Arrivée;Place Raoul Dautry; boulevard de Vaugirard; rue de l'Arrivée;croisement;20/04/12
+75015;47433;Pont du Garigliano;Pont du Garigliano;;;adresse imprécise;25/05/12
+75015;77600;Porte de Versailles, esplanade du 9 novembre 1989, avenue E. Renan;Porte de Versailles; esplanade du 9 novembre 1989; avenue E. Renan;croisement;16/03/12
+75015;91143;Quai d'Issy les Moulineaux;Quai d'Issy les Moulineaux;;;adresse imprécise;25/05/12
+75015;31629;Quai de Grenelle, pont de Grenelle;Quai de Grenelle; pont de Grenelle;;croisement;19/10/12
+75015;37524;Quai de Grenelle, pont de Bir Hakeim;Quai de Grenelle; pont de Bir Hakeim;;croisement;12/10/12
+75015;71637;Rond-point du pont Mirabeau, quai André Citroën;Rond-point du pont Mirabeau; quai André Citroën;;croisement;30/03/12
+75015;59975;Rue Balard, rue Saint-Charles;Rue Balard; rue Saint-Charles;;croisement;25/05/12
+75015;13273;Rue Bargue, rue Platon;Rue Bargue; rue Platon;;croisement;21/12/11
+75015;15113;Rue Brancion, rue de Vouillé;Rue Brancion; rue de Vouillé;;croisement;07/11/16
+75015;79759;Rue d'Alleray, rue de la Procession;Rue d'Alleray; rue de la Procession;;croisement;12/10/12
+75015;31474;Rue de Dantzig, rue Périchaux;Rue de Dantzig; rue Périchaux;;croisement;24/02/12
+75015;10771;Rue de Javel, rue Gutemberg;Rue de Javel; rue Gutemberg;;croisement;23/03/12
+75015;80153;Rue de la Convention, rue de Vaugirard;Rue de la Convention; rue de Vaugirard;;croisement;31/08/12
+75015;87231;Rue de la Convention, rue de la Croix Nivert;Rue de la Convention; rue de la Croix Nivert;;croisement;16/11/12
+75015;93133;Rue de la Convention, rue Saint-Charles;Rue de la Convention; rue Saint-Charles;;croisement;18/05/12
+75015;53526;Rue de la Croix Nivert, rue Desnouettes;Rue de la Croix Nivert; rue Desnouettes;;croisement;22/06/12
+75015;15116;Rue de Vaugirard, place Adolphe Chérioux;Rue de Vaugirard; place Adolphe Chérioux;;croisement;22/03/17
+75015;15114;Rue de Vouillé, rue de Castagnary;Rue de Vouillé; rue de Castagnary;;croisement;30/09/16
+75015;37792;Rue des Entrepreneurs, rue du Commerce;Rue des Entrepreneurs; rue du Commerce;;croisement;02/07/14
+75015;17112;Rue des Quatre frères Peignot, avenue Emile Zola;Rue des Quatre frères Peignot; avenue Emile Zola;;croisement;13/04/12
+75015;11675;Rue Desaix, place Alfred Sauvy;Rue Desaix; place Alfred Sauvy;;croisement;13/01/12
+75015;86075;Rue Desnouettes, boulevard Victor;Rue Desnouettes; boulevard Victor;;croisement;16/03/12
+75015;99315;Rue du Commerce, avenue Emile Zola, Frémicourt;Rue du Commerce; avenue Emile Zola; Frémicourt;croisement;18/07/14
+75015;98837;Rue du Cotentin, boulevard Pasteur;Rue du Cotentin; boulevard Pasteur;;croisement;21/12/11
+75015;15110;Rue du Professeur Florian Delbarre;Rue du Professeur Florian Delbarre;;;adresse imprécise;16/02/17
+75015;15120;Rue Emeriau, rue du Théatre;Rue Emeriau; rue du Théatre;;croisement;29/06/17
+75015;65530;Rue Falguière, rue Bargue;Rue Falguière; rue Bargue;;croisement;21/12/11
+75015;48877;Rue George Bernard Shaw, rue Leroi Gourhan;Rue George Bernard Shaw; rue Leroi Gourhan;;croisement;27/01/12
+75015;61930;Rue Leblanc, rue du Professeur Delbarre;Rue Leblanc; rue du Professeur Delbarre;;croisement;07/09/12
+75015;81297;Rue Lecourbe, rue Cambronne;Rue Lecourbe; rue Cambronne;;croisement;28/06/13
+75015;52282;Rue Lecourbe, villa Thoréton;Rue Lecourbe; villa Thoréton;;croisement;30/03/12
+75015;72190;Rue Léon Lhermitte, rue Gustave Larroumet;Rue Léon Lhermitte; rue Gustave Larroumet;;croisement;13/04/12
+75015;25702;Rue Léon Lhermitte, rue du docteur Jacquemaire Clémenceau;Rue Léon Lhermitte; rue du docteur Jacquemaire Clémenceau;;croisement;20/04/12
+75015;15095;Rue Linois, rue Emeriau;Rue Linois; rue Emeriau;;croisement;02/03/17
+75015;70417;Rue Platon, rue Falguière;Rue Platon; rue Falguière;;croisement;21/12/11
+75015;17168;Rue Saint-Charles, rue Varet;Rue Saint-Charles; rue Varet;;croisement;25/05/12
+75015;11877;Esplanade de la Mairie;;;;adresse imprécise;24/08/12
+75015;12972;Rue Jean Fourastie (face DOJO);;;;point décrit;16/11/12
+75015;69625;Place des Martyrs Juifs du Vélodrome d'Hiver;;;;adresse imprécise;12/10/12
+75015;70737;Place Charles Michels;;;;adresse imprécise;23/03/12
+75015;71964;Pont de Grenelle côté rive gauche Amont — Seine;;;;point décrit;12/10/12
+75015;96540;Porte de Versailles Nord;;;;point décrit;16/03/12
+75015;15067;Rue du Colonel Pierre Avia, contre-allée des Frères Voisin;;;;point décrit;08/02/18
+75015;15085;Beaugrenelle/Rampe d'accès rue Docteur Finlay;;;;point décrit;03/10/16
+75015;15089;Beaugrenelle/Passerelle Est, colonne CPCU;;;;point décrit;29/06/17
+75015;15090;Beaugrenelle/Passerelle Ouest, Mercure II;;;;point décrit;07/12/16
+75015;15092;Beaugrenelle/Reflets;;;;point décrit;30/11/16
+75015;15093;Beaugrenelle/Synagogue, Rive Gauche;;;;point décrit;30/11/16
+75015;15094;Beaugrenelle/Verseau, Perspective 1;;;;point décrit;02/12/16
+75015;15096;Beaugrenelle/Passerelle Robert Keller;;;;point décrit;22/02/18
+75015;15119;ZAC Boucicaut — allée Irène Némirovsky;;;;point décrit;08/07/16
+75015;26831;Rue Nélaton;;;;adresse imprécise;20/01/12
+75015;43285;Place Raoul Dautry;;;;adresse imprécise;15/06/12
+75015;50863;21, boulevard de Vaugirard;;;;adresse précise;28/06/13
+75016;44621;Allée de Longchamp, allée de la Reine Marguerite;Allée de Longchamp; allée de la Reine Marguerite;;croisement;02/08/13
+75016;84766;Allée de Longchamp, route des Moulins;Allée de Longchamp; route des Moulins;;croisement;02/08/13
+75016;87034;Allée de Longchamp, route de Sèvres à Neuilly;Allée de Longchamp; route de Sèvres à Neuilly;;croisement;02/08/13
+75016;29603;Allée de Longchamp, route Porte Dauphine à Porte des Sablons;;;;point décrit;16/11/12
+75016;16071;Avenue Chantemesse, avenue du Maréchal Fayolle;Avenue Chantemesse; avenue du Maréchal Fayolle;;croisement;10/08/16
+75016;35575;Avenue de la Grande Armée, rue de Tilsitt;Avenue de la Grande Armée; rue de Tilsitt;;croisement;07/09/12
+75016;16124;Avenue de la Muette, avenue Ingres, avenue Prudhon;Avenue de la Muette; avenue Ingres; avenue Prudhon;croisement;06/10/16
+75016;16006;Avenue de Lamballe, rue Raynouard;Avenue de Lamballe; rue Raynouard;;croisement;27/02/17
+75016;27200;Avenue de Versailles, boulevard Exelmans;Avenue de Versailles; boulevard Exelmans;;croisement;15/06/12
+75016;27296;Avenue de Versailles, boulevard Exelmans;Avenue de Versailles; boulevard Exelmans;;croisement;15/06/12
+75016;43643;Avenue de Versailles, rue Wilhem;Avenue de Versailles; rue Wilhem;;croisement;27/07/12
+75016;71195;Avenue des Nations Unies, avenue Albert de Mun;Avenue des Nations Unies; avenue Albert de Mun;;croisement;08/06/12
+75016;97703;Avenue des Nations Unies, rue Le Nôtre;Avenue des Nations Unies; rue Le Nôtre;;croisement;17/02/12
+75016;16005;Avenue du Général Mangin, avenue de Lamballe;Avenue du Général Mangin; avenue de Lamballe;;croisement;27/02/17
+75016;39331;Avenue du Général Sarrail, boulevard d'Auteuil;Avenue du Général Sarrail; boulevard d'Auteuil;;croisement;27/01/12
+75016;65961;Avenue du Parc des Princes, rue Claude Farrère;Avenue du Parc des Princes; rue Claude Farrère;;croisement;13/04/12
+75016;99036;Avenue du Président Wilson, rue Pierre 1er de Serbie;Avenue du Président Wilson; rue Pierre 1er de Serbie;;croisement;25/05/12
+75016;16135;Avenue Edouard Vaillant, avenue Ferdinand Buisson;Avenue Edouard Vaillant; avenue Ferdinand Buisson;;croisement;16/09/16
+75016;16136;Avenue Edouard Vaillant, avenue Porte de Saint-Cloud;Avenue Edouard Vaillant; avenue Porte de Saint-Cloud;;croisement;08/10/18
+75016;16134;Avenue Ferdinand Buisson, avenue Georges Lafont, avenue Félix d'Herelle;Avenue Ferdinand Buisson; avenue Georges Lafont; avenue Félix d'Herelle;croisement;17/03/17
+75016;64215;Avenue Foch, avenue de Malakoff;Avenue Foch; avenue de Malakoff;;croisement;14/09/12
+75016;39913;Avenue Foch, place de l'Etoile, rue de Presbourg;Avenue Foch; place de l'Etoile; rue de Presbourg;croisement;22/06/12
+75016;82540;Avenue Georges Lafont, rue Edouard Vaillant;Avenue Georges Lafont; rue Edouard Vaillant;;croisement;28/09/12
+75016;51930;Avenue Georges Mandel, rue Decamps;Avenue Georges Mandel; rue Decamps;;croisement;10/08/12
+75016;13418;Avenue Kléber, avenue des Portugais;Avenue Kléber; avenue des Portugais;;croisement;22/06/12
+75016;16109;Avenue Kléber, rue Boissière;Avenue Kléber; rue Boissière;;croisement;23/03/17
+75016;34560;Avenue Marceau, rue Galilée;Avenue Marceau; rue Galilée;;croisement;27/07/12
+75016;16158;Avenue Marcel Doret, rue Dode de la Brunerie;Avenue Marcel Doret; rue Dode de la Brunerie;;croisement;#N/A
+75016;93829;Avenue Raphaël, boulevard Suchet;Avenue Raphaël; boulevard Suchet;;croisement;09/11/12
+75016;20072;Avenue Victor Hugo, rue de Presbourg;Avenue Victor Hugo; rue de Presbourg;;croisement;22/06/12
+75016;33823;Avenue Victor Hugo, place Victor Hugo;Avenue Victor Hugo; place Victor Hugo;;croisement;21/12/11
+75016;53578;Boulevard d'Auteuil, avenue Gordon Bennett;Boulevard d'Auteuil; avenue Gordon Bennett;;croisement;13/04/12
+75016;12294;Boulevard de l'Amiral Bruix, rue du Général Ancelin;Boulevard de l'Amiral Bruix; rue du Général Ancelin;;croisement;09/03/12
+75016;14530;Boulevard Flandrin, avenue Henri Martin;Boulevard Flandrin; avenue Henri Martin;;croisement;17/02/12
+75016;15181;Boulevard Murat, rue Lecomte du Nouy, rue de Varize;Boulevard Murat; rue Lecomte du Nouy; rue de Varize;croisement;10/02/12
+75016;16145;Boulevard Murat, rue Daumier;Boulevard Murat; rue Daumier;;croisement;23/09/16
+75016;16146;Boulevard Murat, quai Saint-Exupéry;Boulevard Murat; quai Saint-Exupéry;;croisement;04/11/16
+75016;19196;Boulevard Murat, place de la Porte Molitor;Boulevard Murat; place de la Porte Molitor;;croisement;27/01/12
+75016;17849;Boulevard Suchet, rue Raffet, square TolstoÏ;Boulevard Suchet; rue Raffet; square TolstoÏ;croisement;30/03/12
+75016;37319;Boulevard Suchet, avenue Ingres;Boulevard Suchet; avenue Ingres;;croisement;21/12/11
+75016;85400;Jardins du Trocadéro;Jardins du Trocadéro;;;adresse imprécise;15/06/12
+75016;16152;Passerelle de l'Avre — Paris — Seine;Passerelle de l'Avre — Paris — Seine;;;point décrit;#N/A
+75016;16110;Passerelle Debilly — Seine;Passerelle Debilly — Seine;;;point décrit;Début 2019
+75016;19892;Place d'Iéna, avenue d'Iéna;Place d'Iéna; avenue d'Iéna;;croisement;18/05/12
+75016;11751;Place de Colombie, boulevard Suchet, boulevard Lannes, Porte de la Muette;Place de Colombie; boulevard Suchet; boulevard Lannes; Porte de la Muette;09/11/12
+75016;82043;Place de l'Europe, rue du Commandant Guilbaud;Place de l'Europe; rue du Commandant Guilbaud;;croisement;13/04/12
+75016;82043B;Place de l'Europe, rue du Commandant Guilbaud;Place de l'Europe; rue du Commandant Guilbaud;;croisement;20/04/12
+75016;65084;Place de la Porte d'Auteuil;Place de la Porte d'Auteuil;;;adresse imprécise;20/01/12
+75016;39407;Place de la Porte d'Auteuil;Place de la Porte d'Auteuil;;;adresse imprécise;21/12/11
+75016;89165;Place de la Porte de Saint-Cloud, avenue de Versailles;Place de la Porte de Saint-Cloud; avenue de Versailles;;croisement;19/10/12
+75016;27756;Place de la Porte de Saint-Cloud, avenue Georges Lafont;Place de la Porte de Saint-Cloud; avenue Georges Lafont;;croisement;28/09/12
+75016;72224;Place de la Porte Maillot, boulevard Thierry de Martel;Place de la Porte Maillot; boulevard Thierry de Martel;;croisement;23/03/12
+75016;61948;Place de Mexico, avenue d'Eylau;Place de Mexico; avenue d'Eylau;;croisement;09/03/12
+75016;16021;Place des Etats-Unis — Avenue d'Iéna, rue Bassano;Place des Etats-Unis — Avenue d'Iéna; rue Bassano;;croisement;15/03/17
+75016;95629;Place du Costa Rica, rue de Passy, rue Benjamin Franklin;Place du Costa Rica; rue de Passy; rue Benjamin Franklin;croisement;03/02/12
+75016;38363;Place du Général Stéfanik;Place du Général Stéfanik;;;adresse imprécise;28/09/12
+75016;79782;Place du Maréchal de Lattre de Tassigny, route de Suresnes;Place du Maréchal de Lattre de Tassigny; route de Suresnes;;croisement;28/09/12
+75016;64856;Place du Trocadéro, avenue Georges Mandel, avenue d'Eylau;Place du Trocadéro; avenue Georges Mandel; avenue d'Eylau;croisement;21/12/11
+75016;74412;Place du Trocadéro, avenue Kléber, avenue Poincaré;Place du Trocadéro; avenue Kléber; avenue Poincaré;croisement;21/12/11
+75016;32468;Place du Trocadéro, côté esplanade;Place du Trocadéro; côté esplanade;;croisement;20/01/12
+75016;35620;Place du Trocadéro, avenue du Président Wilson;Place du Trocadéro; avenue du Président Wilson;;croisement;04/05/12
+75016;54069;Place Jean Monnet — rue des Belles Feuilles, rue de la Pompe;Place Jean Monnet — rue des Belles Feuilles; rue de la Pompe;;croisement;09/01/12
+75016;17596;Pont Bir Hakeim, avenue du Président Kennedy;Pont Bir Hakeim; avenue du Président Kennedy;;croisement;14/09/12
+75016;95271;Pont de l'Alma côté rive droite aval — Seine;Pont de l'Alma côté rive droite aval — Seine;;;point décrit;03/08/12
+75016;16113;Pont du Garigliano (amont) — Seine;Pont du Garigliano (amont) — Seine;;;point décrit;Début 2019
+75016;16114;Pont du Garigliano (aval) — Seine;Pont du Garigliano (aval) — Seine;;;point décrit;Début 2019
+75016;16139;Porte de Boulogne, boulevard d'Auteuil (Bois de Boulogne);Porte de Boulogne; boulevard d'Auteuil (Bois de Boulogne);;croisement;26/12/17
+75016;50320;Porte de d'Auteuil, sortie Périph Est;Porte de d'Auteuil; sortie Périph Est;;croisement;18/05/12
+75016;82982;Porte de Saint-Cloud, place du Docteur Michaud;Porte de Saint-Cloud; place du Docteur Michaud;;croisement;12/10/12
+75016;16007;PSG — Parc des Princes;PSG — Parc des Princes;;;point décrit;13/09/13
+75016;16997;PSG — Parc des Princes;PSG — Parc des Princes;;;point décrit;13/09/13
+75016;14429;Quai Saint-Exupéry, rue du Général Niox;Quai Saint-Exupéry; rue du Général Niox;;croisement;15/06/12
+75016;16133;Quai Saint-Exupéry, avenue Le Jour SeLève (Boulogne);Quai Saint-Exupéry; avenue Le Jour Se Lève (Boulogne);;croisement;Début 2019
+75016;11253;Route des Lacs à Passy (Porte de Passy);Route des Lacs à Passy (Porte de Passy);;;point décrit;28/12/12
+75016;16092;Rue Benjamin Franklin, rue Le Tasse;Rue Benjamin Franklin; rue Le Tasse;;croisement;13/02/18
+75016;16385;Rue Chardon Lagache, rue Molitor;Rue Chardon Lagache; rue Molitor;;croisement;27/07/12
+75016;16013;Rue Cortambert, rue Nicolo;Rue Cortambert; rue Nicolo;;croisement;03/07/17
+75016;36609;Rue d'Ankara, avenue du Président Kennedy;Rue d'Ankara; avenue du Président Kennedy;;croisement;12/10/12
+75016;52670;Rue d'Auteuil, rue Michel-Ange;Rue d'Auteuil; rue Michel-Ange;;croisement;27/01/12
+75016;34347;Rue de La Fontaine, rue Guérin;Rue de La Fontaine; rue Guérin;;croisement;21/12/11
+75016;22575;Rue de la Pompe, avenue Henri Martin;Rue de la Pompe; avenue Henri Martin;;croisement;24/08/12
+75016;16058;Rue de Montevidéo, rue de Longchamp;Rue de Montevidéo; rue de Longchamp;;croisement;09/02/17
+75016;74609;Rue de Passy, Chaussée de la Muette;Rue de Passy; Chaussée de la Muette;;croisement;08/06/12
+75016;73432;Rue du Commandant Guilbaud, avenue de la Porte de Saint-Cloud;Rue du Commandant Guilbaud; avenue de la Porte de Saint-Cloud;;croisement;28/09/12
+75016;55054;Rue du Ranelagh, avenue du Président Kennedy;Rue du Ranelagh; avenue du Président Kennedy;;croisement;04/05/12
+75016;96105;Rue du Ranelagh, rue Raynouard;Rue du Ranelagh; rue Raynouard;;croisement;03/02/12
+75016;16137;Rue du Sergent Maginot, rue de l'Arioste;Rue du Sergent Maginot; rue de l'Arioste;;croisement;02/09/16
+75016;58577;Rue Michel Ange, boulevard Exelmans;Rue Michel Ange; boulevard Exelmans;;croisement;15/06/12
+75016;97645;Rue Nungesser et Coli, avenue de la Porte Molitor;Rue Nungesser et Coli; avenue de la Porte Molitor;;croisement;17/01/14
+75016;16148;Rue Pergolèse, rue Marbeau;Rue Pergolèse; rue Marbeau;;croisement;Début 2019
+75016;18695;Rue Saint-Didier, rue Mesnil;Rue Saint-Didier; rue Mesnil;;croisement;25/05/12
+75016;16107;Trocadéro — Avenue Paul Doumer, rue Benjamin Franklin;Trocadéro — Avenue Paul Doumer; rue Benjamin Franklin;;croisement;16/02/17
+75016;16106;Zone accès stade Géo André;Zone accès stade Géo André;;;point décrit;16/10/15
+75016;16108;Zone accès stade Géo André;Zone accès stade Géo André;;;point décrit;16/10/15
+75016;10194;Quai de New-York, devant le Palais de Tokyo;;;;point décrit;04/05/12
+75016;14140;Place du Maréchal de Lattre de Tassigny;;;;adresse imprécise;14/09/12
+75016;51992;Centre Géo André;;;;adresse imprécise;13/04/12
+75016;72093;Pont Bir Hakeim côté rive droite aval — Seine;;;;point décrit;30/11/12
+75016;85275;Pont Mirabeau aval — Seine;;;;point décrit;10/03/14
+75016;85982;Pont d'Iéna amont — Seine;;;;point décrit;11/04/14
+75016;87335;Route de l'hippodrome Carrefour des Cascades;;;;point décrit;01/10/13
+75016;91353;Place de Varsovie;;;;adresse imprécise;15/06/12
+75016;98777;Jardins du Trocadéro;;;;adresse imprécise;15/06/12
+75016;16147;Place Dr Hayem (Boulainvilliers/La Fontaine);;;;point décrit;05/10/16
+75016;26088;Place du Maréchal de Lattre de Tassigny;;;;adresse imprécise;07/09/12
+75016;27960;Porte de Saint-Cloud;;;;adresse imprécise;28/09/12
+75016;32329;Place Clément Ader;;;;adresse imprécise;08/02/13
+75017;12630;89, boulevard Gouvion Saint-Cyr;;;;adresse précise;11/05/12
+75017;52599;Avenue Carnot, rue de Tilsitt;Avenue Carnot; rue de Tilsitt;;croisement;31/08/12
+75017;70446;Avenue de Clichy, rue Brochant;Avenue de Clichy; rue Brochant;;croisement;27/04/12
+75017;12852;Avenue de Clichy, rue Guy Moquet;Avenue de Clichy; rue Guy Moquet;;croisement;03/02/12
+75017;55563;Avenue de Clichy, passage Petit Cerf;Avenue de Clichy; passage Petit Cerf;;croisement;13/01/12
+75017;91182;Avenue de la Grande Armée, rue d'Argentine;Avenue de la Grande Armée; rue d'Argentine;;croisement;22/06/12
+75017;16458;Avenue de la Porte d'Asnières, boulevard Berthier;Avenue de la Porte d'Asnières; boulevard Berthier;;croisement;09/03/12
+75017;18536;Avenue de la Porte d'Asnières, boulevard de Reims;Avenue de la Porte d'Asnières; boulevard de Reims;;croisement;18/05/12
+75017;84425;Avenue de la Porte de Clichy, boulevard Bessières;Avenue de la Porte de Clichy; boulevard Bessières;;croisement;04/05/12
+75017;92088;Avenue de la Porte de Saint-Ouen, boulevard Ney;Avenue de la Porte de Saint-Ouen; boulevard Ney;;croisement;14/09/12
+75017;47973;Avenue de la Porte des Ternes, rue Gustave Charpentier;Avenue de la Porte des Ternes; rue Gustave Charpentier;;croisement;15/06/12
+75017;84653;Avenue de la Porte Pouchet, boulevard Bessières;Avenue de la Porte Pouchet; boulevard Bessières;;croisement;11/05/12
+75017;17064;Avenue de Saint-Ouen, rue Navier;Avenue de Saint-Ouen; rue Navier;;croisement;09/11/18
+75017;19182;Avenue de Saint-Ouen, avenue de Clichy;Avenue de Saint-Ouen; avenue de Clichy;;croisement;20/01/12
+75017;66498;Avenue de Villiers, rue Legendre;Avenue de Villiers; rue Legendre;;croisement;18/05/12
+75017;17097;Avenue de Wagram, rue Rennequin;Avenue de Wagram; rue Rennequin;;croisement;01/12/16
+75017;11943;Avenue des Ternes, avenue Niel;Avenue des Ternes; avenue Niel;;croisement;21/06/13
+75017;17084;Batignolles — boulevard Berthier, rue Mstislav Rostropovitch;Batignolles — boulevard Berthier; rue Mstislav Rostropovitch;;croisement;#N/A
+75017;17080;Batignolles — Parvis Palais de Justice;Batignolles — Parvis Palais de Justice;;;point décrit;Début 2019
+75017;17081;Batignolles — rue André Suarez, rue du Bastion;Batignolles — rue André Suarez; rue du Bastion;;croisement;Début 2019
+75017;17089;Batignolles — rue Bernard Buffet, rue René Blum;Batignolles — rue Bernard Buffet; rue René Blum;;croisement;#N/A
+75017;66817;Boulevard Berthier, rue Albert Roussel;Boulevard Berthier; rue Albert Roussel;;croisement;28/03/14
+75017;26158;Boulevard de Courcelles, boulevard Malesherbes;Boulevard de Courcelles; boulevard Malesherbes;;croisement;28/06/13
+75017;94112;Boulevard Malesherbes, rue Viete;Boulevard Malesherbes; rue Viete;;croisement;03/08/12
+75017;12711;Espace Champerret, rue Jean Ostreicher;Espace Champerret; rue Jean Ostreicher;;croisement;28/12/12
+75017;70605;Passage Saint-Ange, rue Jean Leclaire;Passage Saint-Ange; rue Jean Leclaire;;croisement;17/02/12
+75017;75411;Place de la Porte Maillot, boulevard Pershing;Place de la Porte Maillot; boulevard Pershing;;croisement;13/07/12
+75017;56039;Place de Wagram, boulevard Malesherbes;Place de Wagram; boulevard Malesherbes;;croisement;17/02/12
+75017;58185;Place Paul Léautaud, boulevard Berthier;Place Paul Léautaud; boulevard Berthier;;croisement;15/06/12
+75017;18656;Place Paul Tortelier, rue Marguerite Long, rue Stéphane Grappelli;Place Paul Tortelier; rue Marguerite Long; rue Stéphane Grappelli;croisement;17/02/12
+75017;80383;Place Saint-Ferdinand, rue Brunel;Place Saint-Ferdinand; rue Brunel;;croisement;27/04/12
+75017;24558;Porte de Champerret, rue Jean Ostreicher;Porte de Champerret; rue Jean Ostreicher;;croisement;#N/A
+75017;55606;Porte de Clichy;Porte de Clichy;;;adresse imprécise;20/04/12
+75017;73554;Porte Maillot, avenue de la Grande Armée;Porte Maillot; avenue de la Grande Armée;;croisement;20/04/12
+75017;47356;Porte Maillot, côté Neuilly;;;;point décrit;07/09/12
+75017;75732;Rue André Brechet, rue Louis Loucheur;Rue André Brechet; rue Louis Loucheur;;croisement;17/08/12
+75017;89632;Rue Biot, place Clichy;Rue Biot; place Clichy;;croisement;29/06/12
+75017;32355;Rue Boulay, rue de la Jonquière;Rue Boulay; rue de la Jonquière;;croisement;21/12/11
+75017;17073;Rue Brunetière, rue de l'Abbé Rousselot;Rue Brunetière; rue de l'Abbé Rousselot;;croisement;18/11/16
+75017;10510;Rue Cardinet, rue Lemercier;Rue Cardinet; rue Lemercier;;croisement;08/06/12
+75017;18308;Rue Curnonsky, rue Raymond Pitet;Rue Curnonsky; rue Raymond Pitet;;croisement;15/06/12
+75017;43139;Rue Davy, rue Legendre;Rue Davy; rue Legendre;;croisement;17/02/12
+75017;41692;Rue de Courcelles, avenue Stéphane Mallarmé;Rue de Courcelles; avenue Stéphane Mallarmé;;croisement;07/06/13
+75017;69662;Rue de la Jonquière, Villa Sainte-Croix;Rue de la Jonquière; Villa Sainte-Croix;;croisement;27/01/12
+75017;64090;Rue de Lévis, rue des Dames;Rue de Lévis; rue des Dames;;croisement;21/12/11
+75017;17095;Rue de Prony, avenue de Wagram;Rue de Prony; avenue de Wagram;;croisement;18/11/16
+75017;87704;Rue de Rome, rue Cardinet;Rue de Rome; rue Cardinet;;croisement;06/09/13
+75017;58709;Rue de Saussure, boulevard Pereire;Rue de Saussure; boulevard Pereire;;croisement;13/01/12
+75017;17094;Rue des Batignolles, rue des Dames;Rue des Batignolles; rue des Dames;;croisement;08/12/16
+75017;44258;Rue Descombes, boulevard Gouvion Saint-Cyr;Rue Descombes; boulevard Gouvion Saint-Cyr;;croisement;04/05/12
+75017;87387;Rue Emile Borel, place Arnault Tzanck;Rue Emile Borel; place Arnault Tzanck;;croisement;01/06/12
+75017;17036;Rue Galvani, avenue Gouvion Saint-Cyr;Rue Galvani; avenue Gouvion Saint-Cyr;;croisement;02/08/17
+75017;17096;Rue Galvani, rue Laugier;Rue Galvani; rue Laugier;;croisement;07/12/16
+75017;57632;Rue Maria Deraismes, rue Félix Pecaut;Rue Maria Deraismes; rue Félix Pecaut;;croisement;21/12/11
+75017;76501;Place de Clichy;;;;adresse imprécise;29/06/12
+75017;99639;Place du Général Koenig;;;;adresse imprécise;20/04/12
+75017;17065;Rue Pierre Rebière, voie accès boulevard Bessières;;;;point décrit;18/11/16
+75017;17077;Rue Marie-Georges Picquart — Coté collège et crèche;;;;point décrit;24/02/17
+75017;17086;Batignolles — rue Mstislav Rostropovitch Sud;;;;point décrit;#N/A
+75017;17087;Batignolles — rue Gilbert Cesbron Nord;;;;point décrit;04/07/17
+75017;17088;Batignolles — rue Gilbert Cesbron Sud;;;;point décrit;26/06/17
+75017;17092;ZAC Pouchet — allée des Cerisiers;;;;point décrit;#N/A
+75017;17093;ZAC Pouchet — place Pouchet;;;;point décrit;#N/A
+75017;18085;21 bis, rue Jean Leclaire;;;;adresse précise;25/05/12
+75017;28293;Place du Maréchal Juin;;;;adresse imprécise;03/02/12
+75017;34901;80, boulevard Bessières;;;;adresse précise;11/05/12
+75017;48088;Place du Général Catroux;;;;adresse imprécise;13/04/12
+75017;49795;Porte Maillot;;;;adresse imprécise;30/03/12
+75017;65315;155, rue de Saussure;;;;adresse précise;03/02/12
+75018;11601;5, rue Tristan Tzara;;;;adresse précise;08/06/12
+75018;22107;34, rue du Chevalier de la Barre;;;;adresse précise;13/07/12
+75018;15626;Av. de la Porte de Saint-Ouen, rue Louis Pasteur Vallery-Radot;Av. de la Porte de Saint-Ouen; rue Louis Pasteur Vallery-Radot;;croisement;17/08/12
+75018;98456;Avenue de la Porte de Clignancourt, rue Francis de Croisset;Avenue de la Porte de Clignancourt; rue Francis de Croisset;;croisement;12/10/12
+75018;76428;Avenue de la Porte de Clignancourt, sortie Périph intérieur;Avenue de la Porte de Clignancourt; sortie Périph intérieur;;croisement;21/09/12
+75018;76356;Avenue de la Porte des Poissonniers, rue du Professeur Gosset;Avenue de la Porte des Poissonniers; rue du Professeur Gosset;;croisement;21/09/12
+75018;60904;Avenue de la Porte Montmartre, rue Gérard de Nerval;Avenue de la Porte Montmartre; rue Gérard de Nerval;;croisement;21/12/12
+75018;54506;Avenue de Saint-Ouen, rue de la Jonquière;Avenue de Saint-Ouen; rue de la Jonquière;;croisement;31/08/12
+75018;58108;Avenue Saint-Ouen, rue Lamark, rue Etex;Avenue Saint-Ouen; rue Lamark; rue Etex;croisement;22/06/12
+75018;19071;Boulevard Barbès, boulevard de Rochechouart;Boulevard Barbès; boulevard de Rochechouart;;croisement;07/09/12
+75018;22378;Boulevard Barbès, boulevard Rochechouart;Boulevard Barbès; boulevard Rochechouart;;croisement;10/08/12
+75018;51595;Boulevard de Clichy, rue Caulaincourt;Boulevard de Clichy; rue Caulaincourt;;croisement;29/06/12
+75018;16561;Boulevard de la Chapelle, rue Caplat;Boulevard de la Chapelle; rue Caplat;;croisement;23/02/15
+75018;82127;Boulevard de la Chapelle, rue Marx Dormoy;Boulevard de la Chapelle; rue Marx Dormoy;;croisement;08/06/12
+75018;78121;Boulevard de la Chapelle, rue d'Aubervilliers;Boulevard de la Chapelle; rue d'Aubervilliers;;croisement;27/07/12
+75018;73270;Boulevard de Rochechouart, rue de Clignancourt;Boulevard de Rochechouart; rue de Clignancourt;;croisement;03/02/12
+75018;80870;Boulevard Ney, rue d'Aubervilliers;Boulevard Ney; rue d'Aubervilliers;;croisement;18/01/13
+75018;93698;Boulevard Ney, rue des Poissonniers;Boulevard Ney; rue des Poissonniers;;croisement;14/12/12
+75018;47167;Boulevard Ney, rue Charles Hermite;Boulevard Ney; rue Charles Hermite;;croisement;14/12/12
+75018;62366;Boulevard Ney, place de la Porte de Clignancourt;Boulevard Ney; place de la Porte de Clignancourt;;croisement;21/09/12
+75018;91735;Boulevard Ornano, rue Ordener;Boulevard Ornano; rue Ordener;;croisement;04/05/12
+75018;49070;impasse des Fillettes, rue Charles Hermite, rue Emile Bertin;impasse des Fillettes; rue Charles Hermite; rue Emile Bertin;croisement;14/12/12
+75018;29420;Jardin René Binet, rue Frédéric Schneider;Jardin René Binet; rue Frédéric Schneider;;croisement;27/04/12
+75018;86198;Parvis du Sacré Cœur;Parvis du Sacré Cœur;;;adresse imprécise;22/06/12
+75018;24022;Place Blanche, rue Blanche;Place Blanche; rue Blanche;;croisement;09/03/12
+75018;18067;Place de La Chapelle, rue Pajol;Place de La Chapelle; rue Pajol;;croisement;inconnue
+75018;18023;Place du Château Rouge, rue Poulet, boulevard Barbès;Place du Château Rouge; rue Poulet; boulevard Barbès;croisement;09/11/12
+75018;26955;Place du Parvis du Sacré Cœur;Place du Parvis du Sacré Cœur;;;adresse imprécise;22/06/12
+75018;62384;Place du Tertre, place Jean Marais;Place du Tertre; place Jean Marais;;croisement;16/11/12
+75018;10630;Place Jules Joffrin, rue Hermel;Place Jules Joffrin; rue Hermel;;croisement;11/05/12
+75018;86601;Place Suzanne Valadon, rue Tardieu;Place Suzanne Valadon; rue Tardieu;;croisement;21/09/12
+75018;10631;Porte de la Chapelle, boulevard Ney, avenue de la Porte de la Chapelle;Porte de la Chapelle; boulevard Ney; avenue de la Porte de la Chapelle;croisement;21/12/12
+75018;88886;Rond-point de la Chapelle, rue Raymond Queneau;Rond-point de la Chapelle; rue Raymond Queneau;;croisement;13/07/12
+75018;95960;Rue Boinod, rue du Simplon;Rue Boinod; rue du Simplon;;croisement;27/04/12
+75018;81112;Rue Caulaincourt, rue du Mont Cenis;Rue Caulaincourt; rue du Mont Cenis;;croisement;31/08/12
+75018;43793;Rue Caulaincourt, rue Joseph de Maistre;Rue Caulaincourt; rue Joseph de Maistre;;croisement;29/06/12
+75018;98320;Rue Championnet, boulevard Ornano;Rue Championnet; boulevard Ornano;;croisement;28/09/12
+75018;70209;Rue Chapelle, impasse du Curé;Rue Chapelle; impasse du Curé;;croisement;08/06/12
+75018;81580;Rue de Clignancourt, rue Marcadet;Rue de Clignancourt; rue Marcadet;;croisement;09/03/12
+75018;97289;Rue de Clignancourt, rue Doudeauville;Rue de Clignancourt; rue Doudeauville;;croisement;07/12/12
+75018;69210;Rue de Clignancourt, rue Christiani;Rue de Clignancourt; rue Christiani;;croisement;07/12/12
+75018;18083;Rue de l'Evangile, rue Moussorgski;Rue de l'Evangile; rue Moussorgski;;croisement;inconnue
+75018;79891;Rue de l'Evangile, rue d'Aubervilliers;Rue de l'Evangile; rue d'Aubervilliers;;croisement;11/01/13
+75018;76006;Rue de la Chapelle, rue du Pré;Rue de la Chapelle; rue du Pré;;croisement;21/09/12
+75018;18087;Rue de la Goutte d'Or, rue des Islettes;Rue de la Goutte d'Or; rue des Islettes;;croisement;14/11/16
+75018;18098;Rue de la Porte des Poissonniers, rue Jean Cocteau;Rue de la Porte des Poissonniers; rue Jean Cocteau;;croisement;inconnue
+75018;18088;Rue de Panama, rue Léon;Rue de Panama; rue Léon;;croisement;13/10/16
+75018;42595;Rue de Steinkerque, boulevard de Rochechouart;Rue de Steinkerque; boulevard de Rochechouart;;croisement;13/01/12
+75018;16334;Rue des Poissonniers, rue Myrha;Rue des Poissonniers; rue Myrha;;croisement;07/12/12
+75018;18111;Rue des Poissonniers, rue Championnet;Rue des Poissonniers; rue Championnet;;croisement;08/08/17
+75018;46817;Rue des Poissonniers, rue Marcadet;Rue des Poissonniers; rue Marcadet;;croisement;15/06/12
+75018;48934;Rue des Poissonniers, rue Doudeauville;Rue des Poissonniers; rue Doudeauville;;croisement;09/11/12
+75018;18086;Rue Doudeauville, boulevard Barbès;Rue Doudeauville; boulevard Barbès;;croisement;14/11/16
+75018;44831;Rue du Cardinal Dubois;Rue du Cardinal Dubois;;;adresse imprécise;22/06/12
+75018;41624;Rue du Département, rue Caillie;Rue du Département; rue Caillie;;croisement;29/03/13
+75018;64494;Rue du Poteau, boulevard Ney;Rue du Poteau; boulevard Ney;;croisement;27/04/12
+75018;83922;Rue du Ruisseau, rue du Poteau;Rue du Ruisseau; rue du Poteau;;croisement;08/06/12
+75018;15048;Rue Jean Henri Fabre, rue du Colonel Dax;Rue Jean Henri Fabre; rue du Colonel Dax;;croisement;21/09/12
+75018;18115;Rue Labat, boulevard Barbès;Rue Labat; boulevard Barbès;;croisement;14/11/16
+75018;18002;Rue Lamarck, rue Carpeaux;Rue Lamarck; rue Carpeaux;;croisement;19/07/17
+75018;20728;Rue Lamarck, rue du Chevalier de la Barre;Rue Lamarck; rue du Chevalier de la Barre;;croisement;31/08/12
+75018;40936;Rue Léon, rue Cavé;Rue Léon; rue Cavé;;croisement;25/05/12
+75018;48778;Rue Léon, rue Doudeauville;Rue Léon; rue Doudeauville;;croisement;09/11/12
+75018;18104;Rue Marcadet, rue du Ruisseau;Rue Marcadet; rue du Ruisseau;;croisement;02/05/17
+75018;49804;Rue Marcadet, rue Damrémont;Rue Marcadet; rue Damrémont;;croisement;27/04/12
+75018;46275;Rue Marx Dormoy, rue du Département;Rue Marx Dormoy; rue du Département;;croisement;20/07/12
+75018;18074;Rue Moussorgski, rue Tchaïchovski;Rue Moussorgski; rue Tchaïchovski;;croisement;inconnue
+75018;67972;Rue Myrha, rue Affre;Rue Myrha; rue Affre;;croisement;18/01/13
+75018;82315;Rue Ordener, rue Championnet, rue Vauvenargues;Rue Ordener; rue Championnet; rue Vauvenargues;croisement;22/06/12
+75018;82473;Rue Ordener, rue Damrémont;Rue Ordener; rue Damrémont;;croisement;11/05/12
+75018;22078;Rue Ordener, rue du Poteau;Rue Ordener; rue du Poteau;;croisement;11/05/12
+75018;35021;Rue Ordener, rue des Poissonniers;Rue Ordener; rue des Poissonniers;;croisement;25/05/12
+75018;18091;Rue Pajol, rue du Département, rue Philippe de Girard;Rue Pajol; rue du Département; rue Philippe de Girard;croisement;31/01/17
+75018;18093;Rue Pajol, rue Romy Schneider;Rue Pajol; rue Romy Schneider;;croisement;inconnue
+75018;18054;Rue Polonceau, rue de la Goutte d'Or;Rue Polonceau; rue de la Goutte d'Or;;croisement;inconnue
+75018;52675;Rue Polonceau, rue des Gardes;Rue Polonceau; rue des Gardes;;croisement;25/05/12
+75018;74617;Rue Polonceau, rue des Poissonniers;Rue Polonceau; rue des Poissonniers;;croisement;07/12/12
+75018;52236;Rue Poulet, rue Dejean;Rue Poulet; rue Dejean;;croisement;#N/A
+75018;18084;Rue Queneau (en vis-à-vis du passage du no 22);Rue Queneau (en vis-à-vis du passage du no 22);;;point décrit;inconnue
+75018;55134;Rue Raymond Queneau, place Pierre Marc Orlan;Rue Raymond Queneau; place Pierre Marc Orlan;;croisement;08/06/12
+75018;25902;Rue René Binet, rue Fernand Labori;Rue René Binet; rue Fernand Labori;;croisement;27/04/12
+75018;18094;Rue Riquet, rue Pajol;Rue Riquet; rue Pajol;;croisement;10/03/17
+75018;79855;Rue Riquet, rue d'Aubervilliers;Rue Riquet; rue d'Aubervilliers;;croisement;29/06/12
+75018;24819;Rue Stephenson, rue Jean-François Lépine;Rue Stephenson; rue Jean-François Lépine;;croisement;03/08/12
+75018;28849;Rue Stephenson, rue de Laghouat;Rue Stephenson; rue de Laghouat;;croisement;25/01/13
+75018;35296;Rue Stéphenson, rue Doudeauville;Rue Stéphenson; rue Doudeauville;;croisement;23/11/12
+75018;44255;Rue Yvonne le Tac, rue Chappe, rue Tardieu;Rue Yvonne le Tac; rue Chappe; rue Tardieu;croisement;31/08/12
+75018;12278;Place Paul Eluard;;;;adresse imprécise;08/06/12
+75018;15446;Face au 86-88, boulevard Ney;;;;point décrit;14/12/12
+75018;18110;Binet — nouvelle voie Maurice Grimaud;;;;point décrit;23/04/18
+75018;18112;110-122, rue des Poissonniers — prolongement voie vers rue Ordener;;;;point décrit;inconnue
+75018;18113;Chapelle International — nouvelle voie créée;;;;point décrit;inconnue
+75018;18114;Chapelle International — nouvelle voie créée parallèle;;;;point décrit;inconnue
+75018;18201;Porte de la Chapelle — boulevard Ney, avenue Porte de la Chapelle — Centre migrants;;;;point décrit;14/02/17
+75018;18202;Porte de la Chapelle — boulevard Ney, avenue Porte de la Chapelle — Centre migrants;;;;point décrit;14/02/17
+75018;91314;Place Hébert;;;;adresse imprécise;08/06/12
+75018;20785;Square Louise Michel;;;;adresse imprécise;08/06/12
+75018;28369;19, rue des Abbesses;;;;adresse précise;29/06/12
+75018;34810;Place du Tertre;;;;adresse imprécise;16/11/12
+75019;83973;5, rue de Cambrai;;;;adresse précise;07/09/12
+75019;10295;65-67, boulevard Macdonald;;;;adresse précise;05/04/13
+75019;18837;Avenue Corentin Cariou, quai de la Gironde;Avenue Corentin Cariou; quai de la Gironde;;croisement;22/02/13
+75019;34140;Avenue de Flandre, rue de l'Argonne;Avenue de Flandre; rue de l'Argonne;;croisement;14/09/12
+75019;55255;Avenue de la Porte Chaumont, boulevard d'Indochine;Avenue de la Porte Chaumont; boulevard d'Indochine;;croisement;01/02/13
+75019;56891;Avenue Jean Jaurès, sente des Dorées;Avenue Jean Jaurès; sente des Dorées;;croisement;11/05/12
+75019;64319;Avenue Jean Jaurès, avenue de Laumière;Avenue Jean Jaurès; avenue de Laumière;;croisement;08/06/12
+75019;67376;Avenue Jean Jaurès, rue Armand Carrel;Avenue Jean Jaurès; rue Armand Carrel;;croisement;27/04/12
+75019;68495;Avenue Mathurin Moreau, avenue Simon Bolivar;Avenue Mathurin Moreau; avenue Simon Bolivar;;croisement;23/03/12
+75019;18960;Avenue Secrétan, rue Edouard Pailleron;Avenue Secrétan; rue Edouard Pailleron;;croisement;27/07/12
+75019;33367;Avenue Secrétan, boulevard de la Villette;Avenue Secrétan; boulevard de la Villette;;croisement;07/09/12
+75019;40743;Avenue Simon Bolivar, rue de l'Atlas;Avenue Simon Bolivar; rue de l'Atlas;;croisement;31/08/12
+75019;19078;Boulevard de la Villette, rue de Sambre et Meuse;Boulevard de la Villette; rue de Sambre et Meuse;;croisement;13/07/17
+75019;19098;Boulevard Macdonald, rue Lounes Matoub;Boulevard Macdonald; rue Lounes Matoub;;croisement;03/07/17
+75019;19103;Boulevard Macdonald, quai de la Gironde;Boulevard Macdonald; quai de la Gironde;;croisement;17/08/16
+75019;22881;Boulevard Macdonald, quai de la Gironde;Boulevard Macdonald; quai de la Gironde;;croisement;22/02/13
+75019;65172;Boulevard Macdonald, canal de l'Ourcq;Boulevard Macdonald; canal de l'Ourcq;;croisement;01/11/13
+75019;93130;Boulevard Macdonald, avenue de la Porte de la Villette;Boulevard Macdonald; avenue de la Porte de la Villette;;croisement;28/12/12
+75019;12412;Boulevard Sérurier, rue de Léman;Boulevard Sérurier; rue de Léman;;croisement;09/11/12
+75019;34611;Boulevard Sérurier, rue de Périgueux;Boulevard Sérurier; rue de Périgueux;;croisement;21/09/12
+75019;39892;Boulevard Sérurier, rue des Bois;Boulevard Sérurier; rue des Bois;;croisement;28/12/12
+75019;51650;Boulevard Sérurier, rue David d'Angers;Boulevard Sérurier; rue David d'Angers;;croisement;31/08/12
+75019;19100;Gare Rosa Parks — rue Gaston Tessier, rue Henri Verneuil;Gare Rosa Parks — rue Gaston Tessier; rue Henri Verneuil;;croisement;06/09/16
+75019;66700;Passerelle piétons quai de la Loire vers quai de Seine;Passerelle piétons quai de la Loire vers quai de Seine;;;point décrit;15/02/13
+75019;43350;Place Armand Carrel, rue Manin;Place Armand Carrel; rue Manin;;croisement;08/06/12
+75019;91563;Place Auguste Baron, avenue de la Porte de la Villette;Place Auguste Baron; avenue de la Porte de la Villette;;croisement;07/12/12
+75019;79414;Place de la Bataille de Stalingrad;Place de la Bataille de Stalingrad;;;adresse imprécise;27/04/12
+75019;80712;Place de la Porte de Pantin;Place de la Porte de Pantin;;;adresse imprécise;21/12/12
+75019;84218;Place de Skanderberg (Porte d'Aubervilliers);Place de Skanderberg (Porte d'Aubervilliers);;;point décrit;11/01/13
+75019;34892;Place du Général Cochet, boulevard Sérurier;Place du Général Cochet; boulevard Sérurier;;croisement;27/07/12
+75019;93586;Place du Maroc, rue du Maroc;Place du Maroc; rue du Maroc;;croisement;12/10/12
+75019;54117;Place Rhin et Danube, rue David d'Angers, rue Miguel Hidalgo;Place Rhin et Danube; rue David d'Angers; rue Miguel Hidalgo;croisement;24/02/12
+75019;28130;Quai de la Marne, rue de Crimée;Quai de la Marne; rue de Crimée;;croisement;23/11/12
+75019;19085;Quai du Lot (Bassin d'Aubervilliers);Quai du Lot (Bassin d'Aubervilliers);;;point décrit;inconnue
+75019;19101;Rampe Ouest vers boulevard Macdonald, rue Cesaria Evora;Rampe Ouest vers boulevard Macdonald; rue Cesaria Evora;;croisement;30/05/17
+75019;75203;Rue Adolphe Mille, avenue Jean Jaurès;Rue Adolphe Mille; avenue Jean Jaurès;;croisement;11/05/12
+75019;12969;Rue Archereau, rue de Crimée;Rue Archereau; rue de Crimée;;croisement;31/08/12
+75019;40979;Rue Belleville, rue Lassus;Rue Belleville; rue Lassus;;croisement;19/10/12
+75019;19084;Rue Bellot, rue d'Aubervilliers;Rue Bellot; rue d'Aubervilliers;;croisement;16/12/16
+75019;19067;Rue Botzaris, rue Fessart;Rue Botzaris; rue Fessart;;croisement;06/07/12
+75019;49339;Rue Botzaris, avenue Simon Bolivar;Rue Botzaris; avenue Simon Bolivar;;croisement;06/07/12
+75019;19097;Rue Césaria Evora, voie de la Blanchisserie;Rue Césaria Evora; voie de la Blanchisserie;;croisement;Début 2019
+75019;19093;Rue Colette Magny, rue Bernard Têtu;Rue Colette Magny; rue Bernard Têtu;;croisement;20/10/16
+75019;25240;Rue Compans, place des Fêtes;Rue Compans; place des Fêtes;;croisement;17/02/12
+75019;75378;Rue Compans, rue Henri Ribière;Rue Compans; rue Henri Ribière;;croisement;17/02/12
+75019;19090;Rue Curial, rue Mathis;Rue Curial; rue Mathis;;croisement;07/04/17
+75019;22853;Rue Curial, rue Colette Magny;Rue Curial; rue Colette Magny;;croisement;26/10/12
+75019;26293;Rue d'Alsace-Lorraine, rue Gaston Pinot;Rue d'Alsace-Lorraine; rue Gaston Pinot;;croisement;30/03/12
+75019;19077;Rue de Belleville, rue Jules Romains;Rue de Belleville; rue Jules Romains;;croisement;23/03/17
+75019;67387;Rue de Belleville, avenue Simon Bolivar;Rue de Belleville; avenue Simon Bolivar;;croisement;18/05/12
+75019;19094;Rue de Cambrai, rue Alphonse Karr;Rue de Cambrai; rue Alphonse Karr;;croisement;22/09/17
+75019;44802;Rue de Cambrai, rue Benjamin Constant;Rue de Cambrai; rue Benjamin Constant;;croisement;31/08/12
+75019;10568;Rue de Crimée, rue Botzaris;Rue de Crimée; rue Botzaris;;croisement;03/02/12
+75019;17435;Rue de Crimée, rue Manin;Rue de Crimée; rue Manin;;croisement;27/04/12
+75019;25856;Rue de Crimée, avenue de Flandre;Rue de Crimée; avenue de Flandre;;croisement;21/09/12
+75019;12770;Rue de l'Ourcq, rue Léon Giraud;Rue de l'Ourcq; rue Léon Giraud;;croisement;28/12/12
+75019;63449;Rue de l'Ourcq, rue Curial;Rue de l'Ourcq; rue Curial;;croisement;02/11/12
+75019;99808;Rue de la Solidarité, rue David d'Angers;Rue de la Solidarité; rue David d'Angers;;croisement;27/04/12
+75019;64554;Rue de Meaux, avenue Secretan;Rue de Meaux; avenue Secretan;;croisement;23/03/12
+75019;96016;Rue de Nantes, rue Barbanègre;Rue de Nantes; rue Barbanègre;;croisement;07/09/12
+75019;16661;Rue de Tanger, rue Riquet;Rue de Tanger; rue Riquet;;croisement;09/01/15
+75019;19074;Rue de Toulouse, rue Ambroise Rendu;Rue de Toulouse; rue Ambroise Rendu;;croisement;18/08/16
+75019;50640;Rue des Bois, rue des Lilas;Rue des Bois; rue des Lilas;;croisement;17/02/12
+75019;14821;Rue du Département, rue de Tanger;Rue du Département; rue de Tanger;;croisement;04/05/12
+75019;53004;Rue du Plateau, rue des Alouettes;Rue du Plateau; rue des Alouettes;;croisement;17/02/12
+75019;19080;Rue Edouard Pailleron, rue Jean Menans;Rue Edouard Pailleron; rue Jean Menans;;croisement;18/11/16
+75019;19081;Rue Euryale Dehaynin, rue Tandou;Rue Euryale Dehaynin; rue Tandou;;croisement;30/11/16
+75019;19082;Rue Gaston Rebuffat, rue de Kabylie;Rue Gaston Rebuffat; rue de Kabylie;;croisement;16/09/16
+75019;19096;Rue Lounes Matoub, rue Emile Bollaert;Rue Lounes Matoub; rue Emile Bollaert;;croisement;25/04/18
+75019;98269;Rue Manin, avenue Secrétan, avenue Mathurin Moreau;Rue Manin; avenue Secrétan; avenue Mathurin Moreau;croisement;27/07/12
+75019;19089;Rue Mathis, rue Archereau;Rue Mathis; rue Archereau;;croisement;06/10/16
+75019;36303;Rue Petit, passage du Sud;Rue Petit; passage du Sud;;croisement;21/12/11
+75019;62302;Rue Petit, rue Georges Auric;Rue Petit; rue Georges Auric;;croisement;20/01/12
+75019;14531;Rue Petitot, rue des Fêtes;Rue Petitot; rue des Fêtes;;croisement;30/03/12
+75019;52246;Rue Rebeval, rue Jules Romains;Rue Rebeval; rue Jules Romains;;croisement;17/02/12
+75019;96167;Rue Riquet, avenue de Flandre;Rue Riquet; avenue de Flandre;;croisement;17/02/12
+75019;11812;70, rue de la Villette, face au cours du 7ième art;;;;point décrit;15/06/12
+75019;18897;85, avenue de Flandre;;;;adresse précise;02/03/12
+75019;19079;150, boulevard de la Villette;;;;adresse précise;06/03/17
+75019;19083;Rue Paul Laurent;;;;adresse imprécise;08/12/16
+75019;19086;Cité des Orgues de Frandre — rue du Docteur Lamaze;;;;point décrit;19/12/16
+75019;19087;Cité des Orgues de Flandre, Porte des Flamands;;;;point décrit;23/04/18
+75019;19088;Cité des Orgues de Flandre — Sud;;;;point décrit;26/12/17
+75019;19095;Rue de la Gare, Passerelle périphérique;;;;point décrit;inconnue
+75019;19099;Boulevard Macdonald, esplanade Nord gare Rosa Parks;;;;point décrit;30/05/17
+75019;27454;19, avenue de Flandre;;;;adresse précise;17/02/12
+75019;32897;195, avenue Jean Jaurès;;;;adresse précise;11/05/12
+75019;36787;6, quai de Seine, côté bassin de la Villette;;;;adresse précise;01/02/13
+75019;42264;15-17, avenue Simon Bolivar;;;;adresse précise;25/05/12
+75019;52383;Place des Fêtes;;;;adresse imprécise;17/02/12
+75019;59248;Rue Pierre Reverdy devant le parc coté pair;;;;adresse imprécise;15/06/12
+75020;90687;5, rue Henri Duvernois (Nord);;;;adresse précise;26/10/12
+75020;20008;20, rue Benoît Frachon;;;;adresse précise;Début 2019
+75020;71190;34, boulevard de Belleville;;;;adresse précise;08/06/12
+75020;20088;41, rue des Rigoles;;;;adresse précise;27/01/17
+75020;38535;52, rue des Panoyaux;;;;adresse précise;27/04/12
+75020;19342;6-8, rue Louis Delaporte;;;;adresse précise;16/11/12
+75020;11340;42-46, rue des Haies;;;;adresse précise;19/10/12
+75020;58888;Avenue de la Porte de Bagnolet, avenue Cartellier, avenue Ibsen;Avenue de la Porte de Bagnolet; avenue Cartellier; avenue Ibsen;croisement;19/10/12
+75020;10594;Avenue Gambetta, boulevard Mortier, rue de Belleville;Avenue Gambetta; boulevard Mortier; rue de Belleville;croisement;14/12/12
+75020;39069;Avenue Gambetta, rue Pelleport;Avenue Gambetta; rue Pelleport;;croisement;22/06/12
+75020;43115;Avenue Gambetta, rue de Chine;Avenue Gambetta; rue de Chine;;croisement;22/06/12
+75020;65583;Avenue Gambetta, rue Saint-Fargeau, rue Haxo;Avenue Gambetta; rue Saint-Fargeau; rue Haxo;croisement;24/08/12
+75020;34320;Boulevard Davout, rue Saint-Blaise;Boulevard Davout; rue Saint-Blaise;;croisement;07/12/12
+75020;98765;Boulevard Davout, rue Paganini;Boulevard Davout; rue Paganini;;croisement;07/12/12
+75020;42222;Boulevard de Charonne, rue d'Avron;Boulevard de Charonne; rue d'Avron;;croisement;29/06/12
+75020;55360;Boulevard de Charonne, avenue de Taillebourg;Boulevard de Charonne; avenue de Taillebourg;;croisement;29/06/12
+75020;25289;Boulevard de Ménilmontant, rue de Tlemcen;Boulevard de Ménilmontant; rue de Tlemcen;;croisement;11/05/12
+75020;17153;Boulevard Mortier, place de l'Adjudant Vincenot;Boulevard Mortier; place de l'Adjudant Vincenot;;croisement;07/12/12
+75020;20065;Cours de Vincennes, rue des Maraîchers;Cours de Vincennes; rue des Maraîchers;;croisement;16/09/16
+75020;82057;Cours de Vincennes, boulevard de Charonne;Cours de Vincennes; boulevard de Charonne;;croisement;16/11/12
+75020;39355;Place de la Porte de Montreuil;Place de la Porte de Montreuil;;;adresse imprécise;09/11/12
+75020;52440;Place de la Porte de Montreuil;Place de la Porte de Montreuil;;;adresse imprécise;09/11/12
+75020;82954;Place de la Réunion;Place de la Réunion;;;adresse imprécise;19/10/12
+75020;29554;Place des Grès;Place des Grès;;;adresse imprécise;13/04/12
+75020;85636;Place du Maquis du Vercors (avenue de la Porte des Lilas);Place du Maquis du Vercors (avenue de la Porte des Lilas);;;point décrit;19/10/12
+75020;46604;Place Gambetta, avenue Gambetta;Place Gambetta; avenue Gambetta;;croisement;22/06/12
+75020;32972;Place Martin Nadaud;Place Martin Nadaud;;;adresse imprécise;26/10/12
+75020;66387;Porte de Bagnolet;Porte de Bagnolet;;;adresse imprécise;09/11/12
+75020;20054;Rue Alquier Debrousse, rue des Balkans;Rue Alquier Debrousse; rue des Balkans;;croisement;09/12/16
+75020;89745;Rue Bisson, rue de Pali-Kao;Rue Bisson; rue de Pali-Kao;;croisement;09/03/12
+75020;28858;Rue d'Avron, boulevard Davout;Rue d'Avron; boulevard Davout;;croisement;09/11/12
+75020;88798;Rue d'Avron, rue Tolain;Rue d'Avron; rue Tolain;;croisement;29/03/13
+75020;20002;Rue de Bagnolet, rue des Balkans;Rue de Bagnolet; rue des Balkans;;croisement;23/05/17
+75020;20039;Rue de Bagnolet, rue des Orteaux;Rue de Bagnolet; rue des Orteaux;;croisement;21/12/16
+75020;45510;Rue de Bagnolet, rue des Pyrénées;Rue de Bagnolet; rue des Pyrénées;;croisement;21/12/11
+75020;18325;Rue de Belleville, rue Piat;Rue de Belleville; rue Piat;;croisement;01/06/12
+75020;54884;Rue de Ménilmontant, rue Henri Chevreau;Rue de Ménilmontant; rue Henri Chevreau;;croisement;22/06/12
+75020;76059;Rue de Ménilmontant, rue Hélène Jakubowicz;Rue de Ménilmontant; rue Hélène Jakubowicz;;croisement;29/06/12
+75020;17129;Rue de Tlemcen, rue Duris;Rue de Tlemcen; rue Duris;;croisement;27/04/12
+75020;25120;Rue des Amandiers, rue des Cendriers;Rue des Amandiers; rue des Cendriers;;croisement;27/04/12
+75020;20070;Rue des Frères Flavien, avenue du Docteur Gley;Rue des Frères Flavien; avenue du Docteur Gley;;croisement;20/04/17
+75020;20085;Rue des Haies, passage Josseaume;Rue des Haies; passage Josseaume;;croisement;14/04/17
+75020;20071;Rue des Montibœufs, rue du CapitaineFerber;Rue des Montibœufs; rue du CapitaineFerber;;croisement;15/03/17
+75020;20057;Rue des Orteaux, rue de la Réunion;Rue des Orteaux; rue de la Réunion;;croisement;10/03/17
+75020;15491;Rue des Pyrénées, rue Ménilmontant;Rue des Pyrénées; rue Ménilmontant;;croisement;06/07/12
+75020;17942;Rue des Pyrénées, rue du Retrait;Rue des Pyrénées; rue du Retrait;;croisement;29/06/12
+75020;20059;Rue des Pyrénées, rue Vitruve;Rue des Pyrénées; rue Vitruve;;croisement;09/12/16
+75020;49681;Rue des Pyrénées, rue d'Avron;Rue des Pyrénées; rue d'Avron;;croisement;18/01/13
+75020;69827;Rue des Pyrénées, rue de Jourdain;Rue des Pyrénées; rue de Jourdain;;croisement;05/10/12
+75020;20075;Rue des Tourelles, passage des Tourelles;Rue des Tourelles; passage des Tourelles;;croisement;12/08/16
+75020;13314;Rue du Borrégo, rue du Télégraphe;Rue du Borrégo; rue du Télégraphe;;croisement;22/06/12
+75020;20063;Rue du Clos, rue Saint-Blaise;Rue du Clos; rue Saint-Blaise;;croisement;23/09/16
+75020;20077;Rue Duris, rue des Cendriers;Rue Duris; rue des Cendriers;;croisement;30/11/16
+75020;20068;Rue Hélène Jakubowicz (Parc);Rue Hélène Jakubowicz (Parc);;;point décrit;09/12/16
+75020;20082;Rue Hélène Jakubowicz (Parc);Rue Hélène Jakubowicz (Parc);;;point décrit;09/12/16
+75020;93792;Rue Julien Lacroix, rue des Couronnes;Rue Julien Lacroix; rue des Couronnes;;croisement;20/04/12
+75020;12735;Rue Louis Lumière, rue Louis Ganne;Rue Louis Lumière; rue Louis Ganne;;croisement;19/10/12
+75020;20067;Rue Olivier Métra, rue de l'Ermitage;Rue Olivier Métra; rue de l'Ermitage;;croisement;21/12/16
+75020;79980;Rue Olivier Métra, rue Fréderick Lemaître;Rue Olivier Métra; rue Fréderick Lemaître;;croisement;05/10/12
+75020;25808;Rue Piat, rue des Envierges;Rue Piat; rue des Envierges;;croisement;03/02/12
+75020;71342;Rue Ramponeau, rue de Tourtille;Rue Ramponeau; rue de Tourtille;;croisement;27/04/12
+75020;67483;Rue Reynaldo Hahn, rue Paganini;Rue Reynaldo Hahn; rue Paganini;;croisement;09/11/12
+75020;20060;Rue Saint-Blaise, square des Cardeurs;Rue Saint-Blaise; square des Cardeurs;;croisement;22/09/16
+75020;20080;Rue Vitruve, rue des Orteaux;Rue Vitruve; rue des Orteaux;;croisement;02/03/17
+75020;20087;Saint-Blaise — rue des Balkans;Saint-Blaise — rue des Balkans;;;point décrit;inconnue
+75020;20069;Villa Dury Vasselon, villa Gagliardini;Villa Dury Vasselon; villa Gagliardini;;croisement;29/09/17
+75020;16716;Vis-à-vis du 61, rue Saint-Blaise;;;;point décrit;09/01/15
