@@ -63,6 +63,20 @@ print(maximum)
 maximum = max(list1)
 print(maximum)
 
+
+# while
+list1=[1,2,3,4,1]
+i = 0
+hv = list1[0]
+while i < len(list1):
+	print(i,hv)
+	if hv < list1[i]:
+		hv = list1[i]
+	i += 1
+print(hv)
+
+
+
 # second largest
 ##solution 1
 list1=[1,2,3,4,1]
@@ -85,6 +99,21 @@ list1.remove(max(list1))
 print(max(list1))
 
 
+# while
+list1=[1,5,3,4,1]
+i = 0
+large = list1[0]
+large2 = 0
+while i < len(list1):
+	print(i,large)
+	if large < list1[i]:
+		large2 = large
+		large = list1[i]
+	elif list1[i] > large2 and list1[i] < large:
+		large2 = list1[i]
+	i += 1
+print(large,large2)
+
 ##################
 ### Exercice 2 ###
 ##################
@@ -97,12 +126,12 @@ print(type(t))
 
 # min and max of each tuple
 
-truple = [(1,3,2), (6,4,5), (8,7,9)]
+tuple1 = [(1,3,2), (6,4,5), (8,7,9)]
 
 # solution 1
 minimum = 0
 maximum = 0
-for t in truple:
+for t in tuple1:
 	for idx in t:
 		if idx == t[0]:
 			minimum = maximum =idx
@@ -114,7 +143,7 @@ for t in truple:
 	print(minimum, maximum)
 
 # solution 2
-for t in truple:
+for t in tuple1:
 	print(min(t))
 	print(max(t))
 

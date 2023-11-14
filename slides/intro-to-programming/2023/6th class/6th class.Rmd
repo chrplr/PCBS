@@ -3,7 +3,7 @@ title: "Intro to programming 6"
 author: |
   | Henri Vandendriessche
   | henri.vandendriessche@ens.fr
-date: "2022-10-25"
+date: "2023-11-06"
 output:
   beamer_presentation:
     theme: CambridgeUS
@@ -16,6 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Terminal cheat sheet reminder
 ========================================================
+
 
 - Bash commands to navigate directories
 
@@ -53,7 +54,10 @@ Terminal cheat sheet reminder
 
 - **Ctrl + C** to stop a program execution
 
+- "**Upper arrow**" to see last commands
+
 - Many more bash commands to use...
+
 
 
 Previously on Intro to Programming (Python)
@@ -92,11 +96,10 @@ Previously on Intro to Programming (Python)
 Today
 ========================================================
 
-
  - Read and write files
 
 
-Manipulate files : Open and read a file 1/3
+Manipulate files : Open and read a file 1/4
 ========================================================
 
 > - To interact with files in Python, you have a built-in function available: **open()**.
@@ -127,7 +130,7 @@ Manipulate files : Open and read a file 2/4
 >   ```
 
 
-Manipulate files : Open and read a file 2/4
+Manipulate files : Open and read a file 3/4
 ========================================================
 
 - Example 2:
@@ -137,7 +140,7 @@ print(Myfile.read(5))
 Myfile.close()
 ```
 
-Manipulate files : Open and read a file 3/4
+Manipulate files : Open and read a file 4/4
 ========================================================
   
 > - You can also use:
@@ -181,7 +184,7 @@ Manipulate files : write a file
    
 > - To create and write to a file, you need to use the access mode 'w'.
    
-- Note that to read a file just created, you need to close it and open it again in read mode.
+> - Note that to read a file just created, you need to close it and open it again in read mode.
 >   ```{python, echo = TRUE}
 >   MyTestFile = open('test2.txt', 'w')
 >   MyTestFile.write("Once upon a time in a Cognitive Master")
@@ -256,6 +259,6 @@ Exercises
   - 1 Write a script that prints the first 10 lines of a file.
   - 2 Write a script that prints the last 10 lines of a file (or the whole file if it is less than 10 lines long).
   - 3 Write a script that opens and reads a text file, printing all lines containing a given target word.
-  - 4 Calculate the number of words (removing punctuation) in a text file. Hint: use the **split()** and **strip()** functions.
+  - 4 Calculate the number of words (removing punctuation) in a text file. Hint: use the **split()** functions.
   - 5 Calculate the number of occurrences of each word in a text file.
   - 6 Print a bar plot of the word occurrences found in the previous exercises using matplotlib.
