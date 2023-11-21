@@ -203,7 +203,7 @@ Getting the Traceback as a String 1/2
 - Getting the information of your error.
 
 - When your program crashes you always have an error with some information like:
-  + The line of the error / the differents lines if your program uses several files
+  + The line of the error / the different lines if your program uses several files
   + The error message
   + The function / the sequence of functions involved (i,e, the call stack)
   
@@ -221,7 +221,7 @@ callErrorTest()
     
 ```
 
-- Those informations are here to help you locate and understand you error.
+- That information is here to help you locate and understand you error.
 
 
 Getting the Traceback as a String 2/2
