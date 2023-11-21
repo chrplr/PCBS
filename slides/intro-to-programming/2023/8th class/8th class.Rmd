@@ -17,6 +17,7 @@ fontsize: 8pt
 ---
 
 
+
 Terminal cheat sheet reminder
 ========================================================
 
@@ -136,7 +137,6 @@ Handling exceptions
 ========================================================
 
 - Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it.
-Try except
 
 - Errors detected during execution are called exceptions and are not unconditionally fatal.
 
@@ -546,7 +546,7 @@ Python debugger: PDB 1/4
 - When executing your program with the module **pdb** you have a screen like that
 
 
-![](/home/hv/Documents/python/course/PCBS/slides/intro-to-programming/2023/8th class/screenPDB.png){width=50%}
+![](~/Documents/Cours python/PCBS/slides/intro-to-programming/2023/8th class/screenPDB.png){width=50%}
 
 
 
@@ -562,7 +562,7 @@ Python debugger: PDB 2/4
   + **step**	Step into functions called at the current line
   + **whatis** Check the type of variable
   
-![](/home/hv/Documents/python/course/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_step.png)
+![](~/Documents/Cours python/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_step.png)
   
 Python debugger: PDB 3/4
 ========================================================
@@ -587,9 +587,9 @@ Python debugger: PDB 4/4
 
 - To do that you need to write on the terminal: **break filename: lineno, condition**
 
-![](/home/hv/Documents/python/course/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_break.png){width=50%}
+![](~/Documents/Cours python/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_break.png){width=50%}
 
 - You can then use **c** to run the program until your breakpoint
 
-![](/home/hv/Documents/python/course/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_break2.png){width=50%}
+![](~/Documents/Cours python/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_break2.png){width=50%}
 
