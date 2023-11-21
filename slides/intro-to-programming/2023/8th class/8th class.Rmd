@@ -138,17 +138,22 @@ Handling exceptions
 
 - Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it.
 
-- Errors detected during execution are called exceptions and are not unconditionally fatal.
 
-- To handle exceptions there are several options:
+- Errors detected during execution are called exceptions. They are not unconditionally fatal but python raises an exception whenever it tries to run an invalid code.
+
+- Exceptions in itself doesn't do much. It's a type of data that manipulate python errors.
+
+- To raise or handle exceptions there are several options:
   + The **raise** statement.
-  + The **try** statement.
+  + The **assert** statement.
+  + The **try** and **except** statement.
   
 
 Raising Exceptions 1/2
 ========================================================
 
 - Python raises exceptions every time it attempts to execute invalid code.
+
 
 - Exceptions are raised using the following:
   + The **raise** keyword
