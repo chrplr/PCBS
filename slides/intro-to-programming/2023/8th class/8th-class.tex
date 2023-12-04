@@ -395,17 +395,23 @@
   Even if a statement or expression is syntactically correct, it may
   cause an error when an attempt is made to execute it.
 \item
-  Errors detected during execution are called exceptions and are not
-  unconditionally fatal.
+  Errors detected during execution are called exceptions. They are not
+  unconditionally fatal but python raises an exception whenever it tries
+  to run an invalid code.
 \item
-  To handle exceptions there are several options:
+  Exceptions in itself doesn't do much. It's a type of data that
+  manipulate python errors.
+\item
+  To raise or handle exceptions there are several options:
 
   \begin{itemize}
   \tightlist
   \item
     The \textbf{raise} statement.
   \item
-    The \textbf{try} statement.
+    The \textbf{assert} statement.
+  \item
+    The \textbf{try} and \textbf{except} statement.
   \end{itemize}
 \end{itemize}
 \end{frame}
@@ -946,7 +952,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-11-21 14:19:56,526 -  DEBUG -  Start of program
+## 2023-12-05 00:12:12,684 -  DEBUG -  Start of program
 \end{verbatim}
 
 \begin{Shaded}
@@ -965,7 +971,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-11-21 14:19:56,532 -  DEBUG -  Call of the function
+## 2023-12-05 00:12:12,690 -  DEBUG -  Call of the function
 \end{verbatim}
 
 \begin{Shaded}
@@ -977,14 +983,14 @@
 \begin{verbatim}
 ## 0
 ## 
-## 2023-11-21 14:19:56,534 -  DEBUG -  Start of factorial(5)
-## 2023-11-21 14:19:56,534 -  DEBUG -  i is 0, total is 0
-## 2023-11-21 14:19:56,534 -  DEBUG -  i is 1, total is 0
-## 2023-11-21 14:19:56,534 -  DEBUG -  i is 2, total is 0
-## 2023-11-21 14:19:56,534 -  DEBUG -  i is 3, total is 0
-## 2023-11-21 14:19:56,534 -  DEBUG -  i is 4, total is 0
-## 2023-11-21 14:19:56,534 -  DEBUG -  i is 5, total is 0
-## 2023-11-21 14:19:56,534 -  DEBUG -  End of factorial(5)
+## 2023-12-05 00:12:12,692 -  DEBUG -  Start of factorial(5)
+## 2023-12-05 00:12:12,692 -  DEBUG -  i is 0, total is 0
+## 2023-12-05 00:12:12,692 -  DEBUG -  i is 1, total is 0
+## 2023-12-05 00:12:12,692 -  DEBUG -  i is 2, total is 0
+## 2023-12-05 00:12:12,692 -  DEBUG -  i is 3, total is 0
+## 2023-12-05 00:12:12,692 -  DEBUG -  i is 4, total is 0
+## 2023-12-05 00:12:12,692 -  DEBUG -  i is 5, total is 0
+## 2023-12-05 00:12:12,692 -  DEBUG -  End of factorial(5)
 \end{verbatim}
 
 \begin{Shaded}
@@ -994,7 +1000,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-11-21 14:19:56,537 -  DEBUG -  End of program
+## 2023-12-05 00:12:12,695 -  DEBUG -  End of program
 \end{verbatim}
 \end{frame}
 
@@ -1015,7 +1021,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-11-21 14:19:56,566 -  DEBUG -  Start of program
+## 2023-12-05 00:12:12,726 -  DEBUG -  Start of program
 \end{verbatim}
 
 \begin{Shaded}
@@ -1034,7 +1040,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-11-21 14:19:56,570 -  DEBUG -  Call of the function
+## 2023-12-05 00:12:12,732 -  DEBUG -  Call of the function
 \end{verbatim}
 
 \begin{Shaded}
@@ -1046,13 +1052,13 @@
 \begin{verbatim}
 ## 120
 ## 
-## 2023-11-21 14:19:56,573 -  DEBUG -  Start of factorial(5)
-## 2023-11-21 14:19:56,573 -  DEBUG -  i is 1, total is 1
-## 2023-11-21 14:19:56,573 -  DEBUG -  i is 2, total is 2
-## 2023-11-21 14:19:56,573 -  DEBUG -  i is 3, total is 6
-## 2023-11-21 14:19:56,573 -  DEBUG -  i is 4, total is 24
-## 2023-11-21 14:19:56,573 -  DEBUG -  i is 5, total is 120
-## 2023-11-21 14:19:56,573 -  DEBUG -  End of factorial(5)
+## 2023-12-05 00:12:12,735 -  DEBUG -  Start of factorial(5)
+## 2023-12-05 00:12:12,735 -  DEBUG -  i is 1, total is 1
+## 2023-12-05 00:12:12,735 -  DEBUG -  i is 2, total is 2
+## 2023-12-05 00:12:12,735 -  DEBUG -  i is 3, total is 6
+## 2023-12-05 00:12:12,735 -  DEBUG -  i is 4, total is 24
+## 2023-12-05 00:12:12,735 -  DEBUG -  i is 5, total is 120
+## 2023-12-05 00:12:12,735 -  DEBUG -  End of factorial(5)
 \end{verbatim}
 
 \begin{Shaded}
@@ -1062,7 +1068,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-11-21 14:19:56,575 -  DEBUG -  End of program
+## 2023-12-05 00:12:12,738 -  DEBUG -  End of program
 \end{verbatim}
 \end{frame}
 
@@ -1301,6 +1307,162 @@
 \end{itemize}
 
 \includegraphics[width=0.5\textwidth,height=\textheight]{~/Documents/Cours python/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_break2.png}
+\end{frame}
+
+\begin{frame}{Exercise on logging}
+\protect\hypertarget{exercise-on-logging}{}
+\begin{itemize}
+\tightlist
+\item
+  Use my exercise correction from last week on the cameras and:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    1 log every argument/parameter sent to a function
+  \item
+    2 log every variable in a return statement
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise on pdb 1/3}
+\protect\hypertarget{exercise-on-pdb-13}{}
+\begin{itemize}
+\tightlist
+\item
+  Use my exercise correction from last week on the cameras and:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    1 execute line by line the program using pdb
+  \item
+    2 print argument(s) of all function and check their type
+  \item
+    3 set breakpoints right before every return statement of a function
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Exercise on pdb 2/3}
+\protect\hypertarget{exercise-on-pdb-23}{}
+\begin{itemize}
+\tightlist
+\item
+  Debug the following adding program:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Enter the first number to add:\textquotesingle{}}\NormalTok{)}
+\NormalTok{first }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Enter the second number to add:\textquotesingle{}}\NormalTok{)}
+\NormalTok{second }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Enter the third number to add:\textquotesingle{}}\NormalTok{)}
+\NormalTok{third }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}The sum is \textquotesingle{}} \OperatorTok{+}\NormalTok{ first }\OperatorTok{+}\NormalTok{ second }\OperatorTok{+}\NormalTok{ third)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Exercise on pdb 3/3}
+\protect\hypertarget{exercise-on-pdb-33}{}
+\begin{itemize}
+\tightlist
+\item
+  Debug the following coin toss program:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ random}
+\NormalTok{guess }\OperatorTok{=} \StringTok{\textquotesingle{}\textquotesingle{}}
+\ControlFlowTok{while}\NormalTok{ guess }\KeywordTok{not} \KeywordTok{in}\NormalTok{ (}\StringTok{\textquotesingle{}heads\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}tails\textquotesingle{}}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Guess the coin toss! Enter heads or tails:\textquotesingle{}}\NormalTok{)}
+\NormalTok{    guess }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\NormalTok{toss }\OperatorTok{=}\NormalTok{ random.randint(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{) }\CommentTok{\# 0 is tails, 1 is heads}
+\ControlFlowTok{if}\NormalTok{ toss }\OperatorTok{==}\NormalTok{ guess:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}You got it!\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Nope! Guess again!\textquotesingle{}}\NormalTok{)}
+\NormalTok{    guesss }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+    \ControlFlowTok{if}\NormalTok{ toss }\OperatorTok{==}\NormalTok{ guess:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}You got it!\textquotesingle{}}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Nope. You are really bad at this game.\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}{Exercise 1}
+\protect\hypertarget{exercise-1}{}
+\begin{itemize}
+\item
+  Write a program that asks for the first name, last name, age and date
+  of birth of a user. Then create one or several functions that perform
+  input validation
+\item
+  Check that the age is a valid number,
+\item
+  Check that the first name and last name are only letters
+\item
+  Check that the date of birth is in the valid format dd/mm/yyy and is
+  coherent with the their age
+\item
+  Otherwise, ask again the invalid data
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 2}
+\protect\hypertarget{exercise-2}{}
+\begin{itemize}
+\tightlist
+\item
+  Write a Python program to create a Caesar cipher
+  \url{https://en.wikipedia.org/wiki/Caesar_cipher}.
+\item
+  Include one function to encrypt and decrypt the text with a shift. Use
+  a positive shift for encryption and a negative shift for decryption.
+\item
+  The program should consider both uppercase and lowercase letters.
+\item
+  Hint: check the function ord(), char() and the Unicode table.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 3}
+\protect\hypertarget{exercise-3}{}
+\begin{itemize}
+\tightlist
+\item
+  Write a program that attempts to perform a Brute-force attack:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Using these collections of characters: first lower case letters
+    ``abcdefghijklmnopqrstuvwxyz,'' then lower case and lower case
+    letters and numbers ``abcdefghijklmnopqrstuvwxyz1234567890,'' and
+    finally lower and upper case letters, numbers and special characters
+    ``abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890,;:!?./§\%*+=``.
+  \end{itemize}
+\item
+  Ask the user a password (1 - 5 character)
+\item
+  Write a function that tries every possible combination of our set of
+  characters with all possible lengths (from 1 to 5).
+\item
+  Record and print the time to find the solution
+\item
+  Write at every step the number length you are testing and time taken
+  so far.
+\item
+  To continue, calulate the number of combination according to the
+  length of the password and the collection of character selected.
+\item
+  Hint: check itertools module
+\end{itemize}
 \end{frame}
 
 \end{document}
