@@ -133,13 +133,35 @@ if test == False
 
 
 
-Handling exceptions 
+Exceptions 
 ========================================================
 
 - Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it.
 
 
-- Errors detected during execution are called exceptions. They are not unconditionally fatal but python raises an exception whenever it tries to run an invalid code.
+- Errors detected during execution are called logical errors or exceptions. They are not unconditionally fatal but python raises an exception whenever it tries to run an invalid code.
+
+```{python, echo=TRUE, eval=TRUE, error=TRUE}
+number = 1000
+
+divided_by_0 = number/0 
+
+```
+
+
+  
+
+Handling exceptions 
+========================================================
+
+- You have plenty of categories of exceptions:
+  + IndexError: when the index doesn't correspond to any value in a list for example.
+  + AttributeError: When attribute assignment is failed.
+  + IndentationError: When the indentation of the code is wrong.
+  + ImportError: When the imported module is not found
+  + NameError : undeclared variable
+  + TypeError: When operation are applied to a wrong type of varialble. 
+  + ...
 
 - Exceptions in itself doesn't do much. It's a type of data that manipulate python errors.
 
@@ -147,13 +169,15 @@ Handling exceptions
   + The **raise** statement.
   + The **assert** statement.
   + The **try** and **except** statement.
-  
+
+
 
 Raising Exceptions 1/2
 ========================================================
 
 - Python raises exceptions every time it attempts to execute invalid code.
 
+- Python does it automatically with a certain precision, but you can create you own exception
 
 - Exceptions are raised using the following:
   + The **raise** keyword

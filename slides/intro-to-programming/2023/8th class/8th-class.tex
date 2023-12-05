@@ -388,16 +388,55 @@
 \end{verbatim}
 \end{frame}
 
-\begin{frame}{Handling exceptions}
-\protect\hypertarget{handling-exceptions}{}
+\begin{frame}[fragile]{Exceptions}
+\protect\hypertarget{exceptions}{}
 \begin{itemize}
 \item
   Even if a statement or expression is syntactically correct, it may
   cause an error when an attempt is made to execute it.
 \item
-  Errors detected during execution are called exceptions. They are not
-  unconditionally fatal but python raises an exception whenever it tries
-  to run an invalid code.
+  Errors detected during execution are called logical errors or
+  exceptions. They are not unconditionally fatal but python raises an
+  exception whenever it tries to run an invalid code.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{number }\OperatorTok{=} \DecValTok{1000}
+
+\NormalTok{divided\_by\_0 }\OperatorTok{=}\NormalTok{ number}\OperatorTok{/}\DecValTok{0} 
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## division by zero
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Handling exceptions}
+\protect\hypertarget{handling-exceptions}{}
+\begin{itemize}
+\item
+  You have plenty of categories of exceptions:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    IndexError: when the index doesn't correspond to any value in a list
+    for example.
+  \item
+    AttributeError: When attribute assignment is failed.
+  \item
+    IndentationError: When the indentation of the code is wrong.
+  \item
+    ImportError: When the imported module is not found
+  \item
+    NameError : undeclared variable
+  \item
+    TypeError: When operation are applied to a wrong type of varialble.
+  \item
+    \ldots{}
+  \end{itemize}
 \item
   Exceptions in itself doesn't do much. It's a type of data that
   manipulate python errors.
@@ -422,6 +461,9 @@
 \item
   Python raises exceptions every time it attempts to execute invalid
   code.
+\item
+  Python does it automatically with a certain precision, but you can
+  create you own exception
 \item
   Exceptions are raised using the following:
 
@@ -952,7 +994,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-12-05 00:12:12,684 -  DEBUG -  Start of program
+## 2023-12-05 13:52:22,766 -  DEBUG -  Start of program
 \end{verbatim}
 
 \begin{Shaded}
@@ -971,7 +1013,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-12-05 00:12:12,690 -  DEBUG -  Call of the function
+## 2023-12-05 13:52:22,773 -  DEBUG -  Call of the function
 \end{verbatim}
 
 \begin{Shaded}
@@ -983,14 +1025,14 @@
 \begin{verbatim}
 ## 0
 ## 
-## 2023-12-05 00:12:12,692 -  DEBUG -  Start of factorial(5)
-## 2023-12-05 00:12:12,692 -  DEBUG -  i is 0, total is 0
-## 2023-12-05 00:12:12,692 -  DEBUG -  i is 1, total is 0
-## 2023-12-05 00:12:12,692 -  DEBUG -  i is 2, total is 0
-## 2023-12-05 00:12:12,692 -  DEBUG -  i is 3, total is 0
-## 2023-12-05 00:12:12,692 -  DEBUG -  i is 4, total is 0
-## 2023-12-05 00:12:12,692 -  DEBUG -  i is 5, total is 0
-## 2023-12-05 00:12:12,692 -  DEBUG -  End of factorial(5)
+## 2023-12-05 13:52:22,776 -  DEBUG -  Start of factorial(5)
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 0, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 1, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 2, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 3, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 4, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 5, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  End of factorial(5)
 \end{verbatim}
 
 \begin{Shaded}
@@ -1000,7 +1042,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-12-05 00:12:12,695 -  DEBUG -  End of program
+## 2023-12-05 13:52:22,779 -  DEBUG -  End of program
 \end{verbatim}
 \end{frame}
 
@@ -1021,7 +1063,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-12-05 00:12:12,726 -  DEBUG -  Start of program
+## 2023-12-05 13:52:22,809 -  DEBUG -  Start of program
 \end{verbatim}
 
 \begin{Shaded}
@@ -1040,7 +1082,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-12-05 00:12:12,732 -  DEBUG -  Call of the function
+## 2023-12-05 13:52:22,815 -  DEBUG -  Call of the function
 \end{verbatim}
 
 \begin{Shaded}
@@ -1052,13 +1094,13 @@
 \begin{verbatim}
 ## 120
 ## 
-## 2023-12-05 00:12:12,735 -  DEBUG -  Start of factorial(5)
-## 2023-12-05 00:12:12,735 -  DEBUG -  i is 1, total is 1
-## 2023-12-05 00:12:12,735 -  DEBUG -  i is 2, total is 2
-## 2023-12-05 00:12:12,735 -  DEBUG -  i is 3, total is 6
-## 2023-12-05 00:12:12,735 -  DEBUG -  i is 4, total is 24
-## 2023-12-05 00:12:12,735 -  DEBUG -  i is 5, total is 120
-## 2023-12-05 00:12:12,735 -  DEBUG -  End of factorial(5)
+## 2023-12-05 13:52:22,818 -  DEBUG -  Start of factorial(5)
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 1, total is 1
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 2, total is 2
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 3, total is 6
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 4, total is 24
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 5, total is 120
+## 2023-12-05 13:52:22,818 -  DEBUG -  End of factorial(5)
 \end{verbatim}
 
 \begin{Shaded}
@@ -1068,7 +1110,7 @@
 \end{Shaded}
 
 \begin{verbatim}
-## 2023-12-05 00:12:12,738 -  DEBUG -  End of program
+## 2023-12-05 13:52:22,821 -  DEBUG -  End of program
 \end{verbatim}
 \end{frame}
 
