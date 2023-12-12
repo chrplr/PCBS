@@ -1,0 +1,1353 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  8pt,
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{CambridgeUS}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\let\verbatim\undefined
+\let\verbatimend\undefined
+\usepackage{listings}
+\lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Intro to programming 9},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Intro to programming 9}
+\author{Henri Vandendriessche\\
+\href{mailto:henri.vandendriessche@ens.fr}{\nolinkurl{henri.vandendriessche@ens.fr}}}
+\date{2023-12-12}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Today}
+\protect\hypertarget{today}{}
+\begin{itemize}
+\tightlist
+\item
+  Object-Oriented Programming in Python:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Classes
+  \item
+    Objects
+  \item
+    Methods
+  \item
+    Constructors
+  \end{itemize}
+\item
+  Clean Code
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Object-Oriented Programming (OOP)}
+\protect\hypertarget{object-oriented-programming-oop}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Programming paradigm based of the concept of ``objects''
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Python has been developed with an ``oriented-object'' approach
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  It's not a Python thing. Other object-oriented languages includes:
+  Java, C++, C\#, R, PHP \ldots{}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  OOP is defined around two key concepts that are \textbf{classes} and
+  \textbf{objects}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Classes 1/3}
+\protect\hypertarget{classes-13}{}
+\begin{itemize}
+\item
+  Classes are templates for objects
+\item
+  Example: You have a power point templates for all your presentations
+  of articles with
+
+  \begin{itemize}
+  \tightlist
+  \item
+    a graphic chart
+  \item
+    your font
+  \item
+    your background image
+  \item
+    all your slides with generic titles (Introduction, study 1, results
+    study 1\ldots)
+  \end{itemize}
+\item
+  That templates in python is a class. A kind of general recipe that
+  define a skeleton for every object (in our case a power point
+  presentation for a class)
+\end{itemize}
+
+\includegraphics{class object.png}
+\end{frame}
+
+\begin{frame}{Classes 2/3}
+\protect\hypertarget{classes-23}{}
+\begin{itemize}
+\item
+  A class contains state and behavior
+\item
+  State: is referring to data or variables. For example: your power
+  point for your class of ``introduction to Cognitive psychology'' has:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    a specific name
+  \item
+    specific graphs
+  \item
+    a number of pages
+  \end{itemize}
+\item
+  Behavior: is a set of thing the class can do. For example: your power
+  point can have
+
+  \begin{itemize}
+  \tightlist
+  \item
+    animations,
+  \item
+    play sounds or videos.
+  \item
+    This behavior is define in a method which is like a function but
+    specific to classes.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Classes 3/3}
+\protect\hypertarget{classes-33}{}
+\begin{itemize}
+\item
+  The creation of an object is called an \textbf{instantiation}. From
+  your template of power point you'll create a new power point for
+  presenting an article in your class of ``introduction to evolutionary
+  anthropology''
+\item
+  That instantiation will have:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    specific attributes (a name, a number of slides \ldots.)
+  \item
+    common methods (animations, videos, sounds \ldots) like the other
+    objects
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objects}
+\protect\hypertarget{objects}{}
+\begin{itemize}
+\item
+  Objects are instances of classes
+\item
+  Objects can be stored in variable and its type is the class
+\item
+  In our metaphor, one object is one specific power-point. For example
+  the power point of your class of ``introduction to Cognitive
+  psychology''
+\item
+  That power-point has the same structure and the same features and
+  characteristics as the power point of your class of ``introduction to
+  Linguistics'' yet the content differs.
+\item
+  You can instantiate multiple objects from the same class.
+\item
+  Those objects are independent
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Method}
+\protect\hypertarget{method}{}
+\begin{itemize}
+\item
+  As said before a method is part of the behavior of a class
+\item
+  A method is very similar to a function but is part of a class when a
+  function is independent
+\item
+  It can:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    modify an object's internal state of an object
+  \item
+    call others methods or functions
+  \item
+    return values
+  \item
+    etc \ldots{}
+  \end{itemize}
+\item
+  The only difference between function and method is that method belong
+  to a class/object.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Create your class 1/2}
+\protect\hypertarget{create-your-class-12}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{ Rectangle:}
+\NormalTok{  width }\OperatorTok{=} \DecValTok{3}
+\NormalTok{  length }\OperatorTok{=} \DecValTok{2}
+\NormalTok{  color }\OperatorTok{=} \StringTok{\textquotesingle{}red\textquotesingle{}}
+  \KeywordTok{def}\NormalTok{ calculate\_area(}\VariableTok{self}\NormalTok{):}
+      \ControlFlowTok{return} \VariableTok{self}\NormalTok{.width }\OperatorTok{*} \VariableTok{self}\NormalTok{.length}
+
+\BuiltInTok{type}\NormalTok{(Rectangle)    }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <class 'type'>
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rect}\OperatorTok{=}\NormalTok{Rectangle}
+
+\BuiltInTok{print}\NormalTok{(rect.width)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(Rectangle.calculate\_area(rect))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 6
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  We can see the state:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    width and height
+  \end{itemize}
+\item
+  And the behavior, in this case the method calculate\_area.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Create your class 2/2}
+\protect\hypertarget{create-your-class-22}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{ Rectangle:}
+\NormalTok{  width }\OperatorTok{=} \DecValTok{3}
+\NormalTok{  length }\OperatorTok{=} \DecValTok{2}
+\NormalTok{  color }\OperatorTok{=} \StringTok{\textquotesingle{}red\textquotesingle{}}
+  \KeywordTok{def}\NormalTok{ calculate\_area(}\VariableTok{self}\NormalTok{):}
+      \ControlFlowTok{return} \VariableTok{self}\NormalTok{.width }\OperatorTok{*} \VariableTok{self}\NormalTok{.length}
+
+\NormalTok{rect}\OperatorTok{=}\NormalTok{Rectangle}
+
+\BuiltInTok{print}\NormalTok{(rect.width)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(Rectangle.calculate\_area(rect))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 6
+\end{verbatim}
+
+\begin{itemize}
+\item
+  We can note the \textbf{self} that refers to its own class and its own
+  variables
+\item
+  \textbf{self} is always the first parameter in order to access all the
+  object's attributes
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Constructors}
+\protect\hypertarget{constructors}{}
+\begin{itemize}
+\item
+  Constructors are special methods. Every class has one and it's used to
+  create an object
+\item
+  We need to use \textbf{\textbf{init}}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{ Rectangle:}
+    \KeywordTok{def} \FunctionTok{\_\_init\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{, width, length, color):}
+        \VariableTok{self}\NormalTok{.width }\OperatorTok{=}\NormalTok{ width}
+        \VariableTok{self}\NormalTok{.length }\OperatorTok{=}\NormalTok{ length}
+        \VariableTok{self}\NormalTok{.color }\OperatorTok{=}\NormalTok{ color}
+    \KeywordTok{def}\NormalTok{ calculate\_area(}\VariableTok{self}\NormalTok{):}
+      \ControlFlowTok{return} \VariableTok{self}\NormalTok{.width }\OperatorTok{*} \VariableTok{self}\NormalTok{.length}
+        
+\NormalTok{rect }\OperatorTok{=}\NormalTok{ Rectangle(}\DecValTok{3}\NormalTok{,}\DecValTok{2}\NormalTok{, }\StringTok{"blue"}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(rect.width)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(rect.calculate\_area())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 6
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Instantiate an object 1/2}
+\protect\hypertarget{instantiate-an-object-12}{}
+\begin{itemize}
+\tightlist
+\item
+  You can use the constructor to instantiate an object
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{ Rectangle:}
+    \KeywordTok{def} \FunctionTok{\_\_init\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{, width, length, color):}
+        \VariableTok{self}\NormalTok{.width }\OperatorTok{=}\NormalTok{ width}
+        \VariableTok{self}\NormalTok{.length }\OperatorTok{=}\NormalTok{ length}
+        \VariableTok{self}\NormalTok{.color }\OperatorTok{=}\NormalTok{ color}
+    \KeywordTok{def}\NormalTok{ calculate\_area(}\VariableTok{self}\NormalTok{):}
+      \ControlFlowTok{return} \VariableTok{self}\NormalTok{.width }\OperatorTok{*} \VariableTok{self}\NormalTok{.length}
+\NormalTok{rect }\OperatorTok{=}\NormalTok{ Rectangle(}\DecValTok{5}\NormalTok{,}\DecValTok{3}\NormalTok{,}\StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{)}
+
+\BuiltInTok{print}\NormalTok{(rect.width)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 5
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Instantiate an object 2/2}
+\protect\hypertarget{instantiate-an-object-22}{}
+\begin{itemize}
+\item
+  You can select default variables
+\item
+  Then you don't have specify the default variable
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{ Rectangle:}
+    \KeywordTok{def} \FunctionTok{\_\_init\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{, width, length, color}\OperatorTok{=}\StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{):}
+        \VariableTok{self}\NormalTok{.width }\OperatorTok{=}\NormalTok{ width}
+        \VariableTok{self}\NormalTok{.length }\OperatorTok{=}\NormalTok{ length}
+        \VariableTok{self}\NormalTok{.color }\OperatorTok{=}\NormalTok{ color}
+    \KeywordTok{def}\NormalTok{ calculate\_area(}\VariableTok{self}\NormalTok{):}
+      \ControlFlowTok{return} \VariableTok{self}\NormalTok{.width }\OperatorTok{*} \VariableTok{self}\NormalTok{.length}
+\NormalTok{rect }\OperatorTok{=}\NormalTok{ Rectangle(}\DecValTok{5}\NormalTok{,}\DecValTok{3}\NormalTok{)}
+
+\BuiltInTok{print}\NormalTok{(rect.width)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 5
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Modify an object}
+\protect\hypertarget{modify-an-object}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{class}\NormalTok{ Rectangle:}
+    \KeywordTok{def} \FunctionTok{\_\_init\_\_}\NormalTok{(}\VariableTok{self}\NormalTok{, width, length, color}\OperatorTok{=}\StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{):}
+        \VariableTok{self}\NormalTok{.width }\OperatorTok{=}\NormalTok{ width}
+        \VariableTok{self}\NormalTok{.length }\OperatorTok{=}\NormalTok{ length}
+        \VariableTok{self}\NormalTok{.color }\OperatorTok{=}\NormalTok{ color}
+    \KeywordTok{def}\NormalTok{ calculate\_area(}\VariableTok{self}\NormalTok{):}
+      \ControlFlowTok{return} \VariableTok{self}\NormalTok{.width }\OperatorTok{*} \VariableTok{self}\NormalTok{.length}
+
+\NormalTok{rect }\OperatorTok{=}\NormalTok{ Rectangle(}\DecValTok{5}\NormalTok{,}\DecValTok{3}\NormalTok{)}
+
+\BuiltInTok{print}\NormalTok{(rect.color)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## red
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{rect.color }\OperatorTok{=} \StringTok{"purple"}  
+\BuiltInTok{print}\NormalTok{(rect.color)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## purple
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{And beyond \ldots{} but not for now}
+\protect\hypertarget{and-beyond-but-not-for-now}{}
+\begin{itemize}
+\item
+  A class can have a parent class or superclass.
+\item
+  The class with a parent is known as a subclass or child.
+\item
+  That class inherits attributes from its parent.
+\item
+  The child class can implement extra attributes on top of that which it
+  inherits.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Clean code: Overview 1/4}
+\protect\hypertarget{clean-code-overview-14}{}
+The goal of clean code is to make your code \textbf{easy to understand}
+and \textbf{easy to change} !
+
+\includegraphics[width=0.35\textwidth,height=\textheight]{clean_code.png}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: Overview 2/4}
+\protect\hypertarget{clean-code-overview-24}{}
+\begin{itemize}
+\tightlist
+\item
+  Example with a former exercise with two taxi companies
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ costs(d):}
+\NormalTok{    a }\OperatorTok{=} \FloatTok{4.8} \OperatorTok{+} \FloatTok{1.15} \OperatorTok{*}\NormalTok{ d}
+\NormalTok{    b }\OperatorTok{=} \FloatTok{3.2} \OperatorTok{+} \FloatTok{1.20} \OperatorTok{*}\NormalTok{ d}
+    \ControlFlowTok{return}\NormalTok{ (a, b)}
+
+\KeywordTok{def}\NormalTok{ cheap(d):}
+\NormalTok{    a, b }\OperatorTok{=}\NormalTok{ costs(d)}
+    \ControlFlowTok{if}\NormalTok{ a }\OperatorTok{\textless{}}\NormalTok{ b:}
+        \ControlFlowTok{return} \StringTok{\textquotesingle{}A\textquotesingle{}}
+    \ControlFlowTok{else}\NormalTok{:}
+        \ControlFlowTok{return} \StringTok{\textquotesingle{}B\textquotesingle{}}
+
+\ControlFlowTok{for}\NormalTok{ d }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{30}\NormalTok{, }\DecValTok{40}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(cheap(d))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## B
+## B
+## A
+## A
+## A
+## A
+## A
+## A
+## A
+## A
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: Overview 3/4}
+\protect\hypertarget{clean-code-overview-34}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ costs(distance):}
+    \CommentTok{\# Calculate the price with the fixed charge plus the charge for every km}
+\NormalTok{    initial\_feeA }\OperatorTok{=} \FloatTok{4.8}
+\NormalTok{    initial\_feeB }\OperatorTok{=} \FloatTok{3.2}
+\NormalTok{    fixed\_fee\_kmA }\OperatorTok{=} \FloatTok{1.15}
+\NormalTok{    fixed\_fee\_kmB }\OperatorTok{=} \FloatTok{1.2}
+    
+\NormalTok{    price\_A }\OperatorTok{=}\NormalTok{ initial\_feeA }\OperatorTok{+}\NormalTok{ fixed\_fee\_kmA }\OperatorTok{*}\NormalTok{ distance}
+\NormalTok{    price\_B }\OperatorTok{=}\NormalTok{ initial\_feeB }\OperatorTok{+}\NormalTok{ fixed\_fee\_kmB }\OperatorTok{*}\NormalTok{ distance}
+    
+    \ControlFlowTok{return}\NormalTok{ (price\_A, price\_B)}
+
+\KeywordTok{def}\NormalTok{ cheapest\_company(distance):}
+    \CommentTok{\# calculate the cost for every company with a certain distance}
+\NormalTok{    price\_comp\_a, price\_comp\_b }\OperatorTok{=}\NormalTok{ costs(distance)}
+    \ControlFlowTok{if}\NormalTok{ price\_comp\_a }\OperatorTok{\textless{}}\NormalTok{ price\_comp\_b:}
+        \ControlFlowTok{return} \StringTok{\textquotesingle{}Company A\textquotesingle{}}
+    \ControlFlowTok{else}\NormalTok{:}
+        \ControlFlowTok{return} \StringTok{\textquotesingle{}Company B\textquotesingle{}}
+
+\CommentTok{\# print the distance from 30km to 50km}
+\ControlFlowTok{for}\NormalTok{ d }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{30}\NormalTok{, }\DecValTok{40}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"}\SpecialCharTok{\{}\NormalTok{d}\SpecialCharTok{\}}\SpecialStringTok{ km {-}\textgreater{} "} \OperatorTok{+}\NormalTok{ cheapest\_company(d))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 30 km -> Company B
+## 31 km -> Company B
+## 32 km -> Company A
+## 33 km -> Company A
+## 34 km -> Company A
+## 35 km -> Company A
+## 36 km -> Company A
+## 37 km -> Company A
+## 38 km -> Company A
+## 39 km -> Company A
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Clean code: Overview 4/4}
+\protect\hypertarget{clean-code-overview-44}{}
+** Even bad code can function. But if code isn't clean, it can bring a
+development organization to its knees. Every year, countless hours and
+significant resources are lost because of poorly written code. But it
+doesn't have to be that way.
+(\url{https://www.oreilly.com/library/view/clean-code-a/9780136083238/})**
+
+\begin{itemize}
+\item
+  We will cover a set of rules or advises to write cleaner code that can
+  be read and edited by other developers
+\item
+  Clean code is unfortunately never a priority but is a healthy practice
+\item
+  The clean code principle goes way beyond the scope of this course so
+  bear in mind that we'll see only a small subset of the clean code
+  principle.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Use meaningful names 1/2}
+\protect\hypertarget{clean-code-cc1.-use-meaningful-names-12}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Example:
+\end{itemize}
+
+\begin{quote}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{w }\OperatorTok{=}\NormalTok{ x2 }\OperatorTok{{-}}\NormalTok{ x1}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  What are w, x1 and x2?
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  What do they represent?
+\item
+  What are they used for?
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Does ``w'' stand for ``weight'', ``window'', ``word'', or is it just a
+  symbol for a generic computation?
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Use meaningful names 2/2}
+\protect\hypertarget{clean-code-cc1.-use-meaningful-names-22}{}
+\begin{itemize}
+\tightlist
+\item
+  Instead one can write
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{width }\OperatorTok{=}\NormalTok{ x\_right }\OperatorTok{{-}}\NormalTok{ x\_left}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Use meaningful names}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Replace magic numbers 1/2}
+\protect\hypertarget{clean-code-cc1.-replace-magic-numbers-12}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Other example
+\end{itemize}
+
+\begin{quote}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{width }\OperatorTok{=}\NormalTok{ x\_right }\OperatorTok{{-}}\NormalTok{ x\_left }\OperatorTok{+}\DecValTok{10}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Where does `10' come from?
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  What does it represent?
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Can I change it? Is it a constant, a variable.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Replace magic numbers 2/2}
+\protect\hypertarget{clean-code-cc1.-replace-magic-numbers-22}{}
+\begin{itemize}
+\tightlist
+\item
+  Instead one can write
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{horizontal\_margin }\OperatorTok{=} \DecValTok{10}
+
+\NormalTok{width }\OperatorTok{=}\NormalTok{ x\_right }\OperatorTok{{-}}\NormalTok{ x\_left }\OperatorTok{+}\NormalTok{ horizontal\_margin}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Replace magic numbers} with named parameters whatever the type
+  of that parameters
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Function names should say what
+they do 1/2}
+\protect\hypertarget{clean-code-cc1.-function-names-should-say-what-they-do-12}{}
+\begin{itemize}
+\tightlist
+\item
+  Example
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ check\_divisible(n, divisor):}
+    \ControlFlowTok{if}\NormalTok{ (n }\OperatorTok{\%}\NormalTok{ divisor }\OperatorTok{==} \DecValTok{0}\NormalTok{):}
+      \BuiltInTok{print}\NormalTok{(n, }\StringTok{\textquotesingle{} is divisible by \textquotesingle{}}\NormalTok{, divisor)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Function names should say what
+they do 1/2}
+\protect\hypertarget{clean-code-cc1.-function-names-should-say-what-they-do-12-1}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Example
+\end{itemize}
+
+\begin{quote}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ check\_divisible(n, divisor):}
+  \ControlFlowTok{if}\NormalTok{ (n }\OperatorTok{\%}\NormalTok{ divisor }\OperatorTok{==} \DecValTok{0}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(n, }\StringTok{\textquotesingle{} is divisible by \textquotesingle{}}\NormalTok{, divisor)}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Misleading name: I don't expect ``something to be checked'' but
+  something to be printed or not
+\end{itemize}
+
+\begin{quote}
+\begin{itemize}
+\tightlist
+\item
+  A more accurate name would be
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_if\_divisible(n, divisor):}
+  \ControlFlowTok{if}\NormalTok{ (n }\OperatorTok{\%}\NormalTok{ divisor }\OperatorTok{==} \DecValTok{0}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(n, }\StringTok{\textquotesingle{} is divisible by \textquotesingle{}}\NormalTok{, divisor)}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Fear the ambiguous name 1/2}
+\protect\hypertarget{clean-code-cc1.-fear-the-ambiguous-name-12}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Example
+\end{itemize}
+
+\begin{quote}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{remove(l, n)}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  What do you think this does? Ambiguous name:
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Does it remove the element in l whose value is equal to n?
+\item
+  Or does it remove the element in l at index n?
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Fear the ambiguous name 2/2}
+\protect\hypertarget{clean-code-cc1.-fear-the-ambiguous-name-22}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Example
+\end{itemize}
+
+\begin{quote}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{remove\_list\_element\_at\_index(l, i)}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  {[}CC1{]} Choose unambiguous names
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Clarity at the point of use is more important than brevity
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Include all the words needed to avoid ambiguity from the perspective
+  of someone calling the function
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  A general naming template: \textbf{verb\_keywords} (the verb indicates
+  what the function does, the keywords what parameters are expected)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Use different words for
+different concepts 1/3}
+\protect\hypertarget{clean-code-cc1.-use-different-words-for-different-concepts-13}{}
+\begin{itemize}
+\tightlist
+\item
+  Example: two function calls:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{add\_number(a , b)}
+\NormalTok{add\_list(c, d)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  What do you expect from these function ?
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Use different words for
+different concepts 2/3}
+\protect\hypertarget{clean-code-cc1.-use-different-words-for-different-concepts-23}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  The implementation of the functions:
+\end{itemize}
+
+\begin{quote}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ add\_number(a , b):}
+  \ControlFlowTok{return}\NormalTok{ a }\OperatorTok{+}\NormalTok{ b}
+
+\KeywordTok{def}\NormalTok{ add\_list(l, e):}
+\NormalTok{  l.append(e)}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\begin{quote}
+-Confusing to use the same word ``add'' for the two functions: + in the
+first case, add calculates the addition + in the second case, add
+inserts an element + in the first case, add has no side effects, in the
+second, it does!
+\end{quote}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC1. Use different words for
+different concepts 3/3}
+\protect\hypertarget{clean-code-cc1.-use-different-words-for-different-concepts-33}{}
+\begin{itemize}
+\tightlist
+\item
+  One way to remove the confusion:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ add\_numbers(a , b):}
+    \ControlFlowTok{return}\NormalTok{ a }\OperatorTok{+}\NormalTok{ b}
+
+\KeywordTok{def}\NormalTok{ append\_element\_to\_list(e, l):}
+\NormalTok{    l.append(e)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Use different words for different concepts
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC2. Functions should do one thing
+1/3}
+\protect\hypertarget{clean-code-cc2.-functions-should-do-one-thing-13}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Let's revisit an earlier example:
+\end{itemize}
+
+\begin{quote}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_if\_divisible(n, divisor):}
+  \ControlFlowTok{if}\NormalTok{ (n }\OperatorTok{\%}\NormalTok{ divisor }\OperatorTok{==} \DecValTok{0}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(n, }\StringTok{\textquotesingle{} is divisible by \textquotesingle{}}\NormalTok{, divisor)}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  This function does two things:
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    Calculating whether an integer is divisible by another
+  \item
+    Printing conditionally on the result
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  These are two conceptually distinct operations. There is no good
+  reason for them to be done in the same function.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC2. Functions should do one thing
+2/3}
+\protect\hypertarget{clean-code-cc2.-functions-should-do-one-thing-23}{}
+\begin{quote}
+A solution:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ is\_divisible(n, divisor):}
+  \ControlFlowTok{return}\NormalTok{ (n }\OperatorTok{\%}\NormalTok{ divisor }\OperatorTok{==} \DecValTok{0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  {[}CC2{]} Functions should do one thing
+\end{itemize}
+
+\begin{quote}
+This solution has the added benefit to remove side-effects from the
+function.
+\end{quote}
+\end{frame}
+
+\begin{frame}{Clean code: CC2. Functions should do one thing 3/3}
+\protect\hypertarget{clean-code-cc2.-functions-should-do-one-thing-33}{}
+\begin{itemize}
+\item
+  CC2. Create functions that do one thing
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A lot of programming is about chunking
+  \item
+    Chunking means grouping elements together in a meaningful named
+    chunk (e.g.~with a function) that you can manipulate as one
+    conceptual unit
+  \item
+    These chunks help you reason about your program and control its
+    intellectual complexity
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Clean code: CC3. DRY: Don't Repeat Yourself 1/3}
+\protect\hypertarget{clean-code-cc3.-dry-dont-repeat-yourself-13}{}
+\begin{itemize}
+\tightlist
+\item
+  Example
+\end{itemize}
+
+\includegraphics[width=0.65\textwidth,height=\textheight]{student_example1.png}
+
+\begin{itemize}
+\tightlist
+\item
+  What's wrong?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Clean code: CC3. DRY: Don't Repeat Yourself 2/3}
+\protect\hypertarget{clean-code-cc3.-dry-dont-repeat-yourself-23}{}
+\includegraphics[width=0.65\textwidth,height=\textheight]{student_example1_features.png}
+
+\begin{itemize}
+\item
+  What's wrong? Code duplication.
+\item
+  Why is it wrong?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Clean code: CC3. DRY: Don't Repeat Yourself 3/3}
+\protect\hypertarget{clean-code-cc3.-dry-dont-repeat-yourself-33}{}
+\begin{itemize}
+\item
+  It makes code hard to change.
+\item
+  One solution
+\end{itemize}
+
+\includegraphics[width=0.65\textwidth,height=\textheight]{student_example1_corrected.png}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC4. Explain yourself in code, not
+comments 1/4}
+\protect\hypertarget{clean-code-cc4.-explain-yourself-in-code-not-comments-14}{}
+\begin{itemize}
+\tightlist
+\item
+  Example
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ distance\_points(couple1,couple2):}
+    \CommentTok{"""Function controlling the distance between points}
+\CommentTok{    for our collection of random points"""}
+    \ControlFlowTok{return}\NormalTok{ math.sqrt((couple1[}\DecValTok{0}\NormalTok{]}\OperatorTok{{-}}\NormalTok{couple2[}\DecValTok{0}\NormalTok{])}\OperatorTok{**}\DecValTok{2}\OperatorTok{+}\NormalTok{(couple1[}\DecValTok{1}\NormalTok{]}\OperatorTok{{-}}\NormalTok{couple2[}\DecValTok{1}\NormalTok{])}\OperatorTok{**}\DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC4. Explain yourself in code, not
+comments 2/4}
+\protect\hypertarget{clean-code-cc4.-explain-yourself-in-code-not-comments-24}{}
+\begin{itemize}
+\tightlist
+\item
+  Misleading comment. It does not accurately describe what the function
+  does.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ distance\_points(couple1,couple2):}
+    \CommentTok{"""Function controlling the distance between points}
+\CommentTok{    for our collection of random points"""}
+    \ControlFlowTok{return}\NormalTok{ math.sqrt((couple1[}\DecValTok{0}\NormalTok{]}\OperatorTok{{-}}\NormalTok{couple2[}\DecValTok{0}\NormalTok{])}\OperatorTok{**}\DecValTok{2}\OperatorTok{+}\NormalTok{(couple1[}\DecValTok{1}\NormalTok{]}\OperatorTok{{-}}\NormalTok{couple2[}\DecValTok{1}\NormalTok{])}\OperatorTok{**}\DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  An alternative:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ distance\_between\_points(point\_1, point\_2):}
+    \ControlFlowTok{return}\NormalTok{ math.sqrt((couple1[}\DecValTok{0}\NormalTok{]}\OperatorTok{{-}}\NormalTok{couple2[}\DecValTok{0}\NormalTok{])}\OperatorTok{**}\DecValTok{2}\OperatorTok{+}\NormalTok{(couple1[}\DecValTok{1}\NormalTok{]}\OperatorTok{{-}}\NormalTok{couple2[}\DecValTok{1}\NormalTok{])}\OperatorTok{**}\DecValTok{2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Does this need any comments?
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC4. Comments do not make up for bad
+code 1/3}
+\protect\hypertarget{clean-code-cc4.-comments-do-not-make-up-for-bad-code-13}{}
+\begin{itemize}
+\tightlist
+\item
+  Example
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ shuffledtarg\_dist[i][}\DecValTok{1}\NormalTok{] }\OperatorTok{==} \DecValTok{1}\NormalTok{: }\CommentTok{\#\#\# IF TARGET }\AlertTok{\#\#\#}
+    \CommentTok{\# [some code ...]}
+\ControlFlowTok{elif}\NormalTok{ shuffledtarg\_dist[i][}\DecValTok{1}\NormalTok{] }\OperatorTok{==} \DecValTok{0}\NormalTok{: }\CommentTok{\#\#\# IF DISTRACTOR }\AlertTok{\#\#\#}
+    \CommentTok{\# [some other code ...]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Why do we need such comments next to if and elif?
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC4. Explain yourself in code, not
+comments 2/3}
+\protect\hypertarget{clean-code-cc4.-explain-yourself-in-code-not-comments-23}{}
+\begin{itemize}
+\tightlist
+\item
+  Good intentions, but bad approach
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ shuffledtarg\_dist[i][}\DecValTok{1}\NormalTok{] }\OperatorTok{==} \DecValTok{1}\NormalTok{: }\CommentTok{\#\#\# IF TARGET }\AlertTok{\#\#\#}
+    \CommentTok{\# [some code ...]}
+\ControlFlowTok{elif}\NormalTok{ shuffledtarg\_dist[i][}\DecValTok{1}\NormalTok{] }\OperatorTok{==} \DecValTok{0}\NormalTok{: }\CommentTok{\#\#\# IF DISTRACTOR }\AlertTok{\#\#\#}
+    \CommentTok{\# [some other code ...]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Comments do not make up for bad code
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ stimulus\_type }\OperatorTok{==}\NormalTok{ STIMULUS\_TYPE\_TARGET:}
+    \CommentTok{\# [some code ...]}
+\ControlFlowTok{elif}\NormalTok{ stimulus\_type }\OperatorTok{==}\NormalTok{ STIMULUS\_TYPE\_DISTRACTOR:}
+    \CommentTok{\# [some other code ...]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Clear and expressive code with few comments is superior to obscure
+  code with lots of comments
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Clean code: CC4. Explain yourself in code, not
+comments 3/3}
+\protect\hypertarget{clean-code-cc4.-explain-yourself-in-code-not-comments-33}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ shuffledtarg\_dist[i][}\DecValTok{1}\NormalTok{] }\OperatorTok{==} \DecValTok{1}\NormalTok{: }\CommentTok{\#\#\# IF TARGET }\AlertTok{\#\#\#}
+    \CommentTok{\# [some code ...]}
+\ControlFlowTok{elif}\NormalTok{ shuffledtarg\_dist[i][}\DecValTok{1}\NormalTok{] }\OperatorTok{==} \DecValTok{0}\NormalTok{: }\CommentTok{\#\#\# IF DISTRACTOR }\AlertTok{\#\#\#}
+    \CommentTok{\# [some other code ...]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  An even better solution
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ is\_target(stimulus):}
+    \CommentTok{\# [some code ...]}
+\ControlFlowTok{elif}\NormalTok{ is\_distractor(stimulus):}
+    \CommentTok{\# [some other code ...]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\item
+  {[}CC4{]} Clear and expressive code with few comments is superior to
+  obscure code with lots of comments
+\item
+  Does this need any comments?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Clean code: Summary}
+\protect\hypertarget{clean-code-summary}{}
+\begin{block}{The goal is to make code easy to understand and easy to
+change.}
+\protect\hypertarget{the-goal-is-to-make-code-easy-to-understand-and-easy-to-change.}{}
+\begin{itemize}
+\item
+  CC1 Use meaningful names:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Reveal purpose. Replace magic numbers. Say what functions do.
+    Reveal/Avoid side-effects. Remove ambiguity. Use different words for
+    different concepts. Use the appropriate level of description.
+  \end{itemize}
+\item
+  CC2 Create functions that do one thing.
+\item
+  CC3 DRY: Don't Repeat Yourself.
+\item
+  CC4 Explain yourself in code, not comments.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}
