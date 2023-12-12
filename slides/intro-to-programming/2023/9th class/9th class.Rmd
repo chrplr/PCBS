@@ -688,3 +688,9 @@ Clean code: Summary
 
   - CC4 Explain yourself in code, not comments.
 
+
+And now the test
+======================================================== 
+
+follow the link and open the questionnaire:
+https://www.documents.ens.fr/index.php/s/eWRPfUY6A4aI7DC
