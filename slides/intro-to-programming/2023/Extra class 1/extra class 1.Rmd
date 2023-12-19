@@ -1,0 +1,820 @@
+---
+title: "Extra class 1"
+author: |
+  | Henri Vandendriessche
+  | henri.vandendriessche@ens.fr
+date: "2023-12-19"
+output:
+  beamer_presentation:
+    theme: CambridgeUS
+    keep_tex: true
+header-includes:
+  - \let\verbatim\undefined
+  - \let\verbatimend\undefined
+  - \usepackage{listings}
+  - \lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+fontsize: 8pt
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+MCQ data variable
+========================================================
+- Remove incorrect characters in the name of the variable
+```{python, echo=TRUE,eval=FALSE}
+1_of_my-variable! = "test"
+```
+
+
+MCQ boolean 1
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=FALSE}
+print(5>1)
+```
+
+MCQ boolean 1
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+print(5>1)
+```
+
+MCQ boolean 2
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=FALSE}
+print(5 == 1)
+```
+
+MCQ boolean 2
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+print(5 == 1)
+```
+
+MCQ boolean 3
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=FALSE}
+print(5 < 1)
+```
+
+MCQ boolean 3
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+print(5 < 1)
+```
+
+MCQ boolean 4
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=FALSE}
+print(bool("abc"))
+```
+
+MCQ boolean 4
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+print(bool("abc"))
+```
+
+MCQ boolean 5
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=FALSE}
+print(bool(0))
+```
+
+MCQ boolean 5
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+print(bool(0))
+```
+
+MCQ boolean 6
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=FALSE}
+print(bool(1))
+```
+
+MCQ boolean 6
+========================================================
+- What is the value of the following statement ?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+print(bool(1))
+```
+
+
+MCQ data type
+========================================================
+- What will be printed from the following examples ?
+```{python, echo=TRUE,eval=FALSE}
+x = 5
+print(type(x))
+```
+
+```{python, echo=TRUE,eval=FALSE}
+x = "Hello World"
+print(type(x))
+```
+
+```{python, echo=TRUE,eval=FALSE}
+x = 20.5
+print(type(x))
+```
+
+```{python, echo=TRUE,eval=FALSE}
+x = ["cat", "dog", "horse"]
+print(type(x))
+```
+
+```{python, echo=TRUE,eval=FALSE}
+x = ("cat", "dog", "horse")
+print(type(x))
+```
+
+```{python, echo=TRUE,eval=FALSE}
+x = {"name" : "John", "lastname" : "Doe", "age" : 33}
+print(type(x))
+```
+
+```{python, echo=TRUE,eval=FALSE}
+x = True
+print(type(x))
+```
+
+
+MCQ Strings 1
+========================================================
+- Get the first character of the string txt
+```{python, echo=TRUE,eval=FALSE}
+txt = "Hello World"
+x = ?
+```
+
+MCQ Strings 1
+========================================================
+- Get the first character of the string txt
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+txt = "Hello World"
+x = txt[0]
+print(x)
+```
+
+MCQ Strings 2
+========================================================
+- Get the character from index 2 to 4 (llo)
+```{python, echo=TRUE,eval=FALSE}
+txt = "Hello World"
+x = 
+```
+
+MCQ Strings 2
+========================================================
+- Get the character from index 2 to 4 (llo)
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+txt = "Hello World"
+x = txt[2:5]
+print(x)
+```
+
+MCQ Strings 3
+========================================================
+- Return the string without any whitespace at the beginning
+```{python, echo=TRUE,eval=FALSE}
+txt = " Hello World"
+x = 
+```
+
+MCQ Strings 3
+========================================================
+- Return the string without any whitespace at the beginning
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+txt = " Hello World"
+print(txt)
+x = txt[1:]
+print(x)
+y = txt.strip()
+print(y)
+```
+
+MCQ Strings 4
+========================================================
+- Convert the text in upper case
+```{python, echo=TRUE,eval=FALSE}
+txt = "Hello World"
+x = 
+```
+
+MCQ Strings 4
+========================================================
+- Convert the text in upper case
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+txt = "Hello World"
+x = txt.upper()
+print(x)
+```
+
+MCQ Strings 5
+========================================================
+- Convert the text in lower case
+```{python, echo=TRUE,eval=FALSE}
+txt = "Hello World"
+x = 
+```
+
+MCQ Strings 5
+========================================================
+- Convert the text in lower case
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+txt = "Hello World"
+x = txt.lower()
+print(x)
+```
+
+MCQ Strings 6
+========================================================
+- Replace H by J
+```{python, echo=TRUE,eval=FALSE}
+txt = "Hello World"
+x = 
+```
+
+MCQ Strings 6
+========================================================
+- Replace H by J
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+txt = "Hello World"
+x = txt.replace("H", "J")
+print(x)
+```
+
+
+MCQ operator 1
+========================================================
+- Use the correct membership operator to check if "cat" is present in the animal object.
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog"]
+if "cat" 
+```
+
+MCQ operator 1
+========================================================
+- Use the correct membership operator to check if "cat" is present in the animal object.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog"]
+if "cat" in animal:
+  print("Yes, cat is a animal!")
+```
+
+MCQ operator 2
+========================================================
+- Use the correct comparison operator to check if 5 is not equal to 1.
+```{python, echo=TRUE,eval=FALSE}
+if 
+```
+
+MCQ operator 2
+========================================================
+- Use the correct comparison operator to check if 5 is not equal to 1.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+if 5 != 10:
+  print("5 and 10 is not equal")
+```
+
+MCQ operator 3
+========================================================
+- Use the correct logical operator to check if at least one of two statements is True.
+```{python, echo=TRUE,eval=FALSE}
+if 5 == 10 ?? 4 == 4:
+  print("At least one of the statements is true")
+```
+
+MCQ operator 3
+========================================================
+- Use the correct logical operator to check if at least one of two statements is True.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+if 5 == 10 or 4 == 4:
+  print("At least one of the statements is true")
+  
+if (5 == 10) | (4 == 4):
+  print("At least one of the statements is true")
+```
+
+
+MCQ List 1
+========================================================
+- Print the third item in the fruits list.
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog","horse"]
+print()
+```
+
+MCQ List 1
+========================================================
+- Use the correct logical operator to check if at least one of two statements is True.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog","horse"]
+print(animal[2])
+```
+
+MCQ List 2
+========================================================
+- Change the value from "cat" to "lion", in the fruits list.
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog","horse"]
+```
+
+MCQ List 2
+========================================================
+- Change the value from "cat" to "lion", in the fruits list.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog","horse"]
+animal[0] = "lion"
+print(animal)
+```
+
+MCQ List 3
+========================================================
+- Add cow to the animal list
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog","horse"]
+```
+
+MCQ List 3
+========================================================
+- Add cow to the animal list
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog","horse"]
+animal.append("cow")
+print(animal)
+```
+
+MCQ List 4
+========================================================
+- remove dog to the animal list
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog","horse"]
+```
+
+MCQ List 4
+========================================================
+- remove dog to the animal list
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog","horse"]
+animal.remove("dog")
+print(animal)
+```
+
+MCQ List 5
+========================================================
+- Use negative indexing to print the last item in the list. 
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog","horse"]
+```
+
+MCQ List 5
+========================================================
+- Use negative indexing to print the last item in the list. 
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog","horse"]
+print(animal[-1])
+```
+
+MCQ List 6
+========================================================
+- Use the correct syntax to print the number of items in the list. 
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog","horse"]
+```
+
+MCQ List 6
+========================================================
+- Use the correct syntax to print the number of items in the list. 
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog","horse"]
+print(len(animal))
+```
+
+MCQ List 7
+========================================================
+-  Use a range of indexes to print the third, fourth, and fifth item in the list. 
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog","horse"]
+```
+
+MCQ List 7
+========================================================
+-  Use a range of indexes to print the third, fourth, and fifth item in the list.  
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog","horse"]
+print(animal[2:5])
+```
+
+
+MCQ Dictionaries 1
+========================================================
+-  Use the get method to print the value of the "model" key of the car dictionary.
+```{python, echo=TRUE,eval=FALSE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print()
+```
+
+MCQ Dictionaries 1
+========================================================
+-  Use the get method to print the value of the "model" key of the car dictionary.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(car.get("model"))
+```
+
+MCQ Dictionaries 2
+========================================================
+Change the "year" value from 1964 to 2023.
+```{python, echo=TRUE,eval=FALSE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+```
+
+MCQ Dictionaries 2
+========================================================
+Change the "year" value from 1964 to 2023.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car["year"]=2023
+print(car)
+```
+
+MCQ Dictionaries 3
+========================================================
+Add the key/value pair "color" : "red" to the car dictionary.
+```{python, echo=TRUE,eval=FALSE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+```
+
+MCQ Dictionaries 3
+========================================================
+Add the key/value pair "color" : "red" to the car dictionary.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car["color"]="red"
+print(car)
+```
+
+MCQ Dictionaries 4
+========================================================
+Use the pop method to remove "model" from the car dictionary.
+```{python, echo=TRUE,eval=FALSE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+```
+
+MCQ Dictionaries 4
+========================================================
+Use the pop method to remove "model" from the car dictionary.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.pop("model")
+print(car)
+```
+
+MCQ Dictionaries 5
+========================================================
+Use the clear method to empty the car dictionary.
+```{python, echo=TRUE,eval=FALSE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+```
+
+MCQ Dictionaries 5
+========================================================
+Use the clear method to empty the car dictionary.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.clear()
+print(car)
+```
+
+
+MCQ If 1
+========================================================
+- Print "Yes" if a is equal to b, otherwise print "No".
+```{python, echo=TRUE,eval=FALSE}
+a = 50
+b = 10
+```
+
+MCQ If 1
+========================================================
+- Print "Yes" if a is equal to b, otherwise print "No".
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+a = 50
+b = 10
+if a == b:
+  print("Yes")
+else:
+  print("No")
+```
+
+MCQ If 3
+========================================================
+Print "Hello" if a is equal to b, and c is equal to d.
+```{python, echo=TRUE,eval=FALSE}
+a = 50
+b = 10
+c = 30
+d = 30
+```
+
+MCQ If 3
+========================================================
+Print "Hello" if a is equal to b, and c is equal to d.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+a = 50
+b = 10
+c = 30
+d = 30
+if a == b and c==d:
+  print("Hello")
+```
+
+
+MCQ For 1
+========================================================
+Loop through the items in the animal list.
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog","horse"]
+```
+
+MCQ For 1
+========================================================
+Loop through the items in the animal list.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog","horse"]
+for idx in animal:
+  print(idx)
+```
+
+MCQ For 2
+========================================================
+In the loop, when the item value is "dog", jump directly to the next item.
+```{python, echo=TRUE,eval=FALSE}
+animal = ["cat", "dog","horse"]
+for idx in animal:
+  if idx == "dog":
+    ?????
+  print(idx)
+```
+
+MCQ For 2
+========================================================
+In the loop, when the item value is "dog", jump directly to the next item.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+animal = ["cat", "dog","horse"]
+for idx in animal:
+  if idx == "dog":
+    continue
+  print(idx)
+```
+
+MCQ For 3
+========================================================
+Use the range function to loop through a code set 5 times.
+```{python, echo=TRUE,eval=FALSE}
+for x in ???? :
+  print(x)
+```
+
+MCQ For 3
+========================================================
+Use the range function to loop through a code set 5 times.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+for x in range(5) :
+  print(x)
+```
+
+
+MCQ While 1
+========================================================
+- Print i as long as i is less than 5.
+```{python, echo=TRUE,eval=FALSE}
+i = 1
+
+```
+
+MCQ While 1
+========================================================
+- Print i as long as i is less than 5.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+i = 1
+while i < 5:
+  print(i)
+  i += 1
+```
+
+MCQ While 2
+========================================================
+- Exit the loop if i = 3
+```{python, echo=TRUE,eval=FALSE}
+i = 1
+while i < 5:
+  i += 1
+  if i == 3:
+    ?????
+  print(i)
+```
+
+MCQ While 2
+========================================================
+- Exit the loop if i = 3
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+i = 1
+while i < 5:
+  i += 1
+  if i == 3:
+    break
+  print(i)
+```
+
+
+MCQ Function 1
+========================================================
+- Create a function named my_function.
+```{python, echo=TRUE,eval=FALSE}
+??????:
+  print("Hello from a function")
+```
+
+MCQ Function 1
+========================================================
+- Create a function named my_function.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def my_function():
+  print("Hello from a function")
+```
+
+MCQ Function 2
+========================================================
+- Let the function return the x parameter + 5.
+```{python, echo=TRUE,eval=FALSE}
+var = 5
+
+def my_function(x):
+  ???????
+  
+my_function(var)
+```
+
+MCQ Function 2
+========================================================
+- Let the function return the x parameter + 5.
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+var = 5
+
+def my_function(x):
+  return x+5
+
+my_function(var)
+```
+
+MCQ Function 3
+========================================================
+- If you do not know the number of arguments that will be passed into your function, there is a prefix you can add in the function definition, which prefix?
+```{python, echo=TRUE,eval=FALSE}
+def my_function(???kids):
+  print("The youngest child is " + kids[2])
+```
+
+MCQ Function 3
+========================================================
+- If you do not know the number of arguments that will be passed into your function, there is a prefix you can add in the function definition, which prefix?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def my_function(*kids):
+  print("The youngest child is " + kids[2])
+```
+
+MCQ Function 4
+========================================================
+- If you do not know the number of keyword arguments that will be passed into your function, there is a prefix you can add in the function definition, which prefix?
+```{python, echo=TRUE,eval=FALSE}
+def my_function(???kids):
+  print("The youngest child is " + kids[2])
+```
+
+MCQ Function 4
+========================================================
+- If you do not know the number of keyword arguments that will be passed into your function, there is a prefix you can add in the function definition, which prefix?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def my_function(**kid):
+  print("His last name is " + kid["lname"])
+```
+
+
+MCQ Module 1
+========================================================
+- What is the correct syntax to import a module named "mymodule"?
+```{python, echo=TRUE,eval=FALSE}
+ ??? my_module
+```
+
+MCQ Module 1
+========================================================
+- What is the correct syntax to import a module named "mymodule"?
+```{python, echo=TRUE,eval=FALSE}
+import my_module
+```
+
+MCQ Module 2
+========================================================
+- If you want to refer to a module by using a different name, you can create an alias.
+
+What is the correct syntax for creating an alias for a module?
+```{python, echo=TRUE,eval=FALSE}
+import mymodule ?? mx
+```
+
+MCQ Module 2
+========================================================
+- If you want to refer to a module by using a different name, you can create an alias.
+
+What is the correct syntax for creating an alias for a module?
+```{python, echo=TRUE,eval=FALSE}
+import mymodule as mx
+```
+
+MCQ Module 3
+========================================================
+- What is the correct syntax of printing all variables and function names of the "random" module?
+```{python, echo=TRUE,eval=FALSE}
+import random
+print(????)
+```
+
+MCQ Module 3
+========================================================
+- What is the correct syntax of printing all variables and function names of the "mymodule" module?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+import random
+print(dir(random))
+```
+
+MCQ Module 4
+========================================================
+- What is the correct syntax of importing only the randint function of the "random" module?
+```{python, echo=TRUE,eval=FALSE}
+??? random ??? randint
+```
+
+MCQ Module 4
+========================================================
+- What is the correct syntax of importing only the randint function of the "random" module?
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+from random import randint
+```
