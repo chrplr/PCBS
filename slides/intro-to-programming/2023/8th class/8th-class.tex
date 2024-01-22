@@ -1,0 +1,1510 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  8pt,
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{CambridgeUS}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\let\verbatim\undefined
+\let\verbatimend\undefined
+\usepackage{listings}
+\lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Intro to programming 8},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Intro to programming 8}
+\author{Henri Vandendriessche\\
+\href{mailto:henri.vandendriessche@ens.fr}{\nolinkurl{henri.vandendriessche@ens.fr}}}
+\date{2023-11-21}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}[fragile]{Terminal cheat sheet reminder}
+\protect\hypertarget{terminal-cheat-sheet-reminder}{}
+\begin{itemize}
+\item
+  Bash commands to navigate directories
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Print Working Directory. Print the path of the current directory
+  \end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{pwd}
+\end{Highlighting}
+\end{Shaded}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    List all files of the current directory
+  \end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ls}\NormalTok{ folder}
+\end{Highlighting}
+\end{Shaded}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Moving into folder1 and subfolder2 at once.
+  \end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd}\NormalTok{ folder1/subfolder2}
+\end{Highlighting}
+\end{Shaded}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Moving out of a directory
+  \end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd}\NormalTok{ ..}
+\end{Highlighting}
+\end{Shaded}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Going back and forth in the directory tree
+  \end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd}\NormalTok{ ../../folder1/subfolder1}
+\end{Highlighting}
+\end{Shaded}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Going back to the root directory
+  \end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{cd}\NormalTok{ \textasciitilde{}}
+\end{Highlighting}
+\end{Shaded}
+\item
+  ``\textbf{Tab}'' to use the auto-completion
+\item
+  \textbf{Ctrl + C} to stop a program execution
+\item
+  ``\textbf{Upper arrow}'' to see last commands
+\item
+  Many more bash commands to use\ldots{}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Where are we now}
+\protect\hypertarget{where-are-we-now}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  As programs become increasingly complex, we find ourselves dealing
+  with more intricate situations.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Consequently, more complex bugs may arise.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Remember, your computer only executes what you instruct it to do; it
+  can't read your mind and perform your intended actions.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Everyone creates bugs, and everyone has to correct them.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Fortunately, Python comes with tools to assist you in overcoming these
+  challenges.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Today}
+\protect\hypertarget{today}{}
+\begin{itemize}
+\item
+  Debugging level 0
+\item
+  Assertion
+\item
+  Logging
+\item
+  pdb module
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Disclaimer}
+\protect\hypertarget{disclaimer}{}
+\begin{itemize}
+\item
+  This class is highly based on \textbf{Automate the Boring Stuff with
+  Python} chapter 11\ldots{}
+\item
+  \url{https://automatetheboringstuff.com/2e/chapter11/}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The easiest debugging rule}
+\protect\hypertarget{the-easiest-debugging-rule}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  When your program does what you instructed (what you wrote) but not
+  what you intended\ldots{}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  The simplest and most straightforward way to identify issues in your
+  program is to check your variables at key points:
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    After performing an operation on your variable.
+  \item
+    At the end of a loop.
+  \item
+    At the end of a function, especially if there is a return statement.
+  \item
+    When importing data from a file.
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  How can you best check your variables and their types?
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    print the variable: \textbf{print(your\_variable)}
+  \item
+    print the type of the variable: \textbf{print(type(your\_variable))}
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  While \textbf{print()} can be useful for simple checks, it's advisable
+  not to debug your entire script with print().
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Consider it as the initial level (level 0) of debugging.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Errors and exceptions}
+\protect\hypertarget{errors-and-exceptions}{}
+\begin{itemize}
+\item
+  Until now we haven't spent much time looking at the error messages.
+\item
+  There are (at least) two distinguishable kinds of errors: syntax
+  errors and exceptions.
+\item
+  Example of syntax errors:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{test }\OperatorTok{=} \VariableTok{True}
+\ControlFlowTok{if}\NormalTok{ test }\OperatorTok{==} \VariableTok{False}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Failed"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## invalid syntax (<string>, line 2)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Exceptions}
+\protect\hypertarget{exceptions}{}
+\begin{itemize}
+\item
+  Even if a statement or expression is syntactically correct, it may
+  cause an error when an attempt is made to execute it.
+\item
+  Errors detected during execution are called logical errors or
+  exceptions. They are not unconditionally fatal but python raises an
+  exception whenever it tries to run an invalid code.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{number }\OperatorTok{=} \DecValTok{1000}
+
+\NormalTok{divided\_by\_0 }\OperatorTok{=}\NormalTok{ number}\OperatorTok{/}\DecValTok{0} 
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## division by zero
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Handling exceptions}
+\protect\hypertarget{handling-exceptions}{}
+\begin{itemize}
+\item
+  You have plenty of categories of exceptions:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    IndexError: when the index doesn't correspond to any value in a list
+    for example.
+  \item
+    AttributeError: When attribute assignment is failed.
+  \item
+    IndentationError: When the indentation of the code is wrong.
+  \item
+    ImportError: When the imported module is not found
+  \item
+    NameError : undeclared variable
+  \item
+    TypeError: When operation are applied to a wrong type of varialble.
+  \item
+    \ldots{}
+  \end{itemize}
+\item
+  Exceptions in itself doesn't do much. It's a type of data that
+  manipulate python errors.
+\item
+  To raise or handle exceptions there are several options:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The \textbf{raise} statement.
+  \item
+    The \textbf{assert} statement.
+  \item
+    The \textbf{try} and \textbf{except} statement.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Raising Exceptions 1/2}
+\protect\hypertarget{raising-exceptions-12}{}
+\begin{itemize}
+\item
+  Python raises exceptions every time it attempts to execute invalid
+  code.
+\item
+  Python does it automatically with a certain precision, but you can
+  create you own exception
+\item
+  Exceptions are raised using the following:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The \textbf{raise} keyword
+  \item
+    The \textbf{Exception()} function
+  \item
+    A descriptive sentence that helps you understand the problem in the
+    Exception function.
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{raise} \PreprocessorTok{Exception}\NormalTok{(}\StringTok{\textquotesingle{}Ah Shit, Here We Go Again: another day another bug\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Ah Shit, Here We Go Again: another day another bug
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Raising Exceptions 2/2}
+\protect\hypertarget{raising-exceptions-22}{}
+\begin{itemize}
+\item
+  When / how to raise exception ?
+\item
+  Exception can be passed as argument or returned at the end of a
+  function
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ doBullshit():}
+  \ControlFlowTok{raise} \PreprocessorTok{Exception}\NormalTok{(}\StringTok{\textquotesingle{}I did bullshit\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{doBullshit()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## I did bullshit
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Assertions 1/3}
+\protect\hypertarget{assertions-13}{}
+\begin{itemize}
+\item
+  Assertion is a sanity check to ensure that the data has the expected
+  format.
+\item
+  If the sanity check fails, then an \textbf{AssertionError} exception
+  is raised.
+\item
+  Assertions are raised in the following way:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Using the \textbf{assert} keyword
+  \item
+    Including a condition.
+  \item
+    Separating the condition with a comma.
+  \item
+    Providing a string to display when the check fails.
+  \end{itemize}
+\item
+  Example 1:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{olympicGamesYears }\OperatorTok{=}\NormalTok{[}\DecValTok{2021}\NormalTok{, }\DecValTok{2012}\NormalTok{, }\DecValTok{2008}\NormalTok{, }\DecValTok{2024}\NormalTok{, }\DecValTok{2016}\NormalTok{, }\DecValTok{2000}\NormalTok{, }\DecValTok{2004}\NormalTok{]}
+
+\ControlFlowTok{assert}\NormalTok{ olympicGamesYears[}\DecValTok{0}\NormalTok{] }\OperatorTok{\textless{}}\NormalTok{ olympicGamesYears[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{] , }\StringTok{"Years doesn\textquotesingle{}t seem sorted"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Years doesn't seem sorted
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Assertions 2/3}
+\protect\hypertarget{assertions-23}{}
+\begin{itemize}
+\item
+  Assertion is a sanity check to ensure that the data has the expected
+  format.
+\item
+  If the sanity check fails, then an \textbf{AssertionError} exception
+  is raised.
+\item
+  Assertions are raised in the following way:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Using the \textbf{assert} keyword
+  \item
+    Including a condition.
+  \item
+    Separating the condition with a comma.
+  \item
+    Providing a string to display when the check fails.
+  \end{itemize}
+\item
+  Example 2:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{olympicGamesYears }\OperatorTok{=}\NormalTok{[}\DecValTok{2004}\NormalTok{, }\DecValTok{2012}\NormalTok{, }\DecValTok{2008}\NormalTok{, }\DecValTok{2024}\NormalTok{, }\DecValTok{2016}\NormalTok{, }\DecValTok{2000}\NormalTok{, }\DecValTok{2021}\NormalTok{]}
+
+\NormalTok{olympicGamesYears.sort()}
+
+\ControlFlowTok{assert}\NormalTok{ olympicGamesYears[}\DecValTok{0}\NormalTok{] }\OperatorTok{\textless{}}\NormalTok{ olympicGamesYears[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{] , }\StringTok{"Years doesn\textquotesingle{}t seem sorted"}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}{Assertions 3/3}
+\protect\hypertarget{assertions-33}{}
+\begin{itemize}
+\tightlist
+\item
+  Assertion are very useful:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    At key points to check that your data has the right format.
+  \item
+    If well designed, they provide you with the location and the exact
+    reason why it failed.
+  \item
+    To save time in debugging.
+  \end{itemize}
+\item
+  However, you need to first have a very concrete idea of what to expect
+  and where in your program to set up some assertions.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Try and except statements 1/5}
+\protect\hypertarget{try-and-except-statements-15}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  If you encounter an error in your script, the execution is halted.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\item
+  Example: What's wrong in the following script:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ isDivided(divisor):}
+    \ControlFlowTok{return} \DecValTok{42} \OperatorTok{/}\NormalTok{ divisor}
+
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{2}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{12}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{0}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{3}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Try and except statements 2/5}
+\protect\hypertarget{try-and-except-statements-25}{}
+\begin{itemize}
+\item
+  If you encounter an error in your script, the execution is halted.
+\item
+  Example: What's wrong in the following script:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ isDivided(divisor):}
+    \ControlFlowTok{return} \DecValTok{42} \OperatorTok{/}\NormalTok{ divisor}
+
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 21.0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{12}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{0}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## division by zero
+\end{verbatim}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Try and except statements 3/5}
+\protect\hypertarget{try-and-except-statements-35}{}
+\begin{itemize}
+\tightlist
+\item
+  But you can still have your way around this error:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{try : }
+  \item
+    \textbf{except \ldots{} : }
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ isDivided(divisor):}
+    \ControlFlowTok{try}\NormalTok{:}
+      \ControlFlowTok{return} \DecValTok{42} \OperatorTok{/}\NormalTok{ divisor}
+    \ControlFlowTok{except} \PreprocessorTok{ZeroDivisionError}\NormalTok{:}
+      \BuiltInTok{print}\NormalTok{(}\StringTok{"What have I done again..."}\NormalTok{)}
+
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 21.0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{12}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{0}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## What have I done again...
+## None
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{3}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 14.0
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Try and except statements 4/5}
+\protect\hypertarget{try-and-except-statements-45}{}
+\begin{itemize}[<+->]
+\item
+  You can also include the call to your function in the try block.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ isDivided(divisor):}
+  \ControlFlowTok{return} \DecValTok{42} \OperatorTok{/}\NormalTok{ divisor}
+
+\ControlFlowTok{try}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{2}\NormalTok{))}
+  \BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{12}\NormalTok{))}
+  \BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{0}\NormalTok{))}
+  \BuiltInTok{print}\NormalTok{(isDivided(}\DecValTok{3}\NormalTok{))}
+
+\ControlFlowTok{except} \PreprocessorTok{ZeroDivisionError}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"What have I done again..."}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 21.0
+## 3.5
+## What have I done again...
+\end{verbatim}
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Note that print(isDivided(3)) is not executed. Once the execution
+  jumps to the except statement, it does not go back to the try clause.
+  Instead, it just continues moving down the program as normal.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Try and except statements 5/5}
+\protect\hypertarget{try-and-except-statements-55}{}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{try except} is useful:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    To perform checks on your program flow.
+  \item
+    To obtain a (hopefully) clearer or more adapted error message than
+    what Python can provide.
+  \end{itemize}
+\item
+  \textbf{try except} is not useful:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    To avoid errors without resolving them.
+  \item
+    To achieve a running program without a crash.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Getting the Traceback as a String 1/2}
+\protect\hypertarget{getting-the-traceback-as-a-string-12}{}
+\begin{itemize}
+\item
+  Gathering information about your error.
+\item
+  When your program crashes, you always receive an error with
+  information such as:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The line of the error / the different lines if your program uses
+    several files.
+  \item
+    The error message
+  \item
+    The function / the sequence of functions involved (i,e, the call
+    stack)
+  \end{itemize}
+\item
+  All of this is referred to as the \textbf{traceback}
+\item
+  Example:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ callErrorTest():}
+\NormalTok{  errorTest()}
+
+\KeywordTok{def}\NormalTok{ errorTest():}
+  \ControlFlowTok{raise} \PreprocessorTok{Exception}\NormalTok{(}\StringTok{\textquotesingle{}FATAL ERROR\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{callErrorTest()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## FATAL ERROR
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  That information is here to help you locate and understand you error.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Getting the Traceback as a String 2/2}
+\protect\hypertarget{getting-the-traceback-as-a-string-22}{}
+\begin{itemize}
+\item
+  Instead of just displaying it on your terminal, you can access your
+  traceback using: \textbf{traceback.format\_exc()}
+\item
+  This way, you can obtain your traceback information as a string.
+\item
+  You'll need the \textbf{traceback} module to access the function.
+\item
+  It can be useful if you want to keep track of an error and write the
+  information to a file. This allows you to keep it for later when
+  you'll be mentally prepared to debug your code.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ traceback}
+
+\ControlFlowTok{try}\NormalTok{:}
+  \ControlFlowTok{raise} \PreprocessorTok{Exception}\NormalTok{(}\StringTok{\textquotesingle{}FATAL ERROR\textquotesingle{}}\NormalTok{)}
+
+\ControlFlowTok{except}\NormalTok{:}
+\NormalTok{  errorFile }\OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}errorInfo.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}w\textquotesingle{}}\NormalTok{)}
+\NormalTok{  errorFile.write(traceback.format\_exc())}
+\NormalTok{  errorFile.close()}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Don}\CharTok{\textbackslash{}\textquotesingle{}}\StringTok{t have time now to debug but all info are in errorInfo.txt\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 97
+## Don't have time now to debug but all info are in errorInfo.txt
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Logging 1/7}
+\protect\hypertarget{logging-17}{}
+\begin{itemize}
+\item
+  Logging involves writing down information or variable content from
+  your script to keep track of the execution of your program.
+\item
+  \textbf{print()} serves as a form of logging.
+\item
+  Why is logging better than print :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    You can access better information, such as timings, for example.
+  \item
+    It can be systematic and organized.
+  \end{itemize}
+\item
+  Of course, Python has a logging module, and its name is
+  \textbf{logging}: \url{https://docs.python.org/3/library/logging.html}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Logging 2/7}
+\protect\hypertarget{logging-27}{}
+\begin{itemize}
+\tightlist
+\item
+  Example:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ factorial(n):}
+\NormalTok{    total }\OperatorTok{=} \DecValTok{1}
+    \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(n }\OperatorTok{+} \DecValTok{1}\NormalTok{):}
+\NormalTok{        total }\OperatorTok{*=}\NormalTok{ i}
+    \ControlFlowTok{return}\NormalTok{ total}
+
+\BuiltInTok{print}\NormalTok{(factorial(}\DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Logging 2/7}
+\protect\hypertarget{logging-27-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Example:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ factorial(n):}
+\NormalTok{    total }\OperatorTok{=} \DecValTok{1}
+    \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(n }\OperatorTok{+} \DecValTok{1}\NormalTok{):}
+\NormalTok{        total }\OperatorTok{*=}\NormalTok{ i}
+    \ControlFlowTok{return}\NormalTok{ total}
+
+\BuiltInTok{print}\NormalTok{(factorial(}\DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 0
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  What will be the output ?
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Logging 3/7}
+\protect\hypertarget{logging-37}{}
+\begin{itemize}
+\tightlist
+\item
+  Example with logging:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ logging}
+
+\NormalTok{logging.basicConfig(level}\OperatorTok{=}\NormalTok{logging.DEBUG, }\BuiltInTok{format}\OperatorTok{=}\StringTok{\textquotesingle{}}\SpecialCharTok{\%(asctime)s}\StringTok{ {-}  }\SpecialCharTok{\%(levelname)s}\StringTok{ {-}  }\SpecialCharTok{\%(message)s}\StringTok{\textquotesingle{}}\NormalTok{)}
+\NormalTok{logging.debug(}\StringTok{\textquotesingle{}Start of program\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2023-12-05 13:52:22,766 -  DEBUG -  Start of program
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ factorial(n):}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}Start of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+\NormalTok{    total }\OperatorTok{=} \DecValTok{1}
+    \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(n }\OperatorTok{+} \DecValTok{1}\NormalTok{):}
+\NormalTok{        total }\OperatorTok{*=}\NormalTok{ i}
+\NormalTok{        logging.debug(}\StringTok{\textquotesingle{}i is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(i) }\OperatorTok{+} \StringTok{\textquotesingle{}, total is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(total))}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}End of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+    \ControlFlowTok{return}\NormalTok{ total}
+
+\NormalTok{logging.debug(}\StringTok{\textquotesingle{}Call of the function\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2023-12-05 13:52:22,773 -  DEBUG -  Call of the function
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(factorial(}\DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 0
+## 
+## 2023-12-05 13:52:22,776 -  DEBUG -  Start of factorial(5)
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 0, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 1, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 2, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 3, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 4, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  i is 5, total is 0
+## 2023-12-05 13:52:22,776 -  DEBUG -  End of factorial(5)
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{logging.debug(}\StringTok{\textquotesingle{}End of program\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2023-12-05 13:52:22,779 -  DEBUG -  End of program
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Logging 4/7}
+\protect\hypertarget{logging-47}{}
+\begin{itemize}
+\tightlist
+\item
+  Example with logging:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ logging}
+\NormalTok{logging.basicConfig(level}\OperatorTok{=}\NormalTok{logging.DEBUG, }\BuiltInTok{format}\OperatorTok{=}\StringTok{\textquotesingle{}}\SpecialCharTok{\%(asctime)s}\StringTok{ {-}  }\SpecialCharTok{\%(levelname)s}\StringTok{ {-}  }\SpecialCharTok{\%(message)s}\StringTok{\textquotesingle{}}\NormalTok{)}
+\NormalTok{logging.debug(}\StringTok{\textquotesingle{}Start of program\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2023-12-05 13:52:22,809 -  DEBUG -  Start of program
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ factorial(n):}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}Start of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+\NormalTok{    total }\OperatorTok{=} \DecValTok{1}
+    \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{,n }\OperatorTok{+} \DecValTok{1}\NormalTok{):}
+\NormalTok{        total }\OperatorTok{*=}\NormalTok{ i}
+\NormalTok{        logging.debug(}\StringTok{\textquotesingle{}i is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(i) }\OperatorTok{+} \StringTok{\textquotesingle{}, total is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(total))}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}End of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+    \ControlFlowTok{return}\NormalTok{ total}
+
+\NormalTok{logging.debug(}\StringTok{\textquotesingle{}Call of the function\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2023-12-05 13:52:22,815 -  DEBUG -  Call of the function
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(factorial(}\DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 120
+## 
+## 2023-12-05 13:52:22,818 -  DEBUG -  Start of factorial(5)
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 1, total is 1
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 2, total is 2
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 3, total is 6
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 4, total is 24
+## 2023-12-05 13:52:22,818 -  DEBUG -  i is 5, total is 120
+## 2023-12-05 13:52:22,818 -  DEBUG -  End of factorial(5)
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{logging.debug(}\StringTok{\textquotesingle{}End of program\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2023-12-05 13:52:22,821 -  DEBUG -  End of program
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Logging 5/7}
+\protect\hypertarget{logging-57}{}
+\begin{itemize}
+\tightlist
+\item
+  The function \textbf{logging.basicConfig(level=logging.DEBUG,
+  format=`\%(asctime)s - \%(levelname)s - \%(message)s')} can be set to
+  look at several levels:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{DEBUG} logging.debug() The lowest level. Used for small
+    details. Usually you care about these messages only when diagnosing
+    problems.
+  \item
+    \textbf{INFO} logging.info() Used to record information on general
+    events in your program or confirm that things are working at their
+    point in the program.
+  \item
+    \textbf{WARNING} logging.warning() Used to indicate a potential
+    problem that doesn't prevent the program from working but might do
+    so in the future.
+  \item
+    \textbf{ERROR} logging.error() Used to record an error that caused
+    the program to fail to do something.
+  \item
+    \textbf{CRITICAL} logging.critical() The highest level. Used to
+    indicate a fatal error that has caused or is about to cause the
+    program to stop running entirely.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Logging 6/7}
+\protect\hypertarget{logging-67}{}
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Logging can be very useful for systematically inspecting your program
+  execution.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  It takes some time to adapt to it, but it's highly practical and
+  customizable as needed.
+\end{itemize}
+
+\begin{itemize}[<+->]
+\tightlist
+\item
+  Why is it better than print ?
+
+  \begin{itemize}[<+->]
+  \tightlist
+  \item
+    The print function can serve non-debugging purposes, making it
+    challenging to differentiate between debugging print and essential
+    print statements.
+  \item
+    Logging can be easily switched off with
+    \textbf{logging.disable(logging.CRITICAL)}
+  \end{itemize}
+\end{itemize}
+
+\begin{quote}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ logging}
+\NormalTok{logging.disable(logging.CRITICAL)}
+\NormalTok{logging.basicConfig(level}\OperatorTok{=}\NormalTok{logging.DEBUG, }\BuiltInTok{format}\OperatorTok{=}\StringTok{\textquotesingle{}}\SpecialCharTok{\%(asctime)s}\StringTok{ {-} }\SpecialCharTok{\%(levelname)s}\StringTok{ {-} }\SpecialCharTok{\%(message)s}\StringTok{\textquotesingle{}}\NormalTok{)}
+\NormalTok{logging.debug(}\StringTok{\textquotesingle{}Start of program\textquotesingle{}}\NormalTok{)}
+
+\KeywordTok{def}\NormalTok{ factorial(n):}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}Start of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+\NormalTok{    total }\OperatorTok{=} \DecValTok{1}
+    \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{,n }\OperatorTok{+} \DecValTok{1}\NormalTok{):}
+\NormalTok{        total }\OperatorTok{*=}\NormalTok{ i}
+\NormalTok{        logging.debug(}\StringTok{\textquotesingle{}i is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(i) }\OperatorTok{+} \StringTok{\textquotesingle{}, total is \textquotesingle{}} \OperatorTok{+} \BuiltInTok{str}\NormalTok{(total))}
+\NormalTok{    logging.debug(}\StringTok{\textquotesingle{}End of factorial(}\SpecialCharTok{\%s}\StringTok{)\textquotesingle{}}  \OperatorTok{\%}\NormalTok{ (n))}
+    \ControlFlowTok{return}\NormalTok{ total}
+
+\NormalTok{logging.debug(}\StringTok{\textquotesingle{}Call of the function\textquotesingle{}}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(factorial(}\DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 120
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\NormalTok{logging.debug(}\StringTok{\textquotesingle{}End of program\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{quote}
+\end{frame}
+
+\begin{frame}{Logging 7/7}
+\protect\hypertarget{logging-77}{}
+\begin{itemize}
+\item
+  Logging is highly useful for debugging without interrupting the
+  execution.
+\item
+  For example, when your program doesn't crash but doesn't produce the
+  desired output.
+\item
+  Debugging can even be done post-mortem (after execution).
+\item
+  It is especially efficient when you cannot access the terminal (i.e.,
+  when your program involves visual stimuli).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Python debugger: PDB 1/4}
+\protect\hypertarget{python-debugger-pdb-14}{}
+\begin{itemize}
+\item
+  The ultimate debugging tool is the \textbf{pdb} module:
+  \url{https://docs.python.org/3/library/pdb.html}
+\item
+  You just need to \textbf{import pdb} and call
+  \textbf{pdb.set\_trace()}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ pdb}
+
+\KeywordTok{def}\NormalTok{ addition(a, b):}
+\NormalTok{    answer }\OperatorTok{=}\NormalTok{ a }\OperatorTok{*}\NormalTok{ b}
+    \ControlFlowTok{return}\NormalTok{ answer}
+
+\NormalTok{pdb.set\_trace()}
+\NormalTok{x }\OperatorTok{=} \BuiltInTok{input}\NormalTok{(}\StringTok{"Enter first number : "}\NormalTok{)}
+\NormalTok{y }\OperatorTok{=} \BuiltInTok{input}\NormalTok{(}\StringTok{"Enter second number : "}\NormalTok{)}
+\BuiltInTok{sum} \OperatorTok{=}\NormalTok{ addition(x, y)}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{sum}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\item
+  When executing your program with the module \textbf{pdb} you have a
+  screen like that
+\end{itemize}
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{~/Documents/Cours python/PCBS/slides/intro-to-programming/2023/8th class/screenPDB.png}
+\end{frame}
+
+\begin{frame}{Python debugger: PDB 2/4}
+\protect\hypertarget{python-debugger-pdb-24}{}
+\begin{itemize}
+\item
+  It is a command line tool that go sequentially at every step of the
+  program
+\item
+  There are a certain number of command to know:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{help} To display all commands
+  \item
+    \textbf{where} Display the stack trace and line number of the
+    current line
+  \item
+    \textbf{next} Execute the current line and move to the next line
+    ignoring function calls
+  \item
+    \textbf{step} Step into functions called at the current line
+  \item
+    \textbf{whatis} Check the type of variable
+  \end{itemize}
+\end{itemize}
+
+\includegraphics{~/Documents/Cours python/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_step.png}
+\end{frame}
+
+\begin{frame}{Python debugger: PDB 3/4}
+\protect\hypertarget{python-debugger-pdb-34}{}
+\begin{itemize}
+\tightlist
+\item
+  You can use as well:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{args} To get all arguments of a function
+  \item
+    \textbf{p} To get the value at a time t of a variable
+  \end{itemize}
+\item
+  You can navigate in pdb prompt using:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{c} continue execution
+  \item
+    \textbf{q} quit the debugger/execution
+  \item
+    \textbf{n} step to next line within the same function
+  \item
+    \textbf{s} step to next line in this function or a called function
+  \item
+    \textbf{u} (up)
+  \item
+    \textbf{d} (down)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Python debugger: PDB 4/4}
+\protect\hypertarget{python-debugger-pdb-44}{}
+\begin{itemize}
+\item
+  You can also set a breakpoint at a specific point in the script
+\item
+  To do that you need to write on the terminal: \textbf{break filename:
+  lineno, condition}
+\end{itemize}
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{~/Documents/Cours python/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_break.png}
+
+\begin{itemize}
+\tightlist
+\item
+  You can then use \textbf{c} to run the program until your breakpoint
+\end{itemize}
+
+\includegraphics[width=0.5\textwidth,height=\textheight]{~/Documents/Cours python/PCBS/slides/intro-to-programming/2023/8th class/screenPDB_break2.png}
+\end{frame}
+
+\begin{frame}{Exercise on logging}
+\protect\hypertarget{exercise-on-logging}{}
+\begin{itemize}
+\tightlist
+\item
+  Use my exercise correction from last week on the cameras and:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    1 log every argument/parameter sent to a function
+  \item
+    2 log every variable in a return statement
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise on pdb 1/3}
+\protect\hypertarget{exercise-on-pdb-13}{}
+\begin{itemize}
+\tightlist
+\item
+  Use my exercise correction from last week on the cameras and:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    1 execute line by line the program using pdb
+  \item
+    2 print argument(s) of all function and check their type
+  \item
+    3 set breakpoints right before every return statement of a function
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Exercise on pdb 2/3}
+\protect\hypertarget{exercise-on-pdb-23}{}
+\begin{itemize}
+\tightlist
+\item
+  Debug the following adding program:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Enter the first number to add:\textquotesingle{}}\NormalTok{)}
+\NormalTok{first }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Enter the second number to add:\textquotesingle{}}\NormalTok{)}
+\NormalTok{second }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Enter the third number to add:\textquotesingle{}}\NormalTok{)}
+\NormalTok{third }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}The sum is \textquotesingle{}} \OperatorTok{+}\NormalTok{ first }\OperatorTok{+}\NormalTok{ second }\OperatorTok{+}\NormalTok{ third)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{Exercise on pdb 3/3}
+\protect\hypertarget{exercise-on-pdb-33}{}
+\begin{itemize}
+\tightlist
+\item
+  Debug the following coin toss program:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ random}
+\NormalTok{guess }\OperatorTok{=} \StringTok{\textquotesingle{}\textquotesingle{}}
+\ControlFlowTok{while}\NormalTok{ guess }\KeywordTok{not} \KeywordTok{in}\NormalTok{ (}\StringTok{\textquotesingle{}heads\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}tails\textquotesingle{}}\NormalTok{):}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Guess the coin toss! Enter heads or tails:\textquotesingle{}}\NormalTok{)}
+\NormalTok{    guess }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+\NormalTok{toss }\OperatorTok{=}\NormalTok{ random.randint(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{) }\CommentTok{\# 0 is tails, 1 is heads}
+\ControlFlowTok{if}\NormalTok{ toss }\OperatorTok{==}\NormalTok{ guess:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}You got it!\textquotesingle{}}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Nope! Guess again!\textquotesingle{}}\NormalTok{)}
+\NormalTok{    guesss }\OperatorTok{=} \BuiltInTok{input}\NormalTok{()}
+    \ControlFlowTok{if}\NormalTok{ toss }\OperatorTok{==}\NormalTok{ guess:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}You got it!\textquotesingle{}}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{\textquotesingle{}Nope. You are really bad at this game.\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}{Exercise 1}
+\protect\hypertarget{exercise-1}{}
+\begin{itemize}
+\item
+  Write a program that asks for the first name, last name, age and date
+  of birth of a user. Then create one or several functions that perform
+  input validation
+\item
+  Check that the age is a valid number,
+\item
+  Check that the first name and last name are only letters
+\item
+  Check that the date of birth is in the valid format dd/mm/yyy and is
+  coherent with the their age
+\item
+  Otherwise, ask again the invalid data
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 2}
+\protect\hypertarget{exercise-2}{}
+\begin{itemize}
+\tightlist
+\item
+  Write a Python program to create a Caesar cipher
+  \url{https://en.wikipedia.org/wiki/Caesar_cipher}.
+\item
+  Include one function to encrypt and decrypt the text with a shift. Use
+  a positive shift for encryption and a negative shift for decryption.
+\item
+  The program should consider both uppercase and lowercase letters.
+\item
+  Hint: check the function ord(), char() and the Unicode table.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercise 3}
+\protect\hypertarget{exercise-3}{}
+\begin{itemize}
+\tightlist
+\item
+  Write a program that attempts to perform a Brute-force attack:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Using these collections of characters: first lower case letters
+    ``abcdefghijklmnopqrstuvwxyz,'' then lower case and lower case
+    letters and numbers ``abcdefghijklmnopqrstuvwxyz1234567890,'' and
+    finally lower and upper case letters, numbers and special characters
+    ``abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890,;:!?./§\%*+=``.
+  \end{itemize}
+\item
+  Ask the user a password (1 - 5 character)
+\item
+  Write a function that tries every possible combination of our set of
+  characters with all possible lengths (from 1 to 5).
+\item
+  Record and print the time to find the solution
+\item
+  Write at every step the number length you are testing and time taken
+  so far.
+\item
+  To continue, calulate the number of combination according to the
+  length of the password and the collection of character selected.
+\item
+  Hint: check itertools module
+\end{itemize}
+\end{frame}
+
+\end{document}
