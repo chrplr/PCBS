@@ -283,7 +283,7 @@ After running::
 
 the subject's responses are stored in the subfolder ``data/`` contains a file ``lexdec...xpd``
 
-You can download this :download:`xpd file <../experiments/xpy_lexical_decision/data/lexdec_v3_02_202112131227.xpd'>` as an example.
+You can download this :download:`xpd file <../experiments/xpy_lexical_decision/data/lexdec_v3_02_202112131227.xpd>` as an example.
 
 1. Use ``pandas.read_csv(..., comment='#')`` to read the responses into a pandas dataframe.
 

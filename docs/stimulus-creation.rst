@@ -14,11 +14,14 @@ To generate visual stimuli, we are going to rely on the Pygame_ module. You can 
     pygame 2.0.1 (SDL 2.0.14, Python 3.8.5)
     Hello from the pygame community. https://www.pygame.org/contribute.html
 
-If, instead, you obtain a message ending in::
 
-    ModuleNotFoundError: No module named 'pygame'
+.. warning::
+   
+    If, instead, you obtain a message ending in ``ModuleNotFoundError: No module named 'pygame'``, one reason could be that you forgot to activate the virtual environment where you installed expyriment. Try ``conda activate expyriment`` or ``pyenv activate expyriment`` (use ``conda env list`` or ``pyenv virtualenvs`` to list all available environments) 
+    
+    If this does not work, you can install pygame with ``pip install pygame``.
 
-you should check the instructions in :doc:`software-installation`.
+    For more detailed instructions, see :doc:`software-installation`.
 
 
 Displaying geometric shapes
