@@ -1,0 +1,158 @@
+h1, h2, h3, h4, h5, h6,
+p, body, header {
+    padding: 0;
+    margin: 0;
+}
+
+.slide {
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 750px;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+p.hr {
+    height: 0px;
+    font-size: 0px !important;
+    display: block;
+    border-bottom: 1px solid #fdf6e3;
+}
+header:not(:only-child) {
+    font-size: 58px;
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    margin: 0;
+    padding: 0;
+}
+header h1, header h2, header h3, header h4, header h5, header h6 {
+    display: inline;
+    font-size: 110%;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+header h2:first-child {
+    margin-top: 0;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    text-align: center;
+}
+section, .slide header:only-child h1 {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 100px;
+    display: block;
+    overflow: hidden;
+}
+section {
+    font-size: 32px;
+    position: absolute;
+    margin: 0;
+    left: 30px;
+    right: 30px;
+    top: 110px;
+    bottom: 30px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+section > * {
+    overflow: hidden;
+}
+section img.align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+section img.align-right {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+section img.align-left {
+    display: block;
+    margin-right: auto;
+    margin-left: 0;
+}
+a {
+    text-decoration: none;
+    line-height: 110%;
+}
+ul {
+    margin: 0;
+}
+pre, code, tt {
+    font-family: Consolas, 'Bitstream Vera Sans Mono', 'Lucida Console', FreeMono, Courier, monospace;
+}
+pre, .gist .gist-file .gist-data {
+    font-size: 22px;
+    max-height: 485px;
+    padding: 0 0.5em !important;
+    margin: 0;
+    overflow: auto;
+}
+li {
+    padding: 10px 0;
+}
+li pre {
+    margin: 0;
+}
+.slide header:only-child h1 {
+    line-height: 180%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    height: 750px;
+    width: 1000px;
+    font-size: 68px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+aside {
+    display: none;
+}
+aside.source {
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+}
+aside.page_number {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    text-indent: 10px;
+}
+.slide p.notes {
+    font-size: 90%;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+.center {
+    align-self: center;
+    display: inline-block;
+}
+.large {
+    font-size: 120%;
+}
+.huge {
+    font-size: 150%;
+}
+.qr svg {
+    background: white;
+    max-height: 100%;
+}
+.qr {
+    text-align: center;
+}
