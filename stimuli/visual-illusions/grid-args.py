@@ -10,16 +10,16 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
 
-if len(sys.argv) < 4:
+if len(sys.argv) == 4:
     print("Usage: " + sys.argv[0] + " nsquares  sizeofsquare  margin")
-    print("nsquares is the number of squares per columns and row")
-    print("sizeofsqaure is the length of the side of the squares in pixels")
-    print("margin is the space between squares in pixels")
+    print("'nsquares' is the number of squares per columns and row")
+    print("'sizeofsquare' is the length of the side of the squares in pixels")
+    print("'margin' is the space between squares in pixels")
     sys.exit()
-else:
-    n = int(sys.argv[1])
-    size = int(sys.argv[2])
-    margin = int(sys.argv[3])
+
+n = int(sys.argv[1])
+size = int(sys.argv[2])
+margin = int(sys.argv[3])
 
 n_rows, n_cols = n, n  # number of sqaures per row and column
 

@@ -18,17 +18,21 @@ screen.fill(BLACK)
 def ilm(direction):
     assert direction in ['left', 'right']
 
-    width, height = 40, 40  # size of the square
-    top = H // 2 - 100      
-    left = W // 2 - width * 2  # position of (left side of) the rectangle
+    width, height = 120, 40  # size of the rectangle
+    # Note: the square has size height * height
 
-    rectangle = pygame.Rect(left, top, width * 4, height)
+    top = H // 2 - 100      
+    left = W // 2 - width // 2   # position of (left side of) the rectangle
+
+    rectangle = pygame.Rect(left, top, width, height)
 
     if direction == 'right':
-        square = pygame.Rect(left, top, width, height)
-    else:
-        square = pygame.Rect(left + 3 * width, top, width, height)
+        xsquare_coord = left
+    else:  # directon must be left 
+        xsquare_coord = left + width - height
 
+    square = pygame.Rect(xsquare_coord, top, height, height)
+    
     # preparation phase
     screen.fill(BLACK)
     pygame.draw.circle(screen, WHITE, (W // 2, H // 2), 5) # display a fixation point
