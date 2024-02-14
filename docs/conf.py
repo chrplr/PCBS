@@ -13,22 +13,16 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
-sys.path.insert(0, os.path.abspath('../src'))
-sys.path.insert(0, os.path.abspath('../src/bbtkv2'))
 sys.path.insert(0, os.path.abspath('../docs'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'bbtkv2'
+project = 'Programming for Cognitive and Brain Sciences'
 copyright = '2022, Christophe Pallier'
 author = 'Christophe Pallier'
 
-# The full version, including alpha/beta/rc tags
-# from bbtkv2 import __version__
-# version = __version__
-# release = version
-release = '0.0.9'
+release = '0.29'
 
 
 # -- General configuration ---------------------------------------------------
