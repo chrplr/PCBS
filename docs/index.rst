@@ -8,7 +8,8 @@ Git repository on github (contains slides, solutions to exercices, and more)
   https://github.com/chrplr/PCBS
 
 Discord (discussion forum)
-  https://discord.gg/9hKDQmRu
+  https://discord.gg/WEQWWmqZ
+
   
 Self-evaluation quizz (do you need to attend PROG101?): 
   https://forms.gle/iq7CN41DZMA6XJC59
