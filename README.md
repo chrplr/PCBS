@@ -22,7 +22,7 @@ of real-time experiments, simulations...).
 - [on-line html](https://pcbs.readthedocs.io/en/latest/)
 
 **Discord server**:
-  [https://discord.gg/9hKDQmRu](https://discord.gg/9hKDQmRu)
+  [https://discord.gg/9hKDQmRu](https://discord.gg/WEQWWmqZ)
 
 **Quiz**
 
