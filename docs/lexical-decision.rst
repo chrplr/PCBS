@@ -179,6 +179,24 @@ Check a solution :download:`analyze_RT.py <../experiments/xpy_lexical_decision/a
 
 
 
+Auditory Lexical Decision
+-------------------------
+
+Transform ``lexdec_v1.py`` into an auditory lexical decision script using the sound files 
+from the   `lexical decision folder <../experiments/xpy_lexical_decision/>`:: 
+
+    bonjour.wav
+    chien.wav
+    président.wav
+    clapour.wav
+    lopadol.wav
+    mirance.wav
+
+
+Solution at :download:`lexdec_audio.py <../experiments/xpy_lexical_decision/lexdec_audio.py>`
+
+
+
 Finally
 -------
 
