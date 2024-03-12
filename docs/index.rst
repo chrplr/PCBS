@@ -10,8 +10,7 @@ Git repository on github (contains slides, solutions to exercices, and more)
 Discord (discussion forum)
   https://discord.gg/WEQWWmqZ
 
-  
-Self-evaluation quizz (do you need to attend PROG101?): 
+Self-evaluation quizz (do you need to attend PROG101?):
   https://forms.gle/iq7CN41DZMA6XJC59
 
 .. toctree::
@@ -34,8 +33,9 @@ Self-evaluation quizz (do you need to attend PROG101?):
    lexical-decision
    data-analyses
    web-based-experiments
+   html-visual
    regular_expressions
-   simulations          
+   simulations
    hopfield
    web-scraping
    tools-for-reproducible-science
@@ -47,5 +47,3 @@ Self-evaluation quizz (do you need to attend PROG101?):
    cogmaster-lectures
    projects
    resources
-   
-
