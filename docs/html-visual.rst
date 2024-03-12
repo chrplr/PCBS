@@ -1,5 +1,8 @@
+Using HTML for webpages
+=======================
+
 HTML Basics
-===========
+-----------
 
 Browser display (including with jsPsych) relies on HTML, most often
 HTML5. Let us see how it works.
@@ -12,7 +15,7 @@ HTML5. Let us see how it works.
    have.
 
 HTML document structure overview
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 An HTML file can be as simple as this: open your notepad, copy-paste the
 following lines, and save the file as ``test.html`` (or whatever name
@@ -68,7 +71,7 @@ Our HTML file contains: - A declaration that we are using HTML5;
    tag, with the slash ``/`` at the end (e.g. line breaks ``<br/>``).
 
 Setting up text and title
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 So far, our document is empty: it does only display a blank page and the
 title is basically the files path. Can you change the title to
@@ -105,16 +108,16 @@ specify to your computer that you want to use utf-8 encoding, inserting
 ``<meta charset="utf-8">`` in the head of your file.
 
 Simple shapes
-=============
+-------------
 
 Let us now create more interesting pages than text alone! Just like we
 did with python, we start with shapes.
 
 Square
-------
+~~~~~~
 
 Creating divs
-~~~~~~~~~~~~~
+*************
 
 Rectangles are very simple shapes to draw in HTML. Although there are a
 variety of way, we will start by using colored ‘divs’. Here is the code
@@ -148,7 +151,7 @@ issue? It is simply of width 0, so of course you won’t see it.
 TODO IMAGE
 
 Setting size
-~~~~~~~~~~~~
+************
 
 Let’s specify a width for our ``<div>``. To do so, will add
 specifications to our tag, so that the browser knows how to deal with
@@ -188,7 +191,7 @@ others!
    a given container, we can use percents (``%``).
 
 Setting background color
-~~~~~~~~~~~~~~~~~~~~~~~~
+************************
 
 If you update the page, you’ll see that you in fact still don’t see the
 div. Check again with f12; it should highlight an actual square this
@@ -220,7 +223,7 @@ use another specification in the style:
    ``gray`` with the ``background-color`` specification!
 
 Centering
-~~~~~~~~~
+*********
 
 At this point, you should finally have a square ! However, it lies sad
 and alone in the corner of the screen. We’ll see more on the placing of
@@ -266,7 +269,7 @@ translation, of half the square dimensions.
    *square* size.
 
 ID
-~~
+**
 
 We can specify the id of an element using ``id = "my-id"``.
 
@@ -280,10 +283,10 @@ We can specify the id of an element using ``id = "my-id"``.
 And voilà, we have a neat centered square!
 
 Circle
-------
+~~~~~~
 
 Rounded divs
-~~~~~~~~~~~~
+************
 
 Let’s move on to the next shape: a circle! We will create it in two
 ways. The first way will use divs, as we just saw:
@@ -307,7 +310,7 @@ adapted code can be found
 :download:`here <../stimuli/html-and-js/SimpleShapes/circle-svg.html>`.
 
 SVGs
-----
+****
 
 In HTML, SVGs are elements like divs, but which are designed to contain
 shapes. Here we will use the ``<circle>`` shape element. We will specify
@@ -339,7 +342,7 @@ container, with the usual ``style`` attribute.
    </svg>
 
 Triangle
---------
+~~~~~~~~
 
 A good reason to learn about SVGs is that you can’t draw triangles with
 divs (or rather, you will have an extremely hard time doing so). With
@@ -362,7 +365,7 @@ of both: spaces separate *x* and *y* coordinates, while commas separates
 vertices.
 
 Style usage
------------
+~~~~~~~~~~~
 
 Regardless of whether you used divs or svgs above, you most likely used
 the same ``style`` attribute to center the shape, over and over. To
@@ -372,7 +375,7 @@ which can be later used to apply the desired style to an element. You
 may find an example for our square :download:`here <../stimuli/html-and-js/SimpleShapes/>`.
 
 Definition in the head
-~~~~~~~~~~~~~~~~~~~~~~
+**********************
 
 The simplest way to define a style is to do so in the ``head`` of your
 document. You can also do it in a separate file; more on that later.
@@ -451,8 +454,8 @@ applies such as in the following example.
    classes: e.g. ``class = "centered circle"`` if you also happen to
    have a ``.circle`` style.
 
-Definition in a separate file.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Definition in a separate file
+*****************************
 
 Of course, redefining it at the beginning of each sheet can be very
 tedious, which is why style sheets are often defined in their own
@@ -475,12 +478,12 @@ Be careful, if you move the file from the current folder you will have
 to update the ``href`` attribute with the new path!
 
 Exercises
-=========
+---------
 
 It is now your turn.
 
 Recreate the shapes
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 Could you rewrite the code for the circle (a solution
 :download:`here <../stimuli/html-and-js/SimpleShapes/circle-style.html>`) and the triangle
@@ -488,7 +491,7 @@ Could you rewrite the code for the circle (a solution
 points if you manage to use a single stylesheet for both!
 
 Illusions
----------
+~~~~~~~~~
 
 Could you recreate the complex stimuli seen in `this
 lecture <https://pcbs.readthedocs.io/en/latest/stimulus-creation.html#displaying-geometric-shapes>`__,
