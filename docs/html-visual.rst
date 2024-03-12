@@ -77,7 +77,7 @@ title is basically the files path. Can you change the title to
 ``Hello, world!``
 
 You can find a solution in the following file:
-(:download:`hello_world.html <../stimuli/html-and-js/hello_world.html>`). But before looking
+:download:`hello_world.html <../stimuli/html-and-js/hello_world.html>`. But before looking
 at it…
 
 **Some questions for you!** - Did you end up having
@@ -119,7 +119,7 @@ Creating divs
 Rectangles are very simple shapes to draw in HTML. Although there are a
 variety of way, we will start by using colored ‘divs’. Here is the code
 for what we will first try to achieve:
-(:download:`square-div.html <../stimuli/html-and-js/SimpleShapes/square-div.html>`)
+:download:`square-div.html <../stimuli/html-and-js/SimpleShapes/square-div.html>`.
 
    **Divs** Divs are precisely HTML element with a rectangle shape. They
    are most often used as generic containers, but this won’t interest us
@@ -238,7 +238,7 @@ screen. It is pointless to use trial-and-error here, as it won’t be
 centered anymore if you resize your browser window. To get a unit
 relative to the size of the window, we will use viewport height (``vh``)
 and width (``vw``). ``1vh`` correspond to 1% of the *height* of the
-window. ``1vw`` is 1% of the *width* of the window. Do not confuse both!
+window. ``1vw`` is 1% of the *width* of the window. Do not confuse them!
 
 As such, we can (somewhat) center the square using the following style:
 
@@ -287,7 +287,7 @@ Rounded divs
 
 Let’s move on to the next shape: a circle! We will create it in two
 ways. The first way will use divs, as we just saw:
-(:download:`script <../stimuli/html-and-js/SimpleShapes/circle-div.html>`).
+:download:`script <../stimuli/html-and-js/SimpleShapes/circle-div.html>`.
 
 As said above, ``<div>``\ s are rectangle elements, but they may also be
 slightly modified. As an example, their corners can be rounded, a
@@ -304,7 +304,7 @@ definitely resorting to tricks here, which may (and will) be
 insufficient at some point. HTML proposes alternatives that are more
 suited to drawing shapes, such as *Scalable Vector Graphics* (SVG). The
 adapted code can be found
-(:download:`here <../stimuli/html-and-js/SimpleShapes/circle-svg.html>`).
+:download:`here <../stimuli/html-and-js/SimpleShapes/circle-svg.html>`.
 
 SVGs
 ----
@@ -355,7 +355,7 @@ paired to create the *x* and *y* coordinates of each point.
        <polygon points="0 200, 200 200, 100 0" fill="red" />
    </svg>
 
-You may separate integers with spaces ```` or commas ``,`` alike. In the
+You may separate integers with spaces `` `` or commas ``,`` alike. In the
 code for an isoceles triangle above (:download:`full
 file <../stimuli/html-and-js/SimpleShapes/triangle-svg.html>`), I use a mixture
 of both: spaces separate *x* and *y* coordinates, while commas separates
@@ -369,7 +369,7 @@ the same ``style`` attribute to center the shape, over and over. To
 avoid tiresome repetitions, HTML provides a convenient way to deal with
 this: providing a stylesheet. A stylesheet essentially defines keywords,
 which can be later used to apply the desired style to an element. You
-may find an example for our square (:download:`here <../stimuli/html-and-js/SimpleShapes/>`).
+may find an example for our square :download:`here <../stimuli/html-and-js/SimpleShapes/>`.
 
 Definition in the head
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -459,9 +459,9 @@ tedious, which is why style sheets are often defined in their own
 ``.css`` file. Move everything we previously defined within ``<style>``
 into a file named ``shapes.css``. You may now load the style in your
 HTML file, using the following code in the ``<head>`` section. Here is
-how it looks like in (:download:`our square
-file <../stimuli/html-and-js/SimpleShapes/square-css.html>`), using a (:download:`separate
-spreadsheet <../stimuli/html-and-js/SimpleShapes/square.css>`). Notice how the
+how it looks like in :download:`our square
+file <../stimuli/html-and-js/SimpleShapes/square-css.html>`, using a :download:`separate
+spreadsheet <../stimuli/html-and-js/SimpleShapes/square.css>`. Notice how the
 code is much simpler to read!
 
 .. code:: html
@@ -483,8 +483,8 @@ Recreate the shapes
 -------------------
 
 Could you rewrite the code for the circle (a solution
-(:download:`here <../stimuli/html-and-js/SimpleShapes/circle-style.html>`)) and the triangle
-((:download:`here <../stimuli/html-and-js/SimpleShapes/triangle-style.html>`))? Bonus
+:download:`here <../stimuli/html-and-js/SimpleShapes/circle-style.html>`) and the triangle
+(:download:`here <../stimuli/html-and-js/SimpleShapes/triangle-style.html>`)? Bonus
 points if you manage to use a single stylesheet for both!
 
 Illusions
@@ -493,9 +493,9 @@ Illusions
 Could you recreate the complex stimuli seen in `this
 lecture <https://pcbs.readthedocs.io/en/latest/stimulus-creation.html#displaying-geometric-shapes>`__,
 this time in html? 1. The two circles (a solution
-(:download:`here <../Illusions/two-circles.html>`)) 2. The troxler effect
-((:download:`here <../Illusions/troxler.html>`)) 3. Kanisza’s square
-((:download:`here <../Illusions/kanisza-square.html>`))
+:download:`here <../Illusions/two-circles.html>`) 2. The troxler effect
+(:download:`here <../Illusions/troxler.html>`) 3. Kanisza’s square
+(:download:`here <../Illusions/kanisza-square.html>`)
 
 And anything else your heart may wish for! Remember that programming
 makes perfect (in programming, at least).
