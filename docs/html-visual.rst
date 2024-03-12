@@ -493,9 +493,9 @@ Illusions
 Could you recreate the complex stimuli seen in `this
 lecture <https://pcbs.readthedocs.io/en/latest/stimulus-creation.html#displaying-geometric-shapes>`__,
 this time in html? 1. The two circles (a solution
-:download:`here <../Illusions/two-circles.html>`) 2. The troxler effect
-(:download:`here <../Illusions/troxler.html>`) 3. Kanisza’s square
-(:download:`here <../Illusions/kanisza-square.html>`)
+:download:`here <../stimuli/html-and-js/Illusions/two-circles.html>`) 2. The troxler effect
+(:download:`here <../stimuli/html-and-js/Illusions/troxler.html>`) 3. Kanisza’s square
+(:download:`here <../stimuli/html-and-js/Illusions/kanisza-square.html>`)
 
 And anything else your heart may wish for! Remember that programming
 makes perfect (in programming, at least).
