@@ -8,8 +8,8 @@ Combining shapes with JS
 using HTML, the following illusions from `previous lectures on
 Python <https://pcbs.readthedocs.io/en/latest/stimulus-creation.html#static-visual-stimuli>`__:
 1. The two circles (a solution :download:`here <../stimuli/html-and-js/Illusions/two-circles.html>`)
-2. The troxler effect (:download:`here <../stimuli/html-and-js/Illusions/troxler.html>`) 3.
-Kanisza’s square (:download:`here <../stimuli/html-and-js/Illusions/kanisza-square.html>`)
+2. The troxler effect (:download:`here <../stimuli/html-and-js/Illusions/troxler.html>`)
+3. Kanisza’s square (:download:`here <../stimuli/html-and-js/Illusions/kanisza-square.html>`)
 
 If you did Kanisza (or peeked at the solution), you may have notice that
 we didn’t actually draw circle slices, but rather hid the undesired
@@ -134,7 +134,7 @@ Modifying elements with innerHTML
 The main interest of javascript is that it can interact with HTML. As an
 example, you can directly modify the HTML code of a document using
 ``document.body.innerHTML``. Here is :download:`an
-example <../stimuli/html-and-js/SimpleShapes/square-js-inner-hmtml.html>`.
+example <../stimuli/html-and-js/SimpleShapes/square-js-inner-html.html>`.
 
 .. code:: javascript
 
@@ -200,8 +200,7 @@ Drawing on canvas.
 ------------------
 
 Back to our problem of Kanisza’s square, we can introduce canvas, which
-are exactly that: canvas on which we will paint. We can create the
-canvas using the same method as above. You can find the resulting file
+are exactly that: canvas on which we will paint. We can create the canvas using the same method as above. You can find the resulting file
 :download:`here <../stimuli/html-and-js/SimpleShapes/circle-js.html>`.
 
 .. code:: javascript
@@ -241,6 +240,14 @@ proper built-in function. Instead, we will draw the path of our brush.
 ..
 
    \*\* TODO a note about style vs height & width
+
+Think that you'll fill based on your starting point! You can move it use `ctx.moveTo(x,y)`.
+
+Back to Kanisza
+~~~~~~~~~~~~~~~
+
+You can now recreate a cleaner version of Kanisza's square:
+:download:`here <../stimuli/html-and-js/Illusions/kanisza-square-with-js.html>`
 
 Using JsPsych
 -------------

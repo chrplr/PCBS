@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>A simple jsPsych experiment</title>
+</head>
+<body>
+  <script src = "../jspsych-7.3.0/jspsych.js"></script>
+  <script
+    src = "../jspsych-7.3.0/plugins/plugin-html-keyboard-response.js">
+  </script>
+
+  <script type="text/javascript">
+    let timeline = []
+
+    const jsPsych = initJsPsych();
+
+    const hello_trial = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: '\
+      <div \
+        id = "my-square"\
+        style = "\
+          background: red;\
+          width: 200px; height: 200px;\
+          position: absolute; top: 50vh; left: 50vw;\
+          transform: translate(-50%, -50%)">\
+      </div>\
+      ',
+    }
+
+    jsPsych.run([hello_trial]);
+  </script>
+</body>
