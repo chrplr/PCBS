@@ -34,6 +34,7 @@ Self-evaluation quizz (do you need to attend PROG101?):
    data-analyses
    web-based-experiments
    html-visual
+   using-js
    regular_expressions
    simulations
    hopfield

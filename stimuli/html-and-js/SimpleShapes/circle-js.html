@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>MyCircle</title>
+</head>
+<body style = "background-color: white">
+    <script>
+      let circle = document.createElement("canvas");
+      circle.id = "my-circle";
+      circle.style.position = "absolute";
+      circle.style.top = "50vh";
+      circle.style.left = "50vw";
+      circle.style.transform = "translate(-50%, -50%)";
+
+      // This defines the height and width to 100px
+      // There is a reason why we do not use style for this!
+      circle.height = 100;
+      circle.width = 100;
+
+      let circleCtx = circle.getContext("2d");
+      circleCtx.arc(50, 50, 50, 0, 2 * Math.PI);
+
+      circleCtx.fillStyle = "red";
+      circleCtx.fill()
+
+      document.body.appendChild(circle)
+    </script>
+</body>
