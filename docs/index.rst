@@ -32,7 +32,6 @@ Self-evaluation quizz (do you need to attend PROG101?):
    running-experiments
    lexical-decision
    data-analyses
-   web-based-experiments
    html-visual
    using-js
    regular_expressions
