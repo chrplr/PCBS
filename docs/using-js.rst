@@ -472,7 +472,7 @@ in total. The order will be fixed, and you are in charge of choosing it!
    Beware of priming effects!
 
 You can find a solution
-:download:`here <../web-experiments/experiments/jspsych-color-detection-fixed-order>`.
+:download:`here <../web-experiments/experiments/jspsych-color-decision-task.html>`.
 
    **Difference between viewport width (``vw``) and height (``vh``) and
    percents (``%``)** If you used percents, you may notice that the
@@ -780,7 +780,7 @@ Final code
 ~~~~~~~~~~
 
 You can find a solution for the final code
-:download:`here <../web-experiments/experiments/jspsych-color-decision-task>`. Make sure to try out
+:download:`here <../web-experiments/experiments/jspsych-color-decision-task.html>`. Make sure to try out
 to code it first! Practice makes perfect.
 
 I did not do it in this example, but you should leave an end message to
