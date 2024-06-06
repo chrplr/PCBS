@@ -23,6 +23,7 @@ A parallel port has become a rarity these days. It provides a number of Digital 
 
 For example, to swith on and off every second the data lines of the first parallel port:
 
+
 .. code-block:: Python
 
 
@@ -56,7 +57,40 @@ Or to detect any change on any input pin of the parallel ports:
 
 	
 	
-(under Linux, you may need to run http://www.vdwalle.com/Norte/ppdiag.txt to set the adequate permissions)
+.. note::
+
+   Under Linux, you may need to run::
+
+     sudo rmmod lp
+     sudo modprobe ppdev
+
+     # to make it permanent
+     echo "blacklist lp" > /etc/modprob.d/blacklist_lp.conf
+
+     
+    And run http://www.vdwalle.com/Norte/ppdiag.txt to set the adequate permissions
+
+If you do not have the expyriment module, you can just install pyparallel::
+
+
+  pip install pyparallel
+
+Then run in python::
+
+
+  from time import sleep
+  from parallel import Parallel
+
+  pp = Parallel('/dev/parport0')
+
+  pp.setData(255)
+  time.sleep(1)
+  pp.setData(0)
+  
+  print(pp.getData())
+  
+
+
 
 	
 DLP-IO8-G
