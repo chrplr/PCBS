@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disk Controller</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            width: 100%;
+        }
+
+        canvas {
+            background-color: #e2e8f0;
+            border-radius: 1rem;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+            border: 2px solid #cbd5e1;
+            width: 100%;
+            height: 400px;
+        }
+
+        .controls-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .instructions {
+            background-color: #f1f5f9;
+            border-radius: 0.75rem;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .instructions p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #4a5568;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .control-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #4c51bf;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .control-button:hover {
+            background-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .control-button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .control-button-plus-minus {
+            width: 70px;
+        }
+
+        @media (min-width: 768px) {
+            .button-row {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center p-8">
+
+    <div class="container">
+        <h1 class="text-3xl font-bold mb-6 text-gray-800 text-center">Interactive Disk Controller</h1>
+        <canvas id="diskCanvas" class="w-full h-96 md:h-128 rounded-2xl shadow-inner-lg border-2 border-gray-300"></canvas>
+        
+        <div class="controls-container">
+            <div class="instructions">
+                <p class="text-gray-600">Use the **arrow keys** on your keyboard to move the disk, and the **'+' and '-'** keys to change its size.</p>
+            </div>
+            <div class="button-row">
+                <button id="upBtn" class="control-button">↑</button>
+                <button id="leftBtn" class="control-button">←</button>
+                <button id="downBtn" class="control-button">↓</button>
+                <button id="rightBtn" class="control-button">→</button>
+                <button id="plusBtn" class="control-button control-button-plus-minus">+</button>
+                <button id="minusBtn" class="control-button control-button-plus-minus">-</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('diskCanvas');
+            const ctx = canvas.getContext('2d');
+            const upBtn = document.getElementById('upBtn');
+            const downBtn = document.getElementById('downBtn');
+            const leftBtn = document.getElementById('leftBtn');
+            const rightBtn = document.getElementById('rightBtn');
+            const plusBtn = document.getElementById('plusBtn');
+            const minusBtn = document.getElementById('minusBtn');
+
+            const disk = {
+                x: canvas.width / 2,
+                y: canvas.height / 2,
+                radius: 40,
+                color: '#4c51bf',
+                speed: 10
+            };
+
+            // Function to draw the main disk
+            function drawDisk() {
+                ctx.beginPath();
+                ctx.arc(disk.x, disk.y, disk.radius, 0, Math.PI * 2);
+                ctx.fillStyle = disk.color;
+                ctx.fill();
+            }
+            
+            // Function to draw the fixation cross
+            function drawFixationCross() {
+                const crossSize = 20;
+                const crossThickness = 2;
+                const crossX = canvas.width * 0.25; // Position on the left side
+                const crossY = canvas.height / 2;
+                ctx.fillStyle = '#1a202c'; // Dark gray color
+
+                // Horizontal line
+                ctx.fillRect(crossX - crossSize / 2, crossY - crossThickness / 2, crossSize, crossThickness);
+                // Vertical line
+                ctx.fillRect(crossX - crossThickness / 2, crossY - crossSize / 2, crossThickness, crossSize);
+            }
+
+            // Function to handle resizing the canvas
+            function resizeCanvas() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+                // Ensure the disk stays within the new boundaries
+                disk.x = Math.min(Math.max(disk.x, disk.radius), canvas.width - disk.radius);
+                disk.y = Math.min(Math.max(disk.y, disk.radius), canvas.height - disk.radius);
+                drawAll();
+            }
+
+            // Main update function to clear and redraw all elements
+            function drawAll() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawDisk();
+                drawFixationCross();
+            }
+
+            // Keyboard controls
+            document.addEventListener('keydown', (e) => {
+                const key = e.key;
+                if (key === 'ArrowUp') {
+                    disk.y -= disk.speed;
+                } else if (key === 'ArrowDown') {
+                    disk.y += disk.speed;
+                } else if (key === 'ArrowLeft') {
+                    disk.x -= disk.speed;
+                } else if (key === 'ArrowRight') {
+                    disk.x += disk.speed;
+                } else if (key === '+' || key === '=') {
+                    disk.radius = Math.min(disk.radius + 5, 100);
+                } else if (key === '-' || key === '_') {
+                    disk.radius = Math.max(disk.radius - 5, 5);
+                }
+                drawAll();
+            });
+
+            // Touch/Button controls for mobile
+            upBtn.addEventListener('click', () => { disk.y -= disk.speed; drawAll(); });
+            downBtn.addEventListener('click', () => { disk.y += disk.speed; drawAll(); });
+            leftBtn.addEventListener('click', () => { disk.x -= disk.speed; drawAll(); });
+            rightBtn.addEventListener('click', () => { disk.x += disk.speed; drawAll(); });
+            plusBtn.addEventListener('click', () => { disk.radius = Math.min(disk.radius + 5, 100); drawAll(); });
+            minusBtn.addEventListener('click', () => { disk.radius = Math.max(disk.radius - 5, 5); drawAll(); });
+
+            // Initial setup
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+        });
+    </script>
+</body>
+</html>

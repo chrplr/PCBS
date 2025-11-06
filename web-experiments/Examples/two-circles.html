@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <title>TwoCircles</title>
+  <link rel="stylesheet" href ="./shapes.css"></link>
+</head>
+<body style = "background-color: white">
+
+  <!-- Note: HTML does not make computations, so we can not write 50% + 125px alone
+              However, calc() can do it nicely -->
+  <svg
+      id = "red-circle"
+      style = "
+      height: 200px; width: 200px;
+      position: absolute; top: 50%; left: 50%; transform: translate(calc(-50% - 125px), -50%)">
+    <circle cx="100" cy="100" r="100" fill="red"/>
+  </svg>
+
+  <svg
+    id = "blue-circle"
+    style = "
+      height: 200px; width: 200px;
+      position: absolute; top: 50%; left: 50%; transform: translate(calc(-50% + 125px), -50%)">
+    <circle cx="100" cy="100" r="100" fill="blue"/>
+  </svg>
+
+</body>

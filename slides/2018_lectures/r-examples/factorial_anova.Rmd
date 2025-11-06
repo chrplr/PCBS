@@ -1,0 +1,92 @@
+Factorial ANOVAs
+===================
+
+```{r}
+rm(list=ls())
+require(ez)
+```
+
+Generation of a dataset S<A3*B2>
+
+```{r}
+subject = factor(paste('sub', 1:30, sep=''))
+A = gl(3 ,10, 30, labels=c('a1','a2','a3'))
+B = gl(2, 5, 30, labels=c('a2', 'b2'))
+x = rnorm(30, mean=10) + 1 * (A=='a1' & B=='b2')
+dat = data.frame(subject, A, B, x)
+```
+
+```{r}
+rm(subject, A, B, x)
+attach(dat)
+```
+
+Classical R approach
+
+```{r}
+table(A, B)
+tapply(x, list(A, B), mean)
+interaction.plot(A,B,x)
+summary(aov(x ~ A * B, data=dat))
+```
+
+Using ez
+
+```{r}
+ezPlot(data=dat,  dv=.(x), wid=.(subject), between=.(A,B), 
+       x=.(B), split=.(A))
+
+ezANOVA(data=dat, dv=x, wid=subject, between=c('A','B'))
+```
+
+```{r}
+detach(dat)
+```
+
+Same dataset but with A & B within subject 
+
+```{r}
+subject = gl(5, 1, 30, labels=paste('sub', 1:5, sep=''))
+dat$subject = subject
+table(dat$subject, dat$A, dat$B)
+```
+
+```{r}
+attach(dat)
+interaction.plot(A:B, subject, x)
+summary(aov(x ~ A*B + Error(subject/(A*B))))
+summary(aov(x ~ A + Error(subject/A), data=dat, subset= (B==1)))
+summary(aov(x ~ A + Error(subject/A), data=dat, subset= (B==2)))
+
+for (a in levels(A))
+  {
+  print(paste("Effect of B for A =",a))
+  print(summary(aov(x ~ B + Error(subject/(B), data=dat, subset=(A==a)))))
+}
+detach(dat)
+```
+
+```{r}
+ezPlot(data=dat,  dv=.(x), wid=.(subject), between=.(A), within=.(B), 
+       x=.(B), split=.(A))
+
+ezANOVA(data=dat,
+        dv=x,
+        wid=subject,
+        within=.(A, B))
+```
+
+
+Split-plot ANOVA (A within, B between)
+
+```{r}
+subject = gl(10, 1, 30, labels=paste('sub', 1:10, sep=''))
+dat$subject = subject
+table(dat$subject, dat$A, dat$B)
+table(dat$subject, dat$B:dat$A)
+summary(aov(x ~ A*B + Error(subject/A), data=dat))
+```
+
+```{r}
+ezANOVA(data=dat, dv=x, wid=subject, within=.(A), between=.(B))
+```

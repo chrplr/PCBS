@@ -1,0 +1,2481 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  8pt,
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{CambridgeUS}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\let\verbatim\undefined
+\let\verbatimend\undefined
+\usepackage{listings}
+\lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Extra class correction},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Extra class correction}
+\author{Henri Vandendriessche\\
+\href{mailto:henri.vandendriessche@ens.fr}{\nolinkurl{henri.vandendriessche@ens.fr}}}
+\date{2023-12-19}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction}{}
+Q1. What does the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Bonjour"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-1}{}
+Q1. What does the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Bonjour"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Bonjour
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-2}{}
+Q2. What does the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{3} \OperatorTok{+} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-3}{}
+Q2. What does the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{3} \OperatorTok{+} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 5
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-4}{}
+Q3. What does the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"3 + 2"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-5}{}
+Q3. What does the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"3 + 2"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3 + 2
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-6}{}
+Q4: What do the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-7}{}
+Q4: What do the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## name 'x' is not defined
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-8}{}
+Q5. what does the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{5}
+\BuiltInTok{print}\NormalTok{(x }\OperatorTok{{-}} \DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-9}{}
+Q5. what does the following Python code do?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{5}
+\BuiltInTok{print}\NormalTok{(x }\OperatorTok{{-}} \DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-10}{}
+Q6. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{0}
+\NormalTok{x }\OperatorTok{=} \DecValTok{1}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-11}{}
+Q6. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{0}
+\NormalTok{x }\OperatorTok{=} \DecValTok{1}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 1
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-12}{}
+Q7. What does the following code print ?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{2}
+\NormalTok{x }\OperatorTok{=}\NormalTok{ x }\OperatorTok{{-}} \DecValTok{1}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-13}{}
+Q7. What does the following code print ?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{2}
+\NormalTok{x }\OperatorTok{=}\NormalTok{ x }\OperatorTok{{-}} \DecValTok{1}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 1
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-14}{}
+Q8. What does the following Python code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{1} \OperatorTok{==} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-15}{}
+Q8. What does the following Python code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{1} \OperatorTok{==} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## False
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-16}{}
+Q9. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{3} \OperatorTok{==} \DecValTok{3}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-17}{}
+Q9. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{3} \OperatorTok{==} \DecValTok{3}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## True
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-18}{}
+Q10. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{0} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+   \BuiltInTok{print}\NormalTok{(}\StringTok{"a"}\NormalTok{)}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{"b"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-19}{}
+Q10. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{0} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+   \BuiltInTok{print}\NormalTok{(}\StringTok{"a"}\NormalTok{)}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{"b"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## b
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-20}{}
+Q11. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{0} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"a"}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"b"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-21}{}
+Q11. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{0} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"a"}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"b"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## b
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-22}{}
+Q12. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{0} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"a"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"b"}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"c"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"d"}\NormalTok{)}
+
+\BuiltInTok{print}\NormalTok{(}\StringTok{"e"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-23}{}
+Q12. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{0} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"a"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"b"}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"c"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"d"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## c
+## d
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"e"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## e
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-24}{}
+Q13. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{0} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"a"}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \ControlFlowTok{if} \DecValTok{1} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"b"}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"c"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"d"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-25}{}
+Q13. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{0} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"a"}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+    \ControlFlowTok{if} \DecValTok{1} \OperatorTok{==} \DecValTok{1}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"b"}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"c"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"d"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## b
+## d
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-26}{}
+Q14. How many lines does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{n }\OperatorTok{=} \DecValTok{0}
+\ControlFlowTok{while}\NormalTok{ n }\OperatorTok{\textgreater{}} \DecValTok{1}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"ok"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-27}{}
+Q14. How many lines does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{n }\OperatorTok{=} \DecValTok{0}
+\ControlFlowTok{while}\NormalTok{ n }\OperatorTok{\textgreater{}} \DecValTok{1}\NormalTok{:}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"ok"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-28}{}
+Q15. How many lines does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{n }\OperatorTok{=} \DecValTok{3}
+\ControlFlowTok{while}\NormalTok{ n }\OperatorTok{\textgreater{}} \DecValTok{1}\NormalTok{:}
+\NormalTok{    n }\OperatorTok{=}\NormalTok{ n }\OperatorTok{{-}} \DecValTok{1}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"ok"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-29}{}
+Q15. How many lines does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{n }\OperatorTok{=} \DecValTok{3}
+\ControlFlowTok{while}\NormalTok{ n }\OperatorTok{\textgreater{}} \DecValTok{1}\NormalTok{:}
+\NormalTok{    n }\OperatorTok{=}\NormalTok{ n }\OperatorTok{{-}} \DecValTok{1}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"ok"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ok
+## ok
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-30}{}
+Q16. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{1}
+\NormalTok{y }\OperatorTok{=} \OperatorTok{{-}}\DecValTok{1}
+\ControlFlowTok{while}\NormalTok{ x }\OperatorTok{\textless{}} \DecValTok{5}\NormalTok{:}
+\NormalTok{    y }\OperatorTok{=}\NormalTok{ y }\OperatorTok{{-}} \DecValTok{1}
+\NormalTok{    x }\OperatorTok{=}\NormalTok{ x }\OperatorTok{*} \DecValTok{2}
+
+\BuiltInTok{print}\NormalTok{(x, y)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-31}{}
+Q16. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{1}
+\NormalTok{y }\OperatorTok{=} \OperatorTok{{-}}\DecValTok{1}
+\ControlFlowTok{while}\NormalTok{ x }\OperatorTok{\textless{}} \DecValTok{5}\NormalTok{:}
+\NormalTok{    y }\OperatorTok{=}\NormalTok{ y }\OperatorTok{{-}} \DecValTok{1}
+\NormalTok{    x }\OperatorTok{=}\NormalTok{ x }\OperatorTok{*} \DecValTok{2}
+
+\BuiltInTok{print}\NormalTok{(x, y)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 8 -4
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-32}{}
+Q17. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{n }\OperatorTok{=} \DecValTok{0}
+\ControlFlowTok{while}\NormalTok{ n }\OperatorTok{\textless{}} \DecValTok{3}\NormalTok{:}
+    \ControlFlowTok{if}\NormalTok{ n }\OperatorTok{\textless{}} \DecValTok{2}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"less"}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"more"}\NormalTok{)}
+\NormalTok{    n }\OperatorTok{=}\NormalTok{ n }\OperatorTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-33}{}
+Q17. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{n }\OperatorTok{=} \DecValTok{0}
+\ControlFlowTok{while}\NormalTok{ n }\OperatorTok{\textless{}} \DecValTok{3}\NormalTok{:}
+    \ControlFlowTok{if}\NormalTok{ n }\OperatorTok{\textless{}} \DecValTok{2}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"less"}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"more"}\NormalTok{)}
+\NormalTok{    n }\OperatorTok{=}\NormalTok{ n }\OperatorTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## less
+## less
+## more
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-34}{}
+Q18. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ x }\KeywordTok{in}\NormalTok{ [}\DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{]:}
+    \ControlFlowTok{for}\NormalTok{ y }\KeywordTok{in}\NormalTok{ [}\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{]:}
+        \BuiltInTok{print}\NormalTok{(x, y)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-35}{}
+Q18. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ x }\KeywordTok{in}\NormalTok{ [}\DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{]:}
+    \ControlFlowTok{for}\NormalTok{ y }\KeywordTok{in}\NormalTok{ [}\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{]:}
+        \BuiltInTok{print}\NormalTok{(x, y)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3 2
+## 3 4
+## 1 2
+## 1 4
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-36}{}
+Q19. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_one():}
+    \BuiltInTok{print}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-37}{}
+Q19. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_one():}
+    \BuiltInTok{print}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-38}{}
+Q20. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_one():}
+    \BuiltInTok{print}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+
+\NormalTok{print\_one()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-39}{}
+Q20. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_one():}
+    \BuiltInTok{print}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+
+\NormalTok{print\_one()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 1
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-40}{}
+Q21. Consider the following code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_sum(x, y):}
+    \BuiltInTok{print}\NormalTok{(x }\OperatorTok{+}\NormalTok{ y)}
+\end{Highlighting}
+\end{Shaded}
+
+What is the name of the above-defined function?
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-41}{}
+Q21. Consider the following code:
+
+What is the name of the above-defined function?
+
+print\_sum
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-42}{}
+Q22. Consider the following code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_sum(x, y):}
+    \BuiltInTok{print}\NormalTok{(x }\OperatorTok{+}\NormalTok{ y)}
+
+\NormalTok{print\_sum(}\DecValTok{5}\NormalTok{,}\DecValTok{6}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+What are the parameters of the above-defined function?
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-43}{}
+Q22. Consider the following code:
+
+What are the parameters of the above-defined function?
+
+(x, y)
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-44}{}
+Q23. Consider the following code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_sum(x, y):}
+    \BuiltInTok{print}\NormalTok{(x }\OperatorTok{+}\NormalTok{ y)}
+\end{Highlighting}
+\end{Shaded}
+
+Which line(s) correspond(s) to the body of the above-defined function?
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-45}{}
+Q23. Consider the following code:
+
+Which line(s) correspond(s) to the body of the above-defined function?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ print\_sum(x, y):}
+    
+    \BuiltInTok{print}\NormalTok{(x }\OperatorTok{+}\NormalTok{ y)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-46}{}
+Q24. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def} \BuiltInTok{sum}\NormalTok{(x, y):}
+    \BuiltInTok{print}\NormalTok{(x)}
+    \ControlFlowTok{return}\NormalTok{ x }\OperatorTok{+}\NormalTok{ y}
+
+\NormalTok{a }\OperatorTok{=} \DecValTok{1}
+\NormalTok{b }\OperatorTok{=} \BuiltInTok{sum}\NormalTok{(a, }\OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(b)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-47}{}
+Q24. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def} \BuiltInTok{sum}\NormalTok{(x, y):}
+    \BuiltInTok{print}\NormalTok{(x)}
+    \ControlFlowTok{return}\NormalTok{ x }\OperatorTok{+}\NormalTok{ y}
+
+\NormalTok{a }\OperatorTok{=} \DecValTok{1}
+\NormalTok{b }\OperatorTok{=} \BuiltInTok{sum}\NormalTok{(a, }\OperatorTok{{-}}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(b)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 0
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-48}{}
+Q25. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ fun\_a(x):}
+    \BuiltInTok{print}\NormalTok{(x }\OperatorTok{{-}} \DecValTok{1}\NormalTok{)}
+    \ControlFlowTok{return}\NormalTok{ x }\OperatorTok{+} \DecValTok{1}
+
+\KeywordTok{def}\NormalTok{ fun\_b(y):}
+    \BuiltInTok{print}\NormalTok{(y)}
+\NormalTok{    z }\OperatorTok{=}\NormalTok{ fun\_a(x)}
+    \BuiltInTok{print}\NormalTok{(z)}
+    \ControlFlowTok{return}\NormalTok{ z }\OperatorTok{*} \DecValTok{2}
+
+\NormalTok{y }\OperatorTok{=} \DecValTok{1}
+\NormalTok{z }\OperatorTok{=}\NormalTok{ fun\_b(y)}
+\BuiltInTok{print}\NormalTok{(z)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-49}{}
+Q25. What does the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ fun\_a(x):}
+    \BuiltInTok{print}\NormalTok{(x }\OperatorTok{{-}} \DecValTok{1}\NormalTok{)}
+    \ControlFlowTok{return}\NormalTok{ x }\OperatorTok{+} \DecValTok{1}
+
+\KeywordTok{def}\NormalTok{ fun\_b(y):}
+    \BuiltInTok{print}\NormalTok{(y)}
+\NormalTok{    z }\OperatorTok{=}\NormalTok{ fun\_a(x)}
+    \BuiltInTok{print}\NormalTok{(z)}
+    \ControlFlowTok{return}\NormalTok{ z }\OperatorTok{*} \DecValTok{2}
+
+\NormalTok{y }\OperatorTok{=} \DecValTok{1}
+\NormalTok{z }\OperatorTok{=}\NormalTok{ fun\_b(y)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 1
+## 0
+## 2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(z)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 4
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-50}{}
+Q26. How can we extract the name (JB Lewis) from aString?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aString }\OperatorTok{=} \StringTok{"A long complicated string containing a quote of someone important who said \textquotesingle{}Something really important\textquotesingle{}–JB Lewis“}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  aString{[}aString.index(``--'')+1:{]}
+\item
+  aString{[}index(``--'')+1:{]}
+\item
+  aString{[}index(``--'')+1:end{]}
+\item
+  aString{[}aString.index(``--'')+1:end{]}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-51}{}
+Q26. How can we extract the name (JB Lewis) from aString?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aString }\OperatorTok{=} \StringTok{"A long complicated string containing a quote of someone important who said \textquotesingle{}Something really important\textquotesingle{}–JB Lewis“}
+
+\ErrorTok{print}\NormalTok{(aString[aString.index(}\StringTok{"–"}\NormalTok{)}\OperatorTok{+}\DecValTok{1}\NormalTok{:])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## EOL while scanning string literal (<string>, line 1)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-52}{}
+Q27. What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{listOfNums }\OperatorTok{=}\NormalTok{ [}\StringTok{"2"}\NormalTok{, }\StringTok{"7"}\NormalTok{, }\StringTok{"3"}\NormalTok{, }\StringTok{"4"}\NormalTok{]}
+\NormalTok{result }\OperatorTok{=} \StringTok{"+"}\NormalTok{.join(listOfNums)}
+\BuiltInTok{print}\NormalTok{(result)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-53}{}
+Q27. What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{listOfNums }\OperatorTok{=}\NormalTok{ [}\StringTok{"2"}\NormalTok{, }\StringTok{"7"}\NormalTok{, }\StringTok{"3"}\NormalTok{, }\StringTok{"4"}\NormalTok{]}
+\NormalTok{result }\OperatorTok{=} \StringTok{"+"}\NormalTok{.join(listOfNums)}
+\BuiltInTok{print}\NormalTok{(result)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2+7+3+4
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-54}{}
+Q28.What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{start }\OperatorTok{=} \StringTok{"This is a test"}
+\NormalTok{end }\OperatorTok{=} \StringTok{" "}\NormalTok{.join(start.split(}\StringTok{" "}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(start }\OperatorTok{==}\NormalTok{ end)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-55}{}
+Q28.What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{start }\OperatorTok{=} \StringTok{"This is a test"}
+\NormalTok{end }\OperatorTok{=} \StringTok{" "}\NormalTok{.join(start.split(}\StringTok{" "}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(start }\OperatorTok{==}\NormalTok{ end)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## True
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-56}{}
+Q29. What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aStr }\OperatorTok{=} \StringTok{"This is a test"}
+\NormalTok{aStr.upper()}
+\BuiltInTok{print}\NormalTok{(aStr)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-57}{}
+Q29. What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aStr }\OperatorTok{=} \StringTok{"This is a test"}
+\NormalTok{aStr.upper()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'THIS IS A TEST'
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(aStr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## This is a test
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-58}{}
+Q30. What are the contents of the file `test.txt' after the following
+executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{file} \OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}test.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}w\textquotesingle{}}\NormalTok{)}
+\BuiltInTok{file}\NormalTok{.write(}\StringTok{\textquotesingle{}This is a test, I think.\textquotesingle{}}\NormalTok{)}
+\NormalTok{anotherFile }\OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}test.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{)}
+\NormalTok{contents }\OperatorTok{=}\NormalTok{ anotherFile.read()}
+\NormalTok{yetAnotherOne }\OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}test.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}a\textquotesingle{}}\NormalTok{)}
+\NormalTok{yetAnotherOne.write(}\StringTok{\textquotesingle{} Yes\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-59}{}
+Q30. What are the contents of the file `test.txt' after the following
+executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{file} \OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}test.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}w\textquotesingle{}}\NormalTok{)}
+\BuiltInTok{file}\NormalTok{.write(}\StringTok{\textquotesingle{}This is a test, I think.\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 24
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{anotherFile }\OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}test.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{)}
+\NormalTok{contents }\OperatorTok{=}\NormalTok{ anotherFile.read()}
+\NormalTok{yetAnotherOne }\OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}test.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}a\textquotesingle{}}\NormalTok{)}
+\NormalTok{yetAnotherOne.write(}\StringTok{\textquotesingle{} Yes\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 4
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-60}{}
+Q31. In which directory is the file test.txt located?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{file} \OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}test.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}w\textquotesingle{}}\NormalTok{)}
+\BuiltInTok{file}\NormalTok{.write(}\StringTok{"This is a test, I think."}\NormalTok{)}
+\BuiltInTok{file}\NormalTok{.close()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-61}{}
+Q31. In which directory is the file test.txt located?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{file} \OperatorTok{=} \BuiltInTok{open}\NormalTok{(}\StringTok{\textquotesingle{}test.txt\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}w\textquotesingle{}}\NormalTok{)}
+\BuiltInTok{file}\NormalTok{.write(}\StringTok{"This is a test, I think."}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 24
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{file}\NormalTok{.close()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-62}{}
+Q32. Should one generally prefer absolute or relative paths to files and
+directories?
+
+\begin{itemize}
+\tightlist
+\item
+  Absolute
+\item
+  Relative
+\item
+  It doesn't matter
+\item
+  Randomly choose one of the two
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-63}{}
+Q32. Should one generally prefer absolute or relative paths to files and
+directories?
+
+\begin{itemize}
+\tightlist
+\item
+  Absolute
+\item
+  \textbf{Relative}
+\item
+  It doesn't matter
+\item
+  Randomly choose one of the two
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-64}{}
+Q33. Why is it often useful to name a piece of data? e.g.~(several
+options possible)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ipLine }\OperatorTok{=}\NormalTok{ data[}\DecValTok{2}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-65}{}
+Q33. Why is it often useful to name a piece of data? e.g.~(several
+options possible)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ipLine }\OperatorTok{=}\NormalTok{ data[}\DecValTok{2}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## name 'data' is not defined
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-66}{}
+Q34. In the following code, what is the value of fileName?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ wordCount(fileName, word):}
+    \BuiltInTok{file}  \OperatorTok{=} \BuiltInTok{open}\NormalTok{(fileName, }\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{)}
+\NormalTok{    contents }\OperatorTok{=} \BuiltInTok{file}\NormalTok{.read()}
+\NormalTok{    words }\OperatorTok{=}\NormalTok{ contents.split(}\StringTok{\textquotesingle{} \textquotesingle{}}\NormalTok{)}
+\NormalTok{        wordCount }\OperatorTok{=}\NormalTok{ words.count(word)}
+        \BuiltInTok{print}\NormalTok{(wordCount)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-67}{}
+Q34. In the following code, what is the value of fileName?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ wordCount(fileName, word):}
+    \BuiltInTok{file}  \OperatorTok{=} \BuiltInTok{open}\NormalTok{(fileName, }\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{)}
+\NormalTok{    contents }\OperatorTok{=} \BuiltInTok{file}\NormalTok{.read()}
+\NormalTok{    words }\OperatorTok{=}\NormalTok{ contents.split(}\StringTok{\textquotesingle{} \textquotesingle{}}\NormalTok{)}
+\NormalTok{        wordCount }\OperatorTok{=}\NormalTok{ words.count(word)}
+        \BuiltInTok{print}\NormalTok{(wordCount)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## inconsistent use of tabs and spaces in indentation (<string>, line 5)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-68}{}
+Q35. What will be printed after this program runs?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ test():}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"This will print 12"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-69}{}
+Q35. What will be printed after this program runs?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ test():}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"This will print 12"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-70}{}
+Q36. What will be printed when the following program executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ aProgram():}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"This will print 12"}\NormalTok{)}
+\NormalTok{aProgram()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-71}{}
+Q36. What will be printed when the following program executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ aProgram():}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"This will print 12"}\NormalTok{)}
+\NormalTok{aProgram()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## expected an indented block (<string>, line 2)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-72}{}
+Q37. What will be printed when the following program executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ aProgram():}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"This will print 12"}\NormalTok{)}
+\NormalTok{aProgram()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-73}{}
+Q37. What will be printed when the following program executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ aProgram():}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"This will print 12"}\NormalTok{)}
+\NormalTok{aProgram()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## This will print 12
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-74}{}
+Q38. What will be printed when the following program is executed?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+    \ControlFlowTok{return}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-75}{}
+Q38. What will be printed when the following program is executed?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+    \ControlFlowTok{return}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 8
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-76}{}
+Q39. What will be printed when the following program is executed?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+\NormalTok{    a }\OperatorTok{=}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-77}{}
+Q39. What will be printed when the following program is executed?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+\NormalTok{    a }\OperatorTok{=}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## None
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-78}{}
+Q40. What will be printed when the following program is executed?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+\NormalTok{    a }\OperatorTok{=}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+    \ControlFlowTok{return}\NormalTok{ a}
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-79}{}
+Q40. What will be printed when the following program is executed?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+\NormalTok{    a }\OperatorTok{=}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+    \ControlFlowTok{return}\NormalTok{ a}
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 8
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-80}{}
+Q41. What will be printed when the following program is executed?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+\NormalTok{    a }\OperatorTok{=}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+    \BuiltInTok{print}\NormalTok{(a)}
+
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-81}{}
+Q41. What will be printed when the following program is executed?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+\NormalTok{    a }\OperatorTok{=}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+    \BuiltInTok{print}\NormalTok{(a)}
+
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 8
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## None
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-82}{}
+Q42. What's the value of the variable k after this program executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+\NormalTok{    a }\OperatorTok{=}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+    \BuiltInTok{print}\NormalTok{(a)}
+
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-83}{}
+Q42. What's the value of the variable k after this program executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aNum):}
+\NormalTok{    a }\OperatorTok{=}\NormalTok{ aNum }\OperatorTok{*} \DecValTok{2}
+    \BuiltInTok{print}\NormalTok{(a)}
+
+\NormalTok{myNumber }\OperatorTok{=} \DecValTok{4}
+\NormalTok{k }\OperatorTok{=}\NormalTok{ myFun(myNumber)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 8
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(k)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## None
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-84}{}
+Q43. What is/are the correct way(s) to call the following function?
+(assume all variables exist. correct means here no error display on the
+terminal)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ readResults(resultFile):}
+    \BuiltInTok{file} \OperatorTok{=} \BuiltInTok{open}\NormalTok{(resultFile, }\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{)}\OperatorTok{;}
+\NormalTok{    contents }\OperatorTok{=} \BuiltInTok{file}\NormalTok{.read()}
+    \ControlFlowTok{return}\NormalTok{ contents}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-85}{}
+Q43. What is/are the correct way(s) to call the following function?
+(assume all variables exist. correct means here no error display on the
+terminal)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ readResults(resultFile):}
+    \BuiltInTok{file} \OperatorTok{=} \BuiltInTok{open}\NormalTok{(resultFile, }\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{)}\OperatorTok{;}
+\NormalTok{    contents }\OperatorTok{=} \BuiltInTok{file}\NormalTok{.read()}
+    \ControlFlowTok{return}\NormalTok{ contents}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-86}{}
+Q44. What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ functionA(aNumber):}
+    \ControlFlowTok{return}\NormalTok{ aNumber}\OperatorTok{+}\DecValTok{1}
+\KeywordTok{def}\NormalTok{ functionB(aNumber):}
+    \ControlFlowTok{return}\NormalTok{ functionA(aNumber)}\OperatorTok{+}\DecValTok{1}
+\BuiltInTok{print}\NormalTok{(functionB(}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-87}{}
+Q44. What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ functionA(aNumber):}
+    \ControlFlowTok{return}\NormalTok{ aNumber}\OperatorTok{+}\DecValTok{1}
+\KeywordTok{def}\NormalTok{ functionB(aNumber):}
+    \ControlFlowTok{return}\NormalTok{ functionA(aNumber)}\OperatorTok{+}\DecValTok{1}
+\BuiltInTok{print}\NormalTok{(functionB(}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-88}{}
+Q45. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+\BuiltInTok{print}\NormalTok{(aVar)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-89}{}
+Q45. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+\BuiltInTok{print}\NormalTok{(aVar)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 12
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-90}{}
+Q46. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+\BuiltInTok{print}\NormalTok{ (aVar)}
+\NormalTok{myFun()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-91}{}
+Q46. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+\BuiltInTok{print}\NormalTok{ (aVar)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 12
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{myFun()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-92}{}
+Q47. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+    \BuiltInTok{print}\NormalTok{ (aVar)}
+\NormalTok{myFun()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-93}{}
+Q47. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+    \BuiltInTok{print}\NormalTok{ (aVar)}
+\NormalTok{myFun()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 10
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-94}{}
+Q48. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ aVar}
+\BuiltInTok{print}\NormalTok{(myFun())}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-95}{}
+Q48. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ aVar}
+\BuiltInTok{print}\NormalTok{(myFun())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 10
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-96}{}
+Q49. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{myVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ aVar}
+\NormalTok{myVar }\OperatorTok{=}\NormalTok{ myFun()}
+\BuiltInTok{print}\NormalTok{(myVar)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-97}{}
+Q49. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{myVar }\OperatorTok{=} \DecValTok{12}
+\KeywordTok{def}\NormalTok{ myFun():}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{7}\OperatorTok{+}\DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ aVar}
+\NormalTok{myVar }\OperatorTok{=}\NormalTok{ myFun()}
+\BuiltInTok{print}\NormalTok{(myVar)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 10
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-98}{}
+Q50. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aVar):}
+\NormalTok{    test }\OperatorTok{=}\NormalTok{ aVar}\OperatorTok{+}\DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ test}
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{15}
+\NormalTok{bVar }\OperatorTok{=}\NormalTok{ myFun(aVar)}
+\BuiltInTok{print}\NormalTok{(aVar)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-99}{}
+Q50. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aVar):}
+\NormalTok{    test }\OperatorTok{=}\NormalTok{ aVar}\OperatorTok{+}\DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ test}
+\NormalTok{aVar }\OperatorTok{=} \DecValTok{15}
+\NormalTok{bVar }\OperatorTok{=}\NormalTok{ myFun(aVar)}
+\BuiltInTok{print}\NormalTok{(aVar)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 15
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-100}{}
+Q51. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aVar):}
+\NormalTok{    test }\OperatorTok{=}\NormalTok{ aVar}\OperatorTok{+}\DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ test}
+\NormalTok{bVar }\OperatorTok{=} \DecValTok{15}
+\NormalTok{bVar }\OperatorTok{=}\NormalTok{ myFun(bVar)}
+\BuiltInTok{print}\NormalTok{(bVar)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-101}{}
+Q51. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aVar):}
+\NormalTok{    test }\OperatorTok{=}\NormalTok{ aVar}\OperatorTok{+}\DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ test}
+\NormalTok{bVar }\OperatorTok{=} \DecValTok{15}
+\NormalTok{bVar }\OperatorTok{=}\NormalTok{ myFun(bVar)}
+\BuiltInTok{print}\NormalTok{(bVar)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 18
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-102}{}
+Q52. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aList):}
+\NormalTok{    aList[}\DecValTok{1}\NormalTok{] }\OperatorTok{=} \DecValTok{100}
+
+\NormalTok{test }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{]}
+\NormalTok{myFun(test)}
+\BuiltInTok{print}\NormalTok{(test[}\DecValTok{1}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-103}{}
+Q52. What will the following program print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aList):}
+\NormalTok{    aList[}\DecValTok{1}\NormalTok{] }\OperatorTok{=} \DecValTok{100}
+
+\NormalTok{test }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{]}
+\NormalTok{myFun(test)}
+\BuiltInTok{print}\NormalTok{(test[}\DecValTok{1}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 100
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-104}{}
+Q53. What's the strangest part of the following function definition?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aVar):}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ aVar }\OperatorTok{+} \DecValTok{5}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-105}{}
+Q53. What's the strangest part of the following function definition?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ myFun(aVar):}
+\NormalTok{    aVar }\OperatorTok{=} \DecValTok{3}
+    \ControlFlowTok{return}\NormalTok{ aVar }\OperatorTok{+} \DecValTok{5}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-106}{}
+Q54. What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ validateAge(userAge):}
+    \ControlFlowTok{if}\NormalTok{ userAge}\OperatorTok{\textless{}}\DecValTok{18}\NormalTok{:}
+        \ControlFlowTok{return} \VariableTok{False}
+    \ControlFlowTok{else}\NormalTok{:}
+        \ControlFlowTok{return} \VariableTok{True}
+
+\KeywordTok{def}\NormalTok{ isAdult():}
+\NormalTok{    age }\OperatorTok{=} \BuiltInTok{input}\NormalTok{(}\StringTok{"Please type your age"}\NormalTok{) }\CommentTok{\# assume user input 19}
+    \ControlFlowTok{return}\NormalTok{ validateAge(}\BuiltInTok{int}\NormalTok{(age))}
+
+\BuiltInTok{print}\NormalTok{(isAdult())}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-107}{}
+Q54. What will the following code print?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ validateAge(userAge):}
+    \ControlFlowTok{if}\NormalTok{ userAge}\OperatorTok{\textless{}}\DecValTok{18}\NormalTok{:}
+        \ControlFlowTok{return} \VariableTok{False}
+    \ControlFlowTok{else}\NormalTok{:}
+        \ControlFlowTok{return} \VariableTok{True}
+
+\KeywordTok{def}\NormalTok{ isAdult():}
+\NormalTok{    age }\OperatorTok{=} \BuiltInTok{input}\NormalTok{(}\StringTok{"Please type your age"}\NormalTok{) }\CommentTok{\# assume user input 19}
+    \ControlFlowTok{return}\NormalTok{ validateAge(}\BuiltInTok{int}\NormalTok{(age))}
+
+\BuiltInTok{print}\NormalTok{(isAdult())}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-108}{}
+Q55. What is the value of aVar after the following executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ someGreatFunction():}
+    \ControlFlowTok{return} \DecValTok{12}
+\NormalTok{aVar }\OperatorTok{=}\NormalTok{ someGreatFunction}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-109}{}
+Q55. What is the value of aVar after the following executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ someGreatFunction():}
+    \ControlFlowTok{return} \DecValTok{12}
+\NormalTok{aVar }\OperatorTok{=}\NormalTok{ someGreatFunction}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-110}{}
+Q56. What is the value of aVar after the following executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ someGreatFunction():}
+    \ControlFlowTok{return} \DecValTok{12}
+\NormalTok{bVar }\OperatorTok{=}\NormalTok{ someGreatFunction}
+\NormalTok{aVar }\OperatorTok{=}\NormalTok{ bVar()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-111}{}
+Q56. What is the value of aVar after the following executes?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ someGreatFunction():}
+    \ControlFlowTok{return} \DecValTok{12}
+\NormalTok{bVar }\OperatorTok{=}\NormalTok{ someGreatFunction}
+\NormalTok{aVar }\OperatorTok{=}\NormalTok{ bVar()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-112}{}
+Q57. In the following code what is the name of the module ?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ random }\ImportTok{import}\NormalTok{ choice}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-113}{}
+Q57. In the following code what is the name of the module ?
+
+from \textbf{random} import choice
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-114}{}
+Q58. After the following import statement, how can we use the shuffle
+function?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ random }\ImportTok{import}\NormalTok{ shuffle}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-115}{}
+Q58. After the following import statement, how can we use the shuffle
+function?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ random }\ImportTok{import}\NormalTok{ shuffle}
+
+\NormalTok{shuffle()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## shuffle() missing 1 required positional argument: 'x'
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-116}{}
+Q59. After the following import statement, how can we use the randint
+function?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ random }\ImportTok{import} \OperatorTok{*}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-117}{}
+Q59. After the following import statement, how can we use the randint
+function?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ random }\ImportTok{import} \OperatorTok{*}
+
+\NormalTok{randint(}\BuiltInTok{min}\NormalTok{, }\BuiltInTok{max}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-118}{}
+Q60. After the following import statement, how can we use the randint
+function?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ random}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-119}{}
+Q60. After the following import statement, how can we use the randint
+function?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ random}
+
+\NormalTok{random.randint(}\BuiltInTok{min}\NormalTok{, }\BuiltInTok{max}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-120}{}
+Q61. What does the ``*data'' means in the following code
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ someFun(}\OperatorTok{*}\NormalTok{data):}
+    \BuiltInTok{print}\NormalTok{(data)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-121}{}
+Q61. What does the ``*data'' means in the following code
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ someFun(}\OperatorTok{*}\NormalTok{data):}
+    \BuiltInTok{print}\NormalTok{(data)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-122}{}
+Q62. What will be the output of this code
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{type}\NormalTok{(}\BuiltInTok{type}\NormalTok{(}\BuiltInTok{int}\NormalTok{)))}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-123}{}
+Q62. What will be the output of this code
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{type}\NormalTok{(}\BuiltInTok{type}\NormalTok{(}\BuiltInTok{int}\NormalTok{)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <class 'type'>
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-124}{}
+Q62. Which of these is not a core data type
+
+\begin{itemize}
+\tightlist
+\item
+  Tuple
+\item
+  Integer
+\item
+  Dict
+\item
+  Datetime
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-125}{}
+Q62. Which of these is not a core data type
+
+\begin{itemize}
+\tightlist
+\item
+  Tuple
+\item
+  Integer
+\item
+  Dict
+\item
+  \textbf{Datetime}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-126}{}
+Q63. What is the correct way to instantiate an empty dictionary?
+(several option possible)
+
+\begin{itemize}
+\tightlist
+\item
+  mydict = dict()
+\item
+  mydict = \{\}
+\item
+  mydict = ()
+\item
+  mydict = dictionary\{\}
+\item
+  mydict = dict\{\}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-127}{}
+Q63. What is the correct way to instantiate an empty dictionary?
+(several option possible)
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{mydict = dict()}
+\item
+  \textbf{mydict = \{\}}
+\item
+  mydict = ()
+\item
+  mydict = dictionary\{\}
+\item
+  mydict = dict\{\}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-128}{}
+Q65. Which method can be used to separate a string in a list?
+
+\begin{itemize}
+\tightlist
+\item
+  split()
+\item
+  len()
+\item
+  cut()
+\item
+  strip()
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-129}{}
+Q65. Which method can be used to separate a string in a list?
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{split()}
+\item
+  len()
+\item
+  cut()
+\item
+  strip()
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-130}{}
+Q66. Which statement is used to stop a loop?
+
+\begin{itemize}
+\tightlist
+\item
+  exit
+\item
+  break
+\item
+  continue
+\item
+  return
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-131}{}
+Q66. Which statement is used to stop a loop?
+
+\begin{itemize}
+\tightlist
+\item
+  exit
+\item
+  \textbf{break}
+\item
+  continue
+\item
+  return
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-132}{}
+Q67. Which statement is used to skip an iteration of a loop?
+
+\begin{itemize}
+\tightlist
+\item
+  next
+\item
+  jump
+\item
+  continue
+\item
+  skip
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-133}{}
+Q67. Which statement is used to skip an iteration of a loop?
+
+\begin{itemize}
+\tightlist
+\item
+  next
+\item
+  jump
+\item
+  \textbf{continue}
+\item
+  skip
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-134}{}
+Q68. Which collection data type is ordered, changeable and allows
+duplicate items?
+
+\begin{itemize}
+\tightlist
+\item
+  Set
+\item
+  List
+\item
+  Tuple
+\item
+  Dictionnary
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-135}{}
+Q68. Which collection data type is ordered, changeable and allows
+duplicate items?
+
+\begin{itemize}
+\tightlist
+\item
+  Set
+\item
+  \textbf{List}
+\item
+  Tuple
+\item
+  Dictionnary
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-136}{}
+Q69. Which of the following options is provided by pdb? (several option
+possible)
+
+\begin{itemize}
+\tightlist
+\item
+  Executing the program line by line
+\item
+  List all the errors in your script
+\item
+  Checking variables values at any step of the code execution
+\item
+  Set break points
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-137}{}
+Q69. Which of the following options is provided by pdb? (several option
+possible)
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Executing the program line by line}
+\item
+  List all the errors in your script
+\item
+  \textbf{Checking variables values at any step of the code execution}
+\item
+  \textbf{Set break points}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-138}{}
+Q70. What are the possibilities of the logging module in python?
+(several option possible)
+
+\begin{itemize}
+\tightlist
+\item
+  Generating more precise error message
+\item
+  Creating custom log levels according to the ``criticality'' of events
+  in your script**
+\item
+  Preventing your script from crashing
+\item
+  Basic logging to track variables values
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MCQ test correction}
+\protect\hypertarget{mcq-test-correction-139}{}
+Q70. What are the possibilities of the logging module in python?
+(several option possible)
+
+\begin{itemize}
+\tightlist
+\item
+  Generating more precise error message
+\item
+  \textbf{Creating custom log levels according to the ``criticality'' of
+  events in your script}
+\item
+  Preventing your script from crashing
+\item
+  \textbf{Basic logging to track variables values}
+\end{itemize}
+\end{frame}
+
+\end{document}

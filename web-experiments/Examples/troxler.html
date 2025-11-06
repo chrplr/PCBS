@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  <title>TroxlerEffect</title>
+  <link rel="stylesheet" href ="./shapes.css"></link>
+</head>
+<body style = "background-color: white">
+
+  <!-- Note: HTML placement may be very sensitive!
+  If you do not update height and width you may have some surprises...
+  Also, notice that altering positions will result on a non square... since your screen isnt! -->
+  <svg
+    id = "top-left-circle"
+    style = "
+      height: 40px; width: 40px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(calc(-50% - 100px), calc(-50% - 100px)">
+    <circle cx="20" cy="20" r="20" fill="cyan"/>
+  </svg>
+
+  <svg
+    id = "top-center-circle"
+    style = "
+      height: 40px; width: 40px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(calc(-50%), calc(-50% - 100px)">
+    <circle cx="20" cy="20" r="20" fill="purple"/>
+  </svg>
+
+  <svg
+    id = "top-right-circle"
+    style = "
+      height: 40px; width: 40px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(calc(-50% + 100px), calc(-50% - 100px)">
+    <circle cx="20" cy="20" r="20" fill="yellow"/>
+  </svg>
+
+  <svg
+    id = "center-left-circle"
+    style = "
+      height: 40px; width: 40px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(calc(-50% - 100px), calc(-50%)">
+    <circle cx="20" cy="20" r="20" fill="green"/>
+  </svg>
+
+  <svg
+    id = "center-right-circle"
+    style = "
+      height: 40px; width: 40px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(calc(-50% + 100px), calc(-50%)">
+    <circle cx="20" cy="20" r="20" fill="cyan"/>
+  </svg>
+
+  <svg
+    id = "bottom-left-circle"
+    style = "
+      height: 40px; width: 40px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(calc(-50% - 100px), calc(-50% + 100px)">
+    <circle cx="20" cy="20" r="20" fill="purple"/>
+  </svg>
+
+  <svg
+    id = "bottom-center-circle"
+    style = "
+      height: 40px; width: 40px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(calc(-50%), calc(-50% + 100px)">
+    <circle cx="20" cy="20" r="20" fill="yellow"/>
+  </svg>
+
+  <svg
+    id = "bottom-right-circle"
+    style = "
+      height: 40px; width: 40px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(calc(-50% + 100px), calc(-50% + 100px)">
+    <circle cx="20" cy="20" r="20" fill="green"/>
+  </svg>
+
+</body>

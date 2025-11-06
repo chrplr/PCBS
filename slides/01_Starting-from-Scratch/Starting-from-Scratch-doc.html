@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="christophe@pallier.org" />
+  <title>Crash course in programming, with Scratch</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">Crash course in programming, with Scratch</h1>
+<h2 class="author">christophe@pallier.org</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#programming-turning-an-algorithm-into-code">Programming = turning an algorithm into code</a></li>
+<li><a href="#why-python">Why Python</a></li>
+<li><a href="#starting-fromwith-scratch">Starting from/with Scratch</a></li>
+<li><a href="#first-steps">First steps</a><ul>
+<li><a href="#program-001">Program 001</a></li>
+<li><a href="#program-002">Program 002</a></li>
+<li><a href="#program-003">Program 003</a></li>
+<li><a href="#program-004">Program 004</a></li>
+</ul></li>
+<li><a href="#concepts-learned-so-far">Concepts learned so far</a></li>
+<li><a href="#loops">Loops</a></li>
+<li><a href="#repeat-for-loop">repeat (‘for’ loop)</a><ul>
+<li><a href="#repeat-until">Repeat until</a></li>
+</ul></li>
+<li><a href="#two-sprites">Two sprites</a></li>
+<li><a href="#conditional-execution-or-branching">Conditional execution or branching</a></li>
+<li><a href="#first-series-of-exercices">First series of exercices</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#second-series-of-exercices">Second series of exercices</a></li>
+</ul>
+</div>
+<h1 id="programming-turning-an-algorithm-into-code"><a href="#programming-turning-an-algorithm-into-code">Programming = turning an algorithm into code</a></h1>
+<p><strong>Problem =&gt; Algorithm =&gt; Coding</strong></p>
+<p>Strictly speaking, to program is to explain to a computer how to carry out an algorithm (the second arrow), not to find an algorithm for a problem (first arrow).</p>
+<p>Although “AIP” means “Atelier d’introduction à la Programmation/Python” we will try to train you also on the first stage.</p>
+<p>. . .</p>
+<p>Examples of Problems:</p>
+<pre><code>- Cooking boiled eggs
+- Integer division of two numbers
+- Missile Pursuit (or animal chasing a prey)
+- Play a game like chess
+- Recover 3D information from stereoscopic images</code></pre>
+<p>Note: suggested readings David Marr (1982, <em>Vision</em>)’s three levels of description in cognitive science.</p>
+<div class="figure">
+<img src="img/marr.jpg" />
+</div>
+<h1 id="why-python"><a href="#why-python">Why Python</a></h1>
+<p>Because computers are stupid (that is, they lack a <em>theory of mind</em> and cannot guess your desires and intentions), you must provide very detailed and exhaustive instructions. The choice of the programming language is relevant here.</p>
+<p>There exist many programming languages (and also different computer architectures, e.g. parallel vs. serial)</p>
+<p>In 2000, we decided to use Python for the Atelier d’Experimentation, because it is:</p>
+<ul>
+<li>clean (the code can be relatively close to the algorithm)</li>
+<li>general-purpose (vs. Matlab)</li>
+<li>multiplatform</li>
+<li>free software</li>
+</ul>
+<p>. . .</p>
+<p>Learning to program takes time because it requires to master not only the semantic but also the syntax (=grammar) of the language.</p>
+<p>. . .</p>
+<p>Like learning to play an instrument, programming is a skill that you can only acquire by trying (and making <em>lots of</em> mistakes and correcting them!!!).</p>
+<p>Yes you can! Let’s go!</p>
+<h1 id="starting-fromwith-scratch"><a href="#starting-fromwith-scratch">Starting from/with Scratch</a></h1>
+<p>We not use Python for this first lecture!</p>
+<p><strong>Scratch</strong> (<a href="http://scratch.mit.edu">http://scratch.mit.edu</a>) was designed by the MIT media lab to teach kids how to program.</p>
+<p>Its main interest: programs are created using a graphical interface, preventing <em>syntactic errors</em> (thus, you can learn the language without learning the grammar!)</p>
+<p>One can either work online at <a href="https://scratch.mit.edu/projects/editor/?tip_bar=home">https://scratch.mit.edu/projects/editor/?tip_bar=home</a> or offline by downloading Scratch at</p>
+<ul>
+<li><a href="https://scratch.mit.edu/scratch_1.4/">https://scratch.mit.edu/scratch_1.4/</a> (version 1)</li>
+<li><a href="https://scratch.mit.edu/scratch2download/">https://scratch.mit.edu/scratch2download/</a> (version 2)</li>
+</ul>
+<p>You may want to run the tutorial “Getting Started with Scratch” on the website.</p>
+<h1 id="first-steps"><a href="#first-steps">First steps</a></h1>
+<h3 id="program-001"><a href="#program-001">Program 001</a></h3>
+<p>In the ‘motion’ group, take the instruction ‘turn 15 degrees’ and drag it onto the ‘Scripts’ panel.</p>
+<div class="figure">
+<img src="img/scratch_001.png" />
+</div>
+<p>Double-Click repeatedly on the block ‘turn 15 degrees’, you should see the cat (‘sprite 1’) rotate.</p>
+<p>In Scratch, when one double-clicks an instruction in the ‘Scripts’ panel, the computer <strong>executes</strong> it.</p>
+<h3 id="program-002"><a href="#program-002">Program 002</a></h3>
+<p>Drag the instruction ‘move 10 steps’ from the motion group, and add it to the bottom of the instruction ‘turn 15 degrees’. Change the value ‘10’ into ‘50’.</p>
+<div class="figure">
+<img src="img/scratch_002.png" />
+</div>
+<p>You have just created a <strong>block</strong> of instructions, that is, your first <strong>program</strong> or <strong>script</strong>, Bravo!</p>
+<ul>
+<li>Double-Click on the block and see the sprite moving.</li>
+<li>Note that inside a block, instructions are exectuted <em>sequentially</em>, one after the other. <strong>Can you prove it</strong>?</li>
+<li>Experiment with changing the <strong>argument</strong> of the instruction ‘move’ (Tip: to clear the drawing area, move the instruction ‘pen/clear’ to the script window and execute it)</li>
+</ul>
+<h3 id="program-003"><a href="#program-003">Program 003</a></h3>
+<p>Click on the ‘pen’ group, and add ‘pen down’ at the top of the block.</p>
+<div class="figure">
+<img src="img/scratch_003.png" />
+</div>
+<p>Run it.</p>
+<h3 id="program-004"><a href="#program-004">Program 004</a></h3>
+<p>Construct the following scripts and play with them until you are sure to understand the behavior of the computer..</p>
+<div class="figure">
+<img src="img/scratch_004.png" />
+</div>
+<h1 id="concepts-learned-so-far"><a href="#concepts-learned-so-far">Concepts learned so far</a></h1>
+<ul>
+<li>Instruction</li>
+<li>Argument of an instruction (change ‘10’ in ‘move 10 steps’)</li>
+<li>Block of instructions and sequential execution</li>
+</ul>
+<h1 id="loops"><a href="#loops">Loops</a></h1>
+<h1 id="repeat-for-loop"><a href="#repeat-for-loop">repeat (‘for’ loop)</a></h1>
+<p>Computers are good at doing tasks repeatedly (as they do not get tired).</p>
+<p>Click on the “Control” group, and try to construct the following script:</p>
+<div class="figure">
+<img src="img/scratch_repeat.png" />
+</div>
+<ul>
+<li>Clicking on the ‘green’ flag will execute the block of instructions</li>
+<li>The ‘Repeat’ instruction executes the inner block of instruction a number of times specified as an argument. This is called a <strong>loop</strong></li>
+<li>Adjust the parameter of the Repeat instruction so that the sprite draws a full circle when you click once on the green flag.</li>
+<li>Replace the repeat instruction by ‘forever’.</li>
+</ul>
+<h3 id="repeat-until"><a href="#repeat-until">Repeat until</a></h3>
+<p>Modify the script as follows:</p>
+<div class="figure">
+<img src="img/repeat_until.png" />
+</div>
+<p>Tip: the condition ‘key space pressed?’ is in the ‘Sensing’ group.</p>
+<p>This illustrates a <strong>repeat…until loop</strong>: the inner block is executed until the <strong>condition</strong> is satisfied.</p>
+<h1 id="two-sprites"><a href="#two-sprites">Two sprites</a></h1>
+<p>Add a new sprite, and duplicate the script from sprite1. Click on the green flag. You should see the two sprites running in circles.</p>
+<div class="figure">
+<img src="img/two_sprites.png" />
+</div>
+<p>Remark that the scripts associated to the two sprites run in <em>parallel</em> (rather than sequentially).</p>
+<h1 id="conditional-execution-or-branching"><a href="#conditional-execution-or-branching">Conditional execution or branching</a></h1>
+<p>Create a new scratch project, and change the costume of the sprite into a ball.</p>
+<p>Then write and execute the following script.</p>
+<div class="figure">
+<img src="img/condition_001.png" />
+</div>
+<p>You should see the ball bounce on the edges.</p>
+<h1 id="first-series-of-exercices"><a href="#first-series-of-exercices">First series of exercices</a></h1>
+<ol style="list-style-type: decimal">
+<li><p>With Scratch, use the instructions “pen down” and “move” and “turn” to (a) make the cat draw a square (with sides measuring 100 steps) (b) draw an hexagon (c) draw a circle</p></li>
+<li><p>Using the Control/Forever, make the cat turn continuously along a circle.</p></li>
+<li>Bouncing ball</li>
+</ol>
+<ul>
+<li>Delete the cat. Using new sprite/open, add a ball.</li>
+<li>Make the ball move automatically horizontally from left to right and bounce when it touches an edge (tip: use Control/forever)</li>
+<li>Make the ball follow the mouse.</li>
+<li>Add a second ball that follows the first.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Create a script that asks for your name and then displays “Hello <your_name>!”. Tip: use the instructions ‘sensing/ask’, ‘looks/say’ and ‘operator/join’ and the variable ‘sensing/answer’.</li>
+</ol>
+<p>. . .</p>
+<div class="figure">
+<img src="img/hello.png" />
+</div>
+<p>. . .</p>
+<h1 id="variables"><a href="#variables">Variables</a></h1>
+<p>Using the group ‘variable’, we are going to create a <strong>variable</strong> ‘a’ and make it display continuously the x-coordinate of the ball.</p>
+<div class="figure">
+<img src="img/condition_002.png" />
+</div>
+<p>The concept of <strong>variable</strong> is very important. You can think of it as a name for a object that can change (here the object is a number).</p>
+<p>Now study the following script:</p>
+<div class="figure">
+<img src="img/function_001.png" />
+</div>
+<p>The loop is executed 100 times. Each time, the value of the variable <code>a</code> is incremented by 1, and is used to compute new <code>x</code> and <code>y</code> coordinates where to sprite is instructed to moved to.</p>
+<div class="figure">
+<img src="img/xy-function.png" />
+</div>
+<h1 id="second-series-of-exercices"><a href="#second-series-of-exercices">Second series of exercices</a></h1>
+<ol style="list-style-type: decimal">
+<li>‘Multiply by adding’. Write a program that reads in two integer numbers and displays their sum.</li>
+</ol>
+<p>. . .</p>
+<div class="figure">
+<img src="img/multiply.png" />
+</div>
+<p>. . .</p>
+<ol start="2" style="list-style-type: decimal">
+<li>“Guess a number”. Make Scratch pick up a random number in the interval [1,100], and loop asking you for a guess and reply either ‘too low’, ‘too high’, or ‘you win!’ depending on your answer.</li>
+</ol>
+<p>. . .</p>
+<div class="figure">
+<img src="img/guess-a-number.png" />
+</div>
+<p>. . .</p>
+<ol start="3" style="list-style-type: decimal">
+<li>We are going to estimate the number PI by a Monte Carlo method.:</li>
+</ol>
+<ul>
+<li>Repeatly (e.g. 2000 times) picks up two random numbers on the interval [-1, 1]. This corresponds to a dot inside a square of size 2x2.</li>
+<li>Count how many times the dot falls within the circle of radius 1 centered on the origin (Pythagore helps you here: the dot is within the circle iff <code>(x * x + y * y) &lt; 1</code>.)</li>
+<li>The proportion of dots falling within the circle, multiplied by four (the area of the square), is an estimate of teh area of the disk, that is, the number pi.</li>
+</ul>
+<p>. . .</p>
+<div class="figure">
+<img src="img/estimation-of-pi.png" />
+</div>
+<p>. . .</p>
+<ol start="4" style="list-style-type: decimal">
+<li>“Spirograph”.</li>
+</ol>
+<div class="figure">
+<img src="img/Spirograph.jpg" />
+</div>
+<p>The aim of this exercice is to recreate the Spirograph patterns.</p>
+<p>First, check out the demo at <a href="http://www.mathplayground.com/Spiromath.html">http://www.mathplayground.com/Spiromath.html</a>. With the help of the mathematical equations provided at <a href="http://www.mathematische-basteleien.de/spirographs.htm">http://www.mathematische-basteleien.de/spirographs.htm</a> write a scratch program that draws these figures.</p>
+<p>. . .</p>
+<p>There are several examples on the scratch web site. You can study their code:</p>
+<ul>
+<li>Kitty graphics <a href="https://scratch.mit.edu/projects/5542/">https://scratch.mit.edu/projects/5542/</a></li>
+<li>Spirograph <a href="https://scratch.mit.edu/projects/3240756/">https://scratch.mit.edu/projects/3240756/</a></li>
+<li>Math-connection
+<ul>
+<li><a href="https://scratch.mit.edu/studios/134/">https://scratch.mit.edu/studios/134/</a></li>
+<li><a href="https://scratch.mit.edu/projects/2984543/">https://scratch.mit.edu/projects/2984543/</a></li>
+</ul></li>
+</ul>
+<p>. . .</p>
+</body>
+</html>

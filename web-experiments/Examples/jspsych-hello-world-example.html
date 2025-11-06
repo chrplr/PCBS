@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>A simple jsPsych experiment</title>
+</head>
+<body>
+  <script src = "../jspsych-7.3.0/jspsych.js"></script>
+  <script
+    src = "../jspsych-7.3.0/plugins/plugin-html-keyboard-response.js">
+  </script>
+
+  <script type="text/javascript">
+    let timeline = []
+
+    const jsPsych = initJsPsych();
+
+    const hello_trial = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: "Hello world!",
+    }
+
+    jsPsych.run([hello_trial]);
+  </script>
+</body>

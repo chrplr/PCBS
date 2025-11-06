@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+  <title>MySquare</title>
+</head>
+<body style = "background-color: white">
+    <script>
+      let square = document.createElement('div');
+      square.id = "my-square";
+      square.style.background = "red";
+      square.style.position = "absolute";
+      square.style.width = "200px";
+      square.style.height = "200px";
+      square.style.top = "50vh";
+      square.style.left = "50vw";
+      square.style.transform = "translate(-50%, -50%)";
+
+      // Do not forget to add your element to the document!
+      document.body.appendChild(square)
+    </script>
+</body>

@@ -1,0 +1,102 @@
+Comparing the means of several independent groups
+=================================================
+
+christophe@pallier.org
+
+```{r echo=FALSE}
+rm(list=ls())
+par(las=1, mar=c(2,3,1,1),mfrow=c(1,1))
+
+# the "standard error" function
+se <- function(x) { sd(x)/sqrt(length(x)) }
+```
+
+```{r oneway_anova_indepgroups_continous, echo=FALSE}
+ns <- c(60,56,57,60,55)
+ngroups <- length(ns)
+effects <- c(5,5,6,5,4)
+
+group <- factor(rep(paste('Gr',1:ngroups,sep=''), ns))
+y <- rep(effects, ns) + rep(rnorm(ngroups), ns) + rnorm(sum(ns))
+write.csv(data.frame(group, y), "oneway.csv")
+rm(group, y)
+```
+
+Data are in a spreasheet format, in `oneway.csv`
+
+```{r}
+ow <- read.csv('oneway.csv')
+head(ow)
+str(ow)
+```
+
+We can perform the same operations as we did for the two samples case.
+
+
+### Graphical explorations
+
+```{r}
+attach(ow)
+hist(y)
+plot(y ~ group)
+stripchart(y ~ group, vertical=TRUE)
+for (g in group) { plot(density(y[group==g]), main=g); rug(y[group==g])}
+detach(ow)
+```
+
+### Descriptive stats
+
+```{r}
+attach(ow)
+signif(tapply(y, group, mean),3)
+signif(tapply(y, group, median), 3)
+signif(tapply(y, group, sd), 3)
+
+
+signif(tapply(y, group, se), 3)
+
+detach(ow)
+```
+
+### Inferential statistics
+
+
+```{r ezanova}
+require(ez)
+ow$sub <- factor(1:nrow(ow))
+ez_model <- ezANOVA(data=ow,
+                    wid=sub,
+                    dv=y,
+                    between = group)
+print(ez_model)
+
+ow$sub <- factor(1:nrow(ow))
+ezPlot(data = ow,
+       dv = y,
+       wid=sub,
+       between = group,
+       x = group)  
+  
+```
+
+```{r anova}
+summary(av <- aov(y ~ group, data=ow))
+TukeyHSD(av)
+plot(TukeyHSD(av))
+```
+
+
+The output of `lm` provides additonal information
+```{r lm}
+contrasts(ow$group) <- contr.treatment
+summary(lmtr <- lm(y ~ group, data=ow))
+
+contrasts(ow$group) <- contr.sum
+summary(lmsum <- lm(y ~ group, data=ow))
+
+```
+ 
+
+
+ 
+ 

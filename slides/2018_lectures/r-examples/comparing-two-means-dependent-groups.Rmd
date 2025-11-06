@@ -1,0 +1,237 @@
+Comparing two treatments
+========================
+
+christophe@pallier.org
+
+```{r echo=FALSE}
+rm(list=ls())
+par(las=1, mar=c(2,3,1,1),mfrow=c(1,1))
+
+# the "standard error" function
+se <- function(x) { sd(x)/sqrt(length(x)) }
+```
+
+In the previous section, the data from the two groups were assumed to be independent. If there is some pairing, for example if data were acquired in the same unit under two conditions, then the data are not independent. The simplest way to perform the data analysis is to  examine the differences between the two conditions computed over each unit.
+
+
+Here data come organized a long table format with one measure per row, and condition and subject as variables. This less convenient to compute the differences within subjects than a short format with one subject per row, and one column per condition, but better to run linear model. To convert from one representation to the other, see stack, reshape2, plyr...
+
+```{r pairedtest, echo=FALSE}
+n <- 20 
+effsize <- 1
+tc <- data.frame(sub=factor(paste('s', rep(1:n, each=2), sep='')),
+                 cond=factor(rep(1:2, n)),
+                 y=10+rep(rnorm(n),each=2) + rep(c(0, effsize), n) + rnorm(2*n)
+                 )
+write.csv(tc, "twotreat.csv")
+rm(n, effsize, tc)
+```
+
+```{r}
+tc <- read.csv("twotreat.csv")
+head(tc)
+str(tc)
+tc$sub <- factor(tc$sub) # make sure these vars are factors
+tc$cond <- factor(tc$cond)
+table(tc$sub)
+```
+
+(I assume that thereare no repeated measures within subject and treatment. If this is the case with your dataset, use aggregate or melt)
+
+### Graphical explorations
+
+```{r}
+with(tc, interaction.plot(cond, sub, y))
+```
+
+Fancier graphs can be obtained with lattice:
+
+```{r}
+require(lattice)
+xyplot(y ~ cond, group=sub, data=tc, type='l')
+```
+
+```{r}
+xyplot(y ~ cond | sub, data=tc, type='l')
+```
+
+We can also remove to main effects of subjects, as we are interested in the difference between condition within subjects:
+
+```{r}
+attach(tc)
+tc$ycorr <- y + mean(y) - tapply(y, sub, mean)[sub]
+detach(tc)
+attach(tc)
+par(mfcol=c(1,2))
+interaction.plot(cond, sub, y, main='original data')
+interaction.plot(cond, sub, ycorr, main='after removing intersub var')
+par(mfcol=c(1,1))
+detach(tc)
+```
+### Descriptive stats
+```{r}
+with(tc, signif(tapply(y, cond, mean)))
+
+# compute differences
+c1 <- levels(tc$cond)[1]
+c2 <- levels(tc$cond)[2] 
+
+s1 <- tc$sub[tc$cond==c1]
+y1 <- tc$y[tc$cond==c1][order(s1)]
+
+s2 <- tc$sub[tc$cond==c2]
+y2 <- tc$y[tc$cond==c2][order(s2)]
+
+summary(y1-y2)
+se(y1-y2) # standard error of the effect
+
+# Check if the pairing was useful?
+cor.test(y1, y2)
+
+```
+
+### Inferential stats
+
+```{r}
+t.test(y1, y2, paired=T)
+```
+
+Linear model approach
+
+```{r}
+(sm <- summary(model_lm <- lm(y ~ cond + sub, data=tc)))
+(diff <-sm$coefficients[2,'Estimate'])
+(diffse <- sm$coefficients[2,'Std. Error'])
+```
+
+
+In this simple situation, mixed effect models will yield the same p-values:
+
+```{r}
+
+require(nlme)
+(model_lme <- lme(y ~ cond, random=~1|sub, data= tc))
+summary(model_lme)
+
+# plot(ranef(model_lme))
+# plot(res_lme <- residuals(model_lme))
+# qqnorm(res_lme)
+# qqline(res_lme)
+# plot(model_lme)
+```
+
+```{r}
+require(lme4)
+(model_lmer <- lmer(y ~ cond + (1|sub), data= tc))
+summary(model_lmer)
+# qqmath(ranef(model_lmer))
+```
+
+See http://freshbiostats.wordpress.com/2013/07/28/mixed-models-in-r-lme4-nlme-both/
+
+Bootstrap confidence interval for the difference
+
+```{r}
+require(boot)
+samplemean <- function(x, d) { mean(x[d]) }
+b <- boot(y1-y2, samplemean, 1000)
+boot.ci(b)
+```
+
+
+### Plots
+
+The errors bars can either represent the standard errors (or confidence intervals) of the means of each treatment, *or* the standard error bar for the difference between the two treatments when intersubject variability is taken out. 
+
+First graphics: with the std.err. of the means:
+
+```{r}
+attach(tc)
+par(mfrow=c(1,1))
+
+means <- tapply(y, cond, mean)
+(ses <- tapply(y, cond, se))
+
+ysca = c(min(means-3*ses), max(means+3*ses))
+
+mp <- barplot(means, ylim=ysca, xpd=F)
+arrows(mp, means-ses, 
+       mp, means+ses, 
+       code=3, angle=90)
+
+detach(tc)
+```
+
+If we remove the between Ss variability
+
+```{r}
+attach(tc)
+par(mfrow=c(1,1))
+    
+means <- tapply(y, cond, mean)
+(ses <- tapply(ycorr, cond, se))
+
+ysca = c(min(means-3*ses), max(means+3*ses))
+
+mp <- barplot(means, ylim=ysca, xpd=F)
+arrows(mp, means-ses, 
+       mp, means+ses, 
+       code=3, angle=90)
+
+detach(tc)
+```
+
+If we take the standard error from the regression:
+
+```{r}
+(sm <- summary(model_lm <- lm(y ~ cond + sub, data=tc)))
+diff <-sm$coefficients[2,'Estimate']
+diffse <- sm$coefficients[2,'Std. Error']
+
+attach(tc)
+par(mfrow=c(1,1))
+    
+means <- tapply(y, cond, mean)
+(ses <- rep(diffse, length(means)))
+ 
+ysca = c(min(means-3*ses), max(means+3*ses))
+
+mp <- barplot(means, ylim=ysca, xpd=F)
+arrows(mp, means-ses, 
+       mp, means+ses, 
+       code=3, angle=90)
+
+detach(tc)
+
+```
+
+A much nicer plot can be constructed, with confidence intervals for the means and for their difference (Cumming, Geoff, and Sue Finch. 2005. “Inference by Eye: Confidence Intervals and How to Read Pictures of Data.” American Psychologist 60 (2): 170–180.)
+
+
+```{r}
+attach(tc)
+m1 <- t.test(y[cond==1])$conf.int
+m2 <- t.test(y[cond==2])$conf.int
+di <- diff(t.test(y1-y2)$conf.int)
+ysca <- c(min(c(m1,m2)-0.1*diff(range(c(m1,m2)))),
+          max(c(m1,m2)+0.1*diff(range(c(m1,m2)))))
+          
+plot(c(Gr1=1, Gr2=2, difference=3),
+     c(mean(m1), mean(m2), mean(m2)),
+     pch=c(16,16,17), xlim=c(0.5, 3.5), ylim=ysca, axes=F, xlab='', ylab='')
+axis(2, las=1)
+axis(1,at=1:3,labels=c('cond1','cond2','difference'))
+arrows(1:3, c(m1[1], m2[1], mean(m2)-di/2),
+       1:3, c(m1[2], m2[2], mean(m2)+di/2),
+       code=3, angle=90)
+abline(h=mean(m1), lty=2)
+abline(h=mean(m2), lty=2)
+detach(tc)
+```
+
+```{r}
+require(gplots)
+par(mfcol=(c(1,2)))
+plotmeans(y ~ cond, data=tc)
+plotmeans(ycorr ~ cond, data=tc)
+```

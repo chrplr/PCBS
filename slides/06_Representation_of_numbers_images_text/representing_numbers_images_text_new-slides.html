@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Christophe@pallier.org" />
+  <title>How numbers, images and texts are represented in the computer</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="../css/styles/slidy.css" />
+  <script src="../css/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">How numbers, images and texts are represented in the computer</h1>
+  <p class="author">
+Christophe@pallier.org
+  </p>
+  <p class="date">Sept. 2015</p>
+</div>
+<div id="representation-of-integers" class="slide section level1">
+<h1><a href="#representation-of-integers">Representation of integers</a></h1>
+<p><em>There are 10 kinds of people: those who count in binary and the others.</em></p>
+<p>Computers represent everything as series of 0 and 1, also known as <em>bits</em> (for “binary digits”).</p>
+<p>Just like a number can be written in base 10, it can be written in base 2 (or in any other base):</p>
+<pre><code>12 = 10  + 2 = 1.(10^1) + 2.(10^0) 
+12 = 8 + 4 = 2^3 + 2^1 =&gt; 1010
+
+33 = 30  + 3 = 3.(10^1) + 3.(10^0)
+33 = 32 + 1 = 2^5 + 2^0 =&gt; 100001</code></pre>
+<p>The binary representions of the first integers:</p>
+<pre><code>1 :   1
+2 :  10
+3 :  11
+4 : 100
+5 : 101
+6 : 110
+7 : 111
+...</code></pre>
+<p>Remember that a number represented by four digits “d3 d2 d1 d0” in a basis ‘b’, has a value of d3<em>b^3 + d2</em>b^2 + d1<em>b^1 + d0</em>b^0</p>
+<ul>
+<li>In binary, there are only two possibilities for the digits: {0,1}</li>
+<li>In decimal, 10 possible characters</li>
+<li>In hexadecimal, 16 possible characters 0-9, A, B, C, D, E, F (D8F1 = 14<em>16^3 + 8</em>10^2 + 15<em>16^1 + 1</em>16^0)</li>
+</ul>
+<p>To learn more about how integer numbers are represented in binary format, you can check out <a href="http://csunplugged.org/binary-numbers">http://csunplugged.org/binary-numbers</a></p>
+<ol style="list-style-type: example">
+<li>Convert (manually) into decimal the following binary numbers:</li>
+</ol>
+<ul>
+<li>101</li>
+<li>1000</li>
+<li>1011</li>
+<li>11111111</li>
+</ul>
+<div class="incremental">
+<p><em>Answer:</em> 5, 8, 11, 255</p>
+<h2 id="from-binary-to-decimal"><a href="#from-binary-to-decimal">From binary to decimal</a></h2>
+<ol start="2" style="list-style-type: example">
+<li>Let us write a function that, given the binary representation of a number as a string of ‘0’ and ‘1’, returns its value as a integer.</li>
+</ol>
+<ol style="list-style-type: decimal">
+<li>Let us first suppose that we want to convert a string containing exactly 8 binary digits (e.g. ‘01011010’) into decimal. How would you do that?</li>
+</ol>
+<p>. . .</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> todec8bits(s):
+    <span class="kw">return</span> <span class="dt">int</span>(s[<span class="dv">0</span>])*<span class="dv">128</span> + <span class="dt">int</span>(s[<span class="dv">1</span>])*<span class="dv">64</span> + <span class="dt">int</span>(s[<span class="dv">2</span>])*<span class="dv">32</span> + \
+           <span class="dt">int</span>(s[<span class="dv">3</span>])*<span class="dv">16</span> + <span class="dt">int</span>(s[<span class="dv">4</span>])*<span class="dv">8</span> + <span class="dt">int</span>(s[<span class="dv">5</span>])*<span class="dv">4</span> + \
+           <span class="dt">int</span>(s[<span class="dv">6</span>])*<span class="dv">2</span> + <span class="dt">int</span>(s[<span class="dv">7</span>])
+
+todec8bits(<span class="st">&quot;01010101&quot;</span>)</code></pre>
+<p>One issue with this code:</p>
+<pre class="sourceCode python"><code class="sourceCode python">todec8bits(<span class="st">&quot;0101010&quot;</span>)
+todec8bits(<span class="st">&quot;010101010&quot;</span>)</code></pre>
+<p>Remark: on your computers, integers are represented either as 32 or 64 bits, depending on your processor/operating system.</p>
+<p>Why is this is relevant: suppose you perform an EEG recording with 256 electrodes every milliseconds for one hour. How large is the data?</p>
+<p>Beware: your computer can make mistakes if you add too large numbers!!!</p>
+<p>Another solution demonstrating several new Pythonic constructions that we have not seen yet:</p>
+<pre class="sourceCode python"><code class="sourceCode python">pow2 = [<span class="dv">2</span> ** n <span class="kw">for</span> n in <span class="dt">range</span>(<span class="dv">7</span>, -<span class="dv">1</span>, -<span class="dv">1</span>)]
+n = <span class="dv">0</span>
+<span class="kw">for</span> b, p in <span class="dt">zip</span>(s, pow2):
+    n += <span class="dt">int</span>(b) * p
+<span class="dt">print</span>(n)</code></pre>
+<p>. . .</p>
+<p>We could modify it to adapt to the size of the string ‘s’.</p>
+<p>My favorite which has the advantage of working with strings of unlimited size:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> todec(s):
+    <span class="co">&quot;&quot;&quot; convert a string of 0 and 1 representing a binary number into an integer &quot;&quot;&quot;</span>
+    n = <span class="dv">0</span>
+    <span class="kw">for</span> b in s:
+        n = n * <span class="dv">2</span> + <span class="dt">int</span>(b)
+    <span class="kw">return</span> n
+
+<span class="kw">for</span> i in [<span class="st">&#39;101&#39;</span>, <span class="st">&#39;1000&#39;</span>, <span class="st">&#39;1011&#39;</span>, <span class="st">&#39;11111111&#39;</span>]:
+    <span class="dt">print</span>(todec(i))</code></pre>
+</div>
+</div>
+<div class="slide section level1">
+
+<h2 id="from-decimal-to-binary"><a href="#from-decimal-to-binary">From decimal to binary</a></h2>
+<ol start="3" style="list-style-type: example">
+<li>Now we will go in the other direction: Our aim is to write a program that, given a number (in decimal), computes its binary representation.</li>
+</ol>
+<p>If you have an idea how to program it, please proceed. If not, we propose that you follow the following steps:</p>
+<ol start="4" style="list-style-type: example">
+<li>Study the program below. Execute it with various values of the variable <em>num</em>. Do you understand the last line? Do you see a limitation of this program?</li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python">num = <span class="dv">143</span>
+d3 = <span class="dt">int</span>(num/<span class="dv">1000</span>) % <span class="dv">10</span> <span class="co"># thousands</span>
+d2 = <span class="dt">int</span>(num/<span class="dv">100</span>)  % <span class="dv">10</span> <span class="co"># hundreds</span>
+d1 = <span class="dt">int</span>(num/<span class="dv">10</span>)   % <span class="dv">10</span> <span class="co"># dec</span>
+d0 =  num % <span class="dv">10</span>
+<span class="dt">print</span>(<span class="dt">str</span>(d3) + <span class="dt">str</span>(d2) + <span class="dt">str</span>(d1) + <span class="dt">str</span>(d0))</code></pre>
+<ol start="5" style="list-style-type: example">
+<li>Adapt the above program to print the binary representation of num</li>
+</ol>
+<p>. . .</p>
+<pre class="sourceCode python"><code class="sourceCode python">num = <span class="dv">17</span>
+b0 = num % <span class="dv">2</span>
+b1 = <span class="dt">int</span>(num/<span class="dv">2</span>) % <span class="dv">2</span>
+b2 = <span class="dt">int</span>(num/<span class="dv">4</span>) % <span class="dv">2</span>
+b3 = <span class="dt">int</span>(num/<span class="dv">8</span>) % <span class="dv">2</span>
+b4 = <span class="dt">int</span>(num/<span class="dv">16</span>)  % <span class="dv">2</span>
+b5 = <span class="dt">int</span>(num/<span class="dv">32</span>)  % <span class="dv">2</span>
+b6 = <span class="dt">int</span>(num/<span class="dv">64</span>)  % <span class="dv">2</span>
+b7 = <span class="dt">int</span>(num/<span class="dv">128</span>) % <span class="dv">2</span>
+b8 = <span class="dt">int</span>(num/<span class="dv">256</span>) % <span class="dv">2</span>
+<span class="dt">print</span>(<span class="dt">str</span>(b8) + <span class="dt">str</span>(b7) +  <span class="dt">str</span>(b6) + <span class="dt">str</span>(b5) + <span class="dt">str</span>(b4) + <span class="dt">str</span>(b3) + <span class="dt">str</span>(b2) + <span class="dt">str</span>(b1) + <span class="dt">str</span>(b0))</code></pre>
+<p>. . .</p>
+<ol start="6" style="list-style-type: example">
+<li>Modify the above program to print the binary representations of every number between 0 and 255.</li>
+</ol>
+<p>. . .</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> tobin(num):
+    b7 = <span class="dt">int</span>(num/<span class="dv">128</span>) % <span class="dv">2</span>
+    b6 = <span class="dt">int</span>(num/<span class="dv">64</span>)  % <span class="dv">2</span>
+    b5 = <span class="dt">int</span>(num/<span class="dv">32</span>)  % <span class="dv">2</span>
+    b4 = <span class="dt">int</span>(num/<span class="dv">16</span>)  % <span class="dv">2</span>
+    b3 = <span class="dt">int</span>(num/<span class="dv">8</span>) % <span class="dv">2</span>
+    b2 = <span class="dt">int</span>(num/<span class="dv">4</span>) % <span class="dv">2</span>
+    b1 = <span class="dt">int</span>(num/<span class="dv">2</span>) % <span class="dv">2</span>
+    b0 = num % <span class="dv">2</span>
+    <span class="kw">return</span> (<span class="dt">str</span>(b7) +  <span class="dt">str</span>(b6) + <span class="dt">str</span>(b5) + <span class="dt">str</span>(b4) + \
+            <span class="dt">str</span>(b3) + <span class="dt">str</span>(b2) + <span class="dt">str</span>(b1) + <span class="dt">str</span>(b0))
+
+<span class="kw">for</span> n in <span class="dt">range</span>(<span class="dv">256</span>):
+    <span class="dt">print</span>(n, tobin(n))</code></pre>
+<p>. . .</p>
+<ol start="7" style="list-style-type: example">
+<li>(Advanced) Write an improved version that uses a loop and does not have a limitation in size.</li>
+</ol>
+<p>. . .</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> binary(n):
+    <span class="kw">if</span> n==<span class="dv">0</span>:
+        <span class="kw">return</span> <span class="st">&quot;0&quot;</span>
+    s = <span class="st">&quot;&quot;</span>
+    <span class="kw">while</span> n &gt; <span class="dv">0</span>:
+        b = <span class="dt">str</span>(n % <span class="dv">2</span>)
+        s = b + s
+        n = n / <span class="dv">2</span>
+    <span class="kw">return</span> s</code></pre>
+<p>. . .</p>
+<ol start="8" style="list-style-type: example">
+<li>Study the following code. Do you understand why it works?</li>
+</ol>
+<pre><code>def binary(num):
+    if num == 0:
+        return &quot;0&quot;
+    if num == 1:
+        return &quot;1&quot;
+    return(binary(int(num /2)) + binary(num % 2))
+
+print(binary(1234))</code></pre>
+<p>. . .</p>
+<p><em>Answer:</em> It is a recursive function which calls itself. See <a href="http://en.wikipedia.org/wiki/Recursion_%28computer_science%29">http://en.wikipedia.org/wiki/Recursion_%28computer_science%29</a></p>
+<p>. . .</p>
+<p>Remark: measures of memory size</p>
+<ul>
+<li>1 byte = 8 bits</li>
+<li>1 Kilobyte (KB) = 1024 bytes</li>
+<li>1 Megabyte (MB) = 1024 kbytes = 1048576 bytes</li>
+<li>1 Gigabytes (GB) = 1024 Mbytes</li>
+<li>Terabyte, Petabyte, Exabyte…</li>
+</ul>
+<p>Exercice (advanced): Write a function that return the hexadecimal representation (base 16) of a number.</p>
+<p>To go further:</p>
+<ul>
+<li><p>If you want to know how negative integer numbers are represented, see <a href="http://en.wikipedia.org/wiki/Two%27s_complement">http://en.wikipedia.org/wiki/Two%27s_complement</a></p></li>
+<li><p>To understand how real numbers are encoded, read <a href="http://floating-point-gui.de/">What Every Programmer Should Know About Floating-Point Arithmetic</a> and <a href="https://docs.python.org/2/tutorial/floatingpoint.html#tut-fp-issues">https://docs.python.org/2/tutorial/floatingpoint.html#tut-fp-issues</a></p></li>
+</ul>
+</div>
+<div id="representation-of-text" class="slide section level1">
+<h1><a href="#representation-of-text">Representation of text</a></h1>
+<p>A text file is nothing but a sequences of characters.</p>
+<p>For a long time, characters were encoded using ASCII code.</p>
+<div class="figure">
+<img src="images/asciitable.jpg" alt="ascii table" /><p class="caption">ascii table</p>
+</div>
+<p>In Python, you can know the code of a character with the function <code>ord</code>:</p>
+<pre><code>print(ord(&#39;a&#39;))
+print(ord(&#39;@&#39;))</code></pre>
+<p>The inverse of <code>ord</code> is <code>chr</code>.</p>
+<ol start="9" style="list-style-type: example">
+<li>lookup the ASCII representation of your first name in the table and use the <code>chr</code> function of Python to print it.</li>
+</ol>
+<div class="incremental">
+<p>For example, if you name is ‘ZOE’, you would type:</p>
+<pre><code>print(chr(90)+chr(79)+chr(69))</code></pre>
+<p>Remark: <strong>ASCII</strong> codes use one byte (=8bits) per character. This is fine for English, but cannot cover all the caracters of all alphabets. It cannot even encode french accented letters.</p>
+<p><strong>Unicode</strong> was invented that associate a unique 2 bytes number to each character of any human script. It is possible to write text files using these number, but more economic to encode the most common letters with one byte, and keep the compatibility with ASCII (UTF-8).</p>
+<pre><code>print(&quot;&quot;.join([unichr(c) for c in range(20000, 21000)]))</code></pre>
+</div>
+</div>
+<div id="strings" class="slide section level1">
+<h1><a href="#strings">Strings</a></h1>
+<p>In Python, text can be stored in objects called <em>strings</em>.</p>
+<p>String constants are enclosed between single quotes</p>
+<pre><code>&#39;Bonjour le monde!&#39;</code></pre>
+<p>Or double quotes</p>
+<pre><code>&quot;Bonjour le monde !&quot;</code></pre>
+<p>Or “triple” quotes for multilines strings</p>
+<pre><code>&quot;&quot;&quot;
+Bonjour le monde!
+
+Longtemps je me suis levé de bonne heure,
+Les sanglots longs des violons,
+...
+&quot;&quot;&quot;</code></pre>
+<p>They have a type ‘str’.</p>
+<pre><code>&gt;&gt;&gt; type(&#39;bonjour&#39;)
+&lt;type &#39;str&#39;&gt;</code></pre>
+<p>To convert an object to a string representation:</p>
+<pre><code>str(10)
+a = dict(((&quot;a&quot;,1), (&quot;b&quot;,2)))
+str(a)</code></pre>
+<p>A string is nothing but a sequence of characters.</p>
+<pre><code>a = &#39;bonjour&#39;
+print(a[0])
+print(a[1])
+print(a[2])
+print(a[2:4])
+print(len(a))
+
+for c in &#39;bonjour&#39;:
+    print(c)</code></pre>
+<p>Operations on strings</p>
+<pre><code>a = &#39;bonjour&#39;
+b = &#39;hello&#39;
+a + b
+a + &#39; &#39; + b</code></pre>
+<p>A set of functions to manipulate strings is available in the module ‘string’.</p>
+<pre><code>import string
+string.upper(a)
+string.lower(&#39;ENS&#39;)</code></pre>
+<h2 id="searchreplace-a-substring-within-a-string"><a href="#searchreplace-a-substring-within-a-string">search/replace a substring within a string</a></h2>
+<pre><code>a = &#39;alain marie jean marc&#39;
+a.find(&#39;alain&#39;)
+a.find(&#39;marie&#39;)
+a.find(&#39;ma&#39;)
+a.find(&#39;marc&#39;)
+a.find(&#39;o&#39;)
+
+a.replace(&#39;marie&#39;,&#39;claude&#39;)
+a</code></pre>
+<h2 id="splitting-a-strings-at-delimiters"><a href="#splitting-a-strings-at-delimiters">splitting a strings at delimiters</a></h2>
+<pre><code>a = &#39;alain marie jean marc&#39;
+a.split(&quot; &quot;)</code></pre>
+<p>Read (see <a href="https://docs.python.org/2/library/string.html]">https://docs.python.org/2/library/string.html</a>) to learn about more string functions.</p>
+</div>
+<div id="interactive-input-from-the-command-line" class="slide section level1">
+<h1><a href="#interactive-input-from-the-command-line">Interactive input from the command line:</a></h1>
+<pre class="sourceCode python"><code class="sourceCode python">name = <span class="dt">raw_input</span>(<span class="st">&#39;Comment vous appelez-vous ? &#39;</span>)
+
+<span class="dt">print</span> <span class="st">&quot;Bonjour &quot;</span> + name + <span class="st">&#39;!&#39;</span></code></pre>
+</div>
+<div id="reading-and-writing-to-text-files" class="slide section level1">
+<h1><a href="#reading-and-writing-to-text-files">Reading and writing to text files</a></h1>
+<ol>
+<li>With Atom, create a text file containing a few lines of arbitrary content, an save it under the filename ‘test.txt’</li>
+<li>with ipython running in the same directory where you saved test.txt</li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python">f = <span class="dt">file</span>(<span class="st">&#39;test.txt&#39;</span>)
+o = f.read()
+<span class="dt">print</span>(o)
+lines = o.split(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)
+<span class="dt">print</span>(lines)</code></pre>
+</div>
+<div id="counting-lines-and-words-in-a-text-file." class="slide section level1">
+<h1><a href="#counting-lines-and-words-in-a-text-file.">Counting lines and words in a text file.</a></h1>
+<p>Download <a href="http://www.pallier.org/cours/AIP2013/alice.txt">Alice in Wonderland</a></p>
+<pre class="sourceCode python"><code class="sourceCode python">f = <span class="dt">file</span>(<span class="st">&#39;alice.txt&#39;</span>)
+o = f.read()
+<span class="dt">print</span>(o)
+lines = o.split(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">n&quot;</span>)
+<span class="dt">print</span>(lines)</code></pre>
+<ol start="10" style="list-style-type: example">
+<li>Write a program that counts the number of lines, and number of words in alice.txt (we suppose that words are separated by spaces).</li>
+</ol>
+<div class="incremental">
+<pre class="sourceCode python"><code class="sourceCode python">f = <span class="dt">file</span>(<span class="st">&#39;alice.txt&#39;</span>)
+o = f.read()
+<span class="dt">print</span>(o)
+lines = o.split(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)
+
+nlines = <span class="dt">len</span>(lines)
+
+nw = <span class="dv">0</span>
+<span class="kw">for</span> l in lines:
+    nw += <span class="dt">len</span>(l.split(<span class="st">&quot; &quot;</span>))
+
+<span class="dt">print</span>(nlines)
+<span class="dt">print</span>(nw)</code></pre>
+</div>
+</div>
+<div class="slide section level1">
+
+<ol start="11" style="list-style-type: example">
+<li>Write a program that detects if a text file contains the word ‘NSA’</li>
+</ol>
+<div class="incremental">
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> spot_nsa(filename):
+    f = <span class="dt">file</span>(filename)
+    o = f.read()
+    lines = o.split(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)
+    found = <span class="ot">False</span>
+    <span class="kw">for</span> l in lines:
+        <span class="kw">if</span> <span class="st">&quot;NSA&quot;</span> in l.split(<span class="st">&quot; &quot;</span>):
+            found = <span class="ot">True</span>
+            <span class="kw">break</span>
+    <span class="kw">return</span> found</code></pre>
+</div>
+</div>
+<div id="representation-of-images" class="slide section level1">
+<h1><a href="#representation-of-images">Representation of images</a></h1>
+<p>Images can be stored either:</p>
+<ul>
+<li>as bitmaps, that is a two dimensional arrays of dots (formats: bmp, png, gif, jpeg…)</li>
+<li>as vectorized formats, the image contain instruction for drawing objects (eps, pdf, svg, …).</li>
+</ul>
+<p>Here we are just going to manipulate bitmaps.</p>
+<p>Each dot (pixel) is either ‘0’ (black) or ‘1’ (white).</p>
+<div class="figure">
+<img src="images/bitmap.jpg" />
+</div>
+<ol start="12" style="list-style-type: example">
+<li>What is the size in kilobytes of a 1024x768pixels black and white image ?</li>
+</ol>
+<div class="incremental">
+<p><em>Answer:</em> 1024*768/8/1024=96 KB</p>
+<ol start="13" style="list-style-type: example">
+<li>Execute the following code in ipython:</li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> numpy <span class="ch">as</span> np
+<span class="ch">import</span> matplotlib.pyplot <span class="ch">as</span> plt
+
+a = np.array([[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>],
+              [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>],
+              [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>],
+              [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>],
+              [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>],
+              [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>],
+              [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]])
+plt.imshow(a, cmap=plt.cm.gray, interpolation=<span class="st">&#39;nearest&#39;</span>)
+plt.show()</code></pre>
+<p>Numpy’s arrays are a new type of object. There are similar to lists, but optimised for mathematical computations. Notably, they can be multidimensional (i.e. you can use a[i,j] notation). You can learn more about arrays in the documents <a href="http://www.pallier.org/cours/AIP2013/python4science.pdf">http://www.pallier.org/cours/AIP2013/python4science.pdf</a> and <a href="http://wiki.scipy.org/Tentative_NumPy_Tutorial">http://wiki.scipy.org/Tentative_NumPy_Tutorial</a>.</p>
+<p>Here is another example:</p>
+</div>
+<div class="incremental">
+<pre class="sourceCode python"><code class="sourceCode python">a = np.zeros((<span class="dv">200</span>,<span class="dv">200</span>))
+<span class="kw">for</span> i in <span class="dt">range</span>(<span class="dv">200</span>):
+    a[i, i] = <span class="dv">1</span>
+plt.imshow(a, cmap=plt.cm.gray, interpolation=<span class="st">&#39;nearest&#39;</span>)
+plt.show()
+
+a[<span class="dv">0</span>:<span class="dv">200</span>:<span class="dv">2</span>,] = <span class="dv">1</span>
+plt.imshow(a, cmap=plt.cm.gray, interpolation=<span class="st">&#39;nearest&#39;</span>)
+plt.show()</code></pre>
+</div>
+</div>
+<div id="grey-level-pictures" class="slide section level1">
+<h1><a href="#grey-level-pictures">Grey level pictures</a></h1>
+<p>Each dot is now associated to an integer value, e.g. ranging from 0 to 255 for 8-bits codes, coding for a grey level (smaller=darker). Each dot needs one byte.</p>
+<p>How large is the file for an image 1024x768 pixels with 256 grey levels?</p>
+<p>The following code displays an image:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> scipy.misc
+l = scipy.misc.lena()
+plt.imshow(l,  cmap=plt.cm.gray)
+plt.show()</code></pre>
+<p>This code runs a low pass (averaging) filter on it:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> scipy.ndimage
+bl = scipy.ndimage.gaussian_filter(l, <span class="dv">3</span>)
+plt.imshow(bl,  cmap=plt.cm.gray)
+plt.show()</code></pre>
+<p><strong>Edge detector</strong> It is easy to implement an edge detector with a neural network. See <a href="https://courses.cit.cornell.edu/bionb2220/UnderstandingLateralInhibition.html">https://courses.cit.cornell.edu/bionb2220/UnderstandingLateralInhibition.html</a>.</p>
+<p>Using the <code>ndimage.convolve</code> function, apply the following filters to the image and diplay the results.</p>
+<pre class="sourceCode python"><code class="sourceCode python">kernel1 = np.array([[-<span class="dv">1</span>, -<span class="dv">1</span>, -<span class="dv">1</span>],
+                   [-<span class="dv">1</span>,  <span class="dv">8</span>, -<span class="dv">1</span>],
+                   [-<span class="dv">1</span>, -<span class="dv">1</span>, -<span class="dv">1</span>]])
+
+bl=scipy.ndimage.convolve(l,kernel1)
+plt.imshow(bl,  cmap=plt.cm.gray)
+plt.show()
+
+
+kernel2 = np.array([[-<span class="dv">1</span>, -<span class="dv">1</span>, -<span class="dv">1</span>, -<span class="dv">1</span>, -<span class="dv">1</span>],
+                   [-<span class="dv">1</span>,  <span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">1</span>, -<span class="dv">1</span>],
+                   [-<span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">4</span>,  <span class="dv">2</span>, -<span class="dv">1</span>],
+                   [-<span class="dv">1</span>,  <span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">1</span>, -<span class="dv">1</span>],
+                   [-<span class="dv">1</span>, -<span class="dv">1</span>, -<span class="dv">1</span>, -<span class="dv">1</span>, -<span class="dv">1</span>]])
+bl=scipy.ndimage.convolve(l,kernel2)
+plt.imshow(bl,  cmap=plt.cm.gray)
+plt.show()</code></pre>
+<p>More manipulations are available at <a href="http://scipy-lectures.github.io/advanced/image_processing/">http://scipy-lectures.github.io/advanced/image_processing/</a>.</p>
+<h3 id="colored-bitmaps"><a href="#colored-bitmaps">Colored bitmaps</a></h3>
+<p>Each dot is now associated to three bytes, representing the Red, Gree and Blue intensities (see <a href="http://www.colorpicker.com/">http://www.colorpicker.com/</a>).</p>
+<p>How large is the file for a 1024x768 RGB image?</p>
+<p>Exercice: What are the RGB triplets for BLACK, WHITE, RED, YELLOW?</p>
+</div>
+</body>
+</html>

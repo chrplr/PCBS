@@ -1,0 +1,6 @@
+--2023-09-08 11:19:35--  https://code.visualstudio.com/sha/download?build=stable
+Resolving code.visualstudio.com (code.visualstudio.com)... 13.107.213.42, 13.107.246.42, 2620:1ec:46::42, ...
+Connecting to code.visualstudio.com (code.visualstudio.com)|13.107.213.42|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2023-09-08 11:19:36 ERROR 404: Not Found.
+

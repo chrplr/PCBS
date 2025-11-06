@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Project</title>
+
+  
+     <link rel="stylesheet" href="file:///usr/lib/python3/dist-packages/darkslide/themes/default/css/base.css">
+  
+
+  
+     <link rel="stylesheet" href="file:///usr/lib/python3/dist-packages/darkslide/themes/default/css/print.css">
+  
+
+  
+     <link rel="stylesheet" href="file:///usr/lib/python3/dist-packages/darkslide/themes/default/css/screen.css">
+  
+
+  
+     <link rel="stylesheet" href="file:///usr/lib/python3/dist-packages/darkslide/themes/default/css/theme.css">
+  
+
+
+  
+    <script type="text/javascript" src="file:///usr/lib/python3/dist-packages/darkslide/themes/default/js/slides.js"></script>
+  
+
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: proj.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>Project</h1></header>
+            
+            
+            <section><ol>
+<li>
+<p>Take an experimental paradigm (classic or not), program it (variations are  welcome!). </p>
+</li>
+<li>
+<p>Write good documentation (website in form of github pages) so that other people can use your code.</p>
+</li>
+<li>
+<p>(optional) If possible:</p>
+<ul>
+<li>run it on a few pilot subjects, </li>
+<li>perform  succinct data exploration (descriptive stats and graphics)</li>
+<li>include a short report on the webpage of the project. </li>
+</ul>
+</li>
+</ol>
+<p>See example at <a href="https://chrplr.github.io/PCBS-LexicalDecision/">https://chrplr.github.io/PCBS-LexicalDecision/</a></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="proj.md">proj.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/3
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: proj.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            
+            <section><p><a href="https://chrplr.github.io/PCBS-LexicalDecision/">https://chrplr.github.io/PCBS-LexicalDecision/</a></p>
+<pre><code>git clone https://github.com/chrplr/PCBS-LexicalDecision.git
+cd PCBS-LexicalDecision
+cat README.md
+</code></pre>
+<p>=&gt; you will need to learn <strong>Markdown</strong>.</p>
+<ul>
+<li>short: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></li>
+<li>long: <a href="https://www.markdownguide.org/">https://www.markdownguide.org/</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="proj.md">proj.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/3
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: proj.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h1>Using Git</h1></header>
+            
+            
+            <section><p>Locally:</p>
+<pre><code>git init
+
+git status
+git add &lt;files&gt;
+git commit
+
+
+git status
+git add &lt;files&gt;
+git commit
+
+
+git log
+git checkout &lt;commit_id&gt;
+</code></pre>
+<p>Link to another repository, e.g. on github</p>
+<pre><code>git remote add &lt;name&gt; &lt;URL&gt;
+git push
+git pull
+</code></pre>
+<p>Let's try it... </p>
+<p>See <a href="https://pcbs.rtfd.io/en/latest/tools-for-reproducible-science.html">https://pcbs.rtfd.io/en/latest/tools-for-reproducible-science.html</a></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="proj.md">proj.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/3
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+
+<!-- macro for generating subsection of TOC -->
+
+<!-- end of macro -->
+
+      <!-- generating sections of TOC -->
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide:1">Project</a></th>
+        <td><a href="#slide:1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide:3">Using Git</a></th>
+        <td><a href="#slide:3">3</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide next slide</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+    <br>
+    <strong>Generated with Darkslide 6.0.0</strong>
+  </div>
+  <script>main()</script>
+</body>
+</html>

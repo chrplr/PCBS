@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <title>Kanisza square</title>
+  <link rel="stylesheet" href ="./shapes.css"></link>
+</head>
+<body style = "background-color: gray">
+
+  <!-- Note: Here we reach the limits of pure HTML... -->
+  <svg
+      id = "top-left-circle"
+      style = "
+      height: 100px; width: 100px;
+      position: absolute;
+      top: calc(50% - 100px); left: calc(50% - 100px);
+      transform: translate(-50%, -50%)">
+    <circle cx="50" cy="50" r="50" fill="black"/>
+  </svg>
+
+  <svg
+    id = "top-right-circle"
+    style = "
+      height: 100px; width: 100px;
+      position: absolute;
+      top: calc(50% - 100px); left: calc(50% + 100px);
+      transform: translate(-50%, -50%)">
+    <circle cx="50" cy="50" r="50" fill="black"/>
+  </svg>
+
+  <svg
+      id = "top-left-circle"
+      style = "
+      height: 100px; width: 100px;
+      position: absolute;
+      top: calc(50% + 100px); left: calc(50% - 100px);
+      transform: translate(-50%, -50%)">
+    <circle cx="50" cy="50" r="50" fill="white"/>
+  </svg>
+
+  <svg
+    id = "top-right-circle"
+    style = "
+      height: 100px; width: 100px;
+      position: absolute;
+      top: calc(50% + 100px); left: calc(50% + 100px);
+      transform: translate(-50%, -50%)">
+    <circle cx="50" cy="50" r="50" fill="white"/>
+  </svg>
+
+  <div
+    id = "square"
+    class = "centered"
+    style = "background: gray">
+  </div>
+
+</body>

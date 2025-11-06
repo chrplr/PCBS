@@ -1,0 +1,79 @@
+Estimation - Confidence intervals
+=================================
+
+christophe@pallier.org
+
+Here, we just show how to get confidence intervals for the proportion or the mean obtained from a sample. For confidence intervalle of comparisons, see the other files.
+
+## Estimating a proportion
+
+```{r simulbinom}
+n <- 100
+a <- rbinom(n, size=1, prob=1/3)
+```
+
+```{r tabulate}
+table(a)
+prop.table(table(a))
+mean(a)
+```
+
+### Inferential stats
+
+```{r propci}
+prop.test(table(a))
+prop.test(table(a))$conf.int
+```
+
+
+## Estimating a mean
+
+```{r simul}
+n <- 100
+a <- rnorm(n, mean=100, sd=15)
+```
+
+
+## Exploratory graphics
+
+```{r}
+par(las=1)
+stripchart(a, method='jitter', vertical=TRUE)
+abline(h=mean(a), lty=2)
+boxplot(a)
+hist(a)
+rug(a)
+plot(density(a))
+abline(v=mean(a), lty=2)
+rug(a)
+```
+
+If the sample is small, you can use a `dotchart`
+
+```{r}
+dotchart(a[1:20])
+```
+
+
+## Descriptive stats
+
+
+```{r descriptive stats}
+summary(a)
+mean(a)
+mean(a[abs(a-mean(a)) < 2*sd(a)]) # after deleting point beyond 2 stddev 
+```
+
+## Confidence intervals
+
+```{r}
+t.test(a)
+t.test(a)$conf.int
+
+require(boot)
+sampmean <- function(x, d) { mean(x[d]) }
+boota <- boot(a, sampmean, 1000)
+boot.ci(boota)
+```
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Christophe Pallier" />
+  <title>Starting Python</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">Starting Python</h1>
+<h2 class="author">Christophe Pallier</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#using-jupyter-notebook">Using jupyter notebook</a></li>
+<li><a href="#using-ipython">Using ipython</a></li>
+<li><a href="#using-a-text-editor-edit-run-cycle">Using a text editor (Edit-run cycle)</a></li>
+</ul>
+</div>
+<p>You can program in Python in (at least) three different ways: interactively with <code>jupyter notebook</code> or with an <code>ipython</code> command line, or using an edit-run cycle approach with a program editor (e.g. <code>atom</code>, <code>idle</code>, <code>spyder</code>,…).</p>
+<p>In all cases, you need to be able to open a command line window (a.k.a. a <strong>terminal</strong>): * Ubuntu-Linux: Ctrl-Alt-T (see https://help.ubuntu.com/community/UsingTheTerminal) * MacOSX: Open Finder/Applications/Utilities/Terminal (see http://www.wikihow.com/Get-to-the-Command-Line-on-a-Mac) * Windows: Win+X+Command-Prompt (see http://pcsupport.about.com/od/commandlinereference/f/open-command-prompt.htm)</p>
+<h2 id="using-jupyter-notebook"><a href="#using-jupyter-notebook">Using jupyter notebook</a></h2>
+<p>The first step is to type <code>jupyter notebook</code> in a terminal</p>
+<pre><code>mkdir -p AIP2016-files  # only if AIP2016-file does not yet exist
+cd AIP2016-myfiles
+jupyter notebook</code></pre>
+<p>A browser will open a page like the following:</p>
+<div class="figure">
+<img src="img/jupyter1.png" />
+</div>
+<p>By cliking on <code>New</code> and selecting <code>Python [root]</code>, a new tab will show a page like below, where you can enter python code in ‘cells’. To execute the code in a cell, just move the cursor there and press <code>Ctrl+Enter</code></p>
+<div class="figure">
+<img src="img/jupyter2.png" />
+</div>
+<p>A nice feature of the “n jupyter notebooks” is that they are saved automatically, in .ipynb files that can be shared with other people. This is very handy, for example, to send a data analysis report by email.</p>
+<p>Jupyter’s documentation si available at http://jupyter.readthedocs.io/en/latest/index.html</p>
+<h2 id="using-ipython"><a href="#using-ipython">Using ipython</a></h2>
+<p>You can launch <code>ipython</code> in a terminal, and start typing python commands that are <em>interpreted</em> and <em>executed</em> when you press ‘Enter’.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Type <code>ipython</code> on the command-line and press <code>Enter</code>:</li>
+</ol>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="img/ipython_terminal1.png" /></td>
+<td align="left"><img src="img/ipython_terminal2.png" /></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" style="list-style-type: decimal">
+<li>When you terminal looks like the one of the right, you are “talking” to ipython. Enter the following commands:</li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python">    <span class="ch">import</span> turtle
+    turtle.circle(<span class="dv">50</span>)
+    turtle;forward(<span class="dv">100</span>)
+    turtle.circle(<span class="dv">50</span>)
+
+    turtle.right(<span class="dv">90</span>)
+    turtle.forward(<span class="dv">100</span>)
+    turtle.right(<span class="dv">90</span>)
+    turtle.heading()</code></pre>
+<p>. . .</p>
+<p>This way of using Python is fine if you need to quickly test an idea. But as soon as you quit <code>ipython</code> (by pressing <code>Ctrl-D</code>), you lose all traces of what you have done. To avoid that, you want to use the **Edit-run* approach.</p>
+<h2 id="using-a-text-editor-edit-run-cycle"><a href="#using-a-text-editor-edit-run-cycle">Using a text editor (Edit-run cycle)</a></h2>
+<p>Using a <strong>text editor</strong>, e.g. <em>atom</em>, you write a python script, that is, a series of commands, that you save in a file; then you give this file to interpret to a python interpreter. Here is how:</p>
+<ol style="list-style-type: decimal">
+<li>Open a Text-Editor (e.g. Atom) and a Terminal window side-by-side:</li>
+</ol>
+<div class="figure">
+<img src="img/editor-terminal.png" />
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a <code>New File</code> in the Editor and enter the following text:</li>
+</ol>
+<pre class="sourceCode python"><code class="sourceCode python">    <span class="ch">import</span> turtle
+    turtle.forward(<span class="dv">50</span>)
+    turtle.left(<span class="dv">120</span>)
+    turtle.forward(<span class="dv">100</span>)
+    turtle.left(<span class="dv">120</span>)
+    turtle.forward(<span class="dv">100</span>)
+    turtle.left(<span class="dv">120</span>)
+    turtle.forward(<span class="dv">50</span>)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Using ‘File/Save as’, save the this text under the filename <code>myscript.py</code> in your personal (home) directory</li>
+</ol>
+<ul>
+<li><em>run</em> with a python interpreter, by typing <code>python myscript.py</code> on a command line of the Terminal. Try it now.</li>
+</ul>
+<p>Important: you must make sure that the current working direcoty of the terminal is the same directory where the file myscript.py has been saved. Otherwise, you will get an error message such as ‘No such file or directory’. To fix this problem, you must use the ‘cd’ command to navigate the directory structure.</p>
+<p>Remarks:</p>
+<ul>
+<li>You can learn more about Turtle graphics by reading the documentation at <a href="https://docs.python.org/2/library/turtle.html">https://docs.python.org/2/library/turtle.html</a></li>
+</ul>
+</body>
+</html>

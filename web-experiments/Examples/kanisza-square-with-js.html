@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <title>Kanisza square with JavaScript</title>
+  <link rel="stylesheet" href ="./shapes.css"></link>
+</head>
+<body style = "background-color: gray">
+
+  <script>
+    function createCircleCanvas(radius, color, startingAngle, endAngle){
+      circleCanvas = document.createElement("canvas");
+
+      circleCanvas.height = 2*radius
+      circleCanvas.width = 2*radius
+
+      canvasContext = circleCanvas.getContext("2d");
+      canvasContext.beginPath();
+      let x = radius;
+      let y = radius;
+      canvasContext.moveTo(x, y);
+      canvasContext.arc(x, y, radius, startingAngle, endAngle);
+      canvasContext.fillStyle = color
+      canvasContext.fill()
+
+      return circleCanvas
+    }
+
+    function placeCircleSlice(radius, offsetSize, xOffsetSign, yOffsetSign, color, rotation){
+      let circleSliceCanvas = createCircleCanvas(radius, color, 0.5 * Math.PI, 2 * Math.PI)
+
+      circleSliceCanvas.style.position = "absolute"
+
+      let xOffset = xOffsetSign + "" + offsetSize + "px";
+      let yOffset = yOffsetSign + "" + offsetSize + "px";
+      circleSliceCanvas.style.top = "calc(50vh "+ yOffset + ")"
+      circleSliceCanvas.style.left = "calc(50vw "+ xOffset + ")"
+
+      circleSliceCanvas.style.transform =
+        "translate(-50%, -50%) "+
+        "rotate("+rotation+"deg)";
+
+      document.body.appendChild(circleSliceCanvas);
+    }
+
+    const RADIUS = 50
+    const OFFSET = 100
+    const DELTA_ROTATION = 90
+
+    for (let i = 0; i < 4; i++){
+      let xOffsetSign = i == 0 | i == 3 ? " - " : " + ";
+      let yOffsetSign = i < 2 ? " - " : " + "
+
+      placeCircleSlice(RADIUS, OFFSET,
+        xOffsetSign, yOffsetSign,
+        i < 2 ? "black" : "white",
+        i  * DELTA_ROTATION
+      );
+    }
+  </script>
+</body>

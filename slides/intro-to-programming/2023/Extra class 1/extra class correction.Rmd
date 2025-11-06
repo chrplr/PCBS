@@ -1,0 +1,1772 @@
+---
+title: "Extra class correction"
+author: |
+  | Henri Vandendriessche
+  | henri.vandendriessche@ens.fr
+date: "2023-12-19"
+output:
+  beamer_presentation:
+    theme: CambridgeUS
+    keep_tex: true
+header-includes:
+  - \let\verbatim\undefined
+  - \let\verbatimend\undefined
+  - \usepackage{listings}
+  - \lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+fontsize: 8pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+MCQ test correction 
+========================================================
+
+Q1. What does the following Python code do?
+
+```{python, echo=TRUE,eval=FALSE}
+print("Bonjour")
+```
+
+MCQ test correction
+========================================================
+
+Q1. What does the following Python code do?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+print("Bonjour")
+```
+
+
+MCQ test correction
+========================================================
+
+Q2. What does the following Python code do?
+
+
+```{python, echo=TRUE,eval=FALSE}
+print(3 + 2)
+
+```
+
+MCQ test correction
+========================================================
+
+Q2. What does the following Python code do?
+
+
+```{python, echo=TRUE,eval=TRUE, error=TRUE}
+print(3 + 2)
+
+```
+
+
+MCQ test correction
+========================================================
+
+Q3. What does the following Python code do?
+
+
+```{python, echo=TRUE,eval=FALSE}
+print("3 + 2")
+```
+
+MCQ test correction
+========================================================
+
+Q3. What does the following Python code do?
+
+```{python, echo=TRUE,eval=TRUE, error=TRUE}
+print("3 + 2")
+
+```
+
+MCQ test correction
+========================================================
+
+Q4: What do the following Python code do?
+
+
+```{python, echo=TRUE,eval=FALSE}
+print(x)
+```
+
+MCQ test correction
+========================================================
+
+Q4: What do the following Python code do?
+
+```{python, echo=TRUE,eval=TRUE, error=TRUE}
+print(x)
+```
+
+MCQ test correction
+========================================================
+
+Q5. what does the following Python code do?
+
+
+```{python, echo=TRUE,eval=FALSE}
+x = 5
+print(x - 3)
+```
+
+MCQ test correction
+========================================================
+
+Q5. what does the following Python code do?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+x = 5
+print(x - 3)
+```
+
+
+MCQ test correction
+========================================================
+
+Q6. What does the following code print?
+
+
+```{python, echo=TRUE,eval=FALSE}
+x = 0
+x = 1
+print(x)
+```
+
+MCQ test correction
+========================================================
+
+Q6. What does the following code print?
+
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+x = 0
+x = 1
+print(x)
+```
+
+MCQ test correction
+========================================================
+
+Q7. What does the following code print ?
+
+
+```{python, echo=TRUE,eval=FALSE}
+x = 2
+x = x - 1
+print(x)
+```
+
+MCQ test correction
+========================================================
+
+Q7. What does the following code print ?
+
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+x = 2
+x = x - 1
+print(x)
+```
+
+MCQ test correction
+========================================================
+
+Q8. What does the following Python code print?
+
+
+```{python, echo=TRUE,eval=FALSE}
+print(1 == 2)
+```
+
+MCQ test correction
+========================================================
+
+Q8. What does the following Python code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+print(1 == 2)
+```
+
+MCQ test correction
+========================================================
+
+Q9. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+x = 3 == 3
+print(x)
+```
+
+MCQ test correction
+========================================================
+
+Q9. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+x = 3 == 3
+print(x)
+```
+
+MCQ test correction
+========================================================
+
+Q10. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+if 0 == 1:
+   print("a")
+
+print("b") 
+```
+
+MCQ test correction
+========================================================
+
+Q10. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+if 0 == 1:
+   print("a")
+
+print("b") 
+```
+
+MCQ test correction
+========================================================
+
+Q11. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+if 0 == 1:
+    print("a")
+else:
+    print("b")
+```
+
+MCQ test correction
+========================================================
+
+Q11. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+if 0 == 1:
+    print("a")
+else:
+    print("b")
+```
+
+MCQ test correction
+========================================================
+
+Q12. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+if 0 == 1:
+    print("a")
+    print("b")
+else:
+    print("c")
+    print("d")
+
+print("e")
+```
+
+MCQ test correction
+========================================================
+
+Q12. What does the following code print?
+ 
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+if 0 == 1:
+    print("a")
+    print("b")
+else:
+    print("c")
+    print("d")
+
+print("e")
+```
+
+
+MCQ test correction
+========================================================
+
+Q13. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+if 0 == 1:
+    print("a")
+else:
+    if 1 == 1:
+        print("b")
+    else:
+        print("c")
+    print("d")
+```
+
+MCQ test correction
+========================================================
+
+Q13. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+if 0 == 1:
+    print("a")
+else:
+    if 1 == 1:
+        print("b")
+    else:
+        print("c")
+    print("d")
+```
+
+MCQ test correction
+========================================================
+
+Q14. How many lines does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+n = 0
+while n > 1:
+    print("ok")
+```
+
+MCQ test correction
+========================================================
+
+Q14. How many lines does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+n = 0
+while n > 1:
+    print("ok")
+```
+
+MCQ test correction
+========================================================
+
+Q15. How many lines does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+n = 3
+while n > 1:
+    n = n - 1
+    print("ok")
+```
+
+MCQ test correction
+========================================================
+
+Q15. How many lines does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+n = 3
+while n > 1:
+    n = n - 1
+    print("ok")
+```
+
+MCQ test correction
+========================================================
+
+Q16. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+x = 1
+y = -1
+while x < 5:
+    y = y - 1
+    x = x * 2
+
+print(x, y)
+```
+
+MCQ test correction
+========================================================
+
+Q16. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+x = 1
+y = -1
+while x < 5:
+    y = y - 1
+    x = x * 2
+
+print(x, y)
+```
+
+MCQ test correction
+========================================================
+
+Q17. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+n = 0
+while n < 3:
+    if n < 2:
+        print("less")
+    else:
+        print("more")
+    n = n + 1
+```
+
+MCQ test correction
+========================================================
+
+Q17. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+n = 0
+while n < 3:
+    if n < 2:
+        print("less")
+    else:
+        print("more")
+    n = n + 1
+```
+
+MCQ test correction
+========================================================
+
+Q18. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+for x in [3, 1]:
+    for y in [2, 4]:
+        print(x, y)
+```
+
+MCQ test correction
+========================================================
+
+Q18. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+for x in [3, 1]:
+    for y in [2, 4]:
+        print(x, y)
+```
+
+MCQ test correction
+========================================================
+
+Q19. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+def print_one():
+    print(1)
+```
+
+MCQ test correction
+========================================================
+
+Q19. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def print_one():
+    print(1)
+```
+
+MCQ test correction
+========================================================
+
+Q20. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+def print_one():
+    print(1)
+
+print_one()
+```
+
+MCQ test correction
+========================================================
+
+Q20. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def print_one():
+    print(1)
+
+print_one()
+```
+
+
+MCQ test correction
+========================================================
+
+Q21. Consider the following code:
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def print_sum(x, y):
+    print(x + y)
+```
+
+What is the name of the above-defined function?
+
+
+MCQ test correction
+========================================================
+
+Q21. Consider the following code:
+
+What is the name of the above-defined function?
+
+print_sum
+
+
+MCQ test correction
+========================================================
+
+Q22. Consider the following code:
+
+```{python, echo=TRUE,eval=FALSE}
+def print_sum(x, y):
+    print(x + y)
+
+print_sum(5,6)
+```
+
+What are the parameters of the above-defined function?
+
+
+MCQ test correction
+========================================================
+
+Q22. Consider the following code:
+
+What are the parameters of the above-defined function?
+
+(x, y)
+
+
+MCQ test correction
+========================================================
+
+Q23. Consider the following code:
+
+
+```{python, echo=TRUE,eval=FALSE}
+def print_sum(x, y):
+    print(x + y)
+```
+
+Which line(s) correspond(s) to the body of the above-defined function?
+
+
+
+MCQ test correction
+========================================================
+
+Q23. Consider the following code:
+
+Which line(s) correspond(s) to the body of the above-defined function?
+
+```{python, echo=TRUE,eval=FALSE}
+def print_sum(x, y):
+    
+    print(x + y)
+    
+```
+
+MCQ test correction
+========================================================
+
+Q24. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+def sum(x, y):
+    print(x)
+    return x + y
+
+a = 1
+b = sum(a, -1)
+print(b)
+```
+
+MCQ test correction
+========================================================
+
+Q24. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def sum(x, y):
+    print(x)
+    return x + y
+
+a = 1
+b = sum(a, -1)
+print(b)
+```
+
+MCQ test correction
+========================================================
+
+Q25. What does the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+def fun_a(x):
+    print(x - 1)
+    return x + 1
+
+def fun_b(y):
+    print(y)
+    z = fun_a(x)
+    print(z)
+    return z * 2
+
+y = 1
+z = fun_b(y)
+print(z)
+```
+
+MCQ test correction
+========================================================
+
+Q25. What does the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def fun_a(x):
+    print(x - 1)
+    return x + 1
+
+def fun_b(y):
+    print(y)
+    z = fun_a(x)
+    print(z)
+    return z * 2
+
+y = 1
+z = fun_b(y)
+print(z)
+```
+
+MCQ test correction
+========================================================
+
+Q26. How can we extract the name (JB Lewis) from aString?
+
+```{python, echo=TRUE,eval=FALSE}
+aString = "A long complicated string containing a quote of someone important who said 'Something really important'–JB Lewis“
+```
+
++ aString[aString.index("–")+1:]
++ aString[index("–")+1:]
++ aString[index("–")+1:end]
++ aString[aString.index("–")+1:end]
+
+MCQ test correction
+========================================================
+
+Q26. How can we extract the name (JB Lewis) from aString?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+aString = "A long complicated string containing a quote of someone important who said 'Something really important'–JB Lewis“
+
+print(aString[aString.index("–")+1:])
+```
+
+
+MCQ test correction
+========================================================
+
+Q27. What will the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+listOfNums = ["2", "7", "3", "4"]
+result = "+".join(listOfNums)
+print(result)
+```
+
+
+MCQ test correction
+========================================================
+
+Q27. What will the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+listOfNums = ["2", "7", "3", "4"]
+result = "+".join(listOfNums)
+print(result)
+```
+
+
+MCQ test correction
+========================================================
+
+Q28.What will the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+start = "This is a test"
+end = " ".join(start.split(" "))
+print(start == end)
+```
+
+
+MCQ test correction
+========================================================
+
+Q28.What will the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+start = "This is a test"
+end = " ".join(start.split(" "))
+print(start == end)
+```
+
+MCQ test correction
+========================================================
+
+Q29. What will the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+aStr = "This is a test"
+aStr.upper()
+print(aStr)
+```
+
+
+MCQ test correction
+========================================================
+
+Q29. What will the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+aStr = "This is a test"
+aStr.upper()
+print(aStr)
+```
+
+MCQ test correction
+========================================================
+
+Q30. What are the contents of the file ‘test.txt’ after the following executes?
+
+```{python, echo=TRUE,eval=FALSE}
+file = open('test.txt', 'w')
+file.write('This is a test, I think.')
+anotherFile = open('test.txt', 'r')
+contents = anotherFile.read()
+yetAnotherOne = open('test.txt', 'a')
+yetAnotherOne.write(' Yes')
+```
+
+MCQ test correction
+========================================================
+
+Q30. What are the contents of the file ‘test.txt’ after the following executes?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+file = open('test.txt', 'w')
+file.write('This is a test, I think.')
+anotherFile = open('test.txt', 'r')
+contents = anotherFile.read()
+yetAnotherOne = open('test.txt', 'a')
+yetAnotherOne.write(' Yes')
+```
+
+
+MCQ test correction
+========================================================
+
+Q31. In which directory is the file test.txt located?
+
+```{python, echo=TRUE,eval=FALSE}
+file = open('test.txt', 'w')
+file.write("This is a test, I think.")
+file.close()
+```
+
+
+MCQ test correction
+========================================================
+
+Q31. In which directory is the file test.txt located?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+file = open('test.txt', 'w')
+file.write("This is a test, I think.")
+file.close()
+```
+
+
+MCQ test correction
+========================================================
+
+Q32. Should one generally prefer absolute or relative paths to files and directories?
+
++ Absolute
++ Relative
++ It doesn't matter
++ Randomly choose one of the two
+
+
+MCQ test correction
+========================================================
+
+Q32. Should one generally prefer absolute or relative paths to files and directories?
+
++ Absolute
++ **Relative**
++ It doesn't matter
++ Randomly choose one of the two
+
+
+MCQ test correction
+========================================================
+
+Q33. Why is it often useful to name a piece of data? e.g. (several options possible)
+
+```{python, echo=TRUE,eval=FALSE}
+ipLine = data[2]
+```
+
+
+MCQ test correction
+========================================================
+
+Q33. Why is it often useful to name a piece of data? e.g. (several options possible)
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+ipLine = data[2]
+```
+
+
+MCQ test correction
+========================================================
+
+Q34. In the following code, what is the value of fileName?
+
+```{python, echo=TRUE,eval=FALSE}
+def wordCount(fileName, word):
+	file  = open(fileName, 'r')
+	contents = file.read()
+	words = contents.split(' ')
+        wordCount = words.count(word)
+        print(wordCount)
+```
+
+
+MCQ test correction
+========================================================
+
+Q34. In the following code, what is the value of fileName?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def wordCount(fileName, word):
+	file  = open(fileName, 'r')
+	contents = file.read()
+	words = contents.split(' ')
+        wordCount = words.count(word)
+        print(wordCount)
+```
+
+MCQ test correction
+========================================================
+
+Q35. What will be printed after this program runs?
+
+```{python, echo=TRUE,eval=FALSE}
+def test():
+	print("This will print 12")
+```
+
+
+MCQ test correction
+========================================================
+
+Q35. What will be printed after this program runs?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def test():
+	print("This will print 12")
+```
+
+MCQ test correction
+========================================================
+
+Q36. What will be printed when the following program executes?
+
+```{python, echo=TRUE,eval=FALSE}
+def aProgram():
+print("This will print 12")
+aProgram()
+```
+
+
+MCQ test correction
+========================================================
+
+Q36. What will be printed when the following program executes?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def aProgram():
+print("This will print 12")
+aProgram()
+```
+
+MCQ test correction
+========================================================
+
+Q37. What will be printed when the following program executes?
+
+```{python, echo=TRUE,eval=FALSE}
+def aProgram():
+	print("This will print 12")
+aProgram()
+```
+
+
+MCQ test correction
+========================================================
+
+Q37. What will be printed when the following program executes?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def aProgram():
+	print("This will print 12")
+aProgram()
+```
+
+MCQ test correction
+========================================================
+
+Q38. What will be printed when the following program is executed?
+
+```{python, echo=TRUE,eval=FALSE}
+def myFun(aNum):
+	return aNum * 2
+
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+
+MCQ test correction
+========================================================
+
+Q38. What will be printed when the following program is executed?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def myFun(aNum):
+	return aNum * 2
+
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+MCQ test correction
+========================================================
+
+Q39. What will be printed when the following program is executed?
+
+```{python, echo=TRUE,eval=FALSE}
+def myFun(aNum):
+	a = aNum * 2
+
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+
+MCQ test correction
+========================================================
+
+Q39. What will be printed when the following program is executed?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def myFun(aNum):
+	a = aNum * 2
+
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+MCQ test correction
+========================================================
+
+Q40. What will be printed when the following program is executed?
+
+```{python, echo=TRUE,eval=FALSE}
+def myFun(aNum):
+	a = aNum * 2
+	return a
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+
+MCQ test correction
+========================================================
+
+Q40. What will be printed when the following program is executed?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def myFun(aNum):
+	a = aNum * 2
+	return a
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+MCQ test correction
+========================================================
+
+Q41. What will be printed when the following program is executed?
+
+```{python, echo=TRUE,eval=FALSE}
+def myFun(aNum):
+	a = aNum * 2
+	print(a)
+
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+
+MCQ test correction
+========================================================
+
+Q41. What will be printed when the following program is executed?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def myFun(aNum):
+	a = aNum * 2
+	print(a)
+
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+MCQ test correction
+========================================================
+
+Q42. What’s the value of the variable k after this program executes?
+
+```{python, echo=TRUE,eval=FALSE}
+def myFun(aNum):
+	a = aNum * 2
+	print(a)
+
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+
+MCQ test correction
+========================================================
+
+Q42. What’s the value of the variable k after this program executes?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def myFun(aNum):
+	a = aNum * 2
+	print(a)
+
+myNumber = 4
+k = myFun(myNumber)
+print(k)
+```
+
+MCQ test correction
+========================================================
+
+Q43. What is/are the correct way(s) to call the following function? (assume all variables exist. correct means here no error display on the terminal)
+
+```{python, echo=TRUE,eval=FALSE}
+def readResults(resultFile):
+	file = open(resultFile, 'r');
+	contents = file.read()
+	return contents
+```
+
+
+MCQ test correction
+========================================================
+
+Q43. What is/are the correct way(s) to call the following function? (assume all variables exist. correct means here no error display on the terminal)
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def readResults(resultFile):
+	file = open(resultFile, 'r');
+	contents = file.read()
+	return contents
+```
+
+MCQ test correction
+========================================================
+
+Q44. What will the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+def functionA(aNumber):
+	return aNumber+1
+def functionB(aNumber):
+	return functionA(aNumber)+1
+print(functionB(1))
+```
+
+
+MCQ test correction
+========================================================
+
+Q44. What will the following code print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def functionA(aNumber):
+	return aNumber+1
+def functionB(aNumber):
+	return functionA(aNumber)+1
+print(functionB(1))
+```
+
+MCQ test correction
+========================================================
+
+Q45. What will the following program print?
+
+```{python, echo=TRUE,eval=FALSE}
+aVar = 12
+def myFun():
+	aVar = 7+3
+print(aVar)
+```
+
+
+MCQ test correction
+========================================================
+
+Q45. What will the following program print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+aVar = 12
+def myFun():
+	aVar = 7+3
+print(aVar)
+```
+
+MCQ test correction
+========================================================
+
+Q46. What will the following program print?
+
+```{python, echo=TRUE,eval=FALSE}
+aVar = 12
+def myFun():
+	aVar = 7+3
+print (aVar)
+myFun()
+```
+
+
+MCQ test correction
+========================================================
+
+Q46. What will the following program print?
+
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+aVar = 12
+def myFun():
+	aVar = 7+3
+print (aVar)
+myFun()
+```
+
+
+MCQ test correction
+========================================================
+
+Q47. What will the following program print?
+
+```{python, echo=TRUE,eval=FALSE}
+aVar = 12
+def myFun():
+	aVar = 7+3
+	print (aVar)
+myFun()
+```
+
+
+MCQ test correction
+========================================================
+
+Q47. What will the following program print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+aVar = 12
+def myFun():
+	aVar = 7+3
+	print (aVar)
+myFun()
+```
+
+
+MCQ test correction
+========================================================
+
+Q48. What will the following program print?
+
+```{python, echo=TRUE,eval=FALSE}
+aVar = 12
+def myFun():
+	aVar = 7+3
+	return aVar
+print(myFun())
+```
+
+
+MCQ test correction
+========================================================
+
+Q48. What will the following program print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+aVar = 12
+def myFun():
+	aVar = 7+3
+	return aVar
+print(myFun())
+```
+
+
+MCQ test correction
+========================================================
+
+Q49. What will the following program print?
+
+```{python, echo=TRUE,eval=FALSE}
+myVar = 12
+def myFun():
+	aVar = 7+3
+	return aVar
+myVar = myFun()
+print(myVar)
+```
+
+
+MCQ test correction
+========================================================
+
+Q49. What will the following program print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+myVar = 12
+def myFun():
+	aVar = 7+3
+	return aVar
+myVar = myFun()
+print(myVar)
+```
+
+MCQ test correction
+========================================================
+
+Q50. What will the following program print?
+
+```{python, echo=TRUE,eval=FALSE}
+def myFun(aVar):
+	test = aVar+3
+	return test
+aVar = 15
+bVar = myFun(aVar)
+print(aVar)
+```
+
+
+MCQ test correction
+========================================================
+
+Q50. What will the following program print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def myFun(aVar):
+	test = aVar+3
+	return test
+aVar = 15
+bVar = myFun(aVar)
+print(aVar)
+```
+
+
+MCQ test correction
+========================================================
+
+Q51. What will the following program print?
+
+```{python, echo=TRUE,eval=FALSE}
+def myFun(aVar):
+	test = aVar+3
+	return test
+bVar = 15
+bVar = myFun(bVar)
+print(bVar)
+```
+
+
+MCQ test correction
+========================================================
+
+Q51. What will the following program print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def myFun(aVar):
+	test = aVar+3
+	return test
+bVar = 15
+bVar = myFun(bVar)
+print(bVar)
+```
+
+MCQ test correction
+========================================================
+
+Q52. What will the following program print?
+
+```{python, echo=TRUE,eval=FALSE}
+def myFun(aList):
+	aList[1] = 100
+
+test = [1, 2, 3]
+myFun(test)
+print(test[1])
+```
+
+
+MCQ test correction
+========================================================
+
+Q52. What will the following program print?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def myFun(aList):
+	aList[1] = 100
+
+test = [1, 2, 3]
+myFun(test)
+print(test[1])
+```
+
+MCQ test correction
+========================================================
+
+Q53. What’s the strangest part of the following function definition?
+
+```{python, echo=TRUE,eval=FALSE}
+def myFun(aVar):
+	aVar = 3
+	return aVar + 5
+```
+
+
+MCQ test correction
+========================================================
+
+Q53. What’s the strangest part of the following function definition?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def myFun(aVar):
+	aVar = 3
+	return aVar + 5
+```
+
+MCQ test correction
+========================================================
+
+Q54. What will the following code print?
+
+```{python, echo=TRUE,eval=FALSE}
+def validateAge(userAge):
+	if userAge<18:
+		return False
+	else:
+		return True
+
+def isAdult():
+	age = input("Please type your age") # assume user input 19
+	return validateAge(int(age))
+
+print(isAdult())
+```
+
+
+MCQ test correction
+========================================================
+
+Q54. What will the following code print?
+
+```{python, echo=TRUE,eval=FALSE,error=TRUE}
+def validateAge(userAge):
+	if userAge<18:
+		return False
+	else:
+		return True
+
+def isAdult():
+	age = input("Please type your age") # assume user input 19
+	return validateAge(int(age))
+
+print(isAdult())
+```
+
+MCQ test correction
+========================================================
+
+Q55. What is the value of aVar after the following executes?
+
+```{python, echo=TRUE,eval=FALSE}
+def someGreatFunction():
+	return 12
+aVar = someGreatFunction
+```
+
+
+MCQ test correction
+========================================================
+
+Q55. What is the value of aVar after the following executes?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def someGreatFunction():
+	return 12
+aVar = someGreatFunction
+```
+
+MCQ test correction
+========================================================
+
+Q56. What is the value of aVar after the following executes?
+
+```{python, echo=TRUE,eval=FALSE}
+def someGreatFunction():
+	return 12
+bVar = someGreatFunction
+aVar = bVar()
+```
+
+
+MCQ test correction
+========================================================
+
+Q56. What is the value of aVar after the following executes?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def someGreatFunction():
+	return 12
+bVar = someGreatFunction
+aVar = bVar()
+```
+
+MCQ test correction
+========================================================
+
+Q57. In the following code what is the name of the module ?
+
+```{python, echo=TRUE,eval=FALSE}
+from random import choice
+```
+
+
+MCQ test correction
+========================================================
+
+Q57. In the following code what is the name of the module ?
+
+from **random** import choice
+
+MCQ test correction
+========================================================
+
+Q58. After the following import statement, how can we use the shuffle function?
+
+```{python, echo=TRUE,eval=FALSE}
+from random import shuffle
+```
+
+
+MCQ test correction
+========================================================
+
+Q58. After the following import statement, how can we use the shuffle function?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+from random import shuffle
+
+shuffle()
+
+```
+
+MCQ test correction
+========================================================
+
+Q59. After the following import statement, how can we use the randint function?
+
+```{python, echo=TRUE,eval=FALSE}
+from random import *
+```
+
+
+MCQ test correction
+========================================================
+
+Q59. After the following import statement, how can we use the randint function?
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+from random import *
+
+randint(min, max)
+```
+
+MCQ test correction
+========================================================
+
+Q60. After the following import statement, how can we use the randint function?
+
+```{python, echo=TRUE,eval=FALSE}
+import random
+```
+
+
+MCQ test correction
+========================================================
+
+Q60. After the following import statement, how can we use the randint function?
+
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+import random
+
+random.randint(min, max)
+```
+
+MCQ test correction
+========================================================
+
+Q61. What does the "*data" means in the following code
+
+```{python, echo=TRUE,eval=FALSE}
+def someFun(*data):
+    print(data)
+```
+
+
+MCQ test correction
+========================================================
+
+Q61. What does the "*data" means in the following code
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+def someFun(*data):
+    print(data)
+```
+
+MCQ test correction
+========================================================
+
+Q62. What will be the output of this code
+
+```{python, echo=TRUE,eval=FALSE}
+print(type(type(int)))
+```
+
+
+MCQ test correction
+========================================================
+
+Q62. What will be the output of this code
+
+```{python, echo=TRUE,eval=TRUE,error=TRUE}
+print(type(type(int)))
+```
+
+MCQ test correction
+========================================================
+
+Q62. Which of these is not a core data type
+
++ Tuple
++ Integer
++ Dict
++ Datetime
+
+
+MCQ test correction
+========================================================
+
+Q62. Which of these is not a core data type
+
++ Tuple
++ Integer
++ Dict
++ **Datetime**
+
+MCQ test correction
+========================================================
+
+Q63. What is the correct way to instantiate an empty dictionary? (several option possible)
+
++ mydict = dict()
++ mydict = {}
++ mydict = ()
++ mydict = dictionary{}
++ mydict = dict{}
+
+
+MCQ test correction
+========================================================
+
+Q63. What is the correct way to instantiate an empty dictionary? (several option possible)
+
++ **mydict = dict()**
++ **mydict = {}**
++ mydict = ()
++ mydict = dictionary{}
++ mydict = dict{}
+
+
+
+MCQ test correction
+========================================================
+
+Q65. Which method can be used to separate a string in a list?
+
++ split()
++ len()
++ cut()
++ strip()
+
+
+
+MCQ test correction
+========================================================
+
+Q65. Which method can be used to separate a string in a list?
+
++ **split()**
++ len()
++ cut()
++ strip()
+
+
+
+MCQ test correction
+========================================================
+
+Q66. Which statement is used to stop a loop?
+
++ exit
++ break
++ continue
++ return
+
+
+MCQ test correction
+========================================================
+
+Q66. Which statement is used to stop a loop?
+
++ exit
++ **break**
++ continue
++ return
+
+MCQ test correction
+========================================================
+
+Q67. Which statement is used to skip an iteration of a loop?
+
++ next
++ jump
++ continue
++ skip
+
+
+MCQ test correction
+========================================================
+
+Q67. Which statement is used to skip an iteration of a loop?
+
++ next
++ jump
++ **continue**
++ skip
+
+
+MCQ test correction
+========================================================
+
+Q68. Which collection data type is ordered, changeable and allows duplicate items?
+
++ Set
++ List
++ Tuple
++ Dictionnary
+
+
+
+MCQ test correction
+========================================================
+
+Q68. Which collection data type is ordered, changeable and allows duplicate items?
+
++ Set
++ **List**
++ Tuple
++ Dictionnary
+
+MCQ test correction
+========================================================
+
+Q69. Which of the following options is provided by pdb? (several option possible)
+
++ Executing the program line by line
++ List all the errors in your script
++ Checking variables values at any step of the code execution
++ Set break points
+
+
+MCQ test correction
+========================================================
+
+Q69. Which of the following options is provided by pdb? (several option possible)
+
++ **Executing the program line by line**
++ List all the errors in your script
++ **Checking variables values at any step of the code execution**
++ **Set break points**
+
+MCQ test correction
+========================================================
+
+Q70. What are the possibilities of the logging module in python? (several option possible)
+
++ Generating more precise error message
++ Creating custom log levels according to the "criticality" of events in your script**
++ Preventing your script from crashing
++ Basic logging to track variables values
+
+
+
+MCQ test correction
+========================================================
+
+Q70. What are the possibilities of the logging module in python? (several option possible)
+
++ Generating more precise error message
++ **Creating custom log levels according to the "criticality" of events in your script**
++ Preventing your script from crashing
++ **Basic logging to track variables values**
+

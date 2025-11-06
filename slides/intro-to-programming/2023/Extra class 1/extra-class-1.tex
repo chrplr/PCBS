@@ -1,0 +1,1780 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  8pt,
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{CambridgeUS}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\let\verbatim\undefined
+\let\verbatimend\undefined
+\usepackage{listings}
+\lstnewenvironment{verbatim}{\lstset{breaklines=true,basicstyle=\ttfamily\footnotesize}}{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Extra class 1},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Extra class 1}
+\author{Henri Vandendriessche\\
+\href{mailto:henri.vandendriessche@ens.fr}{\nolinkurl{henri.vandendriessche@ens.fr}}}
+\date{2023-12-19}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}[fragile]{MCQ data variable}
+\protect\hypertarget{mcq-data-variable}{}
+\begin{itemize}
+\tightlist
+\item
+  Remove incorrect characters in the name of the variable
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1}\ErrorTok{\_of\_my}\OperatorTok{{-}}\NormalTok{variable}\OperatorTok{!} \OperatorTok{=} \StringTok{"test"}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 1}
+\protect\hypertarget{mcq-boolean-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{5}\OperatorTok{\textgreater{}}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 1}
+\protect\hypertarget{mcq-boolean-1-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{5}\OperatorTok{\textgreater{}}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## True
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 2}
+\protect\hypertarget{mcq-boolean-2}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{5} \OperatorTok{==} \DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 2}
+\protect\hypertarget{mcq-boolean-2-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{5} \OperatorTok{==} \DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## False
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 3}
+\protect\hypertarget{mcq-boolean-3}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{5} \OperatorTok{\textless{}} \DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 3}
+\protect\hypertarget{mcq-boolean-3-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\DecValTok{5} \OperatorTok{\textless{}} \DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## False
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 4}
+\protect\hypertarget{mcq-boolean-4}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{bool}\NormalTok{(}\StringTok{"abc"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 4}
+\protect\hypertarget{mcq-boolean-4-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{bool}\NormalTok{(}\StringTok{"abc"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## True
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 5}
+\protect\hypertarget{mcq-boolean-5}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{bool}\NormalTok{(}\DecValTok{0}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 5}
+\protect\hypertarget{mcq-boolean-5-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{bool}\NormalTok{(}\DecValTok{0}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## False
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 6}
+\protect\hypertarget{mcq-boolean-6}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{bool}\NormalTok{(}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ boolean 6}
+\protect\hypertarget{mcq-boolean-6-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the value of the following statement ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{bool}\NormalTok{(}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## True
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ data type}
+\protect\hypertarget{mcq-data-type}{}
+\begin{itemize}
+\tightlist
+\item
+  What will be printed from the following examples ?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{5}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{type}\NormalTok{(x))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \StringTok{"Hello World"}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{type}\NormalTok{(x))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \FloatTok{20.5}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{type}\NormalTok{(x))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{, }\StringTok{"horse"}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{type}\NormalTok{(x))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=}\NormalTok{ (}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{, }\StringTok{"horse"}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{type}\NormalTok{(x))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=}\NormalTok{ \{}\StringTok{"name"}\NormalTok{ : }\StringTok{"John"}\NormalTok{, }\StringTok{"lastname"}\NormalTok{ : }\StringTok{"Doe"}\NormalTok{, }\StringTok{"age"}\NormalTok{ : }\DecValTok{33}\NormalTok{\}}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{type}\NormalTok{(x))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \VariableTok{True}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{type}\NormalTok{(x))}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 1}
+\protect\hypertarget{mcq-strings-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Get the first character of the string txt
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=}\NormalTok{ ?}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 1}
+\protect\hypertarget{mcq-strings-1-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Get the first character of the string txt
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=}\NormalTok{ txt[}\DecValTok{0}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## H
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 2}
+\protect\hypertarget{mcq-strings-2}{}
+\begin{itemize}
+\tightlist
+\item
+  Get the character from index 2 to 4 (llo)
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=} 
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 2}
+\protect\hypertarget{mcq-strings-2-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Get the character from index 2 to 4 (llo)
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=}\NormalTok{ txt[}\DecValTok{2}\NormalTok{:}\DecValTok{5}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## llo
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 3}
+\protect\hypertarget{mcq-strings-3}{}
+\begin{itemize}
+\tightlist
+\item
+  Return the string without any whitespace at the beginning
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{" Hello World"}
+\NormalTok{x }\OperatorTok{=} 
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 3}
+\protect\hypertarget{mcq-strings-3-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Return the string without any whitespace at the beginning
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{" Hello World"}
+\BuiltInTok{print}\NormalTok{(txt)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  Hello World
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=}\NormalTok{ txt[}\DecValTok{1}\NormalTok{:]}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Hello World
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y }\OperatorTok{=}\NormalTok{ txt.strip()}
+\BuiltInTok{print}\NormalTok{(y)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Hello World
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 4}
+\protect\hypertarget{mcq-strings-4}{}
+\begin{itemize}
+\tightlist
+\item
+  Convert the text in upper case
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=} 
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 4}
+\protect\hypertarget{mcq-strings-4-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Convert the text in upper case
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=}\NormalTok{ txt.upper()}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## HELLO WORLD
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 5}
+\protect\hypertarget{mcq-strings-5}{}
+\begin{itemize}
+\tightlist
+\item
+  Convert the text in lower case
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=} 
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 5}
+\protect\hypertarget{mcq-strings-5-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Convert the text in lower case
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=}\NormalTok{ txt.lower()}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## hello world
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 6}
+\protect\hypertarget{mcq-strings-6}{}
+\begin{itemize}
+\tightlist
+\item
+  Replace H by J
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=} 
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Strings 6}
+\protect\hypertarget{mcq-strings-6-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Replace H by J
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{txt }\OperatorTok{=} \StringTok{"Hello World"}
+\NormalTok{x }\OperatorTok{=}\NormalTok{ txt.replace(}\StringTok{"H"}\NormalTok{, }\StringTok{"J"}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Jello World
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ operator 1}
+\protect\hypertarget{mcq-operator-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the correct membership operator to check if ``cat'' is present in
+  the animal object.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{]}
+\ControlFlowTok{if} \StringTok{"cat"} 
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ operator 1}
+\protect\hypertarget{mcq-operator-1-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the correct membership operator to check if ``cat'' is present in
+  the animal object.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{]}
+\ControlFlowTok{if} \StringTok{"cat"} \KeywordTok{in}\NormalTok{ animal:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Yes, cat is a animal!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Yes, cat is a animal!
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ operator 2}
+\protect\hypertarget{mcq-operator-2}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the correct comparison operator to check if 5 is not equal to 1.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} 
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ operator 2}
+\protect\hypertarget{mcq-operator-2-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the correct comparison operator to check if 5 is not equal to 1.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{5} \OperatorTok{!=} \DecValTok{10}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"5 and 10 is not equal"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 5 and 10 is not equal
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ operator 3}
+\protect\hypertarget{mcq-operator-3}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the correct logical operator to check if at least one of two
+  statements is True.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{5} \OperatorTok{==} \DecValTok{10}\NormalTok{ ?? }\DecValTok{4} \OperatorTok{==} \DecValTok{4}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"At least one of the statements is true"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ operator 3}
+\protect\hypertarget{mcq-operator-3-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the correct logical operator to check if at least one of two
+  statements is True.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \DecValTok{5} \OperatorTok{==} \DecValTok{10} \KeywordTok{or} \DecValTok{4} \OperatorTok{==} \DecValTok{4}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"At least one of the statements is true"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## At least one of the statements is true
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  
+\ControlFlowTok{if}\NormalTok{ (}\DecValTok{5} \OperatorTok{==} \DecValTok{10}\NormalTok{) }\OperatorTok{|}\NormalTok{ (}\DecValTok{4} \OperatorTok{==} \DecValTok{4}\NormalTok{):}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"At least one of the statements is true"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## At least one of the statements is true
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 1}
+\protect\hypertarget{mcq-list-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Print the third item in the fruits list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 1}
+\protect\hypertarget{mcq-list-1-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the correct logical operator to check if at least one of two
+  statements is True.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(animal[}\DecValTok{2}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## horse
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 2}
+\protect\hypertarget{mcq-list-2}{}
+\begin{itemize}
+\tightlist
+\item
+  Change the value from ``cat'' to ``lion'', in the fruits list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 2}
+\protect\hypertarget{mcq-list-2-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Change the value from ``cat'' to ``lion'', in the fruits list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\NormalTok{animal[}\DecValTok{0}\NormalTok{] }\OperatorTok{=} \StringTok{"lion"}
+\BuiltInTok{print}\NormalTok{(animal)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['lion', 'dog', 'horse']
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 3}
+\protect\hypertarget{mcq-list-3}{}
+\begin{itemize}
+\tightlist
+\item
+  Add cow to the animal list
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 3}
+\protect\hypertarget{mcq-list-3-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Add cow to the animal list
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\NormalTok{animal.append(}\StringTok{"cow"}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(animal)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['cat', 'dog', 'horse', 'cow']
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 4}
+\protect\hypertarget{mcq-list-4}{}
+\begin{itemize}
+\tightlist
+\item
+  remove dog to the animal list
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 4}
+\protect\hypertarget{mcq-list-4-1}{}
+\begin{itemize}
+\tightlist
+\item
+  remove dog to the animal list
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\NormalTok{animal.remove(}\StringTok{"dog"}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(animal)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['cat', 'horse']
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 5}
+\protect\hypertarget{mcq-list-5}{}
+\begin{itemize}
+\tightlist
+\item
+  Use negative indexing to print the last item in the list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 5}
+\protect\hypertarget{mcq-list-5-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use negative indexing to print the last item in the list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(animal[}\OperatorTok{{-}}\DecValTok{1}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## horse
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 6}
+\protect\hypertarget{mcq-list-6}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the correct syntax to print the number of items in the list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 6}
+\protect\hypertarget{mcq-list-6-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the correct syntax to print the number of items in the list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{len}\NormalTok{(animal))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 3
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 7}
+\protect\hypertarget{mcq-list-7}{}
+\begin{itemize}
+\tightlist
+\item
+  Use a range of indexes to print the third, fourth, and fifth item in
+  the list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ List 7}
+\protect\hypertarget{mcq-list-7-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use a range of indexes to print the third, fourth, and fifth item in
+  the list.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\BuiltInTok{print}\NormalTok{(animal[}\DecValTok{2}\NormalTok{:}\DecValTok{5}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['horse']
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 1}
+\protect\hypertarget{mcq-dictionaries-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the get method to print the value of the ``model'' key of the car
+  dictionary.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\BuiltInTok{print}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 1}
+\protect\hypertarget{mcq-dictionaries-1-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Use the get method to print the value of the ``model'' key of the car
+  dictionary.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\BuiltInTok{print}\NormalTok{(car.get(}\StringTok{"model"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Mustang
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 2}
+\protect\hypertarget{mcq-dictionaries-2}{}
+Change the ``year'' value from 1964 to 2023.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 2}
+\protect\hypertarget{mcq-dictionaries-2-1}{}
+Change the ``year'' value from 1964 to 2023.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\NormalTok{car[}\StringTok{"year"}\NormalTok{]}\OperatorTok{=}\DecValTok{2023}
+\BuiltInTok{print}\NormalTok{(car)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## {'brand': 'Ford', 'model': 'Mustang', 'year': 2023}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 3}
+\protect\hypertarget{mcq-dictionaries-3}{}
+Add the key/value pair ``color'' : ``red'' to the car dictionary.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 3}
+\protect\hypertarget{mcq-dictionaries-3-1}{}
+Add the key/value pair ``color'' : ``red'' to the car dictionary.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\NormalTok{car[}\StringTok{"color"}\NormalTok{]}\OperatorTok{=}\StringTok{"red"}
+\BuiltInTok{print}\NormalTok{(car)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 4}
+\protect\hypertarget{mcq-dictionaries-4}{}
+Use the pop method to remove ``model'' from the car dictionary.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 4}
+\protect\hypertarget{mcq-dictionaries-4-1}{}
+Use the pop method to remove ``model'' from the car dictionary.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\NormalTok{car.pop(}\StringTok{"model"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'Mustang'
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(car)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## {'brand': 'Ford', 'year': 1964}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 5}
+\protect\hypertarget{mcq-dictionaries-5}{}
+Use the clear method to empty the car dictionary.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Dictionaries 5}
+\protect\hypertarget{mcq-dictionaries-5-1}{}
+Use the clear method to empty the car dictionary.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car }\OperatorTok{=}\NormalTok{   \{}
+  \StringTok{"brand"}\NormalTok{: }\StringTok{"Ford"}\NormalTok{,}
+  \StringTok{"model"}\NormalTok{: }\StringTok{"Mustang"}\NormalTok{,}
+  \StringTok{"year"}\NormalTok{: }\DecValTok{1964}
+\NormalTok{\}}
+\NormalTok{car.clear()}
+\BuiltInTok{print}\NormalTok{(car)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## {}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ If 1}
+\protect\hypertarget{mcq-if-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Print ``Yes'' if a is equal to b, otherwise print ``No''.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=} \DecValTok{50}
+\NormalTok{b }\OperatorTok{=} \DecValTok{10}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ If 1}
+\protect\hypertarget{mcq-if-1-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Print ``Yes'' if a is equal to b, otherwise print ``No''.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=} \DecValTok{50}
+\NormalTok{b }\OperatorTok{=} \DecValTok{10}
+\ControlFlowTok{if}\NormalTok{ a }\OperatorTok{==}\NormalTok{ b:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Yes"}\NormalTok{)}
+\ControlFlowTok{else}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"No"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## No
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ If 3}
+\protect\hypertarget{mcq-if-3}{}
+Print ``Hello'' if a is equal to b, and c is equal to d.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=} \DecValTok{50}
+\NormalTok{b }\OperatorTok{=} \DecValTok{10}
+\NormalTok{c }\OperatorTok{=} \DecValTok{30}
+\NormalTok{d }\OperatorTok{=} \DecValTok{30}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ If 3}
+\protect\hypertarget{mcq-if-3-1}{}
+Print ``Hello'' if a is equal to b, and c is equal to d.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{a }\OperatorTok{=} \DecValTok{50}
+\NormalTok{b }\OperatorTok{=} \DecValTok{10}
+\NormalTok{c }\OperatorTok{=} \DecValTok{30}
+\NormalTok{d }\OperatorTok{=} \DecValTok{30}
+\ControlFlowTok{if}\NormalTok{ a }\OperatorTok{==}\NormalTok{ b }\KeywordTok{and}\NormalTok{ c}\OperatorTok{==}\NormalTok{d:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ For 1}
+\protect\hypertarget{mcq-for-1}{}
+Loop through the items in the animal list.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ For 1}
+\protect\hypertarget{mcq-for-1-1}{}
+Loop through the items in the animal list.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\ControlFlowTok{for}\NormalTok{ idx }\KeywordTok{in}\NormalTok{ animal:}
+  \BuiltInTok{print}\NormalTok{(idx)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## cat
+## dog
+## horse
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ For 2}
+\protect\hypertarget{mcq-for-2}{}
+In the loop, when the item value is ``dog'', jump directly to the next
+item.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\ControlFlowTok{for}\NormalTok{ idx }\KeywordTok{in}\NormalTok{ animal:}
+  \ControlFlowTok{if}\NormalTok{ idx }\OperatorTok{==} \StringTok{"dog"}\NormalTok{:}
+\NormalTok{    ?????}
+  \BuiltInTok{print}\NormalTok{(idx)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ For 2}
+\protect\hypertarget{mcq-for-2-1}{}
+In the loop, when the item value is ``dog'', jump directly to the next
+item.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{animal }\OperatorTok{=}\NormalTok{ [}\StringTok{"cat"}\NormalTok{, }\StringTok{"dog"}\NormalTok{,}\StringTok{"horse"}\NormalTok{]}
+\ControlFlowTok{for}\NormalTok{ idx }\KeywordTok{in}\NormalTok{ animal:}
+  \ControlFlowTok{if}\NormalTok{ idx }\OperatorTok{==} \StringTok{"dog"}\NormalTok{:}
+    \ControlFlowTok{continue}
+  \BuiltInTok{print}\NormalTok{(idx)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## cat
+## horse
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ For 3}
+\protect\hypertarget{mcq-for-3}{}
+Use the range function to loop through a code set 5 times.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ x }\KeywordTok{in}\NormalTok{ ???? :}
+  \BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ For 3}
+\protect\hypertarget{mcq-for-3-1}{}
+Use the range function to loop through a code set 5 times.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ x }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{5}\NormalTok{) :}
+  \BuiltInTok{print}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 0
+## 1
+## 2
+## 3
+## 4
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ While 1}
+\protect\hypertarget{mcq-while-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Print i as long as i is less than 5.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{i }\OperatorTok{=} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ While 1}
+\protect\hypertarget{mcq-while-1-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Print i as long as i is less than 5.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{i }\OperatorTok{=} \DecValTok{1}
+\ControlFlowTok{while}\NormalTok{ i }\OperatorTok{\textless{}} \DecValTok{5}\NormalTok{:}
+  \BuiltInTok{print}\NormalTok{(i)}
+\NormalTok{  i }\OperatorTok{+=} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 1
+## 2
+## 3
+## 4
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ While 2}
+\protect\hypertarget{mcq-while-2}{}
+\begin{itemize}
+\tightlist
+\item
+  Exit the loop if i = 3
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{i }\OperatorTok{=} \DecValTok{1}
+\ControlFlowTok{while}\NormalTok{ i }\OperatorTok{\textless{}} \DecValTok{5}\NormalTok{:}
+\NormalTok{  i }\OperatorTok{+=} \DecValTok{1}
+  \ControlFlowTok{if}\NormalTok{ i }\OperatorTok{==} \DecValTok{3}\NormalTok{:}
+\NormalTok{    ?????}
+  \BuiltInTok{print}\NormalTok{(i)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ While 2}
+\protect\hypertarget{mcq-while-2-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Exit the loop if i = 3
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{i }\OperatorTok{=} \DecValTok{1}
+\ControlFlowTok{while}\NormalTok{ i }\OperatorTok{\textless{}} \DecValTok{5}\NormalTok{:}
+\NormalTok{  i }\OperatorTok{+=} \DecValTok{1}
+  \ControlFlowTok{if}\NormalTok{ i }\OperatorTok{==} \DecValTok{3}\NormalTok{:}
+    \ControlFlowTok{break}
+  \BuiltInTok{print}\NormalTok{(i)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 2
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Function 1}
+\protect\hypertarget{mcq-function-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Create a function named my\_function.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{??????:}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello from a function"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Function 1}
+\protect\hypertarget{mcq-function-1-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Create a function named my\_function.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ my\_function():}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello from a function"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Function 2}
+\protect\hypertarget{mcq-function-2}{}
+\begin{itemize}
+\tightlist
+\item
+  Let the function return the x parameter + 5.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{var }\OperatorTok{=} \DecValTok{5}
+
+\KeywordTok{def}\NormalTok{ my\_function(x):}
+\NormalTok{  ???????}
+  
+\NormalTok{my\_function(var)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Function 2}
+\protect\hypertarget{mcq-function-2-1}{}
+\begin{itemize}
+\tightlist
+\item
+  Let the function return the x parameter + 5.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{var }\OperatorTok{=} \DecValTok{5}
+
+\KeywordTok{def}\NormalTok{ my\_function(x):}
+  \ControlFlowTok{return}\NormalTok{ x}\OperatorTok{+}\DecValTok{5}
+
+\NormalTok{my\_function(var)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 10
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Function 3}
+\protect\hypertarget{mcq-function-3}{}
+\begin{itemize}
+\tightlist
+\item
+  If you do not know the number of arguments that will be passed into
+  your function, there is a prefix you can add in the function
+  definition, which prefix?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ my\_function(???kids):}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"The youngest child is "} \OperatorTok{+}\NormalTok{ kids[}\DecValTok{2}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Function 3}
+\protect\hypertarget{mcq-function-3-1}{}
+\begin{itemize}
+\tightlist
+\item
+  If you do not know the number of arguments that will be passed into
+  your function, there is a prefix you can add in the function
+  definition, which prefix?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ my\_function(}\OperatorTok{*}\NormalTok{kids):}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"The youngest child is "} \OperatorTok{+}\NormalTok{ kids[}\DecValTok{2}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Function 4}
+\protect\hypertarget{mcq-function-4}{}
+\begin{itemize}
+\tightlist
+\item
+  If you do not know the number of keyword arguments that will be passed
+  into your function, there is a prefix you can add in the function
+  definition, which prefix?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ my\_function(???kids):}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"The youngest child is "} \OperatorTok{+}\NormalTok{ kids[}\DecValTok{2}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Function 4}
+\protect\hypertarget{mcq-function-4-1}{}
+\begin{itemize}
+\tightlist
+\item
+  If you do not know the number of keyword arguments that will be passed
+  into your function, there is a prefix you can add in the function
+  definition, which prefix?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ my\_function(}\OperatorTok{**}\NormalTok{kid):}
+  \BuiltInTok{print}\NormalTok{(}\StringTok{"His last name is "} \OperatorTok{+}\NormalTok{ kid[}\StringTok{"lname"}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Module 1}
+\protect\hypertarget{mcq-module-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the correct syntax to import a module named ``mymodule''?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ ??? my\_module}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Module 1}
+\protect\hypertarget{mcq-module-1-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the correct syntax to import a module named ``mymodule''?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ my\_module}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Module 2}
+\protect\hypertarget{mcq-module-2}{}
+\begin{itemize}
+\tightlist
+\item
+  If you want to refer to a module by using a different name, you can
+  create an alias.
+\end{itemize}
+
+What is the correct syntax for creating an alias for a module?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ mymodule ?? mx}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Module 2}
+\protect\hypertarget{mcq-module-2-1}{}
+\begin{itemize}
+\tightlist
+\item
+  If you want to refer to a module by using a different name, you can
+  create an alias.
+\end{itemize}
+
+What is the correct syntax for creating an alias for a module?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ mymodule }\ImportTok{as}\NormalTok{ mx}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Module 3}
+\protect\hypertarget{mcq-module-3}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the correct syntax of printing all variables and function
+  names of the ``random'' module?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ random}
+\BuiltInTok{print}\NormalTok{(????)}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Module 3}
+\protect\hypertarget{mcq-module-3-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the correct syntax of printing all variables and function
+  names of the ``mymodule'' module?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ random}
+\BuiltInTok{print}\NormalTok{(}\BuiltInTok{dir}\NormalTok{(random))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ['BPF', 'LOG4', 'NV_MAGICCONST', 'RECIP_BPF', 'Random', 'SG_MAGICCONST', 'SystemRandom', 'TWOPI', '_Sequence', '_Set', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_accumulate', '_acos', '_bisect', '_ceil', '_cos', '_e', '_exp', '_floor', '_inst', '_log', '_os', '_pi', '_random', '_repeat', '_sha512', '_sin', '_sqrt', '_test', '_test_generator', '_urandom', '_warn', 'betavariate', 'choice', 'choices', 'expovariate', 'gammavariate', 'gauss', 'getrandbits', 'getstate', 'lognormvariate', 'normalvariate', 'paretovariate', 'randbytes', 'randint', 'random', 'randrange', 'sample', 'seed', 'setstate', 'shuffle', 'triangular', 'uniform', 'vonmisesvariate', 'weibullvariate']
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Module 4}
+\protect\hypertarget{mcq-module-4}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the correct syntax of importing only the randint function of
+  the ``random'' module?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{??? random ??? randint}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\begin{frame}[fragile]{MCQ Module 4}
+\protect\hypertarget{mcq-module-4-1}{}
+\begin{itemize}
+\tightlist
+\item
+  What is the correct syntax of importing only the randint function of
+  the ``random'' module?
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ random }\ImportTok{import}\NormalTok{ randint}
+\end{Highlighting}
+\end{Shaded}
+\end{frame}
+
+\end{document}
